@@ -1,4 +1,6 @@
 import '../core/models.dart';
+import 'quiz_s2.dart';
+import 'quiz_s3.dart';
 
 /// Quiz questions per section. Answers must match research/facts.md.
 const quizzes = <String, List<QuizQuestion>>{
@@ -29,6 +31,6 @@ const quizzes = <String, List<QuizQuestion>>{
         ['Wi-Fi', 'USB', 'NVLink', 'Bluetooth'], 2,
         'NVLink is a private express lane between GPUs: 900 GB/s per GPU on H100 and 1.8 TB/s on Blackwell.'),
   ],
-  'quiz_s2': [],
-  'quiz_s3': [],
+  'quiz_s2': quizS2,
+  'quiz_s3': quizS3,
 };
