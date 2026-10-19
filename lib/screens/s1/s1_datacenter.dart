@@ -151,7 +151,7 @@ class _BuilderState extends State<_Builder> {
               ),
               const SizedBox(height: Gap.s),
               TermText(
-                'Math: racks × ~132 kW per rack × [[PUE]] ${plan.pue} (overhead for cooling and power losses). '
+                'Math: racks × ~132 kW per rack × [[PUE]] ${plan.pue} (the building\'s total: the extra power cooling and wiring losses need). '
                 'Water: about ${_efficient ? '0.2' : '1.8'} litres per kWh of computing (${_efficient ? 'efficient closed-loop design' : 'average datacenter'}).',
                 style: TextStyle(color: c.textDim, fontSize: 13),
               ),

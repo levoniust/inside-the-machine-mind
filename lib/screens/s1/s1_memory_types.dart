@@ -557,8 +557,8 @@ class _HbmStackCardState extends State<_HbmStackCard> with SingleTickerProviderS
         const SizedBox(height: Gap.s),
         TermText(
           'Each slab is a thin DRAM chip, stacked and laid flat right beside the [[GPU]] die — a few '
-          'millimeters apart. Every layer drops straight down into a 1024-bit-wide link: **16× the '
-          'lanes** of one DDR5 stick (1024 ÷ 64), each running short and easy.',
+          'millimeters apart. Together the stack talks to the GPU over a 1024-bit-wide link: **16× the '
+          'lanes** of one DDR5 stick (1024 ÷ 64), each wire so short that signals stay clean.',
           style: TextStyle(color: c.textDim, fontSize: 14),
         ),
         const SizedBox(height: Gap.s),

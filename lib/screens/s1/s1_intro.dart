@@ -119,7 +119,7 @@ const _parts = [
     align: Alignment(0.0, 0.12),
     blurb: 'A handful of brilliant [[core]]s doing one clever thing after another, and running '
         'everything else in the machine. For an AI flood of numbers the [[CPU]] is the wrong tool — '
-        'but it sets the table that the GPU eats at.',
+        'but it hands out the orders and keeps the kitchen running.',
     statA: ('Top desktop cores', '16'),
     statB: ('L1 cache wait', '~1 ns'),
     comingUp: 'Ahead · Lesson 5 — Master chefs vs an army of cooks',
@@ -313,7 +313,7 @@ class _GuidedTourState extends State<_GuidedTour> with SingleTickerProviderState
               ),
               const SizedBox(height: Gap.s),
               const TermText(
-                'From the slowest shelf to the chip\'s pocket is a gap of millions of times. '
+                'From the slowest shelf to the chip\'s pocket the wait differs by millions of times. '
                 'That is why builders keep the thinking where the data already is.',
               ),
             ],

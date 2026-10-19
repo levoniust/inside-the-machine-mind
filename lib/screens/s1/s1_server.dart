@@ -24,7 +24,7 @@ const partInfo = {
   Part.nvswitch: ('NVLink switches', 'Private express lanes so every GPU can talk to every other GPU at full speed.'),
   Part.cpu: ('2 CPUs', 'The managers: they load data, run the operating system and keep the GPUs fed.'),
   Part.nic: ('Network cards', 'The doors to the rest of the datacenter: very fast links to thousands of other servers.'),
-  Part.ssd: ('SSDs', 'Fast storage for the training data and saved checkpoints.'),
+  Part.ssd: ('SSDs', 'Fast storage for the training data and saved checkpoints (snapshots of training progress).'),
   Part.fan: ('Fans', 'All that power turns into heat, and it has to go somewhere.'),
   Part.psu: ('Power supplies', 'Several big power supplies feed the box, with spares in case one fails.'),
 };
