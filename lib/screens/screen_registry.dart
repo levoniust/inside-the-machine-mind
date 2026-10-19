@@ -9,6 +9,7 @@ import 's1/s1_datacenter.dart';
 import 's1/s1_intro.dart';
 import 's1/s1_matmul.dart';
 import 's1/s1_power_cooling.dart';
+import 's1/s1_precision.dart';
 import 's1/s1_rack.dart';
 import 's1/s1_real_sites.dart';
 import 's1/s1_server.dart';
@@ -62,6 +63,7 @@ final Map<String, WidgetBuilder> screenBuilders = {
   's2_safety': (_) => const S2SafetyScreen(),
   's1_storage': (_) => const S1StorageScreen(),
   's1_matmul': (_) => const S1MatmulScreen(),
+  's1_precision': (_) => const S1PrecisionScreen(),
   's1_too_big': (_) => const S1TooBigScreen(),
   's1_server': (_) => const S1ServerScreen(),
   's1_rack': (_) => const S1RackScreen(),
