@@ -39,10 +39,14 @@ Future<void> pumpFrames(WidgetTester tester, [int frames = 10]) async {
 /// Fail on any overflow / exception reported during the test.
 void expectNoErrors(WidgetTester tester) => expect(tester.takeException(), isNull);
 
-/// Scroll [finder] into view and tap it.
+/// Scroll [finder] into view (building it first if the list is lazy) and tap it.
 Future<void> tapVisible(WidgetTester tester, Finder finder) async {
-  await tester.ensureVisible(finder);
+  if (finder.evaluate().isEmpty) {
+    await tester.scrollUntilVisible(finder, 250, scrollable: find.byType(Scrollable).first);
+  }
+  // Center it, so the tap can't land on the bottom navigation bar.
+  await tester.runAsync(() => Scrollable.ensureVisible(tester.element(finder.first), alignment: 0.5));
   await tester.pump(const Duration(milliseconds: 50));
-  await tester.tap(finder);
+  await tester.tap(finder.first);
   await tester.pump(const Duration(milliseconds: 50));
 }
