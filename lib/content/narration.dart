@@ -10,7 +10,7 @@ class LessonText {
   final String keyIdea;
 }
 
-/// All narration, generated per section from design/narrative-s<N>.md (tools/narr2dart.py).
+/// All narration, generated per section from `design/narrative-sN.md` (tools/narr2dart.py).
 const narration = <String, LessonText>{...narrationS1, ...narrationS2, ...narrationS3, ...narrationExtras};
 
 /// Hand-written narration for screens outside the three sections.
