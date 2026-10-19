@@ -303,9 +303,9 @@ class StatTile extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: [
-          Row(children: [
+          Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
             if (icon != null) ...[Icon(icon, size: 16, color: c.textDim), const SizedBox(width: Gap.xs)],
-            Flexible(child: Text(label, style: TextStyle(color: c.textDim, fontSize: 12), overflow: TextOverflow.ellipsis)),
+            Flexible(child: Text(label, style: TextStyle(color: c.textDim, fontSize: 12), maxLines: 2, overflow: TextOverflow.ellipsis)),
           ]),
           const SizedBox(height: Gap.xs),
           FittedBox(
