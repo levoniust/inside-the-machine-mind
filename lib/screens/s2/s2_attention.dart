@@ -8,7 +8,8 @@ import '../../widgets/lesson_scaffold.dart';
 import '../../widgets/term_text.dart';
 
 /// Section 2 · "Who should I listen to?": attention lines from a chosen word to the earlier words it attends to.
-/// Two example heads (grammar vs meaning). Weights are hand-set illustrations (labelled). Fact: TR-LLAMA3-ARCH (128 heads).
+/// Three example heads (meaning, grammar and pronoun) over two demo sentences.
+/// Weights are hand-set illustrations (labelled). Fact: TR-LLAMA3-ARCH (128 heads).
 class S2AttentionScreen extends StatelessWidget {
   const S2AttentionScreen({super.key});
 
@@ -20,6 +21,16 @@ class S2AttentionScreen extends StatelessWidget {
 }
 
 const attnWords = ['The', 'sky', 'is', 'blue', 'because', 'light', 'scatters'];
+
+/// The pronoun head's sentence: "it" points back at "robot".
+const attnPronounWords = ['The', 'robot', 'said', 'it', 'was', 'happy'];
+
+/// The sentence each head shows; attnWeights[h] must have exactly attnSentences[h].length rows.
+const attnSentences = [attnWords, attnWords, attnPronounWords];
+const attnHeadNames = ['Meaning head', 'Grammar head', 'Pronoun head'];
+
+/// Word each head opens on (the pronoun head opens on "it", so the pointer back to "robot" shows at once).
+const attnDefaultWord = [6, 6, 3];
 
 /// attention[head][word] = weights over words 0..word (rows sum to 1). Causal: only earlier words (and itself).
 const attnWeights = <List<List<double>>>[
@@ -43,6 +54,15 @@ const attnWeights = <List<List<double>>>[
     [0.05, 0.05, 0.05, 0.15, 0.6, 0.1],
     [0.05, 0.05, 0.05, 0.05, 0.15, 0.6, 0.05],
   ],
+  // Head 2: "pronoun" — "it" looks back at the noun it stands for ("robot").
+  [
+    [1.0],
+    [0.25, 0.75],
+    [0.1, 0.15, 0.75],
+    [0.05, 0.65, 0.1, 0.2],
+    [0.05, 0.4, 0.1, 0.35, 0.1],
+    [0.05, 0.15, 0.3, 0.2, 0.1, 0.2],
+  ],
 ];
 
 class _Attention extends StatefulWidget {
@@ -53,16 +73,23 @@ class _Attention extends StatefulWidget {
 }
 
 class _AttentionState extends State<_Attention> {
-  int _word = 6;
+  int _word = attnDefaultWord[0];
   int _head = 0;
+
+  void _selectHead(int h) => setState(() {
+        _head = h;
+        _word = attnDefaultWord[h];
+      });
 
   @override
   Widget build(BuildContext context) {
     final c = AppColors.of(context);
-    final w = attnWeights[_head][_word];
+    final words = attnSentences[_head];
+    final word = _word < words.length ? _word : words.length - 1;
+    final w = attnWeights[_head][word];
     var top = 0;
     for (var i = 0; i < w.length; i++) {
-      if (i != _word && (top == _word || w[i] > w[top])) top = i;
+      if (i != word && (top == word || w[i] > w[top])) top = i;
     }
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -72,26 +99,35 @@ class _AttentionState extends State<_Attention> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              SegmentedButton<int>(
-                key: const ValueKey('attn-head'),
-                segments: const [
-                  ButtonSegment(value: 0, label: Text('Meaning head')),
-                  ButtonSegment(value: 1, label: Text('Grammar head')),
+              Wrap(
+                spacing: Gap.s,
+                runSpacing: Gap.s,
+                children: [
+                  for (var h = 0; h < attnHeadNames.length; h++)
+                    ChoiceChip(
+                      key: ValueKey('attn-head-$h'),
+                      label: Text(attnHeadNames[h]),
+                      selected: _head == h,
+                      selectedColor: c.violet.withValues(alpha: 0.25),
+                      onSelected: (_) => _selectHead(h),
+                    ),
                 ],
-                selected: {_head},
-                showSelectedIcon: false,
-                onSelectionChanged: (s) => setState(() => _head = s.first),
               ),
               const SizedBox(height: Gap.m),
               LayoutBuilder(
                 builder: (context, box) {
-                  final slot = box.maxWidth / attnWords.length;
+                  final slot = box.maxWidth / words.length;
                   return SizedBox(
                     height: 170,
                     child: Stack(
                       children: [
                         Positioned.fill(
-                          child: CustomPaint(painter: _ArcsPainter(_word, w, slot, c)),
+                          child: Semantics(
+                            label: word == 0
+                                ? '"${words[word]}" has no earlier words to look at'
+                                : '"${words[word]}" is linked most strongly to "${words[top]}"',
+                            child: CustomPaint(painter: _ArcsPainter(word, w, slot, c)),
+                          ),
                         ),
                         Positioned(
                           left: 0,
@@ -99,7 +135,7 @@ class _AttentionState extends State<_Attention> {
                           bottom: 0,
                           child: Row(
                             children: [
-                              for (var i = 0; i < attnWords.length; i++)
+                              for (var i = 0; i < words.length; i++)
                                 SizedBox(
                                   width: slot,
                                   child: GestureDetector(
@@ -110,13 +146,13 @@ class _AttentionState extends State<_Attention> {
                                       padding: const EdgeInsets.symmetric(vertical: 8),
                                       alignment: Alignment.center,
                                       decoration: BoxDecoration(
-                                        color: i == _word ? c.violet : c.surfaceHi,
+                                        color: i == word ? c.violet : c.surfaceHi,
                                         borderRadius: BorderRadius.circular(8),
                                       ),
                                       child: FittedBox(
-                                        child: Text(attnWords[i],
+                                        child: Text(words[i],
                                             style: TextStyle(
-                                                color: i == _word ? Colors.white : c.text, fontWeight: FontWeight.w700)),
+                                                color: i == word ? Colors.white : c.text, fontWeight: FontWeight.w700)),
                                       ),
                                     ),
                                   ),
@@ -131,12 +167,20 @@ class _AttentionState extends State<_Attention> {
               ),
               const SizedBox(height: Gap.m),
               Text(
-                _word == 0
-                    ? '"The" is the first word, so it can only look at itself.'
-                    : '"${attnWords[_word]}" listens most to "${attnWords[top]}" (${(w[top] * 100).round()}%).',
+                word == 0
+                    ? '"${words[0]}" is the first word, so it can only look at itself.'
+                    : '"${words[word]}" listens most to "${words[top]}" (${(w[top] * 100).round()}%).',
                 key: const ValueKey('attn-status'),
                 style: TextStyle(color: c.text, fontWeight: FontWeight.w600),
               ),
+              if (_head == 2) ...[
+                const SizedBox(height: Gap.xs),
+                Text(
+                  'A pronoun like "it" has no meaning of its own — the thickest line shows this head pointing it back at '
+                  '"robot", the noun it stands for.',
+                  style: TextStyle(color: c.textDim, fontSize: 12),
+                ),
+              ],
               const SizedBox(height: Gap.xs),
               Text('Illustration: real attention weights are learned, not hand-written. Words can only look back, never ahead.',
                   style: TextStyle(color: c.textDim, fontSize: 11)),
