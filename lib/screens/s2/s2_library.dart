@@ -214,7 +214,7 @@ class _ReadingTimeState extends State<_ReadingTime> {
           ),
           const SizedBox(height: Gap.s),
           TermText(
-            'Reading 8 hours a day at 250 words a minute (about ¾ of a word per [[token]]). A long novel is roughly 100,000 to '
+            'Time to read it all at 8 hours a day and 250 words a minute (about ¾ of a word per [[token]]). A long novel is roughly 100,000 to '
             '200,000 tokens; today\'s big models read more than ten trillion.',
             style: TextStyle(color: c.textDim, fontSize: 13),
           ),

@@ -93,7 +93,7 @@ class _TimelineState extends State<_Timeline> {
           const SizedBox(height: Gap.m),
           const FactCard(
             value: '~8.6 a day',
-            label: 'interruptions during Llama 3 405B training (466 in 54 days), 58.7% of the surprises from GPUs',
+            label: 'interruptions during Llama 3 405B training (466 in 54 days); GPUs caused 58.7% of the unexpected ones',
             factId: 'TR-LLAMA3-FAIL',
           ),
         ],

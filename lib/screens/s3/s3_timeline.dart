@@ -47,7 +47,7 @@ const milestones = [
       'TL-GPT3', '175B knobs'),
   Milestone('2020', 'AlphaFold folds proteins', Icons.biotech_outlined,
       'AlphaFold 2 predicted the 3-D shapes of proteins, a 50-year-old puzzle in biology. Over 200 million structures were '
-          'later shared free with scientists, and its creators won the 2024 Nobel Prize in Chemistry.',
+          'later shared for free with scientists, and its creators won the 2024 Nobel Prize in Chemistry.',
       'TL-ALPHAFOLD', 'Nobel 2024'),
   Milestone('2022', 'ChatGPT talks to everyone', Icons.chat_bubble_outline,
       'ChatGPT (built on GPT-3.5) launched on 30 November 2022 and reached a million users in five days. By 2026 more than a '

@@ -4,7 +4,7 @@ import 'narration.dart';
 const narrationS3 = <String, LessonText>{
   's3_intro': LessonText(
     intro: [
-      'We built the whole machine. Now the fun part — let\'s type our question and send it in.',
+      'We built the whole machine. Now for the fun part — let\'s type our question and send it in.',
       'Press send. Your question flies in as a [[prompt]], and the machine begins [[inference]] — doing the job, not going to school.',
     ],
     keyIdea: 'The mind answers by doing inference — the job it was trained to do — starting with your prompt as the first piece of input.',
@@ -20,7 +20,7 @@ const narrationS3 = <String, LessonText>{
   's3_embeddings': LessonText(
     intro: [
       'Now each token gets an [[embedding]] — its address on a map. Close words sit close together, like neighbors on a street.',
-      'Drag around. "King" is a short hop from "queen," and "man" is right next to "woman." Distance is meaning.',
+      'Tap any word to see its neighbours. "King" is a short hop from "queen," and "man" is right next to "woman." Distance is meaning.',
       'Try the trick: the step from man to woman is the same as the step from king to queen, so starting at king and taking the man-to-woman step (king minus man plus woman) lands on queen. The map does the thinking.',
     ],
     keyIdea: 'Words live on a geometric map where meaning is distance, so the model can do arithmetic with ideas — that\'s how it understands relationships.',
@@ -28,7 +28,7 @@ const narrationS3 = <String, LessonText>{
   's3_tiny_model': LessonText(
     intro: [
       'Here\'s a tiny [[transformer]] — the blueprint of modern AI — shrunk to a single floor, a 12-word vocabulary and 4 numbers per word.',
-      '[[Attention]] is the model deciding who to listen to in your sentence. The [[feed-forward layer]] is it looking things up in memory.',
+      '[[Attention]] is the model deciding who to listen to in your sentence. The [[feed-forward layer]] is where it looks things up in memory.',
       'Then it outputs [[logits]] — raw scores — and [[softmax]] turns those scores into actual chances. You\'ll see every number.',
     ],
     keyIdea: 'A transformer figures out which words matter to each other through attention, looks up patterns in memory, and converts raw scores into a probability for the next word.',
@@ -44,7 +44,7 @@ const narrationS3 = <String, LessonText>{
   's3_loop': LessonText(
     intro: [
       'The answer grows [[autoregressive]] — one word at a time. Each new word gets fed back in, and the machine keeps going.',
-      'Here\'s the trick: it keeps [[KV cache]] — notes so it doesn\'t re-read. Like your meeting notes, it doesn\'t start over from page one.',
+      'Here\'s the trick: it keeps a [[KV cache]] — notes so it doesn\'t re-read. Like your meeting notes, it doesn\'t start over from page one.',
       'Toggle the cache off and watch it recompute from scratch. Each token stores about 0.33 megabytes of notes — 128,000 tokens pile up to roughly 40 gigabytes.',
     ],
     keyIdea: 'The model writes one word, reads it back, writes the next, and keeps a running set of notes so it never has to re-read the conversation from the top.',
@@ -93,7 +93,7 @@ const narrationS3 = <String, LessonText>{
   's3_robots': LessonText(
     intro: [
       'Now the mind gets a body. A [[VLA model]] — eyes, words, and hands in one brain — sees the room, understands, and moves.',
-      'Watch the arm fold laundry. In 2023, RT-2 turned web knowledge into robot actions; in 2024, π0 folds shirts and packs boxes.',
+      'Watch the arm fold laundry. In 2023, RT-2 turned web knowledge into robot actions; in 2024, π0 folded shirts and packed boxes.',
       'By July 2026, Gemini Robotics 2 gives humanoid robots whole-body control. The loop is always see, understand, act, then check that it worked.',
     ],
     keyIdea: 'A VLA model connects vision and language to physical action in a loop — see, understand, act, check — turning abstract knowledge into a hand that folds your laundry.',
@@ -101,7 +101,7 @@ const narrationS3 = <String, LessonText>{
   's3_science': LessonText(
     intro: [
       'The mind doesn\'t just chat. AlphaFold released over 200 million protein structures for free, and in 2024 it won a Nobel Prize in Chemistry.',
-      'GraphCast makes a ten-day forecast in under a minute, beating the top system on 90% of 1,380 targets. Europe\'s weather centre put AI into operations in 2025.',
+      'GraphCast makes a ten-day forecast in under a minute, beating the top system on 90% of 1,380 targets. Europe\'s weather centre put AI forecasts into everyday use in 2025.',
       'GNoME predicted 2.2 million new crystal materials, about 380,000 stable. Over 1,600 AI-enabled medical devices are FDA-authorized, and weather services now use AI forecasts alongside their traditional physics models.',
     ],
     keyIdea: 'The same kind of AI that answers your questions is folding proteins, forecasting storms in under a minute, and designing new materials — and helping doctors and weather forecasters keep people safe.',
