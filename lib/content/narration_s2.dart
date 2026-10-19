@@ -103,7 +103,7 @@ const narrationS2 = <String, LessonText>{
     intro: [
       'You trained a tiny brain on a few hundred dots. Now imagine doing that trillions of times.',
       'The formula: [[Compute]] ≈ 6 × [[parameters|parameter]] × [[tokens|token]]. GPT-3 ran about 3.14 × 10²³ [[FLOP]]s.',
-      'Llama 3 405B chewed 15.6 trillion tokens—about 30.84 million [[GPU]]-hours. Even well-tuned, [[GPUs|gpu]] sit at 38–43% of peak.',
+      'Llama 3 405B chewed 15.6 trillion tokens—about 30.84 million H100 [[GPU]]-hours. Even well-tuned, [[GPUs|gpu]] sit at 38–43% of peak.',
       'GPT-3 used about 1,287 megawatt-hours—enough power for 120 U.S. homes for a year. Tap the calculator and watch the days pile up.',
     ],
     keyIdea: '[[Compute]] is brain-sweat, scaling with [[parameters|parameter]] × [[tokens|token]] × 6. Trained brains are measured in megawatt-hours, not hours.',

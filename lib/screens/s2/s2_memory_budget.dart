@@ -31,7 +31,7 @@ class _Part {
 final _parts = [
   _Part('Weight (16-bit)', 'the knob itself', 2, (c) => c.violet),
   _Part('Gradient (16-bit)', 'which way to turn it', 2, (c) => c.magenta),
-  _Part('Master copy (32-bit)', 'a precise backup of the knob', 4, (c) => c.cyan),
+  _Part('Master copy (32-bit)', 'the real weight, kept at full precision', 4, (c) => c.cyan),
   _Part('Adam momentum (32-bit)', 'recent direction', 4, (c) => c.lime),
   _Part('Adam variance (32-bit)', 'how bumpy the road has been', 4, (c) => c.amber),
 ];
@@ -97,7 +97,7 @@ class _Backpack extends StatelessWidget {
             ],
           ),
           const SizedBox(height: Gap.s),
-          Text('That\'s 8× more than the 2 bytes needed just to run the model, before counting the "scratch paper" '
+          Text('That\'s 8 times the 2 bytes needed just to run the model, before counting the "scratch paper" '
               '(activations) the forward pass leaves behind for the backward pass.',
               style: TextStyle(color: c.textDim, fontSize: 13)),
         ],
