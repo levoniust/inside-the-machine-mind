@@ -37,7 +37,7 @@ const narrationS2 = <String, LessonText>{
   's2_tokens': LessonText(
     intro: [
       'The model doesn\'t read words. It reads tiny pieces called [[tokens|token]]—about 4 characters each, or three-quarters of a word.',
-      'The [[tokenizer]] is the word chopper. This subword trick took off in 2016; GPT-2\'s [[vocabulary]] held 50,257 tokens.',
+      'The [[tokenizer]] is the word chopper. Chopping words into pieces like this took off in 2016; GPT-2\'s [[vocabulary]] held 50,257 tokens.',
       'Now play the merge game. Tap the most frequent pair to glue letters into tokens.',
     ],
     keyIdea: 'A [[token]] is a word piece. The model thinks in pieces, not whole words.',

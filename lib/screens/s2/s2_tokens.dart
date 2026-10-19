@@ -47,7 +47,7 @@ class _MergeGameState extends State<_MergeGame> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Text('Our tiny library, chopped into pieces. "·" is a space. Merge the most common pair of neighbours into a new token.',
+              Text('Our tiny library, chopped into pieces. "·" is a space. Glue the most common pair of side-by-side pieces into a new token.',
                   style: TextStyle(color: c.textDim)),
               const SizedBox(height: Gap.m),
               Wrap(
@@ -133,7 +133,7 @@ class _MergeGameState extends State<_MergeGame> {
               const SizedBox(height: Gap.m),
               const Row(
                 children: [
-                  Expanded(child: FactCard(value: '50,257', label: 'tokens in GPT-2\'s vocabulary (BPE)', factId: 'TR-BPE')),
+                  Expanded(child: FactCard(value: '50,257', label: 'tokens in GPT-2\'s vocabulary, built with this merge game (BPE)', factId: 'TR-BPE')),
                   SizedBox(width: Gap.m),
                   Expanded(child: FactCard(value: '≈ 4 letters', label: 'per token on average in English', factId: 'TR-TOKEN-WORDS')),
                 ],
