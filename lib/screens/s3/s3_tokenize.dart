@@ -128,6 +128,7 @@ class _PlaygroundState extends State<_Playground> {
               ),
               const SizedBox(height: Gap.m),
               const Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Expanded(child: FactCard(value: '≈ ¾ word', label: 'per token, on average, in English', factId: 'TR-TOKEN-WORDS')),
                   SizedBox(width: Gap.m),

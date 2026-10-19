@@ -208,6 +208,7 @@ class _CalculatorState extends State<_Calculator> {
         ),
         const SizedBox(height: Gap.l),
         const Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
               child: FactCard(

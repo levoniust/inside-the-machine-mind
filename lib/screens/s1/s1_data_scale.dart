@@ -118,6 +118,7 @@ class _ScaleState extends State<_Scale> {
         ),
         const SizedBox(height: Gap.l),
         const Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(child: FactCard(value: '398 TiB', label: 'one raw monthly web snapshot (2.3 billion pages, with all the code and markup)', factId: 'DC-CC')),
             SizedBox(width: Gap.m),

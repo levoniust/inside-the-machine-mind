@@ -176,6 +176,7 @@ class _TimelineState extends State<_Timeline> {
         ),
         const SizedBox(height: Gap.l),
         const Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(child: FactCard(value: '1 billion+', label: 'weekly ChatGPT users (2026)', factId: 'IN-USERS')),
             SizedBox(width: Gap.m),

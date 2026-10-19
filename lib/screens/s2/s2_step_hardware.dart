@@ -221,6 +221,7 @@ class _Waiting extends StatelessWidget {
           ),
           const SizedBox(height: Gap.m),
           const Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Expanded(child: FactCard(value: '38–43%', label: 'of peak math speed reached by Llama 3 405B training', factId: 'TR-MFU')),
               SizedBox(width: Gap.m),

@@ -156,6 +156,7 @@ class _S2BigSmallScreenState extends State<S2BigSmallScreen> with SingleTickerPr
           ),
         ),
         Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
               child: FactCard(

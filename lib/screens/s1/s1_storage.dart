@@ -49,28 +49,26 @@ class S1StorageScreen extends StatelessWidget {
           ),
         ),
         const _RandomAccessDemo(),
-        IntrinsicHeight(
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: const [
-              Expanded(
-                child: FactCard(
-                  value: '~285 MB/s',
-                  label: 'Top speed of a big modern [[hard drive]]',
-                  factId: 'HW-HDD-SPEED',
-                ),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: const [
+            Expanded(
+              child: FactCard(
+                value: '~285 MB/s',
+                label: 'Top speed of a big modern [[hard drive]]',
+                factId: 'HW-HDD-SPEED',
               ),
-              SizedBox(width: Gap.m),
-              Expanded(
-                child: FactCard(
-                  value: '14.8 GB/s',
-                  label: 'Top speed of the fastest PCIe 5.0 [[SSD]]',
-                  comparison: '50× a hard drive',
-                  factId: 'HW-NVME5',
-                ),
+            ),
+            SizedBox(width: Gap.m),
+            Expanded(
+              child: FactCard(
+                value: '14.8 GB/s',
+                label: 'Top speed of the fastest PCIe 5.0 [[SSD]]',
+                comparison: '50× a hard drive',
+                factId: 'HW-NVME5',
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ],
     );

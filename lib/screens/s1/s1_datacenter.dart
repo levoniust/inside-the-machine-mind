@@ -160,6 +160,7 @@ class _BuilderState extends State<_Builder> {
         ),
         const SizedBox(height: Gap.l),
         const Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
               child: FactCard(

@@ -244,6 +244,7 @@ class _SizeState extends State<_Size> {
               style: TextStyle(color: c.textDim, fontSize: 13)),
           const SizedBox(height: Gap.m),
           const Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Expanded(child: FactCard(value: '96 × 12,288', label: 'GPT-3: layers × width (175B knobs)', factId: 'TR-GPT3')),
               SizedBox(width: Gap.m),
