@@ -128,7 +128,7 @@ class _TrainerState extends State<_Trainer> with SingleTickerProviderStateMixin 
               const SizedBox(width: Gap.s),
               Expanded(
                   child: StatTile(
-                      label: 'Loss (wrongness)',
+                      label: 'Wrongness',
                       value: loss.isFinite ? loss.toStringAsFixed(3) : 'exploded!',
                       color: loss.isFinite ? c.violet : c.red)),
               const SizedBox(width: Gap.s),

@@ -32,7 +32,7 @@ const _page = [
   _Line('Air molecules scatter short blue waves more than red ones.', _Kind.good),
   _Line('Le ciel est bleu à cause de la diffusion de la lumière.', _Kind.foreign),
   _Line('Air molecules scatter short blue waves more than red ones.', _Kind.duplicate),
-  _Line('Anyone who disagrees with me is an idiot and should be hurt.', _Kind.toxic),
+  _Line('Anyone who disagrees with me is a total idiot, and so are you!', _Kind.toxic),
   _Line('Questions? Call Sam at 555-0137 or sam@example.com', _Kind.personal, 'Questions? Call [NAME] at [PHONE] or [EMAIL]'),
   _Line('That is why the sky looks blue during the day.', _Kind.good),
   _Line('Home | About | Contact | Privacy | Cookies | Login', _Kind.spam),

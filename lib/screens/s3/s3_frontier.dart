@@ -70,9 +70,9 @@ class _ZoomState extends State<_Zoom> with SingleTickerProviderStateMixin {
           SegmentedButton<_Level>(
             key: const ValueKey('frontier-zoom'),
             segments: const [
-              ButtonSegment(value: _Level.layer, label: Text('Layer'), icon: Icon(Icons.zoom_in)),
-              ButtonSegment(value: _Level.model, label: Text('Model'), icon: Icon(Icons.layers_outlined)),
-              ButtonSegment(value: _Level.cluster, label: Text('Cluster'), icon: Icon(Icons.zoom_out)),
+              ButtonSegment(value: _Level.layer, label: Text('Layer')),
+              ButtonSegment(value: _Level.model, label: Text('Model')),
+              ButtonSegment(value: _Level.cluster, label: Text('Cluster')),
             ],
             selected: {_level},
             showSelectedIcon: false,

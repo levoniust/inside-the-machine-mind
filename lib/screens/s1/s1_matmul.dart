@@ -180,7 +180,7 @@ class _ScaleUpState extends State<_ScaleUp> {
           StatGrid(
             children: [
               StatTile(key: const ValueKey('mm-per-token'), label: 'Math steps per token', value: humanNumber(perToken, digits: 0), color: c.cyan),
-              StatTile(label: 'For a 500-token answer (~375 words)', value: humanNumber(perAnswer, digits: 0), color: c.violet),
+              StatTile(label: 'Per 500-token answer', value: humanNumber(perAnswer, digits: 0), color: c.violet),
             ],
           ),
           const SizedBox(height: Gap.s),

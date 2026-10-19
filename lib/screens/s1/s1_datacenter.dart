@@ -136,7 +136,7 @@ class _BuilderState extends State<_Builder> {
                     icon: Icons.bolt,
                   ),
                   StatTile(
-                    label: 'Same as … US homes',
+                    label: 'Power for this many US homes',
                     value: humanNumber(plan.homes, digits: 0),
                     color: c.lime,
                     icon: Icons.home_outlined,
