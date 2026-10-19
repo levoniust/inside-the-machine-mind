@@ -29,6 +29,7 @@ import 's2/s2_loss.dart';
 import 's2/s2_big_small.dart';
 import 's2/s2_descent.dart';
 import 's2/s2_memory_budget.dart';
+import 's2/s2_parallel.dart';
 import 's2/s2_step_hardware.dart';
 import 's2/s2_testing.dart';
 import 's2/s2_things_break.dart';
@@ -81,6 +82,7 @@ final Map<String, WidgetBuilder> screenBuilders = {
   's2_scale_up': (_) => const S2ScaleUpScreen(),
   's2_memory_budget': (_) => const S2MemoryBudgetScreen(),
   's2_step_hardware': (_) => const S2StepHardwareScreen(),
+  's2_parallel': (_) => const S2ParallelScreen(),
   's2_things_break': (_) => const S2ThingsBreakScreen(),
   's2_testing': (_) => const S2TestingScreen(),
   's2_big_small': (_) => const S2BigSmallScreen(),
