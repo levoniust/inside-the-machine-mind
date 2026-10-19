@@ -6,6 +6,7 @@ import 's2/s2_safety.dart';
 
 import 's1/s1_datacenter.dart';
 import 's1/s1_intro.dart';
+import 's1/s1_rack.dart';
 import 's1/s1_server.dart';
 import 's1/s1_storage.dart';
 import 's1/s1_too_big.dart';
@@ -58,6 +59,7 @@ final Map<String, WidgetBuilder> screenBuilders = {
   's1_storage': (_) => const S1StorageScreen(),
   's1_too_big': (_) => const S1TooBigScreen(),
   's1_server': (_) => const S1ServerScreen(),
+  's1_rack': (_) => const S1RackScreen(),
   's1_datacenter': (_) => const S1DatacenterScreen(),
   's2_backprop': (_) => const S2BackpropScreen(),
   's2_descent': (_) => const S2DescentScreen(),
