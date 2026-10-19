@@ -213,12 +213,17 @@ class _AerialPainter extends CustomPainter {
       final cols = math.max(1, math.sqrt(n * bw / bh).ceil());
       final rows = math.max(1, (n / cols).ceil());
       final cw = (bw - 12) / cols, ch = (bh - 12) / rows;
-      final r = math.max(1.2, math.min(cw, ch) * 0.32);
+      final r = math.max(1.2, math.min(math.min(cw, ch) * 0.32, 7.0));
       for (var i = 0; i < n; i++) {
         final p = Offset(ox + 6 + (i % cols + 0.5) * cw, oy + 6 + (i ~/ cols + 0.5) * ch);
         canvas.drawCircle(p, r, Paint()..color = c.cyan.withValues(alpha: 0.85));
       }
       drawn += n;
+      final lbl = TextPainter(
+        text: TextSpan(text: buildings == 1 ? 'hall' : 'hall ${b + 1}', style: TextStyle(fontFamily: 'Roboto', color: c.textDim, fontSize: 10)),
+        textDirection: TextDirection.ltr,
+      )..layout();
+      lbl.paint(canvas, Offset(ox + 4, oy + bh - lbl.height - 2));
     }
     // Cooling towers + substation appear as the site grows.
     final towers = racks < 30 ? 0 : math.min(8, (math.log(racks) / math.ln10).floor() * 2 - 2);
