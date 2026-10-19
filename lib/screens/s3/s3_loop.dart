@@ -5,9 +5,14 @@ import '../../widgets/components.dart';
 import '../../widgets/lesson_scaffold.dart';
 import '../../widgets/term_text.dart';
 
-/// Section 3 · "One word at a time": the autoregressive loop. Each new token is appended and the whole
-/// thing goes back in. With the KV cache on, earlier tokens' attention notes are reused instead of
-/// recomputed (work grows ~n instead of ~n²). Fact: IN-KV-CACHE.
+/// Fractional geometry of the loop diagram, shared between the painter and the widget overlays.
+const double _boxL = 0.26, _boxR = 0.74, _boxT = 0.42, _boxB = 0.84;
+const double _midY = 0.63, _inX = 0.115, _outX = 0.885;
+
+/// Section 3 · "One word at a time": the autoregressive loop. A small diagram shows the newest token
+/// looping back into the model input, and each new token is appended while the whole thing goes back
+/// in. With the KV cache on, earlier tokens' attention notes are reused instead of recomputed
+/// (work grows ~n instead of ~n²). Fact: IN-KV-CACHE.
 class S3LoopScreen extends StatelessWidget {
   const S3LoopScreen({super.key});
 
@@ -70,7 +75,10 @@ class _LoopState extends State<_Loop> with SingleTickerProviderStateMixin {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              _LoopDiagram(pulse: _pulse, done: done),
+              const SizedBox(height: Gap.m),
               Wrap(
+                key: const ValueKey('loop-chips'),
                 spacing: 5,
                 runSpacing: 5,
                 children: [
@@ -179,4 +187,156 @@ class _LoopState extends State<_Loop> with SingleTickerProviderStateMixin {
       child: Text(t, style: TextStyle(color: c.text, fontWeight: isNew ? FontWeight.w800 : FontWeight.w500)),
     );
   }
+}
+
+/// Miniature of the autoregressive loop: a MODEL box whose output ("out") arcs back over the top
+/// into the input ("in"). A magenta dot — the newest token — travels the loop each time a word is
+/// generated; when the answer is finished the dot and the coloured arrows disappear.
+class _LoopDiagram extends StatelessWidget {
+  const _LoopDiagram({required this.pulse, required this.done});
+
+  final Animation<double> pulse;
+  final bool done;
+
+  @override
+  Widget build(BuildContext context) {
+    final c = AppColors.of(context);
+    return Semantics(
+      key: const ValueKey('loop-diagram'),
+      label: done
+          ? 'Diagram: the loop has ended. The model predicted a stop, so no new word goes back in.'
+          : 'Diagram: the model predicts one new word at a time; the newest word at the output loops '
+              'back over the top into the model input, and the loop runs again.',
+      excludeSemantics: true,
+      child: LayoutBuilder(
+        builder: (context, box) {
+          final h = (box.maxWidth * 0.5).clamp(110.0, 150.0);
+          return SizedBox(
+            height: h,
+            child: Stack(
+              fit: StackFit.expand,
+              children: [
+                // The model box.
+                Positioned(
+                  left: _boxL * box.maxWidth,
+                  top: _boxT * h,
+                  width: (_boxR - _boxL) * box.maxWidth,
+                  height: (_boxB - _boxT) * h,
+                  child: Container(
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      color: c.surfaceHi,
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(color: done ? c.line : c.violet.withValues(alpha: 0.8)),
+                    ),
+                    child: Text(
+                      'MODEL',
+                      style: TextStyle(
+                        color: done ? c.textDim : c.violet,
+                        fontWeight: FontWeight.w800,
+                        letterSpacing: 2,
+                        fontSize: 13,
+                      ),
+                    ),
+                  ),
+                ),
+                // Arrows and the travelling token dot.
+                AnimatedBuilder(
+                  animation: pulse,
+                  builder: (_, _) => CustomPaint(
+                    key: const ValueKey('loop-diagram-paint'),
+                    painter: _LoopPainter(t: pulse.value, done: done, c: c),
+                  ),
+                ),
+                // Input / output nodes and their labels.
+                _node(_inX, _midY, c.cyan),
+                _node(_outX, _midY, c.magenta),
+                _nodeLabel(_inX, 0.78, 'in', c),
+                _nodeLabel(_outX, 0.78, 'out', c),
+              ],
+            ),
+          );
+        },
+      ),
+    );
+  }
+
+  Widget _node(double fx, double fy, Color col) => Positioned.fill(
+        child: Align(
+          alignment: Alignment(fx * 2 - 1, fy * 2 - 1),
+          child: Container(width: 11, height: 11, decoration: BoxDecoration(color: col, shape: BoxShape.circle)),
+        ),
+      );
+
+  Widget _nodeLabel(double fx, double fy, String label, AppColors c) => Positioned.fill(
+        child: Align(
+          alignment: Alignment(fx * 2 - 1, fy * 2 - 1),
+          child: FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(label, style: TextStyle(color: c.textDim, fontSize: 11, fontWeight: FontWeight.w600)),
+          ),
+        ),
+      );
+}
+
+class _LoopPainter extends CustomPainter {
+  _LoopPainter({required this.t, required this.done, required this.c});
+  final double t; // how far the newest token has travelled around the loop (0 = still at "out")
+  final bool done;
+  final AppColors c;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final w = size.width, h = size.height;
+    Offset at(double fx, double fy) => Offset(fx * w, fy * h);
+    final col = done ? c.line : c.violet;
+    final stroke = Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2
+      ..strokeCap = StrokeCap.round
+      ..color = col;
+
+    // Stub: the model emits its new word at "out".
+    canvas.drawLine(at(_boxR, _midY), at(_outX, _midY), stroke);
+    _head(canvas, at(_outX - 0.03, _midY), const Offset(1, 0), size, col);
+
+    // The loop: the newest word arcs from "out" over the top back into the model input.
+    final loop = Path()
+      ..moveTo(_outX * w, _midY * h)
+      ..cubicTo(1.02 * w, 0.02 * h, -0.02 * w, 0.02 * h, _inX * w, _midY * h)
+      ..lineTo((_boxL - 0.015) * w, _midY * h);
+    canvas.drawPath(loop, stroke);
+    _head(canvas, at(_boxL - 0.015, _midY), const Offset(1, 0), size, col);
+
+    // The token travelling around the loop (gone once the loop ends).
+    if (!done) {
+      for (final m in loop.computeMetrics()) {
+        final tan = m.getTangentForOffset(t.clamp(0.0, 1.0) * m.length);
+        if (tan == null) continue;
+        canvas.drawCircle(tan.position, h * 0.05,
+            Paint()
+              ..color = c.magenta.withValues(alpha: 0.3)
+              ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 5));
+        canvas.drawCircle(tan.position, h * 0.032, Paint()..color = c.magenta);
+      }
+    }
+  }
+
+  /// A filled triangle arrowhead with its tip at [tip], pointing along [dir].
+  void _head(Canvas canvas, Offset tip, Offset dir, Size size, Color col) {
+    final d = dir / dir.distance;
+    final n = Offset(-d.dy, d.dx);
+    final s = size.shortestSide * 0.045;
+    canvas.drawPath(
+      Path()
+        ..moveTo(tip.dx, tip.dy)
+        ..lineTo(tip.dx - d.dx * s + n.dx * s * 0.55, tip.dy - d.dy * s + n.dy * s * 0.55)
+        ..lineTo(tip.dx - d.dx * s - n.dx * s * 0.55, tip.dy - d.dy * s - n.dy * s * 0.55)
+        ..close(),
+      Paint()..color = col,
+    );
+  }
+
+  @override
+  bool shouldRepaint(_LoopPainter old) => old.t != t || old.done != done || old.c != c;
 }
