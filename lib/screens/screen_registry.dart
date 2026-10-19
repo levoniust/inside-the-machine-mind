@@ -17,6 +17,7 @@ import 's2/s2_descent.dart';
 import 's2/s2_memory_budget.dart';
 import 's2/s2_step_hardware.dart';
 import 's2/s2_testing.dart';
+import 's2/s2_tokens.dart';
 import 's2/s2_scale_up.dart';
 import 's2/s2_train_it.dart';
 import 's3/s3_answer.dart';
@@ -37,6 +38,7 @@ final Map<String, WidgetBuilder> screenBuilders = {
   's2_decoder': (_) => const S2DecoderScreen(),
   's2_library': (_) => const S2LibraryScreen(),
   's2_cleaning': (_) => const S2CleaningScreen(),
+  's2_tokens': (_) => const S2TokensScreen(),
   's1_intro': (_) => const S1IntroScreen(),
   's2_post_training': (_) => const S2PostTrainingScreen(),
   's2_safety': (_) => const S2SafetyScreen(),
