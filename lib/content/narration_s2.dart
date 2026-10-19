@@ -79,7 +79,7 @@ const narrationS2 = <String, LessonText>{
     intro: [
       'The model guessed wrong. [[Backpropagation]] passes the blame backward to every [[parameter]].',
       'Watch the red pulses travel from the output through every knob. Each gets a tiny arrow: "Turn me a little."',
-      'That arrow is the [[gradient]]. Rumelhart, Hinton, and Williams published this in 1986. It\'s why AI can learn.',
+      'That arrow is the [[gradient]]. Rumelhart, Hinton, and Williams made it famous in 1986. It\'s why AI can learn.',
     ],
     keyIdea: '[[Backpropagation]] figures out which [[parameters|parameter]] caused the mistake and how much to blame each one.',
   ),
@@ -87,7 +87,7 @@ const narrationS2 = <String, LessonText>{
     intro: [
       'The model now knows which way is downhill. [[Gradient descent]] is walking downhill in the fog, one step at a time.',
       'The [[learning rate]] is your step size. Too small and you crawl; too big and you bounce over the valley.',
-      'Adam, the 2014 optimizer, smooths the path. It keeps a running average of past steps—like a skier remembering the slope.',
+      'Adam, the 2014 optimizer, smooths the path. It keeps a running average of past slopes—like a skier remembering the hill.',
     ],
     keyIdea: '[[Gradient descent]] walks downhill. The [[learning rate]] sets the step size; Adam smooths the walk.',
   ),
