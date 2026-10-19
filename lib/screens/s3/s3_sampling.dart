@@ -176,7 +176,7 @@ class _SamplerState extends State<_Sampler> {
               ),
               if (rolls > 0) ...[
                 const SizedBox(height: Gap.m),
-                Text('Tally after $rolls rolls:', key: const ValueKey('sampling-tally'), style: TextStyle(color: c.textDim)),
+                Text('Tally after $rolls roll${rolls == 1 ? '' : 's'}:', key: const ValueKey('sampling-tally'), style: TextStyle(color: c.textDim)),
                 const SizedBox(height: Gap.xs),
                 CompareBars(
                   color: c.violet,

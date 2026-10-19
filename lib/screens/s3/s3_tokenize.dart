@@ -123,7 +123,7 @@ class _PlaygroundState extends State<_Playground> {
               TermText(
                 'This mini [[tokenizer]] knows ${tok.vocabularySize} pieces. Real ones learn their pieces from data with '
                 'byte-pair encoding ([[BPE|tokenizer]]): GPT-2 knew 50,257, Llama 3 knows about 128,000. Common words '
-                'become one token; rare words get split into pieces; emoji and other symbols become several tokens.',
+                'become one token; rare words get split into pieces; emoji and other symbols often get split into several tokens.',
                 style: TextStyle(color: c.text),
               ),
               const SizedBox(height: Gap.m),
