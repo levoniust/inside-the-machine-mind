@@ -17,6 +17,8 @@ import 'package:machine_mind/screens/home/section_hub.dart';
 
 const _only = String.fromEnvironment('SHOTS');
 const _light = bool.fromEnvironment('LIGHT');
+const _w = int.fromEnvironment('W', defaultValue: 412);
+const _h = int.fromEnvironment('H', defaultValue: 2600);
 
 Future<void> _loadFonts() async {
   final flutterRoot = Platform.environment['FLUTTER_ROOT'] ?? '${Platform.environment['HOME']}/opt/flutter';
@@ -51,7 +53,7 @@ void main() {
 
   for (final e in targets.entries.where((e) => wanted.contains(e.key))) {
     testWidgets('shot ${e.key}', (tester) async {
-      const size = Size(412, 2600);
+      final size = Size(_w.toDouble(), _h.toDouble());
       tester.view.physicalSize = size * 1.5;
       tester.view.devicePixelRatio = 1.5;
       tester.platformDispatcher.platformBrightnessTestValue = _light ? Brightness.light : Brightness.dark;
@@ -63,7 +65,7 @@ void main() {
       for (var i = 0; i < 20; i++) {
         await tester.pump(const Duration(milliseconds: 100));
       }
-      await expectLater(find.byType(MachineMindApp), matchesGoldenFile('out/${e.key}${_light ? '_light' : ''}.png'));
+      await expectLater(find.byType(MachineMindApp), matchesGoldenFile('out/${e.key}${_light ? '_light' : ''}${_w != 412 ? '_w$_w' : ''}.png'));
     });
   }
 }
