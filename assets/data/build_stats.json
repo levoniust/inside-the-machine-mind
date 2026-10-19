@@ -1,16 +1,16 @@
 {
  "started": "2026-10-19 00:27:29",
- "updated": "2026-10-19 03:51:02",
- "hours": 3.4,
+ "updated": "2026-10-19 15:55:02",
+ "hours": 15.5,
  "qwen": {
-  "jobs": 3,
-  "tokens": 145335,
-  "hours": 2.9
+  "jobs": 16,
+  "tokens": 552578,
+  "hours": 13.8
  },
  "mirai": {
-  "jobs": 130,
-  "tokens": 618117,
-  "hours": 3.0
+  "jobs": 272,
+  "tokens": 1352937,
+  "hours": 6.4
  },
  "images": {
   "jobs": 18,
@@ -19,14 +19,14 @@
  },
  "peak": {
   "gpu_3090_c": 66,
-  "vram_3090_c": 78,
+  "vram_3090_c": 80,
   "gpu_5060ti_c": 82,
   "gpu_3060_c": 67,
-  "watts_3090s": 345,
+  "watts_3090s": 346,
   "watts_5060ti": 181
  },
- "commits": 108,
- "dart_lines": 18055,
- "test_lines": 1701,
- "facts_fixed": 47
+ "commits": 151,
+ "dart_lines": 19743,
+ "test_lines": 2444,
+ "facts_fixed": 76
 }
