@@ -203,7 +203,7 @@ class _SurfacePainter extends CustomPainter {
   final double range;
 
   static List<List<double>>? _cache;
-  static const n = 48;
+  static const n = 72;
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -219,16 +219,31 @@ class _SurfacePainter extends CustomPainter {
     }
     final cw = size.width / n;
     final paint = Paint();
-    final low = c.isDark ? const Color(0xFF120A2E) : const Color(0xFF3B2A8C);
-    final high = c.isDark ? const Color(0xFF6E8AA8) : const Color(0xFFE8EEF6);
+    // Contour bands: deep violet (low loss) → cyan → pale (high loss).
+    final stops = [const Color(0xFF14082E), c.violet, c.cyan, const Color(0xFFD8F6FF)];
+    Color ramp(double t) {
+      final x = t * (stops.length - 1);
+      final i = x.floor().clamp(0, stops.length - 2);
+      return Color.lerp(stops[i], stops[i + 1], x - i)!;
+    }
     for (var i = 0; i < n; i++) {
       for (var j = 0; j < n; j++) {
-        final t = math.pow((grid[i][j] - lo) / (hi - lo), 0.6).toDouble();
-        paint.color = Color.lerp(low, high, t)!;
+        final raw = math.pow((grid[i][j] - lo) / (hi - lo), 0.55).toDouble();
+        final band = (raw * 12).floor() / 12;
+        paint.color = ramp(band);
         canvas.drawRect(Rect.fromLTWH(i * cw, j * cw, cw + 0.6, cw + 0.6), paint);
       }
     }
+    void label(String text, Offset at) {
+      final tp = TextPainter(
+        text: TextSpan(text: text, style: const TextStyle(fontFamily: 'Roboto', color: Colors.white, fontSize: 11, fontWeight: FontWeight.w700)),
+        textDirection: TextDirection.ltr,
+      )..layout();
+      tp.paint(canvas, at - Offset(tp.width / 2, tp.height / 2));
+    }
     Offset toPx(Offset p) => Offset((p.dx + range) / (2 * range) * size.width, (p.dy + range) / (2 * range) * size.height);
+    label('deep valley', toPx(const Offset(-1.6, 0.55)));
+    label('trap', toPx(const Offset(1.5, 0.15)));
     if (trail.length > 1) {
       final path = Path()..moveTo(toPx(trail.first).dx, toPx(trail.first).dy);
       for (final p in trail.skip(1)) {
