@@ -150,8 +150,8 @@ class _LoopState extends State<_Loop> with SingleTickerProviderStateMixin {
               ),
               StatGrid(
                 children: [
-                  StatTile(label: 'Words processed so far', value: '$work', color: _cache ? c.lime : c.red, icon: Icons.memory),
-                  StatTile(label: _cache ? 'Without the cache it\'d be' : 'With the cache it\'d be', value: '$other', icon: Icons.compare_arrows),
+                  StatTile(label: 'Work so far', value: '$work', color: _cache ? c.lime : c.red, icon: Icons.memory),
+                  StatTile(label: _cache ? 'Without cache' : 'With cache', value: '$other', icon: Icons.compare_arrows),
                 ],
               ),
               const SizedBox(height: Gap.m),
