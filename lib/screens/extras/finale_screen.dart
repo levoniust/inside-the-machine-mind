@@ -75,7 +75,7 @@ class _FinaleScreenState extends State<FinaleScreen> with SingleTickerProviderSt
                     ),
                     const SizedBox(height: Gap.xl),
                     Text(
-                      'The most important part of the machine\nis the person asking the question.',
+                      'The most important part of the machine is the person asking the question.',
                       key: const ValueKey('finale-quote'),
                       textAlign: TextAlign.center,
                       style: Theme.of(context).textTheme.headlineSmall?.copyWith(color: Colors.white, height: 1.35),
