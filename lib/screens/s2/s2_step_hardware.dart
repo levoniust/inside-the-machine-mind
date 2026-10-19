@@ -29,7 +29,7 @@ class _Phase {
 }
 
 const _phases = [
-  _Phase('1 · Load a batch', 'A batch of text (already chopped into [[tokens|token]]) streams from storage through the CPU into each GPU\'s [[HBM]].',
+  _Phase('1 · Load a batch', 'A batch of text (already chopped into [[tokens|token]]) streams from storage through the CPU and PCIe switches into each GPU\'s [[HBM]].',
       {_Part.storage, _Part.cpu, _Part.hbm}),
   _Phase('2 · Forward pass', '[[Tensor cores|tensor core]] multiply the batch by the weights, layer after layer, reading the weights from HBM. This is the "guess".',
       {_Part.gpus, _Part.hbm}),
@@ -182,7 +182,7 @@ class _ServerPainter extends CustomPainter {
     box(storage, 'Storage\n(SSDs)', lit.contains(_Part.storage), c.cyan);
     box(cpu, 'CPU', lit.contains(_Part.cpu), c.cyan);
     box(net, 'Network card\n(InfiniBand)', lit.contains(_Part.network), c.amber);
-    box(nvl, 'NVLink switch', lit.contains(_Part.nvlink), c.violet);
+    box(nvl, 'PCIe + NVLink switches', lit.contains(_Part.nvlink), c.violet);
     box(others, 'other\nservers', lit.contains(_Part.others), c.amber);
     for (var i = 0; i < gpus.length; i++) {
       final g = gpus[i];
