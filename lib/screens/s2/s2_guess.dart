@@ -58,6 +58,15 @@ class _GameState extends State<_Game> with SingleTickerProviderStateMixin {
   late final AnimationController _grow =
       AnimationController(vsync: this, duration: const Duration(milliseconds: 650));
 
+  /// Replays the grow-in, or jumps straight to full bars when animations are off.
+  void _regrow() {
+    if (MediaQuery.maybeDisableAnimationsOf(context) ?? false) {
+      _grow.value = 1;
+    } else {
+      _grow.forward(from: 0);
+    }
+  }
+
   @override
   void dispose() {
     _grow.dispose();
@@ -103,7 +112,7 @@ class _GameState extends State<_Game> with SingleTickerProviderStateMixin {
                     label: Text(o),
                     onPressed: () {
                       setState(() => _userGuess = o);
-                      _grow.forward(from: 0);
+                      _regrow();
                     },
                   ),
               ],
@@ -125,7 +134,7 @@ class _GameState extends State<_Game> with SingleTickerProviderStateMixin {
               showSelectedIcon: false,
               onSelectionChanged: (s) {
                 setState(() => _trained = s.first);
-                _grow.forward(from: 0);
+                _regrow();
               },
             ),
             const SizedBox(height: Gap.m),

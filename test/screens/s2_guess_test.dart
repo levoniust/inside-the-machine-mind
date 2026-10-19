@@ -38,8 +38,17 @@ void main() {
     expectNoErrors(tester);
   });
 
-  testWidgets('s2_guess: the bars grow from zero when switching untrained <-> trained', (tester) async {
+  testWidgets('s2_guess: with reduce motion the bars appear at full length at once', (tester) async {
     await pumpApp(tester, home: const S2GuessScreen());
+    await tapVisible(tester, find.byKey(const ValueKey('guess-blue')));
+    await tapVisible(tester, find.text('Trained model'));
+    await tester.pump();
+    expect(find.text('62.0%'), findsOneWidget);
+    expectNoErrors(tester);
+  });
+
+  testWidgets('s2_guess: the bars grow from zero when switching untrained <-> trained', (tester) async {
+    await pumpApp(tester, home: const S2GuessScreen(), animations: true);
     await tapVisible(tester, find.byKey(const ValueKey('guess-blue')));
     await settleGrow(tester);
     // Untrained view is settled: no word comes anywhere near the trained model's 62%.
