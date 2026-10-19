@@ -55,6 +55,8 @@ final List<SectionInfo> sections = [
       _l('s2_descent', 2, 'Step 4: rolling downhill', 'Gradient descent'),
       _l('s2_train_it', 2, 'Train a tiny brain yourself'),
       _l('s2_scale_up', 2, 'Now do it trillions of times', 'Compute'),
+      _l('s2_memory_budget', 2, 'What fills the GPU during training', 'Memory budget'),
+      _l('s2_step_hardware', 2, 'One step, inside the hardware', 'Where the math happens'),
       _l('s2_parallel', 2, 'Splitting the work', 'Parallelism'),
       _l('s2_things_break', 2, 'When things break', 'Failures & checkpoints'),
       _l('s2_testing', 2, 'Exams along the way', 'Benchmarks'),
