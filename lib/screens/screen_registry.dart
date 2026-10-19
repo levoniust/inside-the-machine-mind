@@ -7,6 +7,7 @@ import 's2/s2_safety.dart';
 import 's1/s1_datacenter.dart';
 import 's1/s1_intro.dart';
 import 's1/s1_storage.dart';
+import 's2/s2_attention.dart';
 import 's2/s2_backprop.dart';
 import 's2/s2_cleaning.dart';
 import 's2/s2_decoder.dart';
@@ -41,6 +42,7 @@ final Map<String, WidgetBuilder> screenBuilders = {
   's2_cleaning': (_) => const S2CleaningScreen(),
   's2_tokens': (_) => const S2TokensScreen(),
   's2_empty_brain': (_) => const S2EmptyBrainScreen(),
+  's2_attention': (_) => const S2AttentionScreen(),
   's1_intro': (_) => const S1IntroScreen(),
   's2_post_training': (_) => const S2PostTrainingScreen(),
   's2_safety': (_) => const S2SafetyScreen(),
