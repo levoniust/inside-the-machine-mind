@@ -21,7 +21,7 @@ void main() {
     await pumpFrames(tester, 3);
     expect(find.text('3.0'), findsOneWidget);
     await scrollTo(tester, find.byKey(const ValueKey('prec-gb')));
-    expect(find.textContaining('35 GB'), findsOneWidget);
+    expect(find.textContaining('In FP4: 35 GB'), findsOneWidget);
     expectNoErrors(tester);
   });
 }
