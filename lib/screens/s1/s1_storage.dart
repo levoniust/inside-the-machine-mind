@@ -50,6 +50,7 @@ class S1StorageScreen extends StatelessWidget {
         ),
         const _RandomAccessDemo(),
         Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: const [
             Expanded(
               child: FactCard(
@@ -475,19 +476,15 @@ class _RandomAccessDemoState extends State<_RandomAccessDemo> with SingleTickerP
             ],
           ),
           const SizedBox(height: Gap.m),
+          Text(
+            'Slow motion: 1 s of watching = ${_raMs(_raHddSec)} of seeking',
+            textAlign: TextAlign.center,
+            style: TextStyle(color: c.textDim, fontSize: 12),
+          ),
+          const SizedBox(height: Gap.s),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Expanded(
-                child: FittedBox(
-                  fit: BoxFit.scaleDown,
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Slow motion: 1 s of watching = ${_raMs(_raHddSec)} of seeking',
-                    style: TextStyle(color: c.textDim, fontSize: 12),
-                  ),
-                ),
-              ),
-              const SizedBox(width: Gap.s),
               FilledButton.icon(
                 key: const ValueKey('random-access-start'),
                 onPressed: _start,

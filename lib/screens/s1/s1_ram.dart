@@ -25,6 +25,7 @@ class S1RamScreen extends StatelessWidget {
         const _DeskDemo(),
         const _ChannelDemo(),
         Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
               child: FactCard(
@@ -49,6 +50,7 @@ class S1RamScreen extends StatelessWidget {
         ),
         const _LatencyDemo(),
         Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
               child: FactCard(

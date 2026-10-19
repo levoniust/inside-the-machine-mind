@@ -168,6 +168,7 @@ class _RackState extends State<_Rack> with SingleTickerProviderStateMixin {
         ),
         const SizedBox(height: Gap.l),
         const Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(child: FactCard(value: '130 TB/s', label: 'NVLink inside one NVL72 rack', factId: 'DC-NVL72')),
             SizedBox(width: Gap.m),

@@ -32,6 +32,7 @@ class S1CpuGpuScreen extends StatelessWidget {
         ),
         const _Showdown(),
         Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
               child: FactCard(

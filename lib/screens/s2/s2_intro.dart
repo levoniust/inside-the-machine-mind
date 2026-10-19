@@ -157,6 +157,7 @@ class _SchoolOrJobState extends State<_SchoolOrJob> with SingleTickerProviderSta
         ),
         const SizedBox(height: Gap.l),
         const Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(child: FactCard(value: '15.6T', label: 'tokens Llama 3 405B read at "school"', factId: 'TR-LLAMA3-TOKENS')),
             SizedBox(width: Gap.m),

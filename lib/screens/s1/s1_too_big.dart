@@ -113,6 +113,7 @@ class _FitState extends State<_Fit> {
         ),
         const SizedBox(height: Gap.l),
         const Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(child: FactCard(value: '80 GB', label: 'memory on one H100 GPU', factId: 'HW-HBM-H100')),
             SizedBox(width: Gap.m),

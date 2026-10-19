@@ -129,6 +129,7 @@ class _DistillState extends State<_Distill> {
           Text('Illustrative numbers.', style: TextStyle(color: c.textDim, fontSize: 11)),
           const SizedBox(height: Gap.m),
           const Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Expanded(child: FactCard(value: '2015', label: 'knowledge distillation was introduced', factId: 'TR-DISTILL')),
               SizedBox(width: Gap.m),

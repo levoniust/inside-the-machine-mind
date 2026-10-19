@@ -133,6 +133,7 @@ class _BudgetState extends State<_Budget> {
               ),
               const SizedBox(height: Gap.m),
               const Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Expanded(child: FactCard(value: '~20', label: 'tokens per knob for the best use of compute', factId: 'TR-CHINCHILLA')),
                   SizedBox(width: Gap.m),

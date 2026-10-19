@@ -109,6 +109,7 @@ class _FunnelState extends State<_Funnel> with SingleTickerProviderStateMixin {
           Text(s.text, key: ValueKey('library-text-$_sel'), style: TextStyle(color: c.text)),
           const SizedBox(height: Gap.m),
           const Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Expanded(child: FactCard(value: '2.3 billion', label: 'web pages in one monthly Common Crawl snapshot', factId: 'DC-CC')),
               SizedBox(width: Gap.m),

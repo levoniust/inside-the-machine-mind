@@ -323,6 +323,7 @@ class _ExpertsState extends State<_Experts> {
           ),
           const SizedBox(height: Gap.m),
           const Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Expanded(
                 child: FactCard(

@@ -132,6 +132,7 @@ class _MergeGameState extends State<_MergeGame> {
               ),
               const SizedBox(height: Gap.m),
               const Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Expanded(child: FactCard(value: '50,257', label: 'tokens in GPT-2\'s vocabulary, built with this merge game (BPE)', factId: 'TR-BPE')),
                   SizedBox(width: Gap.m),

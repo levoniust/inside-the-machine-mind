@@ -23,7 +23,7 @@ class S1MemoryTypesScreen extends StatelessWidget {
       lessonId: 's1_memory_types',
       children: [
         const _MemoryExplorer(),
-        Row(children: [
+        Row(crossAxisAlignment: CrossAxisAlignment.start,children: [
           Expanded(child: FactCard(
             value: '1,008 GB/s',
             label: 'Top [[GDDR6X]] on a flagship gaming [[GPU]]',
@@ -41,7 +41,7 @@ class S1MemoryTypesScreen extends StatelessWidget {
           )),
         ]),
         const _HbmStackCard(),
-        Row(children: [
+        Row(crossAxisAlignment: CrossAxisAlignment.start,children: [
           Expanded(child: FactCard(
             value: '1024-bit',
             label: 'How wide one [[HBM]] stack talks to the GPU',

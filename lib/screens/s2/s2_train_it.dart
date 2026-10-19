@@ -299,6 +299,7 @@ class _ScaleCompare extends StatelessWidget {
           ),
           const SizedBox(height: Gap.s),
           const Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Expanded(child: FactCard(value: '15.6T', label: 'tokens used to train Llama 3 405B', factId: 'TR-LLAMA3-TOKENS')),
               SizedBox(width: Gap.m),

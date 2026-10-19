@@ -208,6 +208,7 @@ class _AgentLoopState extends State<_AgentLoop> {
           StepControls(step: _step, count: _agentSteps.length, onStep: (i) => setState(() => _step = i)),
           const SizedBox(height: Gap.m),
           const Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Expanded(child: FactCard(value: '2025', label: 'Claude Code brought coding agents to the terminal', factId: 'TL-CLAUDECODE')),
               SizedBox(width: Gap.m),

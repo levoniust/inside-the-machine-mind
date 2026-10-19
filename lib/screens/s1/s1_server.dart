@@ -90,6 +90,7 @@ class _ServerState extends State<_Server> {
         ),
         const SizedBox(height: Gap.l),
         const Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(child: FactCard(value: '~10.2 kW', label: 'DGX H100: 8 GPUs, 640 GB', factId: 'DC-DGXH100')),
             SizedBox(width: Gap.m),

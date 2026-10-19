@@ -280,6 +280,7 @@ class _PueState extends State<_Pue> {
           ),
           const SizedBox(height: Gap.m),
           const Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Expanded(child: FactCard(value: '~1.8 L', label: 'of water per kWh of computing, on average', factId: 'DC-WUE')),
               SizedBox(width: Gap.m),
