@@ -21,6 +21,7 @@ void main() {
     await pumpApp(tester, home: const S1RamScreen());
     final value = find.byKey(const ValueKey('ram-bandwidth-value'));
     final slider = find.byKey(const ValueKey('ram-channels-slider'));
+    await scrollTo(tester, value);
     expect(tester.widget<Text>(value).data, '89.6 GB/s'); // desktop default: 2 channels
 
     await tester.ensureVisible(slider);
