@@ -1,7 +1,5 @@
 import 'package:flutter/widgets.dart';
 
-import 's2/s2_testing.dart';
-
 import 's2/s2_post_training.dart';
 
 import 's2/s2_safety.dart';
@@ -23,7 +21,6 @@ import 's3/s3_tiny_model.dart';
 /// Lesson id → screen. Add one line per finished lesson screen (keep the list in journey order).
 final Map<String, WidgetBuilder> screenBuilders = {
   's1_intro': (_) => const S1IntroScreen(),
-  's2_testing': (_) => const S2TestingScreen(),
   's2_post_training': (_) => const S2PostTrainingScreen(),
   's2_safety': (_) => const S2SafetyScreen(),
   's1_storage': (_) => const S1StorageScreen(),
