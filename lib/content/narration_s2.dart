@@ -63,7 +63,7 @@ const narrationS2 = <String, LessonText>{
     intro: [
       'The model\'s training job is brutally simple: guess the next [[token]]. One piece of a word at a time.',
       'I\'ll hide the next word. You guess first, then I show the [[forward pass]] result—an untrained model just shrugs.',
-      'Trained, it sees "The sky is—" and puts a huge bar on "blue." Inside, every word gets a raw score; the [[softmax]] turns those scores into chances.',
+      'Once trained, it sees "The sky is—" and puts a huge bar on "blue." Inside, every word gets a score; the [[softmax]] turns those scores into chances.',
     ],
     keyIdea: 'Training is one question, repeated trillions of times: what\'s the next [[token]]?',
   ),

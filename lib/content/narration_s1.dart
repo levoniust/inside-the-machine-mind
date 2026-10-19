@@ -14,7 +14,7 @@ const narrationS1 = <String, LessonText>{
     intro: [
       'Your [[hard drive]] is a spinning warehouse. Finding a file takes a few to 10 milliseconds—like walking to the very back of a huge storage facility.',
       'The [[SSD]] is the instant shelf. It answers in about a tenth of a millisecond—fifty to a hundred times faster than the old drive.',
-      'Hit **Load the model** and watch the race. Same 16 GB file, four drives: a typical [[hard drive]] manages about 200 MB/s, while the fastest NVMe [[SSD]] sprints at 14,800 MB/s.',
+      'Hit **Load the model** and watch the race. Same 16 GB file, four drives: a typical [[hard drive]] moves about 200 MB every second, while the fastest NVMe [[SSD]] moves 14,800 MB/s.',
     ],
     keyIdea: 'A [[hard drive]] must physically move an arm to find your data—up to 10 ms. An [[SSD]] has no moving parts and answers in ~100 µs—a tenth of a millisecond.',
   ),
@@ -88,7 +88,7 @@ const narrationS1 = <String, LessonText>{
       'It runs on [[liquid cooling]]—cold water flows through metal plates sitting right on the chips. Water carries about 3,500 times more heat than the same volume of air.',
       'Toggle **air vs liquid** and compare. In air mode the fans roar and heat shimmers; in liquid mode the coolant does the work quietly.',
     ],
-    keyIdea: '72 [[GPU]]s in one [[rack]] are wired together by [[NVLink]] so they can talk like one chip, sharing 13.4 TB of [[HBM]]. It\'s not eight [[server]]s in a box—it\'s one big brain.',
+    keyIdea: '72 [[GPU]]s in one [[rack]] are wired together by [[NVLink]] so they can talk like one chip, sharing 13.4 TB of [[HBM]]. It\'s not a stack of separate [[server]]s—it\'s one big brain.',
   ),
   's1_datacenter': LessonText(
     intro: [
@@ -104,7 +104,7 @@ const narrationS1 = <String, LessonText>{
       'The heat flows the other way: chips → coolant → chillers → [[cooling towers|cooling tower]]. Tap each stage to see the water and the watts.',
       '[[PUE]] is the overhead score. Industry average: 1.54. That means for every 1 W of [[compute]], you\'re burning 0.54 W on cooling, lights and power losses.',
     ],
-    keyIdea: 'For every 1 W of [[compute]], the overhead is measured by [[PUE]]. And the heat needs water to carry it away—about 1.8 litres for every kWh used, on average.',
+    keyIdea: '[[PUE]] scores the overhead: a building with PUE 1.5 draws 1.5 W in total for every 1 W of [[compute]]. And the heat needs water to carry it away—about 1.8 litres for every kWh used, on average.',
   ),
   's1_real_sites': LessonText(
     intro: [

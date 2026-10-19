@@ -135,7 +135,7 @@ class _RackState extends State<_Rack> with SingleTickerProviderStateMixin {
                   _TrayKind.compute =>
                     'Compute tray — the workhorse of the rack: 4 GPUs and 2 CPUs in each one, and 18 × 4 = 72 GPUs all told.',
                   _TrayKind.switchTray =>
-                    'Switch tray — packed with [[NVLink]] switches, the wiring that joins all 72 GPUs into one domain.',
+                    'Switch tray — packed with [[NVLink]] switches, the wiring that joins all 72 GPUs into one big machine.',
                   null => 'Tap a tray in the drawing or a legend chip above to see what it is.',
                 },
                 style: TextStyle(color: c.textDim, fontSize: 13),

@@ -101,7 +101,7 @@ class _LoopState extends State<_Loop> with SingleTickerProviderStateMixin {
                     child: Text(
                       done
                           ? 'Done: the model predicted a "stop" and the loop ends.'
-                          : 'Everything so far goes back into the model to predict word ${_n + 1}.',
+                          : 'The model uses everything so far to predict word ${_n + 1}.',
                       key: const ValueKey('loop-status'),
                       style: TextStyle(color: c.text),
                     ),

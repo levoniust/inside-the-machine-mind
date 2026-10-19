@@ -21,7 +21,7 @@ const narrationS3 = <String, LessonText>{
     intro: [
       'Now each token gets an [[embedding]] — its address on a map. Close words sit close together, like neighbors on a street.',
       'Drag around. "King" is a short hop from "queen," and "man" is right next to "woman." Distance is meaning.',
-      'Try the trick: the step from man to woman is the same as the step from king to queen, so king minus man plus woman lands on queen. The map does the thinking.',
+      'Try the trick: the step from man to woman is the same as the step from king to queen, so starting at king and taking the man-to-woman step (king minus man plus woman) lands on queen. The map does the thinking.',
     ],
     keyIdea: 'Words live on a geometric map where meaning is distance, so the model can do arithmetic with ideas — that\'s how it understands relationships.',
   ),
@@ -69,7 +69,7 @@ const narrationS3 = <String, LessonText>{
   's3_serving': LessonText(
     intro: [
       'ChatGPT has more than one billion weekly active users. The datacenter handles the flood with [[batching]] — carpooling.',
-      'Slide the user count up. Watch how [[batch]] groups let GPUs share the load, and how each user\'s [[KV cache]] notes are stored in pages.',
+      'Slide the user count up. Watch how [[batch]] groups let one GPU serve many people at once, and how each user\'s [[KV cache]] notes are stored in pages.',
       'That paging trick lets one GPU serve two to four times more requests. Another trick, speculative decoding, lets a small model draft and the big model check: two to three times faster, same output, because checking several words at once costs about the same as writing one.',
     ],
     keyIdea: 'Datacenters serve millions by carpooling requests into batches and managing each user\'s memory notes in pages, so the same hardware handles far more conversations at once.',
@@ -96,7 +96,7 @@ const narrationS3 = <String, LessonText>{
       'Watch the arm fold laundry. In 2023, RT-2 turned web knowledge into robot actions; in 2024, π0 folds shirts and packs boxes.',
       'By July 2026, Gemini Robotics 2 gives humanoid robots whole-body control. The loop is always see, understand, act, then check that it worked.',
     ],
-    keyIdea: 'A VLA model connects vision and language to physical action in a loop — see, understand, act — turning abstract knowledge into a hand that folds your laundry.',
+    keyIdea: 'A VLA model connects vision and language to physical action in a loop — see, understand, act, check — turning abstract knowledge into a hand that folds your laundry.',
   ),
   's3_science': LessonText(
     intro: [

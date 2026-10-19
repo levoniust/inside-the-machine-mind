@@ -176,7 +176,7 @@ class _ChainsState extends State<_Chains> with SingleTickerProviderStateMixin {
           const SizedBox(height: Gap.m),
           const FactCard(
             value: 'tens of MW',
-            label: 'sudden power swings when thousands of GPUs pause and restart together: the grid has to cope',
+            label: 'sudden power swings when thousands of GPUs pause and restart together: the grid has to handle sudden jumps and drops in demand',
             factId: 'DC-POWER-SWING',
           ),
         ],

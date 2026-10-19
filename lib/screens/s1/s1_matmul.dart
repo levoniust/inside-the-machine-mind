@@ -291,7 +291,7 @@ class _ScaleUpState extends State<_ScaleUp> {
           const SizedBox(height: Gap.s),
           Text(
             'Even an H100 doing ~989 trillion steps a second needs about ${humanSeconds(gpuSeconds)} of pure math for that answer, '
-            'and in practice it waits on memory, so it\'s slower.',
+            'and in practice it also waits for numbers to arrive from memory, so it\'s slower.',
             style: TextStyle(color: c.textDim, fontSize: 13),
           ),
           const SizedBox(height: Gap.m),
