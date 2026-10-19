@@ -16,13 +16,13 @@ const narrationS1 = <String, LessonText>{
       'The [[SSD]] is the instant shelf. It answers in about a tenth of a millisecond—fifty to a hundred times faster than the old drive.',
       'Hit **Load the model** and watch the race. Same 16 GB file, four drives: a typical [[hard drive]] manages about 200 MB/s, while the fastest NVMe [[SSD]] sprints at 14,800 MB/s.',
     ],
-    keyIdea: 'A [[hard drive]] must physically move an arm to find your data—up to 10 ms. An [[SSD]] has no moving parts and answers in ~100 µs.',
+    keyIdea: 'A [[hard drive]] must physically move an arm to find your data—up to 10 ms. An [[SSD]] has no moving parts and answers in ~100 µs—a tenth of a millisecond.',
   ),
   's1_ram': LessonText(
     intro: [
       'Think of [[RAM]] as your desk. It\'s where the active papers live—fast to grab, but it clears the moment the power goes off.',
-      'Each memory channel is a lane, and more lanes mean more [[bandwidth]]. One DDR5-5600 channel moves 44.8 GB/s; a 12-channel server with faster DDR5-6400 hits 614 GB/s.',
-      'Slide the channel count and watch the [[bandwidth]] bar grow. Then tap to compare: [[RAM]] answers in ~80–100 ns, while an [[SSD]] takes ~100 µs.',
+      'Each memory channel is a lane, and more lanes mean more [[bandwidth]]. One DDR5-5600 channel moves 44.8 GB/s; a 12-channel server runs faster DDR5-6400 lanes at 51.2 GB/s each, so 12 × 51.2 hits 614 GB/s.',
+      'Slide the channel count and watch the [[bandwidth]] bar grow. Then tap to compare: [[RAM]] answers in ~80–100 ns, while an [[SSD]] takes ~100 µs (100,000 ns), about a thousand times slower.',
     ],
     keyIdea: '[[RAM]] is your desk: fast but it forgets everything when power drops. The [[SSD]] is the shelf you reach for when the desk overflows.',
   ),
@@ -36,7 +36,7 @@ const narrationS1 = <String, LessonText>{
   ),
   's1_cpu_gpu': LessonText(
     intro: [
-      'A [[CPU]] is a few [[core]]s doing complex things one at a time—like a handful of master chefs. A [[GPU]] is an army: 16,896 cores and 528 [[tensor cores|tensor core]] on an H100.',
+      'A [[CPU]] is a few [[core]]s doing complex things one at a time—like a handful of master chefs. A [[GPU]] is an army: 16,896 cores on an H100, plus 528 [[tensor cores|tensor core]] built just for multiplying grids.',
       'Hit **Showdown** and watch. The [[CPU]] fills a 64×64 grid a few cells at a time. The [[GPU]] fills whole blocks in one swing.',
       'For [[matrix multiplication]], the H100 is roughly 100 to 300 times faster than a desktop [[CPU]]. That\'s the difference between a chef and a kitchen crew.',
     ],
@@ -45,7 +45,7 @@ const narrationS1 = <String, LessonText>{
   's1_matmul': LessonText(
     intro: [
       'Every [[neural network]] runs on one trick: [[Matrix multiplication]]. Multiply a row by a column, add the results. That\'s the whole engine.',
-      'Tap the result cells and do the math yourself. Each cell is a few [[FLOP]]s—multiply, add, multiply, add, multiply, add.',
+      'Tap the result cells and do the math yourself. Each cell is three multiplications added together—a handful of [[FLOP]]s.',
       'Now scale it up. A 405-billion-parameter model does about **810 billion** of these multiply-adds for every single [[token]] you read.',
     ],
     keyIdea: 'Every [[token]] the AI outputs comes from billions of tiny multiply-and-add steps—the same 3×3 trick, repeated at a massive scale.',
@@ -53,7 +53,7 @@ const narrationS1 = <String, LessonText>{
   's1_precision': LessonText(
     intro: [
       '[[Precision]] is how fine your ruler is. FP32 gives 32 [[bit]]s of detail. FP8 gives 8. FP4 gives 4. Coarser means smaller files.',
-      'Slide the bits and watch π get rounder. A 70B [[model]] in BF16 needs 140 GB; in FP8 it needs just 70 GB.',
+      'Slide the bits and watch π get rounder. A 70B [[model]] in BF16 (a 16-bit format made for AI) needs 140 GB; in FP8 it needs just 70 GB.',
       'It\'s like [[quantization]]—compressing a photo until it\'s small but still recognisable. You lose a little sharpness, but the picture stays.',
     ],
     keyIdea: 'Lower [[precision]] means fewer [[bit]]s per number, which shrinks the [[model]] and speeds up compute—but the answer gets a little less exact.',
@@ -80,7 +80,7 @@ const narrationS1 = <String, LessonText>{
       'Tap the parts. The [[CPU]]s are the master chefs; the NICs are the door to the outside world.',
       'Power draw: about 14 kW for this box. That\'s about as much as twelve average U.S. homes use.',
     ],
-    keyIdea: 'One [[server]] is eight [[GPU]]s sharing a table, talking through [[NVLink]] at 1.8 TB/s each. It\'s a small factory, not a computer.',
+    keyIdea: 'One [[server]] is eight [[GPU]]s sharing a table, talking through [[NVLink]] at 1.8 TB/s each. It\'s less like a desktop and more like a small factory.',
   ),
   's1_rack': LessonText(
     intro: [
@@ -88,7 +88,7 @@ const narrationS1 = <String, LessonText>{
       'It runs on [[liquid cooling]]—cold water flows through pipes right at the chips. Water carries about 3,500 times more heat than the same volume of air.',
       'Toggle **air vs liquid** and compare. In air mode the fans roar and heat shimmers; in liquid mode the coolant does the work quietly.',
     ],
-    keyIdea: '72 [[GPU]]s in one [[rack]] share a single [[NVLink]] domain and 13.4 TB of [[HBM]]. It\'s not eight [[server]]s in a box—it\'s one big brain.',
+    keyIdea: '72 [[GPU]]s in one [[rack]] are wired together by [[NVLink]] so they can talk like one chip, sharing 13.4 TB of [[HBM]]. It\'s not eight [[server]]s in a box—it\'s one big brain.',
   ),
   's1_datacenter': LessonText(
     intro: [
@@ -104,21 +104,21 @@ const narrationS1 = <String, LessonText>{
       'The heat flows the other way: chips → coolant → chillers → [[cooling towers|cooling tower]]. Tap each stage to see the water and the watts.',
       '[[PUE]] is the overhead score. Industry average: 1.54. That means for every 1 W of [[compute]], you\'re burning 0.54 W on cooling and lights.',
     ],
-    keyIdea: 'For every 1 W of [[compute]], the overhead is measured by [[PUE]]. And every watt of heat needs water to leave—about 1.8 litres per kWh on average.',
+    keyIdea: 'For every 1 W of [[compute]], the overhead is measured by [[PUE]]. And the heat needs water to carry it away—about 1.8 litres for every kWh used, on average.',
   ),
   's1_real_sites': LessonText(
     intro: [
       'These aren\'t science projects. xAI\'s Colossus in Memphis packed ~100,000 [[GPU]]s online in 122 days. Colossus 2 followed with ~110,000 more in 91 days.',
       'Stargate in Abilene: 450,000+ [[GPU]]s, 1.2 GW—enough power for a million four-bedroom homes. Meta trained Llama 3 on up to 16,000 [[GPU]]s.',
-      'Swipe the cards. Each one is a real site with real numbers, built on a deadline. The scale is hard to feel, but the [[megawatt]] numbers are.',
+      'Swipe the cards. Each one is a real site with real numbers, built on a deadline. The scale is hard to feel, but the [[megawatt]] numbers make it real: the biggest sites draw as much power as a city.',
     ],
-    keyIdea: 'These sites draw hundreds of [[megawatts|megawatt]], and their load can swing by tens of megawatts in an instant when thousands of [[GPUs|gpu]] pause together. The grid has to absorb that.',
+    keyIdea: 'These sites draw hundreds of [[megawatts|megawatt]], and their power draw can swing by tens of megawatts in an instant when thousands of [[GPUs|gpu]] pause together. The grid has to absorb that.',
   ),
   's1_data_scale': LessonText(
     intro: [
       'How much data fills these halls? One monthly snapshot of the web is ~2.3 billion pages—about 398 TiB of text.',
       'Slide from [[token]]s to bytes to books to **years of reading**. A [[dataset]] isn\'t a book; it\'s a library with no end.',
-      'One web snapshot (~398 TiB) would fill more than a dozen of the biggest [[hard drives|hard drive]]. Models are trained on dozens of snapshots like that.',
+      'One web snapshot (~398 TiB) would fill more than a dozen of the biggest [[hard drives|hard drive]]. Models learn from text filtered out of dozens of snapshots like that; after cleaning, about 15 trillion [[token]]s are left.',
     ],
     keyIdea: 'A [[dataset]] is the library the [[model]] reads. Scale it up and it\'s not a book—it\'s a city\'s worth of text.',
   ),

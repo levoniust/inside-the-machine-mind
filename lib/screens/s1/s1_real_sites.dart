@@ -35,7 +35,7 @@ const sites = [
       'Planned to use about 1.2 gigawatts, which Oracle described as enough for a million four-bedroom homes.',
       'DC-STARGATE'),
   Site('Llama 3 cluster', 'Meta', 16000, 'up to 16,000 H100s', '700 W per GPU',
-      'Meta trained Llama 3 405B on up to 16,000 H100 GPUs in a 24,000-GPU cluster, for about 54 days of main training.',
+      'Meta trained Llama 3 405B on up to 16,000 H100 GPUs, part of a larger 24,000-GPU cluster, for about 54 days of main training.',
       'DC-LLAMA-CLUSTER'),
 ];
 

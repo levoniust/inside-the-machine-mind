@@ -88,7 +88,7 @@ class _RackState extends State<_Rack> with SingleTickerProviderStateMixin {
               Text(
                 _liquid
                     ? 'Cold liquid flows through metal plates sitting right on each chip and carries the heat away. Calm and cool.'
-                    : 'Fans alone can\'t move heat fast enough at this density: the chips would overheat and slow down.',
+                    : 'Fans alone can\'t move heat fast enough with 72 hot chips packed this tightly: the chips would overheat and slow down.',
                 key: const ValueKey('rack-caption'),
                 style: TextStyle(color: _liquid ? c.lime : c.amber, fontWeight: FontWeight.w600),
               ),
