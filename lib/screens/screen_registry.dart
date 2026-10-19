@@ -26,6 +26,7 @@ import 's2/s2_scale_up.dart';
 import 's2/s2_train_it.dart';
 import 's3/s3_answer.dart';
 import 's3/s3_at_home.dart';
+import 's3/s3_beyond_text.dart';
 import 's3/s3_embeddings.dart';
 import 's3/s3_loop.dart';
 import 's3/s3_robots.dart';
@@ -71,6 +72,7 @@ final Map<String, WidgetBuilder> screenBuilders = {
   's3_at_home': (_) => const S3AtHomeScreen(),
   's3_frontier': (_) => const S3FrontierScreen(),
   's3_serving': (_) => const S3ServingScreen(),
+  's3_beyond_text': (_) => const S3BeyondTextScreen(),
   's3_timeline': (_) => const S3TimelineScreen(),
   's3_robots': (_) => const S3RobotsScreen(),
   's3_science': (_) => const S3ScienceScreen(),
