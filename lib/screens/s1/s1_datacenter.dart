@@ -16,10 +16,7 @@ class S1DatacenterScreen extends StatelessWidget {
   const S1DatacenterScreen({super.key});
 
   @override
-  Widget build(BuildContext context) => const LessonScaffold(
-        lessonId: 's1_datacenter',
-        children: [_Builder()],
-      );
+  Widget build(BuildContext context) => const LessonScaffold(lessonId: 's1_datacenter', children: [_Builder()]);
 }
 
 /// Pure math for the dial (unit-tested).
@@ -57,8 +54,8 @@ class _BuilderState extends State<_Builder> {
   String _power(double kw) => kw >= 1e6
       ? '${(kw / 1e6).toStringAsFixed(2)} GW'
       : kw >= 1000
-          ? '${(kw / 1000).toStringAsFixed(kw >= 1e5 ? 0 : 1)} MW'
-          : '${kw.toStringAsFixed(0)} kW';
+      ? '${(kw / 1000).toStringAsFixed(kw >= 1e5 ? 0 : 1)} MW'
+      : '${kw.toStringAsFixed(0)} kW';
 
   String get _scale {
     final g = gpus;
@@ -92,7 +89,11 @@ class _BuilderState extends State<_Builder> {
                 ),
               ),
               const SizedBox(height: Gap.s),
-              Text(_scale, key: const ValueKey('dc-scale'), style: TextStyle(color: c.text, fontWeight: FontWeight.w600)),
+              Text(
+                _scale,
+                key: const ValueKey('dc-scale'),
+                style: TextStyle(color: c.text, fontWeight: FontWeight.w600),
+              ),
               const SizedBox(height: Gap.s),
               LabeledSlider(
                 key: const ValueKey('dc-gpus'),
@@ -107,10 +108,7 @@ class _BuilderState extends State<_Builder> {
                 spacing: Gap.s,
                 children: [
                   for (final (label, g) in const [('1 rack', 72.0), ('Colossus', 100000.0), ('Stargate', 450000.0)])
-                    ActionChip(
-                      label: Text(label),
-                      onPressed: () => setState(() => _exp = math.log(g) / math.ln10),
-                    ),
+                    ActionChip(label: Text(label), onPressed: () => setState(() => _exp = math.log(g) / math.ln10)),
                 ],
               ),
               SwitchListTile(
@@ -125,18 +123,24 @@ class _BuilderState extends State<_Builder> {
               const SizedBox(height: Gap.s),
               StatGrid(
                 children: [
-                  StatTile(label: 'Racks (72 GPUs each)', value: humanNumber(plan.racks.toDouble(), digits: 0), icon: Icons.dns_outlined),
                   StatTile(
-                      key: const ValueKey('dc-power'),
-                      label: 'Power, incl. cooling',
-                      value: _power(plan.facilityKw),
-                      color: c.amber,
-                      icon: Icons.bolt),
+                    label: 'Racks (72 GPUs each)',
+                    value: humanNumber(plan.racks.toDouble(), digits: 0),
+                    icon: Icons.dns_outlined,
+                  ),
                   StatTile(
-                      label: 'Same as … US homes',
-                      value: humanNumber(plan.homes, digits: 0),
-                      color: c.lime,
-                      icon: Icons.home_outlined),
+                    key: const ValueKey('dc-power'),
+                    label: 'Power, incl. cooling',
+                    value: _power(plan.facilityKw),
+                    color: c.amber,
+                    icon: Icons.bolt,
+                  ),
+                  StatTile(
+                    label: 'Same as … US homes',
+                    value: humanNumber(plan.homes, digits: 0),
+                    color: c.lime,
+                    icon: Icons.home_outlined,
+                  ),
                   StatTile(
                     label: 'Cooling water / day',
                     value: '${humanNumber(plan.waterLitresPerDay, digits: 1)} L',
@@ -157,9 +161,18 @@ class _BuilderState extends State<_Builder> {
         const SizedBox(height: Gap.l),
         const Row(
           children: [
-            Expanded(child: FactCard(value: '~132 kW', label: 'one NVL72 [[rack]] of 72 GPUs, liquid-cooled', factId: 'DC-NVL72-POWER')),
+            Expanded(
+              child: FactCard(
+                value: '~132 kW',
+                label: 'one NVL72 [[rack]] of 72 GPUs, liquid-cooled',
+                comparison: '110 U.S. homes',
+                factId: 'DC-NVL72-POWER',
+              ),
+            ),
             SizedBox(width: Gap.m),
-            Expanded(child: FactCard(value: '1 MW', label: '≈ the average use of ~830 U.S. homes', factId: 'DC-HOME-KW')),
+            Expanded(
+              child: FactCard(value: '1 MW', label: '≈ the average use of ~830 U.S. homes', factId: 'DC-HOME-KW'),
+            ),
           ],
         ),
       ],
@@ -190,9 +203,12 @@ class _AerialPainter extends CustomPainter {
       final oy = size.height * 0.08 + (b ~/ 2) * (bh + size.height * 0.06);
       final rect = Rect.fromLTWH(ox, oy, bw, bh);
       canvas.drawRRect(RRect.fromRectAndRadius(rect, const Radius.circular(6)), Paint()..color = c.surfaceHi);
-      canvas.drawRRect(RRect.fromRectAndRadius(rect, const Radius.circular(6)), Paint()
-        ..style = PaintingStyle.stroke
-        ..color = c.line);
+      canvas.drawRRect(
+        RRect.fromRectAndRadius(rect, const Radius.circular(6)),
+        Paint()
+          ..style = PaintingStyle.stroke
+          ..color = c.line,
+      );
       final n = math.min(dotsPerBuilding, dots - drawn);
       final cols = math.max(1, math.sqrt(n * bw / bh).ceil());
       final rows = math.max(1, (n / cols).ceil());
@@ -215,14 +231,18 @@ class _AerialPainter extends CustomPainter {
       final sub = Rect.fromLTWH(size.width * 0.72, size.height * 0.84, size.width * 0.22, size.height * 0.1);
       canvas.drawRect(sub, Paint()..color = c.amber.withValues(alpha: 0.35));
       for (var i = 0; i < 4; i++) {
-        canvas.drawLine(sub.topLeft + Offset(i * sub.width / 3, 0), sub.bottomLeft + Offset(i * sub.width / 3, 0),
-            Paint()..color = c.amber);
+        canvas.drawLine(
+          sub.topLeft + Offset(i * sub.width / 3, 0),
+          sub.bottomLeft + Offset(i * sub.width / 3, 0),
+          Paint()..color = c.amber,
+        );
       }
     }
     final tp = TextPainter(
       text: TextSpan(
-          text: perDot == 1 ? '● = 1 rack' : '● = $perDot racks',
-          style: TextStyle(fontFamily: 'Roboto', color: c.textDim, fontSize: 11)),
+        text: perDot == 1 ? '● = 1 rack' : '● = $perDot racks',
+        style: TextStyle(fontFamily: 'Roboto', color: c.textDim, fontSize: 11),
+      ),
       textDirection: TextDirection.ltr,
     )..layout();
     tp.paint(canvas, Offset(8, size.height - tp.height - 6));
