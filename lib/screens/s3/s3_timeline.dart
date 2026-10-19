@@ -155,15 +155,18 @@ class _TimelineState extends State<_Timeline> {
                 ),
                 Row(
                   children: [
-                    TextButton(
+                    TextButton.icon(
                       onPressed: _sel > 0 ? () => setState(() => _sel--) : null,
-                      child: const Text('◀ Earlier'),
+                      icon: const Icon(Icons.chevron_left),
+                      label: const Text('Earlier'),
                     ),
                     const Spacer(),
-                    TextButton(
+                    TextButton.icon(
                       key: const ValueKey('timeline-later'),
                       onPressed: _sel < milestones.length - 1 ? () => setState(() => _sel++) : null,
-                      child: const Text('Later ▶'),
+                      icon: const Icon(Icons.chevron_right),
+                      label: const Text('Later'),
+                      iconAlignment: IconAlignment.end,
                     ),
                   ],
                 ),
