@@ -52,7 +52,9 @@ class _LessonScaffoldState extends State<LessonScaffold> {
     final text = narrationFor(widget.lessonId);
     final intro = widget.intro ?? text.intro;
     final keyIdea = widget.keyIdea ?? text.keyIdea;
-    final wide = MediaQuery.sizeOf(context).width >= 600;
+    final screen = MediaQuery.sizeOf(context);
+    final wide = screen.width >= 600;
+    final landscape = screen.width > screen.height && screen.width >= 900;
     final gutter = wide ? Gap.xl : Gap.l;
 
     return Scaffold(
@@ -82,7 +84,8 @@ class _LessonScaffoldState extends State<LessonScaffold> {
         top: false,
         child: Center(
           child: ConstrainedBox(
-            constraints: const BoxConstraints(maxWidth: 760),
+            // On wide-but-short screens (tablet landscape) a narrower column keeps square demos on screen.
+            constraints: BoxConstraints(maxWidth: landscape ? 600 : 760),
             child: ListView(
               padding: EdgeInsets.fromLTRB(gutter, Gap.l, gutter, Gap.xl),
               children: [
@@ -122,39 +125,47 @@ class _NavBar extends StatelessWidget {
           color: c.bg,
           border: Border(top: BorderSide(color: c.line)),
         ),
-        child: Row(
-          children: [
-            Flexible(
-              child: OutlinedButton.icon(
-                onPressed: prev == null
-                    ? () => Navigator.of(context).maybePop()
-                    : () => replaceLesson(context, prev.id),
-                icon: const Icon(Icons.chevron_left),
-                label: FittedBox(child: Text(prev == null ? 'Back' : 'Previous')),
-              ),
+        child: Center(
+          heightFactor: 1,
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 760),
+            child: Row(
+              children: [
+                Flexible(
+                  child: OutlinedButton.icon(
+                    onPressed: prev == null
+                        ? () => Navigator.of(context).maybePop()
+                        : () => replaceLesson(context, prev.id),
+                    icon: const Icon(Icons.chevron_left),
+                    label: FittedBox(child: Text(prev == null ? 'Back' : 'Previous')),
+                  ),
+                ),
+                const SizedBox(width: Gap.m),
+                Expanded(
+                  child: Align(
+                    alignment: Alignment.centerRight,
+                heightFactor: 1,
+                    child: FilledButton.icon(
+                      key: const ValueKey('lesson-next'),
+                      style: FilledButton.styleFrom(backgroundColor: accent, foregroundColor: c.bg),
+                      onPressed: () {
+                        AppScope.read(context).markDone(lessonId);
+                        if (next != null) {
+                          replaceLesson(context, next.id);
+                        } else if (info != null) {
+                          replaceQuiz(context, sectionOf(info).quizId);
+                        } else {
+                          Navigator.of(context).maybePop();
+                        }
+                      },
+                      icon: Icon(next == null ? Icons.quiz_outlined : Icons.chevron_right),
+                      label: FittedBox(child: Text(next == null ? 'Quiz time' : 'Next')),
+                    ),
+                  ),
+                ),
+              ],
             ),
-            const SizedBox(width: Gap.m),
-            const Spacer(),
-            Flexible(
-              flex: 2,
-              child: FilledButton.icon(
-                key: const ValueKey('lesson-next'),
-                style: FilledButton.styleFrom(backgroundColor: accent, foregroundColor: c.bg),
-                onPressed: () {
-                  AppScope.read(context).markDone(lessonId);
-                  if (next != null) {
-                    replaceLesson(context, next.id);
-                  } else if (info != null) {
-                    replaceQuiz(context, sectionOf(info).quizId);
-                  } else {
-                    Navigator.of(context).maybePop();
-                  }
-                },
-                icon: Icon(next == null ? Icons.quiz_outlined : Icons.chevron_right),
-                label: FittedBox(child: Text(next == null ? 'Quiz time' : 'Next')),
-              ),
-            ),
-          ],
+          ),
         ),
       ),
     );

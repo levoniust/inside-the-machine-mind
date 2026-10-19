@@ -1,5 +1,4 @@
 // Opens the gallery on a device and holds it for 25 s so a screenshot can be taken (visual check of WebP decoding).
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
 import 'package:machine_mind/app/app.dart';
