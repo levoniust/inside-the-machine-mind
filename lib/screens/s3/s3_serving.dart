@@ -236,6 +236,7 @@ class _Tricks extends StatelessWidget {
           ),
           SizedBox(height: Gap.m),
           Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Expanded(child: FactCard(value: '2–4×', label: 'more requests per GPU with paged notes (vLLM)', factId: 'IN-VLLM')),
               SizedBox(width: Gap.m),
