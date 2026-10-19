@@ -211,7 +211,7 @@ class _AgentLoopState extends State<_AgentLoop> {
             children: [
               Expanded(child: FactCard(value: '2025', label: 'Claude Code brought coding agents to the terminal', factId: 'TL-CLAUDECODE')),
               SizedBox(width: Gap.m),
-              Expanded(child: FactCard(value: '18+ hours', label: 'an unattended agent session reported with Opus 5.5', factId: 'TL-OPUS55')),
+              Expanded(child: FactCard(value: '18 hours', label: 'an unattended agent session reported with Opus 5.5', factId: 'TL-OPUS55')),
             ],
           ),
         ],

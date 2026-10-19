@@ -23,7 +23,7 @@ class S2PostTrainingScreen extends StatelessWidget {
           columns: 2,
           children: [
             StatTile(
-              value: '100×',
+              value: '>100×',
               label: 'InstructGPT (1.3B) beat GPT-3 (175B)',
               color: c.violet,
               icon: Icons.thumb_up,

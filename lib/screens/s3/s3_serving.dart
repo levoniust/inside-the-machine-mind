@@ -62,7 +62,7 @@ class _CarpoolState extends State<_Carpool> with SingleTickerProviderStateMixin 
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           TermText(
-            'To write each word the GPU must read the whole model from memory (that\'s the slow part). With [[batching]] it reads '
+            'To write each new [[token]] the GPU must read the whole model from memory (that\'s the slow part). With [[batching]] it reads '
             'the model once and uses it for many people\'s conversations at the same time.',
             style: TextStyle(color: c.textDim),
           ),
@@ -160,7 +160,7 @@ class _Tricks extends StatelessWidget {
           ),
           SizedBox(height: Gap.m),
           TermText(
-            '**Draft and check:** a small, fast model drafts a few words; the big model checks them all at once and keeps the '
+            '**Draft and check:** a small, fast model drafts a few [[tokens|token]]; the big model checks them all at once and keeps the '
             'right ones. Same answer, less waiting.',
           ),
           SizedBox(height: Gap.m),

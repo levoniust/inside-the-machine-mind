@@ -136,7 +136,7 @@ class _BudgetState extends State<_Budget> {
                 children: [
                   Expanded(child: FactCard(value: '~20', label: 'tokens per knob for the best use of compute', factId: 'TR-CHINCHILLA')),
                   SizedBox(width: Gap.m),
-                  Expanded(child: FactCard(value: '2020', label: 'scaling laws: loss falls smoothly as models grow', factId: 'TR-KAPLAN')),
+                  Expanded(child: FactCard(value: '2020', label: 'scaling laws: loss falls smoothly as models, data and compute grow', factId: 'TR-KAPLAN')),
                 ],
               ),
             ],

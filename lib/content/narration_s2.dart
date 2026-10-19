@@ -5,7 +5,7 @@ const narrationS2 = <String, LessonText>{
   's2_intro': LessonText(
     intro: [
       'You know how a student reads the textbook, then takes the test? That\'s [[Training]]. And [[Inference]] is the test itself—the job.',
-      'Let\'s follow our question. At school, the model reads trillions of sentences. At work, it just answers your [[prompt]].',
+      'Let\'s follow our question. At school, the model reads trillions of words. At work, it just answers your [[prompt]].',
       'Tap the toggle and watch the table animate. School is slow and messy. The job is fast and focused.',
     ],
     keyIdea: 'Training is going to school; inference is doing the job. One builds the [[model]]; the other uses it.',
@@ -22,7 +22,7 @@ const narrationS2 = <String, LessonText>{
     intro: [
       'Before the model answers "Why is the sky blue?", it has to read the world. That\'s the [[dataset]]—the library.',
       'Tap each source—web pages, books, code, Wikipedia, papers. They all pour into one funnel.',
-      'FineWeb alone holds 15 trillion [[tokens|token]] from 96 web snapshots. Reading that at 250 words a minute would take about 250,000 years.',
+      'FineWeb alone holds 15 trillion [[tokens|token]] from 96 web snapshots. Reading that at 250 words a minute, 8 hours a day, would take about 250,000 years.',
     ],
     keyIdea: 'The [[dataset]] is the library the model reads. Its size and mix shape everything it can know.',
   ),
@@ -61,7 +61,7 @@ const narrationS2 = <String, LessonText>{
   ),
   's2_guess': LessonText(
     intro: [
-      'The model\'s training job is brutally simple: guess the next [[token]]. One word at a time.',
+      'The model\'s training job is brutally simple: guess the next [[token]]. One piece of a word at a time.',
       'I\'ll hide the next word. You guess first, then I show the [[forward pass]] result—an untrained model just shrugs.',
       'Trained, it sees "The sky is—" and puts a huge bar on "blue." The [[softmax]] turns raw scores into chances.',
     ],
@@ -79,7 +79,7 @@ const narrationS2 = <String, LessonText>{
     intro: [
       'The model guessed wrong. [[Backpropagation]] passes the blame backward to every [[parameter]].',
       'Watch the red pulses travel from the output through every knob. Each gets a tiny arrow: "Turn me a little."',
-      'That arrow is the [[gradient]]. Rumelhart, Hinton, and Williams made it famous in 1986. It\'s why AI can learn.',
+      'That arrow is the [[gradient]]. Rumelhart, Hinton, and Williams made backpropagation, the way to find it, famous in 1986. It\'s why AI can learn.',
     ],
     keyIdea: '[[Backpropagation]] figures out which [[parameters|parameter]] caused the mistake and how much to blame each one.',
   ),
@@ -87,7 +87,7 @@ const narrationS2 = <String, LessonText>{
     intro: [
       'The model now knows which way is downhill. [[Gradient descent]] is walking downhill in the fog, one step at a time.',
       'The [[learning rate]] is your step size. Too small and you crawl; too big and you bounce over the valley.',
-      'Adam, the 2014 optimizer, smooths the path. It keeps a running average of past slopes—like a skier remembering the hill.',
+      'Adam, the 2014 optimizer, smooths the path. It keeps a running average of past slopes—like a skier remembering the hill—and of how bumpy they\'ve been, so each knob gets its own step size.',
     ],
     keyIdea: '[[Gradient descent]] walks downhill. The [[learning rate]] sets the step size; Adam smooths the walk.',
   ),
@@ -136,7 +136,7 @@ const narrationS2 = <String, LessonText>{
     intro: [
       'The [[base model]] is a well-read parrot. It finishes any sentence, but it doesn\'t know how to be helpful.',
       '[[Fine-tuning]] is specialist training. Then [[RLHF]]—thumbs up and down—teaches it to answer like a person.',
-      'A 1.3B InstructGPT beat the 175B GPT-3—a model 100× larger. [[Constitutional AI]] goes further: the model critiques itself using written principles.',
+      'A 1.3B InstructGPT beat the 175B GPT-3—a model over 100× larger. [[Constitutional AI]] goes further: the model critiques itself using written principles.',
       'Play the rater. Two answers appear—pick the better one.',
     ],
     keyIdea: '[[Fine-tuning]] turns a [[base model]] into an assistant. [[RLHF]] and [[Constitutional AI]] teach helpfulness, not just fluency.',
@@ -173,7 +173,7 @@ const narrationS2 = <String, LessonText>{
       'Tap the slider. At 4 bits per number, even a 65B model can be fine-tuned on a single 48 GB [[GPU]].',
       '[[Mixture of experts]] is a team of specialists. Mixtral 8x7B has 46.7B total, but only 12.9B fire per [[token]]. Tap the router—two of eight experts light up.',
     ],
-    keyIdea: 'You can shrink a [[model]] with [[distillation]], [[quantization]], or [[Mixture of experts]]. Most of the skill, for much less memory and [[compute]].',
+    keyIdea: 'You can make a [[model]] cheaper to run with [[distillation]], [[quantization]], or [[Mixture of experts]]. Most of the skill, for much less memory and [[compute]].',
   ),
   's2_memory_budget': LessonText(
     intro: [

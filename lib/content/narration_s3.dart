@@ -108,7 +108,7 @@ const narrationS3 = <String, LessonText>{
   ),
   's3_answer': LessonText(
     intro: [
-      'And here it is. The answer assembles word by word: sunlight scatters, blue scatters in all directions, and your eyes see blue.',
+      'And here it is. The answer assembles token by token: sunlight scatters, blue scatters in all directions, and your eyes see blue.',
       'Look at the journey map — three sections, real silicon, real math. Your question traveled through all of it to get this sentence.',
       'Hit play for a twenty-second replay. The same kind of math that answered you is folding proteins, forecasting storms, and helping doctors.',
       'And the best part? You asked. You\'re the one holding the phone, curious and wondering — the machine is just the path your question travels.',

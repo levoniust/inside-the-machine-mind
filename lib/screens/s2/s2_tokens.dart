@@ -96,7 +96,7 @@ class _MergeGameState extends State<_MergeGame> {
                   ],
                 ),
               ] else
-                Text('Every word is now a single token!', style: TextStyle(color: c.lime, fontWeight: FontWeight.w700)),
+                Text('In this little example, every word is now one token!', style: TextStyle(color: c.lime, fontWeight: FontWeight.w700)),
               const SizedBox(height: Gap.s),
               Wrap(
                 spacing: Gap.s,

@@ -102,7 +102,7 @@ const _parts = [
     kind: _Kind.ram,
     align: Alignment(-0.70, -0.16),
     blurb: 'Whatever is being thought about right now is spread out here, tens of thousands of times '
-        'quicker to reach than the warehouse. But the desk is small, and it goes blank when the power '
+        '(or more) quicker to reach than the warehouse. But the desk is small, and it goes blank when the power '
         'is cut — [[RAM]] is temporary by design.',
     statA: ('Desktop DDR5 bandwidth', '89.6 GB/s'),
     statB: ('Time to fetch', '~80–100 ns'),
@@ -133,7 +133,7 @@ const _parts = [
     icon: Icons.bolt_outlined,
     kind: _Kind.gpu,
     align: Alignment(0.62, -0.12),
-    blurb: 'Thousands of simple workers that all do the same sum at once — the [[Tensor core]] army — '
+    blurb: 'Thousands of simple workers that all do the same sum at once — the [[core|Core]] army — '
         'with memory ([[HBM]]) stacked right next door. This is where most of an LLM\'s thinking '
         'actually happens.',
     statA: ('Cores in one H100', '16,896'),
@@ -313,8 +313,8 @@ class _GuidedTourState extends State<_GuidedTour> with SingleTickerProviderState
               ),
               const SizedBox(height: Gap.s),
               const TermText(
-                'From the slowest shelf to the chip\'s pocket is a gap of hundreds of thousands to '
-                'millions of times. That is why builders keep the thinking where the data already is.',
+                'From the slowest shelf to the chip\'s pocket is a gap of millions of times. '
+                'That is why builders keep the thinking where the data already is.',
               ),
             ],
           ),

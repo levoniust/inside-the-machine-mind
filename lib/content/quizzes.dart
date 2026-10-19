@@ -26,7 +26,7 @@ const quizzes = <String, List<QuizQuestion>>{
         'PUE = total power ÷ computing power. 1.5 means for every watt of computing, half a watt goes to cooling and losses.'),
     QuizQuestion('About how much electricity did all the world\'s data centres use in 2024?',
         ['0.01% of global electricity', 'About 1.5%', 'About 25%', 'More than half'], 1,
-        'The IEA estimates ~415 TWh, about 1.5% of global electricity, and expects it to roughly double by 2030.'),
+        'The IEA estimates ~415 TWh, about 1.5% of global electricity, and expects it to more than double, to ~945 TWh, by 2030.'),
     QuizQuestion('What links GPUs inside a server so they can share data super fast?',
         ['Wi-Fi', 'USB', 'NVLink', 'Bluetooth'], 2,
         'NVLink is a private express lane between GPUs: 900 GB/s per GPU on H100 and 1.8 TB/s on Blackwell.'),

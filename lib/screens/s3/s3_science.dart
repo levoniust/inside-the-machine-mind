@@ -32,12 +32,12 @@ class _Story {
 final _stories = [
   _Story(_Field.protein, 'Reading the shapes of life', '200 million+ protein structures, free',
       'Proteins are the tiny machines in every living cell, and their shape decides what they do. Working out one shape used to '
-          'take years in a lab. AlphaFold predicts it in minutes, and its makers shared over 200 million predictions with '
+          'take years in a lab. AlphaFold predicts it in a fraction of that time, and its makers shared over 200 million predictions with '
           'every scientist on Earth. It won the 2024 Nobel Prize in Chemistry.',
       ['TL-ALPHAFOLD'], (c) => c.violet),
   _Story(_Field.weather, 'Forecasting the sky', '10-day forecast in under a minute',
       'GraphCast learned from decades of weather records and makes a 10-day global forecast in under a minute on one chip, '
-          'beating the leading traditional system on 90% of 1,380 measures. In 2025 Europe\'s weather centre put its own AI '
+          'beating the leading traditional system on 90% of 1,380 forecast targets. In 2025 Europe\'s weather centre put its own AI '
           'forecasts into daily operation next to its physics model, helping people prepare for storms and heat.',
       ['TL-GRAPHCAST', 'TL-ECMWF'], (c) => c.cyan),
   _Story(_Field.materials, 'Inventing new materials', '2.2 million new crystals predicted',
