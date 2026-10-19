@@ -4,13 +4,14 @@ import 'package:machine_mind/app/app.dart';
 import 'package:machine_mind/core/progress.dart';
 
 /// Pump the app (or a single screen) with an in-memory progress store, phone size, animations off
-/// so typewriter text and loops settle.
+/// so typewriter text and loops settle (pass animations: true to test an animation itself).
 Future<ProgressStore> pumpApp(
   WidgetTester tester, {
   Widget? home,
   Size size = const Size(412, 915),
   Brightness brightness = Brightness.dark,
   double textScale = 1.0,
+  bool animations = false,
 }) async {
   tester.view.physicalSize = size * 2;
   tester.view.devicePixelRatio = 2;
@@ -21,7 +22,7 @@ Future<ProgressStore> pumpApp(
   final store = ProgressStore();
   await tester.pumpWidget(
     MediaQuery(
-      data: MediaQueryData(size: size, disableAnimations: true, platformBrightness: brightness, textScaler: TextScaler.linear(textScale)),
+      data: MediaQueryData(size: size, disableAnimations: !animations, platformBrightness: brightness, textScaler: TextScaler.linear(textScale)),
       child: MachineMindApp(progress: store, home: home),
     ),
   );
