@@ -1,6 +1,7 @@
 import 'package:flutter/widgets.dart';
 
 import 's1/s1_intro.dart';
+import 's1/s1_memory_types.dart';
 import 's1/s1_ram.dart';
 import 's1/s1_storage.dart';
 
@@ -9,4 +10,5 @@ final Map<String, WidgetBuilder> screenBuilders = {
   's1_intro': (_) => const S1IntroScreen(),
   's1_storage': (_) => const S1StorageScreen(),
   's1_ram': (_) => const S1RamScreen(),
+  's1_memory_types': (_) => const S1MemoryTypesScreen(),
 };
