@@ -17,6 +17,7 @@ import 's2/s2_scale_up.dart';
 import 's2/s2_train_it.dart';
 import 's3/s3_answer.dart';
 import 's3/s3_at_home.dart';
+import 's3/s3_embeddings.dart';
 import 's3/s3_loop.dart';
 import 's3/s3_sampling.dart';
 import 's3/s3_tokenize.dart';
@@ -40,6 +41,7 @@ final Map<String, WidgetBuilder> screenBuilders = {
   's2_big_small': (_) => const S2BigSmallScreen(),
   's3_tiny_model': (_) => const S3TinyModelScreen(),
   's3_tokenize': (_) => const S3TokenizeScreen(),
+  's3_embeddings': (_) => const S3EmbeddingsScreen(),
   's3_sampling': (_) => const S3SamplingScreen(),
   's3_loop': (_) => const S3LoopScreen(),
   's3_at_home': (_) => const S3AtHomeScreen(),
