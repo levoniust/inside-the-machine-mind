@@ -14,4 +14,11 @@ void main() {
     expect(toks.map((e) => e.$1).join(), 'tea 🍵');
     expect(toks.last.$2, -1);
   });
+  test('emoji stay whole: no piece holds half a surrogate pair', () {
+    final toks = t.encode('The cat had tea 🍵🤖');
+    expect(toks.map((e) => e.$1).where((p) => p.runes.length == 1 && p.runes.first > 0xFFFF), hasLength(2));
+    for (final (p, _) in toks) {
+      expect(p.runes.any((r) => r >= 0xD800 && r <= 0xDFFF), isFalse, reason: 'lone surrogate in "$p"');
+    }
+  });
 }

@@ -46,9 +46,12 @@ class MiniTokenizer {
         len--;
       }
       if (len == 0) {
-        // Character outside the vocabulary (emoji, accents): one "unknown" token per character.
-        out.add((text[i], -1));
-        i++;
+        // Character outside the vocabulary (emoji, accents): one "unknown" token per character. Keep
+        // surrogate pairs together; half an emoji is not a valid string and crashes text layout.
+        final pair = i + 1 < text.length && (text.codeUnitAt(i) & 0xFC00) == 0xD800 && (text.codeUnitAt(i + 1) & 0xFC00) == 0xDC00;
+        final n = pair ? 2 : 1;
+        out.add((text.substring(i, i + n), -1));
+        i += n;
       }
     }
     return out;

@@ -202,7 +202,8 @@ void showFactSource(BuildContext context, String factId) {
     backgroundColor: c.surface,
     showDragHandle: true,
     builder: (context) => SafeArea(
-      child: Padding(
+      // Scrolls: long facts with several sources (or large text) are taller than the sheet's height limit.
+      child: SingleChildScrollView(
         padding: const EdgeInsets.fromLTRB(Gap.xl, 0, Gap.xl, Gap.xl),
         child: Column(
           mainAxisSize: MainAxisSize.min,
