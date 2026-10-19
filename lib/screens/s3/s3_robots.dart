@@ -13,10 +13,7 @@ class S3RobotsScreen extends StatelessWidget {
   const S3RobotsScreen({super.key});
 
   @override
-  Widget build(BuildContext context) => const LessonScaffold(
-        lessonId: 's3_robots',
-        children: [_ArmLoop(), _Robots()],
-      );
+  Widget build(BuildContext context) => const LessonScaffold(lessonId: 's3_robots', children: [_ArmLoop(), _Robots()]);
 }
 
 class _Task {
@@ -26,12 +23,27 @@ class _Task {
 }
 
 final _tasks = [
-  _Task('Fold the shirt', 'A crumpled shirt on the table', '"Grab the sleeve, bring it across, then fold in half"',
-      'Move gripper to the sleeve · close · lift · move · open', (c) => c.cyan),
-  _Task('Put the cup in the sink', 'A cup next to a sink', '"The cup is the round thing; the sink is on the right"',
-      'Reach · grip the handle · lift · move right · lower · release', (c) => c.amber),
-  _Task('Hand me the blue block', 'Three blocks: red, green, blue', '"Blue block is on the left; the person is in front"',
-      'Reach left · grip · lift · move forward · release', (c) => c.violet),
+  _Task(
+    'Fold the shirt',
+    'A crumpled shirt on the table',
+    '"Grab the sleeve, bring it across, then fold in half"',
+    'Move gripper to the sleeve · close · lift · move · open',
+    (c) => c.cyan,
+  ),
+  _Task(
+    'Put the cup in the sink',
+    'A cup next to a sink',
+    '"The cup is the round thing; the sink is on the right"',
+    'Reach · grip the handle · lift · move right · lower · release',
+    (c) => c.amber,
+  ),
+  _Task(
+    'Hand me the blue block',
+    'Three blocks: red, green, blue',
+    '"Blue block is on the left; the person is in front"',
+    'Reach left · grip · lift · move forward · release',
+    (c) => c.violet,
+  ),
 ];
 
 const _phases = ['See', 'Understand', 'Act', 'Check'];
@@ -104,7 +116,7 @@ class _ArmLoopState extends State<_ArmLoop> with SingleTickerProviderStateMixin 
               label: 'Robot arm, phase ${_phases[_phase]}',
               child: AnimatedBuilder(
                 animation: _t,
-                builder: (_, _) => CustomPaint(painter: _ArmPainter(_phase, _t.value, task.colorOf(c), c)),
+                builder: (_, _) => CustomPaint(painter: _ArmPainter(_phase, _t.value, task.colorOf(c), c, _task)),
               ),
             ),
           ),
@@ -122,8 +134,10 @@ class _ArmLoopState extends State<_ArmLoop> with SingleTickerProviderStateMixin 
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: FittedBox(
-                      child: Text(_phases[i],
-                          style: TextStyle(fontWeight: FontWeight.w700, color: i == _phase ? c.text : c.textDim)),
+                      child: Text(
+                        _phases[i],
+                        style: TextStyle(fontWeight: FontWeight.w700, color: i == _phase ? c.text : c.textDim),
+                      ),
                     ),
                   ),
                 ),
@@ -131,7 +145,11 @@ class _ArmLoopState extends State<_ArmLoop> with SingleTickerProviderStateMixin 
             ],
           ),
           const SizedBox(height: Gap.m),
-          Text(caption, key: ValueKey('robot-caption-$_phase'), style: TextStyle(color: c.text)),
+          Text(
+            caption,
+            key: ValueKey('robot-caption-$_phase'),
+            style: TextStyle(color: c.text),
+          ),
           const SizedBox(height: Gap.m),
           StepControls(step: _phase, count: _phases.length, onStep: (i) => setState(() => _phase = i)),
         ],
@@ -141,8 +159,9 @@ class _ArmLoopState extends State<_ArmLoop> with SingleTickerProviderStateMixin 
 }
 
 class _ArmPainter extends CustomPainter {
-  _ArmPainter(this.phase, this.t, this.object, this.c);
+  _ArmPainter(this.phase, this.t, this.object, this.c, this.kind);
   final int phase;
+  final int kind; // 0 shirt, 1 cup, 2 blocks
   final double t;
   final Color object;
   final AppColors c;
@@ -155,8 +174,51 @@ class _ArmPainter extends CustomPainter {
     // Object on the table (lifted during Act).
     final lift = phase == 2 ? t * h * 0.18 : 0.0;
     final objPos = Offset(w * 0.62, h * 0.72 - lift);
-    canvas.drawRRect(RRect.fromRectAndRadius(Rect.fromCenter(center: objPos, width: w * 0.14, height: h * 0.1), const Radius.circular(6)),
-        Paint()..color = object);
+    final paint = Paint()..color = object;
+    switch (kind) {
+      case 0: // a T-shirt
+        final s = w * 0.08;
+        final shirt = Path()
+          ..moveTo(objPos.dx - s * 0.5, objPos.dy - s * 0.6)
+          ..lineTo(objPos.dx - s * 1.1, objPos.dy - s * 0.2)
+          ..lineTo(objPos.dx - s * 0.8, objPos.dy + s * 0.15)
+          ..lineTo(objPos.dx - s * 0.5, objPos.dy)
+          ..lineTo(objPos.dx - s * 0.5, objPos.dy + s * 0.7)
+          ..lineTo(objPos.dx + s * 0.5, objPos.dy + s * 0.7)
+          ..lineTo(objPos.dx + s * 0.5, objPos.dy)
+          ..lineTo(objPos.dx + s * 0.8, objPos.dy + s * 0.15)
+          ..lineTo(objPos.dx + s * 1.1, objPos.dy - s * 0.2)
+          ..lineTo(objPos.dx + s * 0.5, objPos.dy - s * 0.6)
+          ..close();
+        canvas.drawPath(shirt, paint);
+      case 1: // a cup with a handle
+        final r = Rect.fromCenter(center: objPos, width: w * 0.08, height: h * 0.11);
+        canvas.drawRRect(
+          RRect.fromRectAndCorners(r, bottomLeft: const Radius.circular(6), bottomRight: const Radius.circular(6)),
+          paint,
+        );
+        canvas.drawArc(
+          Rect.fromCenter(center: r.centerRight, width: w * 0.04, height: h * 0.06),
+          -1.4,
+          2.8,
+          false,
+          Paint()
+            ..color = object
+            ..style = PaintingStyle.stroke
+            ..strokeWidth = 3,
+        );
+      default: // three blocks; the blue one is the target
+        final s = w * 0.05;
+        canvas.drawRect(
+          Rect.fromCenter(center: Offset(w * 0.78, h * 0.735), width: s, height: s),
+          Paint()..color = c.red,
+        );
+        canvas.drawRect(
+          Rect.fromCenter(center: Offset(w * 0.88, h * 0.735), width: s, height: s),
+          Paint()..color = c.lime,
+        );
+        canvas.drawRect(Rect.fromCenter(center: objPos, width: s, height: s), Paint()..color = const Color(0xFF3D7BFF));
+    }
     // Camera with view cone (bright during See/Check).
     final cam = Offset(w * 0.12, h * 0.16);
     final seeing = phase == 0 || phase == 3;
@@ -172,9 +234,13 @@ class _ArmPainter extends CustomPainter {
       final b = Offset(w * 0.12, h * 0.45);
       canvas.drawCircle(b, 18 + 6 * t, Paint()..color = c.magenta.withValues(alpha: 0.25));
       canvas.drawCircle(b, 12, Paint()..color = c.magenta);
-      canvas.drawLine(cam, b, Paint()
-        ..color = c.magenta
-        ..strokeWidth = 2);
+      canvas.drawLine(
+        cam,
+        b,
+        Paint()
+          ..color = c.magenta
+          ..strokeWidth = 2,
+      );
     }
     // Arm: base → elbow → gripper reaching toward the object.
     final base = Offset(w * 0.32, h * 0.78);
@@ -220,13 +286,21 @@ class _Robots extends StatelessWidget {
           const SizedBox(height: Gap.m),
           for (final (year, name, what, fact) in const [
             ('2023', 'RT-2 (Google DeepMind)', 'turned web knowledge into robot actions', 'RB-RT2'),
-            ('2024', 'π0 (Physical Intelligence)', 'one general policy that folds laundry, buses tables and packs boxes', 'RB-PI0'),
+            (
+              '2024',
+              'π0 (Physical Intelligence)',
+              'one general policy that folds laundry, buses tables and packs boxes',
+              'RB-PI0',
+            ),
             ('2026', 'Gemini Robotics 2', 'whole-body control for humanoid robots', 'RB-GEMINI'),
           ])
             Card(
               margin: const EdgeInsets.only(bottom: Gap.s),
               child: ListTile(
-                leading: Text(year, style: AppText.mono.copyWith(color: c.magenta, fontWeight: FontWeight.w800)),
+                leading: Text(
+                  year,
+                  style: AppText.mono.copyWith(color: c.magenta, fontWeight: FontWeight.w800),
+                ),
                 title: Text(name, style: const TextStyle(fontWeight: FontWeight.w700)),
                 subtitle: Text(what),
                 trailing: IconButton(
