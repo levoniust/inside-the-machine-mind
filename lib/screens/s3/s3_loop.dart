@@ -143,7 +143,7 @@ class _LoopState extends State<_Loop> with SingleTickerProviderStateMixin {
                 key: const ValueKey('loop-cache'),
                 contentPadding: EdgeInsets.zero,
                 title: const Text('KV cache'),
-                subtitle: Text(_cache ? 'On: keeps each word\'s attention notes' : 'Off: re-reads everything every time'),
+                subtitle: Text(_cache ? 'On: keeps notes on every earlier word' : 'Off: re-reads everything every time'),
                 value: _cache,
                 activeThumbColor: c.magenta,
                 onChanged: (v) => setState(() => _cache = v),

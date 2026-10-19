@@ -85,7 +85,7 @@ const narrationS1 = <String, LessonText>{
   's1_rack': LessonText(
     intro: [
       'A [[rack]] is a tall cabinet of [[server]]s. The NVL72 goes further: 72 [[GPU]]s act as **one** machine, linked by 130 TB/s of [[NVLink]].',
-      'It runs on [[liquid cooling]]—cold water flows through pipes right at the chips. Water carries about 3,500 times more heat than the same volume of air.',
+      'It runs on [[liquid cooling]]—cold water flows through metal plates sitting right on the chips. Water carries about 3,500 times more heat than the same volume of air.',
       'Toggle **air vs liquid** and compare. In air mode the fans roar and heat shimmers; in liquid mode the coolant does the work quietly.',
     ],
     keyIdea: '72 [[GPU]]s in one [[rack]] are wired together by [[NVLink]] so they can talk like one chip, sharing 13.4 TB of [[HBM]]. It\'s not eight [[server]]s in a box—it\'s one big brain.',
@@ -102,7 +102,7 @@ const narrationS1 = <String, LessonText>{
     intro: [
       'Every [[bit]] you read costs energy. The grid feeds a substation, the substation feeds backup power systems (UPS), and those feed the [[racks|rack]].',
       'The heat flows the other way: chips → coolant → chillers → [[cooling towers|cooling tower]]. Tap each stage to see the water and the watts.',
-      '[[PUE]] is the overhead score. Industry average: 1.54. That means for every 1 W of [[compute]], you\'re burning 0.54 W on cooling and lights.',
+      '[[PUE]] is the overhead score. Industry average: 1.54. That means for every 1 W of [[compute]], you\'re burning 0.54 W on cooling, lights and power losses.',
     ],
     keyIdea: 'For every 1 W of [[compute]], the overhead is measured by [[PUE]]. And the heat needs water to carry it away—about 1.8 litres for every kWh used, on average.',
   ),
