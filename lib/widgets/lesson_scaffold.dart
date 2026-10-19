@@ -93,10 +93,7 @@ class _LessonScaffoldState extends State<LessonScaffold> {
                 if (intro.isNotEmpty) BitSays(lines: intro, mood: widget.bitMood),
                 const SizedBox(height: Gap.xl),
                 for (final w in widget.children) ...[w, const SizedBox(height: Gap.l)],
-                if (keyIdea.isNotEmpty) ...[
-                  const SizedBox(height: Gap.s),
-                  KeyIdea(keyIdea, color: accent),
-                ],
+                if (keyIdea.isNotEmpty) ...[const SizedBox(height: Gap.s), KeyIdea(keyIdea, color: accent)],
               ],
             ),
           ),
@@ -121,30 +118,41 @@ class _NavBar extends StatelessWidget {
     return SafeArea(
       child: Container(
         padding: const EdgeInsets.fromLTRB(Gap.l, Gap.s, Gap.l, Gap.s),
-        decoration: BoxDecoration(color: c.bg, border: Border(top: BorderSide(color: c.line))),
+        decoration: BoxDecoration(
+          color: c.bg,
+          border: Border(top: BorderSide(color: c.line)),
+        ),
         child: Row(
           children: [
-            OutlinedButton.icon(
-              onPressed: prev == null ? () => Navigator.of(context).maybePop() : () => replaceLesson(context, prev.id),
-              icon: const Icon(Icons.chevron_left),
-              label: Text(prev == null ? 'Back' : 'Previous'),
+            Flexible(
+              child: OutlinedButton.icon(
+                onPressed: prev == null
+                    ? () => Navigator.of(context).maybePop()
+                    : () => replaceLesson(context, prev.id),
+                icon: const Icon(Icons.chevron_left),
+                label: FittedBox(child: Text(prev == null ? 'Back' : 'Previous')),
+              ),
             ),
+            const SizedBox(width: Gap.m),
             const Spacer(),
-            FilledButton.icon(
-              key: const ValueKey('lesson-next'),
-              style: FilledButton.styleFrom(backgroundColor: accent, foregroundColor: c.bg),
-              onPressed: () {
-                AppScope.read(context).markDone(lessonId);
-                if (next != null) {
-                  replaceLesson(context, next.id);
-                } else if (info != null) {
-                  replaceQuiz(context, sectionOf(info).quizId);
-                } else {
-                  Navigator.of(context).maybePop();
-                }
-              },
-              icon: Icon(next == null ? Icons.quiz_outlined : Icons.chevron_right),
-              label: Text(next == null ? 'Quiz time' : 'Next'),
+            Flexible(
+              flex: 2,
+              child: FilledButton.icon(
+                key: const ValueKey('lesson-next'),
+                style: FilledButton.styleFrom(backgroundColor: accent, foregroundColor: c.bg),
+                onPressed: () {
+                  AppScope.read(context).markDone(lessonId);
+                  if (next != null) {
+                    replaceLesson(context, next.id);
+                  } else if (info != null) {
+                    replaceQuiz(context, sectionOf(info).quizId);
+                  } else {
+                    Navigator.of(context).maybePop();
+                  }
+                },
+                icon: Icon(next == null ? Icons.quiz_outlined : Icons.chevron_right),
+                label: FittedBox(child: Text(next == null ? 'Quiz time' : 'Next')),
+              ),
             ),
           ],
         ),
@@ -160,9 +168,7 @@ class PlaceholderLesson extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => LessonScaffold(
-        lessonId: lessonId,
-        children: const [
-          DemoCard(child: Text('This lesson is being built.')),
-        ],
-      );
+    lessonId: lessonId,
+    children: const [DemoCard(child: Text('This lesson is being built.'))],
+  );
 }

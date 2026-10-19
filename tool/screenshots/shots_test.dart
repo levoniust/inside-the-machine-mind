@@ -9,6 +9,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:machine_mind/app/app.dart';
 import 'package:machine_mind/content/lessons.dart';
 import 'package:machine_mind/core/progress.dart';
+import 'package:machine_mind/screens/extras/finale_screen.dart';
 import 'package:machine_mind/screens/home/home_screen.dart';
 import 'package:machine_mind/screens/home/section_hub.dart';
 
@@ -39,6 +40,7 @@ void main() {
     'hub1': () => const SectionHub(number: 1),
     'hub2': () => const SectionHub(number: 2),
     'hub3': () => const SectionHub(number: 3),
+    'finale': () => const FinaleScreen(),
     for (final l in allLessons) l.id: () => Builder(builder: l.builder),
   };
   final wanted = _only.isEmpty ? targets.keys.toSet() : _only.split(',').toSet();
