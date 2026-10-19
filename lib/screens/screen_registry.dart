@@ -35,6 +35,7 @@ import 's2/s2_testing.dart';
 import 's2/s2_things_break.dart';
 import 's2/s2_tokens.dart';
 import 's2/s2_scale_up.dart';
+import 's2/s2_scaling_laws.dart';
 import 's2/s2_train_it.dart';
 import 's3/s3_answer.dart';
 import 's3/s3_at_home.dart';
@@ -85,6 +86,7 @@ final Map<String, WidgetBuilder> screenBuilders = {
   's2_parallel': (_) => const S2ParallelScreen(),
   's2_things_break': (_) => const S2ThingsBreakScreen(),
   's2_testing': (_) => const S2TestingScreen(),
+  's2_scaling_laws': (_) => const S2ScalingLawsScreen(),
   's2_big_small': (_) => const S2BigSmallScreen(),
   's3_tiny_model': (_) => const S3TinyModelScreen(),
   's3_intro': (_) => const S3IntroScreen(),
