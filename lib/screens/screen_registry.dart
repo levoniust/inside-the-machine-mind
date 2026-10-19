@@ -16,6 +16,9 @@ import 's2/s2_scale_up.dart';
 import 's2/s2_train_it.dart';
 import 's3/s3_answer.dart';
 import 's3/s3_at_home.dart';
+import 's3/s3_loop.dart';
+import 's3/s3_sampling.dart';
+import 's3/s3_tokenize.dart';
 import 's3/s3_frontier.dart';
 import 's3/s3_tiny_model.dart';
 
@@ -34,6 +37,9 @@ final Map<String, WidgetBuilder> screenBuilders = {
   's2_step_hardware': (_) => const S2StepHardwareScreen(),
   's2_testing': (_) => const S2TestingScreen(),
   's3_tiny_model': (_) => const S3TinyModelScreen(),
+  's3_tokenize': (_) => const S3TokenizeScreen(),
+  's3_sampling': (_) => const S3SamplingScreen(),
+  's3_loop': (_) => const S3LoopScreen(),
   's3_at_home': (_) => const S3AtHomeScreen(),
   's3_frontier': (_) => const S3FrontierScreen(),
   's3_answer': (_) => const S3AnswerScreen(),
