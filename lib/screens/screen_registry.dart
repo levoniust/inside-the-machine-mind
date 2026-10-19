@@ -33,6 +33,7 @@ import 's3/s3_sampling.dart';
 import 's3/s3_science.dart';
 import 's3/s3_tokenize.dart';
 import 's3/s3_frontier.dart';
+import 's3/s3_intro.dart';
 import 's3/s3_timeline.dart';
 import 's3/s3_tiny_model.dart';
 
@@ -61,6 +62,7 @@ final Map<String, WidgetBuilder> screenBuilders = {
   's2_testing': (_) => const S2TestingScreen(),
   's2_big_small': (_) => const S2BigSmallScreen(),
   's3_tiny_model': (_) => const S3TinyModelScreen(),
+  's3_intro': (_) => const S3IntroScreen(),
   's3_tokenize': (_) => const S3TokenizeScreen(),
   's3_embeddings': (_) => const S3EmbeddingsScreen(),
   's3_sampling': (_) => const S3SamplingScreen(),
