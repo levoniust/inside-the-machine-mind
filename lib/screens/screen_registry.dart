@@ -4,6 +4,7 @@ import 's2/s2_post_training.dart';
 
 import 's2/s2_safety.dart';
 
+import 's1/s1_data_scale.dart';
 import 's1/s1_datacenter.dart';
 import 's1/s1_intro.dart';
 import 's1/s1_power_cooling.dart';
@@ -65,6 +66,7 @@ final Map<String, WidgetBuilder> screenBuilders = {
   's1_datacenter': (_) => const S1DatacenterScreen(),
   's1_power_cooling': (_) => const S1PowerCoolingScreen(),
   's1_real_sites': (_) => const S1RealSitesScreen(),
+  's1_data_scale': (_) => const S1DataScaleScreen(),
   's2_backprop': (_) => const S2BackpropScreen(),
   's2_descent': (_) => const S2DescentScreen(),
   's2_train_it': (_) => const S2TrainItScreen(),
