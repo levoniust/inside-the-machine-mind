@@ -4,7 +4,14 @@
 
 Your guide is **Bit**, a small robot, and you follow one question all the way through the machine: *"Why is the sky blue?"*
 
-<!-- SCREENSHOTS -->
+<p align="center">
+  <img src="docs/screenshots/home.png" width="23%" alt="Home screen with Bit">
+  <img src="docs/screenshots/s1_datacenter.png" width="23%" alt="Build your own datacenter">
+  <img src="docs/screenshots/s2_train_it.png" width="23%" alt="Train a tiny neural network">
+  <img src="docs/screenshots/s3_tiny_model.png" width="23%" alt="A tiny transformer, step by step">
+</p>
+
+**52 interactive lessons in 3 sections, plus quizzes, a glossary and a hopeful finale.**
 
 ## The journey
 
