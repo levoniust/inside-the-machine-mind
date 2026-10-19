@@ -1,6 +1,6 @@
 {
- "model": "Qwen-Image 2.1 (INT8 + Turbo LoRA, 8 steps)",
- "gpu": "NVIDIA RTX 3060 12 GB (Vault)",
+ "model": "Qwen-Image 2.1",
+ "gpu": "NVIDIA RTX 3060",
  "license": "Qwen Research License (non-commercial)",
  "images": [
   {

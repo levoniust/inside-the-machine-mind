@@ -1,1 +1,32 @@
-{}
+{
+ "started": "2026-10-19 00:27:29",
+ "updated": "2026-10-19 01:19:02",
+ "hours": 0.9,
+ "qwen": {
+  "jobs": 0,
+  "tokens": 0,
+  "hours": 0.0
+ },
+ "mirai": {
+  "jobs": 12,
+  "tokens": 141188,
+  "hours": 0.6
+ },
+ "images": {
+  "jobs": 18,
+  "tokens": 0,
+  "hours": 0.1
+ },
+ "peak": {
+  "gpu_3090_c": 66,
+  "vram_3090_c": 78,
+  "gpu_5060ti_c": 82,
+  "gpu_3060_c": 67,
+  "watts_3090s": 345,
+  "watts_5060ti": 181
+ },
+ "commits": 16,
+ "dart_lines": 6273,
+ "test_lines": 427,
+ "facts_fixed": 14
+}

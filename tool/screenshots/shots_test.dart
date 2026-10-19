@@ -9,6 +9,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:machine_mind/app/app.dart';
 import 'package:machine_mind/content/lessons.dart';
 import 'package:machine_mind/core/progress.dart';
+import 'package:machine_mind/screens/extras/egg_built_screen.dart';
+import 'package:machine_mind/screens/extras/egg_gallery_screen.dart';
 import 'package:machine_mind/screens/extras/finale_screen.dart';
 import 'package:machine_mind/screens/home/home_screen.dart';
 import 'package:machine_mind/screens/home/section_hub.dart';
@@ -41,6 +43,8 @@ void main() {
     'hub2': () => const SectionHub(number: 2),
     'hub3': () => const SectionHub(number: 3),
     'finale': () => const FinaleScreen(),
+    'egg_built': () => const EggBuiltScreen(),
+    'egg_gallery': () => const EggGalleryScreen(),
     for (final l in allLessons) l.id: () => Builder(builder: l.builder),
   };
   final wanted = _only.isEmpty ? targets.keys.toSet() : _only.split(',').toSet();
