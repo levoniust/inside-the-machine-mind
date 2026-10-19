@@ -164,7 +164,7 @@ class _Preview extends StatelessWidget {
       (Icons.content_cut, 'Chopped into tokens', 'word pieces with ID numbers'),
       (Icons.place_outlined, 'Turned into coordinates', 'each piece gets an address on a map of meaning'),
       (Icons.layers_outlined, 'Through the layers', 'attention and feed-forward, floor by floor'),
-      (Icons.casino_outlined, 'A word is picked', 'from a list of chances'),
+      (Icons.casino_outlined, 'A word is picked', 'from a list of possible next words'),
       (Icons.loop, 'Again and again', 'one word at a time until the answer is done'),
     ];
     return DemoCard(
