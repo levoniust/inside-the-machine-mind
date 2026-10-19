@@ -21,7 +21,7 @@ Future<ProgressStore> pumpApp(
   final store = ProgressStore();
   await tester.pumpWidget(
     MediaQuery(
-      data: MediaQueryData(size: size, disableAnimations: true, textScaler: TextScaler.linear(textScale)),
+      data: MediaQueryData(size: size, disableAnimations: true, platformBrightness: brightness, textScaler: TextScaler.linear(textScale)),
       child: MachineMindApp(progress: store, home: home),
     ),
   );
@@ -38,3 +38,11 @@ Future<void> pumpFrames(WidgetTester tester, [int frames = 10]) async {
 
 /// Fail on any overflow / exception reported during the test.
 void expectNoErrors(WidgetTester tester) => expect(tester.takeException(), isNull);
+
+/// Scroll [finder] into view and tap it.
+Future<void> tapVisible(WidgetTester tester, Finder finder) async {
+  await tester.ensureVisible(finder);
+  await tester.pump(const Duration(milliseconds: 50));
+  await tester.tap(finder);
+  await tester.pump(const Duration(milliseconds: 50));
+}

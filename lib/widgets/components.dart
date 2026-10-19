@@ -164,8 +164,12 @@ class FactCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Expanded(
-                  child: Text(value,
-                      style: AppText.mono.copyWith(fontSize: 30, fontWeight: FontWeight.w800, color: accent, height: 1.1)),
+                  child: FittedBox(
+                    fit: BoxFit.scaleDown,
+                    alignment: Alignment.centerLeft,
+                    child: Text(value,
+                        style: AppText.mono.copyWith(fontSize: 28, fontWeight: FontWeight.w800, color: accent, height: 1.1)),
+                  ),
                 ),
                 if (factId != null)
                   IconButton(

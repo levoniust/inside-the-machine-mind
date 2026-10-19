@@ -1,12 +1,13 @@
 import 'package:flutter/widgets.dart';
 
 import '../core/models.dart';
+import '../screens/screen_registry.dart';
 import '../widgets/lesson_scaffold.dart';
 
-// Each lesson's screen lives in lib/screens/s<N>/<id>.dart. Lessons without a screen yet
-// show a placeholder (PlaceholderLesson) so the app always runs.
+// Each lesson's screen lives in lib/screens/s<N>/<id>.dart and is registered in
+// lib/screens/screen_registry.dart. Lessons without a screen yet show a placeholder.
 
-WidgetBuilder _todo(String id) => (_) => PlaceholderLesson(lessonId: id);
+WidgetBuilder _todo(String id) => screenBuilders[id] ?? (_) => PlaceholderLesson(lessonId: id);
 
 LessonInfo _l(String id, int section, String title, [String subtitle = '', WidgetBuilder? builder]) =>
     LessonInfo(id: id, section: section, title: title, subtitle: subtitle, builder: builder ?? _todo(id));

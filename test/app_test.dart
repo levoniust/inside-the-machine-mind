@@ -57,8 +57,7 @@ void main() {
     for (final q in qs) {
       await tester.tap(find.byKey(ValueKey('quiz-option-${q.answer}')));
       await pumpFrames(tester, 4);
-      await tester.scrollUntilVisible(find.byKey(const ValueKey('quiz-next')), 200);
-      await tester.tap(find.byKey(const ValueKey('quiz-next')));
+      await tapVisible(tester, find.byKey(const ValueKey('quiz-next')));
       await pumpFrames(tester, 4);
     }
     expect(find.text('${qs.length} / ${qs.length}'), findsOneWidget);
