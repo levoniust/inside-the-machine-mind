@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:machine_mind/content/glossary.dart';
 import 'package:machine_mind/content/lessons.dart';
+import 'package:machine_mind/content/narration.dart';
+import 'package:machine_mind/screens/screen_registry.dart';
 import 'package:machine_mind/content/quizzes.dart';
 import 'package:machine_mind/screens/extras/quiz_screen.dart';
 import 'package:machine_mind/screens/home/section_hub.dart';
@@ -80,6 +82,16 @@ void main() {
         expect(q.answer, inInclusiveRange(0, q.options.length - 1));
       }
     }
+  });
+
+  test('every lesson has narration, a key idea and a real screen', () {
+    for (final l in allLessons) {
+      expect(narration[l.id]?.intro, isNotEmpty, reason: 'narration for ${l.id}');
+      expect(narration[l.id]?.keyIdea, isNotEmpty, reason: 'key idea for ${l.id}');
+    }
+    final missing = allLessons.where((l) => !screenBuilders.containsKey(l.id)).map((l) => l.id).toList();
+    // Lessons still being built by the local models are allowed to be placeholders until release.
+    expect(missing.length, lessThanOrEqualTo(2), reason: 'placeholder lessons: $missing');
   });
 
   test('TermText markup is stripped to plain text', () {
