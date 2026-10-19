@@ -72,6 +72,18 @@ void main() {
     expectNoErrors(tester);
   });
 
+  testWidgets('s1_matmul: tapping another cell mid-count still counts the first one', (tester) async {
+    await pumpApp(tester, home: const S1MatmulScreen(), animations: true);
+    await tapVisible(tester, find.byKey(const ValueKey('mm-cell-0')));
+    await tester.pump(const Duration(milliseconds: 300)); // mid-count
+    await tapVisible(tester, find.byKey(const ValueKey('mm-cell-4')));
+    await tester.pump(const Duration(seconds: 1));
+    expect(find.textContaining('Cells done: 2 / 9'), findsOneWidget);
+    expect(find.descendant(of: find.byKey(const ValueKey('mm-cell-0')), matching: find.text('${cellValue(0, 0)}')),
+        findsOneWidget);
+    expectNoErrors(tester);
+  });
+
   testWidgets('s1_matmul: "Fill in the rest" stops a running count and finishes everything at once', (tester) async {
     await pumpApp(tester, home: const S1MatmulScreen(), animations: true);
     await tapVisible(tester, find.byKey(const ValueKey('mm-cell-5')));

@@ -171,7 +171,7 @@ const narrationS2 = <String, LessonText>{
       '[[Distillation]] is a teacher training a student. A small model learns to imitate a big model\'s output probabilities.',
       '[[Quantization]] is compressing a photo. The numbers get coarser and the model shrinks.',
       'Tap the slider. At 4 bits per number, even a 65B model can be fine-tuned on a single 48 GB [[GPU]].',
-      '[[Mixture of experts]] is a team of specialists. Mixtral 8x7B has 8 experts of about 7B knobs that share some parts, so 46.7B total, but only 12.9B fire per [[token]]. Tap a word—the router picks two of eight experts light up.',
+      '[[Mixture of experts]] is a team of specialists. Mixtral 8x7B has 8 experts of about 7B knobs that share some parts, so 46.7B total, but only 12.9B fire per [[token]]. Tap a word and watch the router light up two of the eight experts.',
     ],
     keyIdea: 'You can make a [[model]] cheaper to run with [[distillation]], [[quantization]], or [[Mixture of experts]]. Most of the skill, for much less memory and [[compute]].',
   ),

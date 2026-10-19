@@ -92,6 +92,8 @@ class _GridState extends State<_Grid> with SingleTickerProviderStateMixin {
   void _tapCell(int idx) {
     final reduceMotion = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
     setState(() {
+      // Switching cells mid-count still counts the one the user already started.
+      if (_sel != null && !_revealed) _done.add(_sel!);
       _sel = idx;
       _revealed = reduceMotion;
       if (reduceMotion) _done.add(idx);
