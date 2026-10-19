@@ -103,7 +103,7 @@ void main() {
     }
     final missing = allLessons.where((l) => !screenBuilders.containsKey(l.id)).map((l) => l.id).toList();
     // Lessons still being built by the local models are allowed to be placeholders until release.
-    expect(missing.length, lessThanOrEqualTo(2), reason: 'placeholder lessons: $missing');
+    expect(missing, isEmpty, reason: 'placeholder lessons: $missing');
   });
 
   test('TermText markup is stripped to plain text', () {
