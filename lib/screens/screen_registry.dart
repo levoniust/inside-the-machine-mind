@@ -7,6 +7,7 @@ import 's2/s2_safety.dart';
 import 's1/s1_datacenter.dart';
 import 's1/s1_intro.dart';
 import 's1/s1_storage.dart';
+import 's1/s1_too_big.dart';
 import 's2/s2_attention.dart';
 import 's2/s2_backprop.dart';
 import 's2/s2_cleaning.dart';
@@ -54,6 +55,7 @@ final Map<String, WidgetBuilder> screenBuilders = {
   's2_post_training': (_) => const S2PostTrainingScreen(),
   's2_safety': (_) => const S2SafetyScreen(),
   's1_storage': (_) => const S1StorageScreen(),
+  's1_too_big': (_) => const S1TooBigScreen(),
   's1_datacenter': (_) => const S1DatacenterScreen(),
   's2_backprop': (_) => const S2BackpropScreen(),
   's2_descent': (_) => const S2DescentScreen(),
