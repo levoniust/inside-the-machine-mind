@@ -59,7 +59,7 @@ const milestones = [
       'TL-CLAUDECODE', 'Agents'),
   Milestone('2026', 'Claude Opus 5.5', Icons.rocket_launch_outlined,
       'Testers reported Claude Opus 5.5 migrating 680,000 lines of code in under a day and staying on an unattended '
-          'engineering task for over 18 hours. (It\'s also the model that orchestrated the building of this app!)',
+          'engineering task for 18 hours. (It\'s also the model that orchestrated the building of this app!)',
       'TL-OPUS55', '18 hours'),
 ];
 
