@@ -1,0 +1,133 @@
+{
+ "model": "Qwen-Image 2.1 (INT8 + Turbo LoRA, 8 steps)",
+ "gpu": "NVIDIA RTX 3060 12 GB (Vault)",
+ "license": "Qwen Research License (non-commercial)",
+ "images": [
+  {
+   "file": "assets/gallery/bit-inside-the-disk.webp",
+   "title": "The Storage Underground",
+   "prompt": "Cinematic digital illustration. Bit, a small round robot with a dark visor, two glowing cyan eyes, metallic silver head with subtle circuit traces, and a glowing antenna tip, stands inside a vast underground landscape of stacked hard-drive platters and SSD chips. Neon cyan and violet light spills between the metallic layers. Dark background. No text.",
+   "seconds": 15.0,
+   "seed": 705629594
+  },
+  {
+   "file": "assets/gallery/bit-on-pcie-highway.webp",
+   "title": "Data Highway Rush",
+   "prompt": "Cinematic digital illustration. Bit, a small round robot with a dark visor, two glowing cyan eyes, metallic silver head with subtle circuit traces, and a glowing antenna tip, rides atop a glowing data packet speeding along a neon-lit PCIe highway. Magenta and cyan light trails streak behind. Dark background. No text.",
+   "seconds": 15.0,
+   "seed": 1307063982
+  },
+  {
+   "file": "assets/gallery/hbm-skyscraper.webp",
+   "title": "Memory Tower at Night",
+   "prompt": "Cinematic digital illustration. Bit, a small round robot with a dark visor, two glowing cyan eyes, metallic silver head with subtle circuit traces, and a glowing antenna tip, gazes up at a towering HBM memory skyscraper beside a massive GPU chip. Neon violet and cyan glow from every window. Dark night sky. No text.",
+   "seconds": 15.0,
+   "seed": 1029530727
+  },
+  {
+   "file": "assets/gallery/datacenter-city.webp",
+   "title": "The Machine City",
+   "prompt": "Cinematic digital illustration. Bit, a small round robot with a dark visor, two glowing cyan eyes, metallic silver head with subtle circuit traces, and a glowing antenna tip, stands on a rooftop overlooking a sprawling nighttime datacenter city. Cooling towers release glowing violet steam. Neon cyan windows dot the towers. Dark sky. No text.",
+   "seconds": 15.0,
+   "seed": 698687196
+  },
+  {
+   "file": "assets/gallery/liquid-cooling-veins.webp",
+   "title": "Glowing Cooling Arteries",
+   "prompt": "Cinematic digital illustration. Bit, a small round robot with a dark visor, two glowing cyan eyes, metallic silver head with subtle circuit traces, and a glowing antenna tip, peeks through a gap in massive liquid-cooling pipes. Glowing cyan and magenta fluid pulses through transparent tubes. Dark industrial background. No text.",
+   "seconds": 15.0,
+   "seed": 1806047366
+  },
+  {
+   "file": "assets/gallery/books-to-tokens.webp",
+   "title": "Where Words Become Numbers",
+   "prompt": "Cinematic digital illustration. Bit, a small round robot with a dark visor, two glowing cyan eyes, metallic silver head with subtle circuit traces, and a glowing antenna tip, stands in a vast library where books dissolve into floating glowing tokens. Violet and cyan light. Dark background. No text.",
+   "seconds": 15.0,
+   "seed": 1857595736
+  },
+  {
+   "file": "assets/gallery/loss-landscape.webp",
+   "title": "Rolling Down the Loss",
+   "prompt": "Cinematic digital illustration. Bit, a small round robot with a dark visor, two glowing cyan eyes, metallic silver head with subtle circuit traces, and a glowing antenna tip, pushes a glowing ball down a vast undulating loss landscape. Neon violet and cyan ridges. Dark background. No text.",
+   "seconds": 15.0,
+   "seed": 116888747
+  },
+  {
+   "file": "assets/gallery/neural-constellation.webp",
+   "title": "Stars of the Network",
+   "prompt": "Cinematic digital illustration. Bit, a small round robot with a dark visor, two glowing cyan eyes, metallic silver head with subtle circuit traces, and a glowing antenna tip, looks up at a neural network rendered as a constellation of glowing cyan and violet nodes connected by magenta lines. Dark starfield background. No text.",
+   "seconds": 15.0,
+   "seed": 436467383
+  },
+  {
+   "file": "assets/gallery/attention-beams.webp",
+   "title": "Beams of Understanding",
+   "prompt": "Cinematic digital illustration. Bit, a small round robot with a dark visor, two glowing cyan eyes, metallic silver head with subtle circuit traces, and a glowing antenna tip, watches beams of cyan and violet light connecting glowing word-shaped objects in a dark chamber. No text.",
+   "seconds": 15.0,
+   "seed": 1742793490
+  },
+  {
+   "file": "assets/gallery/distillation-teacher.webp",
+   "title": "The Patient Teacher",
+   "prompt": "Cinematic digital illustration. Bit, a small round robot with a dark visor, two glowing cyan eyes, metallic silver head with subtle circuit traces, and a glowing antenna tip, stands beside a giant version of himself. The giant gently passes a glowing cyan orb to the tiny Bit. Violet and magenta ambient light. Dark background. No text.",
+   "seconds": 15.0,
+   "seed": 234740912
+  },
+  {
+   "file": "assets/gallery/folding-laundry.webp",
+   "title": "A Handy Assistant",
+   "prompt": "Cinematic digital illustration. Bit, a small round robot with a dark visor, two glowing cyan eyes, metallic silver head with subtle circuit traces, and a glowing antenna tip, watches a friendly robot arm fold a glowing cyan towel. Magenta and violet kitchen light. Dark background. No text.",
+   "seconds": 15.0,
+   "seed": 1446290364
+  },
+  {
+   "file": "assets/gallery/alphafold-protein.webp",
+   "title": "Folding the Invisible",
+   "prompt": "Cinematic digital illustration. Bit, a small round robot with a dark visor, two glowing cyan eyes, metallic silver head with subtle circuit traces, and a glowing antenna tip, peers at a massive glowing protein structure unfolding in neon violet and cyan. Magenta ribbons twist. Dark background. No text.",
+   "seconds": 15.0,
+   "seed": 2138916304
+  },
+  {
+   "file": "assets/gallery/weather-globe.webp",
+   "title": "Reading the Sky",
+   "prompt": "Cinematic digital illustration. Bit, a small round robot with a dark visor, two glowing cyan eyes, metallic silver head with subtle circuit traces, and a glowing antenna tip, examines a holographic weather globe. Swirling cyan and magenta storm systems. Violet aurora light above. Dark background. No text.",
+   "seconds": 15.0,
+   "seed": 423863472
+  },
+  {
+   "file": "assets/gallery/bit-starry-sky.webp",
+   "title": "The Question Beyond",
+   "prompt": "Cinematic digital illustration. Bit, a small round robot with a dark visor, two glowing cyan eyes, metallic silver head with subtle circuit traces, and a glowing antenna tip, stands on a hilltop gazing up at an infinite starry sky. Faint cyan and violet nebulae. Magenta starlight. Dark background. No text.",
+   "seconds": 15.0,
+   "seed": 2098282005
+  },
+  {
+   "file": "assets/gallery/bit-lighthouse.webp",
+   "title": "Keeper of Signals",
+   "prompt": "Cinematic digital illustration. Bit, a small round robot with a dark visor, two glowing cyan eyes, metallic silver head with subtle circuit traces, and a glowing antenna tip, stands atop a lighthouse sweeping a glowing cyan beam across a dark ocean. Violet and magenta waves below. Dark background. No text.",
+   "seconds": 15.0,
+   "seed": 1078403394
+  },
+  {
+   "file": "assets/gallery/fiber-optic-tangle.webp",
+   "title": "Untangling the Web",
+   "prompt": "Cinematic digital illustration. Bit, a small round robot with a dark visor, two glowing cyan eyes, metallic silver head with subtle circuit traces, and a glowing antenna tip, carefully untangles a glowing knot of fiber-optic cables. Cyan and violet light pulses through each strand. Dark workshop. No text.",
+   "seconds": 15.0,
+   "seed": 2109847874
+  },
+  {
+   "file": "assets/gallery/photon-rider.webp",
+   "title": "Riding the Light",
+   "prompt": "Cinematic digital illustration. Bit, a small round robot with a dark visor, two glowing cyan eyes, metallic silver head with subtle circuit traces, and a glowing antenna tip, rides inside a blazing cyan photon beam. Violet and magenta light scatters around the beam. Dark void background. No text.",
+   "seconds": 15.0,
+   "seed": 1898365084
+  },
+  {
+   "file": "assets/gallery/mirror-maze.webp",
+   "title": "Infinite Bit Reflections",
+   "prompt": "Cinematic digital illustration. Bit, a small round robot with a dark visor, two glowing cyan eyes, metallic silver head with subtle circuit traces, and a glowing antenna tip, stands in a mirror maze. Infinite reflections of itself fade into violet and magenta darkness. Cyan glow. No text.",
+   "seconds": 15.0,
+   "seed": 1417045802
+  }
+ ]
+}
