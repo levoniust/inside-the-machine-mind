@@ -15,13 +15,13 @@ const narrationS3 = <String, LessonText>{
       'Each piece is a [[token]], like a puzzle chip. The model only knows its [[vocabulary]] — its own dictionary.',
       'Type your own sentence and watch the chips appear in real time, each stamped with a little ID number.',
     ],
-    keyIdea: 'The model doesn\'t read words — it reads numbered puzzle pieces, and the tokenizer is the gate that sorts your sentence into that format.',
+    keyIdea: 'The model doesn\'t read words — it reads numbered puzzle pieces, and the tokenizer is the translator that chops your sentence into those pieces.',
   ),
   's3_embeddings': LessonText(
     intro: [
       'Now each token gets an [[embedding]] — its address on a map. Close words sit close together, like neighbors on a street.',
       'Drag around. "King" is a short hop from "queen," and "man" is right next to "woman." Distance is meaning.',
-      'Try the trick: king minus man plus woman equals queen. The map does the thinking.',
+      'Try the trick: the step from man to woman is the same as the step from king to queen, so king minus man plus woman lands on queen. The map does the thinking.',
     ],
     keyIdea: 'Words live on a geometric map where meaning is distance, so the model can do arithmetic with ideas — that\'s how it understands relationships.',
   ),
@@ -36,7 +36,7 @@ const narrationS3 = <String, LessonText>{
   's3_sampling': LessonText(
     intro: [
       'The model has a bar chart of every possible next word, ranked by [[softmax]] chances. Now it has to pick one.',
-      'Turn up the [[temperature]] — the creativity dial — and the bars get wobbly. Turn [[top-p]] down and only the likely words survive.',
+      'Turn up the [[temperature]] — the creativity dial — and the bars even out, so unlikely words get a real chance. Turn [[top-p]] down and only the likely words survive.',
       'Hit "roll the dice" and watch which word it picks. Try a few times — sometimes it surprises me.',
     ],
     keyIdea: 'The model doesn\'t pick the best word; it rolls a weighted dice where the odds come from the probabilities, and the temperature and top-p sliders shape that dice.',
@@ -56,7 +56,7 @@ const narrationS3 = <String, LessonText>{
       'If it fits, I\'ll estimate its [[tokens per second]] — its talking speed. It\'s roughly [[bandwidth]] divided by model size in bytes.',
       'Fun fact: a median Gemini text prompt uses about 0.24 watt-hours. That\'s roughly nine seconds of your living-room TV.',
     ],
-    keyIdea: 'At home, inference speed is mostly about how fast your memory can hand data to the chip — bandwidth divided by model size — not about raw brain power.',
+    keyIdea: 'At home, how fast a model answers (its inference speed) is mostly about how fast your memory can hand data to the chip — bandwidth divided by model size — not about raw brain power.',
   ),
   's3_frontier': LessonText(
     intro: [
@@ -70,13 +70,13 @@ const narrationS3 = <String, LessonText>{
     intro: [
       'ChatGPT has more than one billion weekly active users. The datacenter handles the flood with [[batching]] — carpooling.',
       'Slide the user count up. Watch how [[batch]] groups let GPUs share the load, and how each user\'s [[KV cache]] notes are stored in pages.',
-      'That paging trick lets one GPU serve two to four times more requests. Another trick, speculative decoding, lets a small model draft and the big model check: two to three times faster, same output.',
+      'That paging trick lets one GPU serve two to four times more requests. Another trick, speculative decoding, lets a small model draft and the big model check: two to three times faster, same output, because checking several words at once costs about the same as writing one.',
     ],
     keyIdea: 'Datacenters serve millions by carpooling requests into batches and managing each user\'s memory notes in pages, so the same hardware handles far more conversations at once.',
   ),
   's3_beyond_text': LessonText(
     intro: [
-      'Text is just one sense. [[Multimodal]] means more senses than text — the mind can see, hear, and use a tool.',
+      'Text is just one sense. [[Multimodal]] means taking in more than text — the mind can see and hear, and it can also act by using tools.',
       'Tap the modes. Then watch the [[agent]] loop: think, use a tool, observe, repeat. It\'s how coding agents like Claude Code write and fix code.',
       'It\'s a person who thinks, grabs a pen, writes something, reads it back, and tries again. The loop keeps going until the job\'s done.',
     ],
@@ -88,13 +88,13 @@ const narrationS3 = <String, LessonText>{
       'In 2016, AlphaGo made a move with a one-in-ten-thousand chance of being played by a human. In 2017, the [[transformer]] blueprint was born.',
       'By 2022, ChatGPT hit a million users in five days. Tap any milestone on the timeline for the full story — there\'s a lot to unpack.',
     ],
-    keyIdea: 'From chess and protein folding to coding agents and eighteen-hour engineering sessions, each leap in architecture unlocked a new kind of thinking.',
+    keyIdea: 'From chess and protein folding to coding agents and eighteen-hour engineering sessions, each new design let AI do something the last one couldn\'t.',
   ),
   's3_robots': LessonText(
     intro: [
       'Now the mind gets a body. A [[VLA model]] — eyes, words, and hands in one brain — sees the room, understands, and moves.',
       'Watch the arm fold laundry. In 2023, RT-2 turned web knowledge into robot actions; in 2024, π0 folds shirts and packs boxes.',
-      'By July 2026, Gemini Robotics 2 gives humanoid robots whole-body control. The loop is always see, understand, act.',
+      'By July 2026, Gemini Robotics 2 gives humanoid robots whole-body control. The loop is always see, understand, act, then check that it worked.',
     ],
     keyIdea: 'A VLA model connects vision and language to physical action in a loop — see, understand, act — turning abstract knowledge into a hand that folds your laundry.',
   ),
@@ -102,9 +102,9 @@ const narrationS3 = <String, LessonText>{
     intro: [
       'The mind doesn\'t just chat. AlphaFold released over 200 million protein structures for free, and in 2024 it won a Nobel Prize in Chemistry.',
       'GraphCast makes a ten-day forecast in under a minute, beating the top system on 90% of 1,380 targets. Europe\'s weather centre put AI into operations in 2025.',
-      'GNoME predicted 2.2 million new crystal materials, about 380,000 stable. Over 1,600 AI-enabled medical devices are FDA-authorized, and weather services now use AI forecasts alongside their physics models.',
+      'GNoME predicted 2.2 million new crystal materials, about 380,000 stable. Over 1,600 AI-enabled medical devices are FDA-authorized, and weather services now use AI forecasts alongside their traditional physics models.',
     ],
-    keyIdea: 'The same architecture that answers your questions is folding proteins, forecasting storms in under a minute, and designing new materials — and helping doctors and weather forecasters keep people safe.',
+    keyIdea: 'The same kind of AI that answers your questions is folding proteins, forecasting storms in under a minute, and designing new materials — and helping doctors and weather forecasters keep people safe.',
   ),
   's3_answer': LessonText(
     intro: [

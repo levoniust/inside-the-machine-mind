@@ -97,7 +97,7 @@ const narrationS2 = <String, LessonText>{
       'Its job: tell the violet dots in the middle from the cyan dots in the ring. Press Train and watch the [[loss]] curve slide down.',
       'Nudge the [[learning rate]] or reset if it goes wild. It\'s your brain to train.',
     ],
-    keyIdea: 'A [[neural network]] learns by adjusting [[parameters|parameter]] to reduce [[loss]]. Even 33 knobs can learn a curved boundary nobody programmed.',
+    keyIdea: 'A [[neural network]] learns by adjusting [[parameters|parameter]] to reduce [[loss]]. Even 33 knobs can find a curved boundary on their own, without anyone drawing it.',
   ),
   's2_scale_up': LessonText(
     intro: [

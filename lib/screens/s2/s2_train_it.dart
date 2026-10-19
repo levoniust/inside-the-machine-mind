@@ -106,8 +106,8 @@ class _TrainerState extends State<_Trainer> with SingleTickerProviderStateMixin 
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Text(
-            'Violet dots sit in the middle, cyan dots in the ring. The background shows what the network '
-            'currently believes. Press Train and watch it figure out the boundary.',
+            'Violet dots sit in the middle, cyan dots in the ring. The background shows which colour the network '
+            'currently thinks each spot is. Press Train and watch it figure out the boundary.',
             style: TextStyle(color: c.textDim),
           ),
           const SizedBox(height: Gap.m),

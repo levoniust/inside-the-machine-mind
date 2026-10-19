@@ -33,7 +33,7 @@ const _steps = [
   _Step('3 · Attention', 'Every token asks "which earlier words matter to me?" Brighter = listens more. Look at the last row: what "sky" pays [[attention]] to.'),
   _Step('4 · Mixing', 'Each token\'s numbers are blended with the words it listened to, so "sky" now carries a hint of "why" and "the".'),
   _Step('5 · Feed-forward', 'The [[feed-forward layer]] transforms the result using learned knowledge. Neurons that don\'t fire (negative) are switched off (shown dim).'),
-  _Step('6 · Scores', 'The final numbers are compared with every word in the vocabulary, giving one raw score each: the [[logits]].'),
+  _Step('6 · Scores', 'The final numbers are turned into one raw score for every word in the vocabulary: the [[logits]].'),
   _Step('7 · Probabilities', '[[Softmax]] turns the scores into chances that add up to 100%. The model would most likely say…'),
 ];
 

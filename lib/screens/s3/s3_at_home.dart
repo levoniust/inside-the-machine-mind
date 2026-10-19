@@ -147,7 +147,7 @@ class _PickerState extends State<_Picker> {
               const SizedBox(height: Gap.m),
               TermText(
                 'Why this math works: to write each new word the chip must read (almost) every weight from memory once. '
-                'So speed ≈ [[bandwidth]] ÷ model size. Real speeds are a bit lower; this is the ceiling.',
+                'Reading takes model size ÷ [[bandwidth]] seconds, so words per second ≈ [[bandwidth]] ÷ model size. Real speeds are a bit lower; this is the ceiling.',
                 style: TextStyle(color: c.textDim, fontSize: 13),
               ),
             ],
