@@ -8,6 +8,7 @@ import 's1/s1_datacenter.dart';
 import 's1/s1_intro.dart';
 import 's1/s1_storage.dart';
 import 's2/s2_backprop.dart';
+import 's2/s2_big_small.dart';
 import 's2/s2_descent.dart';
 import 's2/s2_memory_budget.dart';
 import 's2/s2_step_hardware.dart';
@@ -36,6 +37,7 @@ final Map<String, WidgetBuilder> screenBuilders = {
   's2_memory_budget': (_) => const S2MemoryBudgetScreen(),
   's2_step_hardware': (_) => const S2StepHardwareScreen(),
   's2_testing': (_) => const S2TestingScreen(),
+  's2_big_small': (_) => const S2BigSmallScreen(),
   's3_tiny_model': (_) => const S3TinyModelScreen(),
   's3_tokenize': (_) => const S3TokenizeScreen(),
   's3_sampling': (_) => const S3SamplingScreen(),
