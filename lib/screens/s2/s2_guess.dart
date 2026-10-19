@@ -30,6 +30,7 @@ const guessExamples = [
   GuessExample('The sky is', 'blue', {'blue': 0.62, 'clear': 0.14, 'dark': 0.09, 'falling': 0.03, 'green': 0.01, 'tea': 0.002}),
   GuessExample('Once upon a', 'time', {'time': 0.93, 'hill': 0.02, 'star': 0.01, 'blue': 0.005, 'tea': 0.002, 'clear': 0.001}),
   GuessExample('I would like a cup of', 'tea', {'tea': 0.45, 'coffee': 0.38, 'water': 0.08, 'sugar': 0.02, 'blue': 0.001, 'time': 0.001}),
+  GuessExample('Two plus two equals', 'four', {'four': 0.84, 'five': 0.06, 'three': 0.03, 'fourteen': 0.02, 'tea': 0.002, 'blue': 0.001}),
 ];
 
 /// An untrained model's guesses: nearly uniform with random wobble (fixed seed per example).
@@ -40,6 +41,8 @@ Map<String, double> untrainedGuesses(GuessExample e) {
   return {for (final kv in raw.entries) kv.key: kv.value / sum};
 }
 
+/// The guess-the-word game. The probability bars grow out from zero whenever the shown
+/// distribution changes: revealing the answer, or switching untrained <-> trained.
 class _Game extends StatefulWidget {
   const _Game();
 
@@ -47,10 +50,19 @@ class _Game extends StatefulWidget {
   State<_Game> createState() => _GameState();
 }
 
-class _GameState extends State<_Game> {
+class _GameState extends State<_Game> with SingleTickerProviderStateMixin {
   int _ex = 0;
   String? _userGuess;
   bool _trained = false;
+
+  late final AnimationController _grow =
+      AnimationController(vsync: this, duration: const Duration(milliseconds: 650));
+
+  @override
+  void dispose() {
+    _grow.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -86,7 +98,14 @@ class _GameState extends State<_Game> {
               runSpacing: Gap.s,
               children: [
                 for (final o in options)
-                  ActionChip(key: ValueKey('guess-$o'), label: Text(o), onPressed: () => setState(() => _userGuess = o)),
+                  ActionChip(
+                    key: ValueKey('guess-$o'),
+                    label: Text(o),
+                    onPressed: () {
+                      setState(() => _userGuess = o);
+                      _grow.forward(from: 0);
+                    },
+                  ),
               ],
             ),
           ] else ...[
@@ -104,13 +123,20 @@ class _GameState extends State<_Game> {
               ],
               selected: {_trained},
               showSelectedIcon: false,
-              onSelectionChanged: (s) => setState(() => _trained = s.first),
+              onSelectionChanged: (s) {
+                setState(() => _trained = s.first);
+                _grow.forward(from: 0);
+              },
             ),
             const SizedBox(height: Gap.m),
-            CompareBars(
-              highlight: sorted.indexWhere((x) => x.key == e.answer),
-              color: c.violet,
-              items: [for (final kv in sorted) BarItem(kv.key, kv.value, display: '${(kv.value * 100).toStringAsFixed(1)}%')],
+            AnimatedBuilder(
+              animation: _grow,
+              builder: (context, _) => _GrowBars(
+                key: const ValueKey('guess-bars'),
+                items: sorted,
+                answer: e.answer,
+                grow: Curves.easeOutCubic.transform(_grow.value),
+              ),
             ),
             const SizedBox(height: Gap.s),
             Text(
@@ -142,6 +168,73 @@ class _GameState extends State<_Game> {
           ),
         ],
       ),
+    );
+  }
+}
+
+/// The guess chart. Drawn here instead of with the shared [CompareBars] because the bars must
+/// grow out from zero: CompareBars renormalises to the maximum value currently shown, so
+/// scaling every value by a grow factor would change nothing. This scales widths *and* the
+/// printed percentages by the grow factor while normalising against the target maximum, so the
+/// bars stretch out from the left edge and the numbers count up with them. Same look as
+/// CompareBars: label row with a mono percentage over a 10 dp rounded track, glow on the answer.
+class _GrowBars extends StatelessWidget {
+  const _GrowBars({super.key, required this.items, required this.answer, required this.grow});
+  final List<MapEntry<String, double>> items;
+  final String answer;
+
+  /// 0 = collapsed to zero width, 1 = the real probabilities.
+  final double grow;
+
+  @override
+  Widget build(BuildContext context) {
+    final c = AppColors.of(context);
+    final maxV = items.fold<double>(0, (a, b) => math.max(a, b.value));
+    return Column(
+      children: [
+        for (var i = 0; i < items.length; i++)
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 5),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Expanded(
+                        child: Text(items[i].key,
+                            style: TextStyle(
+                                fontWeight: items[i].key == answer ? FontWeight.w800 : FontWeight.w500,
+                                color: items[i].key == answer ? c.text : c.textDim))),
+                    Text('${(items[i].value * 100 * grow).toStringAsFixed(1)}%',
+                        style: AppText.mono.copyWith(fontSize: 13, color: c.text)),
+                  ],
+                ),
+                const SizedBox(height: 4),
+                LayoutBuilder(
+                  builder: (context, box) {
+                    final hi = items[i].key == answer;
+                    final frac = maxV == 0 ? 0.0 : (items[i].value / maxV).clamp(0.02, 1.0);
+                    return Stack(
+                      children: [
+                        Container(height: 10, decoration: BoxDecoration(color: c.surfaceHi, borderRadius: BorderRadius.circular(5))),
+                        Container(
+                          key: ValueKey('guess-bar-${items[i].key}'),
+                          height: 10,
+                          width: box.maxWidth * frac * grow,
+                          decoration: BoxDecoration(
+                            color: c.violet,
+                            borderRadius: BorderRadius.circular(5),
+                            boxShadow: hi ? [BoxShadow(color: c.violet.withValues(alpha: 0.5), blurRadius: 10)] : null,
+                          ),
+                        ),
+                      ],
+                    );
+                  },
+                ),
+              ],
+            ),
+          ),
+      ],
     );
   }
 }
