@@ -7,6 +7,7 @@ import '../helpers.dart';
 void main() {
   testWidgets('s2_post_training renders and rating changes the output', (tester) async {
     await pumpApp(tester, home: const S2PostTrainingScreen());
+    await scrollTo(tester, find.text('Play the rater: pick the better answer'));
     expect(find.text('Play the rater: pick the better answer'), findsOneWidget);
     expect(find.text('Stage: SFT (examples)'), findsOneWidget);
     // The first question is "Which city is closer to London: Manchester or Edinburgh?".

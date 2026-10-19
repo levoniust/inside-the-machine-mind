@@ -15,13 +15,20 @@ class MachineMindApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) => AppScope(
         progress: progress,
-        child: MaterialApp(
-          title: 'Inside the Machine Mind',
-          debugShowCheckedModeBanner: false,
-          theme: buildTheme(Brightness.light),
-          darkTheme: buildTheme(Brightness.dark),
-          themeMode: ThemeMode.system,
-          home: home ?? const HomeScreen(),
+        child: ListenableBuilder(
+          listenable: progress,
+          builder: (context, _) => MaterialApp(
+            title: 'Inside the Machine Mind',
+            debugShowCheckedModeBanner: false,
+            theme: buildTheme(Brightness.light),
+            darkTheme: buildTheme(Brightness.dark),
+            themeMode: const [ThemeMode.system, ThemeMode.dark, ThemeMode.light][progress.theme],
+            // "Reduce motion" in Settings turns off looping animations app-wide (same as the system setting).
+            builder: (context, child) => progress.reduceMotion
+                ? MediaQuery(data: MediaQuery.of(context).copyWith(disableAnimations: true), child: child!)
+                : child!,
+            home: home ?? const HomeScreen(),
+          ),
         ),
       );
 }

@@ -12,6 +12,7 @@ import '../extras/about_screen.dart';
 import '../extras/egg_built_screen.dart';
 import '../extras/egg_gallery_screen.dart';
 import '../extras/glossary_screen.dart';
+import '../extras/settings_screen.dart';
 import '../extras/sources_screen.dart';
 
 /// Home: Bit on a circuit board, the question, three section cards and the extras.
@@ -123,6 +124,12 @@ class _HomeScreenState extends State<HomeScreen> {
                         onPressed: () => openPage(context, const AboutScreen(), '/about'),
                         icon: const Icon(Icons.info_outline),
                         label: const Text('About'),
+                      ),
+                      OutlinedButton.icon(
+                        key: const ValueKey('home-settings'),
+                        onPressed: () => openPage(context, const SettingsScreen(), '/settings'),
+                        icon: const Icon(Icons.tune),
+                        label: const Text('Settings'),
                       ),
                     ],
                   ),
