@@ -29,7 +29,7 @@ class S1RamScreen extends StatelessWidget {
             Expanded(
               child: FactCard(
                 value: '44.8 GB/s',
-                label: 'One 64-bit [[DDR5]] channel carries this much per second',
+                label: 'One 64-bit [[DDR5]]-5600 channel carries this much per second',
                 comparison: 'one lane of the memory highway',
                 factId: 'HW-DDR5-CH',
                 color: accent,

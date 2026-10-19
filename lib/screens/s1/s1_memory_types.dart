@@ -86,7 +86,7 @@ class _Mem {
 
 final List<_Mem> _mems = [
   _Mem(_Kind.cache, 'SRAM cache', '—', 'inside the die', 'L1 ~1 ns', 'far too small', null,
-      '[[Cache]] lives inside the processor itself — your pocket. L1 answers in about 1 nanosecond, but it is only megabytes big: nowhere near enough to hold model [[weights]].',
+      '[[Cache]] lives inside the processor itself — your pocket. L1 answers in about 1 nanosecond, but it is only kilobytes big (L2 and L3 reach megabytes): nowhere near enough to hold model [[weights]].',
       (c) => c.lime, 'HW-CACHE-LAT'),
   _Mem(_Kind.ddr5, 'DDR5', 'Desktop · DDR5-5600', 'on a stick, across the board', '89.6 GB/s',
       '89.6 GB/s', 89.6,
@@ -545,7 +545,7 @@ class _HbmStackCardState extends State<_HbmStackCard> with SingleTickerProviderS
           aspectRatio: 1.6,
           child: RepaintBoundary(
             child: Semantics(
-              label: 'Cross-section: a tower of ten memory slabs standing beside a GPU die on one package, '
+              label: 'Cross-section: a tower of stacked memory slabs standing beside a GPU die on one package, '
                   'with pulses flowing through a wide link into the GPU.',
               child: AnimatedBuilder(
                 animation: _t,
@@ -556,13 +556,13 @@ class _HbmStackCardState extends State<_HbmStackCard> with SingleTickerProviderS
         ),
         const SizedBox(height: Gap.s),
         TermText(
-          'Each slab is a wafer of DRAM, stacked and laid flat right beside the [[GPU]] die — a few '
+          'Each slab is a thin DRAM chip, stacked and laid flat right beside the [[GPU]] die — a few '
           'millimeters apart. Every layer drops straight down into a 1024-bit-wide link: **16× the '
           'lanes** of one DDR5 stick (1024 ÷ 64), each running short and easy.',
           style: TextStyle(color: c.textDim, fontSize: 14),
         ),
         const SizedBox(height: Gap.s),
-        Text('distance ≈ 1 mm · the board road to a DDR5 stick ≈ 100 mm',
+        Text('distance ≈ 1 mm · the board road to a DDR5 stick ≈ 100 mm (rough scale)',
             style: AppText.mono.copyWith(color: c.magenta, fontSize: 12)),
       ]),
     );

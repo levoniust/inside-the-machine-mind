@@ -104,7 +104,7 @@ class _FitState extends State<_Fit> {
               ),
               const SizedBox(height: Gap.s),
               TermText(
-                'Training needs about 16 bytes per knob (weights, [[gradients|gradient]] and optimizer notes), about 8× more than '
+                'Training needs about 16 bytes per knob (weights, [[gradients|gradient]] and optimizer notes), about 8× as much as '
                 'running at 16-bit, and that\'s before the scratch work. Fewer bits per number ([[precision]]) shrink the model.',
                 style: TextStyle(color: c.textDim, fontSize: 13),
               ),

@@ -140,7 +140,7 @@ const _stages = [
   _Stage(3, Icons.chat_bubble_outline, 'How the mind answered', [
     'Your question chopped into tokens and embedded',
     'Attention and feed-forward layers, one floor after another',
-    'One word at a time, picked from probabilities',
+    'One token at a time, picked from probabilities',
   ]),
 ];
 

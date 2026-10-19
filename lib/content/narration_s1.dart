@@ -21,7 +21,7 @@ const narrationS1 = <String, LessonText>{
   's1_ram': LessonText(
     intro: [
       'Think of [[RAM]] as your desk. It\'s where the active papers live—fast to grab, but it clears the moment the power goes off.',
-      'Each memory channel is a lane, and more lanes mean more [[bandwidth]]. One DDR5 channel moves 44.8 GB/s; a 12-channel server hits 614 GB/s.',
+      'Each memory channel is a lane, and more lanes mean more [[bandwidth]]. One DDR5-5600 channel moves 44.8 GB/s; a 12-channel server with faster DDR5-6400 hits 614 GB/s.',
       'Slide the channel count and watch the [[bandwidth]] bar grow. Then tap to compare: [[RAM]] answers in ~80–100 ns, while an [[SSD]] takes ~100 µs.',
     ],
     keyIdea: '[[RAM]] is your desk: fast but it forgets everything when power drops. The [[SSD]] is the shelf you reach for when the desk overflows.',
@@ -45,7 +45,7 @@ const narrationS1 = <String, LessonText>{
   's1_matmul': LessonText(
     intro: [
       'Every [[neural network]] runs on one trick: [[Matrix multiplication]]. Multiply a row by a column, add the results. That\'s the whole engine.',
-      'Tap the result cells and do the math yourself. Each cell is a few [[FLOP]]s—multiply, add, multiply, add.',
+      'Tap the result cells and do the math yourself. Each cell is a few [[FLOP]]s—multiply, add, multiply, add, multiply, add.',
       'Now scale it up. A 405-billion-parameter model does about **810 billion** of these multiply-adds for every single [[token]] you read.',
     ],
     keyIdea: 'Every [[token]] the AI outputs comes from billions of tiny multiply-and-add steps—the same 3×3 trick, repeated at a massive scale.',
@@ -70,7 +70,7 @@ const narrationS1 = <String, LessonText>{
     intro: [
       'One H100 [[GPU]] has 80 GB of memory. A 70B [[model]] stored at 2 bytes per [[parameter]] needs 140 GB, already more than one chip can hold.',
       'And [[training]] is even hungrier. Adam needs about 16 bytes per [[parameter]], so a 405B [[model]] wants ~6.5 TB before you even start.',
-      'Slide the [[model]] size and [[precision]]. Watch how many [[GPUs|gpu]] you need just to hold the weights, and about eight times more to train it.',
+      'Slide the [[model]] size and [[precision]]. Watch how many [[GPUs|gpu]] you need just to hold the weights, and about eight times as much to train it.',
     ],
     keyIdea: 'A 405B [[model]] at 2 bytes per knob needs 810 GB, at least eleven 80 GB [[GPUs|gpu]] just to hold it. [[Training]] needs about eight times that for gradients and optimizer notes.',
   ),
@@ -109,7 +109,7 @@ const narrationS1 = <String, LessonText>{
   's1_real_sites': LessonText(
     intro: [
       'These aren\'t science projects. xAI\'s Colossus in Memphis packed ~100,000 [[GPU]]s online in 122 days. Colossus 2 followed with ~110,000 more in 91 days.',
-      'Stargate in Abilene: 450,000+ [[GPU]]s, 1.2 GW—enough power for a million four-bedroom homes. Meta trained Llama 3 on 16,000 [[GPU]]s.',
+      'Stargate in Abilene: 450,000+ [[GPU]]s, 1.2 GW—enough power for a million four-bedroom homes. Meta trained Llama 3 on up to 16,000 [[GPU]]s.',
       'Swipe the cards. Each one is a real site with real numbers, built on a deadline. The scale is hard to feel, but the [[megawatt]] numbers are.',
     ],
     keyIdea: 'These sites draw hundreds of [[megawatts|megawatt]], and their load can swing by tens of megawatts in an instant when thousands of [[GPUs|gpu]] pause together. The grid has to absorb that.',
