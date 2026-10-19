@@ -3,6 +3,8 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 
 import '../app/theme.dart';
+import '../core/progress.dart';
+import '../core/speech.dart';
 import 'term_text.dart';
 
 enum BitMood { idle, talk, think, happy, wow }
@@ -21,8 +23,7 @@ class BitAvatar extends StatefulWidget {
 }
 
 class _BitAvatarState extends State<BitAvatar> with SingleTickerProviderStateMixin {
-  late final AnimationController _t =
-      AnimationController(vsync: this, duration: const Duration(seconds: 4));
+  late final AnimationController _t = AnimationController(vsync: this, duration: const Duration(seconds: 4));
 
   @override
   void didChangeDependencies() {
@@ -97,8 +98,13 @@ class BitPainter extends CustomPainter {
     canvas.drawLine(Offset(cx, headC.dy - r), tip, stem);
     final tipColor = mood == BitMood.think ? accent : eye;
     final glow = 0.6 + 0.4 * math.sin(t * math.pi * 2 * (mood == BitMood.think ? 4 : 1));
-    canvas.drawCircle(tip, s * 0.07, Paint()..color = tipColor.withValues(alpha: 0.25 * glow)
-      ..maskFilter = MaskFilter.blur(BlurStyle.normal, s * 0.05));
+    canvas.drawCircle(
+      tip,
+      s * 0.07,
+      Paint()
+        ..color = tipColor.withValues(alpha: 0.25 * glow)
+        ..maskFilter = MaskFilter.blur(BlurStyle.normal, s * 0.05),
+    );
     canvas.drawCircle(tip, s * 0.04, Paint()..color = tipColor);
     if (mood == BitMood.think) {
       final a = t * math.pi * 8;
@@ -184,13 +190,23 @@ class BitPainter extends CustomPainter {
         ..style = PaintingStyle.stroke
         ..strokeWidth = s * 0.03
         ..strokeCap = StrokeCap.round;
-      canvas.drawArc(Rect.fromCircle(center: c + Offset(0, er * 0.4), radius: er), math.pi * 1.1, math.pi * 0.8, false, arc);
+      canvas.drawArc(
+        Rect.fromCircle(center: c + Offset(0, er * 0.4), radius: er),
+        math.pi * 1.1,
+        math.pi * 0.8,
+        false,
+        arc,
+      );
       return;
     }
     canvas.drawOval(Rect.fromCenter(center: c, width: er * 2, height: er * 2 * open.clamp(0.08, 1)), paint);
     // Highlight.
     if (open > 0.5) {
-      canvas.drawCircle(c + Offset(-er * 0.35, -er * 0.35), er * 0.28, Paint()..color = Colors.white.withValues(alpha: 0.8));
+      canvas.drawCircle(
+        c + Offset(-er * 0.35, -er * 0.35),
+        er * 0.28,
+        Paint()..color = Colors.white.withValues(alpha: 0.8),
+      );
     }
   }
 
@@ -233,6 +249,8 @@ class _BitSaysState extends State<BitSays> with SingleTickerProviderStateMixin {
 
   void _start() {
     if (widget.lines.isEmpty) return;
+    final scope = context.getInheritedWidgetOfExactType<AppScope>();
+    if (scope?.notifier?.autoSpeak ?? false) BitVoice.instance.say(widget.lines[_line]);
     final len = TermText.plain(widget.lines[_line]).length;
     _type.duration = Duration(milliseconds: (len * 22).clamp(300, 3500));
     _type.forward(from: 0);
@@ -265,6 +283,14 @@ class _BitSaysState extends State<BitSays> with SingleTickerProviderStateMixin {
   Widget build(BuildContext context) {
     final c = AppColors.of(context);
     if (widget.lines.isEmpty) return const SizedBox.shrink();
+    final speaker = IconButton(
+      tooltip: 'Read aloud',
+      visualDensity: VisualDensity.compact,
+      iconSize: 18,
+      color: c.textDim,
+      onPressed: () => BitVoice.instance.say(widget.lines[_line]),
+      icon: const Icon(Icons.volume_up_outlined),
+    );
     final more = _line < widget.lines.length - 1;
     return GestureDetector(
       onTap: _tap,
@@ -293,27 +319,25 @@ class _BitSaysState extends State<BitSays> with SingleTickerProviderStateMixin {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     TermText(widget.lines[_line], reveal: _type.value),
-                    if (widget.lines.length > 1)
-                      Padding(
-                        padding: const EdgeInsets.only(top: Gap.s),
-                        child: Row(
-                          children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: Gap.xs),
+                      child: Row(
+                        children: [
+                          if (widget.lines.length > 1)
                             for (var i = 0; i < widget.lines.length; i++)
                               Container(
                                 width: 6,
                                 height: 6,
                                 margin: const EdgeInsets.only(right: 4),
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  color: i == _line ? c.cyan : c.line,
-                                ),
+                                decoration: BoxDecoration(shape: BoxShape.circle, color: i == _line ? c.cyan : c.line),
                               ),
-                            const Spacer(),
-                            if (more && !_type.isAnimating)
-                              Text('tap ▸', style: TextStyle(color: c.textDim, fontSize: 12)),
-                          ],
-                        ),
+                          const Spacer(),
+                          if (more && !_type.isAnimating)
+                            Text('tap for more', style: TextStyle(color: c.textDim, fontSize: 12)),
+                          speaker,
+                        ],
                       ),
+                    ),
                   ],
                 ),
               ),

@@ -10,7 +10,7 @@ void main() {
     expect(find.text('Spot the problem with a risky request'), findsOneWidget);
     await tapVisible(tester, find.byKey(const ValueKey('pick-risky')));
     await tester.pump(const Duration(milliseconds: 400));
-    expect(find.textContaining('A careful model would say'), findsOneWidget);
+    expect(find.textContaining('prompt injection', findRichText: true), findsOneWidget);
     expectNoErrors(tester);
   });
 

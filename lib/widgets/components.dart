@@ -184,7 +184,7 @@ class FactCard extends StatelessWidget {
             TermText(label, style: Theme.of(context).textTheme.bodyMedium),
             if (comparison != null) ...[
               const SizedBox(height: Gap.s),
-              Text('≈ $comparison', style: TextStyle(color: c.textDim, fontStyle: FontStyle.italic)),
+              TermText('≈ $comparison', style: TextStyle(color: c.textDim, fontStyle: FontStyle.italic)),
             ],
           ],
         ),

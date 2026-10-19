@@ -10,12 +10,18 @@ class ProgressStore extends ChangeNotifier {
   static const _kLast = 'progress.last';
   static const _kQuiz = 'progress.quiz.';
   static const _kEggs = 'progress.eggs';
+  static const _kTheme = 'settings.theme'; // 0 system, 1 dark, 2 light
+  static const _kStill = 'settings.reduceMotion';
+  static const _kSpeak = 'settings.autoSpeak';
 
   final SharedPreferences? _prefs;
   final Set<String> _done = {};
   final Set<String> _eggs = {};
   final Map<String, int> _quiz = {};
   String? _last;
+  int _theme = 0;
+  bool _reduceMotion = false;
+  bool _autoSpeak = false;
 
   static Future<ProgressStore> load() async {
     try {
@@ -32,12 +38,38 @@ class ProgressStore extends ChangeNotifier {
     _done.addAll(p.getStringList(_kDone) ?? const []);
     _eggs.addAll(p.getStringList(_kEggs) ?? const []);
     _last = p.getString(_kLast);
+    _theme = p.getInt(_kTheme) ?? 0;
+    _reduceMotion = p.getBool(_kStill) ?? false;
+    _autoSpeak = p.getBool(_kSpeak) ?? false;
     for (final k in p.getKeys().where((k) => k.startsWith(_kQuiz))) {
       _quiz[k.substring(_kQuiz.length)] = p.getInt(k) ?? 0;
     }
   }
 
   bool isDone(String lessonId) => _done.contains(lessonId);
+
+  /// 0 = follow the system, 1 = always dark, 2 = always light.
+  int get theme => _theme;
+  bool get reduceMotion => _reduceMotion;
+  bool get autoSpeak => _autoSpeak;
+
+  void setTheme(int v) {
+    _theme = v;
+    _prefs?.setInt(_kTheme, v);
+    notifyListeners();
+  }
+
+  void setReduceMotion(bool v) {
+    _reduceMotion = v;
+    _prefs?.setBool(_kStill, v);
+    notifyListeners();
+  }
+
+  void setAutoSpeak(bool v) {
+    _autoSpeak = v;
+    _prefs?.setBool(_kSpeak, v);
+    notifyListeners();
+  }
   int get doneCount => _done.length;
   String? get lastLesson => _last;
   int? quizScore(String quizId) => _quiz[quizId];
@@ -79,12 +111,15 @@ class ProgressStore extends ChangeNotifier {
     }
   }
 
+  /// Forget lessons, quiz scores and found eggs (settings are kept).
   void reset() {
     _done.clear();
     _eggs.clear();
     _quiz.clear();
     _last = null;
-    _prefs?.clear();
+    for (final k in [_kDone, _kEggs, _kLast, ...?_prefs?.getKeys().where((k) => k.startsWith(_kQuiz))]) {
+      _prefs?.remove(k);
+    }
     notifyListeners();
   }
 }

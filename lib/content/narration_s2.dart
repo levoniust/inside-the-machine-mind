@@ -175,4 +175,20 @@ const narrationS2 = <String, LessonText>{
     ],
     keyIdea: 'You can shrink a [[model]] with [[distillation]], [[quantization]], or [[Mixture of experts]]. Most of the skill, for much less memory and [[compute]].',
   ),
+  's2_memory_budget': LessonText(
+    intro: [
+      'Training needs far more memory than just running a model. Every knob drags along a little backpack of extra numbers.',
+      'There\'s the weight itself, its [[gradient]] (which way to turn), and the optimizer\'s notes about recent steps. Together that\'s about 16 bytes per [[parameter]].',
+      'Slide the model size and watch the memory pile up. Then split the work across more [[GPUs|gpu]] and see each one\'s share shrink.',
+    ],
+    keyIdea: 'Training a model needs roughly eight times the memory of just storing it, so the weights, gradients and optimizer notes are split across many GPUs.',
+  ),
+  's2_step_hardware': LessonText(
+    intro: [
+      'Remember the parts from Section 1? Now let\'s watch them all work together on one single training step.',
+      'A batch of text comes off the storage, the [[GPU]] makes its guesses, measures the [[loss]], and passes the blame backward.',
+      'Then thousands of GPUs compare notes over [[NVLink]] and [[InfiniBand]], so every copy of the model learns the same lesson. Step through it.',
+    ],
+    keyIdea: 'One training step uses every part of the machine: storage feeds data, HBM feeds the tensor cores, and the network keeps thousands of GPUs in sync.',
+  ),
 };

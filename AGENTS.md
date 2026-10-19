@@ -12,7 +12,8 @@ Inside the Machine Mind is a Flutter (Dart) Android app that teaches how LLMs ar
 - `build` returns `LessonScaffold(lessonId: '<lesson_id>', children: [...])`. Don't add an AppBar, Bit's intro, the key idea or navigation: LessonScaffold does all of that (the narration comes from `lib/content/narration.dart`).
 - The children are the **interactive** part: 2–4 `DemoCard`s with custom painters, sliders, buttons and animations, plus `FactCard`s for headline numbers.
 - **Numbers:** only use values from `lib/content/facts.dart` (verified). Pass `factId:` to `FactCard`. Never invent statistics. Arithmetic that derives from verified numbers is fine (show the formula).
-- Glossary terms in text: `[[term]]` inside strings rendered by `TermText`/`FactCard` labels. Only use terms that exist in `lib/content/glossary.dart`.
+- Glossary terms in text: `[[term]]` works ONLY inside strings rendered by `TermText`, `FactCard(label:)` and `KeyIdea`. **Never put `[[...]]` in a plain `Text`, a slider label, a chip or a button**: it would show the brackets on screen. Only use terms that exist in `lib/content/glossary.dart`.
+- **No invented numbers.** Toy demos may use made-up scores to show an idea, but then say so on screen ("an illustration, not real data"). Never present a made-up percentage, rate or count as a fact. FactCards must be about the lesson's topic.
 - Animations: an `AnimationController` in a `State` with `SingleTickerProviderStateMixin`. Stop looping animations when `MediaQuery.maybeDisableAnimationsOf(context) == true` (see s1_storage). Always dispose controllers.
 - Painters: a `CustomPainter` with a correct `shouldRepaint`. Wrap canvases in `Semantics(label: ...)` describing what is shown.
 - Layout must work from 360 dp wide phones to tablets, and at text scale 1.3. Use `Expanded`/`Flexible`/`Wrap`/`FittedBox` to avoid overflow. No fixed widths above 320.

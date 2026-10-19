@@ -5,370 +5,257 @@ import 'package:flutter/material.dart';
 import '../../app/theme.dart';
 import '../../widgets/components.dart';
 import '../../widgets/lesson_scaffold.dart';
+import '../../widgets/term_text.dart';
 
-/// Section 2 · Lesson 3: Exams along the way.
-/// A slider through training progress drives a live benchmark chart whose scores climb,
-/// and a custom-painted curve where an [[emergent ability]] switches on at scale.
-/// Facts: TR-KAPLAN, TR-CHINCHILLA, TR-EMERGENT.
+/// Section 2 · "Exams along the way" (benchmarks, held-out data, emergent abilities).
+/// Charts are illustrations of typical shapes (labelled on screen); the cited facts are TR-EMERGENT and TR-KAPLAN.
 class S2TestingScreen extends StatelessWidget {
   const S2TestingScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    final c = AppColors.of(context);
-    return LessonScaffold(
-      lessonId: 's2_testing',
-      children: [
-        const _BenchmarkDemo(),
-        const _EmergentDemo(),
-        StatGrid(
-          columns: 2,
-          children: [
-            StatTile(
-              label: 'Loss falls smoothly as you scale',
-              value: 'power law',
-              color: c.violet,
-              icon: Icons.trending_down,
-            ),
-            StatTile(
-              label: 'Compute-optimal data',
-              value: '20 tokens / parameter',
-              color: c.lime,
-              icon: Icons.scale,
-            ),
-          ],
-        ),
-        Row(
-          children: [
-            Expanded(
-              child: FactCard(
-                value: '70B',
-                label: 'The [[Chinchilla]] model that beat much larger models',
-                comparison: 'trained on 1.4T tokens',
-                factId: 'TR-CHINCHILLA',
-              ),
-            ),
-            const SizedBox(width: Gap.m),
-            Expanded(
-              child: FactCard(
-                value: 'emergent',
-                label: '[[Emergent abilities|emergent ability]] appear only past a certain scale',
-                factId: 'TR-EMERGENT',
-              ),
-            ),
-          ],
-        ),
-        FactCard(
-          value: 'smoothly',
-          label: 'Loss falls as a [[scaling law]] power law as you scale [[parameters]], data and [[compute]]',
-          comparison: 'Kaplan et al. (2020)',
-          factId: 'TR-KAPLAN',
-        ),
-      ],
-    );
+  Widget build(BuildContext context) => const LessonScaffold(
+        lessonId: 's2_testing',
+        children: [_HeldOut(), _Emergence()],
+      );
+}
+
+/// Practice loss keeps falling; held-out (never-seen) loss falls too, unless the model starts memorizing.
+class _HeldOut extends StatefulWidget {
+  const _HeldOut();
+
+  @override
+  State<_HeldOut> createState() => _HeldOutState();
+}
+
+class _HeldOutState extends State<_HeldOut> {
+  double _progress = 0.6;
+  bool _repeat = false;
+
+  static double practice(double x) => 0.25 + 0.75 * math.exp(-4 * x);
+  static double heldOut(double x, bool repeat) {
+    final base = 0.3 + 0.7 * math.exp(-3.6 * x);
+    return repeat ? base + 0.5 * math.max(0, x - 0.45) * math.max(0, x - 0.45) * 4 : base;
   }
-}
-
-/// Interactive demo: drag the slider through training progress. Benchmark scores climb
-/// (a smooth curve, like the [[scaling law]]), and live numbers update.
-class _BenchmarkDemo extends StatefulWidget {
-  const _BenchmarkDemo();
-
-  @override
-  State<_BenchmarkDemo> createState() => _BenchmarkDemoState();
-}
-
-class _BenchmarkDemoState extends State<_BenchmarkDemo> {
-  double _progress = 0.0; // 0..1 fraction of training done
-
-  /// Benchmark score for a given progress, in the 0..100 range.
-  double _score(double p) => 100 * (1 - math.exp(-3.0 * p));
 
   @override
   Widget build(BuildContext context) {
     final c = AppColors.of(context);
-    final accent = c.section(2);
-    final score = _score(_progress);
-    final trained = _progress * 1.4e12; // tokens, up to 1.4T (Chinchilla's data)
+    final gap = heldOut(_progress, _repeat) - practice(_progress);
+    final memorizing = _repeat && _progress > 0.55;
     return DemoCard(
-      title: 'Benchmark exams along the way',
+      title: 'Practice questions vs the real exam',
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Text(
-            'Same standardized [[benchmark]] questions every time. As training goes further, the scores climb.',
+          TermText(
+            'Engineers keep some text aside that the model never trains on: the "held-out" exam. If the model only '
+            'memorized its practice pages, it would ace practice and fail the exam.',
             style: TextStyle(color: c.textDim),
           ),
-          const SizedBox(height: Gap.l),
+          const SizedBox(height: Gap.m),
+          AspectRatio(
+            aspectRatio: 1.6,
+            child: Semantics(
+              label: 'Chart of practice loss and exam loss over training',
+              child: CustomPaint(painter: _CurvesPainter(_progress, _repeat, c)),
+            ),
+          ),
+          const SizedBox(height: Gap.xs),
+          Wrap(
+            spacing: Gap.l,
+            children: [
+              _legend(c.violet, 'practice (training data)'),
+              _legend(c.amber, 'exam (held-out data)'),
+            ],
+          ),
+          Text('Illustration: typical shapes, not real measurements.', style: TextStyle(color: c.textDim, fontSize: 11)),
           LabeledSlider(
-            key: const ValueKey('training-progress-slider'),
+            key: const ValueKey('testing-progress'),
             label: 'Training progress',
             value: _progress,
             min: 0,
             max: 1,
-            divisions: 100,
-            color: accent,
+            color: c.violet,
             format: (v) => '${(v * 100).round()}%',
             onChanged: (v) => setState(() => _progress = v),
           ),
-          const SizedBox(height: Gap.m),
-          AspectRatio(
-            aspectRatio: 1.4,
-            child: Semantics(
-              label: 'A chart of benchmark scores rising as training progress increases',
-              child: CustomPaint(
-                painter: _ScoreCurvePainter(_progress, accent),
-              ),
-            ),
+          SwitchListTile(
+            key: const ValueKey('testing-repeat'),
+            contentPadding: EdgeInsets.zero,
+            title: const Text('Show it the same small library over and over'),
+            value: _repeat,
+            activeThumbColor: c.violet,
+            onChanged: (v) => setState(() => _repeat = v),
           ),
-          const SizedBox(height: Gap.m),
-          StatGrid(
-            columns: 2,
-            children: [
-              StatTile(
-                label: 'Benchmark score',
-                value: '${score.toStringAsFixed(0)} / 100',
-                color: accent,
-                icon: Icons.assessment_outlined,
-              ),
-              StatTile(
-                label: 'Data trained on',
-                value: humanNumber(trained),
-                color: c.cyan,
-                icon: Icons.data_object,
-              ),
-            ],
+          Text(
+            memorizing
+                ? 'Uh-oh: practice keeps improving but the exam gets worse. The model is memorizing instead of learning. '
+                    'This is why huge, varied datasets matter.'
+                : (gap < 0.12 ? 'Practice and exam improve together: the model is learning patterns, not pages.' : 'Both still improving.'),
+            key: const ValueKey('testing-verdict'),
+            style: TextStyle(color: memorizing ? c.red : c.lime, fontWeight: FontWeight.w600),
           ),
         ],
       ),
     );
   }
+
+  Widget _legend(Color col, String label) => Text.rich(TextSpan(children: [
+        WidgetSpan(alignment: PlaceholderAlignment.middle, child: Container(width: 14, height: 4, color: col)),
+        TextSpan(text: '  $label', style: const TextStyle(fontSize: 12)),
+      ]));
 }
 
-class _ScoreCurvePainter extends CustomPainter {
-  _ScoreCurvePainter(this.progress, this.accent);
+class _CurvesPainter extends CustomPainter {
+  _CurvesPainter(this.progress, this.repeat, this.c);
   final double progress;
-  final Color accent;
+  final bool repeat;
+  final AppColors c;
 
   @override
   void paint(Canvas canvas, Size size) {
-    final w = size.width;
-    final h = size.height;
-    const pad = 10.0;
-    final plotW = w - pad * 2;
-    final plotH = h - pad * 2;
-    final origin = Offset(pad, pad);
-
-    // Axes.
     final axis = Paint()
-      ..color = accent.withValues(alpha: 0.25)
-      ..strokeWidth = 1.0;
-    canvas.drawLine(Offset(origin.dx, h - pad), Offset(w - pad, h - pad), axis);
-    canvas.drawLine(Offset(origin.dx, origin.dy), Offset(origin.dx, h - pad), axis);
-
-    // The full curve (faint), so the user sees the shape.
-    final fullPath = Path();
-    const steps = 60;
-    for (var i = 0; i <= steps; i++) {
-      final x = i / steps;
-      final y = 100 * (1 - math.exp(-3.0 * x));
-      final px = origin.dx + x * plotW;
-      final py = (h - pad) - (y / 100) * plotH;
-      if (i == 0) {
-        fullPath.moveTo(px, py);
-      } else {
-        fullPath.lineTo(px, py);
+      ..color = c.line
+      ..strokeWidth = 1;
+    canvas.drawLine(Offset(0, size.height), Offset(size.width, size.height), axis);
+    canvas.drawLine(Offset.zero, Offset(0, size.height), axis);
+    Path curve(double Function(double) f) {
+      final p = Path();
+      for (var i = 0; i <= 100; i++) {
+        final x = i / 100 * progress;
+        final pt = Offset(x * size.width, size.height - f(x).clamp(0.0, 1.2) / 1.2 * size.height * 0.95);
+        i == 0 ? p.moveTo(pt.dx, pt.dy) : p.lineTo(pt.dx, pt.dy);
       }
+      return p;
     }
-    canvas.drawPath(fullPath, Paint()
-      ..color = accent.withValues(alpha: 0.2)
-      ..strokeWidth = 1.5);
 
-    // The part reached so far, drawn brightly.
-    final reachedPath = Path();
-    for (var i = 0; i <= steps; i++) {
-      final x = i / steps;
-      if (x > progress) break;
-      final y = 100 * (1 - math.exp(-3.0 * x));
-      final px = origin.dx + x * plotW;
-      final py = (h - pad) - (y / 100) * plotH;
-      if (i == 0) {
-        reachedPath.moveTo(px, py);
-      } else {
-        reachedPath.lineTo(px, py);
-      }
-    }
-    canvas.drawPath(reachedPath, Paint()
-      ..color = accent
-      ..strokeWidth = 2.5
-      ..strokeCap = StrokeCap.round);
-
-    // The current point, glowing.
-    final y = 100 * (1 - math.exp(-3.0 * progress));
-    final px = origin.dx + progress * plotW;
-    final py = (h - pad) - (y / 100) * plotH;
-    canvas.drawCircle(Offset(px, py), 10,
-        Paint()..color = accent.withValues(alpha: 0.25)..maskFilter = const MaskFilter.blur(BlurStyle.normal, 6));
-    canvas.drawCircle(Offset(px, py), 4, Paint()..color = accent);
+    final line = Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 3
+      ..strokeCap = StrokeCap.round;
+    canvas.drawPath(curve(_HeldOutState.practice), line..color = c.violet);
+    canvas.drawPath(curve((x) => _HeldOutState.heldOut(x, repeat)), line..color = c.amber);
+    final tp = TextPainter(
+      text: TextSpan(text: 'loss (lower is better)', style: TextStyle(fontFamily: 'Roboto', fontSize: 10, color: c.textDim)),
+      textDirection: TextDirection.ltr,
+    )..layout();
+    tp.paint(canvas, const Offset(6, 2));
   }
 
   @override
-  bool shouldRepaint(_ScoreCurvePainter old) => old.progress != progress;
+  bool shouldRepaint(_CurvesPainter old) => old.progress != progress || old.repeat != repeat || old.c != c;
 }
 
-/// Interactive demo: an [[emergent ability]] that switches on at scale.
-/// A custom-painted curve with a threshold, plus live numbers that update as the
-/// model grows past the threshold.
-class _EmergentDemo extends StatefulWidget {
-  const _EmergentDemo();
+/// Emergence: smooth improvement in next-word loss vs a skill that seems to switch on past a size.
+class _Emergence extends StatefulWidget {
+  const _Emergence();
 
   @override
-  State<_EmergentDemo> createState() => _EmergentDemoState();
+  State<_Emergence> createState() => _EmergenceState();
 }
 
-class _EmergentDemoState extends State<_EmergentDemo> {
-  double _scale = 0.3; // model size, 0..1
+class _EmergenceState extends State<_Emergence> {
+  double _size = 0.3; // 0..1 on a log scale of model size
 
-  static const double threshold = 0.6;
-
-  /// Success rate of the [[emergent ability]] at a given scale.
-  double _successRate(double s) =>
-      s < threshold ? 0.0 : ((s - threshold) / (1.0 - threshold)).clamp(0.0, 1.0);
+  static double smooth(double x) => 0.15 + 0.8 * x; // general skill grows steadily
+  static double sudden(double x) => 0.95 / (1 + math.exp(-22 * (x - 0.62))); // near zero, then a jump
 
   @override
   Widget build(BuildContext context) {
     final c = AppColors.of(context);
-    final accent = c.section(2);
-    final unlocked = _scale >= threshold;
-    final rate = _successRate(_scale);
+    final on = sudden(_size) > 0.5;
     return DemoCard(
-      title: 'Something switches on at scale',
+      title: 'Skills that seem to switch on',
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Text(
-            'Some [[emergent abilities|emergent ability]]—like multi-step arithmetic—stay off until the model grows large enough. Then they turn on.',
-            style: TextStyle(color: c.textDim),
-          ),
-          const SizedBox(height: Gap.l),
-          LabeledSlider(
-            key: const ValueKey('model-scale-slider'),
-            label: 'Model size',
-            value: _scale,
-            min: 0,
-            max: 1,
-            divisions: 100,
-            color: accent,
-            format: (v) => '${(v * 100).round()}%',
-            onChanged: (v) => setState(() => _scale = v),
-          ),
-          const SizedBox(height: Gap.m),
           AspectRatio(
-            aspectRatio: 1.4,
+            aspectRatio: 1.6,
             child: Semantics(
-              label:
-                  'A curve of emergent ability success rate that is zero until the model passes a size threshold, then rises',
-              child: CustomPaint(
-                painter: _EmergentPainter(_scale, threshold, accent),
-              ),
+              label: 'Chart: a smooth skill curve and a sudden skill curve over model size',
+              child: CustomPaint(painter: _EmergencePainter(_size, c)),
             ),
           ),
-          const SizedBox(height: Gap.m),
-          Row(
+          const SizedBox(height: Gap.xs),
+          Wrap(
+            spacing: Gap.l,
             children: [
-              Expanded(
-                child: StatTile(
-                  label: 'Ability success rate',
-                  value: unlocked ? '${(rate * 100).round()}%' : '0%',
-                  color: unlocked ? accent : c.textDim,
-                  icon: Icons.toggle_on,
-                ),
-              ),
-              const SizedBox(width: Gap.m),
-              Expanded(
-                child: StatTile(
-                  label: 'Threshold reached?',
-                  value: unlocked ? 'Yes' : 'No',
-                  color: unlocked ? accent : c.textDim,
-                  icon: Icons.check_circle_outline,
-                ),
-              ),
+              _legend(c.cyan, 'everyday text prediction'),
+              _legend(c.magenta, 'multi-step arithmetic'),
             ],
           ),
-          const SizedBox(height: Gap.s),
+          Text('Illustration of the pattern, not real data.', style: TextStyle(color: c.textDim, fontSize: 11)),
+          LabeledSlider(
+            key: const ValueKey('testing-size'),
+            label: 'Model size (small → huge)',
+            value: _size,
+            min: 0,
+            max: 1,
+            color: c.magenta,
+            format: (v) => v < 0.33 ? 'small' : (v < 0.66 ? 'medium' : 'huge'),
+            onChanged: (v) => setState(() => _size = v),
+          ),
           Text(
-            unlocked
-                ? 'At this size the model can suddenly do things it couldn\'t before.'
-                : 'Not yet—below the threshold the ability is off.',
-            style: TextStyle(color: c.textDim, fontSize: 13),
+            on ? 'Switched on! At this size the model can suddenly do multi-step arithmetic.' : 'Not yet: the arithmetic skill stays near zero.',
+            key: const ValueKey('testing-emergent'),
+            style: TextStyle(color: on ? c.lime : c.textDim, fontWeight: FontWeight.w600),
+          ),
+          const SizedBox(height: Gap.m),
+          const TermText(
+            'Researchers call these [[emergent abilities|emergent ability]]. Some argue the jump is partly an illusion '
+            'of all-or-nothing scoring: graded more gently, the skill often grows more smoothly. Either way, bigger '
+            'models reliably get better at a growing list of tasks.',
+          ),
+          const SizedBox(height: Gap.m),
+          const FactCard(
+            value: '2022',
+            label: '"Emergent Abilities of Large Language Models" described skills appearing only past a certain scale',
+            factId: 'TR-EMERGENT',
           ),
         ],
       ),
     );
   }
+
+  Widget _legend(Color col, String label) => Text.rich(TextSpan(children: [
+        WidgetSpan(alignment: PlaceholderAlignment.middle, child: Container(width: 14, height: 4, color: col)),
+        TextSpan(text: '  $label', style: const TextStyle(fontSize: 12)),
+      ]));
 }
 
-class _EmergentPainter extends CustomPainter {
-  _EmergentPainter(this.scale, this.threshold, this.accent);
-  final double scale;
-  final double threshold;
-  final Color accent;
+class _EmergencePainter extends CustomPainter {
+  _EmergencePainter(this.size01, this.c);
+  final double size01;
+  final AppColors c;
 
   @override
   void paint(Canvas canvas, Size size) {
-    final w = size.width;
-    final h = size.height;
-    const pad = 10.0;
-    final plotW = w - pad * 2;
-    final plotH = h - pad * 2;
-    final origin = Offset(pad, pad);
-
     final axis = Paint()
-      ..color = accent.withValues(alpha: 0.25)
-      ..strokeWidth = 1.0;
-    canvas.drawLine(Offset(origin.dx, h - pad), Offset(w - pad, h - pad), axis);
-    canvas.drawLine(Offset(origin.dx, origin.dy), Offset(origin.dx, h - pad), axis);
-
-    // Threshold line.
-    final tx = origin.dx + threshold * plotW;
-    canvas.drawLine(
-      Offset(tx, origin.dy),
-      Offset(tx, h - pad),
-      Paint()
-        ..color = accent.withValues(alpha: 0.4)
-        ..strokeWidth = 1.0
-        ..strokeCap = StrokeCap.round,
-    );
-    canvas.drawCircle(Offset(tx, h - pad), 3, Paint()..color = accent.withValues(alpha: 0.6));
-
-    // The curve: zero up to the threshold, then rising.
-    final path = Path();
-    const steps = 60;
-    for (var i = 0; i <= steps; i++) {
-      final x = i / steps;
-      final y = x < threshold ? 0.0 : ((x - threshold) / (1.0 - threshold)).clamp(0.0, 1.0);
-      final px = origin.dx + x * plotW;
-      final py = (h - pad) - y * plotH;
-      if (i == 0) {
-        path.moveTo(px, py);
-      } else {
-        path.lineTo(px, py);
+      ..color = c.line
+      ..strokeWidth = 1;
+    canvas.drawLine(Offset(0, size.height), Offset(size.width, size.height), axis);
+    canvas.drawLine(Offset.zero, Offset(0, size.height), axis);
+    void plot(double Function(double) f, Color col) {
+      final p = Path();
+      for (var i = 0; i <= 120; i++) {
+        final x = i / 120;
+        final pt = Offset(x * size.width, size.height - f(x) * size.height * 0.95);
+        i == 0 ? p.moveTo(pt.dx, pt.dy) : p.lineTo(pt.dx, pt.dy);
       }
+      canvas.drawPath(p, Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 3
+        ..color = col);
+      final dot = Offset(size01 * size.width, size.height - f(size01) * size.height * 0.95);
+      canvas.drawCircle(dot, 6, Paint()..color = col);
     }
-    canvas.drawPath(path, Paint()
-      ..color = accent
-      ..strokeWidth = 2.5
-      ..strokeCap = StrokeCap.round);
 
-    // The current point.
-    final y = scale < threshold ? 0.0 : ((scale - threshold) / (1.0 - threshold)).clamp(0.0, 1.0);
-    final px = origin.dx + scale * plotW;
-    final py = (h - pad) - y * plotH;
-    canvas.drawCircle(Offset(px, py), 10,
-        Paint()..color = accent.withValues(alpha: 0.25)..maskFilter = const MaskFilter.blur(BlurStyle.normal, 6));
-    canvas.drawCircle(Offset(px, py), 4, Paint()..color = accent);
+    plot(_EmergenceState.smooth, c.cyan);
+    plot(_EmergenceState.sudden, c.magenta);
+    canvas.drawLine(Offset(size01 * size.width, 0), Offset(size01 * size.width, size.height),
+        Paint()..color = c.textDim.withValues(alpha: 0.4));
   }
 
   @override
-  bool shouldRepaint(_EmergentPainter old) => old.scale != scale || old.threshold != threshold;
+  bool shouldRepaint(_EmergencePainter old) => old.size01 != size01 || old.c != c;
 }
