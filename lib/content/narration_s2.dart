@@ -5,10 +5,10 @@ const narrationS2 = <String, LessonText>{
   's2_intro': LessonText(
     intro: [
       'You know how a student reads the textbook, then takes the test? That\'s [[Training]]. And [[Inference]] is the test itself—the job.',
-      'Let\'s follow our question. At school, the model reads trillions of sentences. At work, it just answers your [[Prompt]].',
+      'Let\'s follow our question. At school, the model reads trillions of sentences. At work, it just answers your [[prompt]].',
       'Tap the toggle and watch the table animate. School is slow and messy. The job is fast and focused.',
     ],
-    keyIdea: 'Training is going to school; inference is doing the job. One builds the [[Model]]; the other uses it.',
+    keyIdea: 'Training is going to school; inference is doing the job. One builds the [[model]]; the other uses it.',
   ),
   's2_decoder': LessonText(
     intro: [
@@ -20,11 +20,11 @@ const narrationS2 = <String, LessonText>{
   ),
   's2_library': LessonText(
     intro: [
-      'Before the model answers "Why is the sky blue?", it has to read the world. That\'s the [[Dataset]]—the library.',
+      'Before the model answers "Why is the sky blue?", it has to read the world. That\'s the [[dataset]]—the library.',
       'Tap each source—web pages, books, code, Wikipedia, papers. They all pour into one funnel.',
-      'FineWeb alone holds 15 trillion [[Token|tokens]] from 96 web snapshots. Reading that at 250 words a minute would take about 250,000 years.',
+      'FineWeb alone holds 15 trillion [[tokens|token]] from 96 web snapshots. Reading that at 250 words a minute would take about 250,000 years.',
     ],
-    keyIdea: 'The [[Dataset]] is the library the model reads. Its size and mix shape everything it can know.',
+    keyIdea: 'The [[dataset]] is the library the model reads. Its size and mix shape everything it can know.',
   ),
   's2_cleaning': LessonText(
     intro: [
@@ -32,44 +32,44 @@ const narrationS2 = <String, LessonText>{
       'We run it through filters like a washing machine. Language, quality, dedupe, safety, strip personal info.',
       'Tap each filter and watch the percentage of surviving text shrink. What\'s left is what the model actually reads.',
     ],
-    keyIdea: 'Cleaning the [[Dataset]] isn\'t optional. Junk in, junk out.',
+    keyIdea: 'Cleaning the [[dataset]] isn\'t optional. Junk in, junk out.',
   ),
   's2_tokens': LessonText(
     intro: [
-      'The model doesn\'t read words. It reads tiny pieces called [[Token|tokens]]—about 4 characters each, or three-quarters of a word.',
-      'The [[Tokenizer]] is the word chopper. This subword trick took off in 2016; GPT-2\'s [[Vocabulary]] held 50,257 tokens.',
+      'The model doesn\'t read words. It reads tiny pieces called [[tokens|token]]—about 4 characters each, or three-quarters of a word.',
+      'The [[tokenizer]] is the word chopper. This subword trick took off in 2016; GPT-2\'s [[vocabulary]] held 50,257 tokens.',
       'Now play the merge game. Tap the most frequent pair to glue letters into tokens.',
     ],
-    keyIdea: 'A [[Token]] is a word piece. The model thinks in pieces, not whole words.',
+    keyIdea: 'A [[token]] is a word piece. The model thinks in pieces, not whole words.',
   ),
   's2_empty_brain': LessonText(
     intro: [
-      'In 2017, "Attention Is All You Need" gave us the [[Transformer]]—the blueprint for modern AI brains.',
+      'In 2017, "Attention Is All You Need" gave us the [[transformer]]—the blueprint for modern AI brains.',
       'Tap each block. [[Embedding]] is a word\'s address on a map. [[Attention]] decides who to listen to.',
-      'The [[Feed-forward layer]] looks things up in memory. The [[Parameter|parameters]] are the knobs.',
-      'GPT-3 had 175 billion knobs across 96 [[Layer|layers]]; Llama 3 405B stacks 126. Drag the slider and watch the building grow.',
+      'The [[feed-forward layer]] looks things up in memory. The [[parameters|parameter]] are the knobs.',
+      'GPT-3 had 175 billion knobs across 96 [[layers|layer]]; Llama 3 405B stacks 126. Drag the slider and watch the building grow.',
     ],
-    keyIdea: 'A [[Transformer]] is a stack of [[Layer|layers]]. Each has [[Attention]] (who to listen to) and a [[Feed-forward layer]] (look it up in memory).',
+    keyIdea: 'A [[transformer]] is a stack of [[layers|layer]]. Each has [[attention]] (who to listen to) and a [[feed-forward layer]] (look it up in memory).',
   ),
   's2_attention': LessonText(
     intro: [
       'You say, "The sky is blue because light scatters." Which word does "scatters" care about? "Light."',
-      'That\'s [[Attention]]—deciding who to listen to. Tap a word and the curved lines show what it\'s attending to.',
+      'That\'s [[attention]]—deciding who to listen to. Tap a word and the curved lines show what it\'s attending to.',
       'It\'s like a noisy room. You turn your head toward the friend who just said your name.',
     ],
     keyIdea: '[[Attention]] lets every word check in with the others. "Blue" looks at "sky"; "scatters" looks at "light."',
   ),
   's2_guess': LessonText(
     intro: [
-      'The model\'s training job is brutally simple: guess the next [[Token]]. One word at a time.',
-      'I\'ll hide the next word. You guess first, then I show the [[Forward pass]] result—an untrained model just shrugs.',
-      'Trained, it sees "The sky is—" and puts a huge bar on "blue." The [[Softmax]] turns raw scores into chances.',
+      'The model\'s training job is brutally simple: guess the next [[token]]. One word at a time.',
+      'I\'ll hide the next word. You guess first, then I show the [[forward pass]] result—an untrained model just shrugs.',
+      'Trained, it sees "The sky is—" and puts a huge bar on "blue." The [[softmax]] turns raw scores into chances.',
     ],
-    keyIdea: 'Training is one question, repeated trillions of times: what\'s the next [[Token]]?',
+    keyIdea: 'Training is one question, repeated trillions of times: what\'s the next [[token]]?',
   ),
   's2_loss': LessonText(
     intro: [
-      'How wrong was the guess? That\'s [[Loss]]—the wrongness score. Lower is better.',
+      'How wrong was the guess? That\'s [[loss]]—the wrongness score. Lower is better.',
       'Drag the probability slider. If the model was 99% sure about the right word, the loss is tiny.',
       'If it was 1% sure, the loss spikes—−log(p). It\'s like a quiz where getting it wrong stings.',
     ],
@@ -77,73 +77,73 @@ const narrationS2 = <String, LessonText>{
   ),
   's2_backprop': LessonText(
     intro: [
-      'The model guessed wrong. [[Backpropagation]] passes the blame backward to every [[Parameter]].',
+      'The model guessed wrong. [[Backpropagation]] passes the blame backward to every [[parameter]].',
       'Watch the red pulses travel from the output through every knob. Each gets a tiny arrow: "Turn me a little."',
-      'That arrow is the [[Gradient]]. Rumelhart, Hinton, and Williams published this in 1986. It\'s why AI can learn.',
+      'That arrow is the [[gradient]]. Rumelhart, Hinton, and Williams published this in 1986. It\'s why AI can learn.',
     ],
-    keyIdea: '[[Backpropagation]] figures out which [[Parameter|parameters]] caused the mistake and how much to blame each one.',
+    keyIdea: '[[Backpropagation]] figures out which [[parameters|parameter]] caused the mistake and how much to blame each one.',
   ),
   's2_descent': LessonText(
     intro: [
       'The model now knows which way is downhill. [[Gradient descent]] is walking downhill in the fog, one step at a time.',
-      'The [[Learning rate]] is your step size. Too small and you crawl; too big and you bounce over the valley.',
+      'The [[learning rate]] is your step size. Too small and you crawl; too big and you bounce over the valley.',
       'Adam, the 2014 optimizer, smooths the path. It keeps a running average of past steps—like a skier remembering the slope.',
     ],
-    keyIdea: '[[Gradient descent]] walks downhill. The [[Learning rate]] sets the step size; Adam smooths the walk.',
+    keyIdea: '[[Gradient descent]] walks downhill. The [[learning rate]] sets the step size; Adam smooths the walk.',
   ),
   's2_train_it': LessonText(
     intro: [
-      'Your turn. Here\'s a real, tiny [[Neural network]]: two [[Layer|layers]] and just 33 [[Parameter|parameters]].',
-      'Its job: tell the violet dots in the middle from the cyan dots in the ring. Press Train and watch the [[Loss]] curve slide down.',
-      'Nudge the [[Learning rate]] or reset if it goes wild. It\'s your brain to train.',
+      'Your turn. Here\'s a real, tiny [[neural network]]: two [[layers|layer]] and just 33 [[parameters|parameter]].',
+      'Its job: tell the violet dots in the middle from the cyan dots in the ring. Press Train and watch the [[loss]] curve slide down.',
+      'Nudge the [[learning rate]] or reset if it goes wild. It\'s your brain to train.',
     ],
-    keyIdea: 'A [[Neural network]] learns by adjusting [[Parameter|parameters]] to reduce [[Loss]]. Even 33 knobs can learn a curved boundary nobody programmed.',
+    keyIdea: 'A [[neural network]] learns by adjusting [[parameters|parameter]] to reduce [[loss]]. Even 33 knobs can learn a curved boundary nobody programmed.',
   ),
   's2_scale_up': LessonText(
     intro: [
       'You trained a tiny brain on a few hundred dots. Now imagine doing that trillions of times.',
-      'The formula: [[Compute]] ≈ 6 × [[Parameter|parameters]] × [[Token|tokens]]. GPT-3 ran about 3.14 × 10²³ [[FLOP]]s.',
-      'Llama 3 405B chewed 15.6 trillion tokens—about 30.84 million [[GPU]]-hours. Even well-tuned, [[GPU|gpus]] sit at 38–43% of peak.',
+      'The formula: [[Compute]] ≈ 6 × [[parameters|parameter]] × [[tokens|token]]. GPT-3 ran about 3.14 × 10²³ [[FLOP]]s.',
+      'Llama 3 405B chewed 15.6 trillion tokens—about 30.84 million [[GPU]]-hours. Even well-tuned, [[GPUs|gpu]] sit at 38–43% of peak.',
       'GPT-3 used about 1,287 megawatt-hours—enough power for 120 U.S. homes for a year. Tap the calculator and watch the days pile up.',
     ],
-    keyIdea: '[[Compute]] is brain-sweat, scaling with [[Parameter|parameters]] × [[Token|tokens]] × 6. Trained brains are measured in megawatt-hours, not hours.',
+    keyIdea: '[[Compute]] is brain-sweat, scaling with [[parameters|parameter]] × [[tokens|token]] × 6. Trained brains are measured in megawatt-hours, not hours.',
   ),
   's2_parallel': LessonText(
     intro: [
-      'One [[GPU]] is a line cook. A [[Datacenter]] is a factory of kitchens.',
+      'One [[GPU]] is a line cook. A [[datacenter]] is a factory of kitchens.',
       'Data parallel: every kitchen cooks the same recipe on different food. Tensor parallel: one dish split across chefs.',
-      'Pipeline parallel: an assembly line. Tap each mode and watch the [[GPU|gpus]] light up.',
+      'Pipeline parallel: an assembly line. Tap each mode and watch the [[GPUs|gpu]] light up.',
     ],
-    keyIdea: '[[Parallelism]] is splitting the work—by data, by tensor, or by pipeline. The [[GPU|gpus]] cook as a team.',
+    keyIdea: '[[Parallelism]] is splitting the work—by data, by tensor, or by pipeline. The [[GPUs|gpu]] cook as a team.',
   ),
   's2_things_break': LessonText(
     intro: [
       'Big training runs don\'t go smoothly. In a 54-day stretch of Llama 3 405B, there were 466 interruptions.',
       '47 were planned. 419 were unexpected, and 58.7% of those were [[GPU]] problems.',
-      'Tap the markers. The loss spikes, then the [[Checkpoint]]—the save game—kicks in and the model rewinds.',
+      'Tap the markers. The loss spikes, then the [[checkpoint]]—the save game—kicks in and the model rewinds.',
     ],
-    keyIdea: 'A [[Checkpoint]] is a save game. Even 419 unexpected failures didn\'t stop the model from finishing.',
+    keyIdea: 'A [[checkpoint]] is a save game. Even 419 unexpected failures didn\'t stop the model from finishing.',
   ),
   's2_testing': LessonText(
     intro: [
-      'Along the way, the model takes [[Benchmark]] exams. Same standardized questions every time.',
+      'Along the way, the model takes [[benchmark]] exams. Same standardized questions every time.',
       'Drag the slider through training progress. Watch the scores climb.',
-      'Then something strange happens at scale. [[Emergent ability|emergent abilities]]—like multi-step arithmetic—switch on.',
+      'Then something strange happens at scale. [[Emergent abilities|emergent ability]]—like multi-step arithmetic—switch on.',
     ],
-    keyIdea: '[[Benchmark|benchmarks]] track progress. At a certain size, [[Emergent ability|emergent abilities]] appear—the model can suddenly do things it couldn\'t before.',
+    keyIdea: '[[Benchmarks|benchmark]] track progress. At a certain size, [[emergent abilities|emergent ability]] appear—the model can suddenly do things it couldn\'t before.',
   ),
   's2_post_training': LessonText(
     intro: [
-      'The [[Base model]] is a well-read parrot. It finishes any sentence, but it doesn\'t know how to be helpful.',
+      'The [[base model]] is a well-read parrot. It finishes any sentence, but it doesn\'t know how to be helpful.',
       '[[Fine-tuning]] is specialist training. Then [[RLHF]]—thumbs up and down—teaches it to answer like a person.',
       'A 1.3B InstructGPT beat the 175B GPT-3—a model 100× larger. [[Constitutional AI]] goes further: the model critiques itself using written principles.',
       'Play the rater. Two answers appear—pick the better one.',
     ],
-    keyIdea: '[[Fine-tuning]] turns a [[Base model]] into an assistant. [[RLHF]] and [[Constitutional AI]] teach helpfulness, not just fluency.',
+    keyIdea: '[[Fine-tuning]] turns a [[base model]] into an assistant. [[RLHF]] and [[Constitutional AI]] teach helpfulness, not just fluency.',
   ),
   's2_safety': LessonText(
     intro: [
-      '[[Red-teaming]] is friendly hackers. They poke the model with tricky [[Prompt|prompts]] to see if it slips.',
+      '[[Red-teaming]] is friendly hackers. They poke the model with tricky [[prompts|prompt]] to see if it slips.',
       'Try it. A tricky request appears: can you spot what could go wrong, and what a careful answer looks like?',
       'Testers also check for bias, dangerous advice, and [[hallucinations|hallucination]], when a model makes a confident wrong guess. Problems found are fixed before release.',
     ],
@@ -151,28 +151,28 @@ const narrationS2 = <String, LessonText>{
   ),
   's2_scaling_laws': LessonText(
     intro: [
-      'Bigger isn\'t always better. The [[Scaling law]] says loss falls smoothly as you add [[Parameter|parameters]], data, and [[Compute]].',
+      'Bigger isn\'t always better. The [[scaling law]] says loss falls smoothly as you add [[parameters|parameter]], data, and [[compute]].',
       'But there\'s a sweet spot. Chinchilla showed a 70B model on 1.4 trillion tokens beat much bigger models trained on less data.',
-      'The optimal ratio is about 20 [[Token|tokens]] per [[Parameter]]. Drag the slider and watch the curve find its best point.',
+      'The optimal ratio is about 20 [[tokens|token]] per [[parameter]]. Drag the slider and watch the curve find its best point.',
     ],
-    keyIdea: 'The [[Scaling law]] has a sweet spot. About 20 [[Token|tokens]] per [[Parameter]] gives the best result for the [[Compute]] spent.',
+    keyIdea: 'The [[scaling law]] has a sweet spot. About 20 [[tokens|token]] per [[parameter]] gives the best result for the [[compute]] spent.',
   ),
   's2_big_small': LessonText(
     intro: [
-      'You don\'t always need the biggest brain. Phi-3-mini is 3.8B [[Parameter|parameters]] and runs on a phone.',
-      'Llama 3 405B is the giant—405 billion [[Parameter|parameters]], 126 [[Layer|layers]], a 128,000-token [[Context window]].',
+      'You don\'t always need the biggest brain. Phi-3-mini is 3.8B [[parameters|parameter]] and runs on a phone.',
+      'Llama 3 405B is the giant—405 billion [[parameters|parameter]], 126 [[layers|layer]], a 128,000-token [[context window]].',
       'Toggle the sizes. Watch the radar chart. The giant knows more; the tiny one is faster and cheaper.',
-      'Which [[Model]] answers "Why is the sky blue?" Any of them. The big one just has more knowledge to draw on.',
+      'Which [[model]] answers "Why is the sky blue?" Any of them. The big one just has more knowledge to draw on.',
     ],
-    keyIdea: 'Bigger [[Model]] know more and reason deeper. Smaller ones are faster, cheaper, and can live on your phone.',
+    keyIdea: 'Bigger [[models|model]] know more and reason deeper. Smaller ones are faster, cheaper, and can live on your phone.',
   ),
   's2_making_small': LessonText(
     intro: [
       '[[Distillation]] is a teacher training a student. A small model learns to imitate a big model\'s output probabilities.',
       '[[Quantization]] is compressing a photo. The numbers get coarser and the model shrinks.',
       'Tap the slider. At 4 bits per number, even a 65B model can be fine-tuned on a single 48 GB [[GPU]].',
-      '[[Mixture of experts]] is a team of specialists. Mixtral 8x7B has 46.7B total, but only 12.9B fire per [[Token]]. Tap the router—two of eight experts light up.',
+      '[[Mixture of experts]] is a team of specialists. Mixtral 8x7B has 46.7B total, but only 12.9B fire per [[token]]. Tap the router—two of eight experts light up.',
     ],
-    keyIdea: 'You can shrink a [[Model]] with [[Distillation]], [[Quantization]], or [[Mixture of experts]]. Most of the skill, for much less memory and [[Compute]].',
+    keyIdea: 'You can shrink a [[model]] with [[distillation]], [[quantization]], or [[Mixture of experts]]. Most of the skill, for much less memory and [[compute]].',
   ),
 };

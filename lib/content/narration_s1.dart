@@ -32,11 +32,11 @@ const narrationS1 = <String, LessonText>{
       '[[GDDR6X]] runs up to 1,008 GB/s on a top gaming card. [[HBM]] on an H200 hits 4.8 TB/s—nearly five times faster.',
       'Pick a memory type in the race and watch it stream model weights to the chip. The leaderboard shows real [[bandwidth]] numbers on a log scale.',
     ],
-    keyIdea: 'The closer memory sits to the chip, the faster it is—[[cache]] at 1 ns, [[HBM]] stacked beside the GPU like a tower of sticky notes.',
+    keyIdea: 'The closer memory sits to the chip, the faster it is—[[Cache]] at 1 ns, [[HBM]] stacked beside the GPU like a tower of sticky notes.',
   ),
   's1_cpu_gpu': LessonText(
     intro: [
-      'A [[CPU]] is a few [[core]]s doing complex things one at a time—like a handful of master chefs. A [[GPU]] is an army: 16,896 cores and 528 [[tensor core]] on an H100.',
+      'A [[CPU]] is a few [[core]]s doing complex things one at a time—like a handful of master chefs. A [[GPU]] is an army: 16,896 cores and 528 [[tensor cores|tensor core]] on an H100.',
       'Hit **Showdown** and watch. The [[CPU]] fills a 64×64 grid a few cells at a time. The [[GPU]] fills whole blocks in one swing.',
       'For [[matrix multiplication]], the H100 is roughly 100 to 300 times faster than a desktop [[CPU]]. That\'s the difference between a chef and a kitchen crew.',
     ],
@@ -44,7 +44,7 @@ const narrationS1 = <String, LessonText>{
   ),
   's1_matmul': LessonText(
     intro: [
-      'Every [[neural network]] runs on one trick: [[matrix multiplication]]. Multiply a row by a column, add the results. That\'s the whole engine.',
+      'Every [[neural network]] runs on one trick: [[Matrix multiplication]]. Multiply a row by a column, add the results. That\'s the whole engine.',
       'Tap the result cells and do the math yourself. Each cell is a few [[FLOP]]s—multiply, add, multiply, add.',
       'Now scale it up. A 405-billion-parameter model does about **810 billion** of these multiply-adds for every single [[token]] you read.',
     ],
@@ -62,7 +62,7 @@ const narrationS1 = <String, LessonText>{
     intro: [
       'Parts talk to each other over [[bandwidth]] roads. [[PCIe]] is the public highway—64 GB/s each way on Gen 5. [[NVLink]] is a private express lane: 1.8 TB/s per [[GPU]].',
       '[[InfiniBand]] is the [[datacenter]]\'s nervous system—400 to 800 Gb/s between machines. Tap a road to see how many cars it can carry.',
-      'The wider the road, the more data flows. But the first car\'s arrival time—[[latency]]—matters just as much as the lane width.',
+      'The wider the road, the more data flows. But the first car\'s arrival time—[[Latency]]—matters just as much as the lane width.',
     ],
     keyIdea: '[[Bandwidth]] is how wide the road is; [[latency]] is how long until the first car arrives. Both matter, and the wrong road can bottleneck your whole machine.',
   ),
@@ -92,7 +92,7 @@ const narrationS1 = <String, LessonText>{
   ),
   's1_datacenter': LessonText(
     intro: [
-      'Zoom out. The [[rack]] sits in a row, then a hall, then a campus with [[cooling tower|cooling towers]]. This is the [[datacenter]]—where your sky question gets answered.',
+      'Zoom out. The [[rack]] sits in a row, then a hall, then a campus with [[cooling towers|cooling tower]]. This is the [[datacenter]]—where your sky question gets answered.',
       'Turn the dial from 8 to 1,000,000 [[GPU]]s. Watch the [[megawatt]] numbers climb, the water flow grow, the floor area expand.',
       'One [[megawatt]] of power runs about 830 U.S. homes. A million [[GPU]]s need far more than that.',
     ],
@@ -101,7 +101,7 @@ const narrationS1 = <String, LessonText>{
   's1_power_cooling': LessonText(
     intro: [
       'Every [[bit]] you read costs energy. The grid feeds a substation, the substation feeds backup power systems (UPS), and those feed the [[racks|rack]].',
-      'The heat flows the other way: chips → coolant → chillers → [[cooling tower|cooling towers]]. Tap each stage to see the water and the watts.',
+      'The heat flows the other way: chips → coolant → chillers → [[cooling towers|cooling tower]]. Tap each stage to see the water and the watts.',
       '[[PUE]] is the overhead score. Industry average: 1.54. That means for every 1 W of [[compute]], you\'re burning 0.54 W on cooling and lights.',
     ],
     keyIdea: 'For every 1 W of [[compute]], the overhead is measured by [[PUE]]. And every watt of heat needs water to leave—about 1.8 litres per kWh on average.',
