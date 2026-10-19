@@ -68,7 +68,7 @@ class _S2BigSmallScreenState extends State<S2BigSmallScreen> with SingleTickerPr
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Text(
-                'Select a model size. The radar shows relative capability.',
+                'Select a model size. The radar compares them (bigger = more of each; an illustration, not measured data).',
                 style: TextStyle(color: c.textDim, fontSize: 13),
               ),
               const SizedBox(height: Gap.m),
@@ -239,7 +239,7 @@ class _RadarPainter extends CustomPainter {
   final Color accent;
   final AppColors colors;
 
-  static const labels = ['Memory', 'Speed', 'Knowledge', 'Context', 'Cost'];
+  static const labels = ['Memory need', 'Speed', 'Knowledge', 'Context', 'Cheap'];
 
   @override
   void paint(Canvas canvas, Size size) {

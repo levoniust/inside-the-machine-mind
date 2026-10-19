@@ -152,7 +152,7 @@ class _AttentionState extends State<_Attention> {
               const TermText(
                 'Like turning your head in a noisy room toward the friend who just said your name, each [[attention]] head '
                 'learns to look for a different kind of clue: who is doing what, which word an "it" refers to, what came '
-                'just before. Big models run many heads side by side in every layer.',
+                'just before. Big models run many heads side by side in every [[layer]] (one of the stacked sections the model is built from).',
               ),
               const SizedBox(height: Gap.m),
               const FactCard(value: '128 heads', label: 'per layer in Llama 3 405B, in each of its 126 layers', factId: 'TR-LLAMA3-ARCH'),

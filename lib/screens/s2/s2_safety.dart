@@ -52,7 +52,7 @@ class S2SafetyScreen extends StatelessWidget {
                 color: c.violet,
               ),
               StatTile(
-                label: 'Slips',
+                label: 'Problems found',
                 value: 'fixed before release',
                 icon: Icons.build,
                 color: c.violet,

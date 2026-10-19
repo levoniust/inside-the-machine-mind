@@ -188,7 +188,7 @@ class _BudgetState extends State<_Budget> {
           const SizedBox(height: Gap.m),
           const FactCard(
             value: '~16 bytes',
-            label: 'per knob to train with the Adam optimizer in mixed precision (vs 2 bytes to run it)',
+            label: 'per knob to train with the Adam optimizer, mixing 16-bit and 32-bit numbers (vs 2 bytes to run it)',
             factId: 'DC-TRAIN-MEM',
           ),
         ],

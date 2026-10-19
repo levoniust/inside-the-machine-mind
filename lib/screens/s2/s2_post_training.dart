@@ -269,7 +269,7 @@ class _FeedbackBar extends StatelessWidget {
           Expanded(
             child: Text(
                 correct
-                    ? 'Good pick! This is how [[RLHF]] teaches a model: humans (or AI feedback guided by [[Constitutional AI]] principles) reward the better answer.'
+                    ? 'Good pick! This is how [[RLHF]] teaches a model: humans reward the better answer. ([[Constitutional AI]] uses the same idea, with an AI judging by written principles.)'
                     : 'Not quite — the other answer was more helpful. That feedback is what trains the model.',
                 style: const TextStyle(fontSize: 13)),
           ),

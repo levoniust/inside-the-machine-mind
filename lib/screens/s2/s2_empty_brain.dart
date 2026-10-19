@@ -27,7 +27,7 @@ const _parts = [
   ('Embedding', 'a word\'s address on a map', 'Turns each token into a list of numbers.', Icons.place_outlined),
   ('Attention', 'deciding who to listen to', 'Each word looks at the earlier words and mixes in what matters.', Icons.hearing),
   ('Feed-forward', 'looking it up in memory', 'Transforms each word\'s numbers using stored knowledge. Most knobs live here.', Icons.memory),
-  ('Output', 'scores for every word', 'Compares the final numbers with every token in the vocabulary.', Icons.format_list_numbered),
+  ('Output', 'scores for every word', 'Turns the result into a score for every word piece the model knows.', Icons.format_list_numbered),
 ];
 
 class _Block extends StatefulWidget {

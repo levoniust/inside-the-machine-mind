@@ -22,7 +22,7 @@ const narrationS2 = <String, LessonText>{
     intro: [
       'Before the model answers "Why is the sky blue?", it has to read the world. That\'s the [[dataset]]—the library.',
       'Tap each source—web pages, books, code, Wikipedia, papers. They all pour into one funnel.',
-      'FineWeb alone holds 15 trillion [[tokens|token]] from 96 web snapshots. Reading that at 250 words a minute, 8 hours a day, would take about 250,000 years.',
+      'The web part of the library, a cleaned collection called FineWeb, holds 15 trillion [[tokens|token]] from 96 web snapshots. Reading that at 250 words a minute, 8 hours a day, would take about 250,000 years.',
     ],
     keyIdea: 'The [[dataset]] is the library the model reads. Its size and mix shape everything it can know.',
   ),
@@ -30,7 +30,7 @@ const narrationS2 = <String, LessonText>{
     intro: [
       'Raw web text is messy. Ads, spam, copy-pasted blogs, someone\'s phone number.',
       'We run it through filters like a washing machine. Language, quality, dedupe, safety, strip personal info.',
-      'Tap each filter and watch the percentage of surviving text shrink. What\'s left is what the model actually reads.',
+      'Tap each filter and watch how much of the text survives. What\'s left is what the model actually reads.',
     ],
     keyIdea: 'Cleaning the [[dataset]] isn\'t optional. Junk in, junk out.',
   ),
@@ -55,7 +55,7 @@ const narrationS2 = <String, LessonText>{
     intro: [
       'You say, "The sky is blue because light scatters." Which word does "scatters" care about? "Light."',
       'That\'s [[attention]]—deciding who to listen to. Tap a word and the curved lines show what it\'s attending to.',
-      'It\'s like a noisy room. You turn your head toward the friend who just said your name.',
+      'It\'s like a noisy room. You turn your head toward the friend who just said your name. The model has many little listeners like that, called heads.',
     ],
     keyIdea: '[[Attention]] lets every word check in with the others. "Blue" looks at "sky"; "scatters" looks at "light."',
   ),
@@ -63,7 +63,7 @@ const narrationS2 = <String, LessonText>{
     intro: [
       'The model\'s training job is brutally simple: guess the next [[token]]. One piece of a word at a time.',
       'I\'ll hide the next word. You guess first, then I show the [[forward pass]] result—an untrained model just shrugs.',
-      'Trained, it sees "The sky is—" and puts a huge bar on "blue." The [[softmax]] turns raw scores into chances.',
+      'Trained, it sees "The sky is—" and puts a huge bar on "blue." Inside, every word gets a raw score; the [[softmax]] turns those scores into chances.',
     ],
     keyIdea: 'Training is one question, repeated trillions of times: what\'s the next [[token]]?',
   ),
@@ -79,7 +79,7 @@ const narrationS2 = <String, LessonText>{
     intro: [
       'The model guessed wrong. [[Backpropagation]] passes the blame backward to every [[parameter]].',
       'Watch the red pulses travel from the output through every knob. Each gets a tiny arrow: "Turn me a little."',
-      'That arrow is the [[gradient]]. Rumelhart, Hinton, and Williams made backpropagation, the way to find it, famous in 1986. It\'s why AI can learn.',
+      'That arrow is the [[gradient]]. Rumelhart, Hinton, and Williams made [[backpropagation]], the method for finding that arrow, famous in 1986. It\'s why AI can learn.',
     ],
     keyIdea: '[[Backpropagation]] figures out which [[parameters|parameter]] caused the mistake and how much to blame each one.',
   ),
@@ -87,7 +87,7 @@ const narrationS2 = <String, LessonText>{
     intro: [
       'The model now knows which way is downhill. [[Gradient descent]] is walking downhill in the fog, one step at a time.',
       'The [[learning rate]] is your step size. Too small and you crawl; too big and you bounce over the valley.',
-      'Adam, the 2014 optimizer, smooths the path. It keeps a running average of past slopes—like a skier remembering the hill—and of how bumpy they\'ve been, so each knob gets its own step size.',
+      'Adam, the 2014 optimizer, smooths the path. It remembers which way the slope has been pointing, like a skier who knows the hill, and how jumpy each knob\'s slope has been: a knob whose slope keeps swinging wildly takes smaller steps.',
     ],
     keyIdea: '[[Gradient descent]] walks downhill. The [[learning rate]] sets the step size; Adam smooths the walk.',
   ),
@@ -106,7 +106,7 @@ const narrationS2 = <String, LessonText>{
       'Llama 3 405B chewed 15.6 trillion tokens—about 30.84 million H100 [[GPU]]-hours. Even well-tuned, [[GPUs|gpu]] sit at 38–43% of peak.',
       'GPT-3 used about 1,287 megawatt-hours—enough power for 120 U.S. homes for a year. Tap the calculator and watch the days pile up.',
     ],
-    keyIdea: '[[Compute]] is brain-sweat, scaling with [[parameters|parameter]] × [[tokens|token]] × 6. Trained brains are measured in megawatt-hours, not hours.',
+    keyIdea: '[[Compute]] is brain-sweat, scaling with [[parameters|parameter]] × [[tokens|token]] × 6. Training a brain is measured in megawatt-hours of energy, not just hours of time.',
   ),
   's2_parallel': LessonText(
     intro: [
@@ -120,14 +120,14 @@ const narrationS2 = <String, LessonText>{
     intro: [
       'Big training runs don\'t go smoothly. In a 54-day stretch of Llama 3 405B, there were 466 interruptions.',
       '47 were planned. 419 were unexpected, and 58.7% of those were [[GPU]] problems.',
-      'Tap the markers. The loss spikes, then the [[checkpoint]]—the save game—kicks in and the model rewinds.',
+      'Tap the markers on the timeline. In the demo below, the loss spikes, then the [[checkpoint]]—the save game—kicks in and the model rewinds.',
     ],
     keyIdea: 'A [[checkpoint]] is a save game. Even 419 unexpected failures didn\'t stop the model from finishing.',
   ),
   's2_testing': LessonText(
     intro: [
       'Along the way, the model takes [[benchmark]] exams. Same standardized questions every time.',
-      'Drag the slider through training progress. Watch the scores climb.',
+      'Drag the slider through training progress. Watch the wrongness score fall as the model learns.',
       'Then something strange happens at scale. [[Emergent abilities|emergent ability]]—like multi-step arithmetic—switch on.',
     ],
     keyIdea: '[[Benchmarks|benchmark]] track progress. At a certain size, [[emergent abilities|emergent ability]] appear—the model can suddenly do things it couldn\'t before.',
@@ -136,7 +136,7 @@ const narrationS2 = <String, LessonText>{
     intro: [
       'The [[base model]] is a well-read parrot. It finishes any sentence, but it doesn\'t know how to be helpful.',
       '[[Fine-tuning]] is specialist training. Then [[RLHF]]—thumbs up and down—teaches it to answer like a person.',
-      'A 1.3B InstructGPT beat the 175B GPT-3—a model over 100× larger. [[Constitutional AI]] goes further: the model critiques itself using written principles.',
+      'A 1.3B InstructGPT beat the 175B GPT-3—a model over 100× larger. [[Constitutional AI]] takes the training further: instead of waiting for human votes, the model critiques itself using written principles.',
       'Play the rater. Two answers appear—pick the better one.',
     ],
     keyIdea: '[[Fine-tuning]] turns a [[base model]] into an assistant. [[RLHF]] and [[Constitutional AI]] teach helpfulness, not just fluency.',
@@ -152,7 +152,7 @@ const narrationS2 = <String, LessonText>{
   's2_scaling_laws': LessonText(
     intro: [
       'Bigger isn\'t always better. The [[scaling law]] says loss falls smoothly as you add [[parameters|parameter]], data, and [[compute]].',
-      'But there\'s a sweet spot. Chinchilla showed a 70B model on 1.4 trillion tokens beat much bigger models trained on less data.',
+      'But there\'s a sweet spot. Chinchilla, a 2022 DeepMind study, showed a 70B model trained on 1.4 trillion tokens beat much bigger models trained on less data.',
       'The optimal ratio is about 20 [[tokens|token]] per [[parameter]]. Drag the slider and watch the curve find its best point.',
     ],
     keyIdea: 'The [[scaling law]] has a sweet spot. About 20 [[tokens|token]] per [[parameter]] gives the best result for the [[compute]] spent.',
@@ -171,7 +171,7 @@ const narrationS2 = <String, LessonText>{
       '[[Distillation]] is a teacher training a student. A small model learns to imitate a big model\'s output probabilities.',
       '[[Quantization]] is compressing a photo. The numbers get coarser and the model shrinks.',
       'Tap the slider. At 4 bits per number, even a 65B model can be fine-tuned on a single 48 GB [[GPU]].',
-      '[[Mixture of experts]] is a team of specialists. Mixtral 8x7B has 46.7B total, but only 12.9B fire per [[token]]. Tap the router—two of eight experts light up.',
+      '[[Mixture of experts]] is a team of specialists. Mixtral 8x7B has 8 experts of about 7B knobs that share some parts, so 46.7B total, but only 12.9B fire per [[token]]. Tap a word—the router picks two of eight experts light up.',
     ],
     keyIdea: 'You can make a [[model]] cheaper to run with [[distillation]], [[quantization]], or [[Mixture of experts]]. Most of the skill, for much less memory and [[compute]].',
   ),

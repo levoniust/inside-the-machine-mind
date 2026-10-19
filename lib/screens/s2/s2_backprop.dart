@@ -88,7 +88,7 @@ const _labels = [
   'The example: two input numbers. The right answer is 1 ("yes").',
   'Forward pass: each hidden neuron mixes the inputs with its weights.',
   'The output neuron makes its guess.',
-  'Loss: how wrong was it? (−log of the probability given to the right answer)',
+  'Loss: how wrong was it? (bigger when it gave the right answer a smaller chance)',
   'Backward: blame flows to the last layer\'s weights first.',
   'Backward: blame keeps flowing to the first layer\'s weights.',
   'Nudge: every weight moves a little against its blame. Guess again: less wrong!',

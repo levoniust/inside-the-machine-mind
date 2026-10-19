@@ -165,7 +165,7 @@ class _LandscapeState extends State<_Landscape> with SingleTickerProviderStateMi
             key: const ValueKey('descent-momentum'),
             contentPadding: EdgeInsets.zero,
             title: const Text('Momentum (keep some speed between steps)'),
-            subtitle: const Text('This is the idea behind the Adam optimizer.'),
+            subtitle: const Text('This is one half of the Adam optimizer; Adam also gives each knob its own step size.'),
             value: _momentum,
             activeThumbColor: c.violet,
             onChanged: (v) => setState(() => _momentum = v),

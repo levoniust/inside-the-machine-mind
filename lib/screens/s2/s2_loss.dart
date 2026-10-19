@@ -199,7 +199,7 @@ class _Batch extends StatelessWidget {
             ],
           ),
           const SizedBox(height: Gap.s),
-          Text('Example numbers. This one number is what the next step, backpropagation, tries to push down.',
+          Text('Example numbers. This one number is what the next step (backpropagation: tracing who caused the mistake) tries to push down.',
               style: TextStyle(color: c.textDim, fontSize: 12)),
         ],
       ),
