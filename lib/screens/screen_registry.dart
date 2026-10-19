@@ -22,6 +22,7 @@ import 's3/s3_loop.dart';
 import 's3/s3_sampling.dart';
 import 's3/s3_tokenize.dart';
 import 's3/s3_frontier.dart';
+import 's3/s3_timeline.dart';
 import 's3/s3_tiny_model.dart';
 
 /// Lesson id → screen. Add one line per finished lesson screen (keep the list in journey order).
@@ -46,5 +47,6 @@ final Map<String, WidgetBuilder> screenBuilders = {
   's3_loop': (_) => const S3LoopScreen(),
   's3_at_home': (_) => const S3AtHomeScreen(),
   's3_frontier': (_) => const S3FrontierScreen(),
+  's3_timeline': (_) => const S3TimelineScreen(),
   's3_answer': (_) => const S3AnswerScreen(),
 };
