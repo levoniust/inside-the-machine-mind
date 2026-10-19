@@ -50,3 +50,12 @@ Future<void> tapVisible(WidgetTester tester, Finder finder) async {
   await tester.tap(finder.first);
   await tester.pump(const Duration(milliseconds: 50));
 }
+
+/// Scroll the lesson list until [finder] is built and on screen (lists are lazy: off-screen cards don't exist yet).
+Future<void> scrollTo(WidgetTester tester, Finder finder) async {
+  if (finder.evaluate().isEmpty) {
+    await tester.scrollUntilVisible(finder, 250, scrollable: find.byType(Scrollable).first);
+  }
+  await tester.runAsync(() => Scrollable.ensureVisible(tester.element(finder.first), alignment: 0.5));
+  await tester.pump(const Duration(milliseconds: 50));
+}

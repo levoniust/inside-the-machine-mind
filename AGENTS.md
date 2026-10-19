@@ -20,7 +20,7 @@ Inside the Machine Mind is a Flutter (Dart) Android app that teaches how LLMs ar
 - Register the screen: add an import + one line in `lib/screens/screen_registry.dart` (keep journey order).
 
 ## Tests (required for every screen)
-- `test/screens/<lesson_id>_test.dart`, using `pumpApp`, `pumpFrames`, `tapVisible` and `expectNoErrors` from `test/helpers.dart`. **Don't use pumpAndSettle** (looping animations never settle).
+- `test/screens/<lesson_id>_test.dart`, using `pumpApp`, `pumpFrames`, `tapVisible`, `scrollTo` and `expectNoErrors` from `test/helpers.dart`. Lesson lists are lazy: a card further down doesn't exist until scrolled to, so call `scrollTo(tester, finder)` before `expect`ing anything below the first card (`tapVisible` scrolls by itself). **Don't use pumpAndSettle** (looping animations never settle).
 - At least: (1) it renders its main title/text; (2) the main interaction changes what is shown (tap/drag, then expect new text); (3) no errors at `textScale: 1.3` with `brightness: Brightness.light`.
 - To drag a slider: `await tester.drag(find.byKey(...), const Offset(200, 0)); await tester.pump();`
 
