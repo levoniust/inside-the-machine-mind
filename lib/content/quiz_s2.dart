@@ -10,7 +10,7 @@ const quizS2 = <QuizQuestion>[
   ),
   QuizQuestion(
     'Bit chops text into "tokens" — tiny chunks the model reads instead of whole words. Roughly how big is one token?',
-    ['About half a single character', 'About three-quarters of an English word (roughly 4 characters)', 'About one full English word', 'About two full words strung together'],
+    ['About half of a single letter', 'About three-quarters of an English word', 'About one full English word', 'About two whole words joined together'],
     1,
     'A token is a small piece of text — about 4 characters, or roughly three-quarters of a typical English word — so "sky" might fit neatly into one token while a longer word gets split into two or three.',
   ),
@@ -58,7 +58,7 @@ const quizS2 = <QuizQuestion>[
   ),
   QuizQuestion(
     'After "post-training" (the stage where the model learns to be a helpful assistant rather than just a text-completion machine), people were asked to pick the better answer. Which model won, and what was the size gap?',
-    ['A 3.8B-parameter model beat a 65B model by a wide margin', 'A 1.3B-parameter model (InstructGPT) beat a 175B-parameter model (GPT-3) — about 100 times smaller', 'The 175B-parameter model always wins because bigger is smarter', 'A 70B-parameter model tied with a 405B model'],
+    ['A 3.8B model beat a 65B model, about 17× its size', 'A 1.3B model (InstructGPT) beat the 175B GPT-3, over 100× its size', 'The 175B GPT-3 won easily, because bigger models are always smarter', 'A 70B model tied with a 405B model, so size made no difference'],
     1,
     'With human-feedback training (RLHF), people consistently preferred the helpful, well-shaped answers from a 1.3-billion-parameter InstructGPT over the raw text-completion output of 175-billion-parameter GPT-3 — a reminder that a smaller model trained to listen to feedback can outshine a much bigger one.',
   ),

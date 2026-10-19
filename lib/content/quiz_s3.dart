@@ -4,19 +4,19 @@ import '../core/models.dart';
 const quizS3 = <QuizQuestion>[
   QuizQuestion(
     'When you type "Why is the sky blue?" into the chat box, what happens first inside the model?',
-    ['The words are split into smaller chunks called tokens, each given a number', 'Each letter is turned into a sound wave', 'The sentence is translated into 30 different languages', 'The words are sorted alphabetically before processing'],
+    ['The words are split into tokens, and each gets a number', 'Each letter is turned into a sound wave the model can hear', 'The sentence is translated into 30 different languages first', 'The words are sorted into alphabetical order before reading'],
     0,
     'Before the model can "think," it must turn raw text into numbers. Tokenization chops words (or pieces of words) into chunks and assigns each chunk an ID — like a library stamping a call number on every book so it can be found.',
   ),
   QuizQuestion(
     'In the 2-D word map you explored, why does dragging "king" land near "queen"?',
-    ['The model learned that they share a similar meaning, so they sit close in the coordinate space', 'They have the same number of letters', 'They rhyme, so the model groups similar-sounding words together', 'They appear in the same sentence in the training data'],
+    ['The model learned that their meanings are similar, so they sit close', 'Words with the same first letter are always placed near each other', 'They rhyme, so the model groups similar-sounding words together', 'Someone typed a list of royal words into the model by hand'],
     0,
     'An embedding is a set of numbers that captures meaning. Words that mean similar things end up close together — just like a city map where "Paris" is drawn next to "France" because they belong to the same region.',
   ),
   QuizQuestion(
     'In the word-by-word loop, why does the model keep a "KV cache" instead of re-reading every previous word at each step?',
-    ['It saves the previous calculations like sticky notes, so the model doesn\'t have to re-read the whole conversation', 'It encrypts the earlier tokens so no one can see them', 'It stores the answers the model already gave as a reference sheet', 'It compresses the conversation into a single image to save space'],
+    ['It keeps notes on earlier words, so it doesn\'t re-read the whole conversation', 'It locks the earlier tokens away so that nobody else can read them', 'It stores answers it gave other people, to copy them for you later', 'It squeezes the whole conversation into one small picture to save space'],
     0,
     'The KV cache is the model\'s set of "notes so it doesn\'t re-read." Each new word only needs to glance at the cached notes from earlier steps, which is far faster than reprocessing the entire conversation from scratch.',
   ),
@@ -34,7 +34,7 @@ const quizS3 = <QuizQuestion>[
   ),
   QuizQuestion(
     'Why is generating text on a home PC often limited by memory bandwidth rather than raw computing power?',
-    ['The model\'s weights are too large to fit in RAM at all', 'The operating system blocks the GPU to save battery', 'The processor runs out of heat and throttles to protect itself', 'Each new token requires reading almost all the model\'s weights from memory, so speed is roughly memory bandwidth divided by the model\'s size in bytes'],
+    ['The model\'s weights are far too large to fit in any home PC', 'The operating system blocks the graphics card to save battery', 'The processor gets too hot and slows itself down to stay safe', 'Every new token means reading almost all the weights from memory again'],
     3,
     'Think of it like a chef who has to walk to the pantry for every single ingredient. The stove (the chip) is powerful, but the kitchen aisle (memory bandwidth) is the bottleneck — the walk, not the cooking, sets the pace.',
   ),
@@ -46,25 +46,25 @@ const quizS3 = <QuizQuestion>[
   ),
   QuizQuestion(
     'In the "one word at a time" loop, what happens after the model picks a new word?',
-    ['The model generates the entire remaining sentence in one flash', 'The model waits for the user to type the next word before continuing', 'The model discards the new word and starts the sentence over', 'The new word is fed back in, and the model uses it as part of the context to predict the next word'],
+    ['The model writes the entire rest of the answer in one single step', 'The model waits for you to type the next word before it continues', 'The model throws the new word away and starts the sentence over', 'The new word is added to the input, and the model predicts again'],
     3,
     'The model works like a person finishing a sentence one word at a time: it picks a word, reads it back as part of the context, and then decides what should come next. That "feed the new word back in" step is what lets the answer grow coherently, token by token.',
   ),
   QuizQuestion(
     'In 2016, AlphaGo\'s famous "Move 37" against Lee Sedol surprised experts. Why?',
-    ['It was the first move of the game', 'Experts estimated a human would play it only about 1 time in 10,000', 'A human operator chose it for the computer', 'It broke the rules of Go'],
+    ['It was the very first move of the game, played instantly', 'A human would play it only about 1 time in 10,000', 'A human operator secretly chose it for the computer', 'It broke the official rules of Go, but the referee allowed it'],
     1,
     'AlphaGo\'s own estimate said a human had about a 1-in-10,000 chance of playing that move. It looked strange, but it helped win the game, and AlphaGo won the match 4–1.',
   ),
   QuizQuestion(
     'What does a vision-language-action (VLA) model let a robot do?',
-    ['Charge its battery faster', 'See through cameras, understand instructions in words, and turn them into movements', 'Only follow a fixed, pre-programmed path', 'Translate between human languages'],
+    ['Charge its battery much faster by using smarter power settings', 'See, understand spoken or written instructions, and move to do them', 'Only follow a fixed path that an engineer programmed in advance', 'Translate between human languages, but never move its arms'],
     1,
     'VLA models like RT-2 and π0 connect seeing, understanding and acting in one loop, which is how a robot can be told "fold the shirt" and work out the motions itself.',
   ),
   QuizQuestion(
     'Which AI achievement led to the 2024 Nobel Prize in Chemistry?',
-    ['AlphaFold, which predicts the 3-D shape of proteins', 'A chatbot passing a spelling test', 'A chess program beating a world champion', 'A self-driving car crossing a country'],
+    ['AlphaFold, which predicts the 3-D shape of proteins', 'A chatbot passing a difficult school spelling test', 'A chess program beating the human world champion', 'A self-driving car crossing a whole country alone'],
     0,
     'AlphaFold predicts how proteins fold from their sequence. Its creators Demis Hassabis and John Jumper shared the 2024 Nobel Prize in Chemistry (with David Baker), and over 200 million predicted structures are free for scientists to use.',
   ),
