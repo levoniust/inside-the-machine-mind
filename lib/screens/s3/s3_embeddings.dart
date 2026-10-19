@@ -131,7 +131,7 @@ class _WordMapState extends State<_WordMap> with SingleTickerProviderStateMixin 
           child: TermText(
             'Once words are [[embeddings|embedding]] (lists of numbers), the model can do math with meaning: directions '
             'on the map capture ideas like "royal" or "female". In Llama 3 405B each token becomes a list of 16,384 '
-            'numbers, a point in a space with 16,384 directions instead of our 2.',
+            'numbers, a point in a space with 16,384 directions instead of the 2 on our map.',
             style: TextStyle(color: c.text),
           ),
         ),

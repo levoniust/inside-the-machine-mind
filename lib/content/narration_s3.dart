@@ -62,7 +62,7 @@ const narrationS3 = <String, LessonText>{
     intro: [
       'Zoom out. A frontier model lives in a [[datacenter]] — a factory for computing — spread across thousands of [[GPUs|gpu]] on [[NVLink]] express lanes.',
       'Pinch the screen to go from one tiny token to the whole cluster. Watch the token flow through every layer of the stack.',
-      'Some models use [[Mixture of experts]] — a team of specialists where only a few wake for each word. Watch the routing light up.',
+      'Some models use [[Mixture of experts]] — a team of specialists where only a few wake for each token. Watch the routing light up.',
     ],
     keyIdea: 'A frontier model is split across many GPUs in a datacenter, serving huge numbers of people at once; in mixture-of-experts models, only a few experts do the math for each token.',
   ),
@@ -108,7 +108,7 @@ const narrationS3 = <String, LessonText>{
   ),
   's3_answer': LessonText(
     intro: [
-      'And here it is. The answer assembles word by word: sunlight scatters, blue bounces everywhere, and your eyes see blue.',
+      'And here it is. The answer assembles word by word: sunlight scatters, blue scatters in all directions, and your eyes see blue.',
       'Look at the journey map — three sections, real silicon, real math. Your question traveled through all of it to get this sentence.',
       'Hit play for a twenty-second replay. The same kind of math that answered you is folding proteins, forecasting storms, and helping doctors.',
       'And the best part? You asked. You\'re the one holding the phone, curious and wondering — the machine is just the path your question travels.',
