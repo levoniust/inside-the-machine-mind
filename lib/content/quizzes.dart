@@ -34,7 +34,7 @@ const quizzes = <String, List<QuizQuestion>>{
         ['Square roots', 'Matrix multiplication: multiplying rows by columns and adding up', 'Sorting lists', 'Dividing by zero'], 1,
         'Every token passes through giant grids of knobs by matrix multiplication: about one multiply and one add per knob.'),
     QuizQuestion('Why do AI chips like using FP8 or FP4 numbers instead of FP32?',
-        ['They are more exact', 'They take less memory and are faster to move and multiply', 'They look nicer', 'Phones require them'], 1,
+        ['They are more exact', 'Phones require them', 'They look nicer', 'They take less memory and are faster to move and multiply'], 3,
         'Fewer bits per number means a smaller model and faster math. Neural networks tolerate the rounding surprisingly well.'),
     QuizQuestion('Roughly how many GPUs did xAI\'s first Colossus cluster in Memphis start with?',
         ['About 1,000', 'About 10,000', 'About 100,000', 'About 10 million'], 2,
