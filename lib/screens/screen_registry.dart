@@ -16,6 +16,7 @@ import 's1/s1_precision.dart';
 import 's1/s1_rack.dart';
 import 's1/s1_real_sites.dart';
 import 's1/s1_server.dart';
+import 's1/s1_memory_types.dart';
 import 's1/s1_ram.dart';
 import 's1/s1_storage.dart';
 import 's1/s1_too_big.dart';
@@ -108,4 +109,5 @@ final Map<String, WidgetBuilder> screenBuilders = {
   's3_science': (_) => const S3ScienceScreen(),
   's3_answer': (_) => const S3AnswerScreen(),
   's1_ram': (_) => const S1RamScreen(),
+  's1_memory_types': (_) => const S1MemoryTypesScreen(),
 };
