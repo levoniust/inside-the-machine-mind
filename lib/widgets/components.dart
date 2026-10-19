@@ -311,7 +311,7 @@ class StatTile extends StatelessWidget {
           FittedBox(
             fit: BoxFit.scaleDown,
             alignment: Alignment.centerLeft,
-            child: Text(value, style: AppText.mono.copyWith(fontSize: 20, fontWeight: FontWeight.w800, color: color ?? c.text)),
+            child: Text(value, maxLines: 1, softWrap: false, style: AppText.mono.copyWith(fontSize: 20, fontWeight: FontWeight.w800, color: color ?? c.text)),
           ),
         ],
       ),
