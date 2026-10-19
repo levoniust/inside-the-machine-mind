@@ -21,6 +21,7 @@ import 's3/s3_embeddings.dart';
 import 's3/s3_loop.dart';
 import 's3/s3_robots.dart';
 import 's3/s3_sampling.dart';
+import 's3/s3_science.dart';
 import 's3/s3_tokenize.dart';
 import 's3/s3_frontier.dart';
 import 's3/s3_timeline.dart';
@@ -50,5 +51,6 @@ final Map<String, WidgetBuilder> screenBuilders = {
   's3_frontier': (_) => const S3FrontierScreen(),
   's3_timeline': (_) => const S3TimelineScreen(),
   's3_robots': (_) => const S3RobotsScreen(),
+  's3_science': (_) => const S3ScienceScreen(),
   's3_answer': (_) => const S3AnswerScreen(),
 };
