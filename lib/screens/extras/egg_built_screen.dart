@@ -81,6 +81,15 @@ class _EggBuiltScreenState extends State<EggBuiltScreen> {
                     ],
                   ),
                   const SizedBox(height: Gap.xl),
+                  Text('Day two (v1.1)', style: Theme.of(context).textTheme.titleLarge),
+                  const SizedBox(height: Gap.s),
+                  Text(
+                    'After the first version shipped, the team kept going: the writer re-read every lesson as a curious '
+                    '15-year-old and flagged anything confusing, the coding agent gave 12 lessons new interactive extras, '
+                    'and a robot "monkey" tapped and swiped thousands of times at random to hunt for crashes. It found two.',
+                    style: TextStyle(color: c.textDim),
+                  ),
+                  const SizedBox(height: Gap.xl),
                   KeyIdea(
                     'Even the AIs that built this needed checking: the local models drafted plenty of numbers that were '
                     'wrong, and every one was corrected against a real source before it reached you. Always check the source!',
