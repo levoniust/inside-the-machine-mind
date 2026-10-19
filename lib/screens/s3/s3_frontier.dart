@@ -103,7 +103,7 @@ class _ZoomState extends State<_Zoom> with SingleTickerProviderStateMixin {
               ),
               const SizedBox(width: Gap.s),
               Expanded(
-                child: StatTile(label: 'Math per token', value: '~810 B', color: c.amber),
+                child: StatTile(label: 'Math per token', value: '~810 bn', color: c.amber),
               ),
             ],
           ),
