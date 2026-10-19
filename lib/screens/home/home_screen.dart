@@ -322,7 +322,7 @@ class _ChipBoard extends StatelessWidget {
           ],
         ),
         const SizedBox(height: Gap.s),
-        Text('v1.0 · made by machines, for curious humans', style: TextStyle(color: c.textDim, fontSize: 11)),
+        Text('v1.1 · made by machines, for curious humans', style: TextStyle(color: c.textDim, fontSize: 11)),
       ],
     );
   }
