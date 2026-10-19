@@ -331,9 +331,17 @@ class _BitSaysState extends State<BitSays> with SingleTickerProviderStateMixin {
                                 margin: const EdgeInsets.only(right: 4),
                                 decoration: BoxDecoration(shape: BoxShape.circle, color: i == _line ? c.cyan : c.line),
                               ),
-                          const Spacer(),
-                          if (more && !_type.isAnimating)
-                            Text('tap for more', style: TextStyle(color: c.textDim, fontSize: 12)),
+                          // Takes the free space and shortens itself, so narrow bubbles at large text don't overflow.
+                          Expanded(
+                            child: more && !_type.isAnimating
+                                ? Text('tap for more',
+                                    textAlign: TextAlign.right,
+                                    maxLines: 1,
+                                    softWrap: false,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(color: c.textDim, fontSize: 12))
+                                : const SizedBox.shrink(),
+                          ),
                           speaker,
                         ],
                       ),
