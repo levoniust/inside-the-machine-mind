@@ -7,6 +7,7 @@ import '../../content/quizzes.dart';
 import '../../core/progress.dart';
 import '../../widgets/bit.dart';
 import '../../widgets/components.dart';
+import '../extras/finale_screen.dart';
 
 /// Section landing page: lessons as nodes on a glowing circuit path, quiz at the end.
 class SectionHub extends StatelessWidget {
@@ -93,8 +94,19 @@ class SectionHub extends StatelessWidget {
                     onTap: () => openQuiz(context, s.quizId),
                   ),
                   const SizedBox(height: Gap.xl),
-                  if (p.fraction(ids) == 1)
+                  if (p.fraction(ids) == 1) ...[
                     const BitSays(lines: ['You finished this whole section! On to the next part of the journey?'], mood: BitMood.happy),
+                    const SizedBox(height: Gap.m),
+                    FilledButton.icon(
+                      key: const ValueKey('hub-next-section'),
+                      style: FilledButton.styleFrom(backgroundColor: c.section(number < 3 ? number + 1 : 0), foregroundColor: c.bg),
+                      onPressed: () => number < 3
+                          ? Navigator.of(context).pushReplacement(MaterialPageRoute<void>(builder: (_) => SectionHub(number: number + 1)))
+                          : openPage(context, const FinaleScreen(), '/finale'),
+                      icon: Icon(number < 3 ? Icons.arrow_forward : Icons.auto_awesome),
+                      label: Text(number < 3 ? 'Section ${number + 1}: ${sections[number].title}' : 'See the finale'),
+                    ),
+                  ],
                 ],
               ),
             ),

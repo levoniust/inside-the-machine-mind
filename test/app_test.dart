@@ -66,6 +66,18 @@ void main() {
     expect(store.quizScore('quiz_s1'), qs.length);
   });
 
+  testWidgets('a finished section offers the next section', (tester) async {
+    final store = await pumpApp(tester, home: const SectionHub(number: 1));
+    for (final l in sections[0].lessons) {
+      store.markDone(l.id);
+    }
+    await pumpFrames(tester, 3);
+    await tapVisible(tester, find.byKey(const ValueKey('hub-next-section')));
+    await pumpFrames(tester, 10);
+    expect(find.text('How the Mind Grew'), findsWidgets);
+    expectNoErrors(tester);
+  });
+
   test('lesson ids are unique and every lesson has a section', () {
     final ids = allLessons.map((l) => l.id).toList();
     expect(ids.toSet().length, ids.length);
