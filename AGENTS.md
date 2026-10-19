@@ -4,7 +4,7 @@ Inside the Machine Mind is a Flutter (Dart) Android app that teaches how LLMs ar
 
 ## Before you write code
 - Read `lib/screens/s1/s1_storage.dart` and `test/screens/s1_storage_test.dart`. **They are the reference pattern.** Copy their structure.
-- Shared widgets live in `lib/widgets/` (`LessonScaffold`, `DemoCard`, `FactCard`, `KeyIdea`, `LabeledSlider`, `StatTile`, `CompareBars`/`BarItem`, `StepControls`, `SectionTag`, `TermText`, `BitAvatar`/`BitSays`) plus the helpers `humanNumber`, `humanBytes` and `humanSeconds`. Use them; don't reinvent them.
+- Shared widgets live in `lib/widgets/` (`LessonScaffold`, `DemoCard`, `FactCard`, `KeyIdea`, `LabeledSlider`, `StatTile`, `StatGrid` (use it instead of GridView for tiles), `CompareBars`/`BarItem`, `StepControls`, `SectionTag`, `TermText`, `BitAvatar`/`BitSays`) plus the helpers `humanNumber`, `humanBytes` and `humanSeconds`. Use them; don't reinvent them.
 - Colors come only from `AppColors.of(context)` (`c.cyan`, `c.violet`, `c.magenta`, `c.lime`, `c.amber`, `c.red`, `c.text`, `c.textDim`, `c.surface`, `c.surfaceHi`, `c.line`, `c.bg`). Never hard-code colors except inside painters, where you take them from AppColors. Spacing uses `Gap.*`. Monospace numbers use `AppText.mono`.
 
 ## A lesson screen

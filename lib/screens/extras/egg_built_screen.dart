@@ -66,13 +66,8 @@ class _EggBuiltScreenState extends State<EggBuiltScreen> {
                   const SizedBox(height: Gap.xl),
                   Text('By the numbers', style: Theme.of(context).textTheme.titleLarge),
                   const SizedBox(height: Gap.s),
-                  GridView.count(
-                    crossAxisCount: MediaQuery.sizeOf(context).width >= 600 ? 3 : 2,
-                    shrinkWrap: true,
-                    physics: const NeverScrollableScrollPhysics(),
-                    mainAxisSpacing: Gap.s,
-                    crossAxisSpacing: Gap.s,
-                    childAspectRatio: 1.9,
+                  StatGrid(
+                    columns: MediaQuery.sizeOf(context).width >= 600 ? 3 : 2,
                     children: [
                       StatTile(label: 'Build time', value: '${n(['hours'])} h', icon: Icons.timer_outlined),
                       StatTile(

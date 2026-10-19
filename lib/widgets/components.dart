@@ -543,3 +543,33 @@ String humanSeconds(double s) {
   if (s < 3.15e7 * 2) return '${(s / 86400).toStringAsFixed(0)} days';
   return '${humanNumber(s / 3.156e7, digits: 0)} years';
 }
+
+/// Tiles in rows of [columns], each row as tall as its tallest tile (safe at large text sizes,
+/// unlike a fixed-aspect GridView).
+class StatGrid extends StatelessWidget {
+  const StatGrid({super.key, required this.children, this.columns = 2, this.spacing = Gap.s});
+  final List<Widget> children;
+  final int columns;
+  final double spacing;
+
+  @override
+  Widget build(BuildContext context) {
+    final rows = <Widget>[];
+    for (var i = 0; i < children.length; i += columns) {
+      final row = children.sublist(i, math.min(i + columns, children.length));
+      rows.add(IntrinsicHeight(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            for (var j = 0; j < columns; j++) ...[
+              if (j > 0) SizedBox(width: spacing),
+              Expanded(child: j < row.length ? row[j] : const SizedBox.shrink()),
+            ],
+          ],
+        ),
+      ));
+      if (i + columns < children.length) rows.add(SizedBox(height: spacing));
+    }
+    return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: rows);
+  }
+}
