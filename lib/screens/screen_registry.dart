@@ -26,6 +26,7 @@ import 's2/s2_guess.dart';
 import 's2/s2_intro.dart';
 import 's2/s2_library.dart';
 import 's2/s2_loss.dart';
+import 's2/s2_making_small.dart';
 import 's2/s2_big_small.dart';
 import 's2/s2_descent.dart';
 import 's2/s2_memory_budget.dart';
@@ -88,6 +89,7 @@ final Map<String, WidgetBuilder> screenBuilders = {
   's2_testing': (_) => const S2TestingScreen(),
   's2_scaling_laws': (_) => const S2ScalingLawsScreen(),
   's2_big_small': (_) => const S2BigSmallScreen(),
+  's2_making_small': (_) => const S2MakingSmallScreen(),
   's3_tiny_model': (_) => const S3TinyModelScreen(),
   's3_intro': (_) => const S3IntroScreen(),
   's3_tokenize': (_) => const S3TokenizeScreen(),
