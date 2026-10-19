@@ -49,25 +49,28 @@ class S1StorageScreen extends StatelessWidget {
           ),
         ),
         const _RandomAccessDemo(),
-        Row(
-          children: const [
-            Expanded(
-              child: FactCard(
-                value: '~285 MB/s',
-                label: 'Top speed of a big modern [[hard drive]]',
-                factId: 'HW-HDD-SPEED',
+        IntrinsicHeight(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: const [
+              Expanded(
+                child: FactCard(
+                  value: '~285 MB/s',
+                  label: 'Top speed of a big modern [[hard drive]]',
+                  factId: 'HW-HDD-SPEED',
+                ),
               ),
-            ),
-            SizedBox(width: Gap.m),
-            Expanded(
-              child: FactCard(
-                value: '14.8 GB/s',
-                label: 'Top speed of the fastest PCIe 5.0 [[SSD]]',
-                comparison: '50× a hard drive',
-                factId: 'HW-NVME5',
+              SizedBox(width: Gap.m),
+              Expanded(
+                child: FactCard(
+                  value: '14.8 GB/s',
+                  label: 'Top speed of the fastest PCIe 5.0 [[SSD]]',
+                  comparison: '50× a hard drive',
+                  factId: 'HW-NVME5',
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ],
     );
@@ -475,19 +478,15 @@ class _RandomAccessDemoState extends State<_RandomAccessDemo> with SingleTickerP
             ],
           ),
           const SizedBox(height: Gap.m),
+          Text(
+            'Slow motion: 1 s of watching = ${_raMs(_raHddSec)} of seeking',
+            textAlign: TextAlign.center,
+            style: TextStyle(color: c.textDim, fontSize: 12),
+          ),
+          const SizedBox(height: Gap.s),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Expanded(
-                child: FittedBox(
-                  fit: BoxFit.scaleDown,
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Slow motion: 1 s of watching = ${_raMs(_raHddSec)} of seeking',
-                    style: TextStyle(color: c.textDim, fontSize: 12),
-                  ),
-                ),
-              ),
-              const SizedBox(width: Gap.s),
               FilledButton.icon(
                 key: const ValueKey('random-access-start'),
                 onPressed: _start,
