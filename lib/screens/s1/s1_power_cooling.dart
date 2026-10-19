@@ -1,3 +1,5 @@
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 
 import '../../app/theme.dart';
@@ -38,9 +40,41 @@ class _Chains extends StatefulWidget {
   State<_Chains> createState() => _ChainsState();
 }
 
-class _ChainsState extends State<_Chains> {
+class _ChainsState extends State<_Chains> with SingleTickerProviderStateMixin {
   bool _heatSide = false;
   int _sel = 0;
+  bool? _flowPref; // null = follow the system's "reduce motion" setting
+
+  late final AnimationController _t =
+      AnimationController(vsync: this, duration: const Duration(milliseconds: 2600));
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    _applyFlow();
+  }
+
+  @override
+  void dispose() {
+    _t.dispose();
+    super.dispose();
+  }
+
+  bool get _reduceMotion => MediaQuery.maybeDisableAnimationsOf(context) ?? false;
+
+  bool get _flowing => _flowPref ?? !_reduceMotion;
+
+  /// Electricity zips, heat drifts. With reduce-motion the dots stay put (t = 0) unless the
+  /// learner explicitly presses play.
+  void _applyFlow() {
+    if (_t.isAnimating) _t.stop();
+    if (!_flowing) {
+      _t.value = 0;
+      return;
+    }
+    _t.duration = Duration(milliseconds: _heatSide ? 4600 : 2600);
+    _t.repeat();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -60,33 +94,79 @@ class _ChainsState extends State<_Chains> {
             ],
             selected: {_heatSide},
             showSelectedIcon: false,
-            onSelectionChanged: (s) => setState(() {
-              _heatSide = s.first;
-              _sel = 0;
-            }),
+            onSelectionChanged: (s) {
+              setState(() {
+                _heatSide = s.first;
+                _sel = 0;
+              });
+              _applyFlow();
+            },
           ),
           const SizedBox(height: Gap.m),
-          Row(
+          Stack(
             children: [
-              for (var i = 0; i < chain.length; i++) ...[
-                if (i > 0) Icon(Icons.arrow_forward, size: 16, color: col.withValues(alpha: 0.7)),
-                Expanded(
-                  child: GestureDetector(
-                    key: ValueKey('pc-stage-$i'),
-                    onTap: () => setState(() => _sel = i),
-                    child: AnimatedContainer(
-                      duration: const Duration(milliseconds: 200),
-                      padding: const EdgeInsets.symmetric(vertical: Gap.m),
-                      decoration: BoxDecoration(
-                        color: i == _sel ? col.withValues(alpha: 0.25) : c.surfaceHi,
-                        borderRadius: BorderRadius.circular(12),
-                        border: Border.all(color: i == _sel ? col : c.line),
+              Row(
+                children: [
+                  for (var i = 0; i < chain.length; i++) ...[
+                    if (i > 0) Icon(Icons.arrow_forward, size: 16, color: col.withValues(alpha: 0.7)),
+                    Expanded(
+                      child: GestureDetector(
+                        key: ValueKey('pc-stage-$i'),
+                        onTap: () => setState(() => _sel = i),
+                        child: AnimatedContainer(
+                          duration: const Duration(milliseconds: 200),
+                          padding: const EdgeInsets.symmetric(vertical: Gap.m),
+                          decoration: BoxDecoration(
+                            color: i == _sel ? col.withValues(alpha: 0.25) : c.surfaceHi,
+                            borderRadius: BorderRadius.circular(12),
+                            border: Border.all(color: i == _sel ? col : c.line),
+                          ),
+                          child: Icon(chain[i].$1, color: i == _sel ? col : c.textDim),
+                        ),
                       ),
-                      child: Icon(chain[i].$1, color: i == _sel ? col : c.textDim),
+                    ),
+                  ],
+                ],
+              ),
+              Positioned.fill(
+                child: IgnorePointer(
+                  child: Semantics(
+                    label: _heatSide
+                        ? 'Red heat blobs drifting from left to right along the heat chain, from chips to cooling towers'
+                        : 'Amber electricity dots flowing from left to right along the power chain, from the grid to the racks',
+                    child: AnimatedBuilder(
+                      animation: _t,
+                      builder: (_, _) => CustomPaint(
+                        painter: _FlowPainter(t: _t.value, color: col, heat: _heatSide),
+                      ),
                     ),
                   ),
                 ),
-              ],
+              ),
+            ],
+          ),
+          const SizedBox(height: Gap.s),
+          Row(
+            children: [
+              Expanded(
+                child: Text(
+                  _heatSide ? 'heat blobs drift out →' : 'power sparks zip in →',
+                  key: const ValueKey('pc-flow-caption'),
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(color: col, fontSize: 12, fontWeight: FontWeight.w600),
+                ),
+              ),
+              IconButton(
+                key: const ValueKey('pc-flow-toggle'),
+                tooltip: _flowing ? 'Pause the flow' : 'Play the flow',
+                visualDensity: VisualDensity.compact,
+                iconSize: 20,
+                onPressed: () {
+                  setState(() => _flowPref = !_flowing);
+                  _applyFlow();
+                },
+                icon: Icon(_flowing ? Icons.pause : Icons.play_arrow, color: col),
+              ),
             ],
           ),
           const SizedBox(height: Gap.m),
@@ -103,6 +183,41 @@ class _ChainsState extends State<_Chains> {
       ),
     );
   }
+}
+
+/// Particles flowing left→right over the stage chain: small sharp sparks for electricity,
+/// bigger wobbling blobs for heat. Purely decorative drawing; the [Semantics] label around it
+/// says what it shows.
+class _FlowPainter extends CustomPainter {
+  _FlowPainter({required this.t, required this.color, required this.heat});
+  final double t; // 0..1, one trip across the chain
+  final Color color;
+  final bool heat;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final cy = size.height / 2;
+    final n = heat ? 5 : 7;
+    final r = heat ? 3.6 : 2.2;
+    final fade = size.width * 0.08; // fade at the ends so wrapping doesn't pop
+    for (var i = 0; i < n; i++) {
+      final phase = (t + i / n) % 1.0;
+      final x = phase * size.width;
+      final a = (math.min(x, size.width - x) / fade).clamp(0.0, 1.0);
+      if (a <= 0) continue;
+      // Two lanes above and below the middle so the dots don't sit on the stage icons.
+      var y = cy + (i.isEven ? -1 : 1) * size.height * 0.24;
+      if (heat) y += math.sin((phase * 3 + t) * 2 * math.pi) * size.height * 0.06;
+      final glow = Paint()
+        ..color = color.withValues(alpha: (heat ? 0.22 : 0.3) * a)
+        ..maskFilter = MaskFilter.blur(BlurStyle.normal, heat ? 5 : 3);
+      canvas.drawCircle(Offset(x, y), r * (heat ? 1.8 : 2.4), glow);
+      canvas.drawCircle(Offset(x, y), r, Paint()..color = color.withValues(alpha: (heat ? 0.55 : 0.9) * a));
+    }
+  }
+
+  @override
+  bool shouldRepaint(_FlowPainter old) => old.t != t || old.color != color || old.heat != heat;
 }
 
 class _Pue extends StatefulWidget {
