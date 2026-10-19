@@ -420,6 +420,8 @@ class _GridPainter extends CustomPainter {
     final origin = Offset((size.width - s) / 2, (size.height - s) / 2);
     final cell = s * 0.98 / _grid;
     final start = origin;
+    // Empty grid background so an unfilled grid is still visible.
+    canvas.drawRect(Rect.fromLTWH(start.dx, start.dy, cell * _grid, cell * _grid), Paint()..color = c.surfaceHi);
     // Fill cells in row-major order, up to [cells].
     for (var i = 0; i < cells; i++) {
       final y = i ~/ _grid;
