@@ -79,7 +79,7 @@ const narrationS2 = <String, LessonText>{
     intro: [
       'The model guessed wrong. [[Backpropagation]] passes the blame backward to every [[parameter]].',
       'Watch the red pulses travel from the output through every knob. Each gets a tiny arrow: "Turn me a little."',
-      'That arrow is the [[gradient]]. Rumelhart, Hinton, and Williams published this in 1986. It\'s why AI can learn.',
+      'That arrow is the [[gradient]]. Rumelhart, Hinton, and Williams made it famous in 1986. It\'s why AI can learn.',
     ],
     keyIdea: '[[Backpropagation]] figures out which [[parameters|parameter]] caused the mistake and how much to blame each one.',
   ),
@@ -87,7 +87,7 @@ const narrationS2 = <String, LessonText>{
     intro: [
       'The model now knows which way is downhill. [[Gradient descent]] is walking downhill in the fog, one step at a time.',
       'The [[learning rate]] is your step size. Too small and you crawl; too big and you bounce over the valley.',
-      'Adam, the 2014 optimizer, smooths the path. It keeps a running average of past steps—like a skier remembering the slope.',
+      'Adam, the 2014 optimizer, smooths the path. It keeps a running average of past slopes—like a skier remembering the hill.',
     ],
     keyIdea: '[[Gradient descent]] walks downhill. The [[learning rate]] sets the step size; Adam smooths the walk.',
   ),
@@ -103,7 +103,7 @@ const narrationS2 = <String, LessonText>{
     intro: [
       'You trained a tiny brain on a few hundred dots. Now imagine doing that trillions of times.',
       'The formula: [[Compute]] ≈ 6 × [[parameters|parameter]] × [[tokens|token]]. GPT-3 ran about 3.14 × 10²³ [[FLOP]]s.',
-      'Llama 3 405B chewed 15.6 trillion tokens—about 30.84 million [[GPU]]-hours. Even well-tuned, [[GPUs|gpu]] sit at 38–43% of peak.',
+      'Llama 3 405B chewed 15.6 trillion tokens—about 30.84 million H100 [[GPU]]-hours. Even well-tuned, [[GPUs|gpu]] sit at 38–43% of peak.',
       'GPT-3 used about 1,287 megawatt-hours—enough power for 120 U.S. homes for a year. Tap the calculator and watch the days pile up.',
     ],
     keyIdea: '[[Compute]] is brain-sweat, scaling with [[parameters|parameter]] × [[tokens|token]] × 6. Trained brains are measured in megawatt-hours, not hours.',

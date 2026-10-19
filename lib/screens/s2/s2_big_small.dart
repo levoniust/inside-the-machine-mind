@@ -148,8 +148,8 @@ class _S2BigSmallScreenState extends State<S2BigSmallScreen> with SingleTickerPr
               ),
               const SizedBox(height: Gap.s),
               Text(
-                'Speed and knowledge are rough, relative illustrations, not benchmark results. Frontier labs don\'t '
-                'publish their model sizes.',
+                'Speed and knowledge are rough, relative illustrations, not benchmark results. The newest frontier models\' sizes '
+                'often aren\'t published.',
                 style: TextStyle(color: c.textDim, fontSize: 12),
               ),
             ],

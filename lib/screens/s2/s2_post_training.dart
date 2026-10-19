@@ -196,7 +196,7 @@ class _RaterDemoState extends State<_RaterDemo> {
           Row(
             children: [
               Expanded(
-                child: Text('Helpfulness: ${(_helpfulness * 100).round()}%',
+                child: Text('Helpfulness (illustration): ${(_helpfulness * 100).round()}%',
                     style: AppText.mono.copyWith(color: accent, fontSize: 14)),
               ),
               FilledButton(
@@ -269,7 +269,7 @@ class _FeedbackBar extends StatelessWidget {
           Expanded(
             child: Text(
                 correct
-                    ? 'Good pick! This is how [[RLHF]] teaches a model: humans (or [[Constitutional AI]] principles) reward the better answer.'
+                    ? 'Good pick! This is how [[RLHF]] teaches a model: humans (or AI feedback guided by [[Constitutional AI]] principles) reward the better answer.'
                     : 'Not quite — the other answer was more helpful. That feedback is what trains the model.',
                 style: const TextStyle(fontSize: 13)),
           ),
