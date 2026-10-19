@@ -3,6 +3,7 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 
 import '../../app/theme.dart';
+import '../../widgets/bit.dart';
 import '../../widgets/components.dart';
 import '../../widgets/lesson_scaffold.dart';
 
@@ -29,6 +30,7 @@ class _S2BigSmallScreenState extends State<S2BigSmallScreen> with SingleTickerPr
   late final AnimationController _radarAnim = AnimationController(
     vsync: this,
     duration: const Duration(milliseconds: 400),
+    value: 1, // show the radar immediately (also when animations are off)
   );
 
   @override
@@ -214,12 +216,7 @@ class _ModelVisual extends StatelessWidget {
       children: [
         AspectRatio(
           aspectRatio: 1.0,
-          child: Semantics(
-            label: 'Visual of a ${size < 0.5 ? 'tiny' : 'giant'} model',
-            child: CustomPaint(
-              painter: _ModelPainter(size: size, color: color, highlighted: isHighlighted, colors: c),
-            ),
-          ),
+          child: Center(child: BitAvatar(size: 40 + 100 * size, mood: isHighlighted ? BitMood.happy : BitMood.idle)),
         ),
         const SizedBox(height: Gap.s),
         Text(
@@ -233,51 +230,6 @@ class _ModelVisual extends StatelessWidget {
       ],
     );
   }
-}
-
-class _ModelPainter extends CustomPainter {
-  _ModelPainter({required this.size, required this.color, required this.highlighted, required this.colors});
-  final double size;
-  final Color color;
-  final bool highlighted;
-  final AppColors colors;
-
-  @override
-  void paint(Canvas canvas, Size sz) {
-    final s = sz.shortestSide;
-    final center = Offset(sz.width / 2, sz.height / 2);
-    final r = s * 0.4 * size;
-
-    // Glow if highlighted
-    if (highlighted) {
-      canvas.drawCircle(
-        center,
-        r * 1.2,
-        Paint()
-          ..color = color.withValues(alpha: 0.2)
-          ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 10),
-      );
-    }
-
-    // Body
-    canvas.drawCircle(center, r, Paint()..color = color.withValues(alpha: 0.8));
-
-    // Inner core
-    canvas.drawCircle(center, r * 0.4, Paint()..color = colors.surface);
-
-    // Neurons/Dots
-    final rnd = math.Random((size * 1000).toInt());
-    final dotCount = (size * 10).toInt().clamp(3, 20);
-    for (var i = 0; i < dotCount; i++) {
-      final angle = rnd.nextDouble() * math.pi * 2;
-      final dist = rnd.nextDouble() * r * 0.8;
-      final pos = center + Offset(math.cos(angle), math.sin(angle)) * dist;
-      canvas.drawCircle(pos, r * 0.05, Paint()..color = color);
-    }
-  }
-
-  @override
-  bool shouldRepaint(_ModelPainter old) => old.size != size || old.highlighted != highlighted || old.color != color;
 }
 
 class _RadarPainter extends CustomPainter {
