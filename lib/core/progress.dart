@@ -27,7 +27,8 @@ class ProgressStore extends ChangeNotifier {
     try {
       final p = await SharedPreferences.getInstance();
       return ProgressStore(p).._read();
-    } catch (_) {
+    } catch (e) {
+      debugPrint('ProgressStore: storage unavailable, keeping progress in memory: $e');
       return ProgressStore();
     }
   }

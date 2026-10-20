@@ -221,8 +221,9 @@ class _GpuPainter extends CustomPainter {
   bool shouldRepaint(_GpuPainter old) => (old.t * 10).floor() != (t * 10).floor();
 }
 
-/// "Showdown" demo: fill a 64×64 grid. The CPU fills a few cells at a time;
-/// the GPU fills whole blocks at once. An illustration, not real data.
+/// "Showdown" demo: fill a 64×64 grid, one "swing" (step) at a time. The CPU fills [cpuPerSwing] cells per
+/// swing, row by row; the GPU fills one whole block per swing, in exactly the outlined squares. The race ends
+/// when the GPU is done. An illustration, not real data.
 class _Showdown extends StatefulWidget {
   const _Showdown();
 
@@ -230,30 +231,26 @@ class _Showdown extends StatefulWidget {
   State<_Showdown> createState() => _ShowdownState();
 }
 
+/// GPU block sizes on the slider (left to right: smaller to bigger blocks, so fewer swings).
+const List<int> blockSizes = [8, 16, 32];
+
+/// Cells the CPU fills per swing: a few cores, a few cells.
+const int cpuPerSwing = 4;
+
+/// Swings needed to fill the whole grid.
+int gpuSwings(int block) => _total ~/ (block * block);
+const int cpuSwings = _total ~/ cpuPerSwing;
+
 class _ShowdownState extends State<_Showdown> with SingleTickerProviderStateMixin {
-  // The GPU finishes the whole grid in 10 simulated seconds.
-  static const double raceDuration = 10.0;
-  // The CPU is ~100× slower, so it only gets a few percent done in that time.
-  static const double cpuFractionOfGpu = 1.0 / 100;
-  // GPU block size is user-controlled (whole blocks at once).
-  static const double minBlock = 2;
-  static const double maxBlock = 8;
+  static const swingMs = 150;
 
-  double _block = 4;
-  bool _running = false;
+  int _size = 0; // index into blockSizes
+  int _swings = 0; // swings done so far in this race
 
-  late final AnimationController _race = AnimationController(
-    vsync: this,
-    duration: const Duration(seconds: 10),
-  )..addListener(_onTick);
+  int get _block => blockSizes[_size];
+  int get _goal => gpuSwings(_block);
 
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    if (MediaQuery.maybeDisableAnimationsOf(context) ?? false) {
-      _race.stop();
-    }
-  }
+  late final AnimationController _race = AnimationController(vsync: this)..addListener(_onTick);
 
   @override
   void dispose() {
@@ -262,101 +259,109 @@ class _ShowdownState extends State<_Showdown> with SingleTickerProviderStateMixi
   }
 
   void _onTick() {
-    final v = _race.value.clamp(0.0, 1.0);
-    setState(() {
-      _gpuCells = (_total * v).toInt();
-      _cpuCells = (_total * cpuFractionOfGpu * v).toInt();
-      _elapsed = v * raceDuration;
-      if (v >= 1.0) _running = false;
-    });
+    final n = (_race.value * _goal).floor().clamp(0, _goal);
+    if (n != _swings || _race.isCompleted) setState(() => _swings = n);
   }
-
-  int _gpuCells = 0;
-  int _cpuCells = 0;
-  double _elapsed = 0;
 
   void _start() {
-    setState(() {
-      _gpuCells = 0;
-      _cpuCells = 0;
-      _elapsed = 0;
-      _running = true;
-    });
-    _race.forward(from: 0);
+    if (_swings >= _goal) _swings = 0;
+    if (MediaQuery.maybeDisableAnimationsOf(context) ?? false) {
+      _race.value = 1; // reduce motion: show the finish straight away
+      setState(() => _swings = _goal);
+      return;
+    }
+    _race.duration = Duration(milliseconds: swingMs * _goal);
+    _race.forward(from: _swings / _goal);
+    setState(() {});
   }
 
-  void _stop() {
-    setState(() => _running = false);
+  void _pause() {
     _race.stop();
+    setState(() {});
+  }
+
+  void _setSize(int i) {
+    if (i == _size) return;
+    _race.stop();
+    _race.value = 0;
+    setState(() {
+      _size = i;
+      _swings = 0; // a new block size is a new race, so the grids always match the setting
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     final c = AppColors.of(context);
     final accent = c.section(1);
-    final cpuDone = _cpuCells >= _total;
-    final gpuDone = _gpuCells >= _total;
+    final running = _race.isAnimating;
+    final finished = _swings >= _goal;
+    final cpuCells = math.min(_swings * cpuPerSwing, _total);
+    final gpuCells = _swings * _block * _block;
     return DemoCard(
       title: 'Showdown: fill a 64×64 grid',
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Text('Same job for both: fill all 4,096 cells. The CPU works a few at a time; the GPU works in whole blocks. (An illustration, not real data.)',
+          Text(
+              'Same job for both: fill all 4,096 cells. Each swing, the CPU fills $cpuPerSwing cells; the GPU fills '
+              'one whole $_block×$_block block. (An illustration, not real data.)',
               style: TextStyle(color: c.textDim)),
           const SizedBox(height: Gap.l),
           Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Expanded(
-                child: _GridPanel(
-                  label: 'CPU',
-                  color: c.amber,
-                  cells: _cpuCells,
-                  done: cpuDone,
-                ),
+                child: _GridPanel(key: const ValueKey('showdown-cpu'), label: 'CPU', color: c.amber, cells: cpuCells),
               ),
-              SizedBox(width: Gap.m),
+              const SizedBox(width: Gap.m),
               Expanded(
                 child: _GridPanel(
-                  label: 'GPU',
-                  color: accent,
-                  cells: _gpuCells,
-                  done: gpuDone,
-                  block: _block.toInt(),
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(height: Gap.l),
-          Row(
-            children: [
-              Expanded(
-                child: Text('⏱ ${_elapsed.toStringAsFixed(1)} s',
-                    style: AppText.mono.copyWith(color: c.textDim, fontSize: 16)),
-              ),
-              FilledButton.icon(
-                key: const ValueKey('showdown-start'),
-                onPressed: _running ? _stop : _start,
-                icon: Icon(_race.isCompleted ? Icons.replay : (_running ? Icons.pause : Icons.play_arrow)),
-                label: Text(_race.isCompleted ? 'Race again' : (_running ? 'Pause' : 'Showdown')),
+                    key: const ValueKey('showdown-gpu'), label: 'GPU', color: accent, cells: gpuCells, block: _block),
               ),
             ],
           ),
           const SizedBox(height: Gap.m),
+          Row(
+            children: [
+              Expanded(
+                child: Text('Swing $_swings', key: const ValueKey('showdown-swings'),
+                    style: AppText.mono.copyWith(color: c.textDim, fontSize: 16)),
+              ),
+              FilledButton.icon(
+                key: const ValueKey('showdown-start'),
+                onPressed: running ? _pause : _start,
+                icon: Icon(finished ? Icons.replay : (running ? Icons.pause : Icons.play_arrow)),
+                label: Text(finished ? 'Race again' : (running ? 'Pause' : (_swings > 0 ? 'Resume' : 'Showdown'))),
+              ),
+            ],
+          ),
+          if (finished) ...[
+            const SizedBox(height: Gap.s),
+            Text(
+              'GPU done in $_goal swings. The CPU got ${(cpuCells / _total * 100).toStringAsFixed(cpuCells * 100 < _total * 10 ? 1 : 0)}% '
+              'done and needs ${cpuSwings - _swings} more swings: ${cpuSwings ~/ _goal}× longer.',
+              key: const ValueKey('showdown-result'),
+              style: TextStyle(color: accent, fontWeight: FontWeight.w600),
+            ),
+          ],
+          const SizedBox(height: Gap.m),
           LabeledSlider(
             key: const ValueKey('gpu-block-slider'),
             label: 'GPU block size (cells filled per swing)',
-            value: _block,
-            min: minBlock,
-            max: maxBlock,
-            divisions: (maxBlock - minBlock).toInt(),
+            value: _size.toDouble(),
+            min: 0,
+            max: (blockSizes.length - 1).toDouble(),
+            divisions: blockSizes.length - 1,
             color: accent,
-            format: (v) => '${v.toInt()}×${v.toInt()} = ${(v.toInt() * v.toInt()).toString()} cells',
-            onChanged: (v) {
-              setState(() => _block = v);
+            format: (v) {
+              final b = blockSizes[v.round()];
+              return '$b×$b = ${b * b} cells';
             },
+            onChanged: (v) => _setSize(v.round()),
           ),
           const SizedBox(height: Gap.xs),
-          Text('Bigger blocks = the GPU finishes in fewer swings.',
+          Text('Bigger blocks = the GPU finishes in fewer swings. Real GPUs fill thousands of cells at once.',
               style: TextStyle(color: c.textDim, fontSize: 12)),
         ],
       ),
@@ -365,23 +370,19 @@ class _ShowdownState extends State<_Showdown> with SingleTickerProviderStateMixi
 }
 
 class _GridPanel extends StatelessWidget {
-  const _GridPanel({
-    required this.label,
-    required this.color,
-    required this.cells,
-    required this.done,
-    this.block = 1,
-  });
+  const _GridPanel({super.key, required this.label, required this.color, required this.cells, this.block});
   final String label;
   final Color color;
   final int cells;
-  final bool done;
-  final int block;
+
+  /// Null for the CPU (fills row by row); the block size for the GPU (fills block by block).
+  final int? block;
 
   @override
   Widget build(BuildContext context) {
     final c = AppColors.of(context);
-    final pct = (cells / _total) * 100;
+    final done = cells >= _total;
+    final pct = cells / _total * 100;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -389,7 +390,7 @@ class _GridPanel extends StatelessWidget {
           children: [
             Text(label, style: const TextStyle(fontWeight: FontWeight.w700)),
             const SizedBox(width: Gap.s),
-            Text(done ? 'done' : '${pct.toStringAsFixed(0)}%',
+            Text(done ? 'done' : '${pct.toStringAsFixed(pct > 0 && pct < 10 ? 1 : 0)}%',
                 style: AppText.mono.copyWith(fontSize: 13, color: done ? color : c.textDim)),
           ],
         ),
@@ -398,9 +399,7 @@ class _GridPanel extends StatelessWidget {
           label: '$label grid: $cells of $_total cells filled${done ? ', complete' : ''}',
           child: AspectRatio(
             aspectRatio: 1,
-            child: CustomPaint(
-              painter: _GridPainter(cells, block, color, c),
-            ),
+            child: CustomPaint(painter: _GridPainter(cells, block, color, c)),
           ),
         ),
       ],
@@ -411,45 +410,42 @@ class _GridPanel extends StatelessWidget {
 class _GridPainter extends CustomPainter {
   _GridPainter(this.cells, this.block, this.color, this.c);
   final int cells;
-  final int block;
+  final int? block;
   final Color color;
   final AppColors c;
 
   @override
   void paint(Canvas canvas, Size size) {
     final s = size.shortestSide;
-    final origin = Offset((size.width - s) / 2, (size.height - s) / 2);
-    final cell = s * 0.98 / _grid;
-    final start = origin;
-    // Empty grid background so an unfilled grid is still visible.
-    canvas.drawRect(Rect.fromLTWH(start.dx, start.dy, cell * _grid, cell * _grid), Paint()..color = c.surfaceHi);
-    // Fill cells in row-major order, up to [cells].
-    for (var i = 0; i < cells; i++) {
-      final y = i ~/ _grid;
-      final x = i % _grid;
-      final rect = Rect.fromLTWH(start.dx + x * cell, start.dy + y * cell, cell, cell);
-      canvas.drawRect(rect, Paint()..color = color);
+    final o = Offset((size.width - s) / 2, (size.height - s) / 2);
+    final cell = s / _grid;
+    canvas.drawRect(o & Size(s, s), Paint()..color = c.surfaceHi);
+    final fill = Paint()..color = color;
+    final b = block;
+    if (b == null) {
+      // CPU: row by row. Full rows, then the part of the next row.
+      final rows = cells ~/ _grid, rest = cells % _grid;
+      if (rows > 0) canvas.drawRect(Rect.fromLTWH(o.dx, o.dy, s, rows * cell), fill);
+      if (rest > 0) canvas.drawRect(Rect.fromLTWH(o.dx, o.dy + rows * cell, rest * cell, cell), fill);
+      return;
     }
-    // For the GPU, draw block outlines to show it fills whole blocks at once.
-    if (block > 1) {
-      final stroke = Paint()
-        ..style = PaintingStyle.stroke
-        ..strokeWidth = 1.0
-        ..color = c.textDim.withValues(alpha: 0.4);
-      for (var y = 0; y < _grid; y += block) {
-        for (var x = 0; x < _grid; x += block) {
-          final w = (math.min(x + block, _grid) - x) * cell;
-          final h = (math.min(y + block, _grid) - y) * cell;
-          canvas.drawRect(
-            Rect.fromLTWH(start.dx + x * cell, start.dy + y * cell, w, h),
-            stroke,
-          );
-        }
+    // GPU: whole blocks, left to right and top to bottom, exactly inside the outlines.
+    final perRow = _grid ~/ b;
+    final blocks = cells ~/ (b * b);
+    for (var i = 0; i < blocks; i++) {
+      canvas.drawRect(Rect.fromLTWH(o.dx + (i % perRow) * b * cell, o.dy + (i ~/ perRow) * b * cell, b * cell, b * cell), fill);
+    }
+    final stroke = Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1
+      ..color = c.textDim.withValues(alpha: 0.5);
+    for (var y = 0; y < perRow; y++) {
+      for (var x = 0; x < perRow; x++) {
+        canvas.drawRect(Rect.fromLTWH(o.dx + x * b * cell, o.dy + y * b * cell, b * cell, b * cell), stroke);
       }
     }
   }
 
   @override
-  bool shouldRepaint(_GridPainter old) =>
-      old.cells != cells || old.block != block || old.color != color;
+  bool shouldRepaint(_GridPainter old) => old.cells != cells || old.block != block || old.color != color;
 }
