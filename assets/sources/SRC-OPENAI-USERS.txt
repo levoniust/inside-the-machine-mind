@@ -1,0 +1,306 @@
+SOURCE COPY — SRC-OPENAI-USERS
+Retrieved 2026-10-21 for Inside the Machine Mind (offline reference copy; excerpt of the original, formatting simplified).
+Original URL: https://openai.com/index/the-work-now-within-reach/
+Retrieved via proxy: Wayback Machine snapshot https://web.archive.org/web/20260908154248id_/https://openai.com/index/the-work-now-within-reach/ (original host returns 403 to direct fetch); text-based copy
+Page/document title: The Work Now Within Reach | OpenAI
+
+------------------------------------------------------------------------
+
+Skip to main content
+
+[](/)
+
+  * [Research](/research/index/)
+  * Products
+  * [Business](/business/)
+  * [Developers](/api/)
+  * [Company](/about/)
+  * [Foundation(opens in a new window)](https://openaifoundation.org)
+
+Log in[Try ChatGPT(opens in a new window)](https://chatgpt.com/)
+
+  * Research
+  * Products
+  * Business
+  * Developers
+  * Company
+  * [Foundation(opens in a new window)](https://openaifoundation.org)
+
+[Try ChatGPT(opens in a new window)](https://chatgpt.com/)Login
+
+OpenAI
+
+September 8, 2026
+
+[Company](/news/company-announcements/)
+
+# The Work Now Within Reach
+
+By Sarah Friar
+
+Loading…
+
+Share
+
+Consumer and enterprise strengthen each other
+
+  * Consumer and enterprise strengthen each other
+  * More work becomes worth doing
+  * Compute that delivers better value
+  * Why these advantages compound
+  * Previous blogs from Sarah Friar:
+
+  * Consumer and enterprise strengthen each other
+  * More work becomes worth doing
+  * Compute that delivers better value
+  * Why these advantages compound
+  * Previous blogs from Sarah Friar:
+
+AI is expanding what people and businesses can achieve. Ideas once held back by time, cost, or access to
+expertise are becoming practical to pursue. That opens the door to breakthroughs in human achievement, to new
+businesses, new markets, and new possibilities. OpenAI is built to help realize these ambitions.
+
+[GPT‑6 Astra⁠](https://openai.com/index/gpt-6-astra/) is a major step forward in AI capability. It is the
+world’s most intelligent and aligned model, and is state-of-the-art in areas such as computer use, browsing,
+software engineering, cybersecurity, science, and professional work.
+
+OpenAI is built to turn this research progress into broad benefit for people and organizations around the
+world. Our broad reach across both consumer and enterprise means new capabilities have a direct route to
+customers through products they already use. And our full stack compute strategy gives us greater control over
+the capacity, performance, and the cost of delivering that intelligence.
+
+These advantages compound. Better models open up new work. More efficient compute makes that work affordable
+at a greater scale. Revenue from growing adoption funds further research and infrastructure, strengthening our
+ability to pursue the next breakthrough and bring it to people everywhere.
+
+## Consumer and enterprise strengthen each other
+
+Our products reach [more than one billion weekly active users⁠](https://openai.com/index/dali-rajic-chief-
+revenue-officer/) and 2.5 million businesses. Every research advance improves ChatGPT, ChatGPT Work, Codex,
+and applications built on our API. One investment in model research supports many products and their
+diversified revenue streams.
+
+People who know ChatGPT at home bring that familiarity to work. Enterprise deployments give them tools suited
+to complex work and the requirements of their organization. Experience at work can then change what they
+expect from AI in their personal lives. Developers extend our reach further by building applications for needs
+we would not have identified ourselves. And over time we expect there to be a continuous blurring between
+these traditionally more distinct segments as our agentic products get to know you better as a person but at
+work and in your personal life.
+
+Individual use and enterprise deployments expand over time. In our [study of people on individual ChatGPT
+plans⁠](https://openai.com/index/how-chatgpt-adoption-has-expanded/), daily message volume was roughly 50%
+higher six months after signup than in the first month, and people had tried roughly twice as many distinct
+tasks.
+
+Our business model lets us earn revenue as that use grows. Free access, supported by advertising, helps people
+discover where AI is useful. Subscriptions and usage-based offerings let customers spend more as they find
+more value.
+
+## More work becomes worth doing
+
+Increasing model capability expands what customers can afford to do. A business can fix a process that once
+demanded too much specialist time or enter a market it could not previously serve profitably.
+
+We see this in the work of our own team. A recent [update from our research
+team⁠](https://openai.com/index/research-acceleration-view-inside-openai/) shows how researchers are
+contributing code faster and running more experiments while delegating increasingly complex tasks to agents.
+Teams are leveraging agents to resolve infrastructure problems that once required specialist support. The
+research organization now uses 3.1 agent-workdays of effort for every workday of human labor.
+
+People still set research priorities and judge results, but agents give them more capacity to pursue promising
+ideas. For OpenAI, that work can help improve the models and the infrastructure that our customers depend on.
+
+As AI expands human capability, it opens a market far beyond the work we do today. More people can pursue
+their biggest ambitions, make new discoveries, and build things that improve lives for generations to come.
+
+Customer stories
+
+1 of 5
+
+> **More than 40 diagnoses.** AI-assisted research helped specialists find answers in previously unresolved
+> rare disease cases.
+
+—[Boston Children’s Hospital⁠](https://openai.com/index/boston-childrens-hospital/)
+
+> **Making AI help available to millions of users.** Replit’s Free Mode lets people explore ideas and plan
+> software without consuming their usage allowance.
+
+—[Replit⁠](https://openai.com/index/replit/)
+
+> **1M+ conversation minutes a month.** AI agents support car buying and selling, from comparing vehicles to
+> booking test drives and inspections.
+
+—[Cars24⁠](https://openai.com/index/cars24/)
+
+> **65% autonomous resolution.** CareX resolves customer service interactions across supported workflows,
+> including billing, subscriptions, and account services.
+
+—[Circles⁠](https://openai.com/index/circles/)
+
+> **Speeding Analysis from****two days to about 30 minutes.** Its Central Bank Speech Analyst cut the time
+> needed for macroeconomic scenario analysis.
+
+—[Balyasny Asset Management⁠](https://openai.com/index/balyasny-asset-management/)
+
+  * Boston Children’s Hospital
+  * Replit
+  * Cars24
+  * Circles
+  * Balyasny Asset Management
+
+## Compute that delivers better value
+
+Serving expanding demand requires both capacity and better economics. Our [compute
+strategy⁠](https://openai.com/index/the-full-stack-behind-abundant-intelligence/) spans data centers, chips,
+software, models, and products. We manage those choices together, continually seeking the strongest
+combination of capability, speed, reliability, efficiency, and cost for each workload.
+
+Training a frontier model and running a fast, interactive agent place different demands on infrastructure. We
+build where designing components together improves performance or cost, and partner where others offer the
+strongest option. This gives us the flexibility to choose the best system for each task.
+
+GPT‑5.6 Sol helped improve our production serving software, [reducing end-to-end serving costs by
+20%⁠](https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency/). Additional improvements increased
+token-generation efficiency by more than 15 percent, allowing the system to produce more output from its
+compute.
+
+Jalapeño, our first custom inference chip, extends that work into hardware. In [InferenceX
+tests⁠](https://openai.com/index/jalapeno-first-results/) across three public models, it delivered 1.5 to 1.9
+times as much peak token throughput per watt as the commercial systems tested, using rated chip power to
+normalize the comparison. End-to-end latency was 1.7 to 3.6 times lower. We plan to [begin deploying it by
+year-end⁠](https://openai.com/index/jalapeno-first-results/) alongside accelerators from NVIDIA, AMD and other
+partners.
+
+For customers, the result that matters is the completed task. Better models can get there with fewer attempts.
+Better software and hardware can make each attempt faster and cheaper. Improving both can give us room to
+serve more work from the capacity we build and buy.
+
+## Why these advantages compound
+
+Years of investment in research, products, and compute are coming together. Our consumer and enterprise reach
+gives each model advance a direct route to customers. Our full stack compute strategy helps us deliver that
+intelligence with better performance and economics.
+
+That combination grows stronger as customers put AI to work. Their needs help guide research and capacity.
+Better models and lower costs make more work viable, while revenue from growing use funds the next generation
+of research and infrastructure.
+
+Capital discipline is how we sustain that growth. We judge each investment by the demand it can serve, how
+quickly it becomes productive, and whether the returns justify the capital committed.
+
+This is what gives us conviction in OpenAI’s ability to lead through successive generations of AI. We can help
+people achieve more with every advance – and build a business that grows with their ambition.
+
+## Previous blogs from Sarah Friar:
+
+  * [The full stack behind abundant intelligence⁠](https://openai.com/index/the-full-stack-behind-abundant-intelligence/)
+  * [What building an AI-native finance function taught me⁠](https://openai.com/index/building-an-ai-native-finance-function/)
+  * [A scorecard for the AI age⁠](https://openai.com/index/a-scorecard-for-the-ai-age/)
+  * [A business that scales with the value of intelligence⁠](https://openai.com/index/a-business-that-scales-with-the-value-of-intelligence/)
+
+  * [2026](/news/?tags=2026)
+
+## Author
+
+Sarah Friar
+
+## Keep reading
+
+[View all](/news/)
+
+[Supporting journalism from classrooms to newsroomsCompanySep 8, 2026](/index/supporting-journalism-from-
+classrooms-to-newsrooms/)
+
+[OpenAI supports California’s bill to advance youth AI safetyCompanyAug 31, 2026](/index/supporting-
+california-bill-advance-ai-youth-safety/)
+
+[Our decision on Cursor following its acquisition by SpaceXCompanyAug 28, 2026](/index/our-decision-on-cursor-
+following-its-acquisition-by-spacex/)
+
+Research
+
+  * [Research Index](/research/index/)
+  * [Research Overview](/research/)
+  * [Economic Research](/signals/)
+
+Latest Advancements
+
+  * [GPT-6](/index/gpt-6-astra/)
+  * [GPT-5.6](/index/gpt-5-6/)
+  * [GPT-5.5](/index/introducing-gpt-5-5/)
+  * [GPT-5.4](/index/introducing-gpt-5-4/)
+
+Safety
+
+  * [Safety Approach](/safety/)
+  * [Deployment Safety(opens in a new window)](https://deploymentsafety.openai.com/)
+  * [Security & Privacy](/security-and-privacy/)
+  * [Trust & Transparency](/trust-and-transparency/)
+
+Products
+
+  * [ChatGPT(opens in a new window)](https://chatgpt.com/)
+  * [ChatGPT Business(opens in a new window)](https://chatgpt.com/business/)
+  * [ChatGPT Enterprise(opens in a new window)](https://chatgpt.com/business/enterprise/)
+  * [ChatGPT for Education(opens in a new window)](https://chatgpt.com/business/education/)
+  * [Codex](/codex/)
+  * [Release Notes](/products/release-notes/)
+
+API Platform
+
+  * [Overview](/api/)
+  * [API Log In(opens in a new window)](https://platform.openai.com/login)
+  * [Docs(opens in a new window)](https://developers.openai.com/api/docs)
+
+Business
+
+  * [Overview](/business/)
+  * [Solutions](/solutions/)
+  * [Resources](/business/learn/)
+  * [Customer Stories](/business/customer-stories/)
+  * [Partner Network](/business/partners/)
+  * [Contact Sales](/contact-sales/)
+
+Developers
+
+  * [Apps SDK(opens in a new window)](https://developers.openai.com/apps-sdk)
+  * [Open Models](/open-models/)
+  * [Docs(opens in a new window)](https://developers.openai.com/)
+  * [Resources(opens in a new window)](https://developers.openai.com/learn)
+  * [Developer Forum(opens in a new window)](https://community.openai.com/)
+
+Company
+
+  * [About Us](/about/)
+  * [Our Charter](/charter/)
+  * [Careers](/careers/)
+  * [News](/news/)
+
+Support
+
+  * [Help Center(opens in a new window)](https://help.openai.com/)
+
+More
+
+  * [Stories](/stories/)
+  * [Academy](/academy/)
+  * [Supply Co.](/supply/)
+  * [Livestreams](/live/)
+  * [Podcast](/podcast/)
+  * [RSS](https://openai.com/news/rss.xml)
+
+Terms & Policies
+
+  * [Terms of Use](/policies/terms-of-use/)
+  * [Privacy Policy](/policies/privacy-policy/)
+  * [Other Policies ](/policies/)
+
+[(opens in a new window)](https://x.com/OpenAI)[(opens in a new
+window)](https://www.youtube.com/OpenAI)[(opens in a new
+window)](https://www.linkedin.com/company/openai)[(opens in a new window)](https://github.com/openai)[(opens
+in a new window)](https://www.instagram.com/openai/)[(opens in a new
+window)](https://www.tiktok.com/@openai)[(opens in a new window)](https://discord.gg/openai)
+
+OpenAI © 2015–2026Your privacy choices
+
+EnglishUnited States

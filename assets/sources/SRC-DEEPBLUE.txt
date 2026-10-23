@@ -1,0 +1,149 @@
+SOURCE COPY — SRC-DEEPBLUE
+Retrieved 2026-10-21 for Inside the Machine Mind (offline reference copy; excerpt of the original, formatting simplified).
+Original URL: https://www.ibm.com/history/deep-blue
+Page/document title: Deep Blue | IBM
+
+------------------------------------------------------------------------
+
+  1. [ Home ](/homepage)
+  2. [ IBM Heritage ](/history)
+  3. Deep Blue
+
+#  Deep Blue
+
+IBM’s computer checkmated a human chess champion in a computing tour de force
+
+In 1997, IBM’s Deep Blue did something that no machine had done before. In May of that year, it became the
+first computer system to defeat a reigning world chess champion in a match under standard tournament controls.
+Big Blue’s victory in the six-game marathon against Garry Kasparov marked an inflection point in computing,
+heralding a future in which supercomputers and artificial intelligence could simulate human thinking.
+
+Deep Blue derived its chess prowess through brute force computing power. It used 32 processors to perform a
+set of coordinated, high-speed computations in parallel. Deep Blue was able to evaluate 200 million chess
+positions per second, achieving a processing speed of 11.38 billion floating-point operations per second, or
+flops. By comparison, IBM’s first supercomputer, [Stretch](https://www.ibm.com/history/stretch "Story: The IBM
+7030, aka Stretch"), introduced in 1961, had a processing speed of less than 500 flops.
+
+Deep Blue wasn’t just a breakthrough for the world of chess. Its underlying technology advanced the ability of
+supercomputers to tackle the complex calculations needed to discover new pharmaceuticals, assess financial
+risk, uncover patterns in massive databases, and explore the inner workings of human genes.
+
+Deep Blue computing power  32  processors  200 million  chess positions evaluated per second  11.38 billion
+floating point operations per second (flops) of processing speed
+
+Garry Kasparov and the Deep Blue team’s Joe Hoane during the 1997 rematch in New York City
+
+Building a digital chess master
+
+Chess has long been considered an ideal test of whether a computer could rival the power of the human brain.
+It’s a highly complex game that poses formidable computational challenges — there are approximately 1,040
+possible legal moves.
+
+1957
+
+IBM engineer and mathematician Alex Bernstein wrote the first complete computer chess program in history,
+which ran on an IBM 704. It could process 42,000 instructions per second and had a memory of 70 kilobytes.
+
+1962
+
+A program developed at MIT on an IBM 7090 became the first to play regular chess credibly. It could evaluate
+1,100 positions per second.
+
+1970s
+
+Programs managed to win several amateur chess tournaments, but none could approach the skill of a grandmaster.
+
+1980s
+
+That began to change in 1985 when a graduate student at Carnegie Mellon University, Feng-hsiung Hsu, helped
+develop an advanced chess-playing machine called ChipTest, which would win the North American Computer Chess
+Championship in 1987. (Hsu would eventually become the author of the book _Behind Deep Blue: Building the
+Computer That Defeated the World Chess Champion_.) Murray Campbell, a computer scientist and accomplished
+chess player himself, began collaborating with Hsu around that time. “I had had a long interest in computer
+chess and had even written a chess program as an undergraduate,” Campbell would later tell _Scientific
+American_. The duo welcomed a number of other colleagues in their quest to create Deep Thought, which became
+the first program to defeat a grandmaster.
+
+In 1989, both Hsu and Campbell were hired at IBM Research to build a chess computer. They continued their work
+with the help of other IBM computer scientists, including Joe Hoane, Jerry Brody and C. J. Tan. The chess-
+playing computer they sought to improve was renamed Deep Blue, a nod to IBM’s nickname, Big Blue.
+
+Challenging Garry Kasparov
+
+The Deep Blue team had an ambitious goal: to develop a computer so powerful that it could beat the world’s
+best human chess player. Deep Blue’s first major test occurred in February 1996, when it took on reigning
+champion Garry Kasparov in six games held in Philadelphia. Deep Blue won the first game, which marked the
+first victory by a computer against a reigning world champion under regular time controls. But Kasparov
+recovered and won the match 4–2.
+
+The IBM team set to work on improving Deep Blue for a rematch. They improved the databases dealing with chess
+endgames, created a more powerful evaluation function for chess positions, hired additional chess grandmasters
+to advise the team, and developed methods to disguise the computer’s strategy. (The upgrades not only enhanced
+Deep Blue but also led to better training tools for chess players in the years to come. India would go on to
+produce a significant number of chess stars, mainly due to the wider availability of computerized training
+resources. Veselin Topalov, the challenger to the World Chess Champion title in 2010, used an IBM Blue Gene/P
+supercomputer during his preparation for the match.)
+
+With the eyes of the world media upon them, Deep Blue again squared off against Kasparov in May 1997, this
+time at the Equitable Center in New York. The rematch was widely seen as a symbolic test of whether
+supercomputers were catching up to human intelligence. Kasparov won the first game. Deep Blue took the next.
+The following three games were played to a draw. But Deep Blue prevailed in the tension-filled Game 6, thereby
+achieving a resounding victory, 3.5–2.5, in the rematch and becoming the first computer system to defeat a
+reigning world champion under standard tournament time controls.
+
+“I have to pay tribute,” Kasparov said grudgingly. “The computer is far stronger than anybody expected.”
+
+Deep Blue team members at the 1996 match in Philadelphia
+
+Deep Blue prevailed in the tension-filled Game 6, becoming the first computer system to defeat a reigning
+world champion under standard tournament time controls
+
+1  2  3  4
+
+“I have to pay tribute,” Kasparov said grudgingly. “The computer is far stronger than anybody expected.”
+
+Garry Kasparov during the 1997 rematch in New York City
+
+Deep Blue’s processor cabinets
+
+Representation of the chessboard’s final position in game one of the 1996 match of the Deep Blue supercomputer
+
+Deep Blue’s legacy
+
+After the victory over Kasparov, Deep Blue was retired to the Smithsonian Museum in Washington, D.C. But IBM
+went on to develop new kinds of massively parallel computers such as [Blue
+Gene](https://www.ibm.com/history/blue-gene "Story: Blue Gene") and
+[Watson](https://www.ibm.com/history/watson-jeopardy "Story: Watson, 'Jeopardy!', champion"). In 1999, IBM
+built on its experience with Deep Blue and launched the Deep Computing Institute, with the goal of harnessing
+advanced computing to solve complex technological and business problems.
+
+Deep Blue has had an impact on computing in many industries. It gave developers insights into ways they could
+design computers to analyze a vast number of possible solutions to other complex problems. Deep Blue’s
+architecture has been applied widely in financial modeling, which requires a rapid evaluation of value and
+risk associated with many stocks and portfolios.
+
+Computer breakthroughs inspired by Deep Blue have likewise been used in data mining to help discover unlikely
+patterns in large databases, using the tremendous speed and capacity of massively parallel supercomputers.
+Deep Blue has also made its mark in healthcare, helping the pharmaceutical industry to develop new drugs.
+Analyzing drug interactions on a molecular level requires massive amounts of processing and computational
+power, and advanced computers can cut the development time for drugs dramatically and reduce costs.
+
+Although the technology behind Deep Blue has found many other applications, the computer will always be
+remembered for its historic victory against Kasparov. In terms of chess, Deep Blue was a game-changer —
+literally. “For the first time in the history of mankind, I saw something similar to an artificial intellect,”
+Kasparov said. “I know very few chess players who could take this heat.”
+
+Added IBM’s C. J. Tan, “Garry prepared to play against a computer. But we programmed it to play like a
+grandmaster.”
+
+For the first time in the history of mankind, I saw something similar to an artificial intellect
+
+Garry Kasparov  Chess grandmaster and World Chess Champion
+
+Members of the Deep Blue team, including early developers Feng-hsiung Hsu and Murray Campbell
+
+Related stories  [ The IBM 7030, aka Stretch  With ‘Stretch,’ IBM entered the age of supercomputing
+](https://www.ibm.com/history/stretch) [ IBM Blue Gene  Ushering in an era of high-performance computing that
+valued efficiency as much as raw processing power  ](https://www.ibm.com/history/blue-gene) [ Games that
+helped AI evolve  Two early game-playing programs, Samuel Checkers and TD-Gammon, led to breakthroughs in
+artificial intelligence  ](https://www.ibm.com/history/early-games)

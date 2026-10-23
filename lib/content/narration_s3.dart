@@ -58,6 +58,14 @@ const narrationS3 = <String, LessonText>{
     ],
     keyIdea: 'At home, how fast a model answers (its inference speed) is mostly about how fast your memory can hand data to the chip — bandwidth divided by model size — not about raw brain power.',
   ),
+  's3_quants': LessonText(
+    intro: [
+      'You just shrank a mind to a quarter of its size. Now look at a download page: Llama-70B-Q4_K_M, IQ1_S, UD-Q5_K_XL — it reads like a robot grocery list.',
+      'Today we crack those names open, one piece at a time. Every letter tells you something: how many bits each number kept, and what trick protects the rest.',
+      'Tap each piece of a filename and I\'ll translate. Then play with the calculator — [[Bits per weight]] is the measuring stick for the whole game.',
+    ],
+    keyIdea: 'A model filename is a recipe card: the number says how many bits each weight kept, and the letters say which trick is used to keep the model smart with fewer of them.',
+  ),
   's3_frontier': LessonText(
     intro: [
       'Zoom out. A frontier model lives in a [[datacenter]] — a factory for computing — spread across thousands of [[GPUs|gpu]] on [[NVLink]] express lanes.',

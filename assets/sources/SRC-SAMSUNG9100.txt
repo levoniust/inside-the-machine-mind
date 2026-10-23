@@ -1,0 +1,171 @@
+SOURCE COPY — SRC-SAMSUNG9100
+Retrieved 2026-10-21 for Inside the Machine Mind (offline reference copy; excerpt of the original, formatting simplified).
+Original URL: https://download.semiconductor.samsung.com/resources/data-sheet/Samsung_NVMe_SSD_9100_PRO_Datasheet_Rev.1.0.pdf
+Page/document title: (pdf)
+
+------------------------------------------------------------------------
+
+Data Sheet SAMSUNG PROPRIETARY 
+Revision 1.0 
+1 
+ 
+ 
+MA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Samsung V-NAND SSD 
+9100 PRO 
+ 
+2025 Data Sheet 
+Revision 1.0 
+Data Sheet SAMSUNG PROPRIETARY 
+Revision 1.0 
+2 
+ 
+ 
+LEGAL DISCLAIMER 
+SAMSUNG ELECTRONICS CO., LTD. RESERVES THE RIGHT TO CHANGE PRODUCTS, INFORMATION AND 
+SPECIFICATIONS WITHOUT NOTICE. 
+Products and specifications discussed herein are provided for reference purposes only. All information discussed 
+herein may change without notice and is provided on an “AS IS” basis, without warranties of any kind. This 
+document and all information discussed herein remain the sole and exclusive property of Samsung Electronics Co., 
+Ltd. No license of any patent, copyright, mask work, trademark or any other intellectual property right is granted 
+under this document, by implicati on, estoppels or otherwise. Samsung products are not intended for use in life 
+support, critical care, medical, safety equipment, or similar applications where product failure could result in loss 
+of life or personal or physical harm, or any military or def ense application, or any governmental procurement to 
+which special terms or provisions may apply. For updates or additional information about Samsung products, 
+contact your nearest Samsung representative. All brand names, trademarks and registered trademar ks belong to 
+their respective owners. 
+ 
+ 
+COPYRIGHT ©  2025 
+This material is copyrighted by Samsung Electronics Co., Ltd. Any unauthorized reproductions, use or disclosure of 
+this material, or any part thereof, is strictly prohibited and is a violation under copyright law. 
+ 
+ 
+TRADEMARKS & SERVICE MARKS 
+The Samsung logo is the trademark of Samsung Electronics Co., Ltd. All other company and product names may be 
+trademarks of the respective companies with which they are associated. 
+For more information, please visit www.samsung.com/ssd and www.samsungssd.com. 
+To download the latest software & manuals, please visit www.samsung.com/samsungssd 
+Data Sheet SAMSUNG PROPRIETARY 
+Revision 1.0 
+3 
+ 
+ 
+TECHNICAL SPECIFICATIONS 
+ 
+Samsung SSD 9100 PRO 
+Usage Application Client PCs, PlayStation® 5 
+Interface PCIe® 5.0 x4,  NVMe™ 2.0 
+Hardware 
+Information 
+Capacity1) 1TB 2TB 4TB 8TB 
+Controller Samsung in-house Controller 
+NAND Flash Memory Samsung V-NAND TLC 
+Cache Memory 1GB LPDDR4X 2GB LPDDR4X 4GB LPDDR4X 8GB LPDDR4X 
+Dimension2) 1TB/2TB/4TB : Max 80.15 x Max 22.15 x Max 2.38 (mm) 8TB : Max 80.15 x Max 22.15 x Max 3.88 (mm) 
+Form Factor M.2 (2280) 
+Performance 
+(Up to.)3) 4) 5) 
+Sequential Read 14,700 MB/s 14,700 MB/s 14,800 MB/s (TBD)14,800 MB/s 
+Sequential Write 13,300 MB/s 13,400 MB/s 13,400 MB/s (TBD)13,400 MB/s 
+QD 256 
+Thread 32 
+Ran. Read 1,850 KIOPS 1,850 KIOPS 2,200 KIOPS (TBD)2,200 KIOPS 
+Ran. Write 2,600 KIOPS 2,600 KIOPS 2,600 KIOPS (TBD)2,600 KIOPS 
+Power 
+Consumption 
+Active6) 
+(Avg.) 
+Read 7.6 W 8.1 W 9.0 W TBD 
+Write 7.2 W 7.9 W 8.2 W TBD 
+Idle 
+(Typical) 
+PS3(APST on) 4.0 mW 4.8 mW 6.5 mW TBD 
+PS4 (L1.2) 3.3 mW 4.0 mW 5.7 mW TBD 
+Reliability 
+Temp. 
+Operating 0° C to 70° C (Measured by S.M.A.R.T. Temperature Proper airflow recommended)  
+Non-Operating -40° C to 85° C 
+Humidity 5% to 95% non-condensing 
+Shock Non-Operating 1,500G(Gravity), duration: 0.5ms, 3 axis 
+Vibration Non-Operating 20~2,000Hz, 20G 
+MTBF 1.5 million hours 
+Warranty7) TBW 600 TB 1,200 TB 2,400 TB 4,800 TB 
+Period 5 years limited 
+Supporting 
+Features TRIM (Required OS support), Garbage Collection, S.M.A.R.T 
+Data Security AES 256-bit Full Disk Encryption, TCG/Opal V2.0, Encrypted Drive (IEEE1667)  
+1) 1GB = 1,000,000,000 bytes by IDEMA. A certain portion of capacity may be used for system file and maintenance use, thus the actual available capacity 
+may differ from the labeled capacity. 
+2) The 8TB model complies PCI-SIG®  D5 standard specification. Please check the specifications of the host device before installation. 
+3) 9100 PRO is backward compatible with PCIe 4.0 x4 and 3.0 x4. 
+4) Sequential and random performance measurements are based on FIO 3.33. Performance may vary based on SSD’s firmware version, system 
+hardware & configuration. Test System: AMD Ryzen 9 7950X 16-Core Processor CPU@4.50GHz, DDR5 4800MHz 16GBx2, OS-Ubuntu 22.04.2, 
+Chipset-ASRock-X670E-Taichi. 
+5) Sequential and random write performance was measured with Intelligent TurboWrite technology being activated. Intelligent TurboWrite operates only 
+within a specific data transfer size. For detailed information, please contact your local service center. 
+6) Active power consumption is measured on FIO 3.33 with AMD Ryzen 5 7600 6-Core Processor CPU@3.80GHz, DDR5 4800MHz 16GBx2, OS-Ubuntu 
+22.04.3 LTS, Chipset-ASUS ProArt X670E-CREATOR WIFI STCOM. 
+7) All documented endurance test results are in compliance with JESD218 Standards. Please visit www.jedec.org for detailed information on JESD218 
+Standards. TBW means Terabytes Written, Warranty provides coverage for the stated time period or the TBW, whichever comes first. Please refer to the 
+detailed warranty statement here at http://www.samsung.com/samsungssd 
+Data Sheet SAMSUNG PROPRIETARY 
+Revision 1.0 
+4 
+ 
+ 
+PRODUCT LINEUP 
+ 
+Density Model Name Box Contents Model Code 
+1TB 
+(1,000GB*) MZ-VAP1T0 Samsung SSD 9100 PRO 1TB Warranty Statement MZ-VAP1T0BW MZ-VAP1T0B/AM 
+2TB 
+(2,000GB*) MZ-VAP2T0 Samsung SSD 9100 PRO 2TB Warranty Statement MZ-VAP2T0BW MZ-VAP2T0B/AM 
+4TB 
+(4,000GB*) MZ-VAP4T0 Samsung SSD 9100 PRO 4TB Warranty Statement MZ-VAP4T0BW MZ-VAP4T0B/AM 
+8TB 
+(8,000GB*) MZ-VAP8T0 Samsung SSD 9100 PRO 8TB Warranty Statement MZ-VAP8T0BW MZ-VAP8T0B/AM 
+* GB: 1GB = 1,000,000,000 bytes. The actual usable capacity may be less than the labeled capacity. 
+For more information, including but not limited to the warranty provided for this product, and to download the latest 
+software & manuals, please visit www.samsung.com/ssd and www.samsungssd.com. 
+ 
+ 
+ 
+TEST CONFIGURATION 
+Below you will find a list of system configurations Samsung used to obtain the results reported in this Data Sheet. 
+Performance/power data was measured with the SSD as a secondary drive in a fan cooling desktop system. 
+ 
+ Read/Write Performance Power Consumption 
+Interface PCIe 5.0 x4 PCIe 5.0 x4 
+OS Linux Ubuntu 22.04.2 Linux Ubuntu 22.04.3 LTS 
+CPU AMD Ryzen9 7950x 16-Core Processor CPU@4.5GHz AMD Ryzen 5 7600 6-Core Processor CPU@3.80GHz 
+Memory DDR5 4800MHz 16GBx2 DDR5 4800MHz 16GBx2 
+Chipset ASRock-X670E-Taichi ASUS ProArt X670E-CREATOR WIFI STCOM 
+Test Program FIO 3.33 FIO 3.33 
+Data Sheet SAMSUNG PROPRIETARY 
+Revision 1.0 
+5 
+ 
+ 
+Revision History 
+ 
+Revision 
+Number Description Revision Date 
+1.0 Initial Release January, 2025

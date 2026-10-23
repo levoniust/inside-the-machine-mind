@@ -1,0 +1,341 @@
+SOURCE COPY — SRC-DCD-STARGATE
+Retrieved 2026-10-21 for Inside the Machine Mind (offline reference copy; excerpt of the original, formatting simplified).
+Original URL: https://www.datacenterdynamics.com/en/news/openai-and-oracle-to-deploy-450000-gb200-gpus-at-stargate-abilene-data-center/
+Page/document title: OpenAI and Oracle to deploy 450,000 GB200 GPUs at Stargate data center in Abilene, Texas - DCD
+
+------------------------------------------------------------------------
+
+__ Search
+
+[](/en/account/login/?next=%2Fen%2Fnews%2Fopenai-and-oracle-to-deploy-450000-gb200-gpus-at-stargate-abilene-
+data-center%2F)
+
+#  [ ](/en/)
+
+  * Channels 
+
+Recommended for you...
+
+15 Oct 2026
+
+#  [Virginia senator proposes three-year state-wide data center moratorium](/en/news/virginia-senator-
+proposes-three-year-state-wide-data-center-moratorium/)
+
+    * [ Energy & Sustainability Water efficiency, renewable power, carbon capture, and more ](/en/the-energy-sustainability-channel/)
+    * [ Data Center Cooling Air, liquid, and the pipes that cool facilities ](/en/the-data-center-cooling-channel/)
+    * [ Management & Operations Day-to-day operations, workforce and skills ](/en/the-management-operations-channel/)
+    * [ Mission Critical Power From grid power challenges, to on-site solutions ](/en/the-mission-critical-power-channel/)
+    * [ Edge Infra & Inference Low-latency systems and AI inference ](/en/the-edge-computing-channel/)
+    * [ Cloud & Hybrid Where workloads live and why ](/en/the-cloud-and-hybrid-channel/)
+    * [ Data Center Construction Site selection, building, and expansion ](/en/dcd-data-center-construction-channel-news/)
+    * [ Telecoms & Connectivity Telco towers, spectrum, fiber, and subsea cables ](/en/the-networks-and-connectivity-channel/)
+    * [ Investment & Markets Financing the data center build-out ](/en/the-investment-markets-channel/)
+    * [ Compute, Storage & Networking Chips, drives, and accelerating compute ](/en/the-compute-storage-networking-channel/)
+
+  * Media 
+
+Recommended for you...
+
+#  [DCD Magazine #62 - The coming wave](/en/magazines/dcd-magazine-62-the-coming-wave/)
+
+14 Sep 2026
+
+    * [ News The latest data center & AI happenings ](/en/news/)
+    * [ Long Reads Deep-dive features and interviews ](/en/analysis/)
+    * [ Industry Views Perspectives from those building the future ](/en/opinions/)
+    * [ Video Interviews Talks, Studios, and chats with the sector ](/en/videos/)
+    * [ Broadcasts Upcoming and on-demand ](/en/dcd-broadcasts/)
+    * [ Whitepapers & Reports Authoritative sector reports ](/en/whitepapers/)
+    * [ Magazines & eBooks Our quarterly mag and mini-mags ](/en/magazines/)
+    * [ MarketWatch Perspectives from our partners ](/en/marketwatch/)
+    * [ Podcasts Listen in to Zero Downtime and partner shows ](/en/podcasts/)
+    * [ Research Surveys and deep dives ](/en/research/)
+
+  * [ Intelligence ](/en/intelligence/)
+  * [ Industry Awards ](/en/industry-awards/global-awards/2026/)
+  * [ Academy ](/en/dcdacademy/)
+  * Live Events 
+
+Recommended for you...
+
+__ 13-14 October 2026
+
+#  Connect [DCD Connect | India 2026](/en/dcdconnect-live/india/2026/)
+
+## Live Events
+
+    * Connect Series
+      * [ Connect | India 2026 ](/en/dcdconnect-live/india/2026/)
+      * [ Connect | MENA 2026 ](/en/dcdconnect-live/mena/2026/)
+      * [ Connect | Virginia 2026 ](/en/dcdconnect-live/virginia/2026/)
+      * [ Connect | Brasil 2026 ](/br/dcd-connect-live/brasil/2026/)
+      * [ Connect | New York 2027 ](/en/dcdconnect-live/new-york/2027/)
+      * [ Connect | Southern Europe 2027 ](/es/dcd-connect-live/south-europe/2027/)
+      * [ Connect | APAC 2027 ](/en/dcdconnect-live/apac/2027/)
+      * [ Connect | London 2027 ](/en/dcdconnect-live/london/2027/)
+      * [ Connect | LATAM 2027 ](/es/dcd-connect-live/latam/2027/)
+    * Xcelerated Compute Series
+      * [ The Xcelerated Compute Show New York ](https://www.xceleratedcompute.com/new-york/2027/)
+      * [ The Xcelerated Compute Show London ](https://www.xceleratedcompute.com/london/2027/)
+      * [ The Xcelerated Compute Show Cancun ](https://es.xceleratedcompute.com/cancun/2027/)
+      * [ The Xcelerated Compute Show São Paulo ](https://br.xceleratedcompute.com/saopaulo/2026/)
+    * Investment Forum Series
+      * [ Investment Forum India 2026 ](/en/dcdconnect-investment/india/2026/)
+      * [ Investment Forum MENA 2026 ](/en/dcdconnect-investment/mena/2026/)
+      * [ Investment Forum Brasil 2026 ](/br/dcdinvestment/s%C3%A3opaulo/2026/)
+      * [ Investment Forum New York 2027 ](/en/dcdconnect-investment/new-york/2027/)
+      * [ Investment Forum Southern Europe 2027 ](/es/dcdconnect-investment/south-europe-madrid/2027/)
+      * [ Investment Forum APAC 2027 ](/en/dcdconnect-investment/apac/2027/)
+      * [ Investment Forum London 2027 ](/en/dcdconnect-investment/london/2027/)
+      * [ Investment Forum LATAM 2027 ](/es/dcdconnect-investment/cancun/2027/)
+    * AI Cities Series
+      * [ AI Cities | Zaragoza 2027 ](https://www.aicitysummit.com/europe/2027/)
+      * [ AI Cities | Rio de Janeiro 2027 ](https://www.aicitysummit.com/latin-america/2027/)
+    * Yotta
+
+    *       * [ Connect | India 2026 ](/en/dcdconnect-live/india/2026/)
+      * [ Connect | MENA 2026 ](/en/dcdconnect-live/mena/2026/)
+      * [ Connect | Virginia 2026 ](/en/dcdconnect-live/virginia/2026/)
+      * [ Connect | Brasil 2026 ](/br/dcd-connect-live/brasil/2026/)
+      * [ Connect | New York 2027 ](/en/dcdconnect-live/new-york/2027/)
+      * [ Connect | Southern Europe 2027 ](/es/dcd-connect-live/south-europe/2027/)
+      * [ Connect | APAC 2027 ](/en/dcdconnect-live/apac/2027/)
+      * [ Connect | London 2027 ](/en/dcdconnect-live/london/2027/)
+      * [ Connect | LATAM 2027 ](/es/dcd-connect-live/latam/2027/)
+    *       * [ The Xcelerated Compute Show New York ](https://www.xceleratedcompute.com/new-york/2027/)
+      * [ The Xcelerated Compute Show London ](https://www.xceleratedcompute.com/london/2027/)
+      * [ The Xcelerated Compute Show Cancun ](https://es.xceleratedcompute.com/cancun/2027/)
+      * [ The Xcelerated Compute Show São Paulo ](https://br.xceleratedcompute.com/saopaulo/2026/)
+    *       * [ Investment Forum India 2026 ](/en/dcdconnect-investment/india/2026/)
+      * [ Investment Forum MENA 2026 ](/en/dcdconnect-investment/mena/2026/)
+      * [ Investment Forum Brasil 2026 ](/br/dcdinvestment/s%C3%A3opaulo/2026/)
+      * [ Investment Forum New York 2027 ](/en/dcdconnect-investment/new-york/2027/)
+      * [ Investment Forum Southern Europe 2027 ](/es/dcdconnect-investment/south-europe-madrid/2027/)
+      * [ Investment Forum APAC 2027 ](/en/dcdconnect-investment/apac/2027/)
+      * [ Investment Forum London 2027 ](/en/dcdconnect-investment/london/2027/)
+      * [ Investment Forum LATAM 2027 ](/es/dcdconnect-investment/cancun/2027/)
+    *       * [ AI Cities | Zaragoza 2027 ](https://www.aicitysummit.com/europe/2027/)
+      * [ AI Cities | Rio de Janeiro 2027 ](https://www.aicitysummit.com/latin-america/2027/)
+    *       * [ Yotta 2026 ](https://www.yotta-event.com/)
+
+Close modal
+
+## Search Suggestions
+
+  * [Home](/en/)
+  * __[News](https://www.datacenterdynamics.com/en/news/)
+  * __[The Cloud & Hybrid Channel](/en/the-cloud-and-hybrid-channel/)
+
+# OpenAI and Oracle to deploy 450,000 GB200 GPUs at Stargate data center in Abilene, Texas
+
+Firms look set to occupy entire campus
+
+October 15, 2025
+
+By
+
+     [ Georgia Butler ](/en/profile/georgia-butler/)
+__Have your say
+
+[](https://www.addtoany.com/share) [ ](https://google.com/preferences/source?q=datacenterdynamics.com)
+
+OpenAI and Oracle's Stargate data center in Abilene, Texas, will eventually house more than 450,000 Nvidia
+GB200 GPUs, Larry Ellison has revealed.
+
+Oracle founder, chairman, and CTO Ellison delivered the news during a keynote at the Oracle AI World event in
+Las Vegas on Tuesday. The Stargate data center will use 1.2GW, "enough power for one million four-bedroom
+homes in the United States," the billionaire said.
+
+[ __](https://media.datacenterdynamics.com/media/images/Stargate_Abilene.original.png)
+
+- OpenAI/Stargate
+
+Ellison added: "That's a pretty good-sized city."
+
+This seemingly confirms that OpenAI and Oracle will take up all the capacity at the campus, which is being
+constructed by Crusoe and has a stated target capacity of 1.2GW. The first two buildings are already
+operational, having launched in [September 2025](https://www.datacenterdynamics.com/en/news/crusoes-abilene-
+data-center-officially-live-serving-oracle-and-openais-stargate/). The remaining six buildings are expected to
+be completed by mid-2026.
+
+Previously, in March 2025, it was said that the site would have
+[64,000](https://www.datacenterdynamics.com/en/news/openai-and-oracle-to-deploy-64000-gb200-gpus-at-stargate-
+abilene-data-center-by-2026-report/) GB200s by the end of 2026. Since then, OpenAI has signed a non-binding
+letter of intent to [purchase](https://www.datacenterdynamics.com/en/news/openai-signs-loi-to-deploy-at-
+least-10gw-of-ai-data-centers-with-nvidia-hardware-nvidia-to-invest-up-to-100bn-in-openai/) 10GW-worth of
+hardware from Nvidia, which in turn is promising to invest $100 billion in OpenAI as the new systems are
+deployed.
+
+As part of the keynote, delegates were shown a pre-recorded video of the project, which noted that the power
+will be provided by a combination of grid energy and natural gas turbines. It further stated that the GPUs
+will be housed in eight separate buildings that will all be connected together to support a single cluster.
+
+The increased scale of the GPU deployment was hinted at when Oracle unveiled its
+[Zettascale10](https://www.datacenterdynamics.com/en/news/oracle-unveils-zettascale10-ai-supercomputer-claims-
+it-will-be-largest-in-the-cloud/) AI supercomputer. The cloud-based supercomputer, expected to be available in
+the second half of 2026, will connect hundreds of thousands of Nvidia GPUs across multiple data centers.
+Oracle noted that Zettascale10 was the "fabric underpinning the flagship supercluster built in collaboration
+with OpenAI in Abilene, Texas, as part of Stargate."
+
+## More in Cloud & Hyperscale
+
+  * #  [Rethinking power architecture in large-scale data centers](/en/whitepapers/rethinking-power-architecture-in-large-scale-data-centers/)
+
+  * 17 Aug 2026
+
+#  [Akamai secures $600m cloud computing contract](/en/news/akamai-secures-600m-cloud-computing-contract/)
+
+  * 10 Sep 2026
+
+#  [Google-Blackstone's TPU neocloud named Crux AI, hires Meta's data center engineering head Alan
+Duong](/en/news/google-blackstones-tpu-neocloud-named-crux-ai-hires-metas-data-center-engineering-head-alan-
+duong/)
+
+## More in AI & Analytics
+
+  * #  [Generative AI inferencing ramp-up](/en/whitepapers/generative-ai-inferencing-ramp-up/)
+
+  * 22 May 2026
+
+#  [Hudson River Trading selects Lambda for AI compute infrastructure](/en/news/hudson-river-trading-selects-
+lambda-for-ai-compute-infrastructure/)
+
+  * 26 May 2026
+
+#  [SoftBank Corp. to launch 'AI Data Center GPU Cloud' offering in Japan](/en/news/softbank-corp-to-launch-
+ai-data-center-gpu-cloud-offering-in-japan/)
+
+[](https://www.addtoany.com/share) [ ](https://google.com/preferences/source?q=datacenterdynamics.com)
+
+### Tags
+
+  * [Abilene](/en/tags/abilene/)
+  * [GB200](/en/tags/gb200/)
+  * [Larry Ellison](/en/tags/larry-ellison/)
+  * [OpenAI](/en/tags/openai/)
+  * [Oracle](/en/tags/oracle/)
+  * [Stargate](/en/tags/stargate/)
+  * [Texas](/en/tags/texas/)
+
+## Comments
+
+## Whitepapers [__More](https://www.datacenterdynamics.com/en/whitepapers/)
+
+  * #  [The ultimate guide to li-ion BESS fire safety standards](/en/whitepapers/the-ultimate-guide-to-li-ion-bess-fire-safety-standards/)
+
+20 Oct 2026
+
+  * #  [Data centers transform communities. Here’s how to prove it before breaking ground](/en/whitepapers/data-centers-transform-communities-heres-how-to-prove-it-before-breaking-ground/)
+
+20 Oct 2026
+
+  * #  [Coatings for faster, safer and more reliable data centers](/en/whitepapers/coatings-for-faster-safer-and-more-reliable-data-centers/)
+
+19 Oct 2026
+
+  * #  [Maximizing efficiency and security through global vendor consolidation in IT Asset Disposition](/en/whitepapers/maximizing-efficiency-and-security-through-global-vendor-consolidation-in-it-asset-disposition/)
+
+19 Oct 2026
+
+  * [More](https://www.datacenterdynamics.com/en/whitepapers/)
+
+# [Stream Now: Powering data center growth beyond traditional grid
+connections](https://www.datacenterdynamics.com/en/dcd-broadcasts/atwell-construction-innovation-
+day-2026/powering-data-center-growth-beyond-traditional-grid-connections/)
+
+__ Thank you! You will receive a confirmation email shortly.
+
+# [Browse by Topic](/en/topics-and-tech/)
+
+  * [Business Operations](/en/topics-and-tech/business-operations/)
+    * __[Construction & Site Selection](/en/topics-and-tech/business-operations/construction-site-selection/)
+    * __[Investment / M&A / Financing](/en/topics-and-tech/business-operations/investment-ma-financing/)
+    * __[Standards & Regulations](/en/topics-and-tech/business-operations/standards-regulations/)
+    * __[Workforce & Skills](/en/topics-and-tech/business-operations/workforce-skills/)
+  * [Cooling](/en/topics-and-tech/cooling/)
+  * [Critical Power](/en/topics-and-tech/critical-power/)
+    * __[Grid Level](/en/topics-and-tech/critical-power/grid-level/)
+    * __[Rack Level](/en/topics-and-tech/critical-power/rack-level/)
+    * __[Behind-The-Meter](/en/topics-and-tech/critical-power/behind-the-meter/)
+  * [Connectivity](/en/topics-and-tech/connectivity/)
+    * __[Carrier Networks](/en/topics-and-tech/connectivity/carrier-networks/)
+    * __[Networking](/en/topics-and-tech/connectivity/networking/)
+    * __[Subsea Infrastructure](/en/topics-and-tech/connectivity/subsea-infrastructure/)
+  * [IT Hardware & Semiconductors](/en/topics-and-tech/it-hardware/)
+  * [Sectors](/en/topics-and-tech/sectors/)
+    * __[Cloud & Hyperscale](/en/topics-and-tech/sectors/cloud-hyperscale/)
+    * __[Colocation & Wholesale](/en/topics-and-tech/sectors/colocation-wholesale/)
+    * __[Edge & IoT](/en/topics-and-tech/sectors/edge-iot/)
+    * __[Enterprise](/en/topics-and-tech/sectors/enterprise/)
+    * __[Government & Military](/en/topics-and-tech/sectors/government-military/)
+    * __[HPC & Quantum](/en/topics-and-tech/sectors/hpc-quantum/)
+    * __[Telecoms & 5G](/en/topics-and-tech/sectors/telecoms-5g/)
+    * __[Crypto](/en/topics-and-tech/sectors/crypto/)
+  * [Security & Risk](/en/topics-and-tech/security-and-risk/)
+    * __[Cyber](/en/topics-and-tech/security-and-risk/cyber/)
+    * __[Outages](/en/topics-and-tech/security-and-risk/outages/)
+    * __[Physical Security](/en/topics-and-tech/security-and-risk/physical-security/)
+  * [Software](/en/topics-and-tech/software/)
+    * __[AI & Analytics](/en/topics-and-tech/software/ai-analytics/)
+    * __[Infrastructure Management](/en/topics-and-tech/software/infrastructure-management/)
+  * [Sustainability](/en/topics-and-tech/sustainability/)
+
+# [Browse by Region](/en/regions/)
+
+  * [Africa](/en/regions/africa/)
+  * [China](/en/regions/china/)
+  * [Europe](/en/regions/europe/)
+    * __[Nordics](/en/regions/europe/nordics/)
+    * __[UK & Ireland](/en/regions/europe/uk-and-ireland/)
+  * [Latin America](/en/regions/latin-america/)
+  * [Middle East](/en/regions/middle-east/)
+  * [North America](/en/regions/north-america/)
+  * [Asia Pacific](/en/regions/asia-pacific/)
+    * __[Southeast Asia](/en/regions/asia-pacific/south-east-asia/)
+    * __[India](/en/regions/asia-pacific/india/)
+    * __[Australasia](/en/regions/asia-pacific/australasia/)
+  * [Space](/en/regions/space/)
+  * [Central Asia](/en/regions/central-and-western-asia/)
+
+# Products
+
+  * [Broadcasts](/en/broadcasts/)
+  * [Create your free DCD Account today](/en/create-account/)
+  * [Podcasts](/en/podcasts/)
+  * [Academy](/en/dcdacademy/)
+  * [DCD Awards 2026](/en/industry-awards/global-awards/2026/)
+  * [CEEDA](/en/ceeda/)
+  * [MarketWatch](/en/marketwatch/)
+  * [DCD Magazine](/en/magazines/)
+  * [Newsletters](/en/dcd-downloads/dcd-newsletters/)
+
+Language Websites:
+
+  * [Spanish](/es/)
+  * [Portuguese](/br/)
+
+  * [ __](https://www.linkedin.com/company/datacenterdynamics "LinkedIn")
+  * [ __](https://www.youtube.com/@Datacenterdynamicsltd/videos "YouTube")
+  * [ __](https://twitter.com/DCDNEWS "Twitter")
+  * [ __](https://www.facebook.com/DatacentreDynamics/ "Facebook")
+  * [ __](https://open.spotify.com/show/0bghTSNNUUOsIKJkDVPOUi "Spotify")
+
+(C) 2026 DCD
+
+  * [Terms & Conditions](/en/terms-and-conditions/)
+  * [Anti-Discrimination Policy for Learners](/en/dcdacademy/anti-discrimination-policy-for-learners/)
+  * [Data Protection / Privacy Policy](/en/data-protection-privacy-policy/)
+  * [Office locations](/en/office-locations/)
+  * [Working for us](/en/work-for-us/)
+  * [Work With Us](/en/work-with-us/)
+
+  * Your Privacy Choices
+  * Cookie Preferences
+
+Data Centre Dynamics Ltd (DCD), 32-38 Saffron Hill, London, EC1N 8FH  
+Email. [[email protected]](/cdn-cgi/l/email-
+protection#553c3b333a153134213436303b213027312c3b34383c36267b363a38)  
+DCD is a subsidiary of [InfraXmedia](https://www.infraxmedia.com/)
+
+**More from InfraXmedia** : [SDxCentral](https://sdxcentral.com) \- [Data Center
+Nation](https://datacenternation.com/) \- [The AI Cities Summit](https://www.aicitysummit.com/)

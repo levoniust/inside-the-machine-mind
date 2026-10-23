@@ -1,0 +1,275 @@
+SOURCE COPY — SRC-HOROWITZ
+Retrieved 2026-10-21 for Inside the Machine Mind (offline reference copy; excerpt of the original, formatting simplified).
+Original URL: https://pdfs.semanticscholar.org/9476/20a1854655ed91a86b90d12695e05be85983.pdf
+Page/document title: (pdf)
+
+------------------------------------------------------------------------
+
+Computing’s Energy Problem:
+(and what we can do about it)
+Mark Horowitz
+Stanford University
+horowitz@ee.stanford.edu
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 1 of 46
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 2o f  4 6
+Everything Has A Computer Inside
+
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 3o f  4 6
+The Reason is Simple:
+Moore’s Law Made Gates Cheap
+
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 4o f  4 6
+Dennard’s Scaling 
+Made Them Fast & Low Energy
+The triple play:
+• Get more gates, 1/L 2 1/α2
+• Gates get faster, CV/i α
+• Energy per switch CV 2 α3
+Dennard, JSSC, pp. 256-268, Oct. 1974
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 5o f  4 6
+Our Expectation
+Cray-1: world’s fastest computer 1976-1982
+• 64Mb memory (50ns cycle time)
+• 40Kb register (6ns cycle time)
+• ~1 million gates (4/5 input NAND)
+• 80MHz clock
+• 115kW
+In 45nm (30 years later)
+• < 3 mm2
+• > 1 GHz
+• ~ 1 W
+CRAY-1
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 6o f  4 6
+Supporting Evidence
+http://cpudb.stanford.edu/
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 7o f  4 6
+Houston, We Have A Problem
+http://cpudb.stanford.edu/
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 8o f  4 6
+The Power Limit
+http://cpudb.stanford.edu/
+Watts/mm2
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 9o f  4 6
+Power Increased Because We Were Greedy
+10x too large
+Clever
+http://cpudb.stanford.edu/
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 10 of 46
+This Power Problem Is Not Going Away:
+P = α C * Vdd2 * f
+http://cpudb.stanford.edu/
+L0.6
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 11 of 46
+Think About It
+
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 12 of 46
+Technology to the Rescue?
+
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 13 of 46
+Problems w/ Replacing CMOS
+Pretty fundamental physics
+• Avoiding this problem will be hard
+Its capability is pretty amazing
+• fJ/gate, 10ps delays, 109 working devices
+e-
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 14 of 46
+Catch - 22
+Capital you need
+Investment Risk Very Different = High Risk
+Building Computers = Large $
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 15 of 46
+The Truth About Innovation
+Start by creating new markets
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 16 of 46
+Our CMOS Future
+Will see tremendous innovative uses of computation
+• Capability of today’s technology is incredible
+• Can add computing and communication for nearly $0
+• Key questions are what problems need to be solved?
+Most performance system will be energy limited
+• These systems will be optimized for energy efficiency
+Power = Energy/Op * Ops/sec
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 17 of 46
+Processor Energy – Delay Trade-off
+http://cpudb.stanford.edu/
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 18 of 46
+The Rise of Multi-Core Processors
+http://cpudb.stanford.edu/
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 19 of 46
+The Stagnation of Multi-Core Processors
+http://cpudb.stanford.edu/
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 20 of 46
+Optimizing Parallel Machines (GPUs)
+Galal et al, Trans on Computers, July 2011, pp 913,922
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 21 of 46
+Have A Shiny Ball, Now What?
+
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 22 of 46
+Signal Processing ASICs
+CPUs
+GP DSPs
+Dedicated
+1 2 3 4 5 6 7 8 9 1 01 11 21 31 41 51 61 71 81 92 0
+0.1
+1
+10
+100
+1000
+10000
+Energy Efficiency (MOPS/mW)
+CPUs+GPUs
+~1000x
+Markovic, EE292 Class, Stanford, 2013
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 23 of 46
+The Push For Specialized Hardware
+2
+
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 24 of 46
+Before Talking About Specialization
+
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 25 of 46
+Don’t Forget Memory System Energy
+
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 26 of 46
+Processor Energy w/ Corrected Cache Sizes
+
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 27 of 46
+Processor Energy Breakdown
+8 cores
+L1/reg/TLB
+L2
+L3
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 28 of 46
+Data Center Energy Specs
+Malladi, ISCA, 2012
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 29 of 46
+
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 30 of 46
+What Is Going On Here?
+CPUs
+GP DSPs
+Dedicated
+1 2 3 4 5 6 7 8 9 1 01 11 21 31 41 51 61 71 81 92 0
+0.1
+1
+10
+100
+1000
+10000
+Energy Efficiency (MOPS/mW)
+CPUs+GPUs
+~1000x
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 31 of 46
+ASIC’s Dirty Little Secret
+All the ASIC applications have absurd locality
+• And work on short integer data
+Inter 
+Prediction
+Intra 
+Prediction
+CABAC 
+Entropy 
+Encoder
+Video 
+Frames
+Compressed 
+Bit Stream
+Integer 
+Motion 
+Estimation
+Fractional 
+Motion 
+Estimation
+90% of Execution time is here
+H.264
+Hamid et al, ISCA, 2010
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 32 of 46
+Rough Energy Numbers (45nm)
+Integer
+Add
+8 bit 0.03pJ
+32 bit 0.1pJ
+Mult
+8 bit 0.2pJ
+32 bit 3 pJ
+FP
+FAdd
+16 bit 0.4pJ
+32 bit 0.9pJ
+FMult
+16 bit 1pJ
+32 bit 4pJ
+Memory
+Cache (64bit)
+8KB 10pJ
+32KB 20pJ
+1MB 100pJ
+DRAM 1.3-2.6nJ
+70 pJ
+I-Cache Access Register File
+Access
+25pJ 6pJ Control
+Instruction Energy Breakdown
+Add
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 33 of 46
+The Truth:
+It’s More About the Algorithm then the Hardware
+All Algorithms
+GPU Alg
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 34 of 46
+
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 35 of 46
+Highly Local Computation Model
+
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 36 of 46
+Highly Local Computation Model
+
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 37 of 46
+Highly Local Computation Model
+
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 38 of 46
+Highly Local Computation Model
+
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 39 of 46
+Compose These Cores into a Pipeline
+Program in space, not time
+• Makes building programmable hardware more difficult
+
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 40 of 46
+Working on System to Explore This Space
+Takes high-level program
+• Graph of stencil kernels
+Maps to hardware level assembly
+• Compute graph of operations for each kernel
+Currently we map the result to:
+• FPGA, custom ASIC
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 41 of 46
+Enabling Innovation
+You don’t just compile applications to efficiency
+• Need to tweak the application to fit constraints
+Need to enable application experts to play
+• They know how to “cheat” and still get good results
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 42 of 46
+Remember This Trade-off?
+Capital you need
+Investment Risk Need to reduce cost to play
+• Building constructors, not instances
+http://genesis2.stanford.edu/
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 43 of 46
+Not All Systems Are On The Bleeding Edge
+
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 44 of 46
+App Store For Hardware
+
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 45 of 46
+Challenge
+
+1.1: Computing’s Energy Problem: (and what we can do about it)© 2014 IEEE International Solid-State Circuits Conference 46 of 46
+A New Hope
+If technology is scaling more slowly
+• We can incorporate current design knowledge into tools
+• To create extensible system constructors
+If killer products are going to be application driven
+• Application experts need to design them
+We can leverage the 1st bullet to enable the 2nd
+• To usher in a new wave of innovative computing products

@@ -1,0 +1,501 @@
+SOURCE COPY — SRC-EPOCH-ABILENE
+Retrieved 2026-10-21 for Inside the Machine Mind (offline reference copy; excerpt of the original, formatting simplified).
+Original URL: https://epoch.ai/data/ai-data-centers/directory/openai-stargate-abilene
+Page/document title: OpenAI Stargate Abilene | AI data centers | Epoch AI
+
+------------------------------------------------------------------------
+
+[](/)
+
+[Latest](/latest)Our work
+
+#### Featured
+
+  * [Trends in AI](/trends)
+  * [Data on AI](/data)
+  * [Capabilities & benchmarking](/benchmarks)
+
+#### Publications
+
+  * [Papers & reports](/publications?type=paper&type=report)
+  * [Data Insights](/data-insights)
+  * [Newsletter](/gradient-updates)
+  * [Podcast](/epoch-after-hours)
+  * [All publications](/publications)
+
+#### Data explorers
+
+  * [AI capabilities](/benchmarks)
+  * [AI models](/data/ai-models)
+  * [AI data centers](/data/ai-data-centers)
+  * [AI chip sales](/data/ai-chip-sales)
+  * [AI companies](/data/ai-companies)
+  * [Polling on AI usage](/data/polling)
+  * [All data explorers](/data)
+
+#### Our benchmarks
+
+  * [Epoch Capabilities Index](/eci)
+  * [MirrorCode](/MirrorCode)
+  * [FrontierMath: Open Problems](/frontiermath/open-problems)
+  * [Epoch Automation Reports](/benchmarks/epoch-automation-reports)
+  * [Earthborne Rangers](/benchmarks/ebr-bench?view=graph&tab=release-date)
+
+Topics
+
+#### AI progress
+
+  * [Scaling](/topics/scaling)
+  * [Software progress](/topics/software-progress)
+  * [Open models](/topics/open-models)
+  * [Capabilities & benchmarks](/topics/capabilities)
+  * [Math](/topics/math)
+
+#### Industry
+
+  * [Leading companies](/topics/leading-companies)
+  * [Finances](/topics/finances)
+  * [Geopolitics](/topics/geopolitics)
+
+#### Infrastructure
+
+  * [Chips](/topics/chips)
+  * [Data centers](/topics/data-centers)
+  * [Energy](/topics/energy)
+
+#### Impacts
+
+  * [Adoption & use](/topics/adoption-and-use)
+  * [Economic impact](/topics/economic-impact)
+  * [Future of AI](/topics/future-of-ai)
+
+About
+
+#### Who we are
+
+  * [About us](/about)
+  * [Our team](/about/team)
+  * [Transparency](/about/transparency)
+
+#### Engage with us
+
+  * [Careers](/about/careers)
+  * [Press](/about/press)
+  * [Work with our experts](/about/consultations)
+  * [Donate](/about/donate)
+
+[Contact](/contact)
+
+[](/)
+
+  * [Latest](/latest)
+  * Our work
+
+#### Featured
+
+[Trends in AI](/trends)[Data on AI](/data)[Capabilities & benchmarking](/benchmarks)
+
+#### Publications
+
+##### [Papers & reports](/publications?type=paper&type=report)##### [Data Insights](/data-insights)#####
+[Newsletter](/gradient-updates)##### [Podcast](/epoch-after-hours)##### [All publications](/publications)
+
+#### Data explorers
+
+##### [AI capabilities](/benchmarks)##### [AI models](/data/ai-models)##### [AI data centers](/data/ai-data-
+centers)##### [AI chip sales](/data/ai-chip-sales)##### [AI companies](/data/ai-companies)##### [Polling on AI
+usage](/data/polling)##### [All data explorers](/data)
+
+#### Our benchmarks
+
+##### [Epoch Capabilities Index](/eci)##### [MirrorCode](/MirrorCode)##### [FrontierMath: Open
+Problems](/frontiermath/open-problems)##### [Epoch Automation Reports](/benchmarks/epoch-automation-
+reports)##### [Earthborne Rangers](/benchmarks/ebr-bench?view=graph&tab=release-date)
+
+  * [Navigate by topic](/topics)
+
+#### AI progress
+
+##### [Scaling](/topics/scaling)##### [Software progress](/topics/software-progress)##### [Open
+models](/topics/open-models)##### [Capabilities & benchmarks](/topics/capabilities)##### [Math](/topics/math)
+
+#### Industry
+
+##### [Leading companies](/topics/leading-companies)##### [Finances](/topics/finances)#####
+[Geopolitics](/topics/geopolitics)
+
+#### Infrastructure
+
+##### [Chips](/topics/chips)##### [Data centers](/topics/data-centers)##### [Energy](/topics/energy)
+
+#### Impacts
+
+##### [Adoption & use](/topics/adoption-and-use)##### [Economic impact](/topics/economic-impact)##### [Future
+of AI](/topics/future-of-ai)
+
+  * [About](/about)
+
+#### Who we are
+
+##### [About us](/about)##### [Our team](/about/team)##### [Transparency](/about/transparency)
+
+#### Engage with us
+
+##### [Careers](/about/careers)##### [Press](/about/press)##### [Work with our
+experts](/about/consultations)##### [Donate](/about/donate)
+
+  * [Contact](/contact)
+  * 
+
+[ Back to Directory](/data/ai-data-centers/directory)
+
+Updated Jul. 17, 2026
+
+# OpenAI Stargate Abilene
+
+Abilene, Texas, United States
+
+OpenAI Stargate Abilene is an operational AI data center with AI chips owned by Oracle and used by OpenAI. It
+hosts an estimated 509k H100-equivalents of AI compute, supported by 421 MW of IT power at a capital cost of
+$15.9 B. In Q4 2026, we project it to rise to 1,019k H100e AI compute, 843 MW IT power and a cost of $31.9 B.
+We estimate that it uses Nvidia B200 and Nvidia B300 chips.
+
+The timeline of IT power and AI compute capacity is based on satellite imagery, our cooling equipment power
+model, company disclosures, regulatory filings, and drone imagery.
+
+Abilene is the first of several planned Stargate sites across the U.S. and globally, expected to host OpenAI’s
+largest compute cluster.
+
+OWNEROracleSTATUSOperationalUSEROpenAIPROJECTStargate
+
+Show compute as
+
+H100e
+
+8-bit OP/s
+
+[](/data/ai-data-centers/directory/openai-stargate-abilene/satellite-explorer)
+
+Satellite imagery
+
+Latest: Jul. 27, 2026 · 5 high-res images
+
+[View satellite explorer →](/data/ai-data-centers/directory/openai-stargate-abilene/satellite-explorer)
+
+## Scale & specifications
+
+CURRENT COMPUTE
+
+509kH100e
+
+1.01e218-bit OP/s
+
+PROJECTED
+
+1,019kH100e
+
+2.02e218-bit OP/s
+
+CURRENT IT POWER
+
+421MW
+
+PROJECTED IT POWER
+
+843MW
+
+CURRENT COST
+
+$15.9B
+
+PROJECTED COST
+
+$31.9B
+
+## CoolingAir-cooled chiller
+
+OptiChill Free Cool
+
+CURRENT562.7 MW
+
+320
+
+PROJECTED1125.4 MW
+
+640
+
+Full breakdown
+
+Model| Manufacturer| Type| Units| Capacity (MW)| Units (Q4 '26)| Capacity (MW, Q4 '26)  
+---|---|---|---|---|---|---  
+OptiChill Free Cool| Airedale| Air-cooled chiller| 320| 562.7| 640| 1125.4  
+Total| | | 320| 562.7| 640| 1125.4  
+  
+## Buildout
+
+ComputeIT PowerCostHardware
+
+May 31, 20240K H100e
+
+|[CC-BY](https://creativecommons.org/licenses/by/4.0/)
+
+Share
+
+Download graph
+
+May 31, 2024
+
+[Satellite explorer  ](/data/ai-data-centers/directory/openai-stargate-abilene/satellite-
+explorer?date=2024-05-31)
+
+Land clearing begins for northern two buildings (Building 1-2)
+
+Jun 28, 2025
+
+[Satellite explorer  ](/data/ai-data-centers/directory/openai-stargate-abilene/satellite-
+explorer?date=2025-06-28)
+
+Building 1 looks close to finishing construction, with chillers in place. OpenAI
+[stated](https://openai.com/index/five-new-stargate-sites/) that "Oracle began delivering the first NVIDIA
+GB200 racks in June." The "tenant improvement" work [is not
+due](https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025000156) until September, however.
+
+Sep 26, 2025
+
+[Satellite explorer  ](/data/ai-data-centers/directory/openai-stargate-abilene/satellite-
+explorer?date=2025-09-26)
+
+Building 1 is fully operational around this date. The first phase was "live" on September 30 according a
+Crusoe [announcement](https://www.crusoe.ai/resources/newsroom/crusoe-announces-flagship-abilene-data-center-
+is-live). While the first phase consists of Building 1 and 2, the language doesn't outright confirm that both
+buildings are fully operational. The announcement also stated that "Oracle began delivering the first NVIDIA
+GB200 racks in June", and we think 3 months is enough time to ram to 50,000 GB200s in Building 1. The
+satellite image also suggests that Building 1 is complete (shell and equipment done, many cars neatly parked)
+while Building 2 is ongoing (trucks and construction equipment still present). The 200 MW
+[substation](https://www.mortenson.com/projects/abilene-data-center-development) built in 2022 and expanded in
+2024 is enough to power both buildings. To the right of Building 2, five gas turbines are in place with five
+more turbines still under construction. Chillers are partly installed for Building 3. Roof is complete for
+Building 4. The larger 1 GW substation is not complete yet.
+
+Compute
+
+127kH100e
+
+IT Power
+
+105MW
+
+Cost
+
+$4.0B
+
+Dec 24, 2025
+
+[Satellite explorer  ](/data/ai-data-centers/directory/openai-stargate-abilene/satellite-
+explorer?date=2025-12-24)
+
+Building 2 is fully operational. This exact date corresponds to the expected completion date of "Four (4) data
+hall spaces and an administrative office build-out" according to a [TDLR
+filing](https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025007742), but this date is also consistent with
+satellite imagery. By January 15, Building 2 looked as finished as Building 1, whereas on September 26 it did
+not look finished.
+
+Compute
+
+255kH100e
+
+IT Power
+
+211MW
+
+Cost
+
+$8.0B
+
+Jan 15, 2026
+
+[Satellite explorer  ](/data/ai-data-centers/directory/openai-stargate-abilene/satellite-
+explorer?date=2026-01-15)
+
+The 1 GW substation looks close to completion. Building 3 appears to have all power and cooling equipment
+installed, but there are still signs of construction work. This seems on track for operation in 3 months.
+Building 4 has about 80% of chillers installed. Other buildings have few or no chillers installed.
+
+Compute
+
+255kH100e
+
+IT Power
+
+211MW
+
+Cost
+
+$8.0B
+
+Mar 24, 2026
+
+[Satellite explorer  ](/data/ai-data-centers/directory/openai-stargate-abilene/satellite-
+explorer?date=2026-03-24)
+
+Building 3 and 4 look complete, but are not fully operational. Not as many cars are parked next to it as
+Building 1-2 which suggests they may still be ramping up. Building 4 was due by now according to a [regulatory
+filing](https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025014756). Building 5 still has light
+construction activity, while Building 6 still lacks chillers. The on-site power plant to the right of Building
+2 looks complete.
+
+Compute
+
+255kH100e
+
+IT Power
+
+211MW
+
+Cost
+
+$8.0B
+
+May 23, 2026
+
+[Satellite explorer  ](/data/ai-data-centers/directory/openai-stargate-abilene/satellite-
+explorer?date=2026-05-23)
+
+Buildings 3 and 4 are estimated to be operational. On April 22nd, Oracle
+[posted](https://x.com/i/status/2047012589302153558) that "In Abilene, 200MW is already operational". This
+suggests that there was still only Building 1 and 2 operational. Since Buildings 3 and 4 looked complete from
+the outside on March 24th, we give it another month after Oracle's post for them to be operational. This would
+also give the buildings a similar 1 year 4 months timeline that Buildings 1 took from land clearing to being
+operational.
+
+Compute
+
+509kH100e
+
+IT Power
+
+421MW
+
+Cost
+
+$15.9B
+
+Jul 28, 2026
+
+[Satellite explorer  ](/data/ai-data-centers/directory/openai-stargate-abilene/satellite-
+explorer?date=2026-07-28)
+
+Buildings 5-8 are structurally complete and roofed but not yet confirmed operational (fit-out ongoing). The
+substation looks complete.
+
+Compute
+
+509kH100e
+
+IT Power
+
+421MW
+
+Cost
+
+$15.9B
+
+Nov 1, 2026
+
+Projected
+
+[Satellite explorer  ](/data/ai-data-centers/directory/openai-stargate-abilene/satellite-
+explorer?date=2026-11-01)
+
+Buildings 5-8 are estimated to be operational. On March 24, Building 8 roughly looked like where Building 3
+was in September. Building 3 is estimated to be operational in April, 7 months later. This naively suggests
+Building 8 will be operational by early November, 7 months after March 24.
+
+Compute
+
+1,019kH100e
+
+IT Power
+
+843MW
+
+Cost
+
+$31.9B
+
+## Sources
+
+  1. [Crusoe 2024 Impact Report, with details on Abilene](https://drive.google.com/file/d/1oHWA9vmpvFOh-LvDy5fgq_wq5ITuxd1r/view?usp=sharing)
+  2. [Air Permit Application for buildings 1-2, featuring blueprints on p.157](https://drive.google.com/file/d/1FgfX6hqojlBtqNXJHjzJmnwWAMx4_M0b/view?usp=sharing)
+  3. [Mortensen’s profile of the project, with details of substations](https://www.mortenson.com/projects/abilene-data-center-development)
+
+View our [calculations](https://docs.google.com/spreadsheets/d/197BW-5tHutOzJ_LTv990eCO_M8nUXT2t1nl--
+UfMIUk/edit?usp=sharing) for this data center, or read more about our [methodology](/data/data-centers-
+documentation/methodology).
+
+## Investigating the trajectory of AI for the benefit of society
+
+Get the latest from Epoch AI in your inbox
+
+[Subscribe](https://epochai.substack.com/subscribe)
+
+[ ](https://x.com/EpochAIResearch)[ ](https://substack.com/@epochai)[
+](https://bsky.app/profile/epochai.bsky.social)[ ](https://github.com/epoch-research)[
+](https://www.linkedin.com/company/epochai)
+
+### Our work
+
+  * [Latest](/latest)
+  * [Trends in AI](/trends)
+  * [Publications](/publications)
+  * [Data Insights](/data-insights)
+  * [Newsletter: Gradient Updates](/gradient-updates)
+  * [Podcast](/epoch-after-hours)
+
+### Data on AI
+
+  * [Models](/data/ai-models)
+  * [AI data centers](/data/ai-data-centers)
+  * [Hardware](/data/machine-learning-hardware)
+  * [Companies](/data/ai-companies)
+  * [Chip sales](/data/ai-chip-sales)
+  * [Polling](/data/polling)
+
+### Benchmarking
+
+  * [Capabilities & benchmarking](/benchmarks)
+  * [FrontierMath](/frontiermath)
+
+### Company
+
+  * [About](/about)
+  * [Team](/about/team)
+  * [Consultations](/about/consultations)
+  * [Transparency](/about/transparency)
+  * [Donate](/about/donate)
+  * [Careers](/about/careers)
+
+© 2026 Epoch AI
+
+[Privacy policy](/privacy)[Cookie policy](/cookies)[Designed by And—Now](https://and-now.co.uk/)
+
+Feedback
+
+## Feedback
+
+Have a question? Noticed something wrong? Let us know.
+
+Message
+
+If you would like a reply, please include your name and email address.
+
+Name
+
+Email address
+
+CancelSubmit
+
+# OpenAI Stargate Abilene | AI data centers
+
+OpenAI Stargate Abilene is an operational AI data center with AI chips owned by Oracle and used by OpenAI. It
+hosts an estimated 509k H100-equivalents of AI compute, supported by 421 MW of IT power…

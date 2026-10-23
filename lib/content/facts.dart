@@ -71,6 +71,15 @@ const sources = <String, Source>{
   'SRC-DEEPBLUE': Source('SRC-DEEPBLUE', 'IBM, Deep Blue defeats Garry Kasparov (May 1997)'),
   'SRC-ALEXNET': Source('SRC-ALEXNET', 'Krizhevsky, Sutskever, Hinton, "ImageNet Classification with Deep CNNs", NeurIPS 2012'),
   'SRC-PHYSICS': Source('SRC-PHYSICS', 'Standard physical constants (water volumetric heat capacity ~4.18 MJ/m³·K vs air ~1.2 kJ/m³·K)'),
+  'SRC-JEDEC': Source('SRC-JEDEC', 'JEDEC High Bandwidth Memory 3 (HBM3) standard JESD238A (January 2022), jedec.org', url: 'jedec.org'),
+  'SRC-LLAMACPP': Source('SRC-LLAMACPP', 'llama.cpp README — open-source local-LLM project (quantized GGUF models, 4-bit recommended), github.com/ggml-org/llama.cpp', url: 'github.com/ggml-org/llama.cpp'),
+  'SRC-LLAMACPP-MODELS': Source('SRC-LLAMACPP-MODELS', 'llama.cpp docs "Models" — how to choose a quantized file (size vs quality guidance), github.com/ggml-org/llama.cpp/blob/master/docs/models.md', url: 'github.com/ggml-org/llama.cpp/blob/master/docs/models.md'),
+  'SRC-LLAMACPP-WIKI': Source('SRC-LLAMACPP-WIKI', 'llama.cpp wiki "Tensor Encoding Schemes" (every quant type: bits per weight, block structure), github.com/ggml-org/llama.cpp/wiki', url: 'github.com/ggml-org/llama.cpp/wiki'),
+  'SRC-UNSLOTH-DV2': Source('SRC-UNSLOTH-DV2', 'Unsloth blog "Unsloth Dynamic v2.0 GGUFs" (the UD-…_XL quant recipes), unsloth.ai/blog/dynamic-v2', url: 'unsloth.ai/blog/dynamic-v2'),
+  'SRC-UNSLOTH-DOCS': Source('SRC-UNSLOTH-DOCS', 'Unsloth documentation "Unsloth Dynamic 3.0 GGUFs", unsloth.ai/docs', url: 'unsloth.ai/docs'),
+  'SRC-GPTQ': Source('SRC-GPTQ', 'Frantar et al., "GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers", arXiv 2210.17323 (2022)'),
+  'SRC-AWQ': Source('SRC-AWQ', 'Lin et al., "AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration", arXiv 2306.00978 (2023)'),
+  'SRC-EXL2': Source('SRC-EXL2', 'exllamav2 README — EXL2 quantized-weight file format, github.com/turboderp-org/exllamav2', url: 'github.com/turboderp-org/exllamav2'),
 };
 
 const facts = <String, Fact>{
@@ -171,4 +180,9 @@ const facts = <String, Fact>{
   'RB-RT2': Fact('RB-RT2', 'July 2023: RT-2, a vision-language-action (VLA) model, turned web knowledge into robot actions', sources: ['SRC-RT2']),
   'RB-PI0': Fact('RB-PI0', 'Oct 2024: π0 (Physical Intelligence), a generalist robot policy that can fold laundry, bus tables and pack boxes', sources: ['SRC-PI0']),
   'RB-GEMINI': Fact('RB-GEMINI', 'Mar 2025: Gemini Robotics; 30 Jul 2026: Gemini Robotics 2 brings whole-body control to humanoid robots', sources: ['SRC-GEMINI-ROBOTICS']),
+  'QN-BPW': Fact('QN-BPW', 'llama.cpp weight formats, bits per weight: F32 = 32, F16/BF16 = 16, Q8_0 = 8, Q5_0 = 5, Q4_0 = 4, Q4_K = 4.5, IQ4_XS = 4.25, IQ3_XXS = 3.06, IQ2_XXS = 2.06, IQ1_S = 1.5', sources: ['SRC-LLAMACPP-WIKI'], value: '1.5–32 bits/weight'),
+  'QN-BLOCK': Fact('QN-BLOCK', 'GGUF quant formats store weights in blocks of 32 weights with shared notes about their scale; k-quants group blocks into super-blocks (8 × 32 weights) with even better shared notes, so the same bits go further', sources: ['SRC-LLAMACPP-WIKI'], value: 'blocks of 32 weights'),
+  'QN-70B-MATH': Fact('QN-70B-MATH', 'Arithmetic: a 70B model\'s weights are ~140 GB at 16 bits but only ~39 GB at Q4_K\'s 4.5 bits per weight (70e9 × 4.5 ÷ 8)', sources: ['SRC-LLAMACPP-WIKI'], value: '140 GB → ~39 GB'),
+  'QN-MIX': Fact('QN-MIX', 'A Q4_K_M file is a little bigger than 4.5 bits per weight on purpose: the small number of layers the model leans on hardest stay at a higher precision', sources: ['SRC-LLAMACPP-WIKI', 'SRC-UNSLOTH-DV2']),
+  'QN-4BIT-OK': Fact('QN-4BIT-OK', 'llama.cpp\'s own quantize measurements on Llama 3.1 8B: the original file is 14.96 GiB, Q4_K_M is 4.58 GiB, IQ1_S is 1.87 GiB; the quantize docs note the accuracy loss (measured in perplexity) shrinks further when an importance matrix guides the squeeze', sources: ['SRC-LLAMACPP-MODELS'], value: '14.96 → 4.58 → 1.87 GiB'),
 };

@@ -43,6 +43,7 @@ import 's2/s2_scaling_laws.dart';
 import 's2/s2_train_it.dart';
 import 's3/s3_answer.dart';
 import 's3/s3_at_home.dart';
+import 's3/s3_quants.dart';
 import 's3/s3_beyond_text.dart';
 import 's3/s3_embeddings.dart';
 import 's3/s3_loop.dart';
@@ -101,6 +102,7 @@ final Map<String, WidgetBuilder> screenBuilders = {
   's3_sampling': (_) => const S3SamplingScreen(),
   's3_loop': (_) => const S3LoopScreen(),
   's3_at_home': (_) => const S3AtHomeScreen(),
+  's3_quants': (_) => const S3QuantsScreen(),
   's3_frontier': (_) => const S3FrontierScreen(),
   's3_serving': (_) => const S3ServingScreen(),
   's3_beyond_text': (_) => const S3BeyondTextScreen(),

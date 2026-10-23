@@ -239,6 +239,21 @@ const glossary = <GlossaryTerm>[
   GlossaryTerm('VLA model', 'eyes, words and hands in one brain',
       'Vision-Language-Action model: a model that sees through cameras, understands instructions and outputs robot movements.',
       section: 3, aliases: ['vision-language-action', 'VLA', 'robot policy']),
+  GlossaryTerm('GGUF', 'the shipping carton',
+      'The standard file format for models you run at home. It packs the weights plus a label that tells the app what is inside. It is not a compression level — "Q4_K_M.gguf" means compressed to Q4_K_M, packed in a GGUF carton.',
+      section: 3, aliases: ['gguf', '.gguf']),
+  GlossaryTerm('K-quant', 'the smarter packing',
+      'A generation of number-packing (the K in names like Q4_K_M) that groups blocks of 32 weights into super-blocks with better shared notes, so every bit carries more of the model.',
+      section: 3, aliases: ['k-quants', 'k-quant', 'K-quants']),
+  GlossaryTerm('I-quant', 'the dictionary packer',
+      'The newest packing generation (IQ names): each weight is chosen from a tiny built-in dictionary of allowed values, guided by a test run that knows which weights matter most.',
+      section: 3, aliases: ['i-quants', 'i-quant', 'IQ']),
+  GlossaryTerm('Bits per weight', 'how thick each number is',
+      'The average number of bits used to store one weight. The measuring stick for quantization: 16 is an uncompressed number, 4 is squeezed hard, 1.5 is drastic.',
+      section: 3, aliases: ['bits/weight', 'bpw']),
+  GlossaryTerm('Importance matrix', 'the taste-test notes',
+      'A map made by running a model briefly over test text before compressing it, marking which weights the answers lean on hardest — so the remaining bits get spent there.',
+      section: 3, aliases: ['imatrix']),
 ];
 
 final Map<String, GlossaryTerm> _index = {

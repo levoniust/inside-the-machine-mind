@@ -1,0 +1,431 @@
+SOURCE COPY — SRC-GREENGRID-WUE
+Retrieved 2026-10-21 for Inside the Machine Mind (offline reference copy; excerpt of the original, formatting simplified).
+Original URL: https://www.thegreengrid.org/system/files/store/WUE_v1.pdf
+Page/document title: (pdf)
+
+------------------------------------------------------------------------
+
+WHITE PAPER #35  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+WATER USAGE EFFECTIVENESS 
+(WUE™): A GREEN GRID DATA 
+CENTER SUSTAINABILITY 
+METRIC 
+ 
+ 
+EDITOR: 
+Michael Patterson, Intel 
+ 
+CONTRIBUTORS: 
+Dan Azevedo, Symantec 
+Christian Belady, Microsoft 
+Jack Pouchet, Emerson
+PAGE 2 
+ 
+ 
+2011 The Green Grid. All rights reserved. No part of this publication may be used, reproduced, photocopied, transmitted, or stored 
+in any retrieval system of any nature without the written permission of the copyright owner. 
+ 
+Executive Summary 
+The Green Grid (TGG) is a global consortium of companies, government agencies, and educational institutions 
+dedicated to advancing energy efficiency in data centers and business computing ecosystems. TGG has 
+developed a new metric to complement the series of metrics it has introduced in the past few years, which 
+includes power usage effectiveness (PUE™), data center energy productivity (DCeP™), energy reuse 
+effectiveness (ERE™), data center compute efficiency (DCcE™), and others. The Green Grid proposes this new 
+metric to address water usage in data centers, which is emerging as extremely important in the design, 
+location, and operation of data centers in the future. The new water usage effectiveness (WUE™) metric—
+combined with the PUE and carbon usage effectiveness (CUE™) metrics—enables data center operators to 
+quickly assess the water, energy, and carbon sustainability aspects of their data centers, compare the results, 
+and determine if any energy efficiency and/or sustainability improvements need to be made. Since PUE has 
+received broad adoption in the industry, the WUE metric is a natural extension of PUE and extends the family of 
+xUE metrics. 
+ 
+While xUE metrics address various key energy and sustainability elements in the data center, The Green Grid 
+continues to drive the development of more advanced metrics such as data center productivity. To prom ote 
+these metrics and encourage greater data center energy efficiency for businesses, academia, and 
+governments around the world, The Green Grid will continue to publish white papers, technical briefs, books , 
+and articles, along with hosting tech forums that provide detailed guidance on using these metrics and 
+developing alliances with other organizations that promote a similar vision and goals.
+PAGE 3 
+ 
+ 
+2011 The Green Grid. All rights reserved. No part of this publication may be used, reproduced, photocopied, transmitted, or stored 
+in any retrieval system of any nature without the written permission of the copyright owner. 
+ 
+Table of Contents 
+I. Introduction ......................................................................................................................................................... 3 
+II. Sustainability Metrics: PUE, CUE™, and WUE™ ................................................................................................ 3 
+III. Water Usage Effectiveness (WUE) ..................................................................................................................... 4 
+IV. Appropriate Use of WUE and WUEsource .............................................................................................................. 7 
+V. Long Term ........................................................................................................................................................... 9 
+VI. Conclusion ........................................................................................................................................................... 9 
+VII. About The Green Grid ....................................................................................................................................... 10 
+VIII. Appendix A. Energy Water Intensity Factor ...................................................................................................... 11 
+ 
+I. Introduction 
+The Green Grid believes that several metrics can help IT organizations better understand and improve the 
+sustainability of their existing data centers, as well as help them make smarter decisions on new data center 
+deployments.  
+ 
+Why the need for improved sustainability? Because data center energy consumption, carbon emissions, and 
+water usage are affecting companies’ decisions on growth, location, and outsourcing strategies. The power 
+usage effectiveness (PUE™) metric has already proved to be a great industry tool for measuring infrastructure 
+energy efficiency. However, it is important for the industry to continue driving the effective use of resources to 
+maximize operational efficiency and reduce the impact on resources and the environment. With more 
+sustainable data centers, IT organizations can better manage increased computing, network, and storage 
+demands and at the same time lower their energy costs and reduce the total cost of ownership (TCO)—all while 
+remaining competitive and able to meet future business needs.  Clearly, the future presents risks, especially 
+when it comes to carbon taxation and water costs and rights. Organizations that proactively focus on these 
+issues will lower their business risks, increase their potential for growth, and better manage their 
+environmental costs.  
+ 
+II. Sustainability Metrics: PUE, CUE™, and WUE™  
+Ideally, the metrics and processes established to address data center sustainability will help organizations first 
+determine if an existing data center can be optimized before moving ahead with a new data center. For this 
+reason, The Green Grid recently introduced the carbon usage effectiveness (CUE) metric to address carbon 
+emissions and now introduces the new water usage effectiveness (WUE) metric to address water usage in data 
+centers. Both carbon emissions and water usage are emerging as extremely important considerations in the 
+design, location, and operation of data centers in the future. The combination of PUE, CUE, and WUE enables 
+PAGE 4 
+ 
+ 
+2011 The Green Grid. All rights reserved. No part of this publication may be used, reproduced, photocopied, transmitted, or stored 
+in any retrieval system of any nature without the written permission of the copyright owner. 
+data center operators to quickly assess important sustainability aspects in their data centers, compare the 
+results, and determine if they need to make any energy efficiency and/or sustainability improvements. WUE 
+represents the third metric (along with PUE and CUE) in the xUE family of metrics, a series designed to help the 
+data center community better manage energy, environmental, societal, and sustainability parameters 
+associated with building, commissioning, operating, and de-commissioning data centers. 
+ 
+Like PUE and CUE, the WUE metric uses the familiar value of IT Equipment Energy as its denominator. Once 
+determined for PUE or CUE, the same value should be used as the denominator for this new metric as well. 
+This commonality of structure will both ensure the metrics stay linked and speed their adoption. 
+ 
+Unlike PUE, WUE and CUE have dimensions (covered in Section III below), while PUE is unit-less; its value is 
+energy divided by energy. Another important difference is the range of values. PUE has  an ideal value of 1.0, 
+implying that all energy used at the site goes to the IT equipment. There is no theoretical upper bound ary for 
+PUE. CUE and WUE both have an ideal value of 0.0, indicating that no carbon or water use is associated with 
+the data center’s operations. CUE and WUE also have no theoretical upper boundary, like PUE. (For further 
+information regarding PUE calculations, please see The Green Grid White Paper #22, Usage and Public 
+Reporting Guidelines for The Green Grid’s Infrastructure Metrics (PUE/DCiE).1) 
+ 
+All three metrics cover the operations of the data center, but they do not cover the full life-cycle environmental 
+burden of the data center and IT equipment. For example, attempting to determine the water use in the 
+construction of the data center or in the manufacturing of the IT equipment would make the WUE metric far too 
+difficult to measure, calculate, or use. The Green Grid deems the full life cycle to be important to the 
+sustainability of the industry but chose, for practical considerations, to exclude it from the WUE metric at this 
+time. Full life-cycle considerations will be considered in future TGG efforts. For now, WUE is specifically limited 
+to water use in processes due to site operations and source energy generation (similar to Scope 1 and Scope 2 
+greenhouse gas (GHG) emissions2 ). 
+ 
+III. Water Usage Effectiveness (WUE) 
+The metric for water usage in the data center is defined at a high level as: 
+EnergyEquipment  IT
+ge Water UsaAnnualWUE
+        (1) 
+ 
+The units of WUE are liters/kilowatt-hour (L/kWh). 
+ 
+                                           
+1 http://www.thegreengrid.org/en/Global/Content/white-
+papers/Usage%20and%20Public%20Reporting%20Guidelines%20for%20PUE%20DCiE 
+2 http://www.epa.gov/greeningepa/glossary.htm#s 
+PAGE 5 
+ 
+ 
+2011 The Green Grid. All rights reserved. No part of this publication may be used, reproduced, photocopied, transmitted, or stored 
+in any retrieval system of any nature without the written permission of the copyright owner. 
+Water use associated with the data center is a complex topic at many levels. With WUE, the issue of a ―source-
+based‖ versus ―site-based‖ metric must be considered. The main issue is that water use or changes to a site’s 
+water use strategy generally affects other site use parameters and also can affect the supply chain for different 
+utilities. A reduction in water use on-site can be accomplished a number of ways. The most attractive way is 
+simply to employ optimal design, then increase operational efficiencies and tune the existing systems. Re-
+commissioning a facility can accomplish this. The industry is replete with horror st ories of data centers where 
+one computer room air conditioning (CRAC) unit is dehumidifying while another is humidifying—together 
+wasting both water and energy. In addition, many data centers have yet to take advantage of the ASHRAE 
+2008 extended environmental envelope where recommended minimum humidity levels have been reduced to 
+5.5°C (42°F) dew point. 
+ 
+Beyond these changes, water use reductions generally have adverse trade-offs with increased energy use from 
+increased chemical use (in water treatment systems). A rise in energy use has specific effects on the ―site‖ as 
+well as on the ―source.‖ As mentioned, if the site reduces its water use, there could be an associated energy 
+cost. This trade-off may be attractive at the site level—a decrease in water use in exchange for an increase in 
+kilowatt-hours purchased or generated. However, if the goal is to minimize water use at the regional or 
+watershed level, then the change may actually have an adverse impact that needs to be considered. It takes a 
+significant amount of water to generate electricity. The amount of water depends on the generation method 
+used, but the majority of electricity generation today is still very water intensive. 3 So reducing water use at the 
+site may increase electricity use, which will likely result in increased water use at the power-generation source. 
+Depending on many factors like location, business strategy, and financial considerations, increasing water use 
+and decreasing energy use may be the desired outcome, or increasing energy use and decreasing water use 
+(as in a desert location) may be the desired outcome. Regardless of the desired outcome PUE, CUE, and WUE 
+are helpful tools to enable business decisions. 
+ 
+For example, a data center can choose to use a direct expansion (DX) cooler, which needs no water, instead of 
+a cooling tower–based chiller, which uses the evaporation of water as a heat rejection mechanism. Certainly 
+the site will use less water with a DX-based cooling system. But these systems can be less efficient than 
+evaporative-based technologies, requiring a larger amount of energy. Depending on the energy -generation 
+method, this additional load could mean increased water use at the power plant. In this case, the water use 
+may simply be shifted from one site to another, while the ecosystem’s total water use may actually go up.  
+ 
+Therefore, The Green Grid believes that, at a minimum, both source- and site-based WUE metrics are 
+beneficial. Part of TGG’s efforts going forward will be to further explore these different levels and make 
+recommendations on the specifics of each.  
+                                           
+3 For example, of the 1,404 billion gallons of water withdrawals used in the State of Minnesota in 2008, more than 
+half (838 billion gallons) went to power generation, with public supply a distant second at 217 billion gallons. 
+http://www.dnr.state.mn.us/waters/watermgmt_section/appropriations/wateruse.html  
+PAGE 6 
+ 
+ 
+2011 The Green Grid. All rights reserved. No part of this publication may be used, reproduced, photocopied, transmitted, or stored 
+in any retrieval system of any nature without the written permission of the copyright owner. 
+ 
+Analogous to the direct (Scope 1) and indirect (Scope 2) definitions used to describe carbon emissions, TGG 
+defines the new metrics as: 
+ WUE, a site-based metric that is an assessment of the water used on-site for operation of the data 
+center. This includes water used for humidification and water evaporated on-site for energy production 
+or cooling of the data center and its support systems (similar to carbon Scope 1). 
+ 
+ WUEsource, a source-based metric that includes water used on-site and water used off-site in the 
+production of the energy used on-site. Typically this adds the water used at the power-generation 
+source to the water used on-site (similar to carbon Scope 2). 
+ 
+EnergyEquipment  IT
+ge Water UsaSite AnnualWUE
+       (2) 
+ 
+EnergyEquipment  IT
+ge Water UsaSite Annual er UsageEnergy Wat Source AnnualWUEsource 
+  (3) 
+ 
+To determine the source energy water usage, the facility’s total energy use must be known. The total facility 
+energy is the numerator in PUE and is defined as the average energy used over a year as measured by the 
+utility or on-site generation—the energy dedicated solely to the data center and its infrastructure operations 
+(important in mixed-use buildings that house data centers as one of a number of functions). 
+ 
+Once known, this value can then be combined with an energy water intensity factor (EWIF) that is based on the 
+water used to produce the energy. Further discussion of EWIF and local values for thermoelectric generation is 
+included in Appendix A, which addresses both technology-based EWIF values that are region-independent and 
+some location-specific values. More specific regional information may be available, depending on the territory. 
+One source for local values is a National Renewable Energy Laboratory (NREL) technical report, Consumptive 
+Water Use for U.S. Power Production.4 EWIF for other sources beyond thermoelectric generation will be further 
+developed, but initially solar, wind, and hydro power are taken as 0. The U.S. national average is 1.8 
+liters/kWh. The annual water use from source energy can be determined by allocating water use by a 
+percentage of the year from the various sources. Then WUEsource can be found as: 
+ 
+  EnergyEquipment  IT ge Water UsaSite Annual PUEEWIFWUEsource 
+     (4) 
+ 
+                                           
+4 Consumptive Water Use for U.S. Power Production, P. Torcellini, N. Long, and R. Judkoff, 2003, NREL/TP-550-
+33905, http://www.nrel.gov/docs/fy04osti/33905.pdf 
+PAGE 7 
+ 
+ 
+2011 The Green Grid. All rights reserved. No part of this publication may be used, reproduced, photocopied, transmitted, or stored 
+in any retrieval system of any nature without the written permission of the copyright owner. 
+The IT Equipment Energy (used in Equations 1 through 4) is defined as the equipment energy over the year 
+that is used to manage, process, store, or route data within the data center. PUE is the annual PUE.  
+ 
+It is also important to understand the components for the loads in the metrics, which can be described as:  
+ IT Equipment Energy. This includes the load associated with all of the IT equipment, including 
+compute, storage, and network equipment, along with supplemental equipment such as KVM 
+switches, monitors, and workstations/laptops used to monitor or otherwise control the data center. 
+ 
+ Total Facility Energy. This includes all IT equipment energy as described above, plus everything that 
+supports the IT equipment load, such as: 
+ Power delivery components (e.g., UPS, switch gear, generators, PDUs, batteries, and distribution 
+losses external to the IT equipment) 
+ Cooling system components (e.g., chillers, CRACs, DX air handler units, pumps, and cooling 
+towers) 
+ Other miscellaneous component loads such as data center lighting 
+ 
+ Annual Water Use (Site and Source). This includes all water used in the operations of or for the data 
+center, including: 
+ Humidification 
+ Water consumed for cooling the data center or data center–associated power-generating 
+equipment (including cooling tower evaporation, blowdown, and drift) 
+ Water used in the production of energy. The water used in energy production off-site is only 
+included in the WUEsource metric. The water used in energy production on-site is included in both 
+WUE and WUEsource. 
+ 
+IV. Appropriate Use of WUE and WUEsource 
+In practice, WUE is expected to be the more easily measured and commonly reported of the two metrics. It also 
+is the simplest metric for driving optimization of an operational site’s water use. This can be accomplished by 
+such actions as: 
+ Reduce IT energy use, thereby reducing cooling demand, thereby reducing water consumption. 
+ Ensure the humidity control system is optimized and the data center is running at the low end of the 
+ASHRAE-recommended guidelines for humidity (5.5°C dew point). 
+ Optimize cooling tower operations (if they are used) to increase cycles of concentration. 
+ Implement all appropriate best practice airflow management strategies to improve cooling efficiency . 
+PAGE 8 
+ 
+ 
+2011 The Green Grid. All rights reserved. No part of this publication may be used, reproduced, photocopied, transmitted, or stored 
+in any retrieval system of any nature without the written permission of the copyright owner. 
+ Operate the data center at or near the ASHRAE-recommended upper limit for temperature, as this will 
+(depending on the cooling plant) allow warmer chilled water and require less evaporation of water to 
+produce it. 
+ 
+WUEsource, on the other hand, should be the metric used for data center decisions related to site planning and 
+data center design, helping with such considerations as: 
+ The total water footprint of potential sites should be determined, including water used in energy 
+production. 
+ The cooling system design chosen may reduce water use on-site but possibly boost energy use and 
+increase the data center’s total impact on water usage. 
+ Selecting a dry, cool site (with the option of air-side economization) versus a hot, humid site could 
+reduce on-site and off-site (at the power-generation station) water use. WUE would improve, but 
+WUEsource would show an even greater improvement. 
+ 
+The Green Grid recognizes that both WUE and WUEsource have value and that each has a separate but closely 
+related applicability. At a minimum, existing sites should use WUE in their operational optimizations  and use 
+WUEsource for decisions that affect water and energy use beyond the data center itself. 
+ 
+In summary, WUE provides a way to determine: 
+ Opportunities to improve a data center’s sustainability 
+ How a data center compares with similar data centers 
+ If the data center’s operators are improving its designs and processes over time 
+ Opportunities for the consideration of alternate cooling strategies or renewable power sources that 
+use no water  
+ Trade-offs in energy efficiency strategies by comparing PUE, CUE, and WUE under various use 
+scenarios, operating conditions, etc. 
+ 
+In the short term, The Green Grid suggests that data center owners begin thinking about how to adopt the WUE 
+and WUEsource metrics in their own operations to improve their own sustainable practices. While these metrics 
+are not fully defined at this point, The Green Grid feels it is important to think about both carbon emissions and 
+water usage in data centers and begin calculating the xUE family of metrics (PUE, CUE, and WUE) in their 
+operations, even if the method currently requires estimations and calculations versus direct measurement. In 
+addition, The Green Grid encourages data center owners to share their respective PUE, CUE, and WUE results, 
+which will help individual data center owners analyze their measurement methodologies as well as understand 
+how their results compare with the rest of the industry. 
+ 
+PAGE 9 
+ 
+ 
+2011 The Green Grid. All rights reserved. No part of this publication may be used, reproduced, photocopied, transmitted, or stored 
+in any retrieval system of any nature without the written permission of the copyright owner. 
+V. Long Term 
+Clearly, this brief white paper leaves out much of the detail on how to calculate, measure, and use WUE. The 
+Green Grid plans to expand on this metric in further detail but, in the spirit of industry transparency and 
+urgency, released this white paper early to start the socialization process of WUE and the other xUE metrics as 
+well as encourage industry discussion. Items already being considered for future white papers include: 
+1. Detailed process on determining WUE 
+2. Further development of the site versus source issue for WUE and how and when to use each 
+3. Process for determining WUE for mixed-use buildings 
+4. Further review of multiple water sources for a site 
+5. The details of water quality (generally the chemical constituents), water locality, temperature, and the 
+same will affect the sustainability criteria of a particular water-use scheme. 
+6. How to deal with re-used or reclaimed energy or water for other users outside the data center 
+boundary (water reclaimed and re-used within the data center boundary will improve WUE and show 
+the benefit) 
+7. Understanding the CO2/greenhouse gas and embedded energy content of delivered water 
+(kgCO2/liter). This needs to be considered because water treatment itself can be an energy-intensive 
+process. Desalination of seawater uses far more energy than extracting water from a snowmelt -
+sourced reservoir. Pumping and delivery of water is also an important component, as is evaporation of 
+water that may occur in its distribution. In the future, these factors could be included in a WUE scope3 
+metric. Other water parameters also can affect the overall balance. Is the water used warm or cold, 
+and was energy expended to get it that way?  
+8. Incorporation of developing water and carbon accounting practices 
+9. Life-cycle aspects of carbon, water, and energy 
+ 
+One can envision a future scenario where data center location, design, architecture, and infrastructure 
+decisions include PUE, CUE, and WUE as well as the full source-energy and water composition of delivered, 
+locally produced and stored energy and natural resources. An increased understanding of #6 in the above list 
+will significantly aid meaningful discussions along these lines. 
+ 
+VI. Conclusion 
+The Green Grid feels the new CUE and WUE metrics will have the same positive impact on the industry as did 
+PUE. This is a huge opportunity for the industry to rally around these metrics, and The Green Grid encourages 
+other industry stakeholders to participate in developing WUE with The Green Grid. Moving forward, The Green 
+Grid recommends the use of PUE, CUE, and WUE, with the understanding that these metrics will be refined in 
+the future. 
+ 
+PAGE 10 
+ 
+ 
+2011 The Green Grid. All rights reserved. No part of this publication may be used, reproduced, photocopied, transmitted, or stored 
+in any retrieval system of any nature without the written permission of the copyright owner. 
+VII. About The Green Grid 
+The Green Grid is a global consortium of companies, government agencies, and educational institutions 
+dedicated to advancing energy efficiency in data centers and business computing ecosystems. The Green Grid 
+does not endorse vendor-specific products or solutions, and instead seeks to provide industry-wide 
+recommendations on best practices, metrics, and technologies that will improve overall data center energy 
+efficiencies. Membership is open to organizations interested in data center operational efficiency at the 
+Contributor, General, or Associate member level. Additional information is available at www.thegreengrid.org. 
+ 
+PAGE 11 
+ 
+ 
+2011 The Green Grid. All rights reserved. No part of this publication may be used, reproduced, photocopied, transmitted, or stored 
+in any retrieval system of any nature without the written permission of the copyright owner. 
+ 
+VIII. Appendix A. Energy Water Intensity Factor  
+The energy water intensity factor (EWIF) is needed to calculate WUEsource. The EWIF value is a measurement of 
+a volume of water used for generating energy. Many energy-generation methods use significant amounts of 
+water in their operations (often for cooling). The actual water consumption of a data center’s energy generation 
+at the source needs to be considered for activities such as site selection and system design. 
+ 
+Table A-1. TGG-recommended EWIF values if local specific data is not known  
+Production method Suggested 
+EWIF (L/kWh) 
+Comments 
+Hydro 0 While evaporation is the main source of water use in power generation, to 
+the extent that reservoirs for hydroelectric plants lose more water to 
+evaporation than thermoelectric plants due to cooling, the evaporation is 
+not a marginal rate based on increases or decreases in energy use. If hydro 
+is being built for your data center, use an EWIF of 68 L/kWh. 
+Solar (PV) 0  
+Solar (Concentrated) 3.3  
+Wind 0  
+Coal 2.2 For coal with CO2 sequestration, use 2.8 L/kWh. 
+Nuclear 3.3  
+Natural Gas 0.8  
+Unknown 1.8 Per the U.S. Aggregate for Thermoelectric Plants 
+ 
+The EWIF values follow the calculation methodology used in the NREL Consumptive Water Use for U.S. Power 
+Production technical report referred to in Section III of this paper, including a 5% generation loss for 
+thermoelectric and a 9% transmission loss. The EWIF values above are derived from Energy Demands on 
+Water Resources, Report to Congress on the Interdependency of Energy and Water by the U.S. Department of 
+Energy (2006)5 as well as the NREL report. 
+ 
+Table A-2. U.S. Regional EWIFs adopted from Consumptive Water Use for U.S. Power Production (L/kWh) 
+  
+Western Interconnect 1.4 
+Eastern Interconnect 1.9 
+Texas Interconnect 1.7 
+U.S. Aggregate 1.8 
+ 
+                                           
+5 http://www.sandia.gov/energy-water/docs/121-RptToCongress-EWwEIAcomments-FINAL.pdf 
+PAGE 12 
+ 
+ 
+2011 The Green Grid. All rights reserved. No part of this publication may be used, reproduced, photocopied, transmitted, or stored 
+in any retrieval system of any nature without the written permission of the copyright owner. 
+Table A-3. U.S. State EWIFs adopted from Consumptive Water Use for U.S. Power Production (L/kWh) 
+State EWIF   State EWIF   State EWIF  
+Alabama 0.53  Louisiana 5.91  Oklahoma 1.93 
+Alaska 1.17  Maine 1.10  Oregon 3.10 
+Arizona 1.21  Maryland 0.11  Pennsylvania 2.04 
+Arkansas 1.10  Massachusetts 0.00  Rhode Island 0.00 
+California 0.19  Michigan 1.89  South Carolina 0.98 
+Colorado 1.93  Minnesota 1.67  South Dakota 0.04 
+Connecticut 0.30  Mississippi 1.48  Tennessee 0.00 
+Delaware 0.04  Missouri 1.17  Texas 1.67 
+D.C. 6.09  Montana 3.63  Utah 2.16 
+Florida 0.53  Nebraska 0.72  Vermont 1.32 
+Georgia 2.27  Nevada 2.12  Virginia 0.26 
+Hawaii 0.15  New Hampshire 0.45  Washington 1.10 
+Idaho 0.00  New Jersey 0.26  West Virginia 2.23 
+Illinois 3.97  New Mexico 2.38  Wisconsin 1.85 
+Indiana 1.55  New York 3.22  Wyoming 1.85 
+Iowa 0.45  North Carolina 0.87    
+Kansas 2.20  North Dakota 1.36    
+Kentucky 4.16  Ohio 3.60

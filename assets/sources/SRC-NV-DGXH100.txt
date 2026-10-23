@@ -1,0 +1,391 @@
+SOURCE COPY — SRC-NV-DGXH100
+Retrieved 2026-10-21 for Inside the Machine Mind (offline reference copy; excerpt of the original, formatting simplified).
+Original URL: https://docs.nvidia.com/dgx/dgxh100-user-guide/introduction-to-dgxh100.html
+Page/document title: Introduction to NVIDIA DGX H100/H200 Systems — NVIDIA DGX H100/H200 User Guide
+
+------------------------------------------------------------------------
+
+Skip to main content
+
+__Back to top __ `Ctrl`+`K`
+
+[ NVIDIA DGX H100/H200 User Guide ](index.html)
+
+__ Search `Ctrl`+`K`
+
+______
+
+__ Search `Ctrl`+`K`
+
+[ NVIDIA DGX H100/H200 User Guide ](index.html)
+
+______
+
+Table of Contents
+
+  * Introduction to NVIDIA DGX H100/H200 Systems
+  * [Connecting to DGX H100/H200](connect-dgx.html)
+  * [First Boot Setup](first-boot-setup.html)
+  * [Quickstart and Basic Operation](quickstart-basics.html)
+  * [SBIOS Settings](sbios-settings.html)
+  * [Using the BMC](bmc.html)
+  * [Managing Power Capping](power-capping.html)
+  * [Security](security.html)
+  * [Redfish APIs Support](redfish-api-supp.html)
+  * [Safety](safety.html)
+
+Legal Information
+
+  * [Compliance](compliance.html)
+  * [Third-Party License Notices](licenses.html)
+  * [Notices](notices.html)
+
+  * [NVIDIA Docs Hub](https://docs.nvidia.com)
+  * [NVIDIA DGX Platform](https://docs.nvidia.com/dgx)
+  * [NVIDIA DGX Systems](https://docs.nvidia.com/dgx-systems)
+  * [NVIDIA DGX H100/H200 User Guide](index.html)
+  * Introduction to NVIDIA DGX H100/H200 Systems
+
+[Is this page helpful?](https://surveys.hotjar.com/4904bf71-6484-47a7-83ff-4715cceabdb5)
+
+# Introduction to NVIDIA DGX H100/H200 Systems#
+
+The NVIDIA DGX™ H100/H200 Systems are the universal systems purpose-built for all AI infrastructure and
+workloads from analytics to training to inference. The DGX H100/H200 systems are built on eight NVIDIA H100
+Tensor Core GPUs or eight NVIDIA H200 Tensor Core GPUs.
+
+## Hardware Overview#
+
+### DGX H100/H200 Component Descriptions#
+
+The NVIDIA DGX H100 (640 GB)/H200 (1,128 GB) systems include the following components.
+
+Table 1. Component Description# Component | Description  
+---|---  
+GPU |  For H100: 8 x NVIDIA H100 GPUs that provide 640 GB total GPU memory For H200: 8 x NVIDIA H200 GPUs that provide 1,128 GB total GPU memory  
+CPU | 2 x Intel Xeon 8480C PCIe Gen5 CPUs with 56 cores each 2.0/2.9/3.8 GHz (base/all core turbo/Max turbo)  
+NVSwitch | 4 x 4th generation NVLinks that provide 900 GB/s GPU-to-GPU bandwidth  
+Storage (OS) | 2 x 1.92 TB NVMe M.2 SSD (ea) in RAID 1 array  
+Storage (Data Cache) | 8 x 3.84 TB NVMe U.2 SED (ea) in RAID 0 array  
+Network (Cluster) card | 4 x OSFP ports for 8 x NVIDIA® ConnectX®-7 Single Port InfiniBand Cards Each card provides the following speeds:
+
+  * InfiniBand (default): Up to 400Gbps
+  * Ethernet: 400GbE, 200GbE, 100GbE, 50GbE, 40GbE, 25GbE, and 10GbE
+
+  
+Network (storage and in-band management) card | 2 x NVIDIA® ConnectX®-7 Dual Port Ethernet Cards Each card provides the following speeds:
+
+  * Ethernet (default): 400GbE, 200GbE, 100GbE, 50GbE, 40GbE, 25GbE, and 10GbE
+  * InfiniBand: Up to 400Gbps
+
+  
+System memory (DIMM) | 2 TB using 32 x DIMMs  
+BMC (out-of-band system management) | 1 GbE RJ45 interface Supports Redfish, IPMI, SNMP, KVM, and Web user interface  
+System management interfaces | Dual port 100GbE in slot 3 and 10 GbE RJ45 interface  
+Power supply | 6 x 3.3 kW  
+  
+### Mechanical Specifications#
+
+Table 2. Mechanical Specifications# Feature | Description  
+---|---  
+Form Factor | 8U Rackmount  
+Height | 14” (356 mm)  
+Width | 19” (482.3 mm) max  
+Depth | 35.3” (897.1 mm) max  
+System Weight | 287.6 lbs (130.45 kg) max  
+  
+### Power Specifications#
+
+The DGX H100/H200 system contains six power supplies with balanced distribution of the power load.
+
+Table 3. Power Specifications# Input |  | Specification for Each Power Supply  
+---|---|---  
+200-240 volts AC | 10.2 kW max. | 3300 W @ 200-240 V, 16 A, 50-60 Hz  
+  
+#### Support for PSU Redundancy and Continuous Operation#
+
+The system includes six power supply units (PSU) configured for 4+2 redundancy.
+
+Refer to the following additional considerations:
+
+  * If a PSU fails, troubleshoot the cause and replace the failed PSU immediately.
+
+  * If three PSUs lose power as a result of a data center issue or power distribution unit failure, the system continues to function, but at a reduced performance level.
+
+  * If only three PSUs have power, shut down the system before replacing an operational PSU.
+
+  * The system only boots if at least three PSUs are operational. If fewer than three PSUs are operational, only the BMC is available.
+
+  * Do not operate the system with PSUs depopulated.
+
+### DGX H100/H200 Locking Power Cord Specification#
+
+The DGX H100/H200 system is shipped with a set of six (6) locking power cords that have been qualified for use
+with the DGX H100/H200 system to ensure regulatory compliance.
+
+Warning
+
+To avoid electric shock or fire, only use the NVIDIA-provided power cords to connect power to the DGX
+H100/H200. For more details, refer to [Electrical Precautions](safety.html#electrical-precautions).
+
+Important
+
+Do not use the provided cables with any other product or for any other purpose.
+
+Power Cord Specification
+
+Power Cord Feature | Specification  
+---|---  
+Electrical | 250VAC, 20A  
+Plug Standard | C19/C20  
+Dimension | 1200mm length  
+Compliance | Cord: UL62, IEC60227 Connector/Plug: IEC60320-1  
+  
+### Using the Locking Power Cords#
+
+This section provides information about how to use the locking power cords.
+
+Locking and Unlocking the PDU Side
+
+Power Distribution Unit side
+
+  * To INSERT, push the cable into the PDU socket.
+
+  * To REMOVE, press the clips together and pull the cord out of the socket.
+
+Locking/Unlocking the PSU Side (Cords with Twist-Lock Mechanism)
+
+Power Supply (System) side - Twist locking
+
+  * To INSERT or REMOVE make sure the cable is UNLOCKED and push/ pull into/out of the socket.
+
+### Environmental Specifications#
+
+Here are the environmental specifications for your DGX H100/H200 system.
+
+Feature | Specification  
+---|---  
+Operating Temperature | 5° C to 30° C (41° F to 86° F)  
+Relative Humidity | 20% to 80% non-condensing  
+Airflow | 1105 CFM Front-to-Back @ 80% fan PWM  
+Heat Output | 38,557 BTU/hr  
+  
+### Front Panel Connections and Controls#
+
+This section provides information about the front panel, connections, and controls of the DGX H100/H200
+system.
+
+#### With a Bezel#
+
+Here is an image of the DGX H100/H200 system with a bezel.
+
+Control | Description  
+---|---  
+Power Button | Press to turn the DGX H100/H200 system On or Off.
+
+  * Green flashing (1 Hz): Standby (BMC booted)
+  * Green flashing (4 Hz): POST in progress
+  * Green solid On: Power On
+
+  
+ID Button | Press to have the blue LED turn On or blink (configurable through the BMC) as an identifier during servicing. Also causes an LED on the back of the unit to flash as an identifier during servicing.  
+Fault LED | Amber On: System or component faulted  
+  
+#### With the Bezel Removed#
+
+Here is an image of the DGX H100/H200 system without a bezel.
+
+Important
+
+Refer to the section [First Boot Setup](first-boot-setup.html) for instructions on how to properly turn the
+system on or off.
+
+### Rear Panel Modules#
+
+Here is an image that shows the real panel modules on DGX H100/H200.
+
+### Motherboard Connections and Controls#
+
+Here is an image that shows the motherboard connections and controls in a DGX H100/H200 system.
+
+Table 4. Motherboard Controls# Control | Description  
+---|---  
+Power Button | Press to turn the system On or Off.  
+ID LED Button | Blinks when ID button is pressed from the front of the unit as an aid in identifying the unit needing servicing.  
+BMC Reset button | Press to manually reset the BMC.  
+  
+See Network Connections, Cables, and Adaptors for details on the network connections.
+
+### Motherboard Tray Components#
+
+Here is an image that shows the motherboard tray components in a DGX H100/H200 system.
+
+### GPU Tray Components#
+
+Here is an image of the GPU tray components in a DGX H100/H200 system.
+
+## Network Connections, Cables, and Adaptors#
+
+This section provides information about network connections, cables, and adaptors.
+
+### Network Ports#
+
+Here is an image that shows the network ports on a DGX H100/H200 system.
+
+Table 5. Network Port Mapping# |  | Port Designation |   
+---|---|---|---  
+Port | PCI Bus | Default | Optional | RDMA  
+OSFP1P1 | dc:00.0 | ibp220s0 | enp220s0np0 | mlx5_11  
+OSFP1P2 | 9a:00.0 | ibp154s0 | enp154s0np0 | mlx5_6  
+OSFP2P1 | ce:00.0 | ibp206s0 | enp206s0np0 | mlx5_10  
+OSFP2P2 | c0:00.0 | ibp192s0 | enp192s0np0 | mlx5_9  
+OSFP3P1 | 4f:00.0 | ibp79s0 | enp79s0np0 | mlx5_4  
+OSFP3P2 | 40:00.0 | ibp64s0 | enp64s0np0 | mlx5_3  
+OSFP4P1 | 5e:00.0 | ibp94s0 | enp94s0np0 | mlx5_5  
+OSFP4P2 | 18:00.0 | ibp24s0 | enp24s0np0 | mlx5_0  
+Slot1 P1 | aa:00.0 | ibp170s0f0 | enp170s0f0np0 | mlx5_7  
+Slot1 P2 | aa:00.1 | enp170s0f1np1 | ibp170s0f1 | mlx5_8  
+Slot2 P1 | 29:00.0 | ibp41s0f0 | enp41s0f0np0 | mlx5_1  
+Slot2 P2 | 29:00.1 | enp41s0f1np1 | ibp41s0f1 | mlx5_2  
+Slot3 P1 | 82:00.0 | ens6f0 | N/A | irdma0  
+Slot3 P2 | 82:00.1 | ens6f1 | N/A | irdma1  
+On-board | 0b:00.0 | eno3 | N/A |   
+  
+### Compute and Storage Networking#
+
+### Network Modules#
+
+  * New form factor for aggregate PCIe network devices
+
+  * Consolidates four ConnectX-7 networking cards into a single device
+
+  * Two networking modules are installed on interposer board
+
+  * Interposer board connects to CPUs on one end and to GPU tray on the other
+
+  * DensiLink cables are used to go directly from ConnectX-7 networking cards to OSFP connectors at the back of the system
+
+Each DensiLink cable has two ports, one from each ConnectX-7 card
+
+Table 6. Network Modules# Port | ConnectX Device | Network Module/CPU | GPU | Default | RDMA  
+---|---|---|---|---|---  
+OSFP1P1 | CX0 | 1 | 7 | ibp220s0 | mlx5_11  
+OSFP1P2 | CX1 | 1 | 4 | ibp154s0 | mlx5_6  
+OSFP2P1 | CX2 | 1 | 6 | ibp206s0 | mlx5_10  
+OSFP2P2 | CX3 | 1 | 5 | ibp192s0 | mlx5_9  
+OSFP3P1 | CX2 | 0 | 2 | ibp79s0 | mlx5_4  
+OSFP3P2 | CX3 | 0 | 1 | ibp64s0 | mlx5_3  
+OSFP4P1 | CX0 | 0 | 3 | ibp94s0 | mlx5_5  
+OSFP4P2 | CX1 | 0 | 0 | ibp24s0 | mlx5_0  
+  
+### BMC Port LEDs#
+
+The BCM RJ-45 port has two LEDs.
+
+The LED on the left indicates the speed. Solid green indicates the speed is 100M. Solid amber indicates the
+speed is 1G.
+
+The LED on the right is green and flashes to indicate activity.
+
+### Supported Network Cables and Adaptors#
+
+The DGX H100/H200 system is not shipped with network cables or adaptors. You will need to purchase supported
+cables or adaptors for your network.
+
+The ConnectX-7 firmware determines which cables and adaptors are supported. For a list of cables and adaptors
+compatible with the NVIDIA ConnectX cards installed in the DGX H100/H200 system,
+
+  1. Visit the [NVIDIA Adapter Firmware Release](https://docs.nvidia.com/networking/category/adapterfw) page.
+
+  2. Click the ConnectX model and select the corresponding firmware included in the DGX H100/H200 system.
+
+  3. From the left **Topics** pane, select the Validated and Supported Cables and Switches topic.
+
+## DGX H100/200 System Topology#
+
+The following figure shows the DGX H100/H200 system topology.
+
+[ ](_images/dgx-h100-system-topology.png)
+
+## DGX OS Software#
+
+The DGX H100/H200 system comes pre-installed with a DGX software stack incorporating the following components:
+
+  * An Ubuntu server distribution with supporting packages.
+
+  * The following system management and monitoring software:
+
+    * NVIDIA System Management (NVSM)
+
+Provides active health monitoring and system alerts for NVIDIA DGX nodes in a data center. It also provides
+simple commands for checking the health of the DGX H100/H200 system from the command line.
+
+    * Data Center GPU Management (DCGM)
+
+This software enables node-wide administration of GPUs and can be used for cluster and data-center level
+management.
+
+  * DGX H100/H200 system support packages.
+
+  * The NVIDIA GPU driver
+
+  * Docker Engine
+
+  * NVIDIA Container Toolkit
+
+  * NVIDIA Networking OpenFabrics Enterprise Distribution for Linux (MOFED)
+
+  * NVIDIA Networking Software Tools (MST)
+
+  * cachefilesd (daemon for managing cache data storage)
+
+## Customer Support#
+
+Contact NVIDIA Enterprise Support for assistance in reporting, troubleshooting, or diagnosing problems with
+your DGX H100/H200 system. Also contact NVIDIA Enterprise Support for assistance in moving the DGX H100/H200
+system.
+
+  * For contracted Enterprise Support questions, you can send an email to [enterprisesupport@nvidia.com](mailto:enterprisesupport%40nvidia.com).
+
+  * For additional details about how to obtain support, go to [NVIDIA Enterprise Support](https://www.nvidia.com/en-us/support/enterprise/).
+
+Our support team can help collect appropriate information about your issue and involve internal resources as
+needed.
+
+[ __ previous NVIDIA DGX H100/H200 System User Guide ](index.html "previous page") [ next Connecting to DGX
+H100/H200 __](connect-dgx.html "next page")
+
+__On this page
+
+  * Hardware Overview
+    * DGX H100/H200 Component Descriptions
+    * Mechanical Specifications
+    * Power Specifications
+      * Support for PSU Redundancy and Continuous Operation
+    * DGX H100/H200 Locking Power Cord Specification
+    * Using the Locking Power Cords
+    * Environmental Specifications
+    * Front Panel Connections and Controls
+      * With a Bezel
+      * With the Bezel Removed
+    * Rear Panel Modules
+    * Motherboard Connections and Controls
+    * Motherboard Tray Components
+    * GPU Tray Components
+  * Network Connections, Cables, and Adaptors
+    * Network Ports
+    * Compute and Storage Networking
+    * Network Modules
+    * BMC Port LEDs
+    * Supported Network Cables and Adaptors
+  * DGX H100/200 System Topology
+  * DGX OS Software
+  * Customer Support
+
+[ ](https://www.nvidia.com)
+
+[Privacy Policy](https://www.nvidia.com/en-us/about-nvidia/privacy-policy/) | [Your Privacy Choices](https://www.nvidia.com/en-us/about-nvidia/privacy-center/) | [Terms of Service](https://www.nvidia.com/en-us/about-nvidia/terms-of-service/) | [Accessibility](https://www.nvidia.com/en-us/about-nvidia/accessibility/) | [Corporate Policies](https://www.nvidia.com/en-us/about-nvidia/company-policies/) | [Product Security](https://www.nvidia.com/en-us/product-security/) | [Contact](https://www.nvidia.com/en-us/contact/)
+
+Copyright © 2022-2026, NVIDIA Corporation.  
+
+Last updated on Oct 17, 2026.

@@ -1,0 +1,501 @@
+SOURCE COPY — SRC-SEAGATE
+Retrieved 2026-10-21 for Inside the Machine Mind (offline reference copy; excerpt of the original, formatting simplified).
+Original URL: https://www.seagate.com/content/dam/seagate/en/content-fragments/products/datasheets/exos-x24/exos-x24-DS2080-2307US-en_US.pdf
+Page/document title: (pdf)
+
+------------------------------------------------------------------------
+
+Best-Fit Applications
+Scalable hyperscale
+applications/cloud data centers
+Massive scale-out data centers
+Big data applications
+High-capacity density RAID storage
+Mainstream enterprise external
+storage arrays
+Distributed file systems, including
+Hadoop and Ceph
+Enterprise backup and restore—
+D2D, virtual tape
+Centralized surveillance
+DATA SHEET
+Exos X24—Powerful performance. Proven
+technology. Scalable design.
+Powerful performance with proven technology—Seagate’s
+®
+ Exos
+®
+X24 drives are built off the platform that’s shipped millions globally
+and deployed in leading cloud service provider solutions—making
+them the most sought-after drives in our datasphere. Designed with
+the highest rack-space efficiency and protected with Seagate
+Secure
+™
+, Exos X24 offers extreme market-leading capacity, earning
+customer confidence by delivering trusted peace of mind.
+Maximum Storage Capacity for Highest Rack
+Space Efficiency
+Market-leading 24TB HDD
+ 
+offering the highest capacity available for more petabytes
+per rack
+1
+Highly reliable performance
+ 
+with enhanced caching—making it the logical choice for
+cloud data center and massive scale-out data center applications
+Hyperscale SATA model
+ tuned for large data transfers and low latency
+PowerBalance
+™
+ feature optimizes watts per TB
+Maximize total cost of ownership savings
+ through lower power and weight with
+helium-sealed drive design
+Proven helium side-sealing weld technology
+ for added handling, robustness, and
+leak protection
+Digital environmental sensors
+ to monitor internal drive conditions for optimal
+operation and performance
+Data protection and security—
+featuring Seagate Instant Secure for safe, affordable,
+fast, and easy drive retirement
+Proven enterprise-class reliability
+ 
+backed by a 5-year limited warranty and 2.5M-hr
+MTBF rating
+1 Compared to 20TB competitive product
+
+Specifications
+SATA 6Gb/s
+Capacity
+24TB
+20TB
+16TB
+12TB
+Standard Model - Seagate Instant Secure Erase (ISE)
+1
+ST24000NM002H
+ST20000NM002H
+ST16000NM002H
+ST12000NM002H
+SED Model
+2
+ST24000NM001H
+ST20000NM001H
+ST16000NM001H
+ST12000NM001H
+SED-FIPS
+2
+—
+—
+—
+—
+FEATURES
+Helium Sealed-Drive Design
+Yes
+Yes
+Yes
+Yes
+Conventional Magnetic Recording (CMR)
+Yes
+Yes
+Yes
+Yes
+Super Parity
+Yes
+Yes
+Yes
+Yes
+PowerChoice
+™
+ Idle Power Technology
+Yes
+Yes
+Yes
+Yes
+PowerBalance
+™
+ Power/Performance Technology
+Yes
+Yes
+Yes
+Yes
+Hot-Plug Support
+3
+Yes
+Yes
+Yes
+Yes
+Cache, Multisegmented (MB)
+512
+512
+512
+512
+RSA 3072 Firmware Verification (SD&D)
+Yes
+Yes
+Yes
+Yes
+RELIABILITY/DATA INTEGRITY
+Mean Time Between Failures (MTBF, hours)
+2500000 hrs
+2500000 hrs
+2500000 hrs
+2500000 hrs
+Reliability Rating @ Full 24×7 Operation (AFR)
+0.35%
+0.35%
+0.35%
+0.35%
+Nonrecoverable Read Errors per Bits Read
+<1 in 10E15
+<1 in 10E15
+<1 in 10E15
+<1 in 10E15
+Power-On Hours per Year (24×7)
+8760
+8760
+8760
+8760
+512e Sector Size (Bytes per Sector)
+512
+512
+512
+512
+4Kn Sector Size (Bytes per Sector)
+4096
+4096
+4096
+4096
+Limited Warranty (years)
+5
+5
+5
+5
+PERFORMANCE
+Spindle Speed (RPM)
+7200RPM
+7200RPM
+7200RPM
+7200RPM
+Max. Sustained Transfer Rate OD (MB/s,MiB/s)
+285/272
+285/272
+285/272
+285/272
+Random Read/Write 4K QD16 WCD (IOPS)
+168/550
+168/550
+168/550
+168/550
+Interface Ports
+Single
+Single
+Single
+Single
+Rotation Vibration @ 20-1500 Hz (rad/sec²)
+12.5
+12.5
+12.5
+12.5
+POWER
+Idle A (W) Average
+6.3
+6.3
+6.3
+6.3
+Max Operating, Random Read/Write 4K/16Q (W)
+8.9, 7.1
+8.9, 7.1
+8.9, 7.1
+8.9, 7.1
+Power Supply Requirements
++12V and +5V
++12V and +5V
++12V and +5V
++12V and +5V
+ENVIRONMENTAL
+Temperature, Operating (°C) (Ambient / Drive Reported)
+5 / 60
+5 / 60
+5 / 60
+5 / 60
+Vibration, Nonoperating: 2 to 500Hz (Grms)
+2.27
+2.27
+2.27
+2.27
+Shock, Operating 2ms (Read/Write) (Gs)
+40Gs
+40Gs
+40Gs
+40Gs
+Shock, Nonoperating 2ms (Gs)
+200
+200
+200
+200
+PHYSICAL
+Height (mm/in, max)
+4
+26.1mm/1.028in
+26.1mm/1.028in
+26.1mm/1.028in
+26.1mm/1.028in
+Width (mm/in, max)
+4
+101.85mm/4.010in
+101.85mm/4.010in
+101.85mm/4.010in
+101.85mm/4.010in
+Depth (mm/in, max)
+4
+147mm/5.787in
+147mm/5.787in
+147mm/5.787in
+147mm/5.787in
+Weight (gm/lb)
+685g/1.51lb
+685g/1.51lb
+685g/1.51lb
+685g/1.51lb
+Carton Unit Quantity
+20
+20
+20
+20
+Cartons per Pallet/Cartons per Layer
+40 / 8
+40 / 8
+40 / 8
+40 / 8
+1 FastFormat models ship in 512e format state. When switching from 512e to 4Kn by executing the FastFormat routine, all data on the drive will be deleted. Note that data must be aligned to 4K sectors to see improved performance in 4Kn fomat 
+2 Self-Encrypting Drives (SED) and FIPS 140-3 Validated drives available through franchised authorized distributors. May require TCG-compliant host or controller support.
+3 Supports Hotplug operation per Serial ATA Revision 3.5 specification
+4 These base deck dimensions conform to the Small Form Factor Standard (SFF-8301) found at 
+https://www.snia.org/sff
+. For connector-related dimensions, see SFF-8323.
+2
+Specifications
+SAS 12Gb/s
+Capacity
+24TB
+20TB
+16TB
+12TB
+Standard Model - Seagate Instant Secure Erase (ISE)
+1
+ST24000NM007H
+ST20000NM007H
+ST16000NM007H
+ST12000NM007H
+SED Model
+2
+ST24000NM005H
+ST20000NM005H
+ST16000NM005H
+ST12000NM005H
+SED-FIPS
+2
+ST24000NM006H
+ST20000NM006H
+ST16000NM006H
+ST12000NM009H
+FEATURES
+Helium Sealed-Drive Design
+Yes
+Yes
+Yes
+Yes
+Conventional Magnetic Recording (CMR)
+Yes
+Yes
+Yes
+Yes
+Super Parity
+Yes
+Yes
+Yes
+Yes
+PowerChoice
+™
+ Idle Power Technology
+Yes
+Yes
+Yes
+Yes
+PowerBalance
+™
+ Power/Performance Technology
+Yes
+Yes
+Yes
+Yes
+Hot-Plug Support
+3
+Yes
+Yes
+Yes
+Yes
+Cache, Multisegmented (MB)
+512
+512
+512
+512
+RSA 3072 Firmware Verification (SD&D)
+Yes
+Yes
+Yes
+Yes
+RELIABILITY/DATA INTEGRITY
+Mean Time Between Failures (MTBF, hours)
+2500000 hrs
+2500000 hrs
+2500000 hrs
+2500000 hrs
+Reliability Rating @ Full 24×7 Operation (AFR)
+0.35%
+0.35%
+0.35%
+0.35%
+Nonrecoverable Read Errors per Bits Read
+<1 in 10E15
+<1 in 10E15
+<1 in 10E15
+<1 in 10E15
+Power-On Hours per Year (24×7)
+8760
+8760
+8760
+8760
+512e Sector Size (Bytes per Sector)
+512, 520, 528
+512, 520, 528
+512, 520, 528
+512, 520, 528
+4Kn Sector Size (Bytes per Sector)
+4096, 4160,4224
+4096, 4160,4224
+4096, 4160,4224
+4096, 4160,4224
+Limited Warranty (years)
+5
+5
+5
+5
+PERFORMANCE
+Spindle Speed (RPM)
+7200RPM
+7200RPM
+7200RPM
+7200RPM
+Max. Sustained Transfer Rate OD (MB/s,MiB/s)
+285/272
+285/272
+285/272
+285/272
+Random Read/Write 4K QD16 WCD (IOPS)
+168/550
+168/550
+168/550
+168/550
+Interface Ports
+Dual
+Dual
+Dual
+Dual
+Rotation Vibration @ 20-1500 Hz (rad/sec²)
+12.5
+12.5
+12.5
+12.5
+POWER
+Idle A (W) Average
+6.5
+6.5
+6.5
+6.5
+Max Operating, Random Read/Write 4K/16Q (W)
+9.8, 8.2
+9.8, 8.2
+9.8, 8.2
+9.8, 8.2
+Power Supply Requirements
++12V and +5V
++12V and +5V
++12V and +5V
++12V and +5V
+ENVIRONMENTAL
+Temperature, Operating (°C) (Ambient / Drive Reported)
+5 / 60
+5 / 60
+5 / 60
+5 / 60
+Vibration, Nonoperating: 2 to 500Hz (Grms)
+2.27
+2.27
+2.27
+2.27
+Shock, Operating 2ms (Read/Write) (Gs)
+40Gs
+40Gs
+40Gs
+40Gs
+Shock, Nonoperating 2ms (Gs)
+200
+200
+200
+200
+PHYSICAL
+Height (mm/in, max)
+4
+26.1mm/1.028in
+26.1mm/1.028in
+26.1mm/1.028in
+26.1mm/1.028in
+Width (mm/in, max)
+4
+101.85mm/4.010in
+101.85mm/4.010in
+101.85mm/4.010in
+101.85mm/4.010in
+Depth (mm/in, max)
+4
+147mm/5.787in
+147mm/5.787in
+147mm/5.787in
+147mm/5.787in
+Weight (gm/lb)
+685g/1.51lb
+685g/1.51lb
+685g/1.51lb
+685g/1.51lb
+Carton Unit Quantity
+20
+20
+20
+20
+Cartons per Pallet/Cartons per Layer
+40 / 8
+40 / 8
+40 / 8
+40 / 8
+1 FastFormat models ship in 512e format state. When switching from 512e to 4Kn by executing the FastFormat routine, all data on the drive will be deleted. Note that data must be aligned to 4K sectors to see improved performance in 4Kn fomat 
+2 Self-Encrypting Drives (SED) and FIPS 140-3 Validated drives available through franchised authorized distributors. May require TCG-compliant host or controller support.
+3 Supports Hotplug operation per Serial ATA Revision 3.5 specification
+4 These base deck dimensions conform to the Small Form Factor Standard (SFF-8301) found at 
+https://www.snia.org/sff
+. For connector-related dimensions, see SFF-8323.
+3
+seagate.com
+© 2023 Seagate Technology LLC. All rights reserved. Seagate, Seagate Technology, and the Spiral logo are registered trademarks of Seagate Technology LLC in the United States and/or other
+countries. Exos, the Exos logo, FastFormat, PowerBalance, PowerChoice, and Seagate Secure are either trademarks or registered trademarks of Seagate Technology LLC or one of its affiliated
+companies in the United States and/or other countries. All other trademarks or registered trademarks are the property of their respective owners. When referring to drive capacity, one gigabyte, or
+GB, equals one billion bytes and one terabyte, or TB, equals one trillion bytes. Your computer’s operating system may use a different standard of measurement and report a lower capacity. In
+addition, some of the listed capacity is used for formatting and other functions, and thus will not be available for data storage. Actual data rates may vary depending on operating environment and
+other factors, such as chosen interface and disk capacity. The export or re-export of Seagate hardware or software is regulated by the U.S. Department of Commerce, Bureau of Industry and Security
+(for more information, visit www.bis.doc.gov), and may be controlled for export, import, and use in other countries. Seagate reserves the right to change, without notice, product offerings or
+specifications. 
+DS2080-2307US

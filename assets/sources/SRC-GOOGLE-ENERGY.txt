@@ -1,0 +1,171 @@
+SOURCE COPY — SRC-GOOGLE-ENERGY
+Retrieved 2026-10-21 for Inside the Machine Mind (offline reference copy; excerpt of the original, formatting simplified).
+Original URL: https://cloud.google.com/blog/products/infrastructure/measuring-the-environmental-impact-of-ai-inference
+Page/document title: Measuring the environmental impact of AI inference | Google Cloud Blog
+
+------------------------------------------------------------------------
+
+Infrastructure
+
+#
+
+How much energy does Google’s AI use? We did the math
+
+August 21, 2025
+
+  * [](https://x.com/intent/tweet?text=How%20much%20energy%20does%20Google’s%20AI%20use?%20We%20did%20the%20math%20@googlecloud&url=https://cloud.google.com/blog/products/infrastructure/measuring-the-environmental-impact-of-ai-inference)
+  * [](https://www.linkedin.com/shareArticle?mini=true&url=https://cloud.google.com/blog/products/infrastructure/measuring-the-environmental-impact-of-ai-inference&title=How%20much%20energy%20does%20Google’s%20AI%20use?%20We%20did%20the%20math)
+  * [](https://www.facebook.com/sharer/sharer.php?caption=How%20much%20energy%20does%20Google’s%20AI%20use?%20We%20did%20the%20math&u=https://cloud.google.com/blog/products/infrastructure/measuring-the-environmental-impact-of-ai-inference)
+  * [](mailto:?subject=How%20much%20energy%20does%20Google’s%20AI%20use?%20We%20did%20the%20math&body=Check%20out%20this%20article%20on%20the%20Cloud%20Blog:%0A%0AHow%20much%20energy%20does%20Google’s%20AI%20use?%20We%20did%20the%20math%0A%0AA%20methodology%20for%20measuring%20the%20energy,%20emissions,%20and%20water%20impact%20of%20Gemini%20prompts%20shines%20a%20light%20on%20the%20environmental%20impact%20of%20AI%20inference.%0A%0Ahttps://cloud.google.com/blog/products/infrastructure/measuring-the-environmental-impact-of-ai-inference)
+
+##### Amin Vahdat
+
+SVP and Chief Technologist, AI and Infrastructure
+
+##### Jeff Dean
+
+Chief Scientist, Google DeepMind and Google Research
+
+##### Try Gemini today
+
+The front door to AI in the workplace
+
+[Try now
+](https://business.gemini.google/?utm_source=cloud.google.com/blog&utm_medium=et&utm_campaign=FY26-Q2-GLOBAL-
+GLO27877-physicalevent-er-next26-mc-105752)
+
+AI is unlocking scientific breakthroughs, improving healthcare and education, and could add trillions to the
+global economy. Understanding AI’s footprint is crucial, yet thorough data on the energy and environmental
+impact of AI inference — the use of a trained AI model to make predictions or generate text or images — has
+been limited. As more users use AI systems, the importance of inference efficiency rises.
+
+That’s why we’re releasing a [technical paper](https://arxiv.org/abs/2508.15734) detailing our comprehensive
+methodology for measuring the energy, emissions, and water impact of Gemini prompts. Using this methodology,
+we estimate the median Gemini Apps text prompt uses 0.24 watt-hours (Wh) of energy, emits 0.03 grams of carbon
+dioxide equivalent (gCO2e), and consumes 0.26 milliliters (or about five drops) of water1 — figures that are
+substantially lower than many public estimates. The per-prompt energy impact is equivalent to watching TV for
+less than nine seconds.
+
+At the same time, our AI systems are becoming more efficient through research innovations and software and
+hardware efficiency improvements. For example, over a recent 12 month period, the energy and total carbon
+footprint of the median Gemini Apps text prompt dropped by 33x and 44x, respectively,2 all while delivering
+higher quality responses. These results are built on our latest [data center energy emissions
+reductions](https://sustainability.google/google-2025-environmental-report/) and our work to advance carbon-
+free energy and water replenishment. While we’re proud of the innovation behind our efficiency gains so far,
+we’re committed to continuing substantial improvements. Here’s a closer look at these ongoing efforts.
+
+### **Calculating the environmental footprint of AI at Google**
+
+Detailed measurement lets us compare across different AI models, and the hardware and energy they run on,
+while enabling system-wide efficiency optimizations — from hardware and data centers to the models themselves.
+By sharing our methodology, we hope to increase industry-wide consistency in calculating AI’s resource
+consumption and efficiency.
+
+Measuring the footprint of AI serving workloads isn’t simple. We developed a comprehensive approach that
+considers the realities of serving AI at Google’s scale, which include:
+
+  * **Full system dynamic power:** This includes not just the energy and water used by the primary AI model during active computation, but also the actual achieved chip utilization at production scale, which can be much lower than theoretical maximums. 
+
+  * **Idle machines:** To ensure high availability and reliability, production systems require a degree of provisioned capacity that is idle but ready to handle traffic spikes or failover at any given moment. The energy consumed by these idle chips must be factored into the total energy footprint.
+
+  * **CPU and RAM** : AI model execution doesn't happen solely in ML accelerators like TPUs and GPUs. The host CPU and RAM also play a crucial role in serving AI, and use energy. 
+
+  * **Data center overhead:** The energy consumed by the IT equipment running AI workloads is only part of the story. The infrastructure supporting these computations — cooling systems, power distribution, and other data center overhead — also consumes energy. Overhead energy efficiency is measured by a metric called Power Usage Effectiveness (PUE).
+
+  * **Data center water consumption** : To [reduce energy consumption and associated emissions](https://blog.google/outreach-initiatives/sustainability/our-commitment-to-climate-conscious-data-center-cooling/), data centers often consume water for cooling. As we optimize our AI systems to be more energy-efficient, this naturally decreases their overall water consumption as well. 
+
+Many current AI energy consumption calculations only include active machine consumption, overlooking several
+of the critical factors discussed above. As a result, they represent theoretical efficiency instead of true
+operating efficiency at scale. When we apply this non-comprehensive methodology that only considers active TPU
+and GPU consumption, we estimate the median Gemini text prompt uses 0.10 Wh of energy, emits 0.02 gCO2e, and
+consumes 0.12 mL of water. This is an optimistic scenario at best and substantially underestimates the real
+operational footprint of AI.
+
+Our comprehensive methodology’s estimates (0.24 Wh of energy, 0.03 gCO2e, 0.26 mL of water) account for all
+critical elements of serving AI globally. We believe this is the most complete view of AI’s overall footprint.
+
+### **Our full-stack approach to AI — and AI efficiency**
+
+Gemini’s dramatic efficiency gains stem from Google’s full-stack approach to AI development — from custom
+hardware and highly efficient models, to the robust serving systems that make these models possible. We’ve
+built efficiency into every layer of AI, including:
+
+  * **More efficient model architectures:** Gemini models are built on the [Transformer model architecture](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/) developed by Google researchers, which provide a 10-100x efficiency boost over the previous state-of-the-art architectures for language modeling. We design models with inherently efficient structures like [Mixture-of-Experts (MoE)](https://arxiv.org/abs/1701.06538) and [hybrid reasoning](https://developers.googleblog.com/en/start-building-with-gemini-25-flash/). MoE models, for example, allow us to activate a small subset of a large model specifically required to respond to a query, reducing computations and data transfer by a factor of 10-100x. 
+
+  * **Efficient algorithms and quantization:** We continuously refine the algorithms that power our models with methods like [Accurate Quantized Training (AQT)](https://cloud.google.com/blog/products/compute/accurate-quantized-training-aqt-for-tpu-v5e?e=13802955) to maximize efficiency and reduce energy consumption for serving, without compromising response quality.
+
+  * **Optimized inference and serving:** We constantly improve AI model delivery for responsiveness and efficiency. Technologies like [speculative decoding](https://arxiv.org/abs/2211.17192) serve more responses with fewer chips by allowing a smaller model to make predictions that are then quickly verified by a larger model, which is more efficient than having the larger model make many sequential predictions on its own. Techniques like [distillation](https://arxiv.org/abs/1503.02531) create smaller, more efficient models (Gemini Flash and Flash-Lite) for serving that use our larger, more capable models as teachers. Faster machine learning hardware and models enable us to use more efficient larger batch sizes when handling requests, while still meeting our latency targets.
+
+  * **Custom-built hardware:** We’ve been designing our TPUs from the ground up for over a decade to maximize performance per watt. We also co-design our AI models and TPUs, ensuring our software takes full advantage of our hardware — and that our hardware is able to efficiently run our future AI software when both are ready. Our latest-generation TPU, [Ironwood](https://blog.google/products/google-cloud/ironwood-tpu-age-of-inference/), is 30x more energy-efficient than our first publicly-available TPU and far more power-efficient than general-purpose CPUs for inference. 
+
+  * **Optimized idling:** Our serving stack makes highly efficient use of CPUs and minimizes TPU idling by dynamically moving models based on demand in near-real-time, rather than using a “set it and forget” approach. 
+
+  * **ML software stack:** Our XLA ML compiler, Pallas kernels, and Pathways systems enable model computations expressed in higher-level systems like JAX to run efficiently on our TPU serving hardware.
+
+  * **Ultra-efficient data centers:** Google’s data centers are among the industry’s most efficient, operating at a fleet-wide average [PUE of 1.09](https://datacenters.google/efficiency/).
+
+  * **Responsible data center operations:** We continue to add clean energy generation in pursuit of our [24/7 carbon-free](https://sustainability.google/operations/) ambition, while advancing our aim to [replenish](https://www.gstatic.com/gumdrop/sustainability/google-2025-environmental-report.pdf#page=42) 120% of the freshwater we consume on average across our offices and data centers. We also optimize our cooling systems, balancing the [local trade-off](https://blog.google/outreach-initiatives/sustainability/our-commitment-to-climate-conscious-data-center-cooling/) between energy, water, and emissions, by conducting science-backed watershed health assessments, to guide cooling type selection and limit water use in high-stress locations. 
+
+### **Our commitment to efficient AI**
+
+Gemini’s efficiency gains are the result of years of work, but this is just the beginning. Recognizing that AI
+demand is growing, we're heavily investing in reducing the power provisioning costs and water required per
+prompt. By sharing our findings and methodology, we aim to drive industry-wide progress toward more efficient
+AI. This is essential for responsible AI development.
+
+* * *
+
+_1. A point-in-time analysis quantified the energy consumed per median Gemini App text-generation prompt,
+considering data from May 2025. Emissions per prompt was estimated based on energy per prompt, and applying
+Google’s 2024 average fleetwide grid carbon intensity. Water consumption per prompt was estimated based on
+energy per prompt, and applying Google’s 2024 average fleetwide water usage effectiveness. These findings do
+not represent the specific environmental impact for all Gemini App text-generation prompts nor are they
+indicative of future performance.  
+2\. The results of the above analysis from May 2025 were compared to baseline data from the median Gemini App
+text-generation prompt in May 2024. Energy per median prompt is subject to change as new models are added, AI
+model architecture evolves, and AI chatbot user behavior develops. The data and claims have not been verified
+by an independent third-party._
+
+Posted in
+
+  * [Infrastructure](https://cloud.google.com/blog/products/infrastructure)
+  * [AI & Machine Learning](https://cloud.google.com/blog/products/ai-machine-learning)
+  * [Sustainability](https://cloud.google.com/blog/topics/sustainability)
+  * [AI infrastructure](https://cloud.google.com/blog/topics/ai-infrastructure)
+
+##### Related articles
+
+[Financial ServicesIntroducing Google Cloud’s U4 compute: Enabling ultra-low latency tradingBy Disha Chopra •
+8-minute read](https://cloud.google.com/blog/topics/financial-services/ultra-low-latency-solution-
+with-u4-enables-high-velocity-trading)
+
+[InfrastructureExpanding connectivity in the Americas: Introducing Alisios, Canoa, and OlaLuz subsea cablesBy
+Brian Quigley • 5-minute read](https://cloud.google.com/blog/products/infrastructure/introducing-americas-
+connect)
+
+[SystemsIntroducing Brazos: Bringing liquid cooling to air-cooled data centersBy Jorge Padilla • 2-minute
+read](https://cloud.google.com/blog/topics/systems/brazos-liquid-cooling-system-for-air-cooled-data-centers)
+
+[NetworkingHow we evolved Google’s global and data center networks for the AI eraBy Bikash Koley • 7-minute
+read](https://cloud.google.com/blog/products/networking/data-center-and-global-networks-built-for-ai-era)
+
+### Footer Links
+
+#### Follow us
+
+  * [](https://www.x.com/googlecloud)
+  * [](https://www.youtube.com/googlecloud)
+  * [](https://www.linkedin.com/showcase/google-cloud)
+  * [](https://www.instagram.com/googlecloud/)
+  * [](https://www.facebook.com/googlecloud/)
+
+[](https://cloud.google.com/ "Google Cloud")
+
+  * [Google Cloud](https://cloud.google.com/)
+  * [Google Cloud Products](https://cloud.google.com/products/)
+  * [Privacy](https://myaccount.google.com/privacypolicy?hl=en-US)
+  * [Terms](https://myaccount.google.com/termsofservice?hl=en-US)
+  * Cookies management controls
+
+  * [Help](https://support.google.com)
+  * LanguageEnglishDeutschFrançais한국어日本語

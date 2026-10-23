@@ -1,0 +1,211 @@
+SOURCE COPY — SRC-ECMWF
+Retrieved 2026-10-21 for Inside the Machine Mind (offline reference copy; excerpt of the original, formatting simplified).
+Original URL: https://www.ecmwf.int/en/about/media-centre/news/2025/ecmwfs-ai-forecasts-become-operational
+Page/document title: ECMWF’s AI forecasts become operational | ECMWF
+
+------------------------------------------------------------------------
+
+Skip to main content
+
+menu [help_outline](/en/support)
+
+[ ](/)
+
+Search
+
+  * [ help_outline Help](/en/support)
+  * [ login Log in ](/user/login?destination=/en/about/media-centre/news/2025/ecmwfs-ai-forecasts-become-operational)
+
+search account_circle
+
+  * [About](/en/about)
+  * [Forecasts](/en/forecasts)
+  * [Computing](/en/computing)
+  * [Research](/en/research)
+  * [Learning](/en/learning)
+  * [Publications](/en/publications)
+
+  * [Who we are](/en/about/who-we-are)
+  * [What we do](/en/about/what-we-do)
+  * [Jobs](/en/about/jobs)
+  * [Media centre](/en/about/media-centre)
+  * [Suppliers](/en/about/suppliers)
+  * [Grants](/en/about/grants)
+  * [Location](/en/about/contact-us/location)
+
+# ECMWF’s AI forecasts become operational
+
+25 February 2025
+
+[](https://www.addtoany.com/share#url=https%3A%2F%2Fwww.ecmwf.int%2Fen%2Fabout%2Fmedia-
+centre%2Fnews%2F2025%2Fecmwfs-ai-forecasts-become-
+operational&title=ECMWF%E2%80%99s%20AI%20forecasts%20become%20operational)
+
+ECMWF has taken the Artificial Intelligence Forecasting System (AIFS) into operations today, 25 February 2025,
+to run side by side with its traditional physics-based Integrated Forecasting System (IFS) to advance
+numerical weather prediction.
+
+The AIFS outperforms state-of-the-art physics-based models for many measures, including tropical cyclone
+tracks, with gains of up to 20%.
+
+This high-accuracy model complements the portfolio of our physics-based models by leveraging the opportunities
+made available by machine learning (ML) and artificial intelligence (AI). These include increased speed and a
+reduction of approximately 1,000 times in energy use for making a forecast.
+
+### First operational open AI model
+
+The AIFS is the first fully operational weather prediction open model using machine learning with the widest
+range of parameters. It includes vital fields for users, such as wind and temperature, and details on
+precipitation types from snow to rain. The AIFS has a grid spacing of currently 28 km.
+
+The AIFS has been designed holistically with all users in mind. For example, in the renewable energy sector it
+will help with predictions of quantities such as surface solar radiation levels or wind speeds at turbine
+levels, so that operations can be maximised.
+
+The availability of the AIFS in conjunction with our other services will positively impact how national
+weather services in our 35 Member and Co-operating States and beyond will be able to make their predictions.
+
+It could potentially help industries where forecasts for the medium range can affect decision-making, such as
+the energy sector for pricing forecasts, as well as the insurance, security and shipping sectors.
+
+ECMWF’s Director-General, Florence Rabier, said: “This milestone will transform weather science and
+predictions. It showcases our dedication to delivering a machine learning forecasting model that pushes the
+boundaries of efficiency and accuracy, and it underscores our commitment to harnessing the power of machine
+learning for the weather forecasting community. It is not only us who are innovating as it is important to
+remember that, with ECMWF, 35 nations are working together to advance weather science to improve global
+predictions. This is to help national meteorological agencies in their work to contribute to a safe and
+thriving society.”
+
+### How does the model work?
+
+The AIFS uses the same initial conditions for its forecasts as the IFS. These are based on the combination of
+a previous short-term forecast with around 60 million quality-controlled observations from satellites as well
+as many other streams, including from planes, boats, sea buoys and many other Earth-based measurement
+stations.
+
+Every six hours, these initial conditions feed into the AIFS. The machine learning model, trained on how the
+weather has evolved in the past, assesses how the initial conditions will influence the weather for the coming
+days.
+
+By contrast, the IFS uses physics-based capabilities to arrive at a forecast with a grid-spacing of 9 km over
+the globe, integrating the laws of physics in its computer code.
+
+The first operational version is called AIFS Single. It runs a single forecast at a time, known as a
+deterministic forecast. However, ECMWF is pushing this model to create a collection of 50 different forecasts
+with slight variations at any given time to provide the full range of possible scenarios. This is known as
+[ensemble](/en/about/media-centre/focus/2017/fact-sheet-ensemble-weather-forecasting "Fact sheet: Ensemble
+weather forecasting ") modelling, a technique developed and implemented by ECMWF more than thirty years ago.
+
+### Future plans
+
+The launch of AIFS Single as an operational service is only the beginning. The next steps will be [making
+ensemble forecasts available](/en/newsletter/181/earth-system-science/data-driven-ensemble-forecasting-aifs
+"Data-driven ensemble forecasting with the AIFS") and introducing experimental data-driven [sub-seasonal
+(extended-range) forecasting](/en/forecasts/about-our-forecasts/sub-seasonal-range-forecasts "Sub-seasonal-
+range forecasts"). The potential to hybridise data-driven and physics-based forecasts will also be a field of
+research over the coming years.
+
+ECMWF’s Director of Forecasts and Services, Florian Pappenberger, added: “We see the AIFS and IFS as
+complementary, and part of providing a range of products to our user community, who decide what best suits
+their needs. ECMWF's AIFS was an experimental model for some months whilst we enhanced its capabilities by
+interacting with our Member States and users to refine it. Making such a system operational means that it is
+openly available and has 24/7 support for our meteorological community. As always, we have to ramp up this
+service to full maturity, and we look forward to engaging directly with our users to ensure all needs are
+covered where possible."
+
+### Further information
+
+More information on the [implementation of the AIFS operational
+model](https://confluence.ecmwf.int/display/FCST/Implementation+of+AIFS+Single+v1) is available, and the model
+has also been [presented in a webinar](https://events.ecmwf.int/event/456/). In addition, a series of [AIFS
+blog posts](https://www.ecmwf.int/en/about/media-centre/aifs-blog) can be accessed on our website, and AIFS
+Single forecast charts are [available on our charts page](https://charts.ecmwf.int/
+"https://charts.ecmwf.int/").
+
+  * [News](/en/about/media-centre/news)
+  * [In focus](/en/about/media-centre/focus)
+  * [AIFS blog](/en/about/media-centre/aifs-blog)
+  * [Science blog](/en/about/media-centre/science-blog)
+  * [Key facts and figures](/en/about/media-centre/key-facts-and-figures)
+  * [Media resources](/en/about/media-centre/media-resources)
+  * [Videos](/en/about/media-centre/videos)
+
+expand_less expand_more
+
+* * *
+
+## [About](/en/about)
+
+[Who we are](/en/about/who-we-are)
+
+[What we do](/en/about/what-we-do)
+
+[Jobs](/en/about/jobs)
+
+[Media centre](/en/about/media-centre)
+
+[Suppliers](/en/about/suppliers)
+
+[Grants](/en/about/grants)
+
+[Location](/en/about/contact-us/location)
+
+## [Forecasts](/en/forecasts)
+
+[Charts](/en/forecasts/charts)
+
+[Datasets](/en/forecasts/datasets)
+
+[Quality of our forecasts](/en/forecasts/quality-our-forecasts)
+
+[About our forecasts](/en/forecasts/documentation-and-support)
+
+[Access to forecasts](/en/forecasts/accessing-forecasts)
+
+## [Computing](/en/computing)
+
+[Our facilities](/en/computing/our-facilities)
+
+[Access to computing facilities](/en/computing/access-computing-facilities)
+
+[Software](/en/computing/software)
+
+[Service status](https://status.ecmwf.int)
+
+## [Research](/en/research)
+
+[Data assimilation](/en/research/data-assimilation)
+
+[Modelling and Prediction](/en/research/modelling-and-prediction)
+
+[Climate reanalysis](/en/research/climate-reanalysis)
+
+[Projects](/en/research/projects)
+
+[EMI R&D Projects](/en/research/emi-rd-projects)
+
+## [Learning](/en/learning)
+
+[Training](/en/learning/training)
+
+[Workshops](https://events.ecmwf.int/category/2/)
+
+[Seminars](https://events.ecmwf.int/category/9/)
+
+* * *
+
+© European Centre for Medium-Range Weather Forecasts
+
+© ECMWF
+
+  * [ ](https://www.linkedin.com/company/ecmwf)
+  * [ ](https://bsky.app/profile/ecmwf.int)
+  * [ ](https://www.facebook.com/ECMWF)
+  * [ ](https://www.flickr.com/photos/ecmwf)
+  * [ ](https://www.instagram.com/ecmwf.official/)
+  * [ ](https://youtube.com/ecmwf)
+
+  * [Accessibility](/en/accessibility "Useful footer links and privacy")
+  * [Privacy](/en/privacy)
+  * [Terms of use](/en/terms-use)
+  * [Contact](/en/about/contact-us)

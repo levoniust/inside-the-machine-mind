@@ -1,0 +1,369 @@
+SOURCE COPY — SRC-SATA
+Retrieved 2026-10-21 for Inside the Machine Mind (offline reference copy; excerpt of the original, formatting simplified).
+Original URL: https://sata-io.org/system/files/member-downloads/SATA-6-Gbs-The-Path-from-3gbs-to-6gbs.pdf
+Page/document title: (pdf)
+
+------------------------------------------------------------------------
+
+ ______________________________________________________________________________  
+ 
+______________________________________________________________________________  
+ 
+ 
+www.sataPio.org    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+The Path from 3Gb/s to SATA 6Gb/s: 
+How to Migrate Current Designs to the SATA Revision 3.0 
+Specification 
+May 27, 2009 
+ 
+
+ ______________________________________________________________________________  
+______________________________________________________________________________  
+ 
+ 
+www.sataPio.org     
+1 
+ 
+Abstract: 
+The new Serial ATA Revision 3.0 specification  doubles the throughput of SATAP
+based interconnects to 6Gb/s for a wide range of applications and eliminates storage as 
+a system bottleneck. While the spec’s increased data rate seems to capture most of the 
+limelight, the SATA Revision 3.0 specification introduces several new features and 
+capabilities that improve the performance, power efficiency, and costPeffectiveness of 
+SATA technology in a way that enables developers to leverage much of their existing 
+IP. This whitepaper will explore the key differences between SATA Revisions 2.6 and 
+3.0 and what impact they will have on new designs. Another whitepaper, “Fast Just Got 
+Faster: SATA 6Gb/s,”  provides an overview of the benefits and applications enabled by 
+SATA 6Gb/s technology. An FAQ  document also is available. 
+ 
+ 
+ 
+ In the race for faster throughput, there rarely se ems to be a time when 
+interconnect standards remain the same long enough to allow the industry to feel as if it 
+can catch its breath. Every few years, interfaces are expected to at least double their 
+data rates to keep pace with increasing bandwidth demand. With the penetration of 
+digital audio and the continuing momentum of digital video, storage interfaces are being 
+pressed to their limits. 
+ 
+ Doubling an interface data rate typically requires  a redesign of many of the 
+interface’s internal components and may introduce new signal integrity issues which in 
+turn can prompt modifications in connector pin count, cabling, equalization and preP
+emphasis, protocol, training, or many other factors. Each change can introduce 
+complexity, cost, and confusion. Sometimes these changes can also be significant 
+enough to effectively create an entirely new interface in everything but name, requiring 
+ASIC redesign, new board layout, rewritten drivers, and so on. 
+ 
+ When the Serial ATA International Organization (SA TAPIO) began design of the 
+SATA Revision 3.0 specification, the designers wanted to double the interface data rate 
+while enhancing support for multimedia applications − without introducing major 
+changes that could adversely affect cost, increase design complexity, or reduce the 
+quality and performance of the SATA interface. Key to meeting this goal is maintaining 
+backward compatibility with SATA 3Gb/s connectors and cabling. In addition to 
+operating at 6Gb/s, SATA Revision 3.0 offers advanced Native Command Queuing 
+(NCQ) streaming, enhanced power management, new form factor connectors for 
+compact embedded applications, and simplified testing. 
+ 
+  
+ ______________________________________________________________________________  
+______________________________________________________________________________  
+ 
+ 
+www.sataPio.org     
+2 
+Moving to SATA 6Gb/s 
+ 
+ The primary challenge designers face when moving f rom 3 to 6Gb/s is that 
+losses in signal amplitude over boards and cables increase as data rates rise. Higher 
+frequency signals have increased sensitivity to attenuation and jitter. When attenuation 
+and jitter become too pronounced, signal quality degrades and throughput drops 
+significantly because of an increasing number of resends. Attenuation is also affected 
+by cable length. 
+ 
+The key factor driving the SATA Revision 3.0 specification is backward 
+compatibility.  While there are advanced technologies available for managing 
+attenuation and jitter, such modifications to a specification can require nonPtrivial 
+redesign across the development and supply chain – ASICs, PHYs, cabling, 
+connectors, drivers, and applications. By allowing SATA 6Gb/s systems the ability to 
+utilize the same connectors and cables as SATA 3Gb/s systems, most of the 
+modifications required to achieve 6Gb/s are confined to the PHY layer. Except for 
+doubling the data rate, the PHY is no more complex than that defined by the SATA 
+Revision 2.6 specification. Changes to the protocol itself are minor, and the physical 
+connectors and cables remain unchanged.   
+ 
+By avoiding the introduction of training or advanced signal quality technology, 
+SATA 6Gb/s requires no heroics, so to speak, to implement, enabling designers at all 
+levels to leverage most of their existing IP. This approach accelerates timePtoPmarket 
+because designers do not need to completely redesign their systems. 
+ 
+ 
+More Than Just Faster Transfer Speeds 
+ 
+SATA Revision 3.0 offers designers more than just higher data rates. While 
+support for 6Gb/s is clearly the highlight of this thirdPgeneration SATA technology, the 
+designers of SATA Revision 3.0 sought to add capabilities while maintaining SATA’s 
+low cost structure. Important enhancements to the SATA Revision 3.0 specification 
+include new compact connectors, enhanced NCQ streaming and management, 
+advanced power management features, and simplified testing. These new features also 
+function at 1.5Gb/s and 3Gb/s. 
+  
+Connector Options 
+SATA Revision 3.0 introduces two connectors to bring SATA technology to 
+smaller devices. In addition to reducing overall connector size, these new connectors 
+meet the strict design requirements specific to applications where device profile is a 
+primary design consideration. The new 7mm optical disk drive (ODD) connector enables 
+ ______________________________________________________________________________  
+______________________________________________________________________________  
+ 
+ 
+www.sataPio.org     
+3 
+designers to create slimmer and lighter consumer electronic devices such as 
+notebooks, netbooks, and DVD players.  
+ 
+The new smaller Low Insertion Force (LIF) connector provides a more compact 
+form factor to accommodate even shorterP and thinnerPprofiled 1.8Pinch storage devices. 
+The LIF connector characteristics are particularly well suited for embedded storage 
+applications, which can best utilize the streamlined footprints of these new LIFPSATA 
+storage devices.   
+  
+Power Management 
+The earlier SATA Revision 2.6 specification introduced two power modes – 
+Partial and Slumber – on the interface that operate independently of power 
+management schemes integrated in storage devices. To conserve power – especially in 
+batteryPoperated applications – devices can power off SATA portions of the interface 
+circuitry when the interface is not in use, such as when a hard drive is in seek mode. 
+For SATA Revision 2.6 devices, the shift from Partial to Slumber mode required the host 
+to first change modes from Partial to Active before entering Slumber mode. In addition, 
+SATA Revision 2.6Penabled peripherals have to wait for permission from the host to 
+remove power supplied to the interface.  
+  
+SATA Revision 3.0 introduces an Automatic Partial to Slumber mode transition 
+which 1) eliminates the need to first enter Active mode and 2) enables either hosts or 
+devices to initiate Slumber without asking permission from the other side of the link. 
+These two improvements increase the length of time SATA interfaces can be powered 
+down, enabling the power efficiency of SATA 6Gb/s PHYs to approximate SATA 3Gb/s 
+PHYs, depending upon the implementation. While 6Gb/s PHY designs are expected to 
+have a higher active power, the total active time/duty cycle to transfer equivalent data 
+will be approximately half that of 3Gb/s devices.   
+ 
+ 
+Multimedia Support through Native Command Queuing 
+ 
+ Another new SATA Revision 3.0 feature is Native Co mmand Queuing (NCQ) 
+streaming, which shifts management of timePlimited commands from devices to hosts. 
+NCQ streaming was designed to enable isochronous data transfers between 
+applications with high bandwidth requirements, such as audio and video, while also 
+improving the performance of lower priority transfers.  
+  
+When using ATA power management commands, the host sends a time limit with 
+a command. If a device cannot complete the command in the designated time, the 
+ ______________________________________________________________________________  
+______________________________________________________________________________  
+ 
+ 
+www.sataPio.org     
+4 
+device will abort the command and either returns an undefined response or truncated 
+data. 
+ 
+  When NCQ streaming is employed, the host sets as well as manages the time 
+limit for the command. The time limit is still passed to devices with the intention the time 
+limit will be used to prioritize requests. However, because the host is managing the 
+timer, the host has control of all pending commands. This allows the host to determine 
+whether a command which has exceeded the time limit will be aborted or kept active. 
+ 
+ One of the benefits of NCQ is that it provides a m echanism for optimizing data 
+access.  The NCQ protocol enables multiple commands to be staged for processing by 
+a hard drive, thus allowing the drive to decide the most efficient way the group of 
+commands is to be executed. For example, a disk drive may change the order in which 
+the commands are processed to reflect the relative location of where the requested data 
+is stored compared to the current position of the read/write head over the media 
+platters. NCQ streaming balances priority and efficiency by allowing the host to pass 
+protocol information to the drive, thereby guaranteeing reliable media playback while 
+simultaneously permitting the drive to improve the performance and throughput of other, 
+lower priority system tasks that may otherwise have been adversely impacted. 
+ 
+ Related NCQ improvements include queue management features that give hosts 
+direct control of outstanding NCQ commands as well as the ability to manage the 
+processing of NCQ commands to optimize performance. New features include an Abort 
+subcommand and the ability to read SMART logs using the Direct Memory Access 
+(DMA) protocol. 
+ 
+With the Abort subcommand, when the host timer expires for a particular 
+command, the host is given the option of aborting a particular tag number, aborting all 
+streaming commands, or aborting all commands currently in the queue. 
+   
+The ability to read SMART logs directly to DMA is a feature which improves host 
+efficiency by beginning the phase out of certain programmed input/output (PIO) 
+protocols. When PIO is used to read SMART logs, the host must read each individual 
+twoPbyte register it wants to examine. DMAPbased commands eliminate the need for 
+host involvement during log reading. Hosts only need initiate the SMART log read and 
+then are free to perform other tasks until the DMA notifies the host that the entire read 
+operation is complete.  
+ 
+ 
+ 
+ 
+ ______________________________________________________________________________  
+______________________________________________________________________________  
+ 
+ 
+www.sataPio.org     
+5 
+Clarifications 
+ 
+ The SATA Revision 3.0 specification also brings a variety of important but lower 
+profile additions, corrections, and clarifications to the SATA specification. Most of these 
+changes do not  alter how the SATA interface operates but aid in clarifying the specified 
+requirement. For example, SATA Revision 3.0 states that the frequency and signal type 
+to be used for the outPofPband (OOB) signaling which two devices use to negotiate 
+transfer rate is the same as that used in Revision 2.6. This clearly indicates that SATAP
+based ASIC designs will not have to change their OOB circuitry to operate with new 
+SATA Revision 3.0Penabled devices. 
+ 
+Data validity clarifications are another example of lower profile clarifications 
+included in the SATA Revision 3.0 specification. Previously when a hostPissued read 
+command was unexpectedly terminated, there was ambiguity as to which part of the 
+received data was valid.  Problems arose when applications began using data as it 
+arrived; some vendor implementations truncated data in the middle of a FIS while others 
+ended at the next 8K data set. SATA Revision 3.0 specifies that the host should not 
+assume data is valid until a data completion is received. 
+ 
+Another important clarification involves the Identify Device command. Earlier 
+versions of the specification did not clearly address dependencies between some of the 
+bits returned from the Identify Device command and when such data was valid. This can 
+specifically be seen in words 76P79, which are owned by SATAPIO. Overall, the SATA 
+Revision 3.0 specification also better aligns SATA with the INCITS ATA8PACS standard. 
+A complete list of changes is provided in the Revision History section contained in the 
+SATA Revision 3.0 specification. 
+ 
+ SATAPIO is currently working to update the externa l SATA (eSATA) specification 
+to support 6Gb/s speeds. Because of their exposed nature, external interconnects must 
+be more rugged and support longer cable lengths than internal interconnects. So as not 
+to delay the release of the internal SATA 6Gb/s specification, accommodations for 
+eSATA were not included in the SATA Revision 3.0 specification. The eSATA 6Gb/s 
+specification is targeted for release in the near future. 
+ 
+ 
+SATA 6Gb/s Cabling 
+ 
+ In the transition to SATA 6Gb/s, it will be import ant to use highPquality cabling. 
+Problems may be related to the use of cables made from marginal materials that 
+perform at the edges of SATA 3Gb/s tolerances, which could become a failure point at 
+ ______________________________________________________________________________  
+______________________________________________________________________________  
+ 
+ 
+www.sataPio.org     
+6 
+the faster 6Gb/s signal rates. SATAPIO therefore recommends that only high quality 
+cables and connectors be utilized for SATA 6Gb/s. 
+ 
+Cable manufacturers and all suppliers of SATA products are encouraged to 
+register their products on the SATAPIO Integrators list. This list is available to the public 
+as a resource for determining reliable products that meet the SATA interface 
+specification. 
+ 
+ 
+High-speed Signal Testing 
+ 
+ An important goal for SATAPIO during the developme nt of the SATA Revision 3.0 
+specification was to provide simplified testing of SATAPbased equipment to speed 
+product development and troubleshooting. By inviting testing tool vendors to participate 
+as early contributors to SATA Revision 3.0, the new 1.4 Unified Test Definition 
+Specification (UTD) for SATA 6Gb/s was designed to take full advantage of the 
+advanced capabilities of existing testing tools. In addition to clarifying various 
+ambiguities in the 1.3 Unified Test Definition Specification (UTD), several testing 
+parameters have also been removed, which further simplifies the creation and 
+automation of test benches. 
+ 
+By embracing that the tolerances required at 6Gb/s are much tighter than at 
+3Gb/s, developers and endPusers can avoid expending resources and time 
+troubleshooting problems that do not actually exist. Added cable length and connectors 
+used to attach test equipment can introduce jitter and attenuation onto the link. The 
+presence of testing tools can mask or introduce signal integrity issues. Test setups that 
+performed at the margin of SATA 3Gb/s may need to be updated to meet Revision 3.0 
+specs for SATA 6Gb/s to avoid setupPinduced problems appearing as issues with 
+devices under test.   
+ 
+Attenuation and jitter can be minimized by using the shortest possible cable 
+lengths and collocating testing tools with devices under test as well as eliminating 
+unnecessary discontinuities in connectors, splices, and adaptors. To further protect 
+signals from interference, the use of highPquality shielded cables that guard the entire 
+cable should be employed. Users should also make themselves familiar with the various 
+connection methods available and how each reduces or compensates for added jitter 
+and attenuation. A comprehensive discussion on how to avoid SATA 6Gb/s cabling 
+issues is provided in the white paper entitled “Successful SATA 6Gb/s Equipment 
+Design and Development,”  which is available on the SATAPIO Web site . 
+ 
+ 
+ ______________________________________________________________________________  
+______________________________________________________________________________  
+ 
+ 
+www.sataPio.org     
+7 
+Maximizing Bandwidth Utilization 
+ 
+ Doubling the data rate of the SATA interface bring s many performance 
+advantages to endPusers. Higher performance benefits a wide range of applications, 
+including enterprise storage, RAID as well as faster data processing in desktop and 
+notebook PCs.  In order to fully utilize SATA capabilities, however, developers may 
+need to employ other technologies to match data access to interface throughput.   
+ 
+Readiness to function at the 6Gb/s speed will vary by device type. Solid state 
+drives (SSDs) have none of the mechanical access latencies associated with hard disk 
+drives and already utilize all of the available 270 MB/s bandwidth of SATA 3Gb/s. Some 
+of the nextPgeneration SSDs are expected to need the SATA 6Gb/s potential transfer 
+speed of over 580 MB/s. 
+ 
+The SATA port multiplier feature can be used to aggregate up to 15 drives onto a 
+single SATA port to increase bandwidth utilization. Port multipliers were part of the 
+SATA specification since version 1.0 and require host links to support Frame 
+Information StructurePbased (FIS) switching. This allows the host to communicate with 
+one drive after another without having to wait for various transactions to complete. 
+These are prevalent in entryPlevel server applications and are becoming increasingly 
+important for highPbandwidth applications such as HD video postPproduction systems. 
+  
+ 
+Naming Conventions 
+ 
+ In order to avoid confusion between different SATA  specifications, the SATAPIO 
+has outlined some basic naming conventions  that are geared to eliminate ambiguity. 
+Manufacturers should avoid using the terms “SATA III” and “SATA 3.0,” as it is unclear 
+whether “SATA 3.0” refers to the SATA Revision 3.0 specification, SATA 6Gb/s as 
+defined by the SATA Revision 3.0 specification, or the SATA 3Gb/s transfer rate.  
+  
+The terms “SATA II”, “SATA 2.6”, and “Gen 2” should be avoided as well. While 
+the terms “Gen 3”, “Gen 2”, and “Gen 1” are used within the SATA Revision 3.0 
+specification, they refer to technical specification items and should not be used for 
+marketing or product naming purposes.  
+ 
+ The formal name for the new specification is the “ Serial ATA Revision 3.0 
+specification.” The technology can be referred to as “SATA 6Gb/s” and products should 
+be called “SATA 6Gb/s <product name>.” By following these naming conventions, the 
+storage industry can avoid undesirable confusion that could stall adoption in the market 
+place.  
+ ______________________________________________________________________________  
+______________________________________________________________________________  
+ 
+ 
+www.sataPio.org     
+8 
+  
+ 
+Conclusion 
+ 
+There are many reasons why SATA is the dominant internal storage interface 
+worldwide.  With the SATA Revision 3.0 specification, storage can better support realP
+time multimedia transfers and other highPbandwidth applications. By maintaining 
+backward compatibility, SATAPIO enabled the ability to double data transfer rates 
+without requiring a complete redesign of equipment or compromising the quality, 
+reliability, and performance for which SATA is wellPknown.

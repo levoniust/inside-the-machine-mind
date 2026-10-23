@@ -80,6 +80,7 @@ final List<SectionInfo> sections = [
       _l('s3_sampling', 3, 'Picking the next word', 'Temperature & top-p'),
       _l('s3_loop', 3, 'One word at a time', 'The generation loop'),
       _l('s3_at_home', 3, 'Running AI at home', 'PCs, Macs & DGX Spark'),
+      _l('s3_quants', 3, 'Decoding model filenames', 'Reading Q4_K_M & friends'),
       _l('s3_frontier', 3, 'A frontier model in the datacenter'),
       _l('s3_serving', 3, 'Serving a billion people'),
       _l('s3_beyond_text', 3, 'Beyond words', 'Images, voice & agents'),
