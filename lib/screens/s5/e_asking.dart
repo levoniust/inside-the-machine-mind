@@ -85,23 +85,29 @@ String _chipClause(_Chip chip) => switch (chip.id) {
   _ => '',
 };
 
-/// Canned answer variants, picked by how many chips are selected.
-/// No numbers or facts.
-String _answerFor(int selectedCount) => switch (selectedCount) {
-  0 => 'Subject: Quick note\n\nHi there,\n\nHope you are doing well. Let me know if you have any questions.\n\nBest,\nMe',
-  1 => 'Subject: Quick note\n\nHi,\n\nI wanted to reach out and check in. Let me know what you think.\n\nBest,\nMe',
-  2 => 'Subject: Meeting this week?\n\nHi,\n\nCould we find a time to meet this week? I think it would help us move things forward. Let me know what works for you.\n\nBest,\nMe',
-  3 => 'Subject: A quick catch-up\n\nHi,\n\nI hope your week is going well. Could we meet this week? I think a short chat would help us get on the same page. Let me know what time suits you.\n\nWarm regards,\nMe',
-  4 => 'Subject: Two short paragraphs\n\nHi,\n\nI hope you are doing well. Could we meet this week? I think a short chat would help us get on the same page.\n\nLet me know what time works for you.\n\nWarm regards,\nMe',
-  _ => 'Subject: Two short paragraphs\n\nHi,\n\nI hope you are doing well. Could we meet this week? I think a short chat would help us get on the same page. I will keep it brief and clear.\n\nLet me know what time works for you.\n\nWarm regards,\nMe',
-};
+/// The mock answer is assembled from the chips that are on, so each detail visibly changes it.
+/// (Pre-written pieces, no live AI and no facts.)
+String _answerFor(Set<_Chip> selected) {
+  bool on(String id) => selected.any((c) => c.id == id);
+  final subject = on('goal') ? 'Subject: 20 minutes this week?' : 'Subject: Quick note';
+  final hello = on('audience') ? 'Hi Sam,' : 'Hi there,';
+  final warm = on('tone') ? 'I hope your week is going well. ' : '';
+  final ask = on('goal')
+      ? 'Could we meet for a short chat this week to plan the next steps? Thursday or Friday morning would suit me.'
+      : (on('avoid')
+            ? 'I wanted to get in touch about the project.'
+            : 'Just circling back to touch base and leverage some synergies on the project!!');
+  final example = on('example') ? 'Like last time: summary first, then the question.\n\n' : '';
+  final body = on('length')
+      ? '$example$warm$ask\n\nLet me know what works for you.'
+      : '$example$warm$ask Let me know what you think, any feedback is welcome, and also happy to discuss other things '
+            'if anything else comes up on your side, no rush at all${on('avoid') ? '.' : '!!'}';
+  final bye = on('tone') ? 'Warm regards,\nAlex' : 'Thanks,\nAlex';
+  return '$subject\n\n$hello\n\n$body\n\n$bye';
+}
 
 class _PromptBuilder extends StatelessWidget {
-  const _PromptBuilder({
-    required this.accent,
-    required this.selected,
-    required this.onToggle,
-  });
+  const _PromptBuilder({required this.accent, required this.selected, required this.onToggle});
 
   final Color accent;
   final Set<_Chip> selected;
@@ -111,7 +117,7 @@ class _PromptBuilder extends StatelessWidget {
   Widget build(BuildContext context) {
     final c = AppColors.of(context);
     final prompt = _promptFor(selected);
-    final answer = _answerFor(selected.length);
+    final answer = _answerFor(selected);
     return DemoCard(
       title: 'Ask it to be more specific',
       child: Column(
@@ -135,7 +141,9 @@ class _PromptBuilder extends StatelessWidget {
               children: [
                 Icon(Icons.edit_note, size: 18, color: accent),
                 const SizedBox(width: Gap.s),
-                Expanded(child: Text(prompt, style: const TextStyle(fontWeight: FontWeight.w600))),
+                Expanded(
+                  child: Text(prompt, style: const TextStyle(fontWeight: FontWeight.w600)),
+                ),
               ],
             ),
           ),
@@ -164,12 +172,7 @@ class _PromptBuilder extends StatelessWidget {
 }
 
 class _ChipButton extends StatelessWidget {
-  const _ChipButton({
-    required this.chip,
-    required this.selected,
-    required this.accent,
-    required this.onToggle,
-  });
+  const _ChipButton({required this.chip, required this.selected, required this.accent, required this.onToggle});
 
   final _Chip chip;
   final bool selected;
@@ -194,11 +197,7 @@ class _ChipButton extends StatelessWidget {
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(
-              selected ? Icons.check : Icons.add,
-              size: 14,
-              color: selected ? accent : c.textDim,
-            ),
+            Icon(selected ? Icons.check : Icons.add, size: 14, color: selected ? accent : c.textDim),
             const SizedBox(width: 4),
             Text(chip.label, style: TextStyle(color: selected ? accent : c.text, fontSize: 13)),
           ],
