@@ -4,11 +4,11 @@ import 'narration.dart';
 const narrationS7 = <String, LessonText>{
   'l_which_custom': LessonText(
     intro: [
-      'You can teach a model new things in three ways, and the right one depends on what it is actually missing.',
-      'Answer the three questions and watch the path light up — [[RAG]] when it needs knowledge it does not have, [[fine-tuning]] when it needs a new skill or format, a plain prompt for a one-off.',
-      'Try the four example scenarios to see which path fits each situation.',
+      'You want a model to do something it doesn\'t do yet. There are three ways to get there, and they cost very different amounts of effort.',
+      'Answer two questions and watch the path light up: [[RAG]] when it\'s missing knowledge, [[fine-tuning]] when it needs a new habit every time, a plain prompt for everything else. Or tap a scenario.',
+      'Then look at the ladder of costs. Most problems are solved on the first rung.',
     ],
-    keyIdea: 'The right customization path depends on whether the model needs new knowledge, a new capability, or just a one-off instruction.',
+    keyIdea: 'Missing knowledge calls for retrieval, a missing habit calls for fine-tuning, and everything else starts with a better prompt.',
   ),
   'l_lora': LessonText(
     intro: [

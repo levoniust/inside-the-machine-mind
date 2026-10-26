@@ -72,6 +72,7 @@ import 's6/l_will_it_fit.dart';
 import 's7/l_lora.dart';
 import 's7/l_merging.dart';
 import 's7/l_steering.dart';
+import 's7/l_which_custom.dart';
 import 's8/l_paper_anatomy.dart';
 import 's8/l_paper_shelf.dart';
 
@@ -144,6 +145,7 @@ final Map<String, WidgetBuilder> screenBuilders = {
   'l_lora': (_) => const LLoraScreen(),
   'l_merging': (_) => const LMergingScreen(),
   'l_steering': (_) => const LSteeringScreen(),
+  'l_which_custom': (_) => const LWhichCustomScreen(),
   'l_paper_anatomy': (_) => const LPaperAnatomyScreen(),
   'l_paper_shelf': (_) => const LPaperShelfScreen(),
 };
