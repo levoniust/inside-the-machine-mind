@@ -63,6 +63,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/gallery/
+    - assets/workbench/
     - assets/data/
     - assets/sources/
     - assets/sources_pdf/

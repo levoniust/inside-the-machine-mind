@@ -574,3 +574,34 @@ class StatGrid extends StatelessWidget {
     return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: rows);
   }
 }
+
+/// A small dated chip for content that goes stale ("as of Oct 2026"). The app is offline on purpose,
+/// so anything about the current state of the field says how old it is.
+class AsOfChip extends StatelessWidget {
+  const AsOfChip(this.date, {super.key, this.onLongPress});
+  final String date;
+  final VoidCallback? onLongPress;
+
+  @override
+  Widget build(BuildContext context) {
+    final c = AppColors.of(context);
+    return GestureDetector(
+      onLongPress: onLongPress,
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: Gap.s, vertical: 3),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(color: c.textDim.withValues(alpha: 0.6)),
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(Icons.schedule, size: 12, color: c.textDim),
+            const SizedBox(width: 4),
+            Text('as of $date', style: AppText.mono.copyWith(fontSize: 11, color: c.textDim)),
+          ],
+        ),
+      ),
+    );
+  }
+}

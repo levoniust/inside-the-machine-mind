@@ -18,8 +18,8 @@ class GalleryData {
   final String model, gpu, license;
   final List<GalleryImage> images;
 
-  static Future<GalleryData> load(AssetBundle bundle) async {
-    final j = jsonDecode(await bundle.loadString('assets/gallery/gallery.json')) as Map<String, dynamic>;
+  static Future<GalleryData> load(AssetBundle bundle, [String manifest = 'assets/gallery/gallery.json']) async {
+    final j = jsonDecode(await bundle.loadString(manifest)) as Map<String, dynamic>;
     return GalleryData(
       j['model'] as String,
       j['gpu'] as String,
@@ -33,22 +33,24 @@ class GalleryData {
 }
 
 /// Easter egg 2: "The 3060 Gallery" — pictures painted by the RTX 3060 in Tim's homelab server.
+/// The Lab's "Bit's Workbench" egg reuses it with its own manifest and title.
 class EggGalleryScreen extends StatefulWidget {
-  const EggGalleryScreen({super.key});
+  const EggGalleryScreen({super.key, this.manifest = 'assets/gallery/gallery.json', this.title = 'The 3060 Gallery'});
+  final String manifest, title;
 
   @override
   State<EggGalleryScreen> createState() => _EggGalleryScreenState();
 }
 
 class _EggGalleryScreenState extends State<EggGalleryScreen> {
-  late final Future<GalleryData> _data = GalleryData.load(rootBundle);
+  late final Future<GalleryData> _data = GalleryData.load(rootBundle, widget.manifest);
 
   @override
   Widget build(BuildContext context) {
     final c = AppColors.of(context);
     final wide = MediaQuery.sizeOf(context).width >= 700;
     return Scaffold(
-      appBar: AppBar(title: const Text('The 3060 Gallery')),
+      appBar: AppBar(title: Text(widget.title)),
       body: FutureBuilder<GalleryData>(
         future: _data,
         builder: (context, snap) {

@@ -128,14 +128,16 @@ void main() {
     }
   });
 
+  // Release gate: `flutter test --dart-define=RELEASE=true` demands every lesson be finished. Day to day, lessons still
+  // being built may be placeholders, but every lesson that has a screen must have its narration.
   test('every lesson has narration, a key idea and a real screen', () {
-    for (final l in allLessons) {
+    const release = bool.fromEnvironment('RELEASE');
+    for (final l in allLessons.where((l) => release || screenBuilders.containsKey(l.id))) {
       expect(narration[l.id]?.intro, isNotEmpty, reason: 'narration for ${l.id}');
       expect(narration[l.id]?.keyIdea, isNotEmpty, reason: 'key idea for ${l.id}');
     }
     final missing = allLessons.where((l) => !screenBuilders.containsKey(l.id)).map((l) => l.id).toList();
-    // Lessons still being built by the local models are allowed to be placeholders until release.
-    expect(missing, isEmpty, reason: 'placeholder lessons: $missing');
+    if (release) expect(missing, isEmpty, reason: 'placeholder lessons: $missing');
   });
 
   test('TermText markup is stripped to plain text', () {

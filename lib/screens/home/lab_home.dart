@@ -7,6 +7,7 @@ import '../../content/lessons.dart';
 import '../../core/models.dart';
 import '../../core/progress.dart';
 import '../../widgets/components.dart';
+import '../extras/egg_gallery_screen.dart';
 import '../extras/glossary_screen.dart';
 import '../extras/settings_screen.dart';
 import '../extras/sources_screen.dart';
@@ -191,7 +192,18 @@ class _NewsStrip extends StatelessWidget {
                   style: AppText.mono.copyWith(fontSize: 12, fontWeight: FontWeight.w800, color: c.lime),
                 ),
               ),
-              Text('as of $labNewsDate', style: AppText.mono.copyWith(fontSize: 11, color: c.textDim)),
+              AsOfChip(
+                labNewsDate,
+                key: const ValueKey('lab-asof'),
+                onLongPress: () {
+                  AppScope.read(context).markEgg('workbench');
+                  openPage(
+                    context,
+                    const EggGalleryScreen(manifest: 'assets/workbench/gallery.json', title: 'Bit\'s Workbench'),
+                    '/egg/workbench',
+                  );
+                },
+              ),
             ],
           ),
           const SizedBox(height: Gap.s),
