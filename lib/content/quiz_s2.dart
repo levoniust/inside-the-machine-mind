@@ -3,10 +3,10 @@ import '../core/models.dart';
 
 const quizS2 = <QuizQuestion>[
   QuizQuestion(
-    'Bit is at its job, answering questions. What is that called, and how is it different from "training"?',
-    ['Inference: like sitting the exam, while training is like studying for it', 'Inference: like studying for the exam, while training is like sitting it', 'Inference: just another name for training', 'Inference: rebuilding the whole brain from scratch for every answer'],
+    'Training is when a model learns from a huge pile of text, months before you ever use it. What is it called when the finished model answers your question?',
+    ['Inference: it uses what it already learned to write the answer, one token at a time', 'Training: it learns your question first, then answers it', 'Searching: it always copies the answer from a website', 'Rebooting: it rebuilds its whole brain for every question'],
     0,
-    'Training is the long study session where the model learns patterns from huge amounts of data; inference is the short moment when it uses what it already learned to answer a question — the difference between cramming for a final and actually sitting in the exam hall.',
+    'Training happens once, on huge computers, and takes months. Inference is the quick part that happens every time you ask: the finished model uses what it learned to write a reply, one token at a time. It doesn\'t learn anything new from your question.',
   ),
   QuizQuestion(
     'Bit chops text into "tokens" — tiny chunks the model reads instead of whole words. Roughly how big is one token?',

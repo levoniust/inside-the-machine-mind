@@ -8,8 +8,8 @@ import '../../widgets/lesson_scaffold.dart';
 
 /// Section 1 · Lesson 5: CPU vs GPU.
 /// A few big CPU cores (master chefs) face an army of tiny GPU cores and tensor cores.
-/// "Showdown": fill a 64×64 grid — the CPU fills a few cells at a time, the GPU fills whole
-/// blocks at once. Facts: HW-H100-CORES, HW-CPU-CORES, HW-CPU-VS-GPU.
+/// "Showdown": fill a 24×24 grid — the CPU fills a few cells at a time, the GPU fills whole
+/// blocks at once. Small enough that every cell is visible, so the counts match the picture. Facts: HW-H100-CORES, HW-CPU-CORES, HW-CPU-VS-GPU.
 class S1CpuGpuScreen extends StatelessWidget {
   const S1CpuGpuScreen({super.key});
 
@@ -67,8 +67,8 @@ class S1CpuGpuScreen extends StatelessWidget {
   }
 }
 
-// Shared grid dimensions (64×64 = 4096 cells).
-const int _grid = 64;
+// Shared grid dimensions (24×24 = 576 cells; small enough to see every cell on a phone).
+const int _grid = 24;
 const int _total = _grid * _grid;
 
 enum _CoreKind { cpu, gpu }
@@ -221,7 +221,7 @@ class _GpuPainter extends CustomPainter {
   bool shouldRepaint(_GpuPainter old) => (old.t * 10).floor() != (t * 10).floor();
 }
 
-/// "Showdown" demo: fill a 64×64 grid, one "swing" (step) at a time. The CPU fills [cpuPerSwing] cells per
+/// "Showdown" demo: fill a 24×24 grid, one "swing" (step) at a time. The CPU fills [cpuPerSwing] cells per
 /// swing, row by row; the GPU fills one whole block per swing, in exactly the outlined squares. The race ends
 /// when the GPU is done. An illustration, not real data.
 class _Showdown extends StatefulWidget {
@@ -232,7 +232,7 @@ class _Showdown extends StatefulWidget {
 }
 
 /// GPU block sizes on the slider (left to right: smaller to bigger blocks, so fewer swings).
-const List<int> blockSizes = [8, 16, 32];
+const List<int> blockSizes = [4, 8, 12];
 
 /// Cells the CPU fills per swing: a few cores, a few cells.
 const int cpuPerSwing = 4;
@@ -242,7 +242,7 @@ int gpuSwings(int block) => _total ~/ (block * block);
 const int cpuSwings = _total ~/ cpuPerSwing;
 
 class _ShowdownState extends State<_Showdown> with SingleTickerProviderStateMixin {
-  static const swingMs = 150;
+  static const swingMs = 200;
 
   int _size = 0; // index into blockSizes
   int _swings = 0; // swings done so far in this race
@@ -299,12 +299,12 @@ class _ShowdownState extends State<_Showdown> with SingleTickerProviderStateMixi
     final cpuCells = math.min(_swings * cpuPerSwing, _total);
     final gpuCells = _swings * _block * _block;
     return DemoCard(
-      title: 'Showdown: fill a 64×64 grid',
+      title: 'Showdown: fill a 24×24 grid',
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Text(
-              'Same job for both: fill all 4,096 cells. Each swing, the CPU fills $cpuPerSwing cells; the GPU fills '
+              'Same job for both: fill all $_total cells. Each swing, the CPU fills $cpuPerSwing cells; the GPU fills '
               'one whole $_block×$_block block. (An illustration, not real data.)',
               style: TextStyle(color: c.textDim)),
           const SizedBox(height: Gap.l),
@@ -361,7 +361,7 @@ class _ShowdownState extends State<_Showdown> with SingleTickerProviderStateMixi
             onChanged: (v) => _setSize(v.round()),
           ),
           const SizedBox(height: Gap.xs),
-          Text('Bigger blocks = the GPU finishes in fewer swings. Real GPUs fill thousands of cells at once.',
+          Text('Bigger blocks = the GPU finishes in fewer swings. A real GPU works on thousands of cells at once.',
               style: TextStyle(color: c.textDim, fontSize: 12)),
         ],
       ),
@@ -382,7 +382,6 @@ class _GridPanel extends StatelessWidget {
   Widget build(BuildContext context) {
     final c = AppColors.of(context);
     final done = cells >= _total;
-    final pct = cells / _total * 100;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -390,8 +389,11 @@ class _GridPanel extends StatelessWidget {
           children: [
             Text(label, style: const TextStyle(fontWeight: FontWeight.w700)),
             const SizedBox(width: Gap.s),
-            Text(done ? 'done' : '${pct.toStringAsFixed(pct > 0 && pct < 10 ? 1 : 0)}%',
-                style: AppText.mono.copyWith(fontSize: 13, color: done ? color : c.textDim)),
+            Expanded(
+              child: Text('$cells / $_total cells${done ? ' ✓' : ''}',
+                  textAlign: TextAlign.end,
+                  style: AppText.mono.copyWith(fontSize: 12, color: done ? color : c.textDim)),
+            ),
           ],
         ),
         const SizedBox(height: 4),
@@ -427,18 +429,29 @@ class _GridPainter extends CustomPainter {
       final rows = cells ~/ _grid, rest = cells % _grid;
       if (rows > 0) canvas.drawRect(Rect.fromLTWH(o.dx, o.dy, s, rows * cell), fill);
       if (rest > 0) canvas.drawRect(Rect.fromLTWH(o.dx, o.dy + rows * cell, rest * cell, cell), fill);
-      return;
+    } else {
+      // GPU: whole blocks, left to right and top to bottom, exactly inside the outlines.
+      final perRow = _grid ~/ b;
+      final blocks = cells ~/ (b * b);
+      for (var i = 0; i < blocks; i++) {
+        canvas.drawRect(
+            Rect.fromLTWH(o.dx + (i % perRow) * b * cell, o.dy + (i ~/ perRow) * b * cell, b * cell, b * cell), fill);
+      }
     }
-    // GPU: whole blocks, left to right and top to bottom, exactly inside the outlines.
-    final perRow = _grid ~/ b;
-    final blocks = cells ~/ (b * b);
-    for (var i = 0; i < blocks; i++) {
-      canvas.drawRect(Rect.fromLTWH(o.dx + (i % perRow) * b * cell, o.dy + (i ~/ perRow) * b * cell, b * cell, b * cell), fill);
+    // Every cell is outlined, so what you count matches the numbers.
+    final thin = Paint()
+      ..strokeWidth = 0.6
+      ..color = c.bg.withValues(alpha: 0.55);
+    for (var i = 1; i < _grid; i++) {
+      canvas.drawLine(Offset(o.dx + i * cell, o.dy), Offset(o.dx + i * cell, o.dy + s), thin);
+      canvas.drawLine(Offset(o.dx, o.dy + i * cell), Offset(o.dx + s, o.dy + i * cell), thin);
     }
+    if (b == null) return;
     final stroke = Paint()
       ..style = PaintingStyle.stroke
-      ..strokeWidth = 1
-      ..color = c.textDim.withValues(alpha: 0.5);
+      ..strokeWidth = 1.5
+      ..color = c.textDim.withValues(alpha: 0.8);
+    final perRow = _grid ~/ b;
     for (var y = 0; y < perRow; y++) {
       for (var x = 0; x < perRow; x++) {
         canvas.drawRect(Rect.fromLTWH(o.dx + x * b * cell, o.dy + y * b * cell, b * cell, b * cell), stroke);

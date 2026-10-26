@@ -36,8 +36,8 @@ const narrationS1 = <String, LessonText>{
   ),
   's1_cpu_gpu': LessonText(
     intro: [
-      'A [[CPU]] is a few [[core]]s doing complex things one at a time—like a handful of master chefs. A [[GPU]] is an army: 16,896 cores on an H100, plus 528 [[tensor cores|tensor core]] built just for multiplying grids.',
-      'Hit **Showdown** and watch. The [[CPU]] fills a 64×64 grid a few cells at a time. The [[GPU]] fills whole blocks in one swing.',
+      'A [[CPU]] is a few [[core]]s doing complex things one at a time—like a handful of master chefs. A [[GPU]] is an army: 16,896 [[CUDA cores|cuda core]] on an H100, plus 528 [[tensor cores|tensor core]] built just for multiplying grids.',
+      'Hit **Showdown** and watch. The [[CPU]] fills a 24×24 grid a few cells at a time. The [[GPU]] fills whole blocks in one swing.',
       'For [[matrix multiplication]], the H100 is roughly 100 to 300 times faster than a desktop [[CPU]]. That\'s the difference between a chef and a kitchen crew.',
     ],
     keyIdea: 'A [[CPU]] is a few master chefs handling complex recipes. A [[GPU]] is thousands of cooks doing the same simple step, all at the same time.',

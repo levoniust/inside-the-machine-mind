@@ -20,24 +20,41 @@ class S2LibraryScreen extends StatelessWidget {
 }
 
 class _Source {
-  const _Source(this.name, this.icon, this.text, this.colorOf);
+  const _Source(this.name, this.icon, this.text, this.colorOf,
+      {required this.size, required this.tokens, required this.docs, required this.tokensB, required this.factId});
   final String name, text;
   final IconData icon;
   final Color Function(AppColors) colorOf;
+
+  /// From Dolma's Table 1 (an open library, AI2 2024): text on disk, tokens and documents for this kind of source.
+  final String size, tokens, docs, factId;
+
+  /// Billions of tokens, for the share-of-the-library bar.
+  final double tokensB;
 }
+
+/// Dolma in total: 3,059 billion tokens (TR-DOLMA-TOTAL).
+const double _totalTokensB = 3059;
 
 final _sources = [
   _Source('The web', Icons.public,
       'Crawlers visit billions of public web pages. One monthly snapshot from the nonprofit Common Crawl holds about 2.3 billion '
           'pages (398 TiB). This is by far the biggest ingredient.',
-      (c) => c.cyan),
-  _Source('Books', Icons.menu_book_outlined, 'Long, carefully written text teaches the model to follow ideas across many pages.',
-      (c) => c.violet),
-  _Source('Code', Icons.code, 'Public code from open-source projects teaches the model how programs are written.', (c) => c.lime),
+      (c) => c.cyan,
+      size: '9.8 TB', tokens: '2.5 trillion', docs: '3.7 billion web pages', tokensB: 2479, factId: 'TR-DOLMA-WEB'),
+  _Source('Books', Icons.menu_book_outlined,
+      'Long, carefully written text teaches the model to follow ideas across many pages. In an open library only out-of-copyright '
+          'books can be shared, so this slice is small.',
+      (c) => c.violet,
+      size: '20 GB', tokens: '6 billion', docs: 'about 56,000 books', tokensB: 6.0, factId: 'TR-DOLMA-BOOKS'),
+  _Source('Code', Icons.code, 'Public code from open-source projects teaches the model how programs are written.', (c) => c.lime,
+      size: '1 TB', tokens: '411 billion', docs: '210 million code files', tokensB: 411, factId: 'TR-DOLMA-CODE'),
   _Source('Encyclopedias', Icons.auto_stories_outlined, 'Wikipedia-style articles: dense, fact-rich and well organised.',
-      (c) => c.amber),
+      (c) => c.amber,
+      size: '16 GB', tokens: '4.3 billion', docs: '6.2 million articles', tokensB: 4.3, factId: 'TR-DOLMA-WIKI'),
   _Source('Science', Icons.science_outlined, 'Research papers bring maths, technical vocabulary and careful arguments.',
-      (c) => c.magenta),
+      (c) => c.magenta,
+      size: '268 GB', tokens: '70 billion', docs: '38.8 million papers', tokensB: 70, factId: 'TR-DOLMA-SCI'),
 ];
 
 class _Funnel extends StatefulWidget {
@@ -108,15 +125,82 @@ class _FunnelState extends State<_Funnel> with SingleTickerProviderStateMixin {
           const SizedBox(height: Gap.xs),
           Text(s.text, key: ValueKey('library-text-$_sel'), style: TextStyle(color: c.text)),
           const SizedBox(height: Gap.m),
-          const Row(
+          Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Expanded(child: FactCard(value: '2.3 billion', label: 'web pages in one monthly Common Crawl snapshot', factId: 'DC-CC')),
-              SizedBox(width: Gap.m),
-              Expanded(child: FactCard(value: '15 trillion', label: '[[tokens|token]] in FineWeb, cleaned from 96 snapshots', factId: 'TR-FINEWEB')),
+              Expanded(
+                child: FactCard(
+                  key: ValueKey('library-size-$_sel'),
+                  value: s.size,
+                  label: 'of text: ${s.docs}',
+                  factId: s.factId,
+                  color: s.colorOf(c),
+                ),
+              ),
+              const SizedBox(width: Gap.m),
+              Expanded(
+                child: FactCard(
+                  key: ValueKey('library-tokens-$_sel'),
+                  value: s.tokens,
+                  label: '[[tokens|token]]: ${_share(s.tokensB)} of the whole library',
+                  factId: s.factId,
+                  color: s.colorOf(c),
+                ),
+              ),
             ],
           ),
+          const SizedBox(height: Gap.s),
+          _ShareBar(sel: _sel),
+          const SizedBox(height: Gap.xs),
+          Text(
+            'Measured in Dolma, an open training library (AI2, 2024): 11.5 TB of text, 3.1 trillion tokens. '
+            'Most companies keep their own mix secret, but the web is the biggest slice everywhere.',
+            style: TextStyle(color: c.textDim, fontSize: 12),
+          ),
         ],
+      ),
+    );
+  }
+}
+
+String _share(double tokensB) {
+  final p = tokensB / _totalTokensB * 100;
+  return p >= 1 ? '${p.round()}%' : '${p.toStringAsFixed(1)}%';
+}
+
+/// The share of the library's tokens each kind of source makes up; the selected one is highlighted.
+class _ShareBar extends StatelessWidget {
+  const _ShareBar({required this.sel});
+  final int sel;
+
+  @override
+  Widget build(BuildContext context) {
+    final c = AppColors.of(context);
+    final s = _sources[sel];
+    return Semantics(
+      label: '${s.name}: ${_share(s.tokensB)} of all tokens in the library',
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(6),
+        child: SizedBox(
+          height: 14,
+          child: Row(
+            children: [
+              for (var i = 0; i < _sources.length; i++)
+                Expanded(
+                  // Tiny slices still get a sliver so they can be seen.
+                  flex: math.max(4, (_sources[i].tokensB / _totalTokensB * 1000).round()),
+                  child: Container(
+                    color: _sources[i].colorOf(c).withValues(alpha: i == sel ? 1 : 0.3),
+                  ),
+                ),
+              Expanded(
+                flex: math.max(4, ((_totalTokensB - _sources.fold<double>(0, (a, x) => a + x.tokensB)) / _totalTokensB * 1000)
+                    .round()),
+                child: Container(color: c.line),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

@@ -55,6 +55,7 @@ const sourceDocs = <String, SourceDoc>{
   'SRC-GREENGRID-WUE': SourceDoc('sources/SRC-GREENGRID-WUE.txt', url: 'https://www.thegreengrid.org/system/files/store/WUE_v1.pdf', pdf: 'sources_pdf/SRC-GREENGRID-WUE.pdf'),
   'SRC-CC': SourceDoc('sources/SRC-CC.txt', url: 'https://commoncrawl.org/blog/january-2026-crawl-archive-now-available'),
   'SRC-FINEWEB': SourceDoc('sources/SRC-FINEWEB.txt', url: 'https://arxiv.org/abs/2406.17557', pdf: 'sources_pdf/SRC-FINEWEB.pdf'),
+  'SRC-DOLMA': SourceDoc('sources/SRC-DOLMA.txt', url: 'https://arxiv.org/abs/2402.00159', pdf: 'sources_pdf/SRC-DOLMA.pdf'),
   'SRC-GPT3': SourceDoc('sources/SRC-GPT3.txt', url: 'https://arxiv.org/abs/2005.14165', pdf: 'sources_pdf/SRC-GPT3.pdf'),
   'SRC-PATTERSON': SourceDoc('sources/SRC-PATTERSON.txt', url: 'https://arxiv.org/abs/2104.10350', pdf: 'sources_pdf/SRC-PATTERSON.pdf'),
   'SRC-KAPLAN': SourceDoc('sources/SRC-KAPLAN.txt', url: 'https://arxiv.org/abs/2001.08361', pdf: 'sources_pdf/SRC-KAPLAN.pdf'),

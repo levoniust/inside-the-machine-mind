@@ -15,6 +15,14 @@ void main() {
     await pumpFrames(tester, 3);
     await scrollTo(tester, find.byKey(const ValueKey('library-text-2')));
     expect(find.textContaining('open-source'), findsOneWidget);
+    // The cards at the bottom follow the chosen source (Dolma's Table 1).
+    await scrollTo(tester, find.byKey(const ValueKey('library-size-2')));
+    expect(find.text('411 billion'), findsOneWidget);
+    expect(find.text('2.5 trillion'), findsNothing);
+    await tapVisible(tester, find.byKey(const ValueKey('library-1')));
+    await pumpFrames(tester, 3);
+    expect(find.text('20 GB'), findsOneWidget);
+    expect(find.text('6 billion'), findsOneWidget);
     expectNoErrors(tester);
   });
 }

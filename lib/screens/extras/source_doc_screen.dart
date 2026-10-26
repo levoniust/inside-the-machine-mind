@@ -61,7 +61,8 @@ class _SourceDocScreenState extends State<SourceDocScreen> {
   Widget _build(BuildContext context) {
     final c = AppColors.of(context);
     final doc = sourceDocs[widget.sourceId]!;
-    final installed = Library.instance.installed;
+    // An older library pack may not have sources added since: treat those as missing (the card offers the update).
+    final installed = Library.instance.has(doc.asset);
     if (installed) _chunks ??= _load();
     final src = sources[widget.sourceId];
     return Scaffold(

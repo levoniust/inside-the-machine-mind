@@ -5,8 +5,9 @@ import '../../widgets/components.dart';
 import '../../widgets/lesson_scaffold.dart';
 
 /// Section 3 · "Ask the question": Bit types the question, you press send, and a packet flies into the
-/// machine. When it lands, the chip "wakes up" — a stack of layer bars lights one after another — and
-/// the preview card walks through the stops ahead in the same order.
+/// machine. When it lands, the chip writes a short reply one token at a time: for every token the stack of
+/// layer bars lights floor by floor, then that token drops into the reply. The preview card walks through
+/// the stops ahead in the same order.
 class S3IntroScreen extends StatefulWidget {
   const S3IntroScreen({super.key});
 
@@ -42,9 +43,14 @@ class _Send extends StatefulWidget {
 class _SendState extends State<_Send> with TickerProviderStateMixin {
   static const question = 'Why is the sky blue?';
   static const layerCount = 5;
+
+  /// The short reply, split the way a tokenizer might (an illustration; real token splits vary).
+  static const reply = ['Air', ' scat', 'ters', ' blue', ' light', ' the', ' most', '.'];
+  static const msPerToken = 500;
   late final AnimationController _type = AnimationController(vsync: this, duration: const Duration(milliseconds: 1400));
   late final AnimationController _fly = AnimationController(vsync: this, duration: const Duration(milliseconds: 1400));
-  late final AnimationController _wake = AnimationController(vsync: this, duration: const Duration(milliseconds: 1100));
+  late final AnimationController _wake =
+      AnimationController(vsync: this, duration: Duration(milliseconds: msPerToken * reply.length));
   bool _sent = false;
   bool _awoke = false;
 
@@ -76,13 +82,24 @@ class _SendState extends State<_Send> with TickerProviderStateMixin {
     }
   }
 
-  /// The packet landed: light the chip's layers one after another and let the preview start its walk.
-  /// The layer lighting is a colour-only reveal (no motion), so it also plays when animations are off.
+  /// The packet landed: generate the reply token by token and let the preview start its walk.
+  /// Lighting layers and adding words is a colour/text reveal (no motion), so it also plays when animations are off.
   void _wakeUp() {
     if (_awoke || !mounted) return;
     _awoke = true;
     _wake.forward(from: 0);
     widget.onArrived();
+  }
+
+  /// Where the reply is: which token is going through the layers, how many floors are lit, how many tokens are out.
+  _Gen get _gen {
+    final x = _wake.value * reply.length;
+    final k = x.floor().clamp(0, reply.length - 1);
+    final frac = (x - k).clamp(0.0, 1.0);
+    // The first 80% of each token's turn lights the floors; then the token drops out of the top.
+    final lit = (frac / 0.8 * layerCount).floor().clamp(0, layerCount);
+    final out = _wake.isCompleted ? reply.length : k + (frac >= 0.8 ? 1 : 0);
+    return _Gen(k, lit, out, _wake.isCompleted);
   }
 
   @override
@@ -105,20 +122,20 @@ class _SendState extends State<_Send> with TickerProviderStateMixin {
             child: AnimatedBuilder(
               animation: Listenable.merge([_fly, _wake]),
               builder: (_, _) {
-                final lit = (_wake.value * layerCount).floor().clamp(0, layerCount);
+                final g = _gen;
                 final String a11y;
                 if (!_sent) {
                   a11y = 'A closed chip waits on the right for your question.';
                 } else if (!_awoke) {
                   a11y = 'A packet flies into the chip.';
-                } else if (lit < layerCount) {
-                  a11y = 'The chip is waking up: $lit of $layerCount layers lit.';
+                } else if (!g.done) {
+                  a11y = 'Making token ${g.token + 1} of ${reply.length}: ${g.lit} of $layerCount layers lit.';
                 } else {
-                  a11y = 'The chip is awake: all $layerCount layers lit.';
+                  a11y = 'The reply is done: ${reply.length} tokens, each one through all $layerCount layers.';
                 }
                 return Semantics(
                   label: a11y,
-                  child: CustomPaint(painter: _FlyPainter(_sent ? _fly.value : 0, _wake.value, c)),
+                  child: CustomPaint(painter: _FlyPainter(_sent ? _fly.value : 0, g.done ? 1 : g.lit / layerCount, c)),
                 );
               },
             ),
@@ -160,6 +177,69 @@ class _SendState extends State<_Send> with TickerProviderStateMixin {
             opacity: _sent ? 1 : 0,
             child: Text('Your question is inside. Let\'s follow it, step by step.',
                 key: const ValueKey('intro-sent'), style: TextStyle(color: c.lime, fontWeight: FontWeight.w700)),
+          ),
+          if (_awoke) ...[
+            const SizedBox(height: Gap.s),
+            AnimatedBuilder(animation: _wake, builder: (_, _) => _Reply(gen: _gen)),
+          ],
+        ],
+      ),
+    );
+  }
+}
+
+class _Gen {
+  const _Gen(this.token, this.lit, this.out, this.done);
+  final int token, lit, out;
+  final bool done;
+}
+
+/// The reply bubble: tokens appear one by one, each in its own faint box so you can see where tokens split.
+class _Reply extends StatelessWidget {
+  const _Reply({required this.gen});
+  final _Gen gen;
+
+  @override
+  Widget build(BuildContext context) {
+    final c = AppColors.of(context);
+    const reply = _SendState.reply;
+    return Container(
+      key: const ValueKey('intro-reply'),
+      padding: const EdgeInsets.all(Gap.m),
+      decoration: BoxDecoration(
+        color: c.surfaceHi,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: c.cyan.withValues(alpha: 0.5)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            gen.done ? 'Reply: ${reply.length} tokens' : 'Token ${gen.token + 1} of ${reply.length}: going through the layers…',
+            key: const ValueKey('intro-reply-status'),
+            style: TextStyle(color: gen.done ? c.lime : c.cyan, fontSize: 12, fontWeight: FontWeight.w700),
+          ),
+          const SizedBox(height: Gap.xs),
+          Wrap(
+            runSpacing: 4,
+            children: [
+              for (var i = 0; i < gen.out; i++)
+                Container(
+                  margin: const EdgeInsets.only(right: 2),
+                  padding: const EdgeInsets.symmetric(horizontal: 3, vertical: 1),
+                  decoration: BoxDecoration(
+                    color: (i.isEven ? c.cyan : c.magenta).withValues(alpha: i == gen.out - 1 && !gen.done ? 0.35 : 0.12),
+                    borderRadius: BorderRadius.circular(4),
+                  ),
+                  child: Text(reply[i], style: const TextStyle(fontSize: 16)),
+                ),
+              if (!gen.done) Text(' ▍', style: TextStyle(color: c.cyan, fontSize: 16)),
+            ],
+          ),
+          const SizedBox(height: Gap.xs),
+          Text(
+            gen.done ? 'The whole trip again for every token. The next lessons follow one of them.' : '',
+            style: TextStyle(color: c.textDim, fontSize: 12),
           ),
         ],
       ),

@@ -14,18 +14,25 @@ void main() {
     expectNoErrors(tester);
   });
 
-  testWidgets('s3_intro: the chip wakes up and lights its layer bars after the packet lands', (tester) async {
+  testWidgets('s3_intro: after the packet lands, every reply token goes through the layers', (tester) async {
     await pumpApp(tester, home: const S3IntroScreen());
     final handle = tester.ensureSemantics();
     expect(find.bySemanticsLabel(RegExp('waits on the right', caseSensitive: false)), findsOneWidget);
     await tapVisible(tester, find.byKey(const ValueKey('intro-send')));
-    // ~350 ms in: the wake-up (1100 ms for five layers) is running but not finished.
+    // 300 ms in: the first token (500 ms each) is part-way up the layers and nothing is out yet.
     await pumpFrames(tester, 6);
-    expect(find.bySemanticsLabel(RegExp('waking up', caseSensitive: false)), findsOneWidget);
-    expect(find.bySemanticsLabel(RegExp('all 5 layers', caseSensitive: false)), findsNothing);
-    // Well past the 1100 ms wake-up: every layer is lit.
-    await pumpFrames(tester, 21);
-    expect(find.bySemanticsLabel(RegExp('awake: all 5 layers', caseSensitive: false)), findsOneWidget);
+    expect(find.bySemanticsLabel(RegExp('Making token 1 of 8: [1-4] of 5 layers lit')), findsOneWidget);
+    expect(find.text('Air'), findsNothing);
+    // 1.3 s in: tokens 1 and 2 are out, the third is in the layers.
+    await pumpFrames(tester, 20);
+    expect(find.text('Air'), findsOneWidget);
+    expect(find.text(' scat'), findsOneWidget);
+    expect(find.text('ters'), findsNothing);
+    expect(find.text('Token 3 of 8: going through the layers…'), findsOneWidget);
+    // Past 4 s: the short reply is complete.
+    await pumpFrames(tester, 60);
+    expect(find.text('Reply: 8 tokens'), findsOneWidget);
+    expect(find.bySemanticsLabel(RegExp('reply is done: 8 tokens')), findsOneWidget);
     handle.dispose();
     expectNoErrors(tester);
   });

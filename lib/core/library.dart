@@ -13,8 +13,9 @@ class Library extends ChangeNotifier {
   Library._();
   static final Library instance = Library._();
 
-  /// Pack version this app expects (manifest.json "version").
-  static const version = '2026.10';
+  /// Pack version this app expects (manifest.json "version"). An older pack still works for the sources it has;
+  /// sources added later ask for an update.
+  static const version = '2026.11';
   static const packName = 'machine-mind-library-$version.zip';
   static const downloadUrl =
       'https://github.com/levoniust/inside-the-machine-mind/releases/download/library-$version/$packName';
@@ -22,6 +23,7 @@ class Library extends ChangeNotifier {
 
   Directory? _dir;
   bool _installed = false;
+  String? _packVersion;
   double? _progress; // 0..1 while downloading or unpacking
   String? _error;
 
@@ -30,10 +32,18 @@ class Library extends ChangeNotifier {
   String? get error => _error;
   bool get busy => _progress != null;
 
+  /// An older pack is installed: it works, but sources added since then are missing.
+  bool get outdated => !kIsWeb && _installed && _packVersion != version;
+  String? get packVersion => _packVersion;
+
+  /// Whether this file is in the installed pack (an older pack may not have it).
+  bool has(String path) => kIsWeb || (_installed && File('${_dir!.path}/$path').existsSync());
+
   /// Tests (and tools) can point the library at an unpacked folder, e.g. the repo's library/.
   void useDirectory(Directory dir) {
     _dir = dir;
     _installed = File('${dir.path}/sources/SRC-TRANSFORMER.txt').existsSync();
+    _packVersion = _installed ? version : null;
     notifyListeners();
   }
 
@@ -43,7 +53,8 @@ class Library extends ChangeNotifier {
       final docs = await getApplicationDocumentsDirectory();
       _dir = Directory('${docs.path}/library');
       final m = File('${_dir!.path}/manifest.json');
-      _installed = m.existsSync() && (jsonDecode(m.readAsStringSync()) as Map)['version'] == version;
+      _packVersion = m.existsSync() ? (jsonDecode(m.readAsStringSync()) as Map)['version'] as String? : null;
+      _installed = _packVersion != null;
     } catch (e) {
       debugPrint('Library: no documents folder ($e)');
     }
@@ -103,6 +114,7 @@ class Library extends ChangeNotifier {
   Future<void> remove() async {
     if (_dir != null && _dir!.existsSync()) await _dir!.delete(recursive: true);
     _installed = false;
+    _packVersion = null;
     notifyListeners();
   }
 
@@ -112,7 +124,8 @@ class Library extends ChangeNotifier {
     final manifest = archive.findFile('manifest.json');
     if (manifest == null) throw const FormatException('no manifest.json');
     final m = jsonDecode(utf8.decode(manifest.content as List<int>)) as Map;
-    if (m['version'] != version) throw FormatException('pack version ${m['version']}, this app needs $version');
+    final v = m['version'];
+    if (v is! String) throw const FormatException('no version in manifest.json');
     if (_dir!.existsSync()) await _dir!.delete(recursive: true);
     for (final f in archive.files) {
       if (!f.isFile || f.name.contains('..')) continue;
@@ -121,6 +134,7 @@ class Library extends ChangeNotifier {
       await out.writeAsBytes(f.content as List<int>);
     }
     _installed = true;
+    _packVersion = v;
     _progress = null;
     notifyListeners();
   }

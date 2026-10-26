@@ -1,5 +1,3 @@
-import 'dart:math' as math;
-
 import 'package:flutter/material.dart';
 
 import '../../app/theme.dart';
@@ -8,9 +6,8 @@ import '../../widgets/lesson_scaffold.dart';
 import '../../widgets/term_text.dart';
 
 /// Section 2 · Lesson: Testing for safety.
-/// A "red team" of tricky prompts attacks a model shield; you pick what could go
-/// wrong, then see a careful answer. An animated shield shows how many attacks
-/// a model can resist (illustration).
+/// A "red team" tricky prompt (spot the trick), then "Be the tester": label five draft answers
+/// (made-up fact, unfair, dangerous or fine) and see how each was fixed (illustrations).
 class S2SafetyScreen extends StatelessWidget {
   const S2SafetyScreen({super.key});
 
@@ -25,8 +22,8 @@ class S2SafetyScreen extends StatelessWidget {
           child: const _RiskyRequest(),
         ),
         DemoCard(
-          title: 'Test, fix, repeat',
-          child: const _ShieldDemo(),
+          title: 'Be the tester',
+          child: const _TesterGame(),
         ),
         DemoCard(
           title: 'What testers check for',
@@ -142,125 +139,185 @@ class _RiskyRequestState extends State<_RiskyRequest> {
   }
 }
 
-/// Animated shield: attacks fly in, the shield blocks or cracks based on the
-/// number of test-and-fix rounds (an illustration, not real statistics).
-class _ShieldDemo extends StatefulWidget {
-  const _ShieldDemo();
+enum _Flaw { madeUp, unfair, dangerous, fine }
 
-  @override
-  State<_ShieldDemo> createState() => _ShieldDemoState();
+const _flawLabels = {
+  _Flaw.madeUp: 'Made-up fact',
+  _Flaw.unfair: 'Unfair (bias)',
+  _Flaw.dangerous: 'Dangerous advice',
+  _Flaw.fine: 'Looks fine',
+};
+
+class _Test {
+  const _Test(this.ask, this.draft, this.flaw, this.why, this.fixed);
+  final String ask, draft, why, fixed;
+  final _Flaw flaw;
 }
 
-class _ShieldDemoState extends State<_ShieldDemo> with SingleTickerProviderStateMixin {
-  late final AnimationController _t =
-      AnimationController(vsync: this, duration: const Duration(seconds: 2));
-  double _defenses = 0.5;
+const _tests = [
+  _Test(
+    'Who was the first person to walk on Mars?',
+    'Neil Armstrong walked on Mars in 1971.',
+    _Flaw.madeUp,
+    'Nobody has walked on Mars. The model mixed up the Moon and Mars and said it confidently: a [[hallucination]].',
+    'Nobody has walked on Mars yet. Neil Armstrong was the first person on the Moon, in 1969.',
+  ),
+  _Test(
+    'Write a one-line job ad for a software engineer.',
+    'We\'re looking for a young guy who loves to code!',
+    _Flaw.unfair,
+    'It assumes the engineer is young and male. Models pick up this kind of bias from patterns in what they read.',
+    'We\'re looking for someone who loves to code!',
+  ),
+  _Test(
+    'I found a mushroom in the woods that looks like a button mushroom. Is it safe to eat?',
+    'Yes, it sounds safe. Fry it in butter!',
+    _Flaw.dangerous,
+    'Some deadly mushrooms look like edible ones. A guess here could hurt someone.',
+    'I can\'t tell from a description, and some poisonous mushrooms look just like edible ones. '
+        'Don\'t eat it unless an expert has identified it.',
+  ),
+  _Test(
+    'Why is the sky blue?',
+    'Sunlight bounces off the tiny molecules in the air, and blue light bounces around the most, so blue reaches your eyes from every direction.',
+    _Flaw.fine,
+    'Correct, kind and safe. Testers also mark good answers, so fixes don\'t break what already works.',
+    'No change needed.',
+  ),
+  _Test(
+    'What is 17 × 24?',
+    '17 × 24 = 418.',
+    _Flaw.madeUp,
+    'The real answer is 408. Sounding sure is not the same as being right.',
+    '17 × 24 = 408.',
+  ),
+];
+
+/// Five test cards: read the request and the model's draft answer, label the problem, then see the fix.
+class _TesterGame extends StatefulWidget {
+  const _TesterGame();
 
   @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    if (MediaQuery.maybeDisableAnimationsOf(context) ?? false) {
-      _t.stop();
-    } else if (!_t.isAnimating) {
-      _t.repeat();
-    }
+  State<_TesterGame> createState() => _TesterGameState();
+}
+
+class _TesterGameState extends State<_TesterGame> {
+  int _i = 0;
+  int _score = 0;
+  _Flaw? _picked;
+
+  bool get _done => _i >= _tests.length;
+
+  void _pick(_Flaw f) {
+    if (_picked != null) return;
+    setState(() {
+      _picked = f;
+      if (f == _tests[_i].flaw) _score++;
+    });
   }
 
-  @override
-  void dispose() {
-    _t.dispose();
-    super.dispose();
-  }
+  void _next() => setState(() {
+        _i++;
+        _picked = null;
+      });
+
+  void _restart() => setState(() {
+        _i = 0;
+        _score = 0;
+        _picked = null;
+      });
 
   @override
   Widget build(BuildContext context) {
     final c = AppColors.of(context);
-    final survived = (_defenses * 100).round();
-    final survived0 = (_defenses * 10).round();
+    if (_done) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Text('You caught $_score of ${_tests.length}.',
+              key: const ValueKey('tester-score'),
+              style: TextStyle(color: c.violet, fontSize: 20, fontWeight: FontWeight.w800)),
+          const SizedBox(height: Gap.s),
+          const TermText(
+            'Real [[red-teaming|testers]] run thousands of cards like these. Every problem they find goes back into training, '
+            'and then they test again, because a fix can break something else.',
+          ),
+          const SizedBox(height: Gap.m),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: OutlinedButton.icon(
+              key: const ValueKey('tester-restart'),
+              onPressed: _restart,
+              icon: const Icon(Icons.replay),
+              label: const Text('Test again'),
+            ),
+          ),
+        ],
+      );
+    }
+    final t = _tests[_i];
+    final answered = _picked != null;
+    final right = _picked == t.flaw;
+    Widget bubble(String who, String text, Color color) => Container(
+          margin: const EdgeInsets.only(bottom: Gap.s),
+          padding: const EdgeInsets.all(Gap.m),
+          decoration: BoxDecoration(
+            color: c.surfaceHi,
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(color: color.withValues(alpha: 0.45)),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(who, style: TextStyle(color: color, fontSize: 12, fontWeight: FontWeight.w700)),
+              const SizedBox(height: 2),
+              Text(text),
+            ],
+          ),
+        );
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        AspectRatio(
-          aspectRatio: 1,
-          child: Semantics(
-            label: 'A model shield blocking red-team attacks; more defenses block more',
-            child: AnimatedBuilder(
-              animation: _t,
-              builder: (_, _) => CustomPaint(
-                painter: _ShieldPainter(_t.value, _defenses, c),
+        Text('Test ${_i + 1} of ${_tests.length}: what is wrong with the draft answer?',
+            key: const ValueKey('tester-progress'), style: TextStyle(color: c.textDim)),
+        const SizedBox(height: Gap.s),
+        bubble('Someone asks', t.ask, c.cyan),
+        bubble('The model\'s draft answer', t.draft, c.violet),
+        Wrap(
+          spacing: Gap.s,
+          runSpacing: Gap.s,
+          children: [
+            for (final f in _Flaw.values)
+              ChoiceChip(
+                key: ValueKey('tester-${f.name}'),
+                label: Text(_flawLabels[f]!),
+                selected: _picked == f,
+                selectedColor: (f == t.flaw ? c.lime : c.red).withValues(alpha: 0.3),
+                onSelected: answered ? null : (_) => _pick(f),
               ),
+          ],
+        ),
+        if (answered) ...[
+          const SizedBox(height: Gap.m),
+          Text(
+            right ? 'Caught it!' : 'Not quite: it\'s "${_flawLabels[t.flaw]}".',
+            key: const ValueKey('tester-verdict'),
+            style: TextStyle(color: right ? c.lime : c.amber, fontWeight: FontWeight.w700),
+          ),
+          const SizedBox(height: Gap.xs),
+          TermText(t.why),
+          const SizedBox(height: Gap.s),
+          bubble('After the fix', t.fixed, c.lime),
+          Align(
+            alignment: Alignment.centerRight,
+            child: FilledButton(
+              key: const ValueKey('tester-next'),
+              onPressed: _next,
+              child: Text(_i == _tests.length - 1 ? 'See my score' : 'Next test'),
             ),
           ),
-        ),
-        const SizedBox(height: Gap.m),
-        LabeledSlider(
-          key: const ValueKey('shield-defenses-slider'),
-          label: 'Rounds of testing and fixing',
-          value: _defenses,
-          min: 0,
-          max: 1,
-          divisions: 10,
-          color: c.violet,
-          format: (v) => '${(v * 10).round()}',
-          onChanged: (v) => setState(() => _defenses = v),
-        ),
-        const SizedBox(height: Gap.s),
-        TermText(
-          survived == 0
-              ? 'No testing yet: every trick gets through the shield.'
-              : 'After $survived0 round${survived0 == 1 ? '' : 's'} of [[red-teaming]] and fixes, more tricks bounce off. '
-                  '(An illustration: real testing is never "finished".)',
-          key: const ValueKey('shield-caption'),
-          style: TextStyle(color: c.textDim),
-        ),
+        ],
       ],
     );
   }
-}
-
-class _ShieldPainter extends CustomPainter {
-  _ShieldPainter(this.t, this.defenses, this.c);
-  final double t;
-  final double defenses;
-  final AppColors c;
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final s = size.shortestSide;
-    final center = Offset(size.width / 2, size.height / 2);
-    final r = s * 0.4;
-    // Shield body — a ring that gets thicker with more defenses.
-    final ringWidth = s * (0.04 + 0.08 * defenses);
-    canvas.drawCircle(center, r, Paint()
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = ringWidth
-      ..color = c.violet.withValues(alpha: 0.35 + 0.4 * defenses));
-    canvas.drawCircle(center, r * 0.55, Paint()..color = c.violet.withValues(alpha: 0.15));
-    canvas.drawCircle(center, r * 0.12, Paint()..color = c.violet);
-    // Attacks orbiting the shield.
-    const n = 5;
-    for (var i = 0; i < n; i++) {
-      final angle = t * math.pi * 2 + i * (math.pi * 2 / n);
-      final orbitR = r * 1.25;
-      final pos = center + Offset(math.cos(angle), math.sin(angle)) * orbitR;
-      // Does this attack get blocked?
-      final blocked = (i / n) < defenses;
-      final color = blocked ? c.lime : c.red;
-      // Trail toward the shield.
-      final tip = center + Offset(math.cos(angle), math.sin(angle)) * r;
-      canvas.drawLine(pos, tip, Paint()
-        ..color = color.withValues(alpha: blocked ? 0.5 : 0.8)
-        ..strokeWidth = s * 0.015
-        ..strokeCap = StrokeCap.round);
-      canvas.drawCircle(pos, s * 0.03, Paint()..color = color);
-      if (!blocked) {
-        canvas.drawCircle(pos, s * 0.05,
-            Paint()..color = color.withValues(alpha: 0.3)..maskFilter = const MaskFilter.blur(BlurStyle.normal, 4));
-      }
-    }
-  }
-
-  @override
-  bool shouldRepaint(_ShieldPainter old) =>
-      old.t != t || old.defenses != defenses;
 }
