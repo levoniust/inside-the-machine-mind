@@ -60,10 +60,10 @@ const narrationS6 = <String, LessonText>{
   ),
   'l_home_rig': LessonText(
     intro: [
-      'This is a real home lab — two 24 GB GPUs, a 128 GB-class workstation, and a second small box with a 16 GB GPU.',
-      'Tap the timeline items to see what broke: a secure-boot reset after a power cut, a GPU that burned under load, an overclock that went too far.',
-      'Slide the power-limit and undervolt controls and watch the watts-versus-tokens-per-second curve shift.',
+      'Theory is nice; here is a real home lab: the one this app was built on, with names left out. A workstation with two 24 GB GPUs and lots of RAM, and a small server with one 16 GB GPU.',
+      'Step through what tuning actually bought. The surprise: the biggest wins came from where the experts live and how fast the RAM is, not from the GPUs.',
+      'Then the honest part: tap each thing that went wrong, from a 10-hour runaway stress test to a power cut that made the GPUs vanish, and what each one taught.',
     ],
-    keyIdea: 'A home rig that runs a large [[Mixture-of-Experts|moe]] with offload is a bandwidth and power problem, not a raw-compute problem, and the failure modes are usually thermal or electrical, not arithmetic.',
+    keyIdea: 'On a home rig the bottleneck is usually memory, and the risks are heat and power, so measure before you tune and never leave a stress test unwatched.',
   ),
 };
