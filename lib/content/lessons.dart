@@ -147,6 +147,7 @@ final _life = SectionInfo(
     _l('e_fakes', 5, 'Fakes and scams', 'Voice clones, deepfakes, AI phishing'),
     _l('e_school_work', 5, 'AI at school and work', 'Honest use'),
     _l('e_which', 5, 'Which assistant for what?', 'Chat, images, voice, code'),
+    _l('e_model_size', 5, 'Big or small model?', 'Pick the right size for the job'),
     _l('e_at_home', 5, 'Can I run one at home?', 'A peek into the Lab'),
   ],
 );

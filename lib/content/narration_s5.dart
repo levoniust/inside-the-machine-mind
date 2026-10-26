@@ -50,6 +50,14 @@ const narrationS5 = <String, LessonText>{
     ],
     keyIdea: 'The right tool depends on the shape of the task, not the brand, so matching the job to the tool type is the whole trick.',
   ),
+  'e_model_size': LessonText(
+    intro: [
+      'Every big AI company sells its model in sizes, like coffee: a quick small one, a middle one, and a big slow one that thinks hardest.',
+      'Pick a company to see its line-up in its own words: OpenAI\'s GPT-6 Astra down to Luna, Anthropic\'s Claude Fable down to Haiku, Google\'s Gemini 4 Argon down to Flash-Lite.',
+      'The biggest can cost a hundred times more per word than the smallest, and it\'s slower. Then match some everyday jobs to a size.',
+    ],
+    keyIdea: 'Start with a small or middle model, and move up only when the answers fall short. The biggest model is for the hardest, longest jobs.',
+  ),
   'e_at_home': LessonText(
     intro: [
       'I\'ve opened a door to a little workbench. On the bench sit a laptop, a gaming PC, and a Mac, each with a "what fits" bar showing small, medium, or large models. Tap the one you\'d actually use.',

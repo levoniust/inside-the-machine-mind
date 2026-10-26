@@ -24,7 +24,7 @@ Your guide is **Bit**, a small robot, and you follow one question all the way th
 | Track | What you'll do |
 |---|---|
 | **The short journey** | "Why is the sky blue?" through the machine in 17 lessons: chips, datacenters, training, tokens, the answer. |
-| **AI in your life** | Spot the made-up fact, ask better, see where your words go (privacy settings of the big apps, from their own help pages), catch voice-clone and deepfake scams, use AI honestly at school and work, pick the right kind of assistant, and find out what runs on your own computer. |
+| **AI in your life** | Spot the made-up fact, ask better, see where your words go (privacy settings of the big apps, from their own help pages), catch voice-clone and deepfake scams, use AI honestly at school and work, pick the right kind of assistant, pick the right size of model (every US maker's line-up, from GPT-6 Astra down to Luna and Claude Fable down to Haiku), and find out what runs on your own computer. |
 
 ## The Enthusiast Lab
 

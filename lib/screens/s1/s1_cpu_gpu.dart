@@ -441,7 +441,7 @@ class _GridPainter extends CustomPainter {
     // Every cell is outlined, so what you count matches the numbers.
     final thin = Paint()
       ..strokeWidth = 0.6
-      ..color = c.bg.withValues(alpha: 0.55);
+      ..color = c.textDim.withValues(alpha: 0.3);
     for (var i = 1; i < _grid; i++) {
       canvas.drawLine(Offset(o.dx + i * cell, o.dy), Offset(o.dx + i * cell, o.dy + s), thin);
       canvas.drawLine(Offset(o.dx, o.dy + i * cell), Offset(o.dx + s, o.dy + i * cell), thin);

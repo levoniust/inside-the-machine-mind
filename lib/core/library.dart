@@ -19,7 +19,7 @@ class Library extends ChangeNotifier {
   static const packName = 'machine-mind-library-$version.zip';
   static const downloadUrl =
       'https://github.com/levoniust/inside-the-machine-mind/releases/download/library-$version/$packName';
-  static const approxSizeMB = 61;
+  static const approxSizeMB = 65;
 
   Directory? _dir;
   bool _installed = false;

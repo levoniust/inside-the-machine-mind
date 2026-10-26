@@ -50,4 +50,10 @@ const quizS5 = <QuizQuestion>[
     0,
     'The lesson teaches the habit of verifying the specific facts a model gives you before trusting a confident answer.',
   ),
+  QuizQuestion(
+    'You need to sort 10,000 customer emails into folders. Which kind of model fits best?',
+    ['A small, fast model, because the job is simple and repeated many times', 'An image generator', 'Any model, because they all cost the same', 'The biggest flagship, because it is the smartest'],
+    0,
+    'The makers sell small tiers exactly for high-volume, simple jobs like sorting (Anthropic describes Haiku as for "classification, extraction, and routing"). The biggest tier can cost about 100 times more per word and is slower.',
+  ),
 ];
