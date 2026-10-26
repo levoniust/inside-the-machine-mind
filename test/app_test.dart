@@ -6,20 +6,52 @@ import 'package:machine_mind/content/narration.dart';
 import 'package:machine_mind/screens/screen_registry.dart';
 import 'package:machine_mind/content/quizzes.dart';
 import 'package:machine_mind/screens/extras/quiz_screen.dart';
+import 'package:machine_mind/screens/home/lab_home.dart';
 import 'package:machine_mind/screens/home/section_hub.dart';
 import 'package:machine_mind/widgets/term_text.dart';
 
 import 'helpers.dart';
 
 void main() {
-  testWidgets('home shows title and three section cards', (tester) async {
+  testWidgets('front door shows the title, the two Everyday tracks and the Lab door', (tester) async {
     await pumpApp(tester);
     expect(find.text('Machine Mind'), findsOneWidget);
-    for (final n in [1, 2, 3]) {
+    for (final n in [4, 5]) {
       await tester.scrollUntilVisible(find.byKey(ValueKey('section-card-$n')), 200);
       expect(find.byKey(ValueKey('section-card-$n')), findsOneWidget);
     }
+    await tester.scrollUntilVisible(find.byKey(const ValueKey('home-lab-door')), 200);
+    await tester.ensureVisible(find.byKey(const ValueKey('home-lab-door')));
+    await tester.pump();
+    await tester.tap(find.byKey(const ValueKey('home-lab-door')));
+    await pumpFrames(tester, 20);
+    expect(find.byType(LabHome), findsOneWidget);
     expectNoErrors(tester);
+  });
+
+  testWidgets('first launch asks once; "I tinker" opens the Lab with Foundations and every Lab track', (tester) async {
+    final store = await pumpApp(tester, audience: 0);
+    expect(find.byKey(const ValueKey('welcome-lab')), findsOneWidget);
+    await tester.tap(find.byKey(const ValueKey('welcome-lab')));
+    await pumpFrames(tester, 10);
+    expect(store.audience, 2);
+    for (final n in [1, 2, 3, 6, 7, 8, 9, 10]) {
+      await tester.scrollUntilVisible(find.byKey(ValueKey('track-card-$n')), 200);
+      expect(find.byKey(ValueKey('track-card-$n')), findsOneWidget);
+    }
+    expectNoErrors(tester);
+  });
+
+  testWidgets('a lesson reused in the short journey stays in that track for Next and the header', (tester) async {
+    await pumpApp(tester, home: const SectionHub(number: 4));
+    await tester.tap(find.byKey(const ValueKey('hub-continue')));
+    await pumpFrames(tester, 20);
+    expect(find.textContaining('THE SHORT JOURNEY · 1 / 17'), findsOneWidget);
+    await tester.tap(find.byKey(const ValueKey('lesson-next')));
+    await pumpFrames(tester, 20);
+    // s1_intro → s1_cpu_gpu (in Section 1 the next lesson would be s1_storage)
+    expect(find.textContaining('THE SHORT JOURNEY · 2 / 17'), findsOneWidget);
+    expect(find.text(lessonById('s1_cpu_gpu')!.title), findsWidgets);
   });
 
   testWidgets('tapping Bit five times opens the build-story Easter egg', (tester) async {

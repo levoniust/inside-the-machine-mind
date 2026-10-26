@@ -65,16 +65,16 @@ class AppColors extends ThemeExtension<AppColors> {
     isDark: false,
   );
 
-  static AppColors of(BuildContext context) =>
-      Theme.of(context).extension<AppColors>() ?? dark;
+  static AppColors of(BuildContext context) => Theme.of(context).extension<AppColors>() ?? dark;
 
-  /// Accent color for a section number (1 hardware, 2 training, 3 inference, 0 extras).
+  /// Accent color for a track number (1 hardware, 2 training, 3 inference; 4-5 Everyday; 6-10 Lab; 0 extras).
   Color section(int n) => switch (n) {
-        1 => cyan,
-        2 => violet,
-        3 => magenta,
-        _ => amber,
-      };
+    1 || 4 || 10 => cyan,
+    2 || 7 => violet,
+    3 || 9 => magenta,
+    6 => lime,
+    _ => amber,
+  };
 
   @override
   AppColors copyWith() => this;
@@ -108,10 +108,7 @@ class Gap {
 
 /// Shared text styles that aren't covered by the Material text theme.
 class AppText {
-  static const mono = TextStyle(
-    fontFamily: 'monospace',
-    fontFeatures: [FontFeature.tabularFigures()],
-  );
+  static const mono = TextStyle(fontFamily: 'monospace', fontFeatures: [FontFeature.tabularFigures()]);
 }
 
 ThemeData buildTheme(Brightness brightness) {
@@ -141,12 +138,7 @@ ThemeData buildTheme(Brightness brightness) {
       bodyLarge: t.bodyLarge?.copyWith(fontSize: 16, height: 1.45),
       bodyMedium: t.bodyMedium?.copyWith(fontSize: 15, height: 1.45),
     ),
-    appBarTheme: AppBarTheme(
-      backgroundColor: c.bg,
-      foregroundColor: c.text,
-      elevation: 0,
-      scrolledUnderElevation: 0,
-    ),
+    appBarTheme: AppBarTheme(backgroundColor: c.bg, foregroundColor: c.text, elevation: 0, scrolledUnderElevation: 0),
     cardTheme: CardThemeData(
       color: c.surface,
       elevation: 0,

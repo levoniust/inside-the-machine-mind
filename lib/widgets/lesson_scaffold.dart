@@ -37,7 +37,7 @@ class _LessonScaffoldState extends State<LessonScaffold> {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (mounted) AppScope.read(context).setLast(widget.lessonId);
+      if (mounted) AppScope.read(context).setLast(widget.lessonId, routeTrack(context));
     });
   }
 
@@ -45,8 +45,9 @@ class _LessonScaffoldState extends State<LessonScaffold> {
   Widget build(BuildContext context) {
     final c = AppColors.of(context);
     final info = lessonById(widget.lessonId);
-    final section = info == null ? null : sectionOf(info);
-    final accent = c.section(info?.section ?? 0);
+    final track = routeTrack(context);
+    final section = info == null ? null : trackOf(info, track);
+    final accent = c.section(section?.number ?? 0);
     final list = section?.lessons ?? const [];
     final index = list.indexWhere((l) => l.id == widget.lessonId);
     final text = narrationFor(widget.lessonId);
@@ -64,7 +65,7 @@ class _LessonScaffoldState extends State<LessonScaffold> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              section == null ? '' : 'SECTION ${section.number} · ${index + 1} / ${list.length}',
+              section == null ? '' : '${section.label.toUpperCase()} · ${index + 1} / ${list.length}',
               style: TextStyle(color: accent, fontSize: 11, fontWeight: FontWeight.w800, letterSpacing: 1.1),
             ),
             Text(info?.title ?? widget.lessonId, maxLines: 1, overflow: TextOverflow.ellipsis),
@@ -102,22 +103,24 @@ class _LessonScaffoldState extends State<LessonScaffold> {
           ),
         ),
       ),
-      bottomNavigationBar: _NavBar(lessonId: widget.lessonId, accent: accent),
+      bottomNavigationBar: _NavBar(lessonId: widget.lessonId, track: section?.number, accent: accent),
     );
   }
 }
 
 class _NavBar extends StatelessWidget {
-  const _NavBar({required this.lessonId, required this.accent});
+  const _NavBar({required this.lessonId, required this.track, required this.accent});
   final String lessonId;
+  final int? track;
   final Color accent;
 
   @override
   Widget build(BuildContext context) {
     final c = AppColors.of(context);
-    final prev = prevInSection(lessonId);
-    final next = nextInSection(lessonId);
+    final prev = prevInSection(lessonId, track);
+    final next = nextInSection(lessonId, track);
     final info = lessonById(lessonId);
+    final quizId = info == null ? '' : trackOf(info, track).quizId;
     return SafeArea(
       child: Container(
         padding: const EdgeInsets.fromLTRB(Gap.l, Gap.s, Gap.l, Gap.s),
@@ -135,7 +138,7 @@ class _NavBar extends StatelessWidget {
                   child: OutlinedButton.icon(
                     onPressed: prev == null
                         ? () => Navigator.of(context).maybePop()
-                        : () => replaceLesson(context, prev.id),
+                        : () => replaceLesson(context, prev.id, track: track),
                     icon: const Icon(Icons.chevron_left),
                     label: FittedBox(child: Text(prev == null ? 'Back' : 'Previous')),
                   ),
@@ -144,22 +147,36 @@ class _NavBar extends StatelessWidget {
                 Expanded(
                   child: Align(
                     alignment: Alignment.centerRight,
-                heightFactor: 1,
+                    heightFactor: 1,
                     child: FilledButton.icon(
                       key: const ValueKey('lesson-next'),
                       style: FilledButton.styleFrom(backgroundColor: accent, foregroundColor: c.bg),
                       onPressed: () {
                         AppScope.read(context).markDone(lessonId);
                         if (next != null) {
-                          replaceLesson(context, next.id);
-                        } else if (info != null) {
-                          replaceQuiz(context, sectionOf(info).quizId);
+                          replaceLesson(context, next.id, track: track);
+                        } else if (quizId.isNotEmpty) {
+                          replaceQuiz(context, quizId);
                         } else {
                           Navigator.of(context).maybePop();
                         }
                       },
-                      icon: Icon(next == null ? Icons.quiz_outlined : Icons.chevron_right),
-                      label: FittedBox(child: Text(next == null ? 'Quiz time' : 'Next')),
+                      icon: Icon(
+                        next != null
+                            ? Icons.chevron_right
+                            : quizId.isNotEmpty
+                            ? Icons.quiz_outlined
+                            : Icons.check,
+                      ),
+                      label: FittedBox(
+                        child: Text(
+                          next != null
+                              ? 'Next'
+                              : quizId.isNotEmpty
+                              ? 'Quiz time'
+                              : 'Done',
+                        ),
+                      ),
                     ),
                   ),
                 ),

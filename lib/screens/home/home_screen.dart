@@ -14,8 +14,10 @@ import '../extras/egg_gallery_screen.dart';
 import '../extras/glossary_screen.dart';
 import '../extras/settings_screen.dart';
 import '../extras/sources_screen.dart';
+import 'lab_home.dart';
 
-/// Home: Bit on a circuit board, the question, three section cards and the extras.
+/// Home (the front door, for everyone): Bit, the question, the two Everyday tracks, the door to the Enthusiast Lab
+/// and the extras.
 /// Easter eggs: tap Bit 5 times quickly → "How This App Was Built";
 /// long-press the little amber "3060" chip → "The 3060 Gallery".
 class HomeScreen extends StatefulWidget {
@@ -61,13 +63,15 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     final p = AppScope.progress(context);
     final last = p.lastLesson == null ? null : lessonById(p.lastLesson!);
+    final lastTrack = last == null ? null : trackOf(last, p.lastTrack);
     final wide = MediaQuery.sizeOf(context).width >= 700;
 
     final cards = [
-      for (final s in sections)
+      for (final s in everydayTracks)
         _SectionCard(
           key: ValueKey('section-card-${s.number}'),
           number: s.number,
+          icon: s.number == 4 ? Icons.route : Icons.emoji_people,
           title: s.title,
           tagline: s.tagline,
           progress: p.fraction(s.lessons.map((l) => l.id)),
@@ -86,8 +90,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   _Hero(mood: _mood, onTapBit: _tapBit),
                   const SizedBox(height: Gap.xl),
-                  if (last != null) ...[
-                    _ContinueCard(title: last.title, section: last.section, onTap: () => openLesson(context, last.id)),
+                  if (last != null && lastTrack != null) ...[
+                    _ContinueCard(
+                      title: last.title,
+                      section: lastTrack.number,
+                      onTap: () => openLesson(context, last.id, track: lastTrack.number),
+                    ),
                     const SizedBox(height: Gap.l),
                   ],
                   if (wide)
@@ -104,6 +112,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     )
                   else
                     for (final card in cards) ...[card, const SizedBox(height: Gap.m)],
+                  const SizedBox(height: Gap.m),
+                  const _LabDoor(),
                   const SizedBox(height: Gap.l),
                   Wrap(
                     spacing: Gap.s,
@@ -134,10 +144,14 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                   const SizedBox(height: Gap.xl),
-                  Center(child: _ChipBoard(onSecret: () {
-                    AppScope.read(context).markEgg('gallery');
-                    openPage(context, const EggGalleryScreen(), '/egg/gallery');
-                  })),
+                  Center(
+                    child: _ChipBoard(
+                      onSecret: () {
+                        AppScope.read(context).markEgg('gallery');
+                        openPage(context, const EggGalleryScreen(), '/egg/gallery');
+                      },
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -168,9 +182,11 @@ class _Hero extends StatelessWidget {
         Text('Inside the', style: t.titleMedium?.copyWith(color: c.textDim, letterSpacing: 3)),
         ShaderMask(
           shaderCallback: (r) => LinearGradient(colors: [c.cyan, c.violet, c.magenta]).createShader(r),
-          child: Text('Machine Mind',
-              textAlign: TextAlign.center,
-              style: t.headlineLarge?.copyWith(color: Colors.white, fontSize: 38)),
+          child: Text(
+            'Machine Mind',
+            textAlign: TextAlign.center,
+            style: t.headlineLarge?.copyWith(color: Colors.white, fontSize: 38),
+          ),
         ),
         const SizedBox(height: Gap.l),
         Container(
@@ -185,8 +201,10 @@ class _Hero extends StatelessWidget {
             children: [
               Text('Follow one question through the machine:', style: TextStyle(color: c.textDim)),
               const SizedBox(height: Gap.xs),
-              Text('“Why is the sky blue?”',
-                  style: t.titleLarge?.copyWith(color: c.text, fontStyle: FontStyle.italic)),
+              Text(
+                '“Why is the sky blue?”',
+                style: t.titleLarge?.copyWith(color: c.text, fontStyle: FontStyle.italic),
+              ),
             ],
           ),
         ),
@@ -226,8 +244,10 @@ class _SectionCard extends StatelessWidget {
     required this.tagline,
     required this.progress,
     required this.lessons,
+    this.icon,
   });
   final int number;
+  final IconData? icon;
   final String title, tagline;
   final double progress;
   final int lessons;
@@ -238,7 +258,10 @@ class _SectionCard extends StatelessWidget {
     final accent = c.section(number);
     return Material(
       color: c.surface,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20), side: BorderSide(color: accent.withValues(alpha: 0.45))),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20),
+        side: BorderSide(color: accent.withValues(alpha: 0.45)),
+      ),
       child: InkWell(
         borderRadius: BorderRadius.circular(20),
         onTap: () => openSection(context, number),
@@ -260,7 +283,13 @@ class _SectionCard extends StatelessWidget {
                         backgroundColor: c.surfaceHi,
                       ),
                     ),
-                    Text('$number', style: AppText.mono.copyWith(fontSize: 26, fontWeight: FontWeight.w800, color: accent)),
+                    if (icon != null)
+                      Icon(icon, color: accent, size: 28)
+                    else
+                      Text(
+                        '$number',
+                        style: AppText.mono.copyWith(fontSize: 26, fontWeight: FontWeight.w800, color: accent),
+                      ),
                   ],
                 ),
               ),
@@ -273,8 +302,57 @@ class _SectionCard extends StatelessWidget {
                     const SizedBox(height: Gap.xs),
                     Text(tagline, style: TextStyle(color: c.textDim)),
                     const SizedBox(height: Gap.s),
-                    Text('$lessons lessons · ${(progress * 100).round()}% done',
-                        style: TextStyle(color: accent, fontSize: 12, fontWeight: FontWeight.w700)),
+                    Text(
+                      '$lessons lessons · ${(progress * 100).round()}% done',
+                      style: TextStyle(color: accent, fontSize: 12, fontWeight: FontWeight.w700),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// The door to the Enthusiast Lab: a darker "workbench" card that looks like a different room.
+class _LabDoor extends StatelessWidget {
+  const _LabDoor();
+
+  @override
+  Widget build(BuildContext context) {
+    final c = AppColors.of(context);
+    return Material(
+      key: const ValueKey('home-lab-door'),
+      color: c.surfaceHi,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
+        side: BorderSide(color: c.lime.withValues(alpha: 0.7), width: 1.5),
+      ),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(12),
+        onTap: () => openPage(context, const LabHome(), '/lab'),
+        child: Padding(
+          padding: const EdgeInsets.all(Gap.l),
+          child: Row(
+            children: [
+              Icon(Icons.science_outlined, color: c.lime, size: 36),
+              const SizedBox(width: Gap.l),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'ENTHUSIAST LAB  →',
+                      style: AppText.mono.copyWith(fontWeight: FontWeight.w800, letterSpacing: 1.5, color: c.lime),
+                    ),
+                    const SizedBox(height: Gap.xs),
+                    Text(
+                      'For tinkerers: run models at home, customize them, read the papers, keep up with what\'s new.',
+                      style: TextStyle(color: c.textDim),
+                    ),
                   ],
                 ),
               ),
@@ -296,19 +374,19 @@ class _ChipBoard extends StatelessWidget {
   Widget build(BuildContext context) {
     final c = AppColors.of(context);
     Widget chip(String label, Color color, {Key? key, VoidCallback? onLong}) => GestureDetector(
-          key: key,
-          onLongPress: onLong,
-          child: Container(
-            margin: const EdgeInsets.symmetric(horizontal: 6),
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
-            decoration: BoxDecoration(
-              color: c.surface,
-              borderRadius: BorderRadius.circular(4),
-              border: Border.all(color: color.withValues(alpha: 0.6)),
-            ),
-            child: Text(label, style: AppText.mono.copyWith(fontSize: 10, color: color.withValues(alpha: 0.8))),
-          ),
-        );
+      key: key,
+      onLongPress: onLong,
+      child: Container(
+        margin: const EdgeInsets.symmetric(horizontal: 6),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+        decoration: BoxDecoration(
+          color: c.surface,
+          borderRadius: BorderRadius.circular(4),
+          border: Border.all(color: color.withValues(alpha: 0.6)),
+        ),
+        child: Text(label, style: AppText.mono.copyWith(fontSize: 10, color: color.withValues(alpha: 0.8))),
+      ),
+    );
     return Column(
       children: [
         Row(
@@ -322,7 +400,7 @@ class _ChipBoard extends StatelessWidget {
           ],
         ),
         const SizedBox(height: Gap.s),
-        Text('v1.1 · made by machines, for curious humans', style: TextStyle(color: c.textDim, fontSize: 11)),
+        Text('v2.0 · made by machines, for curious humans', style: TextStyle(color: c.textDim, fontSize: 11)),
       ],
     );
   }

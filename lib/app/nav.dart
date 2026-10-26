@@ -4,21 +4,30 @@ import '../content/lessons.dart';
 import '../screens/extras/quiz_screen.dart';
 import '../screens/home/section_hub.dart';
 
-Route<T> _route<T>(WidgetBuilder b, String name) =>
-    MaterialPageRoute<T>(builder: b, settings: RouteSettings(name: name));
+Route<T> _route<T>(WidgetBuilder b, String name, [Object? arguments]) => MaterialPageRoute<T>(
+  builder: b,
+  settings: RouteSettings(name: name, arguments: arguments),
+);
 
-/// Open a lesson on top of the current screen.
-Future<void> openLesson(BuildContext context, String id) {
+/// Open a lesson on top of the current screen. [track] = the track it is shown in, when the lesson is reused
+/// outside its home section (the route remembers it, so Back/Next stay inside that track).
+Future<void> openLesson(BuildContext context, String id, {int? track}) {
   final l = lessonById(id);
   if (l == null) return Future.value();
-  return Navigator.of(context).push(_route(l.builder, '/lesson/$id'));
+  return Navigator.of(context).push(_route(l.builder, '/lesson/$id', track));
 }
 
-/// Replace the current lesson with another (Back/Next inside a section).
-void replaceLesson(BuildContext context, String id) {
+/// Replace the current lesson with another (Back/Next inside a track).
+void replaceLesson(BuildContext context, String id, {int? track}) {
   final l = lessonById(id);
   if (l == null) return;
-  Navigator.of(context).pushReplacement(_route(l.builder, '/lesson/$id'));
+  Navigator.of(context).pushReplacement(_route(l.builder, '/lesson/$id', track));
+}
+
+/// The track number the current lesson route was opened in, if any.
+int? routeTrack(BuildContext context) {
+  final a = ModalRoute.of(context)?.settings.arguments;
+  return a is int ? a : null;
 }
 
 Future<void> openSection(BuildContext context, int number) =>

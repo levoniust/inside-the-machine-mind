@@ -8,6 +8,7 @@ import '../../core/progress.dart';
 import '../../widgets/bit.dart';
 import '../../widgets/components.dart';
 import '../extras/finale_screen.dart';
+import 'lab_home.dart';
 
 /// Section landing page: lessons as nodes on a glowing circuit path, quiz at the end.
 class SectionHub extends StatelessWidget {
@@ -26,7 +27,7 @@ class SectionHub extends StatelessWidget {
     final quizLen = quizzes[s.quizId]?.length ?? 0;
 
     return Scaffold(
-      appBar: AppBar(title: Text('Section $number')),
+      appBar: AppBar(title: Text(s.label)),
       body: CircuitBackground(
         accent: accent,
         density: 0.6,
@@ -38,7 +39,7 @@ class SectionHub extends StatelessWidget {
               child: ListView(
                 padding: const EdgeInsets.fromLTRB(Gap.l, Gap.s, Gap.l, Gap.xxl),
                 children: [
-                  SectionTag(['', 'Hardware', 'Training', 'Inference'][number], color: accent),
+                  SectionTag(s.tag, color: accent),
                   const SizedBox(height: Gap.m),
                   Text(s.title, style: Theme.of(context).textTheme.headlineMedium),
                   const SizedBox(height: Gap.xs),
@@ -65,10 +66,12 @@ class SectionHub extends StatelessWidget {
                   FilledButton.icon(
                     key: const ValueKey('hub-continue'),
                     style: FilledButton.styleFrom(backgroundColor: accent, foregroundColor: c.bg),
-                    onPressed: () => openLesson(context, nextUp.id),
+                    onPressed: () => openLesson(context, nextUp.id, track: number),
                     icon: const Icon(Icons.play_arrow),
-                    label: Text(p.fraction(ids) == 0 ? 'Start the journey' : 'Continue: ${nextUp.title}',
-                        overflow: TextOverflow.ellipsis),
+                    label: Text(
+                      p.fraction(ids) == 0 ? 'Start the journey' : 'Continue: ${nextUp.title}',
+                      overflow: TextOverflow.ellipsis,
+                    ),
                   ),
                   const SizedBox(height: Gap.xl),
                   for (var i = 0; i < s.lessons.length; i++)
@@ -80,32 +83,59 @@ class SectionHub extends StatelessWidget {
                       current: s.lessons[i].id == nextUp.id,
                       accent: accent,
                       last: false,
-                      onTap: () => openLesson(context, s.lessons[i].id),
+                      onTap: () => openLesson(context, s.lessons[i].id, track: number),
                     ),
-                  _Node(
-                    index: s.lessons.length + 1,
-                    title: 'Section quiz',
-                    subtitle: quizScore == null ? '$quizLen questions' : 'Best: $quizScore / $quizLen',
-                    done: quizScore != null,
-                    current: false,
-                    accent: accent,
-                    last: true,
-                    icon: Icons.quiz_outlined,
-                    onTap: () => openQuiz(context, s.quizId),
-                  ),
+                  if (s.quizId.isNotEmpty)
+                    _Node(
+                      index: s.lessons.length + 1,
+                      title: number <= 3 ? 'Section quiz' : 'Quiz',
+                      subtitle: quizScore == null ? '$quizLen questions' : 'Best: $quizScore / $quizLen',
+                      done: quizScore != null,
+                      current: false,
+                      accent: accent,
+                      last: true,
+                      icon: Icons.quiz_outlined,
+                      onTap: () => openQuiz(context, s.quizId),
+                    ),
                   const SizedBox(height: Gap.xl),
                   if (p.fraction(ids) == 1) ...[
-                    const BitSays(lines: ['You finished this whole section! On to the next part of the journey?'], mood: BitMood.happy),
-                    const SizedBox(height: Gap.m),
-                    FilledButton.icon(
-                      key: const ValueKey('hub-next-section'),
-                      style: FilledButton.styleFrom(backgroundColor: c.section(number < 3 ? number + 1 : 0), foregroundColor: c.bg),
-                      onPressed: () => number < 3
-                          ? Navigator.of(context).pushReplacement(MaterialPageRoute<void>(builder: (_) => SectionHub(number: number + 1)))
-                          : openPage(context, const FinaleScreen(), '/finale'),
-                      icon: Icon(number < 3 ? Icons.arrow_forward : Icons.auto_awesome),
-                      label: Text(number < 3 ? 'Section ${number + 1}: ${sections[number].title}' : 'See the finale'),
+                    BitSays(
+                      lines: [
+                        number == 5
+                            ? 'You finished the front door! Curious how people run these models themselves? The Enthusiast Lab is open.'
+                            : 'You finished this whole ${number <= 3 ? 'section' : 'track'}! On to the next part?',
+                      ],
+                      mood: BitMood.happy,
                     ),
+                    const SizedBox(height: Gap.m),
+                    if (nextTrack(number) case final next?)
+                      FilledButton.icon(
+                        key: const ValueKey('hub-next-section'),
+                        style: FilledButton.styleFrom(backgroundColor: c.section(next.number), foregroundColor: c.bg),
+                        onPressed: () => Navigator.of(context)
+                            .pushReplacement(MaterialPageRoute<void>(builder: (_) => SectionHub(number: next.number))),
+                        icon: const Icon(Icons.arrow_forward),
+                        label: Text(
+                          '${next.label}${next.number <= 3 ? ': ${next.title}' : ''}',
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      )
+                    else if (number == 3)
+                      FilledButton.icon(
+                        key: const ValueKey('hub-next-section'),
+                        style: FilledButton.styleFrom(backgroundColor: c.section(0), foregroundColor: c.bg),
+                        onPressed: () => openPage(context, const FinaleScreen(), '/finale'),
+                        icon: const Icon(Icons.auto_awesome),
+                        label: const Text('See the finale'),
+                      )
+                    else if (number == 5)
+                      FilledButton.icon(
+                        key: const ValueKey('hub-next-section'),
+                        style: FilledButton.styleFrom(backgroundColor: c.lime, foregroundColor: c.bg),
+                        onPressed: () => openPage(context, const LabHome(), '/lab'),
+                        icon: const Icon(Icons.science_outlined),
+                        label: const Text('Open the Enthusiast Lab'),
+                      ),
                   ],
                 ],
               ),
@@ -163,11 +193,16 @@ class _Node extends StatelessWidget {
                     child: icon != null
                         ? Icon(icon, size: 18, color: done ? c.bg : accent)
                         : done
-                            ? Icon(Icons.check, size: 18, color: c.bg)
-                            : Text('$index', style: AppText.mono.copyWith(fontWeight: FontWeight.w800, color: current ? accent : c.textDim)),
+                        ? Icon(Icons.check, size: 18, color: c.bg)
+                        : Text(
+                            '$index',
+                            style: AppText.mono.copyWith(
+                              fontWeight: FontWeight.w800,
+                              color: current ? accent : c.textDim,
+                            ),
+                          ),
                   ),
-                  if (!last)
-                    Expanded(child: Container(width: 2, color: done ? accent.withValues(alpha: 0.7) : c.line)),
+                  if (!last) Expanded(child: Container(width: 2, color: done ? accent.withValues(alpha: 0.7) : c.line)),
                 ],
               ),
             ),
@@ -178,7 +213,10 @@ class _Node extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(title, style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: c.text)),
+                    Text(
+                      title,
+                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: c.text),
+                    ),
                     if (subtitle.isNotEmpty) Text(subtitle, style: TextStyle(color: c.textDim)),
                   ],
                 ),

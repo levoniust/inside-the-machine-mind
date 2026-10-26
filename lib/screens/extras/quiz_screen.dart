@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../app/theme.dart';
+import '../../content/lessons.dart';
 import '../../content/quizzes.dart';
 import '../../core/progress.dart';
 import '../../widgets/bit.dart';
@@ -50,7 +51,9 @@ class _QuizScreenState extends State<QuizScreen> {
     final section = int.tryParse(widget.quizId.replaceAll(RegExp(r'\D'), '')) ?? 0;
     final accent = c.section(section);
     return Scaffold(
-      appBar: AppBar(title: Text('Section $section quiz')),
+      appBar: AppBar(
+        title: Text(section >= 1 && section <= sections.length ? '${sections[section - 1].label} quiz' : 'Quiz'),
+      ),
       body: SafeArea(
         child: Center(
           child: ConstrainedBox(
@@ -58,8 +61,8 @@ class _QuizScreenState extends State<QuizScreen> {
             child: qs.isEmpty
                 ? const Center(child: Text('Quiz coming soon.'))
                 : _finished
-                    ? _result(context, qs.length, accent)
-                    : _question(context, qs, accent),
+                ? _result(context, qs.length, accent)
+                : _question(context, qs, accent),
           ),
         ),
       ),
@@ -87,10 +90,10 @@ class _QuizScreenState extends State<QuizScreen> {
               state: _picked == null
                   ? _OptState.idle
                   : i == q.answer
-                      ? _OptState.right
-                      : i == _picked
-                          ? _OptState.wrong
-                          : _OptState.dim,
+                  ? _OptState.right
+                  : i == _picked
+                  ? _OptState.wrong
+                  : _OptState.dim,
               onTap: () => _pick(i),
             ),
           ),
@@ -124,7 +127,10 @@ class _QuizScreenState extends State<QuizScreen> {
         children: [
           BitAvatar(size: 120, mood: great ? BitMood.happy : BitMood.wow),
           const SizedBox(height: Gap.l),
-          Text('$_score / $total', style: AppText.mono.copyWith(fontSize: 48, fontWeight: FontWeight.w800, color: accent)),
+          Text(
+            '$_score / $total',
+            style: AppText.mono.copyWith(fontSize: 48, fontWeight: FontWeight.w800, color: accent),
+          ),
           const SizedBox(height: Gap.s),
           Text(
             great ? 'Brilliant! Your circuits are glowing.' : 'Nice work! Every wrong answer is a gradient step.',
@@ -171,7 +177,10 @@ class _Option extends StatelessWidget {
     };
     return Material(
       color: bg,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14), side: BorderSide(color: border, width: 1.5)),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(14),
+        side: BorderSide(color: border, width: 1.5),
+      ),
       child: InkWell(
         borderRadius: BorderRadius.circular(14),
         onTap: onTap,
@@ -180,8 +189,7 @@ class _Option extends StatelessWidget {
           child: Row(
             children: [
               Expanded(
-                child: Text(text,
-                    style: TextStyle(color: state == _OptState.dim ? c.textDim : c.text, fontSize: 16)),
+                child: Text(text, style: TextStyle(color: state == _OptState.dim ? c.textDim : c.text, fontSize: 16)),
               ),
               if (icon != null) Icon(icon, color: border),
             ],

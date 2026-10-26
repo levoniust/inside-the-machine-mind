@@ -53,6 +53,12 @@ class LessonInfo {
   final WidgetBuilder builder;
 }
 
+/// Which side of the app a track belongs to: the front door for everyone, or the Enthusiast Lab.
+enum Area { everyday, lab }
+
+/// A track of lessons (sections 1-3 are the original journey, now the Lab's "Foundations").
+/// A track may reuse lessons whose home is another track (the Everyday short journey does);
+/// a lesson's [LessonInfo.section] is always its home track.
 class SectionInfo {
   const SectionInfo({
     required this.number,
@@ -60,10 +66,21 @@ class SectionInfo {
     required this.tagline,
     required this.lessons,
     required this.quizId,
+    this.area = Area.lab,
+    this.tag = '',
   });
   final int number;
   final String title;
   final String tagline;
   final List<LessonInfo> lessons;
+
+  /// Empty = no quiz at the end of this track.
   final String quizId;
+  final Area area;
+
+  /// Short label on hubs and lesson headers ("Hardware", "Run it yourself").
+  final String tag;
+
+  /// Sections 1-3 keep their "Section n" names; the newer tracks are named by their tag.
+  String get label => number <= 3 ? 'Section $number' : tag;
 }

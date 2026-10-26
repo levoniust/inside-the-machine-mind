@@ -4,7 +4,7 @@ import '../../app/theme.dart';
 import '../../core/progress.dart';
 import '../../core/speech.dart';
 
-/// Theme, motion, Bit's voice, and resetting progress.
+/// Start screen, theme, motion, Bit's voice, and resetting progress.
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
 
@@ -20,7 +20,26 @@ class SettingsScreen extends StatelessWidget {
           child: ListView(
             padding: const EdgeInsets.all(Gap.l),
             children: [
-              Text('Look', style: TextStyle(color: c.textDim, fontWeight: FontWeight.w700)),
+              Text(
+                'Open the app at',
+                style: TextStyle(color: c.textDim, fontWeight: FontWeight.w700),
+              ),
+              const SizedBox(height: Gap.s),
+              SegmentedButton<int>(
+                key: const ValueKey('settings-audience'),
+                segments: const [
+                  ButtonSegment(value: 1, label: Text('Front door'), icon: Icon(Icons.door_front_door_outlined)),
+                  ButtonSegment(value: 2, label: Text('Enthusiast Lab'), icon: Icon(Icons.science_outlined)),
+                ],
+                selected: {p.audience == 2 ? 2 : 1},
+                showSelectedIcon: false,
+                onSelectionChanged: (s) => AppScope.read(context).setAudience(s.first),
+              ),
+              const SizedBox(height: Gap.l),
+              Text(
+                'Look',
+                style: TextStyle(color: c.textDim, fontWeight: FontWeight.w700),
+              ),
               const SizedBox(height: Gap.s),
               SegmentedButton<int>(
                 key: const ValueKey('settings-theme'),
@@ -54,9 +73,15 @@ class SettingsScreen extends StatelessWidget {
                 },
               ),
               const SizedBox(height: Gap.s),
-              Text('Text size follows your phone\'s font-size setting.', style: TextStyle(color: c.textDim, fontSize: 13)),
+              Text(
+                'Text size follows your phone\'s font-size setting.',
+                style: TextStyle(color: c.textDim, fontSize: 13),
+              ),
               const SizedBox(height: Gap.xl),
-              Text('Progress', style: TextStyle(color: c.textDim, fontWeight: FontWeight.w700)),
+              Text(
+                'Progress',
+                style: TextStyle(color: c.textDim, fontWeight: FontWeight.w700),
+              ),
               const SizedBox(height: Gap.s),
               Text('${p.doneCount} lessons explored', style: TextStyle(color: c.text)),
               const SizedBox(height: Gap.s),
@@ -69,7 +94,9 @@ class SettingsScreen extends StatelessWidget {
                     context: context,
                     builder: (ctx) => AlertDialog(
                       title: const Text('Start over?'),
-                      content: const Text('This forgets which lessons you finished, your quiz scores and the secrets you found.'),
+                      content: const Text(
+                        'This forgets which lessons you finished, your quiz scores and the secrets you found.',
+                      ),
                       actions: [
                         TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Cancel')),
                         FilledButton(onPressed: () => Navigator.pop(ctx, true), child: const Text('Start over')),

@@ -12,6 +12,7 @@ Future<ProgressStore> pumpApp(
   Brightness brightness = Brightness.dark,
   double textScale = 1.0,
   bool animations = false,
+  int audience = 1, // 0 = first launch (welcome question), 1 = front door, 2 = Enthusiast Lab
 }) async {
   tester.view.physicalSize = size * 2;
   tester.view.devicePixelRatio = 2;
@@ -19,7 +20,7 @@ Future<ProgressStore> pumpApp(
   tester.platformDispatcher.textScaleFactorTestValue = textScale;
   addTearDown(tester.view.reset);
   addTearDown(tester.platformDispatcher.clearAllTestValues);
-  final store = ProgressStore();
+  final store = ProgressStore()..setAudience(audience);
   await tester.pumpWidget(
     MediaQuery(
       data: MediaQueryData(size: size, disableAnimations: !animations, platformBrightness: brightness, textScaler: TextScaler.linear(textScale)),

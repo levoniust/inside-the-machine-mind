@@ -13,6 +13,8 @@ class ProgressStore extends ChangeNotifier {
   static const _kTheme = 'settings.theme'; // 0 system, 1 dark, 2 light
   static const _kStill = 'settings.reduceMotion';
   static const _kSpeak = 'settings.autoSpeak';
+  static const _kAudience = 'settings.audience'; // 0 not asked yet, 1 everyday, 2 enthusiast
+  static const _kLastTrack = 'progress.lastTrack';
 
   final SharedPreferences? _prefs;
   final Set<String> _done = {};
@@ -22,6 +24,8 @@ class ProgressStore extends ChangeNotifier {
   int _theme = 0;
   bool _reduceMotion = false;
   bool _autoSpeak = false;
+  int _audience = 0;
+  int? _lastTrack;
 
   static Future<ProgressStore> load() async {
     try {
@@ -42,6 +46,8 @@ class ProgressStore extends ChangeNotifier {
     _theme = p.getInt(_kTheme) ?? 0;
     _reduceMotion = p.getBool(_kStill) ?? false;
     _autoSpeak = p.getBool(_kSpeak) ?? false;
+    _audience = p.getInt(_kAudience) ?? 0;
+    _lastTrack = p.getInt(_kLastTrack);
     for (final k in p.getKeys().where((k) => k.startsWith(_kQuiz))) {
       _quiz[k.substring(_kQuiz.length)] = p.getInt(k) ?? 0;
     }
@@ -53,6 +59,15 @@ class ProgressStore extends ChangeNotifier {
   int get theme => _theme;
   bool get reduceMotion => _reduceMotion;
   bool get autoSpeak => _autoSpeak;
+
+  /// Who the app opens for: 0 = not asked yet (first launch), 1 = everyday (front door), 2 = enthusiast (the Lab).
+  int get audience => _audience;
+
+  void setAudience(int v) {
+    _audience = v;
+    _prefs?.setInt(_kAudience, v);
+    notifyListeners();
+  }
 
   void setTheme(int v) {
     _theme = v;
@@ -71,8 +86,12 @@ class ProgressStore extends ChangeNotifier {
     _prefs?.setBool(_kSpeak, v);
     notifyListeners();
   }
+
   int get doneCount => _done.length;
   String? get lastLesson => _last;
+
+  /// The track the last lesson was opened in (null = its home section).
+  int? get lastTrack => _lastTrack;
   int? quizScore(String quizId) => _quiz[quizId];
   bool foundEgg(String egg) => _eggs.contains(egg);
 
@@ -90,10 +109,16 @@ class ProgressStore extends ChangeNotifier {
     }
   }
 
-  void setLast(String lessonId) {
-    if (_last == lessonId) return;
+  void setLast(String lessonId, [int? track]) {
+    if (_last == lessonId && _lastTrack == track) return;
     _last = lessonId;
+    _lastTrack = track;
     _prefs?.setString(_kLast, lessonId);
+    if (track == null) {
+      _prefs?.remove(_kLastTrack);
+    } else {
+      _prefs?.setInt(_kLastTrack, track);
+    }
     notifyListeners();
   }
 
@@ -118,7 +143,8 @@ class ProgressStore extends ChangeNotifier {
     _eggs.clear();
     _quiz.clear();
     _last = null;
-    for (final k in [_kDone, _kEggs, _kLast, ...?_prefs?.getKeys().where((k) => k.startsWith(_kQuiz))]) {
+    _lastTrack = null;
+    for (final k in [_kDone, _kEggs, _kLast, _kLastTrack, ...?_prefs?.getKeys().where((k) => k.startsWith(_kQuiz))]) {
       _prefs?.remove(k);
     }
     notifyListeners();
@@ -127,13 +153,11 @@ class ProgressStore extends ChangeNotifier {
 
 /// Makes the [ProgressStore] available below it: `AppScope.progress(context)`.
 class AppScope extends InheritedNotifier<ProgressStore> {
-  const AppScope({super.key, required ProgressStore progress, required super.child})
-      : super(notifier: progress);
+  const AppScope({super.key, required ProgressStore progress, required super.child}) : super(notifier: progress);
 
   static ProgressStore progress(BuildContext context) =>
       context.dependOnInheritedWidgetOfExactType<AppScope>()!.notifier!;
 
   /// Read without subscribing to changes (for callbacks).
-  static ProgressStore read(BuildContext context) =>
-      context.getInheritedWidgetOfExactType<AppScope>()!.notifier!;
+  static ProgressStore read(BuildContext context) => context.getInheritedWidgetOfExactType<AppScope>()!.notifier!;
 }
