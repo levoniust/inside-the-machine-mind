@@ -5,7 +5,7 @@ const narrationS6 = <String, LessonText>{
   'l_will_it_fit': LessonText(
     intro: [
       'Welcome to the Lab\'s favourite question: will this model fit on my machine, and how fast will it run?',
-      'Pick a model, a Quantization and a context length, then pick your machine. The bar shows weights, [[KV cache]] and overhead against your [[VRAM]]; whatever spills over has to live in system RAM.',
+      'Pick a model, a quant and a context length, then pick your machine. The bar shows weights, [[KV cache]] and overhead against your [[VRAM]]; whatever spills over has to live in system RAM.',
       'Tap "Show the math" to see every number. The speed is an upper bound: generating a token means reading every active weight once, so memory bandwidth sets the pace.',
     ],
     keyIdea: 'Memory decides whether a model fits and memory bandwidth decides how fast it talks, so size, quant, context and the type of memory matter more than raw compute at home.',
@@ -20,7 +20,7 @@ const narrationS6 = <String, LessonText>{
   ),
   'l_quant_pick': LessonText(
     intro: [
-      'Every Quantization trades file size for damage. Here is the real measurement for Llama 3 8B from the llama.cpp project: size on one side, how far the answers drift from the original on the other.',
+      'Every quant trades file size for damage. Here is the real measurement for Llama 3 8B from the llama.cpp project: size on one side, how far the answers drift from the original on the other.',
       'Slide through the quants. The drift is measured as [[KL divergence]]: zero means identical. Notice how slowly it rises down to about 4-5 bits, and how fast it climbs below 3.',
       'Switch on the importance matrix to see the same sizes do less damage. Then look at the surprise underneath: the newer, better model suffers more from the same squeeze.',
     ],

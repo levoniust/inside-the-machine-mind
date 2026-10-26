@@ -5,7 +5,7 @@ const narrationS9 = <String, LessonText>{
   'l_sota_models': LessonText(
     intro: [
       'This track is dated on purpose: it shows the field as of October 2026, and every card says where it came from.',
-      'Two shelves: closed frontier models you use through an app or an API, and [[Open weights|open-weight]] models anyone can download. Filter them, and tap a card for its details and source.',
+      'Two shelves: closed frontier models you use through an app or an API, and open-weight models anyone can download. Filter them, and tap a card for its details and source.',
       'Notice the open shelf: giant [[mixture-of-experts|mixture of experts]] models next to small ones that run on a single good GPU.',
     ],
     keyIdea: 'The frontier is held by a handful of closed models, while open-weight models, mostly mixtures of experts, follow close behind and can be run by anyone.',

@@ -20,7 +20,7 @@ const narrationS7 = <String, LessonText>{
   ),
   'l_datasets': LessonText(
     intro: [
-      'A [[chat template]] stacks System prompt, user, and assistant turns around special [[token]] markers — the model only ever sees this structure.',
+      'A [[chat template]] stacks system, user, and assistant turns around special [[token]] markers — the model only ever sees this structure.',
       'Tap the coloured blocks to reveal the raw text underneath, then look at a real JSONL row to see how a training example is stored.',
       'Now play the mini-game: three rows are on screen, and one of them is a bad example. Spot it.',
     ],

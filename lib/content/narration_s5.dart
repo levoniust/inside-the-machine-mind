@@ -54,7 +54,7 @@ const narrationS5 = <String, LessonText>{
     intro: [
       'I\'ve opened a door to a little workbench. On the bench sit a laptop, a gaming PC, and a Mac, each with a "what fits" bar showing small, medium, or large models. Tap the one you\'d actually use.',
       'I\'ll show you what you could run on that machine and how it feels — fast and snappy, or a little slow but still useful. And I\'ll mention the privacy upside: your words stay in your room.',
-      'When you\'re ready to go deeper — [[VRAM]], Quantization models, the real trade-offs — there\'s a big button here that steps you into the Enthusiast Lab.',
+      'When you\'re ready to go deeper — [[VRAM]], quantized models, the real trade-offs — there\'s a big button here that steps you into the Enthusiast Lab.',
     ],
     keyIdea: 'You can run a real language model on hardware you already own, and the size you can fit is the main thing that shapes how it feels.',
   ),
