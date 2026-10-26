@@ -75,6 +75,11 @@ import 's7/l_steering.dart';
 import 's7/l_which_custom.dart';
 import 's8/l_paper_anatomy.dart';
 import 's8/l_paper_shelf.dart';
+import 's9/l_leaderboards.dart';
+import 's9/l_sota_hardware.dart';
+import 's9/l_sota_models.dart';
+import 's9/l_sota_techniques.dart';
+import 's9/l_this_year.dart';
 
 /// Lesson id → screen. Add one line per finished lesson screen (keep the list in journey order).
 final Map<String, WidgetBuilder> screenBuilders = {
@@ -148,4 +153,9 @@ final Map<String, WidgetBuilder> screenBuilders = {
   'l_which_custom': (_) => const LWhichCustomScreen(),
   'l_paper_anatomy': (_) => const LPaperAnatomyScreen(),
   'l_paper_shelf': (_) => const LPaperShelfScreen(),
+  'l_sota_models': (_) => const LSotaModelsScreen(),
+  'l_sota_hardware': (_) => const LSotaHardwareScreen(),
+  'l_sota_techniques': (_) => const LSotaTechniquesScreen(),
+  'l_leaderboards': (_) => const LLeaderboardsScreen(),
+  'l_this_year': (_) => const LThisYearScreen(),
 };

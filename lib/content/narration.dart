@@ -5,6 +5,7 @@ import 'narration_s5.dart';
 import 'narration_s6.dart';
 import 'narration_s7.dart';
 import 'narration_s8.dart';
+import 'narration_s9.dart';
 
 /// Bit's words for each lesson: intro bubbles (shown at the top) and the key idea (shown at the end).
 /// Markup: `[[term]]` links a glossary term, `**bold**` for emphasis.
@@ -23,6 +24,7 @@ const narration = <String, LessonText>{
   ...narrationS6,
   ...narrationS7,
   ...narrationS8,
+  ...narrationS9,
   ...narrationExtras,
 };
 
