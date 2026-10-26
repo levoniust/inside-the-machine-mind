@@ -12,6 +12,7 @@ class FitModel {
     this.kvHeads,
     this.headDim, {
     required this.maxContext,
+    this.attnHeads = 0,
     this.scaledContext,
     this.slidingLayers = 0,
     this.window = 0,
@@ -23,6 +24,9 @@ class FitModel {
   /// Parameters in billions: all of them, and the ones used per token (same for dense models).
   final double totalB, activeB;
   final int layers, kvHeads, headDim;
+
+  /// Query (attention) heads. More than [kvHeads] = grouped-query attention: several heads share one K/V pair.
+  final int attnHeads;
 
   /// Context the model was trained for, and (if any) how far RoPE scaling such as YaRN officially stretches it.
   final int maxContext;
@@ -40,9 +44,20 @@ class FitModel {
 }
 
 const fitModels = [
-  FitModel('Llama 3.1 8B', 8.03, 8.03, 32, 8, 128, maxContext: 131072, factId: 'RUN-SHAPE-L8B'),
-  FitModel('Qwen3 32B', 32.8, 32.8, 64, 8, 128, maxContext: 32768, scaledContext: 131072, factId: 'RUN-SHAPE-Q32B'),
-  FitModel('Llama 3.3 70B', 70.6, 70.6, 80, 8, 128, maxContext: 131072, factId: 'RUN-SHAPE-L70B'),
+  FitModel('Llama 3.1 8B', 8.03, 8.03, 32, 8, 128, attnHeads: 32, maxContext: 131072, factId: 'RUN-SHAPE-L8B'),
+  FitModel(
+    'Qwen3 32B',
+    32.8,
+    32.8,
+    64,
+    8,
+    128,
+    attnHeads: 64,
+    maxContext: 32768,
+    scaledContext: 131072,
+    factId: 'RUN-SHAPE-Q32B',
+  ),
+  FitModel('Llama 3.3 70B', 70.6, 70.6, 80, 8, 128, attnHeads: 64, maxContext: 131072, factId: 'RUN-SHAPE-L70B'),
   FitModel(
     'Qwen3 30B-A3B (MoE)',
     30.5,
@@ -50,6 +65,7 @@ const fitModels = [
     48,
     4,
     128,
+    attnHeads: 32,
     maxContext: 32768,
     scaledContext: 131072,
     factId: 'RUN-SHAPE-Q30BA3B',
@@ -61,6 +77,7 @@ const fitModels = [
     36,
     8,
     64,
+    attnHeads: 64,
     maxContext: 131072,
     slidingLayers: 18,
     window: 128,
@@ -73,6 +90,7 @@ const fitModels = [
     94,
     4,
     128,
+    attnHeads: 64,
     maxContext: 32768,
     scaledContext: 131072,
     factId: 'RUN-SHAPE-Q235B',
@@ -84,6 +102,7 @@ const fitModels = [
     61,
     0,
     0,
+    attnHeads: 128,
     maxContext: 131072,
     kvElemsOverride: 576,
     factId: 'RUN-SHAPE-DSV3',

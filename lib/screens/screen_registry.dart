@@ -56,6 +56,7 @@ import 's3/s3_frontier.dart';
 import 's3/s3_intro.dart';
 import 's3/s3_timeline.dart';
 import 's3/s3_tiny_model.dart';
+import 's6/l_kv_cache.dart';
 import 's6/l_will_it_fit.dart';
 import 's8/l_paper_shelf.dart';
 
@@ -115,5 +116,6 @@ final Map<String, WidgetBuilder> screenBuilders = {
   's1_ram': (_) => const S1RamScreen(),
   's1_memory_types': (_) => const S1MemoryTypesScreen(),
   'l_will_it_fit': (_) => const LWillItFitScreen(),
+  'l_kv_cache': (_) => const LKvCacheScreen(),
   'l_paper_shelf': (_) => const LPaperShelfScreen(),
 };
