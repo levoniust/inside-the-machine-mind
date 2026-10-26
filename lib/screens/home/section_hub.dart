@@ -4,6 +4,7 @@ import '../../app/nav.dart';
 import '../../app/theme.dart';
 import '../../content/lessons.dart';
 import '../../content/quizzes.dart';
+import '../../core/models.dart';
 import '../../core/progress.dart';
 import '../../widgets/bit.dart';
 import '../../widgets/components.dart';
@@ -39,7 +40,7 @@ class SectionHub extends StatelessWidget {
               child: ListView(
                 padding: const EdgeInsets.fromLTRB(Gap.l, Gap.s, Gap.l, Gap.xxl),
                 children: [
-                  SectionTag(s.tag, color: accent),
+                  SectionTag(number <= 3 ? s.tag : (s.area == Area.lab ? 'Enthusiast Lab' : 'Front door'), color: accent),
                   const SizedBox(height: Gap.m),
                   Text(s.title, style: Theme.of(context).textTheme.headlineMedium),
                   const SizedBox(height: Gap.xs),
@@ -69,7 +70,7 @@ class SectionHub extends StatelessWidget {
                     onPressed: () => openLesson(context, nextUp.id, track: number),
                     icon: const Icon(Icons.play_arrow),
                     label: Text(
-                      p.fraction(ids) == 0 ? 'Start the journey' : 'Continue: ${nextUp.title}',
+                      p.fraction(ids) == 0 ? (number <= 4 ? 'Start the journey' : 'Start') : 'Continue: ${nextUp.title}',
                       overflow: TextOverflow.ellipsis,
                     ),
                   ),
