@@ -12,19 +12,19 @@ const narrationS6 = <String, LessonText>{
   ),
   'l_runtimes': LessonText(
     intro: [
-      'You\'ve downloaded the weights. Now you need an engine to run them.',
-      'This grid compares the main inference runtimes — what model format they use, what hardware they support, and who they\'re built for.',
-      'Tap a filter chip like "I have a Mac" or "several GPUs" and the grid highlights the fits. Tap any engine for a fact card.',
+      'You\'ve downloaded a model. Now you need an engine: the program that actually does the math, and usually serves it to a chat app through a common [[OpenAI-compatible API]].',
+      'Here are the main local engines, each described in its own words. Tap a filter like "I have a Mac" or "Many users" to see which fit, and tap an engine for its file format and hardware.',
+      'The weights are the same numbers whichever engine runs them; what changes is the file format, the hardware it supports and how many people it can serve at once.',
     ],
-    keyIdea: 'The engine you pick depends on your hardware, your model format, and whether you\'re serving one user or many — the weights are the same, the runtime around them is not.',
+    keyIdea: 'Pick the engine for your hardware and your use, one person or many, because the same model can run in several engines that differ in formats, speed and convenience.',
   ),
   'l_quant_pick': LessonText(
     intro: [
-      'Every Quantization trades size for quality. This curve shows that trade-off for one model family.',
-      'Drag along the curve to see how the file shrinks and the perplexity creeps up. The knee sits around four to five bits per weight.',
-      'Toggle the comparison card to see the rule of thumb: a bigger model at lower bits versus a smaller model at higher bits.',
+      'Every Quantization trades file size for damage. Here is the real measurement for Llama 3 8B from the llama.cpp project: size on one side, how far the answers drift from the original on the other.',
+      'Slide through the quants. The drift is measured as [[KL divergence]]: zero means identical. Notice how slowly it rises down to about 4-5 bits, and how fast it climbs below 3.',
+      'Switch on the importance matrix to see the same sizes do less damage. Then look at the surprise underneath: the newer, better model suffers more from the same squeeze.',
     ],
-    keyIdea: 'The right Quantization sits at the knee of the size-versus-quality curve, where each extra bit buys diminishing returns.',
+    keyIdea: 'Quants around 4 to 6 bits keep most of a model\'s answers unchanged, an importance matrix makes the same size better, and newer models can be more sensitive than older ones.',
   ),
   'l_kv_cache': LessonText(
     intro: [

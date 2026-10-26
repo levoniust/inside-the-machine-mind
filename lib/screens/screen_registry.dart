@@ -63,6 +63,8 @@ import 's5/e_good_bad.dart';
 import 's6/l_home_rig.dart';
 import 's6/l_kv_cache.dart';
 import 's6/l_moe_home.dart';
+import 's6/l_quant_pick.dart';
+import 's6/l_runtimes.dart';
 import 's6/l_speed_tricks.dart';
 import 's6/l_will_it_fit.dart';
 import 's7/l_lora.dart';
@@ -133,6 +135,8 @@ final Map<String, WidgetBuilder> screenBuilders = {
   'l_kv_cache': (_) => const LKvCacheScreen(),
   'l_home_rig': (_) => const LHomeRigScreen(),
   'l_moe_home': (_) => const LMoeHomeScreen(),
+  'l_quant_pick': (_) => const LQuantPickScreen(),
+  'l_runtimes': (_) => const LRuntimesScreen(),
   'l_speed_tricks': (_) => const LSpeedTricksScreen(),
   'l_lora': (_) => const LLoraScreen(),
   'l_merging': (_) => const LMergingScreen(),

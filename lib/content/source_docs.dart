@@ -130,6 +130,12 @@ const sourceDocs = <String, SourceDoc>{
   'SRC-HF-GPTOSS': SourceDoc('assets/sources/SRC-HF-GPTOSS.txt', url: 'https://huggingface.co/openai/gpt-oss-120b'),
   'SRC-HF-DSV3': SourceDoc('assets/sources/SRC-HF-DSV3.txt', url: 'https://huggingface.co/deepseek-ai/DeepSeek-V3'),
   'SRC-LLAMACPP-SERVER': SourceDoc('assets/sources/SRC-LLAMACPP-SERVER.txt', url: 'https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md'),
+  'SRC-LLAMACPP-PPL': SourceDoc('assets/sources/SRC-LLAMACPP-PPL.txt', url: 'https://github.com/ggml-org/llama.cpp/blob/master/tools/perplexity/README.md'),
+  'SRC-OLLAMA': SourceDoc('assets/sources/SRC-OLLAMA.txt', url: 'https://github.com/ollama/ollama'),
+  'SRC-LMSTUDIO': SourceDoc('assets/sources/SRC-LMSTUDIO.txt', url: 'https://lmstudio.ai/'),
+  'SRC-VLLM-README': SourceDoc('assets/sources/SRC-VLLM-README.txt', url: 'https://github.com/vllm-project/vllm'),
+  'SRC-EXLLAMAV3': SourceDoc('assets/sources/SRC-EXLLAMAV3.txt', url: 'https://github.com/turboderp-org/exllamav3'),
+  'SRC-MLXLM': SourceDoc('assets/sources/SRC-MLXLM.txt', url: 'https://github.com/ml-explore/mlx-lm'),
   'SRC-HF-LLAMA': SourceDoc('assets/sources/SRC-HF-LLAMA.txt', url: 'https://huggingface.co/unsloth/Llama-3.3-70B-Instruct'),
 };
 
