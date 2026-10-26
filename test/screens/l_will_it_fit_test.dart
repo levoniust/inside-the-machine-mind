@@ -5,16 +5,23 @@ import 'package:machine_mind/screens/s6/l_will_it_fit.dart';
 
 import '../helpers.dart';
 
-FitResult _fit(String model, String quant, int ctx, String hw, {String kv = 'f16', double ram = 64, double ramBW = 89.6}) =>
-    FitResult.compute(
-      model: fitModels.firstWhere((m) => m.name.startsWith(model)),
-      quant: fitQuants.firstWhere((q) => q.name == quant),
-      context: ctx,
-      kv: fitKvTypes.firstWhere((k) => k.name == kv),
-      hw: fitHardware.firstWhere((h) => h.name.startsWith(hw)),
-      ramGB: ram,
-      ramBW: ramBW,
-    );
+FitResult _fit(
+  String model,
+  String quant,
+  int ctx,
+  String hw, {
+  String kv = 'f16',
+  double ram = 64,
+  double ramBW = 89.6,
+}) => FitResult.compute(
+  model: fitModels.firstWhere((m) => m.name.startsWith(model)),
+  quant: fitQuants.firstWhere((q) => q.name == quant),
+  context: ctx,
+  kv: fitKvTypes.firstWhere((k) => k.name == kv),
+  hw: fitHardware.firstWhere((h) => h.name.startsWith(hw)),
+  ramGB: ram,
+  ramBW: ramBW,
+);
 
 void main() {
   test('Llama 3.1 8B Q4_K_M at 8k: 4.91 GB weights, exactly 1 GiB f16 KV cache, fits a 3090', () {
@@ -62,6 +69,17 @@ void main() {
     await tester.scrollUntilVisible(find.textContaining('weights = 70.6 B params'), 200);
     expect(find.textContaining('weights = 70.6 B params'), findsOneWidget);
     expectNoErrors(tester);
+  });
+
+  testWidgets('a context beyond the model\'s limit shows a warning', (tester) async {
+    await pumpApp(tester, home: const LWillItFitScreen());
+    await tester.tap(find.byKey(const ValueKey('fit-model-1'))); // Qwen3 32B, 32k native
+    await tester.pump();
+    expect(find.byKey(const ValueKey('fit-ctx-warning')), findsNothing);
+    final slider = find.descendant(of: find.byKey(const ValueKey('fit-context')), matching: find.byType(Slider));
+    tester.widget<Slider>(slider).onChanged!(5); // 64k
+    await tester.pump();
+    expect(find.byKey(const ValueKey('fit-ctx-warning')), findsOneWidget);
   });
 
   testWidgets('no overflow at large text in light mode', (tester) async {

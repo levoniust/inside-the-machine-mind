@@ -11,6 +11,8 @@ class FitModel {
     this.layers,
     this.kvHeads,
     this.headDim, {
+    required this.maxContext,
+    this.scaledContext,
     this.slidingLayers = 0,
     this.window = 0,
     this.kvElemsOverride,
@@ -21,6 +23,10 @@ class FitModel {
   /// Parameters in billions: all of them, and the ones used per token (same for dense models).
   final double totalB, activeB;
   final int layers, kvHeads, headDim;
+
+  /// Context the model was trained for, and (if any) how far RoPE scaling such as YaRN officially stretches it.
+  final int maxContext;
+  final int? scaledContext;
 
   /// Layers that only remember the last [window] tokens (sliding-window attention).
   final int slidingLayers, window;
@@ -34,13 +40,54 @@ class FitModel {
 }
 
 const fitModels = [
-  FitModel('Llama 3.1 8B', 8.03, 8.03, 32, 8, 128, factId: 'RUN-SHAPE-L8B'),
-  FitModel('Qwen3 32B', 32.8, 32.8, 64, 8, 128, factId: 'RUN-SHAPE-Q32B'),
-  FitModel('Llama 3.3 70B', 70.6, 70.6, 80, 8, 128, factId: 'RUN-SHAPE-L70B'),
-  FitModel('Qwen3 30B-A3B (MoE)', 30.5, 3.3, 48, 4, 128, factId: 'RUN-SHAPE-Q30BA3B'),
-  FitModel('gpt-oss-120b (MoE)', 116.8, 5.1, 36, 8, 64, slidingLayers: 18, window: 128, factId: 'RUN-SHAPE-GPTOSS'),
-  FitModel('Qwen3 235B-A22B (MoE)', 235, 22, 94, 4, 128, factId: 'RUN-SHAPE-Q235B'),
-  FitModel('DeepSeek V3 / R1 671B (MoE)', 671, 37, 61, 0, 0, kvElemsOverride: 576, factId: 'RUN-SHAPE-DSV3'),
+  FitModel('Llama 3.1 8B', 8.03, 8.03, 32, 8, 128, maxContext: 131072, factId: 'RUN-SHAPE-L8B'),
+  FitModel('Qwen3 32B', 32.8, 32.8, 64, 8, 128, maxContext: 32768, scaledContext: 131072, factId: 'RUN-SHAPE-Q32B'),
+  FitModel('Llama 3.3 70B', 70.6, 70.6, 80, 8, 128, maxContext: 131072, factId: 'RUN-SHAPE-L70B'),
+  FitModel(
+    'Qwen3 30B-A3B (MoE)',
+    30.5,
+    3.3,
+    48,
+    4,
+    128,
+    maxContext: 32768,
+    scaledContext: 131072,
+    factId: 'RUN-SHAPE-Q30BA3B',
+  ),
+  FitModel(
+    'gpt-oss-120b (MoE)',
+    117,
+    5.1,
+    36,
+    8,
+    64,
+    maxContext: 131072,
+    slidingLayers: 18,
+    window: 128,
+    factId: 'RUN-SHAPE-GPTOSS',
+  ),
+  FitModel(
+    'Qwen3 235B-A22B (MoE)',
+    235,
+    22,
+    94,
+    4,
+    128,
+    maxContext: 32768,
+    scaledContext: 131072,
+    factId: 'RUN-SHAPE-Q235B',
+  ),
+  FitModel(
+    'DeepSeek V3 / R1 671B (MoE)',
+    671,
+    37,
+    61,
+    0,
+    0,
+    maxContext: 131072,
+    kvElemsOverride: 576,
+    factId: 'RUN-SHAPE-DSV3',
+  ),
 ];
 
 /// Whole-file bits per weight measured on Llama 3.1 8B (llama.cpp quantize README); other models land close.

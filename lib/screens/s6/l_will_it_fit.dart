@@ -124,6 +124,18 @@ class _CalculatorState extends State<_Calculator> {
                 color: accent,
                 onChanged: (v) => setState(() => _ctx = v.round()),
               ),
+              if (_contexts[_ctx] > model.maxContext)
+                Padding(
+                  key: const ValueKey('fit-ctx-warning'),
+                  padding: const EdgeInsets.only(bottom: Gap.s),
+                  child: Text(
+                    model.scaledContext != null && _contexts[_ctx] <= model.scaledContext!
+                        ? '${model.name} is trained for ${_k(model.maxContext)} tokens; beyond that it needs RoPE scaling (YaRN), '
+                              'officially up to ${_k(model.scaledContext!)}.'
+                        : 'Beyond ${model.name}\'s ${_k(model.maxContext)}-token limit: the memory math still works, the model won\'t.',
+                    style: TextStyle(color: c.amber, fontSize: 13),
+                  ),
+                ),
               Text(
                 'KV cache type',
                 style: TextStyle(color: c.textDim, fontWeight: FontWeight.w700),
