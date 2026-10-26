@@ -62,6 +62,7 @@ import 's3/s3_timeline.dart';
 import 's3/s3_tiny_model.dart';
 import 's5/e_at_home.dart';
 import 's5/e_good_bad.dart';
+import 's6/l_frontends.dart';
 import 's6/l_home_rig.dart';
 import 's6/l_kv_cache.dart';
 import 's6/l_moe_home.dart';
@@ -69,6 +70,7 @@ import 's6/l_quant_pick.dart';
 import 's6/l_runtimes.dart';
 import 's6/l_speed_tricks.dart';
 import 's6/l_will_it_fit.dart';
+import 's7/l_datasets.dart';
 import 's7/l_lora.dart';
 import 's7/l_merging.dart';
 import 's7/l_steering.dart';
@@ -142,6 +144,8 @@ final Map<String, WidgetBuilder> screenBuilders = {
   'e_at_home': (_) => const EAtHomeScreen(),
   'l_will_it_fit': (_) => const LWillItFitScreen(),
   'l_kv_cache': (_) => const LKvCacheScreen(),
+  'l_frontends': (_) => const LFrontendsScreen(),
+  'l_datasets': (_) => const LDatasetsScreen(),
   'l_home_rig': (_) => const LHomeRigScreen(),
   'l_moe_home': (_) => const LMoeHomeScreen(),
   'l_quant_pick': (_) => const LQuantPickScreen(),
