@@ -60,6 +60,7 @@ import 's6/l_kv_cache.dart';
 import 's6/l_moe_home.dart';
 import 's6/l_speed_tricks.dart';
 import 's6/l_will_it_fit.dart';
+import 's7/l_lora.dart';
 import 's8/l_paper_shelf.dart';
 
 /// Lesson id → screen. Add one line per finished lesson screen (keep the list in journey order).
@@ -121,5 +122,6 @@ final Map<String, WidgetBuilder> screenBuilders = {
   'l_kv_cache': (_) => const LKvCacheScreen(),
   'l_moe_home': (_) => const LMoeHomeScreen(),
   'l_speed_tricks': (_) => const LSpeedTricksScreen(),
+  'l_lora': (_) => const LLoraScreen(),
   'l_paper_shelf': (_) => const LPaperShelfScreen(),
 };
