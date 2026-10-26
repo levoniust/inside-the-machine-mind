@@ -62,6 +62,7 @@ import 's3/s3_timeline.dart';
 import 's3/s3_tiny_model.dart';
 import 's5/e_at_home.dart';
 import 's5/e_good_bad.dart';
+import 's5/e_privacy.dart';
 import 's6/l_frontends.dart';
 import 's6/l_home_rig.dart';
 import 's6/l_kv_cache.dart';
@@ -145,6 +146,7 @@ final Map<String, WidgetBuilder> screenBuilders = {
   's1_memory_types': (_) => const S1MemoryTypesScreen(),
   'e_good_bad': (_) => const EGoodBadScreen(),
   'e_at_home': (_) => const EAtHomeScreen(),
+  'e_privacy': (_) => const EPrivacyScreen(),
   'l_will_it_fit': (_) => const LWillItFitScreen(),
   'l_kv_cache': (_) => const LKvCacheScreen(),
   'l_frontends': (_) => const LFrontendsScreen(),

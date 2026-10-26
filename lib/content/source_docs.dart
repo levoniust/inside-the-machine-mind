@@ -153,6 +153,10 @@ const sourceDocs = <String, SourceDoc>{
   'SRC-AWS-TRAINIUM': SourceDoc('assets/sources/SRC-AWS-TRAINIUM.txt', url: 'https://aws.amazon.com/ai/machine-learning/trainium/'),
   'SRC-ARXIV-CSCL': SourceDoc('assets/sources/SRC-ARXIV-CSCL.txt', url: 'https://arxiv.org/list/cs.CL/recent'),
   'SRC-HF-PAPERS': SourceDoc('assets/sources/SRC-HF-PAPERS.txt', url: 'https://huggingface.co/papers'),
+  'SRC-OPENAI-PRIVACY': SourceDoc('assets/sources/SRC-OPENAI-PRIVACY.txt', url: 'https://help.openai.com/en/articles/5722486-how-your-data-is-used-to-improve-model-performance'),
+  'SRC-GOOGLE-GEMINI-PRIVACY': SourceDoc('assets/sources/SRC-GOOGLE-GEMINI-PRIVACY.txt', url: 'https://support.google.com/gemini/answer/13594961?hl=en'),
+  'SRC-MS-COPILOT-PRIVACY': SourceDoc('assets/sources/SRC-MS-COPILOT-PRIVACY.txt', url: 'https://support.microsoft.com/en-us/microsoft-copilot/privacy-faq-for-microsoft-copilot'),
+  'SRC-ANTHROPIC-PRIVACY': SourceDoc('assets/sources/SRC-ANTHROPIC-PRIVACY.txt', url: 'https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training'),
   'SRC-HF-LLAMA': SourceDoc('assets/sources/SRC-HF-LLAMA.txt', url: 'https://huggingface.co/unsloth/Llama-3.3-70B-Instruct'),
 };
 

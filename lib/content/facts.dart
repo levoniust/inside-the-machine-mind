@@ -132,6 +132,10 @@ const sources = <String, Source>{
   'SRC-AWS-TRAINIUM': Source('SRC-AWS-TRAINIUM', 'AWS, "AWS Trainium", aws.amazon.com/ai/machine-learning/trainium/, fetched 2026-10-25', url: 'aws.amazon.com/ai/machine-learning/trainium/'),
   'SRC-ARXIV-CSCL': Source('SRC-ARXIV-CSCL', 'arXiv, "Computation and Language (cs.CL): recent submissions", arxiv.org/list/cs.CL/recent, fetched 2026-10-25', url: 'arxiv.org/list/cs.CL/recent'),
   'SRC-HF-PAPERS': Source('SRC-HF-PAPERS', 'Hugging Face Daily Papers, huggingface.co/papers, fetched 2026-10-25'),
+  'SRC-OPENAI-PRIVACY': Source('SRC-OPENAI-PRIVACY', 'OpenAI Help Center: "How your data is used to improve model performance", "Temporary Chat", "Chat and file retention", "Data Controls" (help.openai.com), fetched 2026-10-25', url: 'help.openai.com'),
+  'SRC-GOOGLE-GEMINI-PRIVACY': Source('SRC-GOOGLE-GEMINI-PRIVACY', 'Google, "Gemini Apps Privacy Hub" (support.google.com/gemini/answer/13594961), fetched 2026-10-25', url: 'support.google.com/gemini/answer/13594961'),
+  'SRC-MS-COPILOT-PRIVACY': Source('SRC-MS-COPILOT-PRIVACY', 'Microsoft, "Privacy FAQ for Microsoft Copilot" (support.microsoft.com), fetched 2026-10-25', url: 'support.microsoft.com'),
+  'SRC-ANTHROPIC-PRIVACY': Source('SRC-ANTHROPIC-PRIVACY', 'Anthropic Privacy Center: "Is my data used for model training?", "How long do you store my data?" (privacy.claude.com) and "Updates to our consumer terms" (anthropic.com, 2025-08-28), fetched 2026-10-25', url: 'privacy.claude.com'),
   'SRC-HF-LLAMA': Source('SRC-HF-LLAMA', 'Llama 3.1 8B / Llama 3.3 70B Instruct config.json (mirrors of Meta\'s repos), huggingface.co/unsloth'),
 };
 
@@ -298,4 +302,8 @@ const facts = <String, Fact>{
   'IND-TRAINIUM': Fact('IND-TRAINIUM', 'Amazon (AWS) designs its own AI chip, Trainium, for training and running models in its cloud', sources: ['SRC-AWS-TRAINIUM']),
   'KEEP-ARXIV': Fact('KEEP-ARXIV', 'arXiv\'s Computation and Language section (cs.CL) listed 842 new papers in the five weekdays of October 19-23, 2026 (117 on Friday alone)', sources: ['SRC-ARXIV-CSCL'], value: '842 papers / 5 days'),
   'KEEP-HFPAPERS': Fact('KEEP-HFPAPERS', 'Hugging Face Daily Papers is a community-picked daily list of new AI papers, with a daily email', sources: ['SRC-HF-PAPERS'], value: 'daily list'),
+  'PRIV-CHATGPT': Fact('PRIV-CHATGPT', 'ChatGPT: chats can be used to improve OpenAI\'s models unless you turn off "Improve the model for everyone" (Settings > Data controls); Temporary Chats are not used for training but may be kept up to 30 days for safety; deleted chats are scheduled for permanent deletion within 30 days', sources: ['SRC-OPENAI-PRIVACY'], value: 'opt out; 30 days'),
+  'PRIV-GEMINI': Fact('PRIV-GEMINI', 'Gemini: with "Keep Activity" on, Google uses your activity to improve its services including training generative AI models; turn it off and future chats are not used for training; activity is auto-deleted after 18 months by default (3 or 36 months possible); temporary chats are kept 72 hours; a subset of chats is reviewed by humans, disconnected from your account, and kept up to 3 years', sources: ['SRC-GOOGLE-GEMINI-PRIVACY'], value: 'Keep Activity; 18 months'),
+  'PRIV-COPILOT': Fact('PRIV-COPILOT', 'Microsoft Copilot (consumer): uses conversation data for AI training except for certain users and those who opt out; stores conversation activity for 18 months by default; some conversations get automated and human review', sources: ['SRC-MS-COPILOT-PRIVACY'], value: 'opt out; 18 months'),
+  'PRIV-CLAUDE': Fact('PRIV-CLAUDE', 'Claude: chats are used to improve Claude only if you allow it ("Model Improvement" in Privacy Settings); Incognito chats are never used even then; if you allow training, data can be kept up to five years; deleted chats leave back-end storage within 30 days', sources: ['SRC-ANTHROPIC-PRIVACY'], value: 'opt in; 5 years if allowed'),
 };
