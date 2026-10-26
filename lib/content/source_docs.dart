@@ -15,7 +15,7 @@ class SourceDoc {
   /// Where the original lives.
   final String? url;
 
-  /// Original PDF, in the library pack under sources_pdf/ (where available).
+  /// Original PDF in the library pack under sources_pdf/ (where available).
   final String? pdf;
 
   /// Note shown under the header (e.g. archived copy, abstract only).
@@ -157,9 +157,13 @@ const sourceDocs = <String, SourceDoc>{
   'SRC-GOOGLE-GEMINI-PRIVACY': SourceDoc('sources/SRC-GOOGLE-GEMINI-PRIVACY.txt', url: 'https://support.google.com/gemini/answer/13594961?hl=en'),
   'SRC-MS-COPILOT-PRIVACY': SourceDoc('sources/SRC-MS-COPILOT-PRIVACY.txt', url: 'https://support.microsoft.com/en-us/microsoft-copilot/privacy-faq-for-microsoft-copilot'),
   'SRC-ANTHROPIC-PRIVACY': SourceDoc('sources/SRC-ANTHROPIC-PRIVACY.txt', url: 'https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training'),
-  'SRC-FTC-VOICE-SCAM': SourceDoc('sources/SRC-FTC-VOICE-SCAM.txt', url: 'https://consumer.ftc.gov/consumer-alerts/2023/03/scammers-use-ai-enhance-their-family-emergency-schemes'),
   'SRC-IC3-IMPERSONATION': SourceDoc('sources/SRC-IC3-IMPERSONATION.txt', url: 'https://www.ic3.gov/PSA/2024/PSA241203'),
+  'SRC-FTC-VOICE-SCAM': SourceDoc('sources/SRC-FTC-VOICE-SCAM.txt', url: 'https://consumer.ftc.gov/consumer-alerts/2023/03/scammers-use-ai-enhance-their-family-emergency-schemes'),
   'SRC-FTC-IMPOSTER-2025': SourceDoc('sources/SRC-FTC-IMPOSTER-2025.txt', url: 'https://www.ftc.gov/news-events/news/press-releases/2026/06/ftc-data-show-people-reported-losing-3-point-5-billion-imposter-scams-2025'),
+  'SRC-FBI-IC3-GENAI': SourceDoc('sources/SRC-FBI-IC3-GENAI.txt', url: 'https://www.ic3.gov/PSA/2024/PSA241203'),
+  'SRC-OPENAI-HALLUCINATE': SourceDoc('sources/SRC-OPENAI-HALLUCINATE.txt', url: 'https://openai.com/index/why-language-models-hallucinate/'),
+  'SRC-WIKI-MATA': SourceDoc('sources/SRC-WIKI-MATA.txt', url: 'https://en.wikipedia.org/wiki/Mata_v._Avianca,_Inc.'),
+  'SRC-UNESCO-GENAI': SourceDoc('sources/SRC-UNESCO-GENAI.txt', url: 'https://www.unesco.org/en/articles/guidance-generative-ai-education-and-research'),
   'SRC-HF-LLAMA': SourceDoc('sources/SRC-HF-LLAMA.txt', url: 'https://huggingface.co/unsloth/Llama-3.3-70B-Instruct'),
 };
 
