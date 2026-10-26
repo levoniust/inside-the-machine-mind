@@ -1,19 +1,19 @@
 {
  "started": "2026-10-19 00:27:29",
- "updated": "2026-10-19 17:11:01",
- "hours": 16.7,
+ "updated": "2026-10-19 17:13:01",
+ "hours": 16.8,
  "qwen": {
   "jobs": 19,
   "tokens": 570824,
   "hours": 14.1
  },
  "mirai": {
-  "jobs": 323,
-  "tokens": 1484936,
-  "hours": 6.9
+  "jobs": 420,
+  "tokens": 1854435,
+  "hours": 8.5
  },
  "images": {
-  "jobs": 18,
+  "jobs": 30,
   "tokens": 0,
   "hours": 0.1
  },
@@ -25,8 +25,8 @@
   "watts_3090s": 346,
   "watts_5060ti": 181
  },
- "commits": 153,
- "dart_lines": 19743,
- "test_lines": 2444,
- "facts_fixed": 76
+ "commits": 200,
+ "dart_lines": 32250,
+ "test_lines": 3636,
+ "facts_fixed": 86
 }
