@@ -209,7 +209,9 @@ class _AgentState extends State<_Agent> {
               ),
             ),
           const SizedBox(height: Gap.s),
-          Row(
+          Wrap(
+            spacing: Gap.s,
+            crossAxisAlignment: WrapCrossAlignment.center,
             children: [
               FilledButton(
                 key: const ValueKey('agent-step'),
@@ -217,7 +219,6 @@ class _AgentState extends State<_Agent> {
                 onPressed: _i < _steps.length - 1 ? () => setState(() => _i++) : null,
                 child: const Text('Next step'),
               ),
-              const SizedBox(width: Gap.s),
               TextButton(onPressed: () => setState(() => _i = 0), child: const Text('Restart')),
             ],
           ),
