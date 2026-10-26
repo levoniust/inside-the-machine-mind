@@ -1,0 +1,8 @@
+SOURCE COPY — SRC-HF-PAPERS
+Retrieved 2026-10-25 for Inside the Machine Mind (offline reference copy; excerpt of the original, formatting simplified).
+Original URL: https://huggingface.co/papers
+Page/document title: Hugging Face Daily Papers
+
+------------------------------------------------------------------------
+
+Hugging Face Models Datasets Spaces Buckets NEW Docs Pricing Website Tasks HuggingChat Collections Languages Organizations Community Blog Posts Daily Papers Hardware Learn Discord Forum GitHub Solutions Team & Enterprise Hugging Face PRO Enterprise Support Inference Providers Inference Endpoints Storage Buckets Log In Sign Up NEW Get trending papers in your email inbox once a day! Subscribe Daily Papers byAK and the research community Daily Weekly Monthly Oct 26 Submitted by BradyFU 1 Omni-Woodpecker: Hallucination Correction via Evidence-Prior Rebalancing for Omni LLMs Nanjing University 1 Previous System theme TOS Privacy About Careers Models Datasets Spaces Pricing Docs

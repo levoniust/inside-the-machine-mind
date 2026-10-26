@@ -77,6 +77,9 @@ import 's7/l_steering.dart';
 import 's7/l_which_custom.dart';
 import 's8/l_paper_anatomy.dart';
 import 's8/l_paper_shelf.dart';
+import 's10/l_jobs.dart';
+import 's10/l_keep_up.dart';
+import 's10/l_who_makes.dart';
 import 's9/l_leaderboards.dart';
 import 's9/l_sota_hardware.dart';
 import 's9/l_sota_models.dart';
@@ -162,4 +165,7 @@ final Map<String, WidgetBuilder> screenBuilders = {
   'l_sota_techniques': (_) => const LSotaTechniquesScreen(),
   'l_leaderboards': (_) => const LLeaderboardsScreen(),
   'l_this_year': (_) => const LThisYearScreen(),
+  'l_who_makes': (_) => const LWhoMakesScreen(),
+  'l_jobs': (_) => const LJobsScreen(),
+  'l_keep_up': (_) => const LKeepUpScreen(),
 };

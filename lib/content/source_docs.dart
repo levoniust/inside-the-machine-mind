@@ -148,6 +148,11 @@ const sourceDocs = <String, SourceDoc>{
   'SRC-HF-GEMMA4': SourceDoc('assets/sources/SRC-HF-GEMMA4.txt', url: 'https://huggingface.co/google/gemma-4-31B-it'),
   'SRC-NV-RUBIN': SourceDoc('assets/sources/SRC-NV-RUBIN.txt', url: 'https://www.nvidia.com/en-us/data-center/vera-rubin-nvl72/'),
   'SRC-APPLE-MACSTUDIO': SourceDoc('assets/sources/SRC-APPLE-MACSTUDIO.txt', url: 'https://www.apple.com/mac-studio/specs/'),
+  'SRC-TSMC': SourceDoc('assets/sources/SRC-TSMC.txt', url: 'https://www.tsmc.com/english/aboutTSMC'),
+  'SRC-GCLOUD-TPU': SourceDoc('assets/sources/SRC-GCLOUD-TPU.txt', url: 'https://cloud.google.com/tpu'),
+  'SRC-AWS-TRAINIUM': SourceDoc('assets/sources/SRC-AWS-TRAINIUM.txt', url: 'https://aws.amazon.com/ai/machine-learning/trainium/'),
+  'SRC-ARXIV-CSCL': SourceDoc('assets/sources/SRC-ARXIV-CSCL.txt', url: 'https://arxiv.org/list/cs.CL/recent'),
+  'SRC-HF-PAPERS': SourceDoc('assets/sources/SRC-HF-PAPERS.txt', url: 'https://huggingface.co/papers'),
   'SRC-HF-LLAMA': SourceDoc('assets/sources/SRC-HF-LLAMA.txt', url: 'https://huggingface.co/unsloth/Llama-3.3-70B-Instruct'),
 };
 

@@ -127,6 +127,11 @@ const sources = <String, Source>{
   'SRC-HF-GEMMA4': Source('SRC-HF-GEMMA4', 'Gemma 4 model card (June 2026), huggingface.co/google/gemma-4-31B-it'),
   'SRC-NV-RUBIN': Source('SRC-NV-RUBIN', 'NVIDIA Vera Rubin NVL72 specifications page, nvidia.com/en-us/data-center/vera-rubin-nvl72/, fetched 2026-10-25', url: 'nvidia.com/en-us/data-center/vera-rubin-nvl72/'),
   'SRC-APPLE-MACSTUDIO': Source('SRC-APPLE-MACSTUDIO', 'Apple Mac Studio (M5 Max / M5 Ultra) technical specifications, apple.com/mac-studio/specs/, fetched 2026-10-25', url: 'apple.com/mac-studio/specs/'),
+  'SRC-TSMC': Source('SRC-TSMC', 'TSMC, "About TSMC", tsmc.com/english/aboutTSMC, fetched 2026-10-25', url: 'tsmc.com/english/aboutTSMC'),
+  'SRC-GCLOUD-TPU': Source('SRC-GCLOUD-TPU', 'Google Cloud, "Tensor Processing Units", cloud.google.com/tpu, fetched 2026-10-25', url: 'cloud.google.com/tpu'),
+  'SRC-AWS-TRAINIUM': Source('SRC-AWS-TRAINIUM', 'AWS, "AWS Trainium", aws.amazon.com/ai/machine-learning/trainium/, fetched 2026-10-25', url: 'aws.amazon.com/ai/machine-learning/trainium/'),
+  'SRC-ARXIV-CSCL': Source('SRC-ARXIV-CSCL', 'arXiv, "Computation and Language (cs.CL): recent submissions", arxiv.org/list/cs.CL/recent, fetched 2026-10-25', url: 'arxiv.org/list/cs.CL/recent'),
+  'SRC-HF-PAPERS': Source('SRC-HF-PAPERS', 'Hugging Face Daily Papers, huggingface.co/papers, fetched 2026-10-25'),
   'SRC-HF-LLAMA': Source('SRC-HF-LLAMA', 'Llama 3.1 8B / Llama 3.3 70B Instruct config.json (mirrors of Meta\'s repos), huggingface.co/unsloth'),
 };
 
@@ -288,4 +293,9 @@ const facts = <String, Fact>{
   'SOTA-OPEN-TREND': Fact('SOTA-OPEN-TREND', 'Every leading open-weight release of 2026 in this list except the dense Qwen3.8-27B and Gemma 4 is a mixture of experts, and the context windows reach about 1 million tokens', sources: ['SRC-HF-DSV41', 'SRC-HF-QWEN38', 'SRC-HF-KIMIK3'], value: 'MoE + ~1M context'),
   'SOTA-RUBIN': Fact('SOTA-RUBIN', 'NVIDIA Rubin GPU: 288 GB of HBM4 at 19.2 TB/s each; a Vera Rubin NVL72 rack holds 72 Rubin GPUs and 36 Vera CPUs with 20.7 TB of HBM4 at 1,400 TB/s', sources: ['SRC-NV-RUBIN'], value: '288 GB, 19.2 TB/s'),
   'SOTA-M5': Fact('SOTA-M5', 'Apple Mac Studio (2026): M5 Max with up to 128 GB of unified memory at 614 GB/s; M5 Ultra with up to 512 GB at 1.2 TB/s', sources: ['SRC-APPLE-MACSTUDIO'], value: '614 GB/s / 1.2 TB/s'),
+  'IND-TSMC': Fact('IND-TSMC', 'TSMC (founded 1987) is the world\'s first dedicated chip foundry: it only manufactures chips that other companies design; in 2025 it made 12,682 different products for 534 customers', sources: ['SRC-TSMC'], value: '534 customers'),
+  'IND-TPU': Fact('IND-TPU', 'Google designs its own AI chips, Tensor Processing Units; the 7th generation, Ironwood, links 9,216 liquid-cooled chips in one pod', sources: ['SRC-GCLOUD-TPU'], value: '9,216 chips/pod'),
+  'IND-TRAINIUM': Fact('IND-TRAINIUM', 'Amazon (AWS) designs its own AI chip, Trainium, for training and running models in its cloud', sources: ['SRC-AWS-TRAINIUM']),
+  'KEEP-ARXIV': Fact('KEEP-ARXIV', 'arXiv\'s Computation and Language section (cs.CL) listed 842 new papers in the five weekdays of October 19-23, 2026 (117 on Friday alone)', sources: ['SRC-ARXIV-CSCL'], value: '842 papers / 5 days'),
+  'KEEP-HFPAPERS': Fact('KEEP-HFPAPERS', 'Hugging Face Daily Papers is a community-picked daily list of new AI papers, with a daily email', sources: ['SRC-HF-PAPERS'], value: 'daily list'),
 };
