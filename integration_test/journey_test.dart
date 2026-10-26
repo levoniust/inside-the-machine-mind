@@ -31,7 +31,8 @@ void main() {
   Future<void> walkTrack(WidgetTester t, ProgressStore store, String cardKey, int number) async {
     final s = sections[number - 1];
     await tapCentered(t, find.byKey(ValueKey(cardKey)));
-    await tapCentered(t, find.byKey(const ValueKey('hub-continue')));
+    // Open the first lesson by its node (not "Continue": lessons shared with another track may already be done).
+    await tapCentered(t, find.text(s.lessons.first.title).last);
     for (final l in s.lessons) {
       expect(t.takeException(), isNull, reason: 'exception on ${l.id}');
       expect(find.text(l.title), findsWidgets, reason: 'title of ${l.id} in track $number');
