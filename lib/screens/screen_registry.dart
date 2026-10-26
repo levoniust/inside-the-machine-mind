@@ -58,6 +58,7 @@ import 's3/s3_timeline.dart';
 import 's3/s3_tiny_model.dart';
 import 's6/l_kv_cache.dart';
 import 's6/l_moe_home.dart';
+import 's6/l_speed_tricks.dart';
 import 's6/l_will_it_fit.dart';
 import 's8/l_paper_shelf.dart';
 
@@ -119,5 +120,6 @@ final Map<String, WidgetBuilder> screenBuilders = {
   'l_will_it_fit': (_) => const LWillItFitScreen(),
   'l_kv_cache': (_) => const LKvCacheScreen(),
   'l_moe_home': (_) => const LMoeHomeScreen(),
+  'l_speed_tricks': (_) => const LSpeedTricksScreen(),
   'l_paper_shelf': (_) => const LPaperShelfScreen(),
 };
