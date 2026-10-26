@@ -63,6 +63,8 @@ import 's3/s3_tiny_model.dart';
 import 's5/e_at_home.dart';
 import 's5/e_good_bad.dart';
 import 's5/e_privacy.dart';
+import 's5/e_fakes.dart';
+import 's5/e_which.dart';
 import 's6/l_frontends.dart';
 import 's6/l_home_rig.dart';
 import 's6/l_kv_cache.dart';
@@ -147,6 +149,8 @@ final Map<String, WidgetBuilder> screenBuilders = {
   'e_good_bad': (_) => const EGoodBadScreen(),
   'e_at_home': (_) => const EAtHomeScreen(),
   'e_privacy': (_) => const EPrivacyScreen(),
+  'e_fakes': (_) => const EFakesScreen(),
+  'e_which': (_) => const EWhichScreen(),
   'l_will_it_fit': (_) => const LWillItFitScreen(),
   'l_kv_cache': (_) => const LKvCacheScreen(),
   'l_frontends': (_) => const LFrontendsScreen(),

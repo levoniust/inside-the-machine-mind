@@ -157,6 +157,9 @@ const sourceDocs = <String, SourceDoc>{
   'SRC-GOOGLE-GEMINI-PRIVACY': SourceDoc('assets/sources/SRC-GOOGLE-GEMINI-PRIVACY.txt', url: 'https://support.google.com/gemini/answer/13594961?hl=en'),
   'SRC-MS-COPILOT-PRIVACY': SourceDoc('assets/sources/SRC-MS-COPILOT-PRIVACY.txt', url: 'https://support.microsoft.com/en-us/microsoft-copilot/privacy-faq-for-microsoft-copilot'),
   'SRC-ANTHROPIC-PRIVACY': SourceDoc('assets/sources/SRC-ANTHROPIC-PRIVACY.txt', url: 'https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training'),
+  'SRC-FTC-VOICE-SCAM': SourceDoc('assets/sources/SRC-FTC-VOICE-SCAM.txt', url: 'https://consumer.ftc.gov/consumer-alerts/2023/03/scammers-use-ai-enhance-their-family-emergency-schemes'),
+  'SRC-IC3-IMPERSONATION': SourceDoc('assets/sources/SRC-IC3-IMPERSONATION.txt', url: 'https://www.ic3.gov/PSA/2024/PSA241203'),
+  'SRC-FTC-IMPOSTER-2025': SourceDoc('assets/sources/SRC-FTC-IMPOSTER-2025.txt', url: 'https://www.ftc.gov/news-events/news/press-releases/2026/06/ftc-data-show-people-reported-losing-3-point-5-billion-imposter-scams-2025'),
   'SRC-HF-LLAMA': SourceDoc('assets/sources/SRC-HF-LLAMA.txt', url: 'https://huggingface.co/unsloth/Llama-3.3-70B-Instruct'),
 };
 
