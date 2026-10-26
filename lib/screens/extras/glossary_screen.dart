@@ -20,7 +20,7 @@ class _GlossaryScreenState extends State<GlossaryScreen> {
     final c = AppColors.of(context);
     final q = _q.toLowerCase();
     final items = glossary.where((g) {
-      if (_section != 0 && g.section != _section) return false;
+      if (_section != 0 && (_section == 6 ? g.section < 6 : g.section != _section)) return false;
       if (q.isEmpty) return true;
       return g.term.toLowerCase().contains(q) ||
           g.everyday.toLowerCase().contains(q) ||
@@ -55,7 +55,7 @@ class _GlossaryScreenState extends State<GlossaryScreen> {
                   padding: const EdgeInsets.symmetric(horizontal: Gap.l),
                   child: Row(
                     children: [
-                      for (final (i, label) in const [(0, 'All'), (1, 'Hardware'), (2, 'Training'), (3, 'Inference')])
+                      for (final (i, label) in const [(0, 'All'), (1, 'Hardware'), (2, 'Training'), (3, 'Inference'), (5, 'In your life'), (6, 'Lab')])
                         Padding(
                           padding: const EdgeInsets.only(right: Gap.s),
                           child: ChoiceChip(
