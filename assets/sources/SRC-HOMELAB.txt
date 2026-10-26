@@ -1,0 +1,29 @@
+SOURCE COPY — SRC-HOMELAB
+Retrieved 2026-10-25 for Inside the Machine Mind (offline reference copy; summary of the build machine's own measurement logs, anonymized).
+Original URL: (private build logs of the home lab this app was built on)
+Page/document title: Home lab measurements, Sep-Oct 2026
+
+------------------------------------------------------------------------
+
+This app was built on a home lab. Its measurement logs are private (they describe someone's home network), so this
+copy summarizes the numbers the "A real home rig" lesson uses. Names, addresses and hostnames are left out on purpose.
+
+Machines
+- Workstation: two NVIDIA RTX 3090 graphics cards (24 GB each), 256 GB of DDR5 RAM (4 x 64 GB), running a large
+  mixture-of-experts language model at 8-bit (Q8_0) with llama.cpp, most expert weights in system RAM.
+- Small server: one 16 GB graphics card running a 27B-class model at about 55 tokens per second with a 96K-token context.
+
+Tuning (workstation, generation speed in tokens per second, llama.cpp benchmark scripts)
+- Out of the box: 14
+- A few expert layers placed on the GPUs, multi-token-prediction (MTP) draft model for speculative decoding: 20.5
+- RAM speed raised from 4,400 to 5,200 MT/s: 21.7 (measured RAM bandwidth at 4,400 MT/s: about 62 GB/s)
+- Best stable GPU overclock: 21.8 -> 21.9-22.0
+- Undervolt (clock locked at 1,800 MHz with an offset): same speed, about 15 W less per GPU
+
+Incidents
+- 2026-10-14: a GPU stress test with a memory overclock of +3000 hung the card (driver error Xid 119). The stuck test kept
+  the GPU at about 397 W and 83 degrees C (core) for about 10 hours until the heat was noticed and the machine rebooted.
+- 2026-10-15: at stock settings, a stress test pushed one RTX 3090's memory to 104 degrees C within about 2.5 minutes while
+  the core read 75 degrees C. 12 of the card's 24 memory chips are on the back, cooled only by the backplate.
+- 2026-10-18: a tripped breaker reset the BIOS and re-enabled Secure Boot; the unsigned NVIDIA kernel module was refused
+  and the GPUs disappeared until the setting was changed and saved in a BIOS profile (with "restore on AC power loss").
