@@ -56,6 +56,8 @@ import 's3/s3_frontier.dart';
 import 's3/s3_intro.dart';
 import 's3/s3_timeline.dart';
 import 's3/s3_tiny_model.dart';
+import 's6/l_will_it_fit.dart';
+import 's8/l_paper_shelf.dart';
 
 /// Lesson id → screen. Add one line per finished lesson screen (keep the list in journey order).
 final Map<String, WidgetBuilder> screenBuilders = {
@@ -112,4 +114,6 @@ final Map<String, WidgetBuilder> screenBuilders = {
   's3_answer': (_) => const S3AnswerScreen(),
   's1_ram': (_) => const S1RamScreen(),
   's1_memory_types': (_) => const S1MemoryTypesScreen(),
+  'l_will_it_fit': (_) => const LWillItFitScreen(),
+  'l_paper_shelf': (_) => const LPaperShelfScreen(),
 };

@@ -84,3 +84,32 @@ class SectionInfo {
   /// Sections 1-3 keep their "Section n" names; the newer tracks are named by their tag.
   String get label => number <= 3 ? 'Section $number' : tag;
 }
+
+/// An annotated research paper on the Lab's paper shelf (generated into content/papers.dart).
+/// [sourceId] is its entry in the source library, which holds the bundled copy.
+class Paper {
+  const Paper({
+    required this.sourceId,
+    required this.short,
+    required this.year,
+    required this.authors,
+    required this.oneIdea,
+    required this.summary,
+    required this.whyItMattered,
+    required this.inYourTools,
+    required this.readThis,
+    required this.skipThis,
+    required this.terms,
+    required this.check,
+  });
+  final String sourceId, short, year, authors, oneIdea, summary, whyItMattered, inYourTools, skipThis;
+  final List<String> readThis;
+  final List<(String, String)> terms;
+  final List<QuizQuestion> check;
+}
+
+class PaperGroup {
+  const PaperGroup(this.title, this.papers);
+  final String title;
+  final List<Paper> papers;
+}
