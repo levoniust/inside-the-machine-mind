@@ -42,6 +42,14 @@ void main() {
     expectNoErrors(tester);
   });
 
+  testWidgets('long-pressing the Lab\'s "as of" date opens Bit\'s Workbench', (tester) async {
+    final store = await pumpApp(tester, audience: 2);
+    await tester.longPress(find.byKey(const ValueKey('lab-asof')));
+    await pumpFrames(tester, 30);
+    expect(find.text('Bit\'s Workbench'), findsOneWidget);
+    expect(store.foundEgg('workbench'), isTrue);
+  });
+
   testWidgets('a lesson reused in the short journey stays in that track for Next and the header', (tester) async {
     await pumpApp(tester, home: const SectionHub(number: 4));
     await tester.tap(find.byKey(const ValueKey('hub-continue')));

@@ -1,0 +1,79 @@
+{
+ "model": "Qwen-Image 2.1",
+ "gpu": "NVIDIA RTX 3060",
+ "license": "Qwen Research License (non-commercial)",
+ "images": [
+  {
+   "file": "assets/workbench/bit-soldering.webp",
+   "title": "Bit's first upgrade",
+   "prompt": "Cinematic digital illustration. Bit, a small round robot with a dark visor, two glowing cyan eyes, metallic silver head with subtle circuit traces, and a glowing antenna tip, sits at a cluttered electronics workbench at night, soldering a tiny glowing chip under a desk lamp, wisps of smoke, scattered resistors and tools. Warm lamp light with lime green and cyan accents. No text.",
+   "seconds": 15.0
+  },
+  {
+   "file": "assets/workbench/bit-two-gpus.webp",
+   "title": "Two cards, one brain",
+   "prompt": "Cinematic digital illustration. Bit, a small round robot with a dark visor, two glowing cyan eyes, metallic silver head with subtle circuit traces, and a glowing antenna tip, proudly holds two large graphics cards like trophies inside an open PC case full of glowing cables, lime green and cyan light. No text.",
+   "seconds": 15.0
+  },
+  {
+   "file": "assets/workbench/bit-reading-paper.webp",
+   "title": "Reading by lamplight",
+   "prompt": "Cinematic digital illustration. Bit, a small round robot with a dark visor, two glowing cyan eyes, metallic silver head with subtle circuit traces, and a glowing antenna tip, reads a thick stack of research papers by an old desk lamp, coffee mug nearby, diagrams glowing faintly above the pages. Cozy night, lime green and violet accents. No text.",
+   "seconds": 15.0
+  },
+  {
+   "file": "assets/workbench/bit-quant-dials.webp",
+   "title": "Turning down the bits",
+   "prompt": "Cinematic digital illustration. Bit, a small round robot with a dark visor, two glowing cyan eyes, metallic silver head with subtle circuit traces, and a glowing antenna tip, turns big glowing dials on a control panel, each dial shrinking a cube of glowing numbers into smaller cubes. Cyan and lime light, dark background. No text.",
+   "seconds": 15.0
+  },
+  {
+   "file": "assets/workbench/bit-home-rack.webp",
+   "title": "The rack in the closet",
+   "prompt": "Cinematic digital illustration. Bit, a small round robot with a dark visor, two glowing cyan eyes, metallic silver head with subtle circuit traces, and a glowing antenna tip, stands proudly next to a small server rack in a home closet, blinking lights, neatly bundled cables, a small cat sleeping on top. Lime green and cyan glow. No text.",
+   "seconds": 15.0
+  },
+  {
+   "file": "assets/workbench/bit-runaway-fan.webp",
+   "title": "The fan that would not stop",
+   "prompt": "Cinematic digital illustration. Bit, a small round robot with a dark visor, two glowing cyan eyes, metallic silver head with subtle circuit traces, and a glowing antenna tip, holds on tight while a giant graphics card fan spins wildly, papers flying, cartoon motion lines, a thermometer glowing red. Funny, energetic, cyan and orange light. No text.",
+   "seconds": 15.0
+  },
+  {
+   "file": "assets/workbench/bit-paper-library.webp",
+   "title": "The paper shelf",
+   "prompt": "Cinematic digital illustration. Bit, a small round robot with a dark visor, two glowing cyan eyes, metallic silver head with subtle circuit traces, and a glowing antenna tip, climbs a rolling ladder in a tall library of glowing research papers, each paper a softly lit panel. Violet and amber light. No text.",
+   "seconds": 15.0
+  },
+  {
+   "file": "assets/workbench/bit-suitcase-fit.webp",
+   "title": "Will it fit?",
+   "prompt": "Cinematic digital illustration. Bit, a small round robot with a dark visor, two glowing cyan eyes, metallic silver head with subtle circuit traces, and a glowing antenna tip, sits on an overstuffed glowing suitcase trying to close it, glowing number cubes spilling out of the sides. Funny, cyan and lime light. No text.",
+   "seconds": 15.0
+  },
+  {
+   "file": "assets/workbench/bit-merging.webp",
+   "title": "Mixing models",
+   "prompt": "Cinematic digital illustration. Bit, a small round robot with a dark visor, two glowing cyan eyes, metallic silver head with subtle circuit traces, and a glowing antenna tip, carefully pours two glowing liquids, one cyan and one magenta, into a single flask that glows violet, laboratory glassware all around. No text.",
+   "seconds": 15.0
+  },
+  {
+   "file": "assets/workbench/bit-lora-patch.webp",
+   "title": "A small patch",
+   "prompt": "Cinematic digital illustration. Bit, a small round robot with a dark visor, two glowing cyan eyes, metallic silver head with subtle circuit traces, and a glowing antenna tip, sews a tiny glowing patch onto a giant glowing quilt made of grid squares, needle and thread of light. Lime and violet light. No text.",
+   "seconds": 15.0
+  },
+  {
+   "file": "assets/workbench/bit-leaderboard.webp",
+   "title": "Reading the leaderboard",
+   "prompt": "Cinematic digital illustration. Bit, a small round robot with a dark visor, two glowing cyan eyes, metallic silver head with subtle circuit traces, and a glowing antenna tip, squints with a magnifying glass at a huge glowing scoreboard of bars and error bars, skeptical expression. Cyan and amber light. No text.",
+   "seconds": 15.0
+  },
+  {
+   "file": "assets/workbench/bit-power-cut.webp",
+   "title": "When the lights went out",
+   "prompt": "Cinematic digital illustration. Bit, a small round robot with a dark visor, two glowing cyan eyes, metallic silver head with subtle circuit traces, and a glowing antenna tip, sits in a dark room lit only by the green glow of a battery backup unit, holding a flashlight, patient and calm. Green and cyan light. No text.",
+   "seconds": 15.0
+  }
+ ]
+}
