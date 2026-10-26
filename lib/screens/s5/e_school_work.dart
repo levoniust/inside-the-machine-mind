@@ -148,7 +148,7 @@ class _SortingGameState extends State<_SortingGame> {
             children: [
               Expanded(child: _pileButton(c, _Pile.fine, 'Fine')),
               const SizedBox(width: Gap.s),
-              Expanded(child: _pileButton(c, _Pile.depends, 'Depends: check the rules')),
+              Expanded(child: _pileButton(c, _Pile.depends, 'Depends')),
               const SizedBox(width: Gap.s),
               Expanded(child: _pileButton(c, _Pile.notOk, 'Not OK')),
             ],

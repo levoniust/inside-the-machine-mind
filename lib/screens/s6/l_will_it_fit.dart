@@ -46,7 +46,7 @@ class _Calculator extends StatefulWidget {
 }
 
 class _CalculatorState extends State<_Calculator> {
-  int _model = 0, _quant = 3, _ctx = 2, _kv = 0, _hw = 3, _ramSpeed = 1;
+  int _model = 0, _quant = 3, _ctx = 2, _kv = 0, _hw = 1, _ramSpeed = 1;
   double _ramGB = 64;
   bool _math = false;
 

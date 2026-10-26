@@ -1,4 +1,7 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+
+import '../content/lessons.dart';
 
 import '../core/progress.dart';
 import '../screens/home/home_screen.dart';
@@ -40,9 +43,14 @@ class RootScreen extends StatelessWidget {
   const RootScreen({super.key});
 
   @override
-  Widget build(BuildContext context) => switch (AppScope.progress(context).audience) {
-    0 => const WelcomeScreen(),
-    2 => const LabHome(asRoot: true),
-    _ => const HomeScreen(),
-  };
+  Widget build(BuildContext context) {
+    // Web: ?lesson=<id> opens one lesson directly (shareable links, screenshots).
+    final deep = kIsWeb ? lessonById(Uri.base.queryParameters['lesson'] ?? '') : null;
+    if (deep != null) return Builder(builder: deep.builder);
+    return switch (AppScope.progress(context).audience) {
+      0 => const WelcomeScreen(),
+      2 => const LabHome(asRoot: true),
+      _ => const HomeScreen(),
+    };
+  }
 }
