@@ -5,6 +5,12 @@
 Your guide is **Bit**, a small robot, and you follow one question all the way through the machine: *"Why is the sky blue?"*
 
 <p align="center">
+  <img src="docs/screenshots/v2_welcome.png" width="23%" alt="First launch: how much do you know about AI?">
+  <img src="docs/screenshots/v2_lab.png" width="23%" alt="The Enthusiast Lab">
+  <img src="docs/screenshots/v2_will_it_fit.png" width="23%" alt="Will it fit? calculator">
+  <img src="docs/screenshots/v2_paper_shelf.png" width="23%" alt="The paper shelf">
+</p>
+<p align="center">
   <img src="docs/screenshots/home.png" width="23%" alt="Home screen with Bit">
   <img src="docs/screenshots/s1_datacenter.png" width="23%" alt="Build your own datacenter">
   <img src="docs/screenshots/s2_train_it.png" width="23%" alt="Train a tiny neural network">
