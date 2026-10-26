@@ -108,6 +108,7 @@ const sources = <String, Source>{
   'SRC-HF-QWEN3': Source('SRC-HF-QWEN3', 'Qwen3 model cards and config.json (Qwen3-32B, Qwen3-30B-A3B, Qwen3-235B-A22B), huggingface.co/Qwen'),
   'SRC-HF-GPTOSS': Source('SRC-HF-GPTOSS', 'gpt-oss-120b model card and config.json, huggingface.co/openai/gpt-oss-120b'),
   'SRC-HF-DSV3': Source('SRC-HF-DSV3', 'DeepSeek-V3 model card and config.json, huggingface.co/deepseek-ai/DeepSeek-V3'),
+  'SRC-LLAMACPP-SERVER': Source('SRC-LLAMACPP-SERVER', 'llama.cpp server README (command-line options), github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md, fetched 2026-10-25', url: 'github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md'),
   'SRC-HF-LLAMA': Source('SRC-HF-LLAMA', 'Llama 3.1 8B / Llama 3.3 70B Instruct config.json (mirrors of Meta\'s repos), huggingface.co/unsloth'),
 };
 
@@ -226,4 +227,6 @@ const facts = <String, Fact>{
   'RUN-KV-FORMULA': Fact('RUN-KV-FORMULA', 'KV cache size = 2 (K and V) × layers × KV heads × head size × bytes per number × tokens; Llama 3.1 8B at 8k tokens in f16 = exactly 1 GiB', sources: ['SRC-HF-LLAMA'], value: '1 GiB @ 8k'),
   'RUN-FLASHATTN': Fact('RUN-FLASHATTN', 'FlashAttention computes exact attention tile by tile in fast on-chip memory, never writing the full attention table to GPU memory; this cuts memory traffic and lets attention scale to long sequences', sources: ['SRC-FLASHATTN'], value: 'exact, IO-aware'),
   'RUN-GQA': Fact('RUN-GQA', 'Grouped-query attention: several query heads share one key/value head, shrinking the KV cache (Llama 3.1 8B: 32 attention heads, 8 KV heads = a 4× smaller cache)', sources: ['SRC-HF-LLAMA'], value: '4× smaller (L8B)'),
+  'RUN-LCPP-MOE': Fact('RUN-LCPP-MOE', 'llama.cpp options: -ngl/--n-gpu-layers = how many layers go to VRAM; -cmoe/--cpu-moe "keep all Mixture of Experts (MoE) weights in the CPU"; -ncmoe/--n-cpu-moe N "keep the MoE weights of the first N layers in the CPU"; -ot/--override-tensor sets where matching tensors live', sources: ['SRC-LLAMACPP-SERVER'], value: '--cpu-moe, --n-cpu-moe N'),
+  'RUN-MOE-SPLIT': Fact('RUN-MOE-SPLIT', 'Computed from the official configs: Qwen3-30B-A3B = 1.5B always-used + 29.0B in experts (1.8B of them per token); Qwen3-235B-A22B = 7.9B + 227.1B (14.2B per token); gpt-oss-120b ≈ 2.3B + 114.7B (3.6B per token)', sources: ['SRC-HF-QWEN3', 'SRC-HF-GPTOSS']),
 };
