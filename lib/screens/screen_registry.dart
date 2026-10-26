@@ -1,5 +1,7 @@
 import 'package:flutter/widgets.dart';
 
+import 's5/e_school_work.dart';
+
 import 's5/e_asking.dart';
 
 import 's1/s1_cpu_gpu.dart';
@@ -72,6 +74,7 @@ import 's8/l_paper_shelf.dart';
 
 /// Lesson id → screen. Add one line per finished lesson screen (keep the list in journey order).
 final Map<String, WidgetBuilder> screenBuilders = {
+  'e_school_work': (_) => const ESchoolWorkScreen(),
   'e_asking': (_) => const EAskingScreen(),
   's1_cpu_gpu': (_) => const S1CpuGpuScreen(),
   's2_intro': (_) => const S2IntroScreen(),
