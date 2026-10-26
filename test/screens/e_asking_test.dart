@@ -28,8 +28,9 @@ void main() {
       find.text('Write an email, to get a meeting this week'),
       findsOneWidget,
     );
-    // The answer preview changed to the 1-chip variant.
-    expect(find.textContaining('I wanted to reach out and check in'), findsOneWidget);
+    // The answer now asks for the meeting instead of rambling.
+    expect(find.textContaining('Could we meet for a short chat this week'), findsOneWidget);
+    expect(find.textContaining('leverage some synergies'), findsNothing);
 
     // Toggle the "Tone" chip as well.
     await tapVisible(tester, find.byKey(const ValueKey('chip-tone')));
