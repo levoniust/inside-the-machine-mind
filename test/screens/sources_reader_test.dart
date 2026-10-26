@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+
+import 'dart:io';
+
+import 'package:machine_mind/core/library.dart';
+import 'package:machine_mind/screens/extras/source_doc_screen.dart';
 import 'package:machine_mind/screens/extras/sources_screen.dart';
 
 import '../helpers.dart';
@@ -29,6 +34,19 @@ void main() {
   testWidgets('reader works at large text in light mode', (tester) async {
     await pumpApp(tester, home: const SourcesScreen(), textScale: 1.3, brightness: Brightness.light);
     await pumpFrames(tester);
+    expectNoErrors(tester);
+  });
+
+  testWidgets('without the library plug-in the reader offers to get it', (tester) async {
+    await pumpApp(tester, home: const SourceDocScreen(sourceId: 'SRC-TRANSFORMER'));
+    Library.instance.useDirectory(Directory('build/no-library-here'));
+    await pumpFrames(tester);
+    expect(Library.instance.installed, isFalse);
+    expect(find.byKey(const ValueKey('library-download')), findsOneWidget);
+    expect(find.byKey(const ValueKey('open-pdf')), findsNothing);
+    Library.instance.useDirectory(Directory('library'));
+    await pumpFrames(tester, 20);
+    expect(find.textContaining('SOURCE COPY — SRC-TRANSFORMER', findRichText: true), findsOneWidget);
     expectNoErrors(tester);
   });
 }

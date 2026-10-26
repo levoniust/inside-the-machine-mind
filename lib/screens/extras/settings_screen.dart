@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../app/theme.dart';
 import '../../core/progress.dart';
 import '../../core/speech.dart';
+import '../../widgets/library_card.dart';
 
 /// Start screen, theme, motion, Bit's voice, and resetting progress.
 class SettingsScreen extends StatelessWidget {
@@ -77,6 +78,8 @@ class SettingsScreen extends StatelessWidget {
                 'Text size follows your phone\'s font-size setting.',
                 style: TextStyle(color: c.textDim, fontSize: 13),
               ),
+              const SizedBox(height: Gap.xl),
+              const LibraryCard(),
               const SizedBox(height: Gap.xl),
               Text(
                 'Progress',

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:machine_mind/app/app.dart';
+import 'dart:io';
+
+import 'package:machine_mind/core/library.dart';
 import 'package:machine_mind/core/progress.dart';
 
 /// Pump the app (or a single screen) with an in-memory progress store, phone size, animations off
@@ -20,6 +23,7 @@ Future<ProgressStore> pumpApp(
   tester.platformDispatcher.textScaleFactorTestValue = textScale;
   addTearDown(tester.view.reset);
   addTearDown(tester.platformDispatcher.clearAllTestValues);
+  Library.instance.useDirectory(Directory('library')); // the unpacked library lives in the repo, outside the APK
   final store = ProgressStore()..setAudience(audience);
   await tester.pumpWidget(
     MediaQuery(

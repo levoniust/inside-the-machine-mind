@@ -5,6 +5,7 @@ import '../../app/nav.dart';
 import '../../app/theme.dart';
 import '../../content/facts.dart';
 import '../../content/source_docs.dart';
+import '../../widgets/library_card.dart';
 import 'source_doc_screen.dart';
 
 /// Every source behind the numbers in the app, with an offline copy to read.
@@ -31,12 +32,19 @@ class SourcesScreen extends StatelessWidget {
                 if (i == 0) {
                   return Padding(
                     padding: const EdgeInsets.only(bottom: Gap.l),
-                    child: Text(
-                      'Every number in this app was checked against these sources (October 2026). '
-                      '${facts.length} facts, ${sources.length} sources. '
-                      'Tap any source to read a copy of the original ($withCopy copies bundled, offline). '
-                      'Long-press to copy a link.',
-                      style: TextStyle(color: c.textDim),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        Text(
+                          'Every number in this app was checked against these sources (October 2026). '
+                          '${facts.length} facts, ${sources.length} sources. '
+                          'Tap any source to read a copy of the original ($withCopy copies in the source library). '
+                          'Long-press to copy a link.',
+                          style: TextStyle(color: c.textDim),
+                        ),
+                        const SizedBox(height: Gap.s),
+                        const LibraryCard(compact: true),
+                      ],
                     ),
                   );
                 }
@@ -54,8 +62,10 @@ class SourcesScreen extends StatelessWidget {
                   title: Text(s.title, style: TextStyle(color: c.text, fontSize: 14)),
                   subtitle: doc == null
                       ? Text('no copy available', style: TextStyle(color: c.textDim, fontSize: 11))
-                      : Text(doc.pdf != null ? 'tap to read · original PDF included' : 'tap to read',
-                          style: TextStyle(color: c.textDim, fontSize: 11)),
+                      : Text(
+                          doc.pdf != null ? 'tap to read · original PDF included' : 'tap to read',
+                          style: TextStyle(color: c.textDim, fontSize: 11),
+                        ),
                   onTap: doc == null
                       ? null
                       : () => openPage(context, SourceDocScreen(sourceId: s.id), '/source/${s.id}'),
