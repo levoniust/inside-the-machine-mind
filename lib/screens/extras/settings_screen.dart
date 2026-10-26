@@ -84,6 +84,11 @@ class SettingsScreen extends StatelessWidget {
               ),
               const SizedBox(height: Gap.s),
               Text('${p.doneCount} lessons explored', style: TextStyle(color: c.text)),
+              Text(
+                'Easter eggs found: ${eggIds.where(p.foundEgg).length} of ${eggIds.length}',
+                key: const ValueKey('settings-eggs'),
+                style: TextStyle(color: c.text),
+              ),
               const SizedBox(height: Gap.s),
               OutlinedButton.icon(
                 key: const ValueKey('settings-reset'),

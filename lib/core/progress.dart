@@ -1,6 +1,9 @@
 import 'package:flutter/widgets.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+/// Every hidden Easter egg in the app (Settings shows how many are found, not which).
+const eggIds = ['built', 'gallery', 'workbench', 'konami', 'rig'];
+
 /// Remembers which lessons are done, quiz scores, the last lesson opened and found Easter eggs.
 /// Persisted with shared_preferences; works in memory if storage is unavailable (tests).
 class ProgressStore extends ChangeNotifier {
