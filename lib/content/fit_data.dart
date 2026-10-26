@@ -149,15 +149,13 @@ class FitHardware {
 
 const fitHardware = [
   FitHardware('CPU only', 0, 0),
-  FitHardware('RTX 3060 12 GB', 12, 360, factId: 'RUN-HW-3060'),
-  FitHardware('RTX 4060 Ti 16 GB', 16, 288, factId: 'RUN-HW-4060TI'),
   FitHardware('RTX 3090 24 GB', 24, 936, factId: 'HW-GDDR-3090'),
   FitHardware('RTX 4090 24 GB', 24, 1008, factId: 'HW-GDDR-4090'),
   FitHardware('RTX 5090 32 GB', 32, 1792, factId: 'HW-GDDR-5090'),
   FitHardware('2 × RTX 3090 (48 GB)', 48, 936, factId: 'HW-GDDR-3090'),
-  FitHardware('Mac, M4 Max 128 GB', 128, 546, unified: true, factId: 'HW-LPDDR-M4MAX'),
-  FitHardware('DGX Spark 128 GB', 128, 273, unified: true, factId: 'RUN-HW-SPARK'),
-  FitHardware('Mac, M3 Ultra 512 GB', 512, 819, unified: true, factId: 'HW-LPDDR-M3ULTRA'),
+  FitHardware('Mac Studio, M5 Max 128 GB', 128, 614, unified: true, factId: 'SOTA-M5'),
+  FitHardware('DGX Spark 128 GB', 128, 273, unified: true, factId: 'IN-SPARK'),
+  FitHardware('Mac Studio, M5 Ultra 512 GB', 512, 1200, unified: true, factId: 'SOTA-M5'),
 ];
 
 /// System RAM choices for offloading: (label, GB/s). Dual-channel peak = MT/s × 8 bytes × 2.

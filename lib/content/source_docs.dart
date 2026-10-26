@@ -137,6 +137,17 @@ const sourceDocs = <String, SourceDoc>{
   'SRC-VLLM-README': SourceDoc('assets/sources/SRC-VLLM-README.txt', url: 'https://github.com/vllm-project/vllm'),
   'SRC-EXLLAMAV3': SourceDoc('assets/sources/SRC-EXLLAMAV3.txt', url: 'https://github.com/turboderp-org/exllamav3'),
   'SRC-MLXLM': SourceDoc('assets/sources/SRC-MLXLM.txt', url: 'https://github.com/ml-explore/mlx-lm'),
+  'SRC-OPENAI-GPT6': SourceDoc('assets/sources/SRC-OPENAI-GPT6.txt', url: 'https://openai.com/index/gpt-6-astra/'),
+  'SRC-ANTHROPIC-OPUS55': SourceDoc('assets/sources/SRC-ANTHROPIC-OPUS55.txt', url: 'https://www.anthropic.com/claude-opus-5-5'),
+  'SRC-GOOGLE-GEMINI4': SourceDoc('assets/sources/SRC-GOOGLE-GEMINI4.txt', url: 'https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/'),
+  'SRC-META-MUSE': SourceDoc('assets/sources/SRC-META-MUSE.txt', url: 'https://about.fb.com/news/2026/10/introducing-muse-wonder-models/'),
+  'SRC-HF-DSV41': SourceDoc('assets/sources/SRC-HF-DSV41.txt', url: 'https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash'),
+  'SRC-HF-QWEN38': SourceDoc('assets/sources/SRC-HF-QWEN38.txt', url: 'https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B'),
+  'SRC-HF-KIMIK3': SourceDoc('assets/sources/SRC-HF-KIMIK3.txt', url: 'https://huggingface.co/moonshotai/Kimi-K3'),
+  'SRC-HF-GLM53': SourceDoc('assets/sources/SRC-HF-GLM53.txt', url: 'https://huggingface.co/zai-org/GLM-5.3'),
+  'SRC-HF-GEMMA4': SourceDoc('assets/sources/SRC-HF-GEMMA4.txt', url: 'https://huggingface.co/google/gemma-4-31B-it'),
+  'SRC-NV-RUBIN': SourceDoc('assets/sources/SRC-NV-RUBIN.txt', url: 'https://www.nvidia.com/en-us/data-center/vera-rubin-nvl72/'),
+  'SRC-APPLE-MACSTUDIO': SourceDoc('assets/sources/SRC-APPLE-MACSTUDIO.txt', url: 'https://www.apple.com/mac-studio/specs/'),
   'SRC-HF-LLAMA': SourceDoc('assets/sources/SRC-HF-LLAMA.txt', url: 'https://huggingface.co/unsloth/Llama-3.3-70B-Instruct'),
 };
 

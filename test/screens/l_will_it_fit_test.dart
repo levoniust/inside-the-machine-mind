@@ -51,7 +51,7 @@ void main() {
     final moe = _fit('Qwen3 30B-A3B', 'Q4_K_M', 4096, 'RTX 3090');
     final dense = _fit('Qwen3 32B', 'Q4_K_M', 4096, 'RTX 3090');
     expect(moe.tokPerSec! > 5 * dense.tokPerSec!, isTrue);
-    expect(_fit('DeepSeek', 'Q4_K_M', 8192, 'Mac, M3 Ultra').kvGB, closeTo(61 * 576 * 2 * 8192 / 1e9, 1e-9));
+    expect(_fit('DeepSeek', 'Q4_K_M', 8192, 'Mac Studio, M5 Ultra').kvGB, closeTo(61 * 576 * 2 * 8192 / 1e9, 1e-9));
   });
 
   testWidgets('picking a smaller card changes the verdict; the math opens', (tester) async {

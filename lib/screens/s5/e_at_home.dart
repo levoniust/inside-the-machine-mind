@@ -44,7 +44,7 @@ final _machines = [
   _Machine(
     'Mac with lots of memory',
     Icons.laptop_mac,
-    fitHardware.firstWhere((h) => h.name.startsWith('Mac, M4 Max')),
+    fitHardware.firstWhere((h) => h.name.startsWith('Mac Studio, M5 Max')),
     0,
     'Apple chips share one big pool of fast memory between everything.',
   ),
