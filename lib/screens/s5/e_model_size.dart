@@ -28,7 +28,7 @@ class EModelSizeScreen extends StatelessWidget {
             Expanded(
               child: FactCard(
                 value: '100×',
-                label: 'price gap per word written between Claude Fable 5.1 (\$50) and Claude Haiku 5.5 (from \$0.50)',
+                label: 'price gap between Claude Fable 5.1 (\$50 per million tokens written) and Claude Haiku 5.5 (from \$0.50)',
                 factId: 'TIER-ANTHROPIC-HAIKU',
                 color: accent,
               ),
@@ -128,7 +128,7 @@ class _LineupsState extends State<_Lineups> {
     final accent = c.section(5);
     final m = _makers[_sel];
     return DemoCard(
-      title: 'Every maker sells sizes',
+      title: 'Most makers sell sizes',
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [

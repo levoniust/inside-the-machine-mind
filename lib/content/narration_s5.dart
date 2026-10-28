@@ -52,7 +52,7 @@ const narrationS5 = <String, LessonText>{
   ),
   'e_model_size': LessonText(
     intro: [
-      'Every big AI company sells its model in sizes, like coffee: a quick small one, a middle one, and a big slow one that thinks hardest.',
+      'Most big AI companies sell their models in sizes, like coffee: a quick small one, a middle one, and a big slow one that thinks hardest.',
       'Pick a company to see its line-up in its own words: OpenAI\'s GPT-6 Astra down to Luna, Anthropic\'s Claude Fable down to Haiku, Google\'s Gemini 4 Argon down to Flash-Lite.',
       'The biggest can cost a hundred times more per word than the smallest, and it\'s slower. Then match some everyday jobs to a size.',
     ],

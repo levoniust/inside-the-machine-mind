@@ -33,7 +33,8 @@ class Library extends ChangeNotifier {
   bool get busy => _progress != null;
 
   /// An older pack is installed: it works, but sources added since then are missing.
-  bool get outdated => !kIsWeb && _installed && _packVersion != version;
+  /// Pack versions are 'YYYY.MM', so they compare as text; a newer pack than this app knows is not outdated.
+  bool get outdated => !kIsWeb && _installed && (_packVersion ?? '').compareTo(version) < 0;
   String? get packVersion => _packVersion;
 
   /// Whether this file is in the installed pack (an older pack may not have it).

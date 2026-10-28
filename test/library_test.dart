@@ -17,6 +17,7 @@ void main() {
     }
 
     final good = File('${tmp.path}/good.zip')..writeAsBytesSync(ZipEncoder().encode(pack(Library.version)));
+    final newer = File('${tmp.path}/newer.zip')..writeAsBytesSync(ZipEncoder().encode(pack('2099.01')));
     final old = File('${tmp.path}/old.zip')..writeAsBytesSync(ZipEncoder().encode(pack('2026.10', withNew: false)));
     final bad = File('${tmp.path}/bad.zip')
       ..writeAsBytesSync(ZipEncoder().encode(Archive()..addFile(ArchiveFile.string('readme.txt', 'not a pack'))));
@@ -36,6 +37,8 @@ void main() {
     await lib.importFile(good.path);
     expect(lib.outdated, isFalse);
     expect(lib.has('sources/SRC-DOLMA.txt'), isTrue);
+    await lib.importFile(newer.path);
+    expect(lib.outdated, isFalse); // a pack newer than the app is fine
     expect(await lib.loadText('sources/SRC-TRANSFORMER.txt'), contains('hello'));
     await lib.remove();
     expect(lib.installed, isFalse);

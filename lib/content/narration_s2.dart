@@ -143,7 +143,7 @@ const narrationS2 = <String, LessonText>{
   ),
   's2_safety': LessonText(
     intro: [
-      '[[Red-teaming]] is friendly hackers. They poke the model with tricky [[prompts|prompt]] to see if it slips.',
+      '[[Red-teaming]] means friendly hackers attack on purpose. They poke the model with tricky [[prompts|prompt]] to see if it slips.',
       'Try it. A tricky request appears: can you spot what could go wrong, and what a careful answer looks like?',
       'Testers also check for bias, dangerous advice, and [[hallucinations|hallucination]], when a model makes a confident wrong guess. Problems found are fixed before release.',
     ],
