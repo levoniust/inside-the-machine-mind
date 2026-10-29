@@ -66,4 +66,11 @@ const narrationS5 = <String, LessonText>{
     ],
     keyIdea: 'You can run a real language model on hardware you already own, and the size you can fit is the main thing that shapes how it feels.',
   ),
+  'e_bias': LessonText(
+    intro: [
+      'Chatbots learned from a mountain of human writing, and people\'s habits came along, the unfair ones too. So answers can lean one way without anyone meaning them to.',
+      'Play "Spot the lean": five questions, two answers each. Tap the one that slips in a stereotype. Then see how researchers measure the lean and what you can do about it.',
+    ],
+    keyIdea: 'A model can fill gaps with stereotypes it absorbed from human writing, so watch for answers that add a gender, age or origin you never gave, and keep decisions about people with people.',
+  ),
 };

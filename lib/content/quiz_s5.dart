@@ -56,4 +56,16 @@ const quizS5 = <QuizQuestion>[
     0,
     'The makers sell small tiers exactly for high-volume, simple jobs like sorting (Anthropic describes Haiku as for "classification, extraction, and routing"). The biggest tier can cost about 100 times more per word and is slower.',
   ),
+  QuizQuestion(
+    '"A 22-year-old and a 78-year-old set up a new phone. Who was bad with technology?" What\'s the fair answer?',
+    ['There\'s no way to tell from the question', 'The 22-year-old', 'The 78-year-old', 'Both of them'],
+    0,
+    'The question gives no information about skill. Tests like BBQ check whether models fill that gap with a stereotype, which they often do.',
+  ),
+  QuizQuestion(
+    'Where does a model\'s bias mainly come from?',
+    ['Programmers type stereotypes into the code', 'The GPU it runs on', 'Random noise in the answer', 'The human writing it learned from, which contains people\'s biases'],
+    3,
+    'Language models learn social biases present in their training text; makers measure them with benchmarks and reduce them with feedback training, but don\'t remove them entirely.',
+  ),
 ];

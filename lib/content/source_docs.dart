@@ -154,6 +154,8 @@ const sourceDocs = <String, SourceDoc>{
   'SRC-CLAUDE-MEMORY': SourceDoc('sources/SRC-CLAUDE-MEMORY.txt', url: 'https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context'),
   'SRC-MS-COPILOT-MEMORY': SourceDoc('sources/SRC-MS-COPILOT-MEMORY.txt', url: 'https://support.microsoft.com/en-us/microsoft-copilot/privacy-faq-for-microsoft-copilot'),
   'SRC-GPT4O-CARD': SourceDoc('sources/SRC-GPT4O-CARD.txt', url: 'https://arxiv.org/abs/2410.21276'),
+  'SRC-BBQ': SourceDoc('sources/SRC-BBQ.txt', url: 'https://arxiv.org/abs/2110.08193'),
+  'SRC-WINOGENDER': SourceDoc('sources/SRC-WINOGENDER.txt', url: 'https://arxiv.org/abs/1804.09301'),
   'SRC-HOMELAB': SourceDoc('sources/SRC-HOMELAB.txt', url: 'https://(private'),
   'SRC-LLAMACPP-PPL': SourceDoc('sources/SRC-LLAMACPP-PPL.txt', url: 'https://github.com/ggml-org/llama.cpp/blob/master/tools/perplexity/README.md'),
   'SRC-OLLAMA': SourceDoc('sources/SRC-OLLAMA.txt', url: 'https://github.com/ollama/ollama'),

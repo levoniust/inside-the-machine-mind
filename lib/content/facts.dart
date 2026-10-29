@@ -174,6 +174,8 @@ const sources = <String, Source>{
   'SRC-CLAUDE-MEMORY': Source('SRC-CLAUDE-MEMORY', 'Anthropic, "Use Claude\'s chat search and memory to build on previous context", support.claude.com (fetched 2026-10-28)', url: 'support.claude.com'),
   'SRC-MS-COPILOT-MEMORY': Source('SRC-MS-COPILOT-MEMORY', 'Microsoft, "Privacy FAQ for Microsoft Copilot", support.microsoft.com (fetched 2026-10-28)', url: 'support.microsoft.com'),
   'SRC-GPT4O-CARD': Source('SRC-GPT4O-CARD', 'OpenAI, "GPT-4o System Card", arXiv 2410.21276 (August 2024)'),
+  'SRC-BBQ': Source('SRC-BBQ', 'Parrish et al., "BBQ: A Hand-Built Bias Benchmark for Question Answering", arXiv 2110.08193 (2022)'),
+  'SRC-WINOGENDER': Source('SRC-WINOGENDER', 'Rudinger et al., "Gender Bias in Coreference Resolution", arXiv 1804.09301 (2018)'),
 };
 
 const facts = <String, Fact>{
@@ -433,4 +435,9 @@ const facts = <String, Fact>{
   'VOX-INTERRUPT': Fact('VOX-INTERRUPT', 'Voice assistants let you interrupt and "take the mic" at any time, something OpenAI notes would be rude between people', sources: ['SRC-GPT4O-CARD']),
   'VOX-PRESETS': Fact('VOX-PRESETS', 'In testing, GPT-4o sometimes imitated the user\'s own voice, so OpenAI allows only preset voices made with voice actors and blocks output that drifts from them', sources: ['SRC-GPT4O-CARD'], value: 'preset voices only'),
   'VOX-WHISPER-TRANSLATE': Fact('VOX-WHISPER-TRANSLATE', 'Whisper is one model trained for several speech jobs at once: speech recognition in many languages, translating speech into English, and identifying the language', sources: ['SRC-WHISPER-REPO']),
+  'BIAS-BBQ': Fact('BIAS-BBQ', 'BBQ tests bias with 58,492 questions across nine social dimensions (such as age, disability, nationality and gender); when a question doesn\'t give enough information, models\' answers consistently reproduce harmful stereotypes', sources: ['SRC-BBQ'], value: '58,492 questions'),
+  'BIAS-BBQ-ALIGN': Fact('BIAS-BBQ-ALIGN', 'Even with enough information, models were up to 3.4 points more accurate when the right answer matched a stereotype than when it went against one (over 5 points for gender)', sources: ['SRC-BBQ'], value: '+3.4 points'),
+  'BIAS-BBQ-77': Fact('BIAS-BBQ-77', 'In BBQ\'s unclear questions, about 77% of one model\'s (UnifiedQA\'s) mistakes matched the stereotype being tested', sources: ['SRC-BBQ'], value: '~77%'),
+  'BIAS-WINOGENDER': Fact('BIAS-WINOGENDER', 'Winogender: 720 sentences over 60 jobs that differ only in a pronoun\'s gender showed systematic gender bias in three language systems, matching real job statistics; it starts from the riddle in which the surgeon is the boy\'s mother', sources: ['SRC-WINOGENDER'], value: '720 sentences'),
+  'BIAS-MAKERS': Fact('BIAS-MAKERS', 'Model makers report bias benchmarks such as BBQ: Mistral reported 56.0% BBQ accuracy for Mixtral vs 51.5% for Llama 2 70B, and DeepSeek\'s R1 paper lists BBQ safety scores for models from Anthropic, OpenAI and others', sources: ['SRC-MIXTRAL', 'SRC-DEEPSEEKR1']),
 };
