@@ -86,4 +86,16 @@ const quizS7 = <QuizQuestion>[
     0,
     'MCP is a JSON-RPC protocol: the host app keeps one client per server and uses tools/list and tools/call, so a tool server written once works in any MCP app.',
   ),
+  QuizQuestion(
+    'Why are single neurons hard to read inside a language model?',
+    ['They are switched off most of the time', 'Many are polysemantic: one neuron fires for several unrelated things', 'They only store numbers from the tokenizer', 'Each neuron stores one whole sentence'],
+    1,
+    'Anthropic found a neuron in a small model that fired for academic citations, English dialogue, HTTP requests and Korean text; sparse autoencoders untangle such mixtures into cleaner features.',
+  ),
+  QuizQuestion(
+    'What was "Golden Gate Claude"?',
+    ['A Claude model running on a server near the bridge', 'Claude with its Golden Gate Bridge feature clamped to 10× its maximum, so it brought up the bridge everywhere', 'Claude with a system prompt telling it to act like a bridge', 'A version of Claude trained only on San Francisco data'],
+    1,
+    'The researchers turned one internal feature up directly; it wasn\'t a prompt or fine-tuning, and the model\'s answers kept steering back to the bridge.',
+  ),
 ];

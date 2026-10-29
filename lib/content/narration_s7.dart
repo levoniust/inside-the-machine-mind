@@ -58,4 +58,12 @@ const narrationS7 = <String, LessonText>{
     ],
     keyIdea: 'Tools work because the model writes a structured request and the app runs it, so clear tool descriptions, strict argument schemas and a human check on risky actions matter more than the model\'s size.',
   ),
+  'l_inside': LessonText(
+    intro: [
+      'What is a [[model]] actually "thinking" when it reads your words? Interpretability researchers build something like a brain scan to find out.',
+      'First problem: single neurons are messy, each doing several jobs at once. Untangle one into cleaner "features". Then guess which sentences light up a real feature found inside Claude: the Golden Gate Bridge.',
+      'Last, turn that feature up and meet Golden Gate Claude, a model that couldn\'t stop talking about one bridge.',
+    ],
+    keyIdea: 'Models store ideas as patterns spread over many neurons, and tools like sparse autoencoders can pull out readable features that we can watch and even turn up or down.',
+  ),
 };

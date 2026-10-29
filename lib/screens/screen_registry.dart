@@ -82,6 +82,7 @@ import 's7/l_lora.dart';
 import 's7/l_merging.dart';
 import 's7/l_notes_helper.dart';
 import 's7/l_tools_mcp.dart';
+import 's7/l_inside.dart';
 import 's7/l_steering.dart';
 import 's7/l_which_custom.dart';
 import 's8/l_paper_anatomy.dart';
@@ -175,6 +176,7 @@ final Map<String, WidgetBuilder> screenBuilders = {
   'l_steering': (_) => const LSteeringScreen(),
   'l_notes_helper': (_) => const LNotesHelperScreen(),
   'l_tools_mcp': (_) => const LToolsMcpScreen(),
+  'l_inside': (_) => const LInsideScreen(),
   'l_which_custom': (_) => const LWhichCustomScreen(),
   'l_paper_anatomy': (_) => const LPaperAnatomyScreen(),
   'l_paper_shelf': (_) => const LPaperShelfScreen(),

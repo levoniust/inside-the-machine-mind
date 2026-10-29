@@ -166,6 +166,10 @@ const sources = <String, Source>{
   'SRC-MCP-ARCH': Source('SRC-MCP-ARCH', 'Model Context Protocol, "Architecture overview", modelcontextprotocol.io/docs/learn/architecture (fetched 2026-10-28)', url: 'modelcontextprotocol.io/docs/learn/architecture'),
   'SRC-MCP-TOOLS': Source('SRC-MCP-TOOLS', 'Model Context Protocol specification (2025-06-18), "Tools", modelcontextprotocol.io/specification/2025-06-18/server/tools (fetched 2026-10-28)', url: 'modelcontextprotocol.io/specification/2025-06-18/server/tools'),
   'SRC-ANTHROPIC-TOOLS': Source('SRC-ANTHROPIC-TOOLS', 'Anthropic, "Tool use with Claude", platform.claude.com/docs (fetched 2026-10-28)', url: 'platform.claude.com/docs'),
+  'SRC-MONOSEMANTIC': Source('SRC-MONOSEMANTIC', 'Bricken et al. (Anthropic), "Towards Monosemanticity: Decomposing Language Models With Dictionary Learning", transformer-circuits.pub (2023)'),
+  'SRC-SCALING-MONO': Source('SRC-SCALING-MONO', 'Templeton et al. (Anthropic), "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet", transformer-circuits.pub (2024)'),
+  'SRC-GOLDEN-GATE': Source('SRC-GOLDEN-GATE', 'Anthropic, "Golden Gate Claude", anthropic.com/news/golden-gate-claude (May 23, 2024)', url: 'anthropic.com/news/golden-gate-claude'),
+  'SRC-OPENAI-SAE': Source('SRC-OPENAI-SAE', 'Gao et al. (OpenAI), "Scaling and evaluating sparse autoencoders", arXiv 2406.04093 (2024)'),
 };
 
 const facts = <String, Fact>{
@@ -405,4 +409,10 @@ const facts = <String, Fact>{
   'TOOL-ROUNDTRIP': Fact('TOOL-ROUNDTRIP', 'With Claude\'s client tools, the model stops with stop_reason "tool_use" and a tool_use block; your code runs the tool and sends back a tool_result so the model can answer', sources: ['SRC-ANTHROPIC-TOOLS'], value: 'tool_use → tool_result'),
   'TOOL-REACT': Fact('TOOL-REACT', 'ReAct (2022) has a model interleave reasoning traces with actions such as searches, so each result shapes its next step', sources: ['SRC-REACT']),
   'TOOL-TOOLFORMER': Fact('TOOL-TOOLFORMER', 'Toolformer (2023) taught a model, self-supervised, to call tools such as a calculator, a Q&A system, a search engine, a translator and a calendar', sources: ['SRC-TOOLFORMER']),
+  'INS-POLY': Fact('INS-POLY', 'Many neurons are polysemantic: in a small language model, one neuron responded to a mix of academic citations, English dialogue, HTTP requests and Korean text', sources: ['SRC-MONOSEMANTIC'], value: '1 neuron, 4 topics'),
+  'INS-SAE': Fact('INS-SAE', 'A sparse autoencoder split a one-layer transformer\'s 512-neuron layer into 4,096 cleaner "features" (in one run), and bigger runs kept finding more: 512 neurons can represent tens of thousands of features', sources: ['SRC-MONOSEMANTIC'], value: '512 → 4,096+'),
+  'INS-SCALE': Fact('INS-SCALE', 'On Claude 3 Sonnet, Anthropic trained sparse autoencoders with about 1 million, 4 million and 34 million features; many features are multilingual and multimodal (the same concept in different languages, and in images)', sources: ['SRC-SCALING-MONO'], value: 'up to ~34M features'),
+  'INS-GGB': Fact('INS-GGB', 'One feature fires on mentions of the Golden Gate Bridge (and on pictures of it); it fires most on direct references and weakly on other San Francisco landmarks', sources: ['SRC-SCALING-MONO', 'SRC-GOLDEN-GATE']),
+  'INS-GGC': Fact('INS-GGC', 'Clamping that feature to 10× its maximum made "Golden Gate Claude": asked how to spend \$10, it suggested driving across the Golden Gate Bridge and paying the toll', sources: ['SRC-SCALING-MONO', 'SRC-GOLDEN-GATE'], value: '10×'),
+  'INS-OPENAI': Fact('INS-OPENAI', 'OpenAI trained a sparse autoencoder with 16 million latents on GPT-4\'s activations, over 40 billion tokens', sources: ['SRC-OPENAI-SAE'], value: '16M'),
 };
