@@ -1,0 +1,148 @@
+SOURCE COPY — SRC-SAMSUNG990
+Retrieved 2026-10-21 for Inside the Machine Mind (offline reference copy; excerpt of the original, formatting simplified).
+Original URL: https://download.semiconductor.samsung.com/resources/data-sheet/samsung_nvme_ssd_990_pro_datasheet_rev.2.0.pdf
+Page/document title: (pdf)
+
+------------------------------------------------------------------------
+
+Data Sheet                                                                  SAMSUNG PROPRIETARY  
+Revision 2.0 
+1 
+MA 
+ 
+ 
+  
+Revision 2.0  
+Add Title (SamsungOne300, 10pt) 
+ 
+Samsung V-NAND SSD  
+990 PRO 
+2023 Data Sheet 
+) 
+
+Data Sheet                                                                  SAMSUNG PROPRIETARY  
+Revision 2.0 
+2 
+LEGAL DISCLAIMER 
+SAMSUNG ELECTRONICS  CO., LTD.  RESERVES THE RIGHT TO CHANGE PRODUCTS, INFORMATION AND 
+SPECIFICATIONS WITHOUT NOTICE.  
+Products and specifications discussed herein are provided for reference purposes only. All information discussed 
+herein may change without notice and is provided on an “AS IS” basis, without warranties of any kind. This 
+document and all information discussed herein remain the sole and exclusive property of Samsung Electronics Co., 
+Ltd. No license of any patent, copyright, mask work, trademark or any other intellectual pr operty right is granted  
+under this document, by implication, estoppels or otherwise. Samsung products are not intended for use in life 
+support, critical care, medical, safety equipment, or similar applications where product failure could result in loss 
+of life or personal or physical harm, or any military or defense application, or any governmental procurement to 
+which special terms or provisions may apply. For updates or additional information about Samsung products, 
+contact your nearest Samsung representative. All brand names, trademarks and registered trademarks belong to 
+their respective owners.  
+ 
+COPYRIGHT ©  2023 
+This material is copyrighted by Samsung Electronics Co., Ltd. Any unauthorized reproductions, use or disclosure of 
+this material, or any part thereof, is strictly prohibited and is a violation under copyright law. 
+ 
+TRADEMARKS & SERVICE MARKS 
+The Samsung logo is the trademark of Samsung Electronics  Co., Ltd. All other company and product names may be 
+trademarks of the respective companies with which they are associated. 
+For more information, please visit www.samsung.com/ssd and www.samsungssd.com. 
+To download the latest software & manuals, please visit www.samsung.com/samsungssd 
+  
+Data Sheet                                                                  SAMSUNG PROPRIETARY  
+Revision 2.0 
+3 
+TECHNICAL SPECIFICATIONS 
+Samsung SSD 990 PRO 
+Usage Application Client PCs, PlayStation® 5 
+Interface PCIe Gen 4.0 x4, NVMe 2.0 
+Hardware 
+Information 
+Capacity1) 1TB 2TB 4TB 
+Controller Samsung in-house Controller 
+NAND Flash Memory Samsung V-NAND TLC 
+DRAM Cache Memory 1GB LPDDR4 2GB LPDDR4 4GB LPDDR4 
+Dimension Max 80.0 x Max 22 x Max 2.3 (mm) 
+Form Factor M.2 (2280) 
+Performance 
+(Up to.)2) 3) 4) 
+Sequential Read 7,450 MB/s 7,450 MB/s 7,450 MB/s 
+Sequential Write 6,900 MB/s 6,900 MB/s 6,900 MB/s 
+QD 1 
+Thread 1 
+Ran. Read 22K IOPS 22K IOPS 22K IOPS 
+Ran. Write 80K IOPS 80K IOPS 80K IOPS 
+QD 32 
+Thread 16 
+Ran. Read 1,200K IOPS 1400K IOPS 1600K IOPS 
+Ran. Write 1,550K IOPS 1,550K IOPS 1,550K IOPS 
+Power 
+Consumption  
+(Up to)5) 
+Idle (APST on) 50mW 55mW 55mW 
+Active (Avg.) 
+Read 5.5 W 6.1W 6.5W 
+Write 5.2 W 5.5W 5.7W 
+L1.2 mode 5 mW 5.8mW 
+Reliability 
+Temp. 
+Operating 0° C to 70° C (Measured by S.M.A.R.T . Temperature Proper airflow recommended) 
+Non-Operating -40° C to 85° C 
+Humidity 5% to 95% non-condensing 
+Shock Non-Operating 1,500G(Gravity), duration: 0.5ms, 3 axis 
+Vibration Non-Operating 20~2,000Hz, 20G 
+MTBF 1.5 million hours 
+Warranty6) TBW 600TB 1,200TB 2400TB 
+Period 5 years limited 
+Supporting Features TRIM (Required OS support), Garbage Collection, S.M.A.R.T 
+Data Security AES 256-bit Full Disk Encryption, TCG/Opal V2.0, Encrypted Drive (IEEE1667) 
+1) 1GB = 1,000,000,000 bytes by IDEMA. A certain portion of capacity may be used for system file and maintenance use, thus the a ctual available capacity 
+may differ from the labeled capacity.  
+2) 990 PRO is backward compatible with PCIe 3.0.  
+3) Sequential and random performance measurements are based on IOmeter1.1.0. Performance may vary based on SSD’s firmware versio n, system 
+hardware & configuration. Test System: AMD Ryzen 7 5800X 8-Core Processor CPU@3.80GHz, DDR4 3600MHz 16GBx2, OS-Windows 10 Pro 64bit, 
+Chipset-ASRock-X570-Taichi 
+4) Sequential and random write performance was  measured with Intelligent TurboWrite technology  being activated. Intelligent TurboWrite operates only 
+within a specific data transfer size. For detailed information, please contact your local service center  
+5) Power consumption is measured with IOmeter1.1.0 version with AMD Ryzen 7 5800X 8-Core Processor CPU@3. 80GHz, DDR4 3600MHz 16GBx2, OS-
+Windows 10 Pro 64bit, Chipset-ASRock-X570-Taichi 
+6) All documented endurance test results are in compliance with JESD218 Standards. Please visit www.jedec.org for detailed information on JESD218 
+Standards. TBW means Terabytes Written, Warranty provides coverage for the stated time period or the TBW, whichever co mes first. Please refer to the 
+detailed warranty statement here at http://www.samsung.com/samsungssd  
+ 
+ 
+ 
+  
+Data Sheet                                                                  SAMSUNG PROPRIETARY  
+Revision 2.0 
+4 
+PRODUCT LINEUP 
+Density Model Name Box Contents Model Code 
+1TB 
+(1,000GB*) MZ-V9P1T0 Samsung SSD 990 PRO 1TB Warranty Statement MZ-V9P1T0BW MZ-V9P1T0B/AM 
+2TB 
+(2,000GB*) MZ-V9P2T0 Samsung SSD 990 PRO 2TB Warranty Statement MZ-V9P2T0BW MZ-V9P2T0B/AM 
+4TB 
+(4,000GB*) MZ-V9P4T0 Samsung SSD 990 PRO 4TB Warranty Statement MZ-V9P4T0BW MZ-V9P4T0B/AM 
+* GB: 1GB = 1,000,000,000 bytes. The actual usable capacity may be less than the labeled capacity.  
+For more information, including but not limited to the warranty provided for this product, and to download the latest 
+software & manuals, please visit www.samsung.com/ssd and www.samsungssd.com.  
+ 
+TEST CONFIGURATION 
+Below you will find a list of system configurations Samsung used to obtain the results reported in this Data Sheet . 
+Performance/power data was measured with the SSD as a secondary drive in a fan cooling desktop system. 
+ Read/Write Performance Power Consumption 
+Interface PCIe Gen 4.0 x4 PCIe Gen 4.0 x4 
+OS Windows 10 Pro 64bit Windows 10 Pro 64bit 
+CPU AMD Ryzen 7 5800X 8-Core CPU@3.80GHz AMD Ryzen 7 5800X 8-Core CPU@3.80GHz 
+Memory DDR4 3600MHz 16GBx2 DDR4 3600MHz 16GBx2 
+Chipset ASRock-X570-Taichi ASRock-X570-Taichi 
+Test Program IOmeter 1.1.0 IOmeter 1.1.0 
+ 
+  
+Data Sheet                                                                  SAMSUNG PROPRIETARY  
+Revision 2.0 
+5 
+Revision History 
+Revision 
+Number Description Revision Date 
+1.0 Initial Release October, 2022 
+2.0 4TB Capacity added / Power consumption value revised July, 2023

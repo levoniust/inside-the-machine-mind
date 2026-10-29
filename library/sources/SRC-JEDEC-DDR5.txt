@@ -1,0 +1,273 @@
+SOURCE COPY — SRC-JEDEC-DDR5
+Retrieved 2026-10-21 for Inside the Machine Mind (offline reference copy; excerpt of the original, formatting simplified).
+Original URL: https://www.jedec.org/news/pressreleases/jedec-publishes-new-ddr5-standard-advancing-next-generation-high-performance
+Page/document title: JEDEC Publishes New DDR5 Standard for Advancing Next-Generation High Performance Computing Systems | JEDECLogin requiredLogin required
+
+------------------------------------------------------------------------
+
+[Forgot Password](/user/password) | [Site Login](/user/login)
+
+Go to main content Menu
+
+[ ®  ](/ "JEDEC")
+
+Global Standards for the Microelectronics Industry
+
+## Main menu
+
+  * [Standards & Documents  ](/standards-documents)
+    * [Search Standards & Documents](/standards-documents)
+    * [Recently Published Documents](/recently-published)
+    * [Technology Focus Areas  ](/standards-documents/technology-focus-areas)
+      * [Main Memory: DDR SDRAM, HBM](/category/technology-focus-area/main-memory-ddr-sdram)
+      * [Low Power Memory: LPDDR](/category/technology-focus-area/mobile-memory-lpddr-wide-io-memory-mcp)
+      * [Flash Memory: SSDs, UFS, e.MMC, XFMD](/category/technology-focus-area/flash-memory-ssds-ufs-emmc)
+      * [Memory Configurations: JESD21-C](/category/technology-focus-area/memory-configurations-jesd21-c)
+      * [Memory Module Design File Registrations](/category/technology-focus-area/memory-module-design-file-registrations)
+      * [Wide Bandgap Power Semiconductors: GaN, SiC](/category/technology-focus-area/wide-bandgap-power-semiconductors-gan-sic)
+      * [Registered Outlines: JEP95](/category/technology-focus-area/jc-10/registered-outlines-jep95)
+      * [JEP30: Part Model Guidelines](/category/technology-focus-area/jep30)
+      * [ESD: Electrostatic Discharge](/category/technology-focus-area/esd-electrostatic-discharge-0)
+      * [Lead-Free Manufacturing](/category/technology-focus-area/lead-free-manufacturing)
+    * [Type Registration, Data Sheets](/standards-documents/type-registration-data-sheets)
+    * [Order JEDEC Standard Manufacturer's ID Code](/standards-documents/id-codes-order-form)
+    * [Order ID Code for Low Power Memories](/id-codes-low-power-memories)
+    * [Copyright Information](/standards-documents/copyright-information)
+    * [Document Translation](/standards-documents/document-translation)
+    * [About JEDEC Standards](/standards-documents/about-jedec-standards)
+  * [Committees  ](/committees)
+    * [All Committees](/committees)
+    * [JC-11: Mechanical Standardization](/committees/jc-11)
+    * [JC-13: Government Liaison](/committees/jc-13)
+    * [JC-14: Quality and Reliability of Solid State Products](/committees/jc-14)
+    * [JC-15: Thermal Characterization Techniques for Semiconductor Packages](/committees/jc-15)
+    * [JC-16: Interface Technology](/committees/jc-16)
+    * [JC-40: Digital Logic](/committees/jc-40)
+    * [JC-42: Solid State Memories](/committees/jc-42)
+    * [JC-45: DRAM Modules](/committees/jc-45)
+    * [JC-63: Multiple Chip Packages](/committees/jc-63)
+    * [JC-64: Embedded Memory Storage & Removable Memory Cards](/committees/jc-64)
+    * [JC-70: Wide Bandgap Power Electronic Conversion Semiconductors](/committees/jc-70)
+  * [News  ](/news)
+    * [News](/news)
+    * [JEDEC Awards: 2026 Honorees](/news/jedec-awards-2026-honorees)
+    * [JEDEC Awards: Distinguished Members Recognition](/news/jedec-awards-distinguished-members-recognition)
+    * [In Memoriam](/news/memoriam)
+    * [Media Kit](/news/media-kit)
+  * [Events & Meetings  ](/events-meetings)
+    * [All Events & Meetings](/events-meetings)
+    * [JEDEC at SEDEX](/events-meetings/jedec-sedex)
+  * [Join  ](/join-jedec)
+    * [Membership Dues & Details](/join-jedec/membership-dues-details)
+    * [Apply for Membership](/join-jedec)
+    * [Membership Benefits](/join-jedec/membership-benefits)
+  * [About  ](/about-jedec)
+    * [Overview](/about-jedec)
+    * [Member List](/about-jedec/member-list)
+    * [Board of Directors](/about-jedec/board-directors)
+    * [JEDEC History  ](/about-jedec/jedec-history)
+      * [Pre-1960s](/about-jedec/jedec-history/pre-1960s)
+      * [1960s](/about-jedec/jedec-history/1960s)
+      * [1970s](/about-jedec/jedec-history/1970s)
+      * [1980s](/about-jedec/jedec-history/1980s)
+      * [1990s](/about-jedec/jedec-history/1990s)
+      * [2010s](/about-jedec/jedec-history/2010s)
+      * [2000s](/about-jedec/jedec-history/2000s)
+    * [Committee Chairs](/about-jedec/committee-chairs)
+    * [Industry Collaboration](/about/industry-collaboration)
+    * [Policies & Governance](/about-jedec/policies-governance)
+    * [Patent Policy](/about-jedec/patent-policy)
+    * [Contact](/contact)
+    * [Year in Review: 2025](/about/year-review-2025)
+    * [JEDEC Staff](/staff)
+    * [Website Help](/about/website-help)
+  * [ Login required Members Area](https://www.jedec.org/user?intended_url=aHR0cHM6Ly93d3cuamVkZWMub3JnL21lbWJlcnM=)
+
+## Main menu
+
+  * [Standards & Documents  ](/standards-documents)
+    * [Search Standards & Documents](/standards-documents)
+    * [Recently Published Documents](/recently-published)
+    * [Technology Focus Areas  ](/standards-documents/technology-focus-areas)
+      * [Main Memory: DDR SDRAM, HBM](/category/technology-focus-area/main-memory-ddr-sdram)
+      * [Low Power Memory: LPDDR](/category/technology-focus-area/mobile-memory-lpddr-wide-io-memory-mcp)
+      * [Flash Memory: SSDs, UFS, e.MMC, XFMD](/category/technology-focus-area/flash-memory-ssds-ufs-emmc)
+      * [Memory Configurations: JESD21-C](/category/technology-focus-area/memory-configurations-jesd21-c)
+      * [Memory Module Design File Registrations](/category/technology-focus-area/memory-module-design-file-registrations)
+      * [Wide Bandgap Power Semiconductors: GaN, SiC](/category/technology-focus-area/wide-bandgap-power-semiconductors-gan-sic)
+      * [Registered Outlines: JEP95](/category/technology-focus-area/jc-10/registered-outlines-jep95)
+      * [JEP30: Part Model Guidelines](/category/technology-focus-area/jep30)
+      * [ESD: Electrostatic Discharge](/category/technology-focus-area/esd-electrostatic-discharge-0)
+      * [Lead-Free Manufacturing](/category/technology-focus-area/lead-free-manufacturing)
+    * [Type Registration, Data Sheets](/standards-documents/type-registration-data-sheets)
+    * [Order JEDEC Standard Manufacturer's ID Code](/standards-documents/id-codes-order-form)
+    * [Order ID Code for Low Power Memories](/id-codes-low-power-memories)
+    * [Copyright Information](/standards-documents/copyright-information)
+    * [Document Translation](/standards-documents/document-translation)
+    * [About JEDEC Standards](/standards-documents/about-jedec-standards)
+  * [Committees  ](/committees)
+    * [All Committees](/committees)
+    * [JC-11: Mechanical Standardization](/committees/jc-11)
+    * [JC-13: Government Liaison](/committees/jc-13)
+    * [JC-14: Quality and Reliability of Solid State Products](/committees/jc-14)
+    * [JC-15: Thermal Characterization Techniques for Semiconductor Packages](/committees/jc-15)
+    * [JC-16: Interface Technology](/committees/jc-16)
+    * [JC-40: Digital Logic](/committees/jc-40)
+    * [JC-42: Solid State Memories](/committees/jc-42)
+    * [JC-45: DRAM Modules](/committees/jc-45)
+    * [JC-63: Multiple Chip Packages](/committees/jc-63)
+    * [JC-64: Embedded Memory Storage & Removable Memory Cards](/committees/jc-64)
+    * [JC-70: Wide Bandgap Power Electronic Conversion Semiconductors](/committees/jc-70)
+  * [News  ](/news)
+    * [News](/news)
+    * [JEDEC Awards: 2026 Honorees](/news/jedec-awards-2026-honorees)
+    * [JEDEC Awards: Distinguished Members Recognition](/news/jedec-awards-distinguished-members-recognition)
+    * [In Memoriam](/news/memoriam)
+    * [Media Kit](/news/media-kit)
+  * [Events & Meetings  ](/events-meetings)
+    * [All Events & Meetings](/events-meetings)
+    * [JEDEC at SEDEX](/events-meetings/jedec-sedex)
+  * [Join  ](/join-jedec)
+    * [Membership Dues & Details](/join-jedec/membership-dues-details)
+    * [Apply for Membership](/join-jedec)
+    * [Membership Benefits](/join-jedec/membership-benefits)
+  * [About  ](/about-jedec)
+    * [Overview](/about-jedec)
+    * [Member List](/about-jedec/member-list)
+    * [Board of Directors](/about-jedec/board-directors)
+    * [JEDEC History  ](/about-jedec/jedec-history)
+      * [Pre-1960s](/about-jedec/jedec-history/pre-1960s)
+      * [1960s](/about-jedec/jedec-history/1960s)
+      * [1970s](/about-jedec/jedec-history/1970s)
+      * [1980s](/about-jedec/jedec-history/1980s)
+      * [1990s](/about-jedec/jedec-history/1990s)
+      * [2010s](/about-jedec/jedec-history/2010s)
+      * [2000s](/about-jedec/jedec-history/2000s)
+    * [Committee Chairs](/about-jedec/committee-chairs)
+    * [Industry Collaboration](/about/industry-collaboration)
+    * [Policies & Governance](/about-jedec/policies-governance)
+    * [Patent Policy](/about-jedec/patent-policy)
+    * [Contact](/contact)
+    * [Year in Review: 2025](/about/year-review-2025)
+    * [JEDEC Staff](/staff)
+    * [Website Help](/about/website-help)
+  * [ Login required Members Area](https://www.jedec.org/user?intended_url=aHR0cHM6Ly93d3cuamVkZWMub3JnL21lbWJlcnM=)
+
+# JEDEC Publishes New DDR5 Standard for Advancing Next-Generation High Performance Computing Systems
+
+**ARLINGTON, Va., USA – JULY 14, 2020** – [JEDEC](https://www.jedec.org/) Solid State Technology Association,
+the global leader in the development of standards for the microelectronics industry, today announced the
+publication of the widely-anticipated JESD79-5 DDR5 SDRAM standard. The standard addresses demand requirements
+being driven by intensive cloud and enterprise data center applications, providing developers with twice the
+performance and much improved power efficiency. JESD79-5 DDR5 is now available for download from the [JEDEC
+website](https://www.jedec.org/standards-documents/docs/jesd79-5).
+
+DDR5 was designed to meet increasing needs for efficient performance in a wide range of applications including
+client systems and high-performance servers. DDR5 incorporates memory technology that leverages and extends
+industry know-how and experience developing previous DDR memories. The standard is architected to enable
+scaling memory performance without degrading channel efficiency at higher speeds, which has been achieved by
+doubling the burst-length to BL16 and bank-count to 32 from 16. This revolutionary architecture provides
+better channel efficiency and higher application level performance that will enable the continued evolution of
+next-generation computing systems. In addition, the DDR5 DIMM has two 40-bit fully independent sub-channels on
+the same module for efficiency and improved reliability.
+
+New features, such as DFE (Decision Feedback Equalization), enable IO speed scalability for higher bandwidth
+and improved performance. DDR5 supports double the bandwidth as compared to its predecessor, DDR4, and is
+expected to be launched at 4.8 Gbps (50% higher than DDR4’s end of life speed of 3.2 Gbps).
+
+Additional features include:
+
+  * Fine grain refresh feature: as compared to DDR4 all bank refresh improves 16 Gbps device latency. Same bank selfrefresh offers better performance by enabling some banks to refresh while others are in use.
+  * On-die ECC and other scaling features enable manufacturing on advanced process nodes.
+  * Improved power efficiency enabled by Vdd going from 1.2V to 1.1V as compared to DDR4.
+  * Use of the MIPIÒ Alliance I3C Basic specification for system management bus.
+  * At the module level, voltage regulator on DIMM design enables pay as you go scalability, better voltage tolerance for improved DRAM yields and the potential to further reduce power consumption.
+
+“With several new performance, reliability and power saving modes implemented in its design, DDR5 is ready to
+support and enable next-generation technologies,” said Desi Rhoden, Chairman JC-42 Memory Committee and
+Executive VP Montage Technology. “The tremendous dedication and effort on the part of more than 150 JEDEC
+member companies worldwide has resulted in a standard that addresses all aspects of the industry, including
+system requirements, manufacturing processes, circuit design, and simulation tools and test, greatly enhancing
+developers’ abilities to innovate and advance a wide range of technological applications.”
+
+**Industry Support for DDR5**
+
+“High-performance computing requires memory that can keep pace with the ever-increasing demands of today’s
+processors. With the publication of the DDR5 standard, AMD can better design its products to meet the future
+demands of our customers and end-users,” said Joe Macri, **AMD** Compute and Graphics CTO. “By working
+together on a single standard through JEDEC, the industry delivers a predictable cadence for memory bandwidth
+improvements, enabling the next generation of high-performance systems and applications.”
+
+“With the publication of JEDEC’s DDR5 standard, we are entering a new era of DDR performance and capabilities.
+DDR5, developed with significant effort across the industry, marks a great leap forward in memory capability,
+for the first time delivering a 50% bandwidth jump at the onset of a new technology to meet the demands of AI
+and high performance compute,” said Carolyn Duran, VP - Data Platforms Group, GM – Memory and IO Technologies
+at **Intel**.
+
+“Micron is proud to be a part of the JEDEC organization, which provides an efficient forum for cross-industry
+collaboration on leading-edge technology standards,” said Frank Ross, JEDEC Board of Directors member and
+senior member of Technical Staff at **Micron**. “The DDR5 standard offers the industry a critical advancement
+in main memory performance to enable the next-generation of computing required to turn data into insight
+across cloud, enterprise, networking, high-performance computing and artificial intelligence applications."
+
+“Samsung actively contributed to defining JEDEC’s new DDR5 industry standard, recognizing that this new DDR5
+framework is a critical turning point in the advancement of memory for servers, PCs and other major electronic
+devices,” said Sangjoon Hwang, senior vice president of Memory Product Planning, **Samsung Electronics**. “We
+are delighted to see the timely release of this standard, and anticipate bringing our DDR5-standardized
+solutions to volume production in a timeframe that coincides with market demands,” Hwang added.
+
+“DDR5 is prepared to improve the Computing Performance by applying various features to overcome future
+technology scaling challenge and improve performance compared to DDR4. On this basis, DDR5 will lead the
+evolution of the data-centric era, and will play a pivotal role in the 4th Industrial Revolution,” said Uksong
+Kang, Head of DRAM Product Planning at**SK hynix** , one of the JEDEC members. “SK hynix is opening up a new
+sector in the market through the development of the industry’s first DDR5 that meets JEDEC standards. We have
+been working with many partners to verify DDR5 Ecosystem through development of test chips, and modules since
+2018, and doing our best to secure mass-production levels in the second half of this year.”
+
+**About JEDEC**
+
+JEDEC is the global leader in the development of standards for the microelectronics industry. Thousands of
+volunteers representing nearly 300 member companies work together over 100 JEDEC technical committees and task
+groups to meet the needs of every segment of the industry, manufacturers and consumers alike. The publications
+and standards generated by JEDEC committees are accepted throughout the world. All JEDEC standards are
+available for download from the JEDEC website. For more information, visit
+[www.jedec.org](http://www.jedec.org/).
+
+**Contact**
+
+Emily Desjardins  
+[[email protected]](/cdn-cgi/l/email-protection#0b6e666267726f4b616e6f6e682564796c)  
++1 703-907-7560
+
+###
+
+## Media Inquiries
+
+Please direct all media inquiries to:
+
+**Emily Desjardins**  
+703-907-7560  
+[Email Emily](/contact?category=Emily%20Desjardins,%20Director)
+
+## News RSS Feed
+
+Subscribe to the [JEDEC News and Media Coverage RSS feed](/news/rss.xml) to be notified when new documents are
+uploaded.
+
+  * [News and Media Coverage RSS Feed](/news/rss.xml)
+  * [See all JEDEC RSS Feed Options](/about-jedec/rss-feeds)
+
+  * [Terms & Conditions](/termsofuse)
+  * [Privacy Policy](/privacy)
+  * [Contact Us](/contact)
+  * [Refund Policy](/refund)
+  * [Website Help](/about/website-help)
+  * [Login](/user/login)
+
+Copyright © 2026 JEDEC. All Rights Reserved.
+
+## User login
+
+Username *
+
+Password *

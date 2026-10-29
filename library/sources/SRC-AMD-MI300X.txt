@@ -1,0 +1,1070 @@
+SOURCE COPY — SRC-AMD-MI300X
+Retrieved 2026-10-21 for Inside the Machine Mind (offline reference copy; excerpt of the original, formatting simplified).
+Original URL: https://www.amd.com/en/products/accelerators/instinct/mi300/mi300x.html
+Page/document title: AMD Instinct™ MI300X Accelerators
+
+------------------------------------------------------------------------
+
+Skip to main content
+
+[AMD Website Accessibility Statement](/en/site-notifications/accessibility-statement.html)
+
+[ ](/en.html)
+
+  * Products 
+
+Processors  Accelerators  Graphics  Adaptive SoCs, FPGAs, & SOMs  Software, Tools, & Apps
+
+Processors
+
+###### Server CPUs
+
+    * [EPYC CPU Portfolio](/en/products/processors/server/epyc.html)
+    * [Data Center, Cloud & AI](/en/products/processors/server/epyc/data-center-cloud-ai.html)
+    * [Network & Edge](/en/products/processors/server/epyc/network-edge.html)
+    * [Small Business & Hosting](/en/products/processors/server/epyc/small-business.html)
+    * [Server CPU Specifications](/en/products/specifications/server-processor.html)
+
+###### Business Systems
+
+    * [Ryzen PRO Laptops](https://www.amd.com/en/products/processors/laptop/ryzen-for-business.html)
+    * [Ryzen PRO Desktops](https://www.amd.com/en/products/processors/ryzen-for-professionals.html)
+    * [Workstations](https://www.amd.com/en/products/workstations.html)
+    * [PRO Technologies](https://www.amd.com/en/products/processors/technologies/pro-technologies.html)
+    * [Ryzen AI for Business](https://www.amd.com/en/products/processors/business-systems/ryzen-ai.html)
+
+###### Personal & Gaming  
+
+    * [Ryzen Laptops](https://www.amd.com/en/products/processors/laptop/ryzen.html)
+    * [Ryzen Desktops](https://www.amd.com/en/products/processors/desktops/ryzen.html)
+    * [Advantage Gaming Laptops](https://www.amd.com/en/gaming/laptops/advantage-premium.html)
+    * [Advantage Gaming Desktops](https://www.amd.com/en/gaming/desktops/advantage-premium.html)
+    * [Ryzen Z Series Handhelds](https://www.amd.com/en/products/processors/handhelds/ryzen-z-series.html)
+    * [Ryzen AI for Consumer](https://www.amd.com/en/products/processors/consumer/ryzen-ai.html)
+
+###### Embedded  
+
+    * [EPYC and Ryzen](https://www.amd.com/en/products/embedded.html)
+    * [Partner Directory](/en/search/partner/embedded-partners.html)
+
+###### Resources
+
+    * [Product Specifications](https://www.amd.com/en/products/specifications.html)
+    * [Enterprise Blogs & Insights](/en/resources/enterprise.html)
+
+Accelerators
+
+###### GPU Accelerators
+
+    * [Instinct GPUs](/en/products/accelerators/instinct.html)
+    * [Documentation](https://www.amd.com/en/search/documentation/hub.html#sortCriteria=%40amd_release_date%20descending&f-amd_product_type=Accelerators)
+    * [Cloud Graphics](https://www.amd.com/en/products/accelerators/radeon-pro.html)
+
+###### Adaptive Accelerators
+
+    * [Alveo Data Center Accelerator Cards](https://www.amd.com/en/products/accelerators/alveo.html)
+    * [Telco Accelerator Cards](https://www.amd.com/en/solutions/telco-and-networking/telco-accelerators.html)
+
+###### DPU Accelerators
+
+    * [Pensando Salina](/en/products/data-processing-units/pensando.html)
+
+###### Ethernet Adapters
+
+    * [Pensando AI NICs](/en/products/network-interface-cards/pensando.html)[](/en/products/network-interface-cards/pensando.html)
+    * [Alveo X3 Series](https://www.amd.com/en/products/accelerators/alveo/x3/a-x3522-p08g-pq-g.html)
+    * [Solarflare Adapters](https://www.amd.com/en/products/ethernet-adapters.html)
+
+Graphics
+
+###### Workstations
+
+    * [Radeon PRO](https://www.amd.com/en/products/graphics/workstations.html)
+
+###### Desktops
+
+    * [AMD Advantage Premium](https://www.amd.com/en/gaming/desktops/advantage-premium.html)
+    * [Radeon RX](https://www.amd.com/en/products/graphics/desktops/radeon.html)
+
+###### Laptops
+
+    * [AMD Advantage Premium](https://www.amd.com/en/gaming/laptops/advantage-premium.html)
+    * [Radeon Mobile Graphics](https://www.amd.com/en/products/graphics/laptops/radeon.html)
+
+###### Resources
+
+    * [Product Specifications](https://www.amd.com/en/products/specifications.html)  
+
+    * [Documentation](https://gpuopen.com/learn/)
+
+Adaptive SoCs, FPGAs, & SOMs
+
+###### Adaptive SoCs & FPGAs
+
+    * [Versal Portfolio](https://www.amd.com/en/products/adaptive-socs-and-fpgas/versal.html)
+    * [SoC Portfolio](https://www.amd.com/en/products/adaptive-socs-and-fpgas/soc.html)
+    * [FPGA Portfolio](https://www.amd.com/en/products/adaptive-socs-and-fpgas/fpga.html)
+    * [Cost-Optimized Portfolio](https://www.amd.com/en/products/adaptive-socs-and-fpgas/cost-optimized-portfolio.html)
+
+###### System-on-Modules (SOMs)
+
+    * [Kria SOMs](https://www.amd.com/en/products/system-on-modules/kria.html)
+    * [Kria AI Solutions](/en/products/system-on-modules/kria/ai.html)
+    * [Kria K24 SOM](/en/products/system-on-modules/kria/k24.html)
+    * [Kria K26 SOM](/en/products/system-on-modules/kria/k26.html)
+
+###### Technologies
+
+    * [AI Engine](https://www.amd.com/en/products/adaptive-socs-and-fpgas/technologies/ai-engine.html)
+    * [Design Security](https://www.amd.com/en/products/adaptive-socs-and-fpgas/technologies/design-security.html)
+    * [Digital Signal Processing](https://www.amd.com/en/products/adaptive-socs-and-fpgas/technologies/digital-signal-processing.html)
+    * [Functional Safety](https://www.amd.com/en/products/adaptive-socs-and-fpgas/technologies/functional-safety.html)
+    * [High Speed Serial](https://www.amd.com/en/products/adaptive-socs-and-fpgas/technologies/high-speed-serial.html)
+    * [Memory Solutions](https://www.amd.com/en/products/adaptive-socs-and-fpgas/technologies/memory.html)
+    * [Power Efficiency](https://www.amd.com/en/products/adaptive-socs-and-fpgas/technologies/power-efficiency.html)
+
+###### Resources
+
+    * [Intellectual Property](https://www.amd.com/en/products/adaptive-socs-and-fpgas/intellectual-property.html)
+    * [Design Hubs](https://docs.amd.com/v/u/en-US/ug1776-adaptive-computing-design-hubs-lp)
+    * [Developer Hub](https://www.amd.com/en/developer/browse-by-product-type/adaptive-resources.html)
+    * [Customer Training](https://learningcatalog-amd.netexam.com/)
+
+###### Evaluation Boards & Kits
+
+    * [Evaluation Boards](https://www.amd.com/en/products/adaptive-socs-and-fpgas/evaluation-boards.html)
+    * [Boards & Kits Accessories](https://www.amd.com/en/search/adaptive-socs-and-fpgas/boards.html#f-amd_product_board_type=Accessories)
+
+Software, Tools, & Apps
+
+###### Processor Tools
+
+    * [MEXT Predictive Memory Software](/en/products/software/mext.html)
+    * [PRO Technologies](/en/products/processors/technologies/pro-technologies.html)
+    * [Ryzen AI Software](https://www.amd.com/en/products/software/ryzen-ai-software.html)
+    * [Ryzen Master Overclocking Utility](https://www.amd.com/en/products/software/ryzen-master.html)
+    * [StoreMI](https://www.amd.com/en/products/software/storemi.html)
+    * [Zen Software Studio](/en/developer/zen-software-studio.html)
+
+###### Graphics Tools & Apps
+
+    * [AMD Software: Adrenalin Edition](https://www.amd.com/en/products/software/adrenalin.html)
+    * [AMD Software: PRO Edition](/en/products/software/pro-edition.html)
+    * [FidelityFX](https://www.amd.com/en/products/graphics/technologies/fidelityfx.html)
+    * [Radeon ProRender](https://www.amd.com/en/products/graphics/software/radeon-prorender.html)
+
+###### Adaptive SoC & FPGA Tools
+
+    * [Design Tools](https://www.amd.com/en/products/software/adaptive-socs-and-fpgas.html)
+    * [Vivado Software](https://www.amd.com/en/products/software/adaptive-socs-and-fpgas/vivado.html)
+    * [Vitis Software](https://www.amd.com/en/products/software/adaptive-socs-and-fpgas/vitis.html)
+    * [Vitis Model Composer](https://www.amd.com/en/products/software/adaptive-socs-and-fpgas/vitis/vitis-model-composer.html)
+    * [Vitis HLS](https://www.amd.com/en/products/software/adaptive-socs-and-fpgas/vitis/vitis-hls.html)
+    * [Vitis AI](https://www.amd.com/en/products/software/vitis-ai.html)
+    * [Embedded Software](https://www.amd.com/en/products/software/adaptive-socs-and-fpgas/embedded-software.html)
+    * [Power Design Manager](https://www.amd.com/en/products/software/adaptive-socs-and-fpgas/power-design-manager.html)
+
+###### Intellectual Property & Apps
+
+    * [Pre-Built IP Cores](https://www.amd.com/en/products/adaptive-socs-and-fpgas/intellectual-property.html)
+    * [Alveo Accelerator App Store](https://www.amd.com/en/developer/resources/alveo-apps/all-apps.html)
+    * [Kria SOM App Store](https://www.amd.com/en/developer/resources/kria-apps.html)
+
+###### GPU Accelerator Tools & Apps
+
+    * [ROCm Open Software](https://www.amd.com/en/products/software/rocm.html)  
+
+    * [Infinity Hub Software Containers](https://www.amd.com/en/developer/resources/infinity-hub.html)
+    * [Enterprise AI Reference Stack](/en/products/software/enterprise-ai-reference-stack.html)
+
+###### Ethernet Adapter Tools
+
+    * [Solarflare Onload Software](/en/products/ethernet-adapters/onload.html)
+
+  * Solutions 
+
+AI  Industries  Workloads  Gaming
+
+AI
+
+###### Overview
+
+    * [AI Solutions](/en/solutions/ai.html)
+    * [Advancing Science](/en/solutions/ai/advancing-science.html)
+    * [AMD Silo AI](/en/solutions/ai/silo-ai.html)
+    * [Physical AI](/en/solutions/ai/physical-ai.html)
+    * [Sovereign AI](https://www.amd.com/en/solutions/ai/sovereign-ai.html)
+
+###### For Data Center & Cloud
+
+    * [GPU Accelerators](/en/products/accelerators/instinct.html)
+    * [Helios Rackscale Solutions](/en/products/rackscale-solutions/helios.html)
+    * [Server Processors](https://www.amd.com/en/products/processors/server/epyc/ai.html)
+
+###### For Edge & Endpoints
+
+    * [Ryzen AI for Business](https://www.amd.com/en/products/processors/business-systems/ryzen-ai.html)
+    * [Ryzen AI for Consumer](https://www.amd.com/en/products/processors/consumer/ryzen-ai.html)
+    * [Ryzen AI for Embedded](/en/products/embedded/ryzen-ai.html)
+    * [Radeon Graphics Cards](https://www.amd.com/en/products/graphics/radeon-ai.html)
+    * [Adaptive SoCs for Edge](https://www.amd.com/en/products/adaptive-socs-and-fpgas/versal/gen2/ai-edge-series.html)
+    * [Adaptive SoCs for Embedded](https://www.amd.com/en/products/adaptive-socs-and-fpgas/soc.html)
+    * [System-on-Modules (SOMs)](https://www.amd.com/en/products/system-on-modules/kria.html)
+
+###### For Developers
+
+    * [ROCm AI Developer Hub](/en/developer/resources/rocm-hub.html)
+    * [Vitis AI Developer Hub](/en/developer/resources/vitis-ai.html)
+    * [ZenDNN Inference Libraries](https://www.amd.com/en/developer/zendnn.html)
+    * [Ryzen AI Software](https://www.amd.com/en/developer/resources/ryzen-ai-software.html)
+    * [AI Developer Program](https://developer.amd.com/ai-developer-program)
+    * [AI Academy](https://developer.amd.com/amd-ai-academy)
+    * [Ryzen AI Halo](/en/products/processors/desktops/ryzen/ryzen-ai-halo.html)
+
+Industries
+
+###### Industries
+
+###### Industries
+
+    * [Aerospace & Defense](https://www.amd.com/en/solutions/aerospace-and-defense.html)
+    * [Architecture, Engineering, & Construction](https://www.amd.com/en/solutions/architecture-engineering-and-construction.html)
+    * [Automotive](/en/solutions/automotive.html)
+    * [Broadcast & Pro AV](https://www.amd.com/en/solutions/broadcast-and-pro-av.html)
+    * [Data Center](/en/solutions/data-center.html)
+    * [Energy](https://www.amd.com/en/solutions/energy.html)
+
+###### Industries
+
+    * [Emulation & Prototyping](https://www.amd.com/en/solutions/emulation-prototyping.html)
+    * [Financial Services](https://www.amd.com/en/solutions/financial-services.html)
+    * [Healthcare](https://www.amd.com/en/solutions/healthcare.html)  
+
+    * [High-Performance Computing](https://www.amd.com/en/solutions/high-performance-computing.html)
+    * [Home & Lifestyle](https://www.amd.com/en/solutions/home-and-lifestyle.html)
+
+###### Industries
+
+    * [Industrial](https://www.amd.com/en/solutions/industrial.html)
+    * [Manufacturing](https://www.amd.com/en/solutions/manufacturing.html)
+    * [Media & Entertainment](https://www.amd.com/en/solutions/media-and-entertainment.html)
+    * [Product Design](https://www.amd.com/en/solutions/product-design.html)
+    * [Public Sector](https://www.amd.com/en/solutions/public-sector.html)
+
+###### Industries
+
+    * [Retail & E-Commerce](https://www.amd.com/en/solutions/retail-and-ecommerce.html)
+    * [Robotics](/en/solutions/robotics.html)
+    * [Semiconductor](https://www.amd.com/en/solutions/semiconductor.html)
+    * [Telco & Networking](https://www.amd.com/en/solutions/telco-and-networking.html)
+    * [Test & Measurement](https://www.amd.com/en/solutions/test-and-measurement.html)
+
+Workloads
+
+###### Workloads
+
+    * [AI](https://www.amd.com/en/solutions/ai.html)
+    * [Cloud Computing](https://www.amd.com/en/solutions/data-center/cloud-computing.html)
+    * [Database & Analytics](https://www.amd.com/en/solutions/database-and-analytics.html)
+
+    * [Embedded Computing](https://www.amd.com/en/solutions/embedded-computing.html)
+    * [HCI & Virtualization](https://www.amd.com/en/solutions/hci-and-virtualization.html)
+    * [Infrastructure Acceleration](https://www.amd.com/en/solutions/data-center/infrastructure-acceleration.html)
+
+    * [Networking Solutions](/en/solutions/data-center/networking.html)
+    * [Quantum Computing](https://www.amd.com/en/solutions/quantum-computing.html)
+
+Gaming
+
+###### Gaming
+
+    * [Gaming with AMD](https://www.amd.com/en/gaming.html)
+    * [Featured Games](https://www.amd.com/en/gaming/featured-games.html)
+
+###### Systems
+
+    * [Advantage Gaming Systems](https://www.amd.com/en/gaming/advantage.html)
+    * [Gaming Desktops](https://www.amd.com/en/gaming/desktops.html)
+    * [Gaming Laptops](https://www.amd.com/en/gaming/laptops.html)
+    * [Gaming Handhelds](https://www.amd.com/en/gaming/handhelds.html)
+
+###### Technologies
+
+    * [Smart Technologies](https://www.amd.com/en/gaming/technologies/smart-technologies.html)
+    * [AMD FSR](/en/products/graphics/technologies/fidelityfx/super-resolution.html)
+    * [FreeSync](https://www.amd.com/en/products/graphics/technologies/freesync.html)
+    * [HYPR-RX](https://www.amd.com/en/products/software/adrenalin/hypr-rx.html)
+
+###### Resources
+
+    * [AMD Gaming Community](https://www.amdgaming.com/)
+    * [AMD Software: Adrenalin Edition](https://www.amd.com/en/products/software/adrenalin.html)
+
+  * Resources & Support 
+
+Downloads  Developer Resources  Partner Resources  Support
+
+Downloads
+
+###### EPYC Processors
+
+    * [Client & Data Center Tech Docs](https://www.amd.com/en/search/documentation/hub.html#sortCriteria=%40amd_release_date%20descending&f-amd_archive_status=Active&f-amd_audience=Technical)
+    * [EPYC White Papers & Briefs](https://www.amd.com/en/search/documentation/hub.html#sortCriteria=%40amd_release_date%20descending&f-amd_document_type=Solution%20Briefs,Performance%20Briefs,White%20Papers,Product%20Briefs&f-amd_archive_status=Active&f-amd_product_brand=EPYC,Instinct&f-amd_form_factor=Servers)
+    * [EPYC Tuning Guides](https://www.amd.com/en/search/documentation/hub.html#sortCriteria=%40amd_release_date%20descending&f-amd_document_type=Tuning%20Guides&f-amd_archive_status=Active&f-amd_product_brand=EPYC)
+
+###### Radeon Graphics & AMD Chipsets
+
+    * [Drivers](https://www.amd.com/en/support/download/drivers.html)
+    * [Radeon ProRender Plug-ins](https://www.amd.com/en/products/graphics/software/radeon-prorender.html)
+    * [PRO Certified ISV Applications](https://www.amd.com/en/search/certified-drivers.html)
+
+###### Adaptive SoCs & FPGAs
+
+    * [Vivado Design Suite](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools.html)
+    * [Vitis Software Platform](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis.html)
+    * [Vitis Accelerated Libraries](https://github.com/Xilinx/Vitis_Libraries)
+    * [Vitis Embedded Platforms](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/embedded-platforms.html)
+    * [Embedded Software](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/embedded-design-tools.html)
+    * [Device Models](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/device-models.html)
+    * [Package Pinout Files](https://www.xilinx.com/support/package-pinout-files.html)
+    * [Power Design Manager](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/power-design-manager.html)
+
+###### Alveo Accelerators & Kria SOMs
+
+    * [Alveo Package Files](https://www.amd.com/en/support/download/drivers.html)
+    * [Alveo App Store](https://www.amd.com/en/developer/resources/alveo-apps/all-apps.html)
+    * [Kria App Store](https://www.amd.com/en/developer/resources/kria-apps.html)
+
+###### Ryzen Processors
+
+    * [Ryzen Master Overclocking Utility](https://www.amd.com/en/products/software/ryzen-master.html)
+    * [StoreMI](https://www.amd.com/en/products/software/storemi.html)
+    * [PRO Manageability Tools for IT Administrators](https://www.amd.com/en/support/downloads/manageability-tools.html)
+
+###### Ethernet Adapters
+
+    * [Solarflare Software & Downloads](/en/support/ethernet-adapters/solarflare.html)
+
+Developer Resources
+
+###### Overview
+
+    * [Developer Central](/en/developer.html)
+    * [AI Developer Program](https://developer.amd.com/ai-developer-program)
+    * [AI Academy](https://developer.amd.com/amd-ai-academy)
+    * [AI Playbooks](https://developer.amd.com/playbooks/)
+
+###### Processors
+
+    * [Zen Software Studio](/en/developer/zen-software-studio.html)
+    * [EPYC Tuning Guides](https://www.amd.com/en/search/documentation/hub.html#sortCriteria=%40amd_release_date%20descending&f-amd_document_type=Tuning%20Guides&f-amd_archive_status=Active&f-amd_product_brand=EPYC)
+    * [EPYC Whitepapers & Briefs](https://www.amd.com/en/search/documentation/hub.html#sortCriteria=%40amd_release_date%20descending&f-amd_document_type=Solution%20Briefs,Performance%20Briefs,White%20Papers,Product%20Briefs&f-amd_archive_status=Active&f-amd_product_brand=EPYC,Instinct&f-amd_form_factor=Servers)
+    * [Ryzen AI Software](https://www.amd.com/en/developer/resources/ryzen-ai-software.html)
+
+###### Accelerators
+
+    * [ROCm AI Developer Hub](https://www.amd.com/en/developer/resources/rocm-hub/dev-ai.html)
+    * [ROCm Documentation](https://rocm.docs.amd.com/en/latest/)
+    * [Enterprise AI Reference Stack](https://www.amd.com/en/developer/resources/enterprise-ai-reference-stack.html)
+    * [Infinity Hub Software Containers](https://www.amd.com/en/developer/resources/infinity-hub.html)
+    * [Pensando DPUs](https://www.amd.com/en/developer/browse-by-resource-type/software-tools.html#dpu-accelerators)
+
+###### Embedded Products
+
+    * [Vivado Design Suite](https://www.amd.com/en/developer/resources/vivado.html)
+    * [Vitis Software Developer Tools](https://www.amd.com/en/developer/resources/vitis.html)
+    * [Vitis AI Developer Hub](/en/developer/resources/vitis-ai.html)
+    * [Documentation](https://docs.amd.com/)
+    * [Product Training](https://learningcatalog-amd.netexam.com/)
+    * [Embedded Partner Solutions](/en/search/partner/embedded-partner-solutions.html)
+
+###### Graphics
+
+    * [GPUOpen Open Source Tools](https://gpuopen.com/)  
+
+    * [Documentation](https://gpuopen.com/learn/)
+
+Partner Resources
+
+###### Overview
+
+    * [Partner Hub Home](https://www.amd.com/en/partner.html)
+    * [AMD Partner Network](https://www.amd.com/en/partner/partner-network.html)
+
+###### Resources by Product
+
+    * [AMD Instinct](/en/partner/browse-by-product/instinct-resources.html)
+    * [EPYC](/en/partner/browse-by-product/epyc-resources.html)
+    * [Ryzen PRO](/en/partner/browse-by-product/ryzen-pro-resources.html)
+    * [Ryzen](/en/partner/browse-by-product/ryzen-resources.html)
+    * [Ryzen Threadripper](/en/partner/browse-by-product/ryzen-threadripper-resources.html)
+    * [Radeon PRO](/en/partner/browse-by-product/radeon-pro-resources.html)
+    * [Radeon](/en/partner/browse-by-product/radeon-resources.html)
+
+###### Resources by Type
+
+    * [Partner Insights Articles](/en/partner/browse-by-resource/partner-insights-articles.html)
+    * [AMD Arena Training](/en/partner/browse-by-resource/amd-arena-training.html)
+    * [Meet the Experts Webinars](/en/partner/browse-by-resource/meet-the-experts-webinars.html)
+    * [Marketing Materials](/en/partner/browse-by-resource/marketing-materials.html)
+    * [Partner FAQs](/en/partner/browse-by-resource/faqs.html)
+
+###### About Our Partners
+
+    * [Partner Ecosystems & Solutions](/en/partner/about-partners/partner-ecosystems-solutions.html)
+    * [Authorized Distributors](/en/partner/about-partners/authorized-distributors.html)
+
+Support
+
+###### AMD Global Support
+
+    * [Support Home](https://www.amd.com/en/support.html)
+    * [Technical Information Portal](https://docs.amd.com/)
+    * [Warranty Services](https://www.amd.com/en/support/warranty.html)
+    * [Product Specifications](https://www.amd.com/en/products/specifications.html)
+    * [Product Security (PSIRT)](https://www.amd.com/en/resources/product-security.html)
+
+###### Processors & Graphics
+
+    * [Product Support](https://www.amd.com/en/forms/contact-us/support.html)
+    * [Knowledge Base](https://www.amd.com/en/resources/support-articles/knowledge-base-search.html)
+    * [Technical & Warranty Help](https://www.amd.com/en/support.html)
+    * [PC & Processors Community](https://pcforum.amd.com/s/)
+    * [Drivers & Software Downloads](https://www.amd.com/en/support/download/drivers.html)
+
+###### Accelerators
+
+    * [Alveo Product Support](https://adaptivesupport.amd.com/s/?language=en_US)
+    * [Pensando Product Support](https://www.amd.com/en/support/accelerators/pensando.html)
+    * [Solarflare Product Support](/en/support/ethernet-adapters/solarflare.html)
+
+###### Adaptive SoCs & FPGAs
+
+    * [Product Support](https://adaptivesupport.amd.com/)
+    * [Knowledge Base](https://adaptivesupport.amd.com/s/knowledge-base)
+    * [Community Forums](https://adaptivesupport.amd.com/s/topiccatalog)
+    * [Design Hubs](https://docs.amd.com/v/u/en-US/ug1776-adaptive-computing-design-hubs-lp)
+    * [Product Return](https://www.xilinx.com/support/quality/product-return.html)
+
+  * Shop 
+
+Shop AMD
+
+Shop AMD
+
+###### Gaming & Personal Computing
+
+    * [Ryzen Processors](https://shop-us-en.amd.com/processors)
+    * [Promotions & Bundles](https://shop-us-en.amd.com/amd-promotions/)
+    * [Shop All](https://shop-us-en.amd.com/)
+
+###### Adaptive & Embedded Computing
+
+    * [System-on-Modules (SOMs)](https://shop-us-en.amd.com/adaptive-embedded-computing/system-on-modules/)
+    * [Data Center Accelerator Cards](https://shop-us-en.amd.com/adaptive-embedded-computing/data-center-accelerator-cards/)
+    * [Adaptive SoC & FPGA Evaluation Kits](https://shop-us-en.amd.com/adaptive-embedded-computing/soc-fpga-evaluation-kits/)
+
+###### Get AMD Fan Gear
+
+    * [Visit the Store](https://amdfanstore.com/)
+
+###### Shop Our Retail Partners
+
+    * [Ryzen Processors](/en/where-to-buy/processors/ryzen.html)
+    * [Radeon Graphics Cards](https://www.amd.com/en/where-to-buy/graphics/radeon.html)
+    * [Advantage Laptops](https://www.amd.com/en/gaming/laptops/advantage-premium.html)
+    * [Advantage Desktops](https://www.amd.com/en/gaming/desktops/advantage-premium.html)
+    * [Gaming Handhelds](https://www.amd.com/en/gaming/handhelds.html)
+
+__
+
+  *   *     * [My Account](https://account.amd.com/en/profile.html)
+    * [Create Account](https://www.amd.com/en/registration/create-account.html)
+
+__
+
+  *   *     * [English](/en/products/accelerators/instinct/mi300/mi300x.html)
+    * [简体中文](/zh-cn.html)
+    * [繁體中文](/zh-tw/products/accelerators/instinct/mi300/mi300x.html)
+    * [Français](/fr/products/accelerators/instinct/mi300/mi300x.html)
+    * [Deutsch](/de/products/accelerators/instinct/mi300/mi300x.html)
+    * [日本語](/ja/products/accelerators/instinct/mi300/mi300x.html)
+    * [한국어](/ko/products/accelerators/instinct/mi300/mi300x.html)
+    * [Português](/pt/products/accelerators/instinct/mi300/mi300x.html)
+    * [Español](/es/products/accelerators/instinct/mi300/mi300x.html)
+
+__
+
+  *   *     * 
+
+ON THIS PAGE
+
+  * Overview 
+  * Specs Comparison 
+  * Support & Resources 
+  * More 
+
+  1. [ ](https://www.amd.com/en.html)
+  2. [ Products ](https://www.amd.com/en/products.html)
+  3. [ Instinct ](https://www.amd.com/en/products/accelerators/instinct.html)
+  4. [ MI300 Series ](https://www.amd.com/en/products/accelerators/instinct/mi300.html)
+  5. MI300X
+
+  * __Image Zoom
+
+__ __
+
+[__](/content/dam/amd/en/images/products/data-centers/2325906-amd-instinct-mi300x-product.jpg)
+
+# AMD Instinct™ MI300X Accelerators
+
+AMD Instinct™ MI300X accelerators are designed to deliver leadership performance for Generative AI workloads
+and HPC applications.
+
+[ View Datasheet __](/content/dam/amd/en/documents/instinct-tech-docs/data-sheets/amd-instinct-mi300x-data-
+sheet.pdf)
+
+[ AMD Instinct Solutions ](/en/where-to-buy/accelerators/instinct.html)
+
+Collapse All Expand All
+
+  * ##  Product Basics
+
+Name
+
+     AMD Instinct™ MI300X 
+
+Family
+
+     Instinct 
+
+Series
+
+     Instinct MI300 Series 
+
+Form Factor
+
+     Servers 
+
+Launch Date
+
+     12/06/2023 
+
+  * ##  GPU Specifications
+
+GPU Architecture
+
+     CDNA3 
+
+Lithography
+
+     TSMC 5nm | 6nm FinFET 
+
+Stream Processors
+
+     19,456 
+
+Matrix Cores
+
+     1216 
+
+Compute Units
+
+     304 
+
+Peak Engine Clock
+
+     2100 MHz 
+
+Peak Eight-bit Precision (FP8) Performance (E5M2, E4M3)
+
+     2.61 PFLOPs 
+
+Peak Eight-bit Precision (FP8) Performance with Structured Sparsity (E5M2, E4M3)
+
+     5.22 PFLOPs 
+
+Peak Half Precision (FP16) Performance
+
+     1.3 PFLOPs 
+
+Peak Half Precision (FP16) Performance with Structured Sparsity
+
+     2.61 PFLOPs 
+
+Peak Single Precision (TF32 Matrix) Performance
+
+     653.7 TFLOPs 
+
+Peak Single Precision (TF32) Performance with Structured Sparsity
+
+     1.3 PFLOPs 
+
+Peak Single Precision Matrix (FP32) Performance
+
+     163.4 TFLOPs 
+
+Peak Single Precision (FP32) Performance
+
+     163.4 TFLOPs 
+
+Peak Double Precision Matrix (FP64) Performance
+
+     163.4 TFLOPs 
+
+Peak Double Precision (FP64) Performance
+
+     81.7 TFLOPs 
+
+Peak INT8 Performance
+
+     2.6 POPs 
+
+Peak INT8 Performance with Structured Sparsity
+
+     5.22 POPs 
+
+Peak bfloat16
+
+     1.3 PFLOPs 
+
+Peak bfloat16 with Strutured Sparsity
+
+     2.61 PFLOPs 
+
+Transistor Count
+
+     153 Billion 
+
+  * ##  Requirements
+
+External Power Connectors
+
+     54V UBB 
+
+Typical Board Power (TBP)
+
+     750W Peak 
+
+  * ##  GPU Memory
+
+Last Level Cache (LLC)
+
+     256 MB 
+
+Dedicated Memory Size
+
+     192 GB 
+
+Dedicated Memory Type
+
+     HBM3 
+
+Infinity Cache
+
+     Yes 
+
+Memory Interface
+
+     8192-bit 
+
+Memory Clock
+
+     5.2 GHz 
+
+Peak Memory Bandwidth
+
+     5.3 TB/s 
+
+Memory ECC Support
+
+     Yes (Full-Chip) 
+
+  * ##  Board Specifications
+
+GPU Form Factor
+
+     OAM Module 
+
+Bus Type
+
+     PCIe® 5.0 x16 
+
+Infinity Fabric™ Links
+
+     8 
+
+Peak Infinity Fabric™ Link Bandwidth
+
+     128 GB/s 
+
+Cooling
+
+     Passive OAM 
+
+  * ##  Additional Features
+
+Supported Technologies
+
+     AMD CDNA™ 3 Architecture , AMD ROCm™ - Ecosystem without Borders , AMD Infinity Architecture 
+
+RAS Support
+
+     Yes 
+
+Page Retirement
+
+     Yes 
+
+Page Avoidance
+
+     Yes 
+
+SR-IOV
+
+     Yes 
+
+### Specs Comparisons
+
+  1. AI Performance 
+  2. HPC Performance
+  3. Memory
+
+### AI Performance (Peak TFLOPs)
+
+Up to 1.3X the AI performance vs. competitive accelerators1
+
+TF32 (Sparsity)
+
+989.6
+
+1307.4
+
+0
+
+1000
+
+2000
+
+3000
+
+4000
+
+5000
+
+6000
+
+7000
+
+H100 SXM5
+
+MI300X OAM
+
+FP16/BF16 (Sparsity)
+
+1978.9
+
+2614.9
+
+0
+
+1000
+
+2000
+
+3000
+
+4000
+
+5000
+
+6000
+
+7000
+
+H100 SXM5
+
+MI300X OAM
+
+FP8 (Sparsity)
+
+3957.8
+
+5229.8
+
+0
+
+1000
+
+2000
+
+3000
+
+4000
+
+5000
+
+6000
+
+7000
+
+H100 SXM5
+
+MI300X OAM
+
+### HPC Performance (Peak TFLOPs)
+
+Up to 2.4X the HPC performance vs. competitive accelerators2
+
+FP64 (Vector)
+
+33.5
+
+81.7
+
+0
+
+20
+
+40
+
+60
+
+80
+
+100
+
+120
+
+140
+
+160
+
+180
+
+H100 SXM5
+
+MI300X OAM
+
+FP64 (Tensor / Matrix)
+
+66.9
+
+163.4
+
+0
+
+20
+
+40
+
+60
+
+80
+
+100
+
+120
+
+140
+
+160
+
+180
+
+H100 SXM5
+
+MI300X OAM
+
+FP32 (Vector)
+
+66.9
+
+163.4
+
+0
+
+20
+
+40
+
+60
+
+80
+
+100
+
+120
+
+140
+
+160
+
+180
+
+H100 SXM5
+
+MI300X OAM
+
+### Memory Capacity & Bandwidth
+
+2.4X Memory Capacity and 1.6X Peak Theoretical Memory Bandwidth vs. competitive accelerators3
+
+Memory Capacity
+
+80
+
+192
+
+0GB
+
+50GB
+
+100GB
+
+150GB
+
+200GB
+
+250GB
+
+300GB
+
+H100 SXM5
+
+MI300X OAM
+
+Memory Bandwidth
+
+3.4
+
+5.3
+
+0TB/s
+
+1TB/s
+
+2TB/s
+
+3TB/s
+
+4TB/s
+
+5TB/s
+
+6TB/s
+
+7TB/s
+
+H100 SXM5
+
+MI300X OAM
+
+## Support & Resources
+
+###  AMD ROCm™ Software
+
+Optimize GPU-accelerated applications with AMD ROCm™ software. Built on a code-once, use-everywhere approach.
+
+[ROCm Developer Hub __](/en/developer/resources/rocm-hub.html)[About ROCm __](/en/products/software/rocm.html)
+
+[ ](/en/technologies/cdna.html)
+
+###  [AMD CDNA™ Architecture ](/en/technologies/cdna.html)
+
+Learn more about the architecture that underlies AMD Instinct GPUs.
+
+[Discover CDNA __](/en/technologies/cdna.html)
+
+###  AMD Instinct Documentation
+
+Find documentation about AMD Instinct GPUs on the Documentation Hub.
+
+[See Docs
+__](https://www.amd.com/en/search/documentation/hub.html#sortCriteria=%40amd_release_date%20descending&f-amd_product_brand=Instinct&f-amd_document_location=AMD.com&f-amd_archive_status=Active&f-amd_product_type=Accelerators)
+
+Footnotes __
+
+  1. MI300-17: Measurements conducted by AMD Performance Labs as of November 11th, 2023 on the AMD Instinct™ MI300X (750W) GPU designed with AMD CDNA™ 3 5nm | 6nm FinFET process technology at 2,100 MHz peak boost engine clock resulted in 653.7 TFLOPS peak theoretical TensorFloat-32 (TF32), 1307.4 TFLOPS peak theoretical half precision (FP16), 1307.4 TFLOPS peak theoretical Bfloat16 format precision (BF16), 2614.9 TFLOPS peak theoretical 8-bit precision (FP8), 2614.9 TOPs INT8 floating-point performance. The MI300X is expected to be able to take advantage of fine-grained structure sparsity providing an estimated 2x improvement in math efficiency resulting 1,307.4 TFLOPS peak theoretical TensorFloat-32 (TF32), 2,614.9 TFLOPS peak theoretical half precision (FP16), 2,614.9 TFLOPS peak theoretical Bfloat16 format precision (BF16), 5,229.8 TFLOPS peak theoretical 8-bit precision (FP8), 5,229.8 TOPs INT8 floating-point performance with sparsity. Published results on Nvidia H100 SXM (80GB) 700W GPU resulted in 989.4 TFLOPs peak TensorFloat-32 (TF32) with sparsity, 1,978.9 TFLOPS peak theoretical half precision (FP16) with sparsity, 1,978.9 TFLOPS peak theoretical Bfloat16 format precision (BF16) with sparsity, 3,957.8 TFLOPS peak theoretical 8-bit precision (FP8) with sparsity, 3,957.8 TOPs peak theoretical INT8 with sparsity floating-point performance. Nvidia H100 source: <https://resources.nvidia.com/en-us-tensor-core>[](https://resources.nvidia.com/en-us-tensor-core).
+  2. MI300-18: Measurements conducted by AMD Performance Labs as of November 11th, 2023 on the AMD Instinct™ MI300X (750W) GPU designed with AMD CDNA™ 3 5nm | 6nm FinFET process technology at 2,100 MHz peak boost engine clock resulted in 163.4 TFLOPs peak theoretical double precision Matrix (FP64 Matrix), 81.7 TFLOPs peak theoretical double precision (FP64), 163.4 TFLOPs peak theoretical single precision Matrix (FP32 Matrix), 163.4 TFLOPs peak theoretical single precision (FP32), 653.7 TFLOPS peak theoretical TensorFloat-32 (TF32), 1307.4 TFLOPS peak theoretical half precision (FP16), 1307.4 TFLOPS peak theoretical Bfloat16 format precision (BF16), 2614.9 TFLOPS peak theoretical 8-bit precision (FP8), 2614.9 TOPs INT8 floating-point performance. Published results on Nvidia H100 SXM (80GB) GPU resulted in 66.9 TFLOPs peak theoretical double precision tensor (FP64 Tensor), 33.5 TFLOPs peak theoretical double precision (FP64), 66.9 TFLOPs peak theoretical single precision (FP32), 494.7 TFLOPs peak TensorFloat-32 (TF32)*, 989.4 TFLOPS peak theoretical half precision tensor (FP16 Tensor), 133.8 TFLOPS peak theoretical half precision (FP16), 989.4 TFLOPS peak theoretical Bfloat16 tensor format precision (BF16 Tensor), 133.8 TFLOPS peak theoretical Bfloat16 format precision (BF16), 1,978.9 TFLOPS peak theoretical 8-bit precision (FP8), 1,978.9 TOPs peak theoretical INT8 floating-point performance. Nvidia H100 source: <https://resources.nvidia.com/en-us-tensor-core/>[](https://resources.nvidia.com/en-us-tensor-core/) * Nvidia H100 GPUs don’t support FP32 Tensor.
+  3. MI300-05A: Calculations conducted by AMD Performance Labs as of November 17, 2023, for the AMD Instinct™ MI300X OAM accelerator 750W (192 GB HBM3) designed with AMD CDNA™ 3 5nm FinFet process technology resulted in 192 GB HBM3 memory capacity and 5.325 TFLOPS peak theoretical memory bandwidth performance. MI300X memory bus interface is 8,192 and memory data rate is 5.2 Gbps for total peak memory bandwidth of 5.325 TB/s (8,192 bits memory bus interface * 5.2 Gbps memory data rate/8). The highest published results on the NVidia Hopper H200 (141GB) SXM GPU accelerator resulted in 141GB HBM3e memory capacity and 4.8 TB/s GPU memory bandwidth performance. <https://nvdam.widen.net/s/nb5zzzsjdf/hpc-datasheet-sc23-h200-datasheet-3002446>[](https://nvdam.widen.net/s/nb5zzzsjdf/hpc-datasheet-sc23-h200-datasheet-3002446) The highest published results on the NVidia Hopper H100 (80GB) SXM5 GPU accelerator resulted in 80GB HBM3 memory capacity and 3.35 TB/s GPU memory bandwidth performance. <https://resources.nvidia.com/en-us-tensor-core/nvidia-tensor-core-gpu-datasheet>[](https://resources.nvidia.com/en-us-tensor-core/nvidia-tensor-core-gpu-datasheet)
+
+Certain AMD technologies may require third-party enablement or activation. Supported features may vary by
+operating system. Please confirm with system manufacturer for specific features. No technology or product can
+be completely secure.
+
+[ Subscribe to the latest news from AMD ](/en/preferences/sign-up.html)
+
+  * [ Linkedin ](https://www.linkedin.com/company/amd)
+  * __
+    *     *       * [ AMD ](https://x.com/AMD)
+      * [ AI ](https://x.com/AIatAMD)
+      * [ Server ](https://x.com/AMDServer)
+      * [ Ryzen ](https://x.com/AMDRyzen)
+      * [ Radeon ](https://x.com/AMDRadeon)
+      * [ Embedded ](https://x.com/AMDEmbedded)
+      * [ Gaming ](https://x.com/AMDGaming)
+
+  * [ Instagram ](https://www.instagram.com/amd)
+  * __
+    *     *       * [ AMD ](https://www.youtube.com/user/amd)
+      * [ Developers ](https://www.youtube.com/@AMDDevCentral)
+      * [ Gaming ](https://www.youtube.com/@Gaming-AMD)
+
+  * [ Facebook ](http://www.facebook.com/amd)
+  * __
+    *     *       * [ Developers ](https://discord.com/invite/amd-dev)
+      * [ Gaming ](https://discord.gg/amd-gaming)
+
+  * [ Subscriptions ](https://www.amd.com/en/preferences.html)
+
+###### Company
+
+  * [About AMD](/en/corporate.html)
+  * [Management Team](/en/corporate/leadership.html)
+  * [Corporate Responsibility](/en/corporate/corporate-responsibility.html)
+  * [Careers](/en/corporate/careers.html)
+  * [Contact Us](/en/corporate/contacts.html)
+
+###### News & Events
+
+  * [Newsroom](https://newsroom.amd.com/)
+  * [Events](/en/corporate/events.html)
+  * [Media Library](/en/newsroom/media-library.html)
+
+###### Resources
+
+  * [Developer Central](/en/developer.html)
+  * [Blogs](/en/blogs.html)
+  * [Case Studies](/en/resources/case-studies.html)
+  * [Webinars](https://webinar.amd.com/meet-the-experts-hub/en/home)
+  * [Explore Resources](/en/resources.html)
+
+###### Partners
+
+  * [AMD Partner Hub](/en/partner.html)
+  * [Authorized Distributors](/en/partner/about-partners/authorized-distributors.html)
+  * [AMD University Program](/en/corporate/university-program.html)
+
+###### Investors
+
+  * [Investor Relations](https://ir.amd.com/)
+  * [Financial Information](https://ir.amd.com/financial-information)
+  * [Board of Directors](https://ir.amd.com/leadership-governance/board-of-directors)
+  * [Governance Documents](https://ir.amd.com/leadership-governance/governance-documents)
+  * [SEC Filings](https://ir.amd.com/sec-filings)
+
+  * [Terms and Conditions](/en/legal/copyright.html)
+  * [Privacy](/en/legal/privacy.html)
+  * [Trademarks](/en/legal/trademarks.html)
+  * [Supply Chain Transparency](https://www.amd.com/content/dam/amd/en/documents/corporate/cr/supply-chain-transparency.pdf)
+  * [Fair & Open Competition](/en/legal/competition.html)
+  * [UK Tax Strategy](https://www.amd.com/content/dam/amd/en/documents/corporate/amd-uk-tax-strategy.pdf)
+  * [Cookies Policy](/en/legal/cookies.html)
+  * Cookie Settings
+
+© 2026 Advanced Micro Devices, Inc.
+
+__ Feedback
+
+##### AMD.com Feedback

@@ -1,0 +1,372 @@
+SOURCE COPY — SRC-WHO-LMM
+Retrieved 2026-10-28 for Inside the Machine Mind (offline reference copy; excerpt of the original, formatting simplified).
+Original URL: https://www.who.int/news/item/18-01-2024-who-releases-ai-ethics-and-governance-guidance-for-large-multi-modal-models
+Page/document title: WHO releases AI ethics and governance guidance for large multi-modal models
+
+------------------------------------------------------------------------
+
+Skip to main content
+
+  * [ ](https://www.who.int/) [Global](https://www.who.int/)
+  * Regions
+
+WHO Regional websites
+
+__
+
+    * [ Africa ](https://www.afro.who.int/)
+    * [ Americas ](https://www.paho.org/en)
+    * [ South-East Asia ](https://www.who.int/southeastasia)
+    * [ Europe ](https://www.who.int/europe/)
+    * [ Eastern Mediterranean ](http://www.emro.who.int/index.html)
+    * [ Western Pacific ](https://www.who.int/westernpacific/)
+
+__
+
+__ When autocomplete results are available use up and down arrows to review and enter to select.
+
+__ Select language  Select language English العربية 中文 Français Русский Español Portugues __
+
+[ ](/ "Home")
+
+  * [Home](/)
+
+  * [Health Topics](/mega-menu/health-topics)
+
+  * [All topics](/health-topics/)
+  * [A](/health-topics/#A)
+  * [B](/health-topics/#B)
+  * [C](/health-topics/#C)
+  * [D](/health-topics/#D)
+  * [E](/health-topics/#E)
+  * [F](/health-topics/#F)
+  * [G](/health-topics/#G)
+  * [H](/health-topics/#H)
+  * [I](/health-topics/#I)
+  * [J](/health-topics/#J)
+  * [K](/health-topics/#K)
+  * [L](/health-topics/#L)
+  * [M](/health-topics/#M)
+  * [N](/health-topics/#N)
+  * [O](/health-topics/#O)
+  * [P](/health-topics/#P)
+  * [Q](/health-topics/#Q)
+  * [R](/health-topics/#R)
+  * [S](/health-topics/#S)
+  * [T](/health-topics/#T)
+  * [U](/health-topics/#U)
+  * [V](/health-topics/#V)
+  * [W](/health-topics/#W)
+  * [X](/health-topics/#X)
+  * [Y](/health-topics/#Y)
+  * [Z](/health-topics/#Z)
+
+  * [Resources](/mega-menu/health-topics/resources)
+    * [Fact sheets](/mega-menu/health-topics/resources/fact-sheets)
+    * [Facts in pictures](/mega-menu/health-topics/resources/facts-in-pictures)
+    * [Multimedia](/mega-menu/health-topics/resources/multimedia)
+    * [Podcasts](/mega-menu/health-topics/resources/podcasts)
+    * [Publications](/mega-menu/health-topics/resources/publications)
+    * [Questions and answers](/mega-menu/health-topics/resources/questions-and-answers)
+    * [Tools and toolkits](/mega-menu/health-topics/resources/tools-and-toolkits)
+
+  * [Popular](/mega-menu/health-topics/popular)
+    * [Dengue](/mega-menu/health-topics/popular/dengue)
+    * [Endometriosis](/mega-menu/health-topics/popular/endometriosis)
+    * [Excessive heat](/mega-menu/health-topics/popular/excessive-heat)
+    * [Herpes](/mega-menu/health-topics/popular/herpes)
+    * [Mental disorders](/mega-menu/health-topics/popular/mental-disorders)
+    * [Mpox](/mega-menu/health-topics/popular/mpox)
+
+  * [Countries](/mega-menu/countries)
+
+  * [All countries](/countries)
+  * [A](/countries/#A)
+  * [B](/countries/#B)
+  * [C](/countries/#C)
+  * [D](/countries/#D)
+  * [E](/countries/#E)
+  * [F](/countries/#F)
+  * [G](/countries/#G)
+  * [H](/countries/#H)
+  * [I](/countries/#I)
+  * [J](/countries/#J)
+  * [K](/countries/#K)
+  * [L](/countries/#L)
+  * [M](/countries/#M)
+  * [N](/countries/#N)
+  * [O](/countries/#O)
+  * [P](/countries/#P)
+  * [Q](/countries/#Q)
+  * [R](/countries/#R)
+  * [S](/countries/#S)
+  * [T](/countries/#T)
+  * [U](/countries/#U)
+  * [V](/countries/#V)
+  * [W](/countries/#W)
+  * [X](/countries/#X)
+  * [Y](/countries/#Y)
+  * [Z](/countries/#Z)
+
+  * [Regions](/mega-menu/countries/regions)
+    * [Africa](/mega-menu/countries/regions/africa)
+    * [Americas](/mega-menu/countries/regions/americas)
+    * [Europe](/mega-menu/countries/regions/europe)
+    * [Eastern Mediterranean](/mega-menu/countries/regions/eastern-mediterranean)
+    * [South-East Asia ](/mega-menu/countries/regions/south-east-asia)
+    * [Western Pacific](/mega-menu/countries/regions/western-pacific)
+
+  * [WHO in countries](/mega-menu/countries/who-in-countries)
+    * [Data by country](/mega-menu/countries/who-in-countries/data-by-country)
+    * [Country presence ](/mega-menu/countries/who-in-countries/country-presence)
+    * [Country cooperation strategies ](/mega-menu/countries/who-in-countries/country-cooperation-strategies)
+    * [Country office profiles](/mega-menu/countries/who-in-countries/country-office-profiles)
+    * [Strengthening country offices ](/mega-menu/countries/who-in-countries/country-strengthening)
+
+  * [Newsroom](/news-room)
+
+  * [Newsroom](/mega-menu/news/all-news)
+    * [News releases](/mega-menu/news/all-news/releases)
+    * [Statements](/mega-menu/news/all-news/statements)
+    * [Campaigns](/mega-menu/news/all-news/campaigns)
+    * [Events](/mega-menu/news/all-news/events)
+    * [Feature stories](/mega-menu/news/all-news/feature-stories)
+    * [Speeches](/mega-menu/news/all-news/speecheshub)
+    * [Commentaries](/mega-menu/news/all-news/commentaries)
+    * [Photo library](/mega-menu/news/all-news/photo-library)
+
+  * [Headlines](/news-room/headlines)
+
+  * [Emergencies](/mega-menu/emergencies)
+
+  * [In focus](/mega-menu/emergencies/emergencies)
+    * [Cholera ](/mega-menu/emergencies/emergencies/cholera)
+    * [Ebola disease](/mega-menu/emergencies/emergencies/ebola-disease)
+    * [Israel and the occupied Palestinian territory](/mega-menu/emergencies/emergencies/israel-and-occupied-palestinian-territory)
+    * [Middle East](/mega-menu/emergencies/emergencies/middle-east)
+    * [Sudan](/mega-menu/emergencies/emergencies/sudan)
+    * [Ukraine](/mega-menu/emergencies/emergencies/ukraine-emergency)
+
+  * [Latest](/mega-menu/emergencies/news)
+    * [Disease Outbreak News](/mega-menu/emergencies/news/disease-outbreak-news)
+    * [Situation reports](/mega-menu/emergencies/news/situation-reports)
+    * [Rapid risk assessments](/mega-menu/emergencies/news/rapid-risk-assessment)
+    * [Weekly Epidemiological Record](/mega-menu/emergencies/news/weekly-epidemiological-record)
+
+  * [WHO in emergencies](/mega-menu/emergencies/who-in-emergencies)
+    * [Surveillance](/mega-menu/emergencies/who-in-emergencies/surveillance)
+    * [Alert and response](/mega-menu/emergencies/who-in-emergencies/alert-and-response)
+    * [Operations](/mega-menu/emergencies/who-in-emergencies/operations)
+    * [Research](/mega-menu/emergencies/who-in-emergencies/research-development)
+    * [Funding](/mega-menu/emergencies/who-in-emergencies/funding)
+    * [Partners](/mega-menu/emergencies/who-in-emergencies/partners)
+    * [Health emergency appeals](/mega-menu/emergencies/who-in-emergencies/health-emergency-appeal)
+    * [International Health Regulations](/mega-menu/emergencies/who-in-emergencies/international-health-regulations)
+    * [Independent Oversight and Advisory Committee](/mega-menu/emergencies/who-in-emergencies/independent-oversight-and-advisory-committee)
+
+  * [Data](/mega-menu/data)
+
+  * [Data at WHO](/mega-menu/data/data-who)
+    * [Data hub](/mega-menu/data/data-who/data-hub)
+    * [Global Health Estimates](/mega-menu/data/data-who/global-health-estimates)
+    * [Health inequality](/mega-menu/data/data-who/health-inequality)
+    * [Global Health Observatory](/mega-menu/data/data-who/global-health-obsevatory)
+
+  * [Dashboards](/mega-menu/data/dashboards)
+    * [Triple Billion Progress](/mega-menu/data/dashboards/triple-billion-progress)
+    * [Health Inequality Monitor](/mega-menu/data/dashboards/health-inequality-monitor)
+    * [Delivery for impact](/mega-menu/data/dashboards/delivery-for-impact)
+    * [COVID-19 dashboard](/mega-menu/data/dashboards/covid-19-dashboard)
+
+  * [Data collection](/mega-menu/data/data-collection)
+    * [Classifications](/mega-menu/data/data-collection/classifications)
+    * [SCORE](/mega-menu/data/data-collection/score)
+    * [Surveys](/mega-menu/data/data-collection/surveys)
+    * [Civil registration and vital statistics](/mega-menu/data/data-collection/civil-registration-and-vital-statistics)
+    * [Routine health information systems](/mega-menu/data/data-collection/routine-health-information-systems)
+    * [Harmonized health facility assessment](/mega-menu/data/data-collection/harmonized-health-facility-assessment)
+    * [GIS centre for health](/mega-menu/data/data-collection/gis-centre-for-health)
+
+  * [Reports](/mega-menu/data/reports)
+    * [World Health Statistics](/mega-menu/data/reports/world-health-statistics)
+    * [UHC global monitoring report](/mega-menu/data/reports/uhc-global-monitoring-report)
+
+  * [About WHO](/mega-menu/about-us)
+
+  * [About WHO](/mega-menu/about-us/about)
+    * [Partnerships](/mega-menu/about-us/about/partnerships-and-collaboration)
+    * [Committees and advisory groups](/mega-menu/about-us/about/expert-groups)
+    * [Collaborating centres](/mega-menu/about-us/about/collaborating-centres)
+    * [Technical teams](/mega-menu/about-us/about/teams)
+    * [Organizational structure](/mega-menu/about-us/about/structure)
+    * [Who we are](/mega-menu/about-us/about/who-we-are)
+
+  * [Our work](/mega-menu/about-us/our-work)
+    * [Activities](/mega-menu/about-us/our-work/activities)
+    * [Initiatives](/mega-menu/about-us/our-work/initiatives)
+    * [General Programme of Work](/mega-menu/about-us/our-work/global-programme-of-work)
+    * [WHO Academy](/mega-menu/about-us/our-work/who-academy)
+
+  * [Funding](/mega-menu/about-us/who-funding)
+    * [Investment in WHO](/mega-menu/about-us/who-funding/investment-case)
+    * [WHO Foundation](/mega-menu/about-us/who-funding/who-foundation)
+
+  * [Accountability](/mega-menu/about-us/accountability)
+    * [External audit](/mega-menu/about-us/accountability/audit)
+    * [Financial statements](/mega-menu/about-us/accountability/financial-statements)
+    * [Internal audit and investigations ](/mega-menu/about-us/accountability/internal-audit-and-investigations)
+    * [Programme Budget](/mega-menu/about-us/accountability/budget)
+    * [Results reports](/mega-menu/about-us/accountability/results-report)
+
+  * [Governance](/mega-menu/about-us/governance)
+    * [Governing bodies](/mega-menu/about-us/governance/governing-bodies-website)
+    * [World Health Assembly](/mega-menu/about-us/governance/wha)
+    * [Executive Board](/mega-menu/about-us/governance/eb)
+    * [Member States Portal](/mega-menu/about-us/governance/member-states-portal)
+
+  * [Home](/)/
+  * [News](/news)/
+  * [item](/news/item)/
+  * WHO releases AI ethics and governance guidance for large multi-modal models
+
+WHO/ Fabeha Monir  
+WHO Bangladesh Office data analysts are in the control room, where dengue related data is monitored and
+stored.
+
+(C) Credits  __
+
+# WHO releases AI ethics and governance guidance for large multi-modal models
+
+18 January 2024
+
+News release
+
+Reading time:
+
+The World Health Organization (WHO) is releasing new guidance on the [ethics and governance of large multi-
+modal models](/publications/i/item/9789240084759) (LMMs) - a type of fast growing generative artificial
+intelligence (AI) technology with applications across health care.
+
+The guidance outlines over 40 recommendations for consideration by governments, technology companies, and
+health care providers to ensure the appropriate use of LMMs to promote and protect the health of populations.
+
+LMMs can accept one or more type of data inputs, such as text, videos, and images, and generate diverse
+outputs not limited to the type of data inputted. LMMs are unique in their mimicry of human communication and
+ability to carry out tasks they were not explicitly programmed to perform. LMMs have been adopted faster than
+any consumer application in history, with several platforms - such as ChatGPT, Bard and Bert - entering the
+public consciousness in 2023.
+
+"Generative AI technologies have the potential to improve health care but only if those who develop, regulate,
+and use these technologies identify and fully account for the associated risks," said Dr Jeremy Farrar, WHO
+Chief Scientist. "We need transparent information and policies to manage the design, development, and use of
+LMMs to achieve better health outcomes and overcome persisting health inequities."
+
+### Potential benefits and risks
+
+The new WHO guidance outlines five broad applications of LMMs for health:
+
+  * Diagnosis and clinical care, such as responding to patients' written queries;
+  * Patient-guided use, such as for investigating symptoms and treatment;
+  * Clerical and administrative tasks, such as documenting and summarizing patient visits within electronic health records;
+  * Medical and nursing education, including providing trainees with simulated patient encounters, and;
+  * Scientific research and drug development, including to identify new compounds.   
+
+While LMMs are starting to be used for specific health-related purposes, there are also documented risks of
+producing false, inaccurate, biased, or incomplete statements, which could harm people using such information
+in making health decisions. Furthermore, LMMs may be trained on data that are of poor quality or biased,
+whether by race, ethnicity, ancestry, sex, gender identity, or age.
+
+The guidance also details broader risks to health systems, such as accessibility and affordability of the
+best-performing LMMs. LMMS can also encourage 'automation bias' by health care professionals and patients,
+whereby errors are overlooked that would otherwise have been identified or difficult choices are improperly
+delegated to a LMM. LMMs, like other forms of AI, are also vulnerable to cybersecurity risks that could
+endanger patient information or the trustworthiness of these algorithms and the provision of health care more
+broadly.
+
+To create safe and effective LMMs, WHO underlines the need for engagement of various stakeholders:
+governments, technology companies, healthcare providers, patients, and civil society, in all stages of
+development and deployment of such technologies, including their oversight and regulation.
+
+"Governments from all countries must cooperatively lead efforts to effectively regulate the development and
+use of AI technologies, such as LMMs," said Dr Alain Labrique, WHO Director for Digital Health and Innovation
+in the Science Division.
+
+### Key recommendations
+
+The new WHO guidance includes recommendations for governments, who have the primary responsibility to set
+standards for the development and deployment of LMMs, and their integration and use for public health and
+medical purposes. For example, governments should:
+
+  * Invest in or provide not-for-profit or public infrastructure, including computing power and public data sets, accessible to developers in the public, private and not-for-profit sectors, that requires users to adhere to ethical principles and values in exchange for access.
+  * Use laws, policies and regulations to ensure that LMMs and applications used in health care and medicine, irrespective of the risk or benefit associated with the AI technology, meet ethical obligations and human rights standards that affect, for example, a person's dignity, autonomy or privacy.
+  * Assign an existing or new regulatory agency to assess and approve LMMs and applications intended for use in health care or medicine - as resources permit. 
+  * Introduce mandatory post-release auditing and impact assessments, including for data protection and human rights, by independent third parties when an LMM is deployed on a large scale. The auditing and impact assessments should be published and should include outcomes and impacts disaggregated by the type of user, including for example by age, race or disability.
+
+The guidance also includes the following key recommendations for developers of LMMs, who should ensure that:
+
+  * LMMs are designed not only by scientists and engineers. Potential users and all direct and indirect stakeholders, including medical providers, scientific researchers, health care professionals and patients, should be engaged from the early stages of AI development in structured, inclusive, transparent design and given opportunities to raise ethical issues, voice concerns and provide input for the AI application under consideration.
+  * LMMs are designed to perform well-defined tasks with the necessary accuracy and reliability to improve the capacity of health systems and advance patient interests. Developers should also be able to predict and understand potential secondary outcomes. 
+
+### Editor's note
+
+The new document on Ethics and governance of AI for health Guidance on large multi-modal models is based on
+WHO's guidance published in June 2021. Access the publication [here ](/publications/i/item/9789240084759)  
+
+
+
+Media Contacts
+
+WHO Media Team
+
+  
+World Health Organization
+
+**Email:** [mediainquiries@who.int](mailto:mediainquiries@who.int?Subject=RE)
+
+Related
+
+[Ethics and governance of artificial intelligence for health: Guidance on large multi-modal
+models](/publications/i/item/9789240084759)
+
+  * [Regions](/redirect-pages/footer/regions)
+    * [Africa](/redirect-pages/footer/regions/africa)
+    * [Americas](/redirect-pages/footer/regions/americas)
+    * [Eastern Mediterranean](/redirect-pages/footer/regions/eastern-mediterranen)
+    * [Europe](/redirect-pages/footer/regions/europe)
+    * [South-East Asia](/redirect-pages/footer/regions/south-east-asia)
+    * [Western Pacific](/redirect-pages/footer/regions/western-pacific)
+  * [Policies](/redirect-pages/footer/who-policies)
+    * [Cybersecurity](/redirect-pages/footer/who-policies/cybersecurity)
+    * [Ethics](/redirect-pages/footer/who-policies/ethics)
+    * [Information disclosure](/redirect-pages/footer/who-policies/information-disclosure)
+    * [Permissions and licensing](/redirect-pages/footer/who-policies/permissions-and-licensing)
+    * [Preventing sexual exploitation](/redirect-pages/footer/who-policies/preventing-sexual-exploitation)
+    * [Terms of use](/redirect-pages/footer/who-policies/terms-of-use)
+  * [About us](/redirect-pages/footer/about-us)
+    * [Careers](/redirect-pages/footer/about-us/careers)
+    * [Frequently asked questions](/redirect-pages/footer/about-us/frequently-asked-questions)
+    * [Library](/redirect-pages/footer/about-us/library)
+    * [Procurement](/redirect-pages/footer/about-us/procurement)
+    * [Publications](/redirect-pages/footer/about-us/publications)
+
+  * [Contact us](/about/contact-us)
+
+[Newsletters](/redirect-pages/footer/about-us/newsletters)
+
+[Report misconduct](/about/office-of-internal-oversight-services/integrity-hotline)
+
+[ ](/ "Home")
+
+[Privacy policy](/about/policies/privacy)
+
+[ ](https://www.youtube.com/user/who?sub_confirmation=1 "Follow WHO on Youtube")
+[](https://twitter.com/intent/follow?source=followbutton&variant=1.0&screen_name=who "Follow WHO on Twitter")
+[ ](https://www.facebook.com/WHO "Follow WHO on Facebook") [ ](https://instagram.com/who "Follow WHO on
+Instagram") [ ](https://www.linkedin.com/company/world-health-organization "Follow WHO on LinkedIn") [
+](https://www.snapchat.com/add/who "Follow WHO on Snapchat") [ ](https://www.tiktok.com/@who?lang=en "Follow
+WHO on TikTok")
+
+©  2026
+
+[WHO](/about/policies/terms-of-use)
+

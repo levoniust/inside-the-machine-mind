@@ -1,0 +1,410 @@
+SOURCE COPY — SRC-BACKPROP
+Retrieved 2026-10-21 for Inside the Machine Mind (offline reference copy; excerpt of the original, formatting simplified).
+Original URL: https://www.nature.com/articles/323533a0
+Page/document title: Learning representations by back-propagating errors | Nature
+
+------------------------------------------------------------------------
+
+Skip to main content
+
+Thank you for visiting nature.com. You are using a browser version with limited support for CSS. To obtain the
+best experience, we recommend you use a more up to date browser (or turn off compatibility mode in Internet
+Explorer). In the meantime, to ensure continued support, we are displaying the site without styles and
+JavaScript.
+
+Advertisement
+
+[
+](//pubads.g.doubleclick.net/gampad/jump?iu=/285/nature.com/article&sz=728x90&c=1824164057&t=pos%3Dtop%26type%3Darticle%26artid%3D323533a0%26doi%3D10.1038/323533a0%26kwrd%3DScience%2C+Humanities+and+Social+Sciences%2C+multidisciplinary,Science%2C+multidisciplinary)
+
+[ ](/)
+
+  * [ View all journals ](https://www.nature.com/siteindex)
+  * [ Saved research ](/saved-research)
+  * Search
+  * [ Account ](https://my-profile.springernature.com) [ Log in ](https://idp.nature.com/auth/personal/springernature?client_id=grover&redirect_uri=https%3A%2F%2Fwww.nature.com%2Farticles%2F323533a0)
+
+  * Content Explore content
+  * About the journal
+  * Publish with us
+  * [ Subscribe ](/nature/subscribe)
+
+  * [ Sign up for alerts ](https://journal-alerts.springernature.com/subscribe?journal_id=41586)
+  * [ RSS feed ](https://www.nature.com/nature.rss)
+
+  1. [nature](/)
+  2. [letters](/nature/articles?type=letter)
+  3. article
+
+  * Letter
+  * Published: 09 October 1986
+
+# Learning representations by back-propagating errors
+
+  * David E. Rumelhart1, 
+  * Geoffrey E. Hinton2 &
+  * Ronald J. Williams1
+
+[_Nature_](/) **volume 323**, pages 533–536 (1986) Cite this article
+
+Save article
+
+[ View saved research ](/saved-research)
+
+  * 269k Accesses
+
+  * 27k Citations
+
+  * 879 Altmetric
+
+  * [Metrics details](/articles/323533a0/metrics)
+
+## Abstract
+
+We describe a new learning procedure, back-propagation, for networks of neurone-like units. The procedure
+repeatedly adjusts the weights of the connections in the network so as to minimize a measure of the difference
+between the actual output vector of the net and the desired output vector. As a result of the weight
+adjustments, internal ‘hidden’ units which are not part of the input or output come to represent important
+features of the task domain, and the regularities in the task are captured by the interactions of these units.
+The ability to create useful new features distinguishes back-propagation from earlier, simpler methods such as
+the perceptron-convergence procedure1.
+
+This is a preview of subscription content, [access via your
+institution](https://wayf.springernature.com?redirect_uri=https%3A%2F%2Fwww.nature.com%2Farticles%2F323533a0)
+
+## Access options
+
+[ Access through your institution
+](https://wayf.springernature.com?redirect_uri=https%3A%2F%2Fwww.nature.com%2Farticles%2F323533a0)
+
+Subscribe to this journal
+
+Receive 51 print issues and online access
+
+$199.00 per year only $3.90 per issue
+
+[Learn more](https://www.nature.com/nature/subscribe)
+
+Buy this article
+
+  * Purchase on SpringerLink
+  * Instant access to the full article PDF.
+
+USD 39.95
+
+Prices may be subject to local taxes which are calculated during checkout
+
+### Additional access options:
+
+  * [Log in](https://idp.nature.com/auth/personal/springernature?client_id=grover&redirect_uri=https%3A%2F%2Fwww.nature.com%2Farticles%2F323533a0)
+  * [Learn about institutional subscriptions](https://www.springernature.com/gp/librarians/licensing/license-options)
+  * [Read our FAQs](https://support.nature.com/en/support/home)
+  * [Contact customer support](https://www.springernature.com/gp/contact)
+
+### Similar content being viewed by others
+
+###  [Inferring neural activity before plasticity as a foundation for learning beyond backpropagation
+](https://www.nature.com/articles/s41593-023-01514-1?fromPaywallRec=true)
+
+Article Open access 03 January 2024
+
+###  [Vectorized instructive signals in cortical dendrites
+](https://www.nature.com/articles/s41586-026-10190-7?fromPaywallRec=true)
+
+Article Open access 25 February 2026
+
+###  [Schema formation in a neural population subspace underlies learning-to-learn in flexible sensorimotor
+problem-solving ](https://www.nature.com/articles/s41593-023-01293-9?fromPaywallRec=true)
+
+Article 06 April 2023
+
+### Explore related subjects
+
+Discover the latest articles and news in related subjects.
+
+  * [Neural Network Architectures for Visual Pattern Recognition](/subjects/neural-network-architectures-for-visual-pattern-recognition)
+
+## References
+
+  1. Rosenblatt, F. _Principles of Neurodynamics_ (Spartan, Washington, DC, 1961).
+
+[ Google
+Scholar](http://scholar.google.com/scholar_lookup?&title=Principles%20of%20Neurodynamics&publication_year=1961&author=Rosenblatt%2CF)
+
+  2. Minsky, M. L. & Papert, S. _Perceptrons_ (MIT, Cambridge, 1969).
+
+[MATH](http://www.emis.de/MATH-item?0197.43702) [ Google
+Scholar](http://scholar.google.com/scholar_lookup?&title=Perceptrons&publication_year=1969&author=Minsky%2CML&author=Papert%2CS)
+
+  3. Le Cun, Y. _Proc. Cognitiva_ **85** , 599–604 (1985).
+
+[ Google
+Scholar](http://scholar.google.com/scholar_lookup?&title=&journal=Proc.%20Cognitiva&volume=85&pages=599-604&publication_year=1985&author=Le%20Cun%2CY)
+
+  4. Rumelhart, D. E., Hinton, G. E. & Williams, R. J. in _Parallel Distributed Processing: Explorations in the Microstructure of Cognition._ Vol. **1** : _Foundations_ (eds Rumelhart, D. E. & McClelland, J. L.) 318–362 (MIT, Cambridge, 1986).
+
+[Book](https://doi.org/10.7551%2Fmitpress%2F5236.001.0001) [ Google
+Scholar](http://scholar.google.com/scholar_lookup?&title=Parallel%20Distributed%20Processing%3A%20Explorations%20in%20the%20Microstructure%20of%20Cognition.&doi=10.7551%2Fmitpress%2F5236.001.0001&pages=318-362&publication_year=1986&author=Rumelhart%2CDE&author=Hinton%2CGE&author=Williams%2CRJ)
+
+[Download references](https://citation-
+needed.springer.com/v2/references/10.1038/323533a0?format=refman&flavour=references)
+
+## Author information
+
+### Authors and Affiliations
+
+  1. Institute for Cognitive Science, C-015, University of California, San Diego, La Jolla, California, 92093, USA
+
+David E. Rumelhart & Ronald J. Williams
+
+  2. Department of Computer Science, Carnegie-Mellon University, Pittsburgh, Philadelphia, 15213, USA
+
+Geoffrey E. Hinton
+
+Authors
+
+  1. David E. Rumelhart
+
+[View author publications](/search?author=David%20E.%20Rumelhart)
+
+Search author
+on:[PubMed](https://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&term=David%20E.%20Rumelhart) [Google
+Scholar](https://scholar.google.co.uk/scholar?as_q=&num=10&btnG=Search+Scholar&as_epq=&as_oq=&as_eq=&as_occt=any&as_sauthors=%22David%20E.%20Rumelhart%22&as_publication=&as_ylo=&as_yhi=&as_allsubj=all&hl=en)
+
+  2. Geoffrey E. Hinton
+
+[View author publications](/search?author=Geoffrey%20E.%20Hinton)
+
+Search author
+on:[PubMed](https://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&term=Geoffrey%20E.%20Hinton) [Google
+Scholar](https://scholar.google.co.uk/scholar?as_q=&num=10&btnG=Search+Scholar&as_epq=&as_oq=&as_eq=&as_occt=any&as_sauthors=%22Geoffrey%20E.%20Hinton%22&as_publication=&as_ylo=&as_yhi=&as_allsubj=all&hl=en)
+
+  3. Ronald J. Williams
+
+[View author publications](/search?author=Ronald%20J.%20Williams)
+
+Search author
+on:[PubMed](https://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&term=Ronald%20J.%20Williams) [Google
+Scholar](https://scholar.google.co.uk/scholar?as_q=&num=10&btnG=Search+Scholar&as_epq=&as_oq=&as_eq=&as_occt=any&as_sauthors=%22Ronald%20J.%20Williams%22&as_publication=&as_ylo=&as_yhi=&as_allsubj=all&hl=en)
+
+## Rights and permissions
+
+[Reprints and
+permissions](https://s100.copyright.com/AppDispatchServlet?title=Learning%20representations%20by%20back-
+propagating%20errors&author=David%20E.%20Rumelhart%20et%20al&contentID=10.1038%2F323533a0&copyright=Springer%20Nature%20Limited&publication=0028-0836&publicationDate=1986-10-09&publisherName=SpringerNature&orderBeanReset=true)
+
+## About this article
+
+### Cite this article
+
+Rumelhart, D., Hinton, G. & Williams, R. Learning representations by back-propagating errors. _Nature_ **323**
+, 533–536 (1986). https://doi.org/10.1038/323533a0
+
+[Download citation](https://citation-
+needed.springer.com/v2/references/10.1038/323533a0?format=refman&flavour=citation)
+
+  * Received: 01 May 1986
+
+  * Accepted: 31 July 1986
+
+  * Issue date: 09 October 1986
+
+  * DOI: https://doi.org/10.1038/323533a0
+
+### Share this article
+
+Anyone you share the following link with will be able to read this content:
+
+Get shareable link
+
+Sorry, a shareable link is not currently available for this article.
+
+Copy shareable link to clipboard
+
+Provided by the Springer Nature SharedIt content-sharing initiative
+
+## Comments
+
+Commenting on this article is now closed.
+
+  1. Robert Pahel-Short 20 March 2018, 18:35
+
+What a classic.
+
+  2. VitorTS 22 August 2020, 23:29
+
+Amazing how it stood to this day
+
+[ Access through your institution
+](https://wayf.springernature.com?redirect_uri=https%3A%2F%2Fwww.nature.com%2Farticles%2F323533a0)
+
+Buy or subscribe
+
+## Associated content
+
+Collection
+
+###  [Nobel Prize in Physics 2024](https://www.nature.com/collections/ehbjaifcgc)
+
+Advertisement
+
+[
+](//pubads.g.doubleclick.net/gampad/jump?iu=/285/nature.com/article&sz=300x250&c=1505379769&t=pos%3Dright%26type%3Darticle%26artid%3D323533a0%26doi%3D10.1038/323533a0%26kwrd%3DScience%2C+Humanities+and+Social+Sciences%2C+multidisciplinary,Science%2C+multidisciplinary)
+
+## Explore content
+
+  * [ Research articles ](/nature/research-articles)
+  * [ News ](/news)
+  * [ Opinion ](/opinion)
+  * [ Research Analysis ](/research-analysis)
+  * [ Careers ](/careers)
+  * [ Books & Culture ](/books-culture)
+  * [ Podcasts ](/nature/podcasts)
+  * [ Videos ](/nature/videos)
+  * [ Current issue ](/nature/current-issue)
+  * [ Browse issues ](/nature/browse-issues)
+  * [ Collections ](/nature/collections)
+  * [ Subjects ](/nature/browse-subjects)
+
+  * [Follow us on Facebook ](https://www.facebook.com/Nature)
+  * [Follow us on Bluesky ](https://bsky.app/profile/nature.com)
+  * [Follow us on X ](https://twitter.com/nature)
+  * [ Subscribe ](https://www.nature.com/nature/subscribe)
+  * [Sign up for alerts ](https://journal-alerts.springernature.com/subscribe?journal_id=41586)
+  * [ RSS feed ](https://www.nature.com/nature.rss)
+
+## About the journal
+
+  * [ Journal Staff ](/nature/journal-staff)
+  * [ Research Cross-Journal Editorial Team ](/nature/research-cross-journal-editorial-team)
+  * [ Editors ](/nature/editors)
+  * [ Journal Information ](/nature/journal-information)
+  * [ Journal Metrics ](/nature/journal-impact)
+  * [ Our publishing models ](/nature/our-publishing-models)
+  * [ Editorial Values Statement ](/nature/editorial-values-statement)
+  * [ Editorial policies ](/nature/editorial-policies)
+  * [ Journalistic Principles ](/nature/journalistic-principles)
+  * [ History of Nature ](/nature/history-of-nature)
+  * [ Awards ](/nature/awards)
+  * [ Contact ](/nature/contact)
+  * [ Send a news tip ](/nature/send-a-news-tip)
+
+## Publish with us
+
+  * [ For Authors ](/nature/for-authors)
+  * [ For Referees ](/nature/for-referees)
+  * [ Language editing services ](https://authorservices.springernature.com/go/sn/?utm_source=For+Authors&utm_medium=Website_Nature&utm_campaign=Platform+Experimentation+2022&utm_id=PE2022)
+  * [Open access funding](/nature/open-access-funding)
+  * [Submit manuscript ](https://mts-nature.nature.com/)
+
+## Search
+
+Search articles by subject, keyword or author
+
+Show results from All journals This journal
+
+Search
+
+[ Advanced search ](/search/advanced)
+
+### Quick links
+
+  * [Explore articles by subject](/subjects)
+  * [Find a job](/naturecareers)
+  * [Guide to authors](/authors/index.html)
+  * [Editorial policies](/authors/editorial_policies/)
+
+Nature  (_Nature_)
+
+ISSN 1476-4687 (online)
+
+ISSN 0028-0836 (print)
+
+## nature.com footer links
+
+### About Nature Portfolio
+
+  * [About us](https://www.nature.com/npg_/company_info/index.html)
+  * [Press releases](https://www.nature.com/npg_/press_room/press_releases.html)
+  * [Press office](https://press.nature.com/)
+  * [Contact us](https://support.nature.com/support/home)
+
+### Discover content
+
+  * [Journals A-Z](https://www.nature.com/siteindex)
+  * [Articles by subject](https://www.nature.com/subjects)
+  * [protocols.io](https://www.protocols.io/)
+  * [Nature Index](https://www.natureindex.com/)
+
+### Publishing policies
+
+  * [Nature portfolio policies](https://www.nature.com/authors/editorial_policies)
+  * [Open access](https://www.nature.com/nature-portfolio/for-authors/openaccess)
+
+### Author & Researcher services
+
+  * [Reprints & permissions](https://www.nature.com/reprints)
+  * [Research data](https://www.springernature.com/gp/authors/research-data)
+  * [Language editing](https://authorservices.springernature.com/language-editing/)
+  * [Scientific editing](https://authorservices.springernature.com/scientific-editing/)
+  * [Nature Masterclasses](https://masterclasses.nature.com/)
+  * [Research Solutions](https://solutions.springernature.com/)
+
+### Libraries & institutions
+
+  * [Librarian service & tools](https://www.springernature.com/gp/librarians/tools-services)
+  * [Librarian portal](https://www.springernature.com/gp/librarians/manage-your-account/librarianportal)
+  * [Open research](https://www.nature.com/openresearch/about-open-access/information-for-institutions)
+  * [Recommend to library](https://www.springernature.com/gp/librarians/recommend-to-your-library)
+
+### Advertising & partnerships
+
+  * [Advertising](https://partnerships.nature.com/product/digital-advertising/)
+  * [Partnerships & Services](https://partnerships.nature.com/)
+  * [Media kits](https://partnerships.nature.com/media-kits/)
+  * [Branded content](https://partnerships.nature.com/product/branded-content-native-advertising/)
+
+### Professional development
+
+  * [Nature Awards](https://www.nature.com/immersive/natureawards/index.html)
+  * [Nature Careers](https://www.nature.com/naturecareers/)
+  * [Nature Conferences](https://conferences.nature.com)
+
+### Regional websites
+
+  * [Nature Africa](https://www.nature.com/natafrica)
+  * [Nature China](http://www.naturechina.com)
+  * [Nature India](https://www.nature.com/nindia)
+  * [Nature Japan](https://www.natureasia.com/ja-jp)
+  * [Nature Middle East](https://www.nature.com/nmiddleeast)
+
+  * [Privacy Policy](https://www.nature.com/info/privacy)
+  * [Use of cookies](https://www.nature.com/info/cookies)
+  * Your privacy choices/Manage cookies 
+  * [Legal notice](https://www.nature.com/info/legal-notice)
+  * [Accessibility statement](https://www.nature.com/info/accessibility-statement)
+  * [Terms & Conditions](https://www.nature.com/info/terms-and-conditions)
+  * [Your US state privacy rights](https://www.springernature.com/ccpa)
+
+[ ](https://www.springernature.com/)
+
+(C) 2026 Springer Nature Limited
+
+Close banner Close
+
+Sign up for the _Nature Briefing_ newsletter — what matters in science, free to your inbox daily.
+
+Email address
+
+Sign up
+
+I agree my information will be processed in accordance with the _Nature_ and Springer Nature Limited [Privacy
+Policy](https://www.nature.com/info/privacy).
+
+Close banner Close
+
+Get the most important science stories of the day, free in your inbox. [Sign up for Nature Briefing
+](https://www.nature.com/briefing/signup/?brieferEntryPoint=MainBriefingBanner)
+
+  *[DOI]: Digital Object Identifier
+  *[ISSN]: International Standard Serial Number

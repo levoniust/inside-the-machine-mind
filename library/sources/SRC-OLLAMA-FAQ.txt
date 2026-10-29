@@ -1,0 +1,1459 @@
+SOURCE COPY — SRC-OLLAMA-FAQ
+Retrieved 2026-10-28 for Inside the Machine Mind (offline reference copy; excerpt of the original, formatting simplified).
+Original URL: https://docs.ollama.com/faq
+Page/document title: FAQ - Ollama
+
+------------------------------------------------------------------------
+
+> ## Documentation Index
+>
+> Fetch the complete documentation index at: [/llms.txt](/llms.txt)
+>
+> Use this file to discover all available pages before exploring further.
+
+Skip to main content
+
+[Ollama home page](https://ollama.com)
+
+Search...
+
+⌘K
+
+### Get started
+
+  * [Welcome](/)
+  * [Quickstart](/quickstart)
+  * [Cloud](/cloud)
+
+### Capabilities
+
+  * [Streaming](/capabilities/streaming)
+  * [Thinking](/capabilities/thinking)
+  * [Structured Outputs](/capabilities/structured-outputs)
+  * [Decision](/capabilities/decision)
+  * [Vision](/capabilities/vision)
+  * [Embeddings](/capabilities/embeddings)
+  * [Speech](/capabilities/speech)
+  * [Tool calling](/capabilities/tool-calling)
+  * [Web search](/capabilities/web-search)
+
+### More information
+
+  * [CLI Reference](/cli)
+  * [Modelfile Reference](/modelfile)
+  * [Context length](/context-length)
+  * [Linux](/linux)
+  * [macOS](/macos)
+  * [Windows](/windows)
+  * [Docker](/docker)
+  * [Importing a Model](/import)
+  * [FAQ](/faq)
+  * [Hardware support](/gpu)
+  * [Troubleshooting](/troubleshooting)
+
+  * [Sign in](https://ollama.com/signin)
+  * [Download](https://ollama.com/download)
+  * 
+
+[Guide](/)[Integrations](/integrations)[API Reference](/api/introduction)
+
+[Ollama home page](https://ollama.com)
+
+Search...
+
+⌘K
+
+  * [Sign in](https://ollama.com/signin)
+  * [Download](https://ollama.com/download)
+  * [Download](https://ollama.com/download)
+
+Search...
+
+Navigation
+
+More information
+
+FAQ
+
+[Guide](/)[Integrations](/integrations)[API Reference](/api/introduction)
+
+More information
+
+# FAQ
+
+Copy pageCopy page
+
+Copy pageCopy page
+
+##
+
+​
+
+How can I upgrade Ollama?
+
+Ollama on macOS and Windows will automatically download updates. Click on the taskbar or menubar item and then
+click “Restart to update” to apply the update. Updates can also be installed by downloading the latest version
+[manually](https://ollama.com/download/). On Linux, re-run the install script:
+
+    
+    
+    curl -fsSL https://ollama.com/install.sh | sh
+    
+
+##
+
+​
+
+How can I view the logs?
+
+Review the [Troubleshooting](/troubleshooting) docs for more about using logs.
+
+##
+
+​
+
+Is my GPU compatible with Ollama?
+
+Please refer to the [GPU docs](/gpu).
+
+##
+
+​
+
+How can I specify the context window size?
+
+By default, Ollama uses a context window size of 4096 tokens. This can be overridden with the
+`OLLAMA_CONTEXT_LENGTH` environment variable. For example, to set the default context window to 8K, use:
+
+    
+    
+    OLLAMA_CONTEXT_LENGTH=8192 ollama serve
+    
+
+To change this when using `ollama run`, use `/set parameter`:
+
+    
+    
+    /set parameter num_ctx 4096
+    
+
+When using the API, specify the `num_ctx` parameter:
+
+    
+    
+    curl http://localhost:11434/api/generate -d '{
+      "model": "llama3.2",
+      "prompt": "Why is the sky blue?",
+      "options": {
+        "num_ctx": 4096
+      }
+    }'
+    
+
+##
+
+​
+
+How can I tell if my model was loaded onto the GPU?
+
+Use the `ollama ps` command to see what models are currently loaded into memory.
+
+    
+    
+    ollama ps
+    
+
+**Output** :
+
+    
+    
+    NAME        ID            SIZE    PROCESSOR   UNTIL
+    llama3:70b  bcfb190ca3a7  42 GB   100% GPU    4 minutes from now
+    
+
+The `Processor` column will show which memory the model was loaded into:
+
+  * `100% GPU` means the model was loaded entirely into the GPU
+  * `100% CPU` means the model was loaded entirely in system memory
+  * `48%/52% CPU/GPU` means the model was loaded partially onto both the GPU and into system memory
+
+##
+
+​
+
+How do I configure Ollama server?
+
+Ollama server can be configured with environment variables.
+
+###
+
+​
+
+Setting environment variables on Mac
+
+If Ollama is run as a macOS application, environment variables should be set using `launchctl`:
+
+  1. For each environment variable, call `launchctl setenv`.
+         
+         launchctl setenv OLLAMA_HOST "0.0.0.0:11434"
+         
+
+  2. Restart Ollama application.
+
+###
+
+​
+
+Setting environment variables on Linux
+
+If Ollama is run as a systemd service, environment variables should be set using `systemctl`:
+
+  1. Edit the systemd service by calling `systemctl edit ollama.service`. This will open an editor.
+  2. For each environment variable, add a line `Environment` under section `[Service]`:
+         
+         [Service]
+         Environment="OLLAMA_HOST=0.0.0.0:11434"
+         
+
+  3. Save and exit.
+  4. Reload `systemd` and restart Ollama:
+         
+         systemctl daemon-reload
+         systemctl restart ollama
+         
+
+###
+
+​
+
+Setting environment variables on Windows
+
+On Windows, Ollama inherits your user and system environment variables.
+
+  1. First Quit Ollama by clicking on it in the task bar.
+  2. Start the Settings (Windows 11) or Control Panel (Windows 10) application and search for _environment variables_.
+  3. Click on _Edit environment variables for your account_.
+  4. Edit or create a new variable for your user account for `OLLAMA_HOST`, `OLLAMA_MODELS`, etc.
+  5. Click OK/Apply to save.
+  6. Start the Ollama application from the Windows Start menu.
+
+##
+
+​
+
+How do I use Ollama behind a proxy?
+
+Ollama pulls models from the Internet and may require a proxy server to access the models. Use `HTTPS_PROXY`
+to redirect outbound requests through the proxy. Ensure the proxy certificate is installed as a system
+certificate. Refer to the section above for how to use environment variables on your platform.
+
+Avoid setting `HTTP_PROXY`. Ollama does not use HTTP for model pulls, only HTTPS. Setting `HTTP_PROXY` may
+interrupt client connections to the server.
+
+###
+
+​
+
+How do I use Ollama behind a proxy in Docker?
+
+The Ollama Docker container image can be configured to use a proxy by passing `-e
+HTTPS_PROXY=https://proxy.example.com` when starting the container. Alternatively, the Docker daemon can be
+configured to use a proxy. Instructions are available for Docker Desktop on
+[macOS](https://docs.docker.com/desktop/settings/mac/#proxies),
+[Windows](https://docs.docker.com/desktop/settings/windows/#proxies), and
+[Linux](https://docs.docker.com/desktop/settings/linux/#proxies), and Docker [daemon with
+systemd](https://docs.docker.com/config/daemon/systemd/#httphttps-proxy). Ensure the certificate is installed
+as a system certificate when using HTTPS. This may require a new Docker image when using a self-signed
+certificate.
+
+    
+    
+    FROM ollama/ollama
+    COPY my-ca.pem /usr/local/share/ca-certificates/my-ca.crt
+    RUN update-ca-certificates
+    
+
+Build and run this image:
+
+    
+    
+    docker build -t ollama-with-ca .
+    docker run -d -e HTTPS_PROXY=https://my.proxy.example.com -p 11434:11434 ollama-with-ca
+    
+
+##
+
+​
+
+Does Ollama send my prompts and answers back to ollama.com?
+
+Ollama runs locally. We don’t see your prompts or data when you run locally. When using cloud-hosted models,
+we process your prompts and responses to provide the service but do not store or log that content and never
+train on it. We collect basic account info and limited usage metadata to provide the service that does not
+include prompt or response content. We don’t sell your data. You can delete your account anytime.
+
+##
+
+​
+
+How do I disable Ollama’s cloud features?
+
+Ollama can run in local only mode by disabling Ollama’s cloud features. By turning off Ollama’s cloud
+features, you will lose the ability to use Ollama’s cloud models and web search. Set `disable_ollama_cloud` in
+`~/.ollama/server.json`:
+
+    
+    
+    {
+      "disable_ollama_cloud": true
+    }
+    
+
+You can also set the environment variable:
+
+    
+    
+    OLLAMA_NO_CLOUD=1
+    
+
+Restart Ollama after changing configuration. Once disabled, Ollama’s logs will show `Ollama cloud disabled:
+true`.
+
+##
+
+​
+
+How can I expose Ollama on my network?
+
+Ollama binds 127.0.0.1 port 11434 by default. Change the bind address with the `OLLAMA_HOST` environment
+variable. Refer to the section above for how to set environment variables on your platform.
+
+##
+
+​
+
+How can I use Ollama with a proxy server?
+
+Ollama runs an HTTP server and can be exposed using a proxy server such as Nginx. To do so, configure the
+proxy to forward requests and optionally set required headers (if not exposing Ollama on the network). For
+example, with Nginx:
+
+    
+    
+    server {
+        listen 80;
+        server_name example.com;  # Replace with your domain or IP
+        location / {
+            proxy_pass http://localhost:11434;
+            proxy_set_header Host localhost:11434;
+        }
+    }
+    
+
+##
+
+​
+
+How can I use Ollama with ngrok?
+
+Ollama can be accessed using a range of tunneling apps. For example with Ngrok:
+
+    
+    
+    ngrok http 11434 --host-header="localhost:11434"
+    
+
+##
+
+​
+
+How can I use Ollama with Cloudflare Tunnel?
+
+To use Ollama with Cloudflare Tunnel, use the `--url` and `--http-host-header` flags:
+
+    
+    
+    cloudflared tunnel --url http://localhost:11434 --http-host-header="localhost:11434"
+    
+
+##
+
+​
+
+How can I allow additional web origins to access Ollama?
+
+Ollama allows cross-origin requests from `127.0.0.1` and `0.0.0.0` by default. Additional origins can be
+configured with `OLLAMA_ORIGINS`. For browser extensions, you’ll need to explicitly allow the extension’s
+origin pattern. Set `OLLAMA_ORIGINS` to include `chrome-extension://*`, `moz-extension://*`, and `safari-web-
+extension://*` if you wish to allow all browser extensions access, or specific extensions as needed:
+
+    
+    
+    # Allow all Chrome, Firefox, and Safari extensions
+    OLLAMA_ORIGINS=chrome-extension://*,moz-extension://*,safari-web-extension://* ollama serve
+    
+
+Refer to the section above for how to set environment variables on your platform.
+
+##
+
+​
+
+Where are models stored?
+
+  * macOS: `~/.ollama/models`
+  * Linux: `/usr/share/ollama/.ollama/models`
+  * Windows: `C:\Users\%username%\.ollama\models`
+
+###
+
+​
+
+How do I set them to a different location?
+
+If a different directory needs to be used, set the environment variable `OLLAMA_MODELS` to the chosen
+directory.
+
+On Linux using the standard installer, the `ollama` user needs read and write access to the specified
+directory. To assign the directory to the `ollama` user run `sudo chown -R ollama:ollama <directory>`.
+
+Refer to the section above for how to set environment variables on your platform.
+
+##
+
+​
+
+How can I use Ollama in Visual Studio Code?
+
+Install the [Ollama extension](https://marketplace.visualstudio.com/items?itemName=Ollama.ollama) to use
+Ollama models in VS Code Chat. See the [VS Code integration guide](/integrations/vscode) for setup and
+troubleshooting.
+
+##
+
+​
+
+How do I use Ollama with GPU acceleration in Docker?
+
+The Ollama Docker container can be configured with GPU acceleration in Linux or Windows (with WSL2). This
+requires the [nvidia-container-toolkit](https://github.com/NVIDIA/nvidia-container-toolkit). See
+[ollama/ollama](https://hub.docker.com/r/ollama/ollama) for more details. GPU acceleration is not available
+for Docker Desktop in macOS due to the lack of GPU passthrough and emulation.
+
+##
+
+​
+
+Why is networking slow in WSL2 on Windows 10?
+
+This can impact both installing Ollama, as well as downloading models. Open `Control Panel > Networking and
+Internet > View network status and tasks` and click on `Change adapter settings` on the left panel. Find the
+`vEthernet (WSL)` adapter, right click and select `Properties`. Click on `Configure` and open the `Advanced`
+tab. Search through each of the properties until you find `Large Send Offload Version 2 (IPv4)` and `Large
+Send Offload Version 2 (IPv6)`. _Disable_ both of these properties.
+
+##
+
+​
+
+How can I preload a model into Ollama to get faster response times?
+
+If you are using the API you can preload a model by sending the Ollama server an empty request. This works
+with both the `/api/generate` and `/api/chat` API endpoints. To preload the mistral model using the generate
+endpoint, use:
+
+    
+    
+    curl http://localhost:11434/api/generate -d '{"model": "mistral"}'
+    
+
+To use the chat completions endpoint, use:
+
+    
+    
+    curl http://localhost:11434/api/chat -d '{"model": "mistral"}'
+    
+
+To preload a model using the CLI, use the command:
+
+    
+    
+    ollama run llama3.2 ""
+    
+
+##
+
+​
+
+How do I keep a model loaded in memory or make it unload immediately?
+
+By default models are kept in memory for 5 minutes before being unloaded. This allows for quicker response
+times if you’re making numerous requests to the LLM. If you want to immediately unload a model from memory,
+use the `ollama stop` command:
+
+    
+    
+    ollama stop llama3.2
+    
+
+If you’re using the API, use the `keep_alive` parameter with the `/api/generate` and `/api/chat` endpoints to
+set the amount of time that a model stays in memory. The `keep_alive` parameter can be set to:
+
+  * a duration string (such as “10m” or “24h”)
+  * a number in seconds (such as 3600)
+  * any negative number which will keep the model loaded in memory (e.g. -1 or “-1m”)
+  * ‘0’ which will unload the model immediately after generating a response
+
+For example, to preload a model and leave it in memory use:
+
+    
+    
+    curl http://localhost:11434/api/generate -d '{"model": "llama3.2", "keep_alive": -1}'
+    
+
+To unload the model and free up memory use:
+
+    
+    
+    curl http://localhost:11434/api/generate -d '{"model": "llama3.2", "keep_alive": 0}'
+    
+
+Alternatively, you can change the amount of time all models are loaded into memory by setting the
+`OLLAMA_KEEP_ALIVE` environment variable when starting the Ollama server. The `OLLAMA_KEEP_ALIVE` variable
+uses the same parameter types as the `keep_alive` parameter types mentioned above. Refer to the section
+explaining how to configure the Ollama server to correctly set the environment variable. The `keep_alive` API
+parameter with the `/api/generate` and `/api/chat` API endpoints will override the `OLLAMA_KEEP_ALIVE`
+setting.
+
+##
+
+​
+
+How do I manage the maximum number of requests the Ollama server can queue?
+
+If too many requests are sent to the server, it will respond with a 503 error indicating the server is
+overloaded. You can adjust how many requests may be queued by setting `OLLAMA_MAX_QUEUE`.
+
+##
+
+​
+
+How does Ollama handle concurrent requests?
+
+Ollama supports two levels of concurrent processing. If your system has sufficient available memory (system
+memory when using CPU inference, or VRAM for GPU inference) then multiple models can be loaded at the same
+time. For a given model, if there is sufficient available memory when the model is loaded, it is configured to
+allow parallel request processing. If there is insufficient available memory to load a new model request while
+one or more models are already loaded, all new requests will be queued until the new model can be loaded. As
+prior models become idle, one or more will be unloaded to make room for the new model. Queued requests will be
+processed in order. When using GPU inference new models must be able to completely fit in VRAM to allow
+concurrent model loads. Parallel request processing for a given model results in increasing the context size
+by the number of parallel requests. For example, a 2K context with 4 parallel requests will result in an 8K
+context and additional memory allocation. The following server settings may be used to adjust how Ollama
+handles concurrent requests on most platforms:
+
+  * `OLLAMA_MAX_LOADED_MODELS` \- The maximum number of models that can be loaded concurrently provided they fit in available memory. The default is 3 * the number of GPUs or 3 for CPU inference.
+  * `OLLAMA_NUM_PARALLEL` \- The maximum number of parallel requests each model will process at the same time, default 1. Required RAM will scale by `OLLAMA_NUM_PARALLEL` * `OLLAMA_CONTEXT_LENGTH`.
+  * `OLLAMA_MAX_QUEUE` \- The maximum number of requests Ollama will queue when busy before rejecting additional requests. The default is 512
+
+Note: Windows with Radeon GPUs currently default to 1 model maximum due to limitations in ROCm v5.7 for
+available VRAM reporting. Once ROCm v6.2 is available, Windows Radeon will follow the defaults above. You may
+enable concurrent model loads on Radeon on Windows, but ensure you don’t load more models than will fit into
+your GPU’s VRAM.
+
+##
+
+​
+
+How does Ollama load models on multiple GPUs?
+
+When loading a new model, Ollama evaluates the required VRAM for the model against what is currently
+available. If the model will entirely fit on any single GPU, Ollama will load the model on that GPU. This
+typically provides the best performance as it reduces the amount of data transferring across the PCI bus
+during inference. If the model does not fit entirely on one GPU, then it will be spread across all the
+available GPUs.
+
+##
+
+​
+
+How can I enable Flash Attention?
+
+Flash Attention is a feature of most modern models that can significantly reduce memory usage as the context
+size grows. Ollama uses Flash Attention automatically when the selected backend and devices support it. To
+force Flash Attention on, set `OLLAMA_FLASH_ATTENTION=1` when starting the Ollama server. To disable it, set
+`OLLAMA_FLASH_ATTENTION=0`.
+
+##
+
+​
+
+How can I set the quantization type for the K/V cache?
+
+The K/V context cache can be quantized to significantly reduce memory usage when Flash Attention is enabled.
+To use quantized K/V cache with Ollama you can set the following environment variable:
+
+  * `OLLAMA_KV_CACHE_TYPE` \- The quantization type for the K/V cache. Default is `f16`.
+
+Currently this is a global option - meaning all models will run with the specified quantization type.
+
+The currently available K/V cache quantization types are:
+
+  * `f16` \- high precision and memory usage (default).
+  * `q8_0` \- 8-bit quantization, uses approximately 1/2 the memory of `f16` with a very small loss in precision, this usually has no noticeable impact on the model’s quality (recommended if not using f16).
+  * `q4_0` \- 4-bit quantization, uses approximately 1/4 the memory of `f16` with a small-medium loss in precision that may be more noticeable at higher context sizes.
+
+How much the cache quantization impacts the model’s response quality will depend on the model and the task.
+Models that have a high GQA count (e.g. Qwen2) may see a larger impact on precision from quantization than
+models with a low GQA count. You may need to experiment with different quantization types to find the best
+balance between memory usage and quality.
+
+##
+
+​
+
+Where can I find my Ollama Public Key?
+
+Your **Ollama Public Key** is the public part of the key pair that lets your local Ollama instance talk to
+[ollama.com](https://ollama.com). You’ll need it to:
+
+  * Push models to Ollama
+  * Pull private models from Ollama to your machine
+  * Run models hosted in [Ollama’s cloud](https://ollama.com/cloud)
+
+###
+
+​
+
+How to Add the Key
+
+  * **Sign-in via the Settings page** in the **Mac** and **Windows App**
+  * **Sign‑in via CLI**
+
+    
+    
+    ollama signin
+    
+
+  * **Manually copy & paste** the key on the **Ollama Keys** page: <https://ollama.com/settings/keys>
+
+###
+
+​
+
+Where the Ollama Public Key lives
+
+OS| Path to `id_ed25519.pub`  
+---|---  
+macOS| `~/.ollama/id_ed25519.pub`  
+Linux| `/usr/share/ollama/.ollama/id_ed25519.pub`  
+Windows| `C:\Users\<username>\.ollama\id_ed25519.pub`  
+  
+Replace <username> with your actual Windows user name.
+
+##
+
+​
+
+How can I stop Ollama from starting when I login to my computer?
+
+Ollama for Windows and macOS register as a login item during installation. You can disable this if you prefer
+not to have Ollama automatically start. Ollama will respect this setting across upgrades, unless you uninstall
+the application. **Windows**
+
+  * In `Task Manager` go to the `Startup apps` tab, search for `ollama` then click `Disable`
+
+**MacOS**
+
+  * Open `Settings` and search for “Login Items”, find the `Ollama` entry under `Allow in the Background`, then click the slider to disable.
+
+[Previous](/import)[Hardware supportNext](/gpu)
+
+⌘I
+
+## On this page
+
+Back to top
+
+  * How can I upgrade Ollama?
+  * How can I view the logs?
+  * Is my GPU compatible with Ollama?
+  * How can I specify the context window size?
+  * How can I tell if my model was loaded onto the GPU?
+  * How do I configure Ollama server?
+    * Setting environment variables on Mac
+    * Setting environment variables on Linux
+    * Setting environment variables on Windows
+  * How do I use Ollama behind a proxy?
+    * How do I use Ollama behind a proxy in Docker?
+  * Does Ollama send my prompts and answers back to ollama.com?
+  * How do I disable Ollama’s cloud features?
+  * How can I expose Ollama on my network?
+  * How can I use Ollama with a proxy server?
+  * How can I use Ollama with ngrok?
+  * How can I use Ollama with Cloudflare Tunnel?
+  * How can I allow additional web origins to access Ollama?
+  * Where are models stored?
+    * How do I set them to a different location?
+  * How can I use Ollama in Visual Studio Code?
+  * How do I use Ollama with GPU acceleration in Docker?
+  * Why is networking slow in WSL2 on Windows 10?
+  * How can I preload a model into Ollama to get faster response times?
+  * How do I keep a model loaded in memory or make it unload immediately?
+  * How do I manage the maximum number of requests the Ollama server can queue?
+  * How does Ollama handle concurrent requests?
+  * How does Ollama load models on multiple GPUs?
+  * How can I enable Flash Attention?
+  * How can I set the quantization type for the K/V cache?
+  * Where can I find my Ollama Public Key?
+    * How to Add the Key
+    * Where the Ollama Public Key lives
+  * How can I stop Ollama from starting when I login to my computer?
+
+{"docsConfig":{"theme":"maple","$schema":"https://mintlify.com/docs.json","name":"Ollama","colors":{"primary":"#000","light":"#b5b5b5","dark":"#000"},"logo":{"light":"https://mintcdn.com/ollama-9269c548/XefrxzvUktkk84RL/images/logo.png?fit=max\u0026auto=format\u0026n=XefrxzvUktkk84RL\u0026q=85\u0026s=03a38b5749aa7f530044e9b251dc10d8","dark":"https://mintcdn.com/ollama-9269c548/XefrxzvUktkk84RL/images/logo-
+dark.png?fit=max\u0026auto=format\u0026n=XefrxzvUktkk84RL\u0026q=85\u0026s=c214b467f5623414c31d4e05c66110fb","href":"https://ollama.com"},"favicon":"https://mintcdn.com/ollama-9269c548/uieua2DvLKVQ74Ga/images/favicon.png?fit=max\u0026auto=format\u0026n=uieua2DvLKVQ74Ga\u0026q=85\u0026s=b280706c6697130c06442f3dc454c828","api":{"playground":{"display":"simple"},"examples":{"languages":["curl"]}},"background":{"color":{"light":"#ffffff","dark":"#000000"}},"navbar":{"links":[{"href":"https://ollama.com/signin","label":"Sign
+in"}],"primary":{"type":"button","label":"Download","href":"https://ollama.com/download"}},"fonts":{"family":"system-
+ui"},"styling":{"codeblocks":"system","latex":false},"contextual":{"options":["copy"],"display":"header"},"navigation":{"pages":[]}},"deployment":{"deploymentMetadataValue":{"subdomain":"ollama-9269c548","hasAudioNarration":false,"actualSubdomain":"ollama-9269c548","customDomains":["docs.ollama.com"],"gitSource":{"type":"github","owner":"ollama","repo":"ollama","deployBranch":"main","contentDirectory":"docs","isPrivate":true,"mountPath":"","label":""},"chroma":{"liveDeploymentHistoryId":"6ae0c78ba121a5eeefc723c1","collectionId":"58156a75-5f02-4b87-bc63-592242570c59","schemaVersion":"v3","latestBuiltDeploymentHistoryId":"6ae0c78ba121a5eeefc723c1"},"feedback":{"thumbs":false},"entitlements":{"AI_CHAT":{"status":"ENABLED"},"REMOVE_BRANDING":{"status":"ENABLED"},"WEB_MCP":{"status":"ENABLED"},"NARRATION":{"status":"ENABLED"}},"buildId":"6ae0c78ba121a5eeefc723c1","clientVersion":"0.0.4006","searchFilterCounts":[{"language":"default","tag":"API
+Reference","count":29},{"language":"default","tag":"Integrations","count":28},{"language":"default","tag":"Guide","count":23},{"language":"default","tag":"Endpoints","count":15},{"language":"default","tag":"Coding","count":12},{"language":"default","tag":"More
+information","count":11},{"language":"default","tag":"Capabilities","count":9},{"language":"default","tag":"IDEs
+\u0026
+Editors","count":6},{"language":"default","tag":"Assistants","count":4},{"language":"default","tag":"Get
+started","count":3}]},"assistantConfig":{},"basePath":"","hasChatPermissions":false,"hasWebMcpPermissions":true,"toggles":[{"name":"kill-
+isr","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"agent-
+mintlify-
+slack","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"editor-v7-file-
+tree","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"agent-
+integrations-
+settings","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"automations-
+pr-
+grouping","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"custom-
+prefix","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"analytics-v7","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"user-
+flows-
+analytics","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"no-
+publish-
+flow","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"workos-
+onboarding","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"llms-
+txt-v2","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"pause-
+universal-search-
+reconcile","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"snapshot-
+serving-
+live","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"stripTemperatureMiddleware","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"per-
+site-search-
+delta","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"support-
+platform-pylon-
+zendesk","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"snapshot-
+serving","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"instant-
+rollback","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"granular-
+notifications-
+server","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"granular-
+notifications","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"editor-
+private-page-
+search","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"automations-
+fable","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"fixed-
+ai-action-
+pricing","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"automation-
+resolve-merge-
+conflict","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"scoped-
+publishing","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"mintql","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"page-
+level-
+analytics","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"editor-
+version-
+history-v2","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"editor-
+nav-
+generations","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"billing-
+page-v2","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"workspace-
+projects","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"assistant-v5","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"byok-
+sep-25","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"fork-
+pr-
+previews","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"revalidation-
+jwt","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"vite-
+origin","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"editor-
+agent-model-
+picker","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"billing-
+updated-9-15","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"workos-
+sso-
+scim","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"hobby-
+abuse-
+scan","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"dashboard-
+inbox","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"workos-
+signup","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"workos-
+enabled","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false}],"googleFontsInlined":false},"customCss":[{"filePath":"styling.css","content":"body{font-
+family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color
+Emoji}.font-mono,code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}.nav-
+logo{height:44px}.eyebrow{color:#666;font-weight:400}.capability-list{border-top:1px solid #e5e5e5;border-
+bottom:1px solid #e5e5e5;display:grid;gap:2rem;grid-template-columns:7rem minmax(0,1fr);margin:1.5rem 0
+2rem;padding:2rem 0}.capability-list-title{color:#171717;font-size:1rem;line-height:1.5rem}.capability-list-
+full{grid-template-columns:1fr}.capability-list-grid{display:grid;gap:1.75rem 2rem;grid-template-
+columns:repeat(2,minmax(0,1fr));min-width:0}.capability-list-item{align-items:flex-
+start;display:grid;gap:.75rem;grid-template-columns:2rem minmax(0,1fr);min-width:0}.capability-list-
+icon{align-items:center;background:#f1f1f1;border-
+radius:.75rem;color:#171717;display:flex;height:2rem;justify-content:center;width:2rem}.capability-list-icon
+svg{height:1rem;width:1rem}.capability-list-heading{color:#171717;font-size:1rem;font-weight:600;line-
+height:1.375rem}.capability-list-copy,.manual-step-title{color:#737373;font-size:.95rem;line-
+height:1.375rem}.manual-step-title{color:#171717;font-weight:600;margin:1.25rem 0 .75rem}.dark .capability-
+list{border-color:#262626}.dark .capability-list-heading,.dark .capability-list-title,.dark .manual-step-
+title{color:#fafafa}.dark .capability-list-icon{background:#262626;color:#fafafa}.dark .capability-list-
+copy{color:#a3a3a3}@media (max-width:920px){.capability-list,.capability-list-grid{grid-template-
+columns:1fr}}.accordion-group{border-style:none;border-radius:0}.accordion-group div[id*=-accordion-
+children]{margin-inline:calc(var(--spacing)*1)}.accordion-group details summary{padding-
+inline:0}"}],"page":{"pagePath":"faq","slug":"/faq","pageMetadata":{"title":"FAQ","description":null,"href":"/faq"},"pageType":"default","mdx":{"mdxSource":{"compiledSource":"\"use
+strict\";const{Fragment:_Fragment,jsx:_jsx,jsxs:_jsxs}=arguments[0];const{useMDXComponents:_provideComponents}=arguments[0];function
+_createMdxContent(props){const
+_components={a:`a`,code:`code`,em:`em`,li:`li`,ol:`ol`,p:`p`,pre:`pre`,span:`span`,strong:`strong`,tbody:`tbody`,td:`td`,th:`th`,thead:`thead`,tr:`tr`,ul:`ul`,..._provideComponents(),...props.components},{CodeBlock,Heading,Info,Note,Table}=_components;if(!CodeBlock)_missingMdxReference(`CodeBlock`,true);if(!Heading)_missingMdxReference(`Heading`,true);if(!Info)_missingMdxReference(`Info`,true);if(!Note)_missingMdxReference(`Note`,true);if(!Table)_missingMdxReference(`Table`,true);return
+_jsxs(_Fragment,{children:[_jsx(Heading,{level:`2`,id:`how-can-i-upgrade-ollama`,children:`How can I upgrade
+Ollama?`}),`\n`,_jsxs(_components.p,{children:[`Ollama on macOS and Windows will automatically download
+updates. Click on the taskbar or menubar item and then click “Restart to update” to apply the update. Updates
+can also be installed by downloading the latest version
+`,_jsx(_components.a,{href:`https://ollama.com/download/`,children:`manually`}),`.`]}),`\n`,_jsx(_components.p,{children:`On
+Linux, re-run the install
+script:`}),`\n`,_jsx(CodeBlock,{filename:``,numberOfLines:`1`,language:`shellscript`,children:_jsx(_components.pre,{className:`shiki
+shiki-themes github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`shellscript`,children:_jsxs(_components.code,{language:`shellscript`,numberOfLines:`1`,children:[_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#953800`,\"
+--shiki-dark\":`#DCDCAA`},children:`curl`}),_jsx(_components.span,{style:{color:`#0550AE`,\"--shiki-
+dark\":`#569CD6`},children:` -fsSL`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:` https://ollama.com/install.sh`}),_jsx(_components.span,{style:{color:`#CF222E`,\"
+--shiki-dark\":`#D4D4D4`},children:` |`}),_jsx(_components.span,{style:{color:`#953800`,\"--shiki-
+dark\":`#DCDCAA`},children:` sh`})]}),`\n`]})})}),`\n`,_jsx(Heading,{level:`2`,id:`how-can-i-view-the-
+logs`,children:`How can I view the logs?`}),`\n`,_jsxs(_components.p,{children:[`Review the
+`,_jsx(_components.a,{href:`/troubleshooting`,children:`Troubleshooting`}),` docs for more about using
+logs.`]}),`\n`,_jsx(Heading,{level:`2`,id:`is-my-gpu-compatible-with-ollama`,children:`Is my GPU compatible
+with Ollama?`}),`\n`,_jsxs(_components.p,{children:[`Please refer to the
+`,_jsx(_components.a,{href:`/gpu`,children:`GPU docs`}),`.`]}),`\n`,_jsx(Heading,{level:`2`,id:`how-can-i-
+specify-the-context-window-size`,children:`How can I specify the context window
+size?`}),`\n`,_jsx(_components.p,{children:`By default, Ollama uses a context window size of 4096
+tokens.`}),`\n`,_jsxs(_components.p,{children:[`This can be overridden with the
+`,_jsx(_components.code,{children:`OLLAMA_CONTEXT_LENGTH`}),` environment variable. For example, to set the
+default context window to 8K,
+use:`]}),`\n`,_jsx(CodeBlock,{filename:``,numberOfLines:`1`,language:`shellscript`,children:_jsx(_components.pre,{className:`shiki
+shiki-themes github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`shellscript`,children:_jsxs(_components.code,{language:`shellscript`,numberOfLines:`1`,children:[_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#9CDCFE`},children:`OLLAMA_CONTEXT_LENGTH`}),_jsx(_components.span,{style:{color:`#CF222E`,\"
+--shiki-dark\":`#D4D4D4`},children:`=`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`8192`}),_jsx(_components.span,{style:{color:`#953800`,\"--shiki-
+dark\":`#DCDCAA`},children:` ollama`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:` serve`})]}),`\n`]})})}),`\n`,_jsxs(_components.p,{children:[`To change this when
+using `,_jsx(_components.code,{children:`ollama run`}),`, use `,_jsx(_components.code,{children:`/set
+parameter`}),`:`]}),`\n`,_jsx(CodeBlock,{filename:``,numberOfLines:`1`,language:`shellscript`,children:_jsx(_components.pre,{className:`shiki
+shiki-themes github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`shellscript`,children:_jsxs(_components.code,{language:`shellscript`,numberOfLines:`1`,children:[_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#953800`,\"
+--shiki-dark\":`#DCDCAA`},children:`/set`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:` parameter`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:` num_ctx`}),_jsx(_components.span,{style:{color:`#0550AE`,\"--shiki-
+dark\":`#B5CEA8`},children:` 4096`})]}),`\n`]})})}),`\n`,_jsxs(_components.p,{children:[`When using the API,
+specify the `,_jsx(_components.code,{children:`num_ctx`}),`
+parameter:`]}),`\n`,_jsx(CodeBlock,{filename:``,numberOfLines:`7`,language:`shellscript`,children:_jsx(_components.pre,{className:`shiki
+shiki-themes github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`shellscript`,children:_jsxs(_components.code,{language:`shellscript`,numberOfLines:`7`,children:[_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#953800`,\"
+--shiki-dark\":`#DCDCAA`},children:`curl`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`
+http://localhost:11434/api/generate`}),_jsx(_components.span,{style:{color:`#0550AE`,\"--shiki-
+dark\":`#569CD6`},children:` -d`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`
+'{`})]}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#0A3069`,\"
+--shiki-dark\":`#CE9178`},children:` \"model\":
+\"llama3.2\",`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#0A3069`,\"
+--shiki-dark\":`#CE9178`},children:` \"prompt\": \"Why is the sky
+blue?\",`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#0A3069`,\"
+--shiki-dark\":`#CE9178`},children:` \"options\":
+{`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#0A3069`,\"
+--shiki-dark\":`#CE9178`},children:` \"num_ctx\":
+4096`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#0A3069`,\"
+--shiki-dark\":`#CE9178`},children:`
+}`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#0A3069`,\"
+--shiki-dark\":`#CE9178`},children:`}'`})}),`\n`]})})}),`\n`,_jsx(Heading,{level:`2`,id:`how-can-i-tell-if-my-
+model-was-loaded-onto-the-gpu`,children:`How can I tell if my model was loaded onto the
+GPU?`}),`\n`,_jsxs(_components.p,{children:[`Use the `,_jsx(_components.code,{children:`ollama ps`}),` command
+to see what models are currently loaded into
+memory.`]}),`\n`,_jsx(CodeBlock,{filename:``,numberOfLines:`1`,language:`shellscript`,children:_jsx(_components.pre,{className:`shiki
+shiki-themes github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`shellscript`,children:_jsxs(_components.code,{language:`shellscript`,numberOfLines:`1`,children:[_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#953800`,\"
+--shiki-dark\":`#DCDCAA`},children:`ollama`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`
+ps`})]}),`\n`]})})}),`\n`,_jsxs(Info,{children:[_jsxs(_components.p,{children:[_jsx(_components.strong,{children:`Output`}),`:`]}),_jsx(CodeBlock,{numberOfLines:`3`,language:`text`,children:_jsx(_components.pre,{className:`shiki
+shiki-themes github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`text`,children:_jsxs(_components.code,{language:`text`,numberOfLines:`3`,children:[_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{children:`NAME
+ID SIZE PROCESSOR
+UNTIL`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{children:`llama3:70b
+bcfb190ca3a7 42 GB 100% GPU 4 minutes from
+now`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{})})]})})})]}),`\n`,_jsxs(_components.p,{children:[`The
+`,_jsx(_components.code,{children:`Processor`}),` column will show which memory the model was loaded
+into:`]}),`\n`,_jsxs(_components.ul,{children:[`\n`,_jsxs(_components.li,{children:[_jsx(_components.code,{children:`100%
+GPU`}),` means the model was loaded entirely into the
+GPU`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.code,{children:`100% CPU`}),` means the model
+was loaded entirely in system
+memory`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.code,{children:`48%/52% CPU/GPU`}),` means
+the model was loaded partially onto both the GPU and into system
+memory`]}),`\n`]}),`\n`,_jsx(Heading,{level:`2`,id:`how-do-i-configure-ollama-server`,children:`How do I
+configure Ollama server?`}),`\n`,_jsx(_components.p,{children:`Ollama server can be configured with
+environment variables.`}),`\n`,_jsx(Heading,{level:`3`,id:`setting-environment-variables-on-
+mac`,children:`Setting environment variables on Mac`}),`\n`,_jsxs(_components.p,{children:[`If Ollama is run
+as a macOS application, environment variables should be set using
+`,_jsx(_components.code,{children:`launchctl`}),`:`]}),`\n`,_jsxs(_components.ol,{children:[`\n`,_jsxs(_components.li,{children:[`\n`,_jsxs(_components.p,{children:[`For
+each environment variable, call `,_jsx(_components.code,{children:`launchctl
+setenv`}),`.`]}),`\n`,_jsx(CodeBlock,{filename:``,numberOfLines:`1`,language:`shellscript`,children:_jsx(_components.pre,{className:`shiki
+shiki-themes github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`shellscript`,children:_jsxs(_components.code,{language:`shellscript`,numberOfLines:`1`,children:[_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#953800`,\"
+--shiki-dark\":`#DCDCAA`},children:`launchctl`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:` setenv`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:` OLLAMA_HOST`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`
+\"0.0.0.0:11434\"`})]}),`\n`]})})}),`\n`]}),`\n`,_jsxs(_components.li,{children:[`\n`,_jsx(_components.p,{children:`Restart
+Ollama application.`}),`\n`]}),`\n`]}),`\n`,_jsx(Heading,{level:`3`,id:`setting-environment-variables-on-
+linux`,children:`Setting environment variables on Linux`}),`\n`,_jsxs(_components.p,{children:[`If Ollama is
+run as a systemd service, environment variables should be set using
+`,_jsx(_components.code,{children:`systemctl`}),`:`]}),`\n`,_jsxs(_components.ol,{children:[`\n`,_jsxs(_components.li,{children:[`\n`,_jsxs(_components.p,{children:[`Edit
+the systemd service by calling `,_jsx(_components.code,{children:`systemctl edit ollama.service`}),`. This
+will open an editor.`]}),`\n`]}),`\n`,_jsxs(_components.li,{children:[`\n`,_jsxs(_components.p,{children:[`For
+each environment variable, add a line `,_jsx(_components.code,{children:`Environment`}),` under section
+`,_jsx(_components.code,{children:`[Service]`}),`:`]}),`\n`,_jsx(CodeBlock,{filename:``,numberOfLines:`2`,language:`ini`,children:_jsx(_components.pre,{className:`shiki
+shiki-themes github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`ini`,children:_jsxs(_components.code,{language:`ini`,numberOfLines:`2`,children:[_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#953800`,\"
+--shiki-
+dark\":`#D4D4D4`},children:`[Service]`})}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#CF222E`,\"
+--shiki-dark\":`#569CD6`},children:`Environment`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`=`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"OLLAMA_HOST=0.0.0.0:11434\"`})]}),`\n`]})})}),`\n`]}),`\n`,_jsxs(_components.li,{children:[`\n`,_jsx(_components.p,{children:`Save
+and exit.`}),`\n`]}),`\n`,_jsxs(_components.li,{children:[`\n`,_jsxs(_components.p,{children:[`Reload
+`,_jsx(_components.code,{children:`systemd`}),` and restart
+Ollama:`]}),`\n`,_jsx(CodeBlock,{filename:``,numberOfLines:`2`,language:`shellscript`,children:_jsx(_components.pre,{className:`shiki
+shiki-themes github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`shellscript`,children:_jsxs(_components.code,{language:`shellscript`,numberOfLines:`2`,children:[_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#953800`,\"
+--shiki-dark\":`#DCDCAA`},children:`systemctl`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:` daemon-
+reload`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#953800`,\"
+--shiki-dark\":`#DCDCAA`},children:`systemctl`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:` restart`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`
+ollama`})]}),`\n`]})})}),`\n`]}),`\n`]}),`\n`,_jsx(Heading,{level:`3`,id:`setting-environment-variables-on-
+windows`,children:`Setting environment variables on Windows`}),`\n`,_jsx(_components.p,{children:`On Windows,
+Ollama inherits your user and system environment
+variables.`}),`\n`,_jsxs(_components.ol,{children:[`\n`,_jsxs(_components.li,{children:[`\n`,_jsx(_components.p,{children:`First
+Quit Ollama by clicking on it in the task
+bar.`}),`\n`]}),`\n`,_jsxs(_components.li,{children:[`\n`,_jsxs(_components.p,{children:[`Start the Settings
+(Windows 11) or Control Panel (Windows 10) application and search for
+`,_jsx(_components.em,{children:`environment
+variables`}),`.`]}),`\n`]}),`\n`,_jsxs(_components.li,{children:[`\n`,_jsxs(_components.p,{children:[`Click on
+`,_jsx(_components.em,{children:`Edit environment variables for your
+account`}),`.`]}),`\n`]}),`\n`,_jsxs(_components.li,{children:[`\n`,_jsxs(_components.p,{children:[`Edit or
+create a new variable for your user account for `,_jsx(_components.code,{children:`OLLAMA_HOST`}),`,
+`,_jsx(_components.code,{children:`OLLAMA_MODELS`}),`,
+etc.`]}),`\n`]}),`\n`,_jsxs(_components.li,{children:[`\n`,_jsx(_components.p,{children:`Click OK/Apply to
+save.`}),`\n`]}),`\n`,_jsxs(_components.li,{children:[`\n`,_jsx(_components.p,{children:`Start the Ollama
+application from the Windows Start menu.`}),`\n`]}),`\n`]}),`\n`,_jsx(Heading,{level:`2`,id:`how-do-i-use-
+ollama-behind-a-proxy`,children:`How do I use Ollama behind a
+proxy?`}),`\n`,_jsxs(_components.p,{children:[`Ollama pulls models from the Internet and may require a proxy
+server to access the models. Use `,_jsx(_components.code,{children:`HTTPS_PROXY`}),` to redirect outbound
+requests through the proxy. Ensure the proxy certificate is installed as a system certificate. Refer to the
+section above for how to use environment variables on your
+platform.`]}),`\n`,_jsx(Note,{children:_jsxs(_components.p,{children:[`Avoid setting
+`,_jsx(_components.code,{children:`HTTP_PROXY`}),`. Ollama does not use HTTP for model pulls, only\nHTTPS.
+Setting `,_jsx(_components.code,{children:`HTTP_PROXY`}),` may interrupt client connections to the
+server.`]})}),`\n`,_jsx(Heading,{level:`3`,id:`how-do-i-use-ollama-behind-a-proxy-in-docker`,children:`How do
+I use Ollama behind a proxy in Docker?`}),`\n`,_jsxs(_components.p,{children:[`The Ollama Docker container
+image can be configured to use a proxy by passing `,_jsx(_components.code,{children:`-e
+HTTPS_PROXY=https://proxy.example.com`}),` when starting the
+container.`]}),`\n`,_jsxs(_components.p,{children:[`Alternatively, the Docker daemon can be configured to use
+a proxy. Instructions are available for Docker Desktop on
+`,_jsx(_components.a,{href:`https://docs.docker.com/desktop/settings/mac/#proxies`,children:`macOS`}),`,
+`,_jsx(_components.a,{href:`https://docs.docker.com/desktop/settings/windows/#proxies`,children:`Windows`}),`,
+and `,_jsx(_components.a,{href:`https://docs.docker.com/desktop/settings/linux/#proxies`,children:`Linux`}),`,
+and Docker `,_jsx(_components.a,{href:`https://docs.docker.com/config/daemon/systemd/#httphttps-
+proxy`,children:`daemon with systemd`}),`.`]}),`\n`,_jsx(_components.p,{children:`Ensure the certificate is
+installed as a system certificate when using HTTPS. This may require a new Docker image when using a self-
+signed
+certificate.`}),`\n`,_jsx(CodeBlock,{filename:``,numberOfLines:`3`,language:`docker`,children:_jsx(_components.pre,{className:`shiki
+shiki-themes github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`docker`,children:_jsxs(_components.code,{language:`docker`,numberOfLines:`3`,children:[_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#CF222E`,\"
+--shiki-dark\":`#569CD6`},children:`FROM`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`
+ollama/ollama`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#CF222E`,\"
+--shiki-dark\":`#569CD6`},children:`COPY`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:` my-ca.pem /usr/local/share/ca-certificates/my-
+ca.crt`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#CF222E`,\"
+--shiki-dark\":`#569CD6`},children:`RUN`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:` update-ca-certificates`})]}),`\n`]})})}),`\n`,_jsx(_components.p,{children:`Build
+and run this
+image:`}),`\n`,_jsx(CodeBlock,{filename:``,numberOfLines:`2`,language:`shellscript`,children:_jsx(_components.pre,{className:`shiki
+shiki-themes github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`shellscript`,children:_jsxs(_components.code,{language:`shellscript`,numberOfLines:`2`,children:[_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#953800`,\"
+--shiki-dark\":`#DCDCAA`},children:`docker`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:` build`}),_jsx(_components.span,{style:{color:`#0550AE`,\"--shiki-
+dark\":`#569CD6`},children:` -t`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:` ollama-with-ca`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`
+.`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#953800`,\"
+--shiki-dark\":`#DCDCAA`},children:`docker`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:` run`}),_jsx(_components.span,{style:{color:`#0550AE`,\"--shiki-
+dark\":`#569CD6`},children:` -d`}),_jsx(_components.span,{style:{color:`#0550AE`,\"--shiki-
+dark\":`#569CD6`},children:` -e`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`
+HTTPS_PROXY=https://my.proxy.example.com`}),_jsx(_components.span,{style:{color:`#0550AE`,\"--shiki-
+dark\":`#569CD6`},children:` -p`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:` 11434:11434`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:` ollama-with-ca`})]}),`\n`]})})}),`\n`,_jsx(Heading,{level:`2`,id:`does-ollama-
+send-my-prompts-and-answers-back-to-ollama-com`,children:`Does Ollama send my prompts and answers back to
+ollama.com?`}),`\n`,_jsx(_components.p,{children:`Ollama runs locally. We don’t see your prompts or data when
+you run locally. When using cloud-hosted models, we process your prompts and responses to provide the service
+but do not store or log that content and never train on it. We collect basic account info and limited usage
+metadata to provide the service that does not include prompt or response content. We don’t sell your data. You
+can delete your account anytime.`}),`\n`,_jsx(Heading,{level:`2`,id:`how-do-i-disable-ollama-cloud-
+features`,children:`How do I disable Ollama’s cloud features?`}),`\n`,_jsx(_components.p,{children:`Ollama can
+run in local only mode by disabling Ollama’s cloud features. By turning off Ollama’s cloud features, you will
+lose the ability to use Ollama’s cloud models and web search.`}),`\n`,_jsxs(_components.p,{children:[`Set
+`,_jsx(_components.code,{children:`disable_ollama_cloud`}),` in
+`,_jsx(_components.code,{children:`~/.ollama/server.json`}),`:`]}),`\n`,_jsx(CodeBlock,{filename:``,numberOfLines:`3`,language:`json`,children:_jsx(_components.pre,{className:`shiki
+shiki-themes github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`json`,children:_jsxs(_components.code,{language:`json`,numberOfLines:`3`,children:[_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-
+dark\":`#D4D4D4`},children:`{`})}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:`
+\"disable_ollama_cloud\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0550AE`,\"--shiki-
+dark\":`#569CD6`},children:`true`})]}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`}`})}),`\n`]})})}),`\n`,_jsx(_components.p,{children:`You can also set the
+environment
+variable:`}),`\n`,_jsx(CodeBlock,{filename:``,numberOfLines:`1`,language:`shellscript`,children:_jsx(_components.pre,{className:`shiki
+shiki-themes github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`shellscript`,children:_jsxs(_components.code,{language:`shellscript`,numberOfLines:`1`,children:[_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#9CDCFE`},children:`OLLAMA_NO_CLOUD`}),_jsx(_components.span,{style:{color:`#CF222E`,\"--
+shiki-dark\":`#D4D4D4`},children:`=`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`1`})]}),`\n`]})})}),`\n`,_jsxs(_components.p,{children:[`Restart Ollama after
+changing configuration. Once disabled, Ollama’s logs will show `,_jsx(_components.code,{children:`Ollama cloud
+disabled: true`}),`.`]}),`\n`,_jsx(Heading,{level:`2`,id:`how-can-i-expose-ollama-on-my-network`,children:`How
+can I expose Ollama on my network?`}),`\n`,_jsxs(_components.p,{children:[`Ollama binds 127.0.0.1 port 11434
+by default. Change the bind address with the `,_jsx(_components.code,{children:`OLLAMA_HOST`}),` environment
+variable.`]}),`\n`,_jsxs(_components.p,{children:[`Refer to the section `,_jsx(_components.a,{href:`#how-do-i-
+configure-ollama-server`,children:`above`}),` for how to set environment variables on your
+platform.`]}),`\n`,_jsx(Heading,{level:`2`,id:`how-can-i-use-ollama-with-a-proxy-server`,children:`How can I
+use Ollama with a proxy server?`}),`\n`,_jsx(_components.p,{children:`Ollama runs an HTTP server and can be
+exposed using a proxy server such as Nginx. To do so, configure the proxy to forward requests and optionally
+set required headers (if not exposing Ollama on the network). For example, with
+Nginx:`}),`\n`,_jsx(CodeBlock,{filename:``,numberOfLines:`8`,language:`nginx`,children:_jsx(_components.pre,{className:`shiki
+shiki-themes github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`nginx`,children:_jsxs(_components.code,{language:`nginx`,numberOfLines:`8`,children:[_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#CF222E`,\"
+--shiki-dark\":`#569CD6`},children:`server`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#CF222E`,\"
+--shiki-dark\":`#569CD6`},children:` listen `}),_jsx(_components.span,{style:{color:`#0550AE`,\"--shiki-
+dark\":`#B5CEA8`},children:`80`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`;`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#CF222E`,\"
+--shiki-dark\":`#569CD6`},children:` server_name `}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`example.com; `}),_jsx(_components.span,{style:{color:`#6E7781`,\"--shiki-
+dark\":`#6A9955`},children:`# Replace with your domain or
+IP`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#CF222E`,\"
+--shiki-dark\":`#569CD6`},children:` location`}),_jsx(_components.span,{style:{color:`#953800`,\"--shiki-
+dark\":`#D4D4D4`},children:` / `}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#CF222E`,\"
+--shiki-dark\":`#569CD6`},children:` proxy_pass `}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`http://localhost:11434;`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#CF222E`,\"
+--shiki-dark\":`#569CD6`},children:` proxy_set_header `}),_jsx(_components.span,{style:{color:`#1F2328`,\"--
+shiki-dark\":`#D4D4D4`},children:`Host
+localhost:11434;`})]}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+}`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`}`})}),`\n`]})})}),`\n`,_jsx(Heading,{level:`2`,id:`how-can-i-use-ollama-
+with-ngrok`,children:`How can I use Ollama with ngrok?`}),`\n`,_jsx(_components.p,{children:`Ollama can be
+accessed using a range of tunneling apps. For example with
+Ngrok:`}),`\n`,_jsx(CodeBlock,{filename:``,numberOfLines:`1`,language:`shellscript`,children:_jsx(_components.pre,{className:`shiki
+shiki-themes github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`shellscript`,children:_jsxs(_components.code,{language:`shellscript`,numberOfLines:`1`,children:[_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#953800`,\"
+--shiki-dark\":`#DCDCAA`},children:`ngrok`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:` http`}),_jsx(_components.span,{style:{color:`#0550AE`,\"--shiki-
+dark\":`#B5CEA8`},children:` 11434`}),_jsx(_components.span,{style:{color:`#0550AE`,\"--shiki-
+dark\":`#569CD6`},children:` --host-header=`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"localhost:11434\"`})]}),`\n`]})})}),`\n`,_jsx(Heading,{level:`2`,id:`how-can-i-
+use-ollama-with-cloudflare-tunnel`,children:`How can I use Ollama with Cloudflare
+Tunnel?`}),`\n`,_jsxs(_components.p,{children:[`To use Ollama with Cloudflare Tunnel, use the
+`,_jsx(_components.code,{children:`--url`}),` and `,_jsx(_components.code,{children:`--http-host-header`}),`
+flags:`]}),`\n`,_jsx(CodeBlock,{filename:``,numberOfLines:`1`,language:`shellscript`,children:_jsx(_components.pre,{className:`shiki
+shiki-themes github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`shellscript`,children:_jsxs(_components.code,{language:`shellscript`,numberOfLines:`1`,children:[_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#953800`,\"
+--shiki-dark\":`#DCDCAA`},children:`cloudflared`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:` tunnel`}),_jsx(_components.span,{style:{color:`#0550AE`,\"--shiki-
+dark\":`#569CD6`},children:` --url`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:` http://localhost:11434`}),_jsx(_components.span,{style:{color:`#0550AE`,\"--
+shiki-dark\":`#569CD6`},children:` --http-host-header=`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--
+shiki-dark\":`#CE9178`},children:`\"localhost:11434\"`})]}),`\n`]})})}),`\n`,_jsx(Heading,{level:`2`,id:`how-
+can-i-allow-additional-web-origins-to-access-ollama`,children:`How can I allow additional web origins to
+access Ollama?`}),`\n`,_jsxs(_components.p,{children:[`Ollama allows cross-origin requests from
+`,_jsx(_components.code,{children:`127.0.0.1`}),` and `,_jsx(_components.code,{children:`0.0.0.0`}),` by
+default. Additional origins can be configured with
+`,_jsx(_components.code,{children:`OLLAMA_ORIGINS`}),`.`]}),`\n`,_jsxs(_components.p,{children:[`For browser
+extensions, you’ll need to explicitly allow the extension’s origin pattern. Set
+`,_jsx(_components.code,{children:`OLLAMA_ORIGINS`}),` to include `,_jsx(_components.code,{children:`chrome-
+extension://*`}),`, `,_jsx(_components.code,{children:`moz-extension://*`}),`, and
+`,_jsx(_components.code,{children:`safari-web-extension://*`}),` if you wish to allow all browser extensions
+access, or specific extensions as
+needed:`]}),`\n`,_jsx(CodeBlock,{numberOfLines:`3`,language:`text`,children:_jsx(_components.pre,{className:`shiki
+shiki-themes github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`text`,children:_jsxs(_components.code,{language:`text`,numberOfLines:`3`,children:[_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{children:`#
+Allow all Chrome, Firefox, and Safari
+extensions`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{children:`OLLAMA_ORIGINS=chrome-
+extension://*,moz-extension://*,safari-web-extension://* ollama
+serve`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{})})]})})}),`\n`,_jsxs(_components.p,{children:[`Refer
+to the section `,_jsx(_components.a,{href:`#how-do-i-configure-ollama-server`,children:`above`}),` for how to
+set environment variables on your platform.`]}),`\n`,_jsx(Heading,{level:`2`,id:`where-are-models-
+stored`,children:`Where are models
+stored?`}),`\n`,_jsxs(_components.ul,{children:[`\n`,_jsxs(_components.li,{children:[`macOS:
+`,_jsx(_components.code,{children:`~/.ollama/models`})]}),`\n`,_jsxs(_components.li,{children:[`Linux:
+`,_jsx(_components.code,{children:`/usr/share/ollama/.ollama/models`})]}),`\n`,_jsxs(_components.li,{children:[`Windows:
+`,_jsx(_components.code,{children:`C:\\\\\\\Users\\\\\\\%username%\\\\\\\\.ollama\\\\\\\models`})]}),`\n`]}),`\n`,_jsx(Heading,{level:`3`,id:`how-
+do-i-set-them-to-a-different-location`,children:`How do I set them to a different
+location?`}),`\n`,_jsxs(_components.p,{children:[`If a different directory needs to be used, set the
+environment variable `,_jsx(_components.code,{children:`OLLAMA_MODELS`}),` to the chosen
+directory.`]}),`\n`,_jsx(Note,{children:_jsxs(_components.p,{children:[`On Linux using the standard installer,
+the `,_jsx(_components.code,{children:`ollama`}),` user needs read and write access to the specified
+directory. To assign the directory to the `,_jsx(_components.code,{children:`ollama`}),` user run
+`,_jsx(_components.code,{children:`sudo chown -R ollama:ollama
+\u003cdirectory>`}),`.`]})}),`\n`,_jsxs(_components.p,{children:[`Refer to the section
+`,_jsx(_components.a,{href:`#how-do-i-configure-ollama-server`,children:`above`}),` for how to set environment
+variables on your platform.`]}),`\n`,_jsx(Heading,{level:`2`,id:`how-can-i-use-ollama-in-visual-studio-
+code`,children:`How can I use Ollama in Visual Studio Code?`}),`\n`,_jsxs(_components.p,{children:[`Install
+the
+`,_jsx(_components.a,{href:`https://marketplace.visualstudio.com/items?itemName=Ollama.ollama`,children:`Ollama
+extension`}),` to use Ollama models in VS Code Chat. See the
+`,_jsx(_components.a,{href:`/integrations/vscode`,children:`VS Code integration guide`}),` for setup and
+troubleshooting.`]}),`\n`,_jsx(Heading,{level:`2`,id:`how-do-i-use-ollama-with-gpu-acceleration-in-
+docker`,children:`How do I use Ollama with GPU acceleration in
+Docker?`}),`\n`,_jsxs(_components.p,{children:[`The Ollama Docker container can be configured with GPU
+acceleration in Linux or Windows (with WSL2). This requires the
+`,_jsx(_components.a,{href:`https://github.com/NVIDIA/nvidia-container-toolkit`,children:`nvidia-container-
+toolkit`}),`. See
+`,_jsx(_components.a,{href:`https://hub.docker.com/r/ollama/ollama`,children:`ollama/ollama`}),` for more
+details.`]}),`\n`,_jsx(_components.p,{children:`GPU acceleration is not available for Docker Desktop in macOS
+due to the lack of GPU passthrough and emulation.`}),`\n`,_jsx(Heading,{level:`2`,id:`why-is-networking-slow-
+in-wsl2-on-windows-10`,children:`Why is networking slow in WSL2 on Windows
+10?`}),`\n`,_jsx(_components.p,{children:`This can impact both installing Ollama, as well as downloading
+models.`}),`\n`,_jsxs(_components.p,{children:[`Open `,_jsx(_components.code,{children:`Control Panel >
+Networking and Internet > View network status and tasks`}),` and click on
+`,_jsx(_components.code,{children:`Change adapter settings`}),` on the left panel. Find the
+`,_jsx(_components.code,{children:`vEthernet (WSL)`}),` adapter, right click and select
+`,_jsx(_components.code,{children:`Properties`}),`.\nClick on
+`,_jsx(_components.code,{children:`Configure`}),` and open the
+`,_jsx(_components.code,{children:`Advanced`}),` tab. Search through each of the properties until you find
+`,_jsx(_components.code,{children:`Large Send Offload Version 2 (IPv4)`}),` and
+`,_jsx(_components.code,{children:`Large Send Offload Version 2 (IPv6)`}),`.
+`,_jsx(_components.em,{children:`Disable`}),` both of
+these\nproperties.`]}),`\n`,_jsx(Heading,{level:`2`,id:`how-can-i-preload-a-model-into-ollama-to-get-faster-
+response-times`,children:`How can I preload a model into Ollama to get faster response
+times?`}),`\n`,_jsxs(_components.p,{children:[`If you are using the API you can preload a model by sending the
+Ollama server an empty request. This works with both the `,_jsx(_components.code,{children:`/api/generate`}),`
+and `,_jsx(_components.code,{children:`/api/chat`}),` API endpoints.`]}),`\n`,_jsx(_components.p,{children:`To
+preload the mistral model using the generate endpoint,
+use:`}),`\n`,_jsx(CodeBlock,{filename:``,numberOfLines:`1`,language:`shellscript`,children:_jsx(_components.pre,{className:`shiki
+shiki-themes github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`shellscript`,children:_jsxs(_components.code,{language:`shellscript`,numberOfLines:`1`,children:[_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#953800`,\"
+--shiki-dark\":`#DCDCAA`},children:`curl`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`
+http://localhost:11434/api/generate`}),_jsx(_components.span,{style:{color:`#0550AE`,\"--shiki-
+dark\":`#569CD6`},children:` -d`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:` '{\"model\":
+\"mistral\"}'`})]}),`\n`]})})}),`\n`,_jsx(_components.p,{children:`To use the chat completions endpoint,
+use:`}),`\n`,_jsx(CodeBlock,{filename:``,numberOfLines:`1`,language:`shellscript`,children:_jsx(_components.pre,{className:`shiki
+shiki-themes github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`shellscript`,children:_jsxs(_components.code,{language:`shellscript`,numberOfLines:`1`,children:[_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#953800`,\"
+--shiki-dark\":`#DCDCAA`},children:`curl`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`
+http://localhost:11434/api/chat`}),_jsx(_components.span,{style:{color:`#0550AE`,\"--shiki-
+dark\":`#569CD6`},children:` -d`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:` '{\"model\":
+\"mistral\"}'`})]}),`\n`]})})}),`\n`,_jsx(_components.p,{children:`To preload a model using the CLI, use the
+command:`}),`\n`,_jsx(CodeBlock,{filename:``,numberOfLines:`1`,language:`shellscript`,children:_jsx(_components.pre,{className:`shiki
+shiki-themes github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`shellscript`,children:_jsxs(_components.code,{language:`shellscript`,numberOfLines:`1`,children:[_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#953800`,\"
+--shiki-dark\":`#DCDCAA`},children:`ollama`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:` run`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:` llama3.2`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:` \"\"`})]}),`\n`]})})}),`\n`,_jsx(Heading,{level:`2`,id:`how-do-i-keep-a-model-
+loaded-in-memory-or-make-it-unload-immediately`,children:`How do I keep a model loaded in memory or make it
+unload immediately?`}),`\n`,_jsxs(_components.p,{children:[`By default models are kept in memory for 5 minutes
+before being unloaded. This allows for quicker response times if you’re making numerous requests to the LLM.
+If you want to immediately unload a model from memory, use the `,_jsx(_components.code,{children:`ollama
+stop`}),`
+command:`]}),`\n`,_jsx(CodeBlock,{filename:``,numberOfLines:`1`,language:`shellscript`,children:_jsx(_components.pre,{className:`shiki
+shiki-themes github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`shellscript`,children:_jsxs(_components.code,{language:`shellscript`,numberOfLines:`1`,children:[_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#953800`,\"
+--shiki-dark\":`#DCDCAA`},children:`ollama`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:` stop`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:` llama3.2`})]}),`\n`]})})}),`\n`,_jsxs(_components.p,{children:[`If you’re using
+the API, use the `,_jsx(_components.code,{children:`keep_alive`}),` parameter with the
+`,_jsx(_components.code,{children:`/api/generate`}),` and `,_jsx(_components.code,{children:`/api/chat`}),`
+endpoints to set the amount of time that a model stays in memory. The
+`,_jsx(_components.code,{children:`keep_alive`}),` parameter can be set
+to:`]}),`\n`,_jsxs(_components.ul,{children:[`\n`,_jsx(_components.li,{children:`a duration string (such as
+“10m” or “24h”)`}),`\n`,_jsx(_components.li,{children:`a number in seconds (such as
+3600)`}),`\n`,_jsx(_components.li,{children:`any negative number which will keep the model loaded in memory
+(e.g. -1 or “-1m”)`}),`\n`,_jsx(_components.li,{children:`‘0’ which will unload the model immediately after
+generating a response`}),`\n`]}),`\n`,_jsx(_components.p,{children:`For example, to preload a model and leave
+it in memory
+use:`}),`\n`,_jsx(CodeBlock,{filename:``,numberOfLines:`1`,language:`shellscript`,children:_jsx(_components.pre,{className:`shiki
+shiki-themes github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`shellscript`,children:_jsxs(_components.code,{language:`shellscript`,numberOfLines:`1`,children:[_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#953800`,\"
+--shiki-dark\":`#DCDCAA`},children:`curl`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`
+http://localhost:11434/api/generate`}),_jsx(_components.span,{style:{color:`#0550AE`,\"--shiki-
+dark\":`#569CD6`},children:` -d`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:` '{\"model\": \"llama3.2\", \"keep_alive\":
+-1}'`})]}),`\n`]})})}),`\n`,_jsx(_components.p,{children:`To unload the model and free up memory
+use:`}),`\n`,_jsx(CodeBlock,{filename:``,numberOfLines:`1`,language:`shellscript`,children:_jsx(_components.pre,{className:`shiki
+shiki-themes github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`shellscript`,children:_jsxs(_components.code,{language:`shellscript`,numberOfLines:`1`,children:[_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#953800`,\"
+--shiki-dark\":`#DCDCAA`},children:`curl`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`
+http://localhost:11434/api/generate`}),_jsx(_components.span,{style:{color:`#0550AE`,\"--shiki-
+dark\":`#569CD6`},children:` -d`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:` '{\"model\": \"llama3.2\", \"keep_alive\":
+0}'`})]}),`\n`]})})}),`\n`,_jsxs(_components.p,{children:[`Alternatively, you can change the amount of time
+all models are loaded into memory by setting the `,_jsx(_components.code,{children:`OLLAMA_KEEP_ALIVE`}),`
+environment variable when starting the Ollama server. The
+`,_jsx(_components.code,{children:`OLLAMA_KEEP_ALIVE`}),` variable uses the same parameter types as the
+`,_jsx(_components.code,{children:`keep_alive`}),` parameter types mentioned above. Refer to the section
+explaining `,_jsx(_components.a,{href:`#how-do-i-configure-ollama-server`,children:`how to configure the
+Ollama server`}),` to correctly set the environment variable.`]}),`\n`,_jsxs(_components.p,{children:[`The
+`,_jsx(_components.code,{children:`keep_alive`}),` API parameter with the
+`,_jsx(_components.code,{children:`/api/generate`}),` and `,_jsx(_components.code,{children:`/api/chat`}),`
+API endpoints will override the `,_jsx(_components.code,{children:`OLLAMA_KEEP_ALIVE`}),`
+setting.`]}),`\n`,_jsx(Heading,{level:`2`,id:`how-do-i-manage-the-maximum-number-of-requests-the-ollama-
+server-can-queue`,children:`How do I manage the maximum number of requests the Ollama server can
+queue?`}),`\n`,_jsxs(_components.p,{children:[`If too many requests are sent to the server, it will respond
+with a 503 error indicating the server is overloaded. You can adjust how many requests may be queued by
+setting `,_jsx(_components.code,{children:`OLLAMA_MAX_QUEUE`}),`.`]}),`\n`,_jsx(Heading,{level:`2`,id:`how-
+does-ollama-handle-concurrent-requests`,children:`How does Ollama handle concurrent
+requests?`}),`\n`,_jsx(_components.p,{children:`Ollama supports two levels of concurrent processing. If your
+system has sufficient available memory (system memory when using CPU inference, or VRAM for GPU inference)
+then multiple models can be loaded at the same time. For a given model, if there is sufficient available
+memory when the model is loaded, it is configured to allow parallel request
+processing.`}),`\n`,_jsx(_components.p,{children:`If there is insufficient available memory to load a new
+model request while one or more models are already loaded, all new requests will be queued until the new model
+can be loaded. As prior models become idle, one or more will be unloaded to make room for the new model.
+Queued requests will be processed in order. When using GPU inference new models must be able to completely fit
+in VRAM to allow concurrent model loads.`}),`\n`,_jsx(_components.p,{children:`Parallel request processing for
+a given model results in increasing the context size by the number of parallel requests. For example, a 2K
+context with 4 parallel requests will result in an 8K context and additional memory
+allocation.`}),`\n`,_jsx(_components.p,{children:`The following server settings may be used to adjust how
+Ollama handles concurrent requests on most
+platforms:`}),`\n`,_jsxs(_components.ul,{children:[`\n`,_jsxs(_components.li,{children:[_jsx(_components.code,{children:`OLLAMA_MAX_LOADED_MODELS`}),`
+- The maximum number of models that can be loaded concurrently provided they fit in available memory. The
+default is 3 * the number of GPUs or 3 for CPU
+inference.`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.code,{children:`OLLAMA_NUM_PARALLEL`}),`
+- The maximum number of parallel requests each model will process at the same time, default 1. Required RAM
+will scale by `,_jsx(_components.code,{children:`OLLAMA_NUM_PARALLEL`}),` *
+`,_jsx(_components.code,{children:`OLLAMA_CONTEXT_LENGTH`}),`.`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.code,{children:`OLLAMA_MAX_QUEUE`}),`
+- The maximum number of requests Ollama will queue when busy before rejecting additional requests. The default
+is 512`]}),`\n`]}),`\n`,_jsx(_components.p,{children:`Note: Windows with Radeon GPUs currently default to 1
+model maximum due to limitations in ROCm v5.7 for available VRAM reporting. Once ROCm v6.2 is available,
+Windows Radeon will follow the defaults above. You may enable concurrent model loads on Radeon on Windows, but
+ensure you don’t load more models than will fit into your GPU’s VRAM.`}),`\n`,_jsx(Heading,{level:`2`,id:`how-
+does-ollama-load-models-on-multiple-gpus`,children:`How does Ollama load models on multiple
+GPUs?`}),`\n`,_jsx(_components.p,{children:`When loading a new model, Ollama evaluates the required VRAM for
+the model against what is currently available. If the model will entirely fit on any single GPU, Ollama will
+load the model on that GPU. This typically provides the best performance as it reduces the amount of data
+transferring across the PCI bus during inference. If the model does not fit entirely on one GPU, then it will
+be spread across all the available GPUs.`}),`\n`,_jsx(Heading,{level:`2`,id:`how-can-i-enable-flash-
+attention`,children:`How can I enable Flash Attention?`}),`\n`,_jsxs(_components.p,{children:[`Flash Attention
+is a feature of most modern models that can significantly reduce memory usage as the context size grows.
+Ollama uses Flash Attention automatically when the selected backend and devices support it. To force Flash
+Attention on, set `,_jsx(_components.code,{children:`OLLAMA_FLASH_ATTENTION=1`}),` when starting the Ollama
+server. To disable it, set
+`,_jsx(_components.code,{children:`OLLAMA_FLASH_ATTENTION=0`}),`.`]}),`\n`,_jsx(Heading,{level:`2`,id:`how-
+can-i-set-the-quantization-type-for-the-k/v-cache`,children:`How can I set the quantization type for the K/V
+cache?`}),`\n`,_jsx(_components.p,{children:`The K/V context cache can be quantized to significantly reduce
+memory usage when Flash Attention is enabled.`}),`\n`,_jsx(_components.p,{children:`To use quantized K/V cache
+with Ollama you can set the following environment
+variable:`}),`\n`,_jsxs(_components.ul,{children:[`\n`,_jsxs(_components.li,{children:[_jsx(_components.code,{children:`OLLAMA_KV_CACHE_TYPE`}),`
+- The quantization type for the K/V cache. Default is
+`,_jsx(_components.code,{children:`f16`}),`.`]}),`\n`]}),`\n`,_jsx(Note,{children:_jsx(_components.p,{children:`Currently
+this is a global option - meaning all models will run with the\nspecified quantization
+type.`})}),`\n`,_jsx(_components.p,{children:`The currently available K/V cache quantization types
+are:`}),`\n`,_jsxs(_components.ul,{children:[`\n`,_jsxs(_components.li,{children:[_jsx(_components.code,{children:`f16`}),`
+- high precision and memory usage
+(default).`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.code,{children:`q8_0`}),` - 8-bit
+quantization, uses approximately 1/2 the memory of `,_jsx(_components.code,{children:`f16`}),` with a very
+small loss in precision, this usually has no noticeable impact on the model’s quality (recommended if not
+using f16).`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.code,{children:`q4_0`}),` - 4-bit
+quantization, uses approximately 1/4 the memory of `,_jsx(_components.code,{children:`f16`}),` with a small-
+medium loss in precision that may be more noticeable at higher context
+sizes.`]}),`\n`]}),`\n`,_jsx(_components.p,{children:`How much the cache quantization impacts the model’s
+response quality will depend on the model and the task. Models that have a high GQA count (e.g. Qwen2) may see
+a larger impact on precision from quantization than models with a low GQA
+count.`}),`\n`,_jsx(_components.p,{children:`You may need to experiment with different quantization types to
+find the best balance between memory usage and quality.`}),`\n`,_jsx(Heading,{level:`2`,id:`where-can-i-find-
+my-ollama-public-key`,children:`Where can I find my Ollama Public
+Key?`}),`\n`,_jsxs(_components.p,{children:[`Your `,_jsx(_components.strong,{children:`Ollama Public Key`}),`
+is the public part of the key pair that lets your local Ollama instance talk to
+`,_jsx(_components.a,{href:`https://ollama.com`,children:`ollama.com`}),`.`]}),`\n`,_jsx(_components.p,{children:`You’ll
+need it to:`}),`\n`,_jsxs(_components.ul,{children:[`\n`,_jsx(_components.li,{children:`Push models to
+Ollama`}),`\n`,_jsx(_components.li,{children:`Pull private models from Ollama to your
+machine`}),`\n`,_jsxs(_components.li,{children:[`Run models hosted in
+`,_jsx(_components.a,{href:`https://ollama.com/cloud`,children:`Ollama’s
+cloud`})]}),`\n`]}),`\n`,_jsx(Heading,{level:`3`,id:`how-to-add-the-key`,children:`How to Add the
+Key`}),`\n`,_jsxs(_components.ul,{children:[`\n`,_jsxs(_components.li,{children:[`\n`,_jsxs(_components.p,{children:[_jsx(_components.strong,{children:`Sign-
+in via the Settings page`}),` in the `,_jsx(_components.strong,{children:`Mac`}),` and
+`,_jsx(_components.strong,{children:`Windows
+App`})]}),`\n`]}),`\n`,_jsxs(_components.li,{children:[`\n`,_jsx(_components.p,{children:_jsx(_components.strong,{children:`Sign‑in
+via
+CLI`})}),`\n`]}),`\n`]}),`\n`,_jsx(CodeBlock,{filename:``,numberOfLines:`1`,language:`shellscript`,children:_jsx(_components.pre,{className:`shiki
+shiki-themes github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`shellscript`,children:_jsxs(_components.code,{language:`shellscript`,numberOfLines:`1`,children:[_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#953800`,\"
+--shiki-dark\":`#DCDCAA`},children:`ollama`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`
+signin`})]}),`\n`]})})}),`\n`,_jsxs(_components.ul,{children:[`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Manually
+copy \u0026 paste`}),` the key on the `,_jsx(_components.strong,{children:`Ollama Keys`}),`
+page:\n`,_jsx(_components.a,{href:`https://ollama.com/settings/keys`,children:`https://ollama.com/settings/keys`})]}),`\n`]}),`\n`,_jsx(Heading,{level:`3`,id:`where-
+the-ollama-public-key-lives`,children:`Where the Ollama Public Key
+lives`}),`\n`,_jsxs(Table,{children:[_jsx(_components.thead,{children:_jsxs(_components.tr,{children:[_jsx(_components.th,{style:{textAlign:`left`},children:`OS`}),_jsxs(_components.th,{style:{textAlign:`left`},children:[`Path
+to
+`,_jsx(_components.code,{children:`id_ed25519.pub`})]})]})}),_jsxs(_components.tbody,{children:[_jsxs(_components.tr,{children:[_jsx(_components.td,{style:{textAlign:`left`},children:`macOS`}),_jsx(_components.td,{style:{textAlign:`left`},children:_jsx(_components.code,{children:`~/.ollama/id_ed25519.pub`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{style:{textAlign:`left`},children:`Linux`}),_jsx(_components.td,{style:{textAlign:`left`},children:_jsx(_components.code,{children:`/usr/share/ollama/.ollama/id_ed25519.pub`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{style:{textAlign:`left`},children:`Windows`}),_jsx(_components.td,{style:{textAlign:`left`},children:_jsx(_components.code,{children:`C:\\\\\\\Users\\\\\\\\\u003cusername>\\\\\\\\.ollama\\\\\\\id_ed25519.pub`})})]})]})]}),`\n`,_jsx(Note,{children:_jsx(_components.p,{children:`Replace
+\u003cusername> with your actual Windows user name.`})}),`\n`,_jsx(Heading,{level:`2`,id:`how-can-i-stop-
+ollama-from-starting-when-i-login-to-my-computer`,children:`How can I stop Ollama from starting when I login
+to my computer?`}),`\n`,_jsx(_components.p,{children:`Ollama for Windows and macOS register as a login item
+during installation. You can disable this if you prefer not to have Ollama automatically start. Ollama will
+respect this setting across upgrades, unless you uninstall the
+application.`}),`\n`,_jsx(_components.p,{children:_jsx(_components.strong,{children:`Windows`})}),`\n`,_jsxs(_components.ul,{children:[`\n`,_jsxs(_components.li,{children:[`In
+`,_jsx(_components.code,{children:`Task Manager`}),` go to the `,_jsx(_components.code,{children:`Startup
+apps`}),` tab, search for `,_jsx(_components.code,{children:`ollama`}),` then click
+`,_jsx(_components.code,{children:`Disable`})]}),`\n`]}),`\n`,_jsx(_components.p,{children:_jsx(_components.strong,{children:`MacOS`})}),`\n`,_jsxs(_components.ul,{children:[`\n`,_jsxs(_components.li,{children:[`Open
+`,_jsx(_components.code,{children:`Settings`}),` and search for “Login Items”, find the
+`,_jsx(_components.code,{children:`Ollama`}),` entry under `,_jsx(_components.code,{children:`Allow in the
+Background`}),`, then click the slider to disable.`]}),`\n`]})]})}function
+MDXContent(props={}){const{wrapper:MDXLayout}={..._provideComponents(),...props.components};return
+MDXLayout?_jsx(MDXLayout,{...props,children:_jsx(_createMdxContent,{...props})}):_createMdxContent(props)}return{default:MDXContent};function
+_missingMdxReference(id,component){throw new Error(`Expected `+(component?`component`:`object`)+\" `\"+id+\"`
+to be defined: you likely forgot to import, pass, or provide
+it.\")}","frontmatter":{},"scope":{"codeStyling":"system","config":{},"pageMetadata":{"title":"FAQ","description":null,"href":"/faq"}}},"mdxSourceWithNoJs":null},"mdxExtracts":{"tableOfContents":[{"title":"How
+can I upgrade Ollama?","slug":"how-can-i-upgrade-ollama","depth":2,"children":[]},{"title":"How can I view the
+logs?","slug":"how-can-i-view-the-logs","depth":2,"children":[]},{"title":"Is my GPU compatible with
+Ollama?","slug":"is-my-gpu-compatible-with-ollama","depth":2,"children":[]},{"title":"How can I specify the
+context window size?","slug":"how-can-i-specify-the-context-window-
+size","depth":2,"children":[]},{"title":"How can I tell if my model was loaded onto the GPU?","slug":"how-can-
+i-tell-if-my-model-was-loaded-onto-the-gpu","depth":2,"children":[]},{"title":"How do I configure Ollama
+server?","slug":"how-do-i-configure-ollama-server","depth":2,"children":[{"title":"Setting environment
+variables on Mac","slug":"setting-environment-variables-on-mac","depth":3,"children":[]},{"title":"Setting
+environment variables on Linux","slug":"setting-environment-variables-on-
+linux","depth":3,"children":[]},{"title":"Setting environment variables on Windows","slug":"setting-
+environment-variables-on-windows","depth":3,"children":[]}]},{"title":"How do I use Ollama behind a
+proxy?","slug":"how-do-i-use-ollama-behind-a-proxy","depth":2,"children":[{"title":"How do I use Ollama behind
+a proxy in Docker?","slug":"how-do-i-use-ollama-behind-a-proxy-in-
+docker","depth":3,"children":[]}]},{"title":"Does Ollama send my prompts and answers back to
+ollama.com?","slug":"does-ollama-send-my-prompts-and-answers-back-to-ollama-
+com","depth":2,"children":[]},{"title":"How do I disable Ollama’s cloud features?","slug":"how-do-i-disable-
+ollama-cloud-features","depth":2,"children":[]},{"title":"How can I expose Ollama on my network?","slug":"how-
+can-i-expose-ollama-on-my-network","depth":2,"children":[]},{"title":"How can I use Ollama with a proxy
+server?","slug":"how-can-i-use-ollama-with-a-proxy-server","depth":2,"children":[]},{"title":"How can I use
+Ollama with ngrok?","slug":"how-can-i-use-ollama-with-ngrok","depth":2,"children":[]},{"title":"How can I use
+Ollama with Cloudflare Tunnel?","slug":"how-can-i-use-ollama-with-cloudflare-
+tunnel","depth":2,"children":[]},{"title":"How can I allow additional web origins to access
+Ollama?","slug":"how-can-i-allow-additional-web-origins-to-access-
+ollama","depth":2,"children":[]},{"title":"Where are models stored?","slug":"where-are-models-
+stored","depth":2,"children":[{"title":"How do I set them to a different location?","slug":"how-do-i-set-them-
+to-a-different-location","depth":3,"children":[]}]},{"title":"How can I use Ollama in Visual Studio
+Code?","slug":"how-can-i-use-ollama-in-visual-studio-code","depth":2,"children":[]},{"title":"How do I use
+Ollama with GPU acceleration in Docker?","slug":"how-do-i-use-ollama-with-gpu-acceleration-in-
+docker","depth":2,"children":[]},{"title":"Why is networking slow in WSL2 on Windows 10?","slug":"why-is-
+networking-slow-in-wsl2-on-windows-10","depth":2,"children":[]},{"title":"How can I preload a model into
+Ollama to get faster response times?","slug":"how-can-i-preload-a-model-into-ollama-to-get-faster-response-
+times","depth":2,"children":[]},{"title":"How do I keep a model loaded in memory or make it unload
+immediately?","slug":"how-do-i-keep-a-model-loaded-in-memory-or-make-it-unload-
+immediately","depth":2,"children":[]},{"title":"How do I manage the maximum number of requests the Ollama
+server can queue?","slug":"how-do-i-manage-the-maximum-number-of-requests-the-ollama-server-can-
+queue","depth":2,"children":[]},{"title":"How does Ollama handle concurrent requests?","slug":"how-does-
+ollama-handle-concurrent-requests","depth":2,"children":[]},{"title":"How does Ollama load models on multiple
+GPUs?","slug":"how-does-ollama-load-models-on-multiple-gpus","depth":2,"children":[]},{"title":"How can I
+enable Flash Attention?","slug":"how-can-i-enable-flash-attention","depth":2,"children":[]},{"title":"How can
+I set the quantization type for the K/V cache?","slug":"how-can-i-set-the-quantization-type-for-
+the-k/v-cache","depth":2,"children":[]},{"title":"Where can I find my Ollama Public Key?","slug":"where-can-i-
+find-my-ollama-public-key","depth":2,"children":[{"title":"How to Add the Key","slug":"how-to-add-the-
+key","depth":3,"children":[]},{"title":"Where the Ollama Public Key lives","slug":"where-the-ollama-public-
+key-lives","depth":3,"children":[]}]},{"title":"How can I stop Ollama from starting when I login to my
+computer?","slug":"how-can-i-stop-ollama-from-starting-when-i-login-to-my-
+computer","depth":2,"children":[]}],"codeExamples":{}},"jsLinks":[],"subdomain":"ollama-9269c548","siteName":"Ollama","title":"FAQ
+-
+Ollama","navMaps":{"firstHrefInVersion":{},"firstHrefInLanguage":{}},"lastModified":"2026-10-27T15:47:31.354Z","originalFileLocation":"faq.mdx"},"headHtml":"\u003cscript
+data-mint-head>(function(){var
+d=document.documentElement,p=null;if(!p){try{p=localStorage.getItem(\"isDarkMode\")}catch(e){}if(p==='true')p='dark';else
+if(p==='false')p='light';if(p!=='light'\u0026\u0026p!=='dark'\u0026\u0026p!=='system')p=\"system\"}var
+r=p==='system'?(matchMedia(\"(prefers-color-scheme:
+dark)\").matches?'dark':'light'):p;d.classList.remove(r==='dark'?'light':'dark');d.classList.add(r);d.setAttribute(\"data-
+theme-preference\",p)})();\u003c/script>\u003cmeta data-mint-head name=\"application-name\"
+content=\"Ollama\">\u003cmeta data-mint-head name=\"generator\" content=\"Mintlify\">\u003clink data-mint-head
+rel=\"icon\" type=\"image/png\" sizes=\"192x192\" href=\"/mintlify-
+assets/_mintlify/favicons/ollama-9269c548/rTOd4JgM8IuYTTMj/_generated/favicon/android-chrome-192x192.png\"
+media=\"(prefers-color-scheme: light)\">\u003clink data-mint-head rel=\"apple-touch-icon\" type=\"image/png\"
+sizes=\"180x180\" href=\"/mintlify-
+assets/_mintlify/favicons/ollama-9269c548/rTOd4JgM8IuYTTMj/_generated/favicon/apple-touch-
+icon.png\">\u003clink data-mint-head rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/mintlify-
+assets/_mintlify/favicons/ollama-9269c548/rTOd4JgM8IuYTTMj/_generated/favicon/favicon-16x16.png\"
+media=\"(prefers-color-scheme: light)\">\u003clink data-mint-head rel=\"icon\" type=\"image/png\"
+sizes=\"32x32\" href=\"/mintlify-
+assets/_mintlify/favicons/ollama-9269c548/rTOd4JgM8IuYTTMj/_generated/favicon/favicon-32x32.png\"
+media=\"(prefers-color-scheme: light)\">\u003clink data-mint-head rel=\"shortcut icon\" type=\"image/x-icon\"
+href=\"/mintlify-assets/_mintlify/favicons/ollama-9269c548/rTOd4JgM8IuYTTMj/_generated/favicon/favicon.ico\"
+media=\"(prefers-color-scheme: light)\">\u003clink data-mint-head rel=\"icon\" type=\"image/png\"
+sizes=\"192x192\" href=\"/mintlify-
+assets/_mintlify/favicons/ollama-9269c548/rTOd4JgM8IuYTTMj/_generated/favicon-dark/android-
+chrome-192x192.png\" media=\"(prefers-color-scheme: dark)\">\u003clink data-mint-head rel=\"icon\"
+type=\"image/png\" sizes=\"16x16\" href=\"/mintlify-
+assets/_mintlify/favicons/ollama-9269c548/rTOd4JgM8IuYTTMj/_generated/favicon-dark/favicon-16x16.png\"
+media=\"(prefers-color-scheme: dark)\">\u003clink data-mint-head rel=\"icon\" type=\"image/png\"
+sizes=\"32x32\" href=\"/mintlify-
+assets/_mintlify/favicons/ollama-9269c548/rTOd4JgM8IuYTTMj/_generated/favicon-dark/favicon-32x32.png\"
+media=\"(prefers-color-scheme: dark)\">\u003clink data-mint-head rel=\"shortcut icon\" type=\"image/x-icon\"
+href=\"/mintlify-assets/_mintlify/favicons/ollama-9269c548/rTOd4JgM8IuYTTMj/_generated/favicon-
+dark/favicon.ico\" media=\"(prefers-color-scheme: dark)\">\u003cmeta data-mint-head property=\"og:title\"
+content=\"FAQ - Ollama\">\u003cmeta data-mint-head property=\"og:site_name\" content=\"Ollama\">\u003cmeta
+data-mint-head property=\"og:url\" content=\"https://docs.ollama.com/faq\">\u003cmeta data-mint-head
+property=\"og:type\" content=\"website\">\u003cmeta data-mint-head property=\"og:image\"
+content=\"https://ollama-9269c548.mintlify.app/_mintlify/api/og/v2?division=More+information\u0026amp;title=FAQ\u0026amp;theme=011d2aaf3bed32c67275a968\u0026amp;signature=f2fa917c2c3f40890ebe46ad8176b1906b511ce0788979aadc6c7ac4ddbc65ea\">\u003cmeta
+data-mint-head property=\"og:image:width\" content=\"1200\">\u003cmeta data-mint-head
+property=\"og:image:height\" content=\"630\">\u003cmeta data-mint-head name=\"twitter:card\"
+content=\"summary_large_image\">\u003cmeta data-mint-head name=\"twitter:title\" content=\"FAQ -
+Ollama\">\u003cmeta data-mint-head name=\"twitter:image\"
+content=\"https://ollama-9269c548.mintlify.app/_mintlify/api/og/v2?division=More+information\u0026amp;title=FAQ\u0026amp;theme=011d2aaf3bed32c67275a968\u0026amp;signature=f2fa917c2c3f40890ebe46ad8176b1906b511ce0788979aadc6c7ac4ddbc65ea\">\u003cmeta
+data-mint-head name=\"twitter:image:width\" content=\"1200\">\u003cmeta data-mint-head
+name=\"twitter:image:height\" content=\"630\">\u003cmeta data-mint-head name=\"msapplication-config\"
+content=\"/mintlify-
+assets/_mintlify/favicons/ollama-9269c548/rTOd4JgM8IuYTTMj/_generated/favicon/browserconfig.xml\">\u003cmeta
+data-mint-head name=\"apple-mobile-web-app-title\" content=\"Ollama\">\u003cmeta data-mint-head
+name=\"msapplication-TileColor\" content=\"#000\">\u003clink data-mint-head rel=\"canonical\"
+href=\"https://docs.ollama.com/faq\">\u003clink data-mint-head rel=\"alternate\" type=\"application/xml\"
+href=\"/sitemap.xml\">\u003clink data-mint-head rel=\"alternate\" type=\"text/markdown\"
+href=\"/faq.md\">\u003cscript data-mint-head
+type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Organization\",\"@id\":\"https://docs.ollama.com/#organization\",\"name\":\"Ollama\",\"url\":\"https://docs.ollama.com\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://mintcdn.com/ollama-9269c548/XefrxzvUktkk84RL/images/logo.png?fit=max\u0026auto=format\u0026n=XefrxzvUktkk84RL\u0026q=85\u0026s=03a38b5749aa7f530044e9b251dc10d8\"}},{\"@type\":\"WebSite\",\"@id\":\"https://docs.ollama.com#website\",\"name\":\"Ollama\",\"url\":\"https://docs.ollama.com\",\"publisher\":{\"@id\":\"https://docs.ollama.com/#organization\"}},{\"@type\":\"WebPage\",\"@id\":\"https://docs.ollama.com/faq#webpage\",\"url\":\"https://docs.ollama.com/faq\",\"name\":\"FAQ\",\"dateModified\":\"2026-10-27T15:47:31.354Z\",\"isPartOf\":{\"@id\":\"https://docs.ollama.com#website\"},\"breadcrumb\":{\"@id\":\"https://docs.ollama.com/faq#breadcrumb\"}},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://docs.ollama.com/faq#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"More
+information\",\"item\":\"https://docs.ollama.com/cli\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"FAQ\",\"item\":\"https://docs.ollama.com/faq\"}]},{\"@type\":[\"Article\",\"TechArticle\"],\"@id\":\"https://docs.ollama.com/faq#article\",\"headline\":\"FAQ\",\"name\":\"FAQ\",\"url\":\"https://docs.ollama.com/faq\",\"mainEntityOfPage\":{\"@id\":\"https://docs.ollama.com/faq#webpage\"},\"dateModified\":\"2026-10-27T15:47:31.354Z\",\"publisher\":{\"@id\":\"https://docs.ollama.com/#organization\"},\"isPartOf\":{\"@id\":\"https://docs.ollama.com#website\"}}]}\u003c/script>","siteName":"Ollama","nav":{"global":null,"tabs":[{"tab":"Guide","groups":[{"group":"Get
+started","pages":[{"title":"Ollama
+documentation","sidebarTitle":"Welcome","href":""},{"title":"Quickstart","href":"/quickstart"},{"title":"Cloud","sidebarTitle":"Cloud","href":"/cloud"}]},{"group":"Capabilities","pages":[{"title":"Streaming","href":"/capabilities/streaming"},{"title":"Thinking","href":"/capabilities/thinking"},{"title":"Structured
+Outputs","href":"/capabilities/structured-
+outputs"},{"title":"Decision","href":"/capabilities/decision"},{"title":"Vision","href":"/capabilities/vision"},{"title":"Embeddings","href":"/capabilities/embeddings"},{"title":"Speech","href":"/capabilities/speech"},{"title":"Tool
+calling","href":"/capabilities/tool-calling"},{"title":"Web search","href":"/capabilities/web-
+search"}]},{"group":"More information","pages":[{"title":"CLI Reference","href":"/cli"},{"title":"Modelfile
+Reference","href":"/modelfile"},{"title":"Context length","href":"/context-
+length"},{"title":"Linux","href":"/linux"},{"title":"macOS","href":"/macos"},{"title":"Windows","href":"/windows"},{"title":null,"href":"/docker"},{"title":"Importing
+a Model","description":null,"href":"/import"},{"title":"FAQ","href":"/faq"},{"title":"Hardware
+support","description":null,"href":"/gpu"},{"title":"Troubleshooting","href":"/troubleshooting"}]}]},{"tab":"Integrations","pages":[{"title":"Integrations","href":"/integrations"}]},{"tab":"API
+Reference","pages":[{"title":"API Reference","href":"/api/introduction"}]}]},"title":"FAQ -
+Ollama","buildId":"dpl_2xiSHD9XEvLsPGPcfoMtkLTB3dy9","deploymentId":"dpl_2xiSHD9XEvLsPGPcfoMtkLTB3dy9","dynamics":[],"chunks":[]}
+

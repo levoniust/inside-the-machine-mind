@@ -1,0 +1,644 @@
+SOURCE COPY — SRC-MASHABLE-BEMYEYES
+Retrieved 2026-10-28 for Inside the Machine Mind (offline reference copy; excerpt of the original, formatting simplified).
+Original URL: https://mashable.com/article/chatgpt-openai-be-my-eyes-accessibility
+Page/document title: OpenAI expands accessibility with new GPT-4 and Be My Eyes partnership | Mashable
+
+------------------------------------------------------------------------
+
+[ ](https://mashable.com)
+
+[The Mashable 101](https://mashable.com/top-creators-influencers-mashable-101-2026) [Creator
+Hub](https://mashable.com/category/creators) [Tech](https://mashable.com/tech)
+[Science](https://mashable.com/science) [Life](https://mashable.com/life) [Social
+Good](https://mashable.com/category/social-good) [Entertainment](https://mashable.com/entertainment)
+[Deals](https://mashable.com/deals) [Shopping](https://mashable.com/shopping)
+[Games](https://games.mashable.com/)
+
+Search
+
+Cancel
+
+  *   * Search Result 
+
+* * *
+
+[The Mashable 101](https://mashable.com/top-creators-influencers-mashable-101-2026)
+
+[Creator Hub](https://mashable.com/category/creators)
+
+Tech
+
+[Apps & Software](https://mashable.com/category/apps-software) [Artificial
+Intelligence](https://mashable.com/category/artificial-intelligence)
+[Cybersecurity](https://mashable.com/category/cybersecurity)
+[Cryptocurrency](https://mashable.com/category/cryptocurrency) [Mobile](https://mashable.com/category/mobile)
+[Smart Home](https://mashable.com/category/smart-home) [Social Media](https://mashable.com/category/social-
+media) [Tech Industry](https://mashable.com/category/tech-industry)
+[Transportation](https://mashable.com/category/transportation) [All Tech](https://mashable.com/tech)
+
+Science
+
+[Space](https://mashable.com/category/space) [Climate Change](https://mashable.com/category/climate-change)
+[Environment](https://mashable.com/category/environment) [All Science](https://mashable.com/science)
+
+Life
+
+[Family & Parenting](https://mashable.com/category/family-parenting) [Health &
+Wellness](https://mashable.com/category/health-wellness) [Sex, Dating &
+Relationships](https://mashable.com/category/sex-dating-relationships)
+[Sleep](https://mashable.com/category/sleep) [Careers](https://mashable.com/category/careers) [Mental
+Health](https://mashable.com/category/mental-health) [All Life](https://mashable.com/life)
+
+Social Good
+
+[Activism](https://mashable.com/category/activism) [Gender](https://mashable.com/category/gender)
+[LGBTQ](https://mashable.com/category/lgbtq) [Racial Justice](https://mashable.com/category/racism)
+[Sustainability](https://mashable.com/category/sustainability)
+[Politics](https://mashable.com/category/politics) [All Social Good](https://mashable.com/category/social-
+good)
+
+Entertainment
+
+[Games](https://mashable.com/category/games) [Movies](https://mashable.com/category/movies)
+[Podcasts](https://mashable.com/category/podcasts) [TV Shows](https://mashable.com/category/tv-shows) [Watch
+Guides](https://mashable.com/category/watch-guides) [All Entertainment](https://mashable.com/entertainment)
+
+SHOP THE BEST
+
+[Laptops]() [Budget Laptops](/roundup/best-cheap-laptops) [Dating Apps]() [Sexting Apps]() [Hookup
+Apps](/roundup/best-hookup-apps) [VPNs](/roundup/best-vpns) [Robot Vaccuums]() [Robot Vaccum & Mop]()
+[Headphones]() [Speakers](/roundup/best-portable-bluetooth-speakers) [Kindles]() [Gift
+Guides](https://mashable.com/gifts) [Mashable Choice](https://mashable.com/mashable-choice) [Mashable
+Selects](https://mashable.com/category/mashable-selects) [All Sex, Dating &
+Relationships](https://mashable.com/category/sex-dating-relationships) [All
+Laptops](https://mashable.com/category/laptops) [All Headphones](https://mashable.com/category/headphones)
+[All Robot Vacuums](https://mashable.com/category/robot-vacuums) [All VPN](https://mashable.com/category/vpn)
+[All Shopping](https://mashable.com/shopping)
+
+[Games](https://games.mashable.com/)
+
+Product Reviews
+
+[Adult Friend Finder](/review/adult-friend-finder-review-dating-site) [Bumble Premium](/review/bumble-premium-
+review) [Tinder Platinum](/review/tinder-platinum-review) [Kindle Paperwhite](/review/kindle-paperwhite-
+signature-edition) [PS5 vs PS5 Slim](/article/ps5-vs-ps5-slim-differences) [All
+Reviews](https://mashable.com/review) [All Shopping](https://mashable.com/shopping)
+
+[Deals](https://mashable.com/deals)
+
+[Newsletters](https://mashable.com/newsletters)
+
+Series
+
+[Gift Ideas For Everyone On Your List](/series/best-gifts) [Mashable's Best: E-readers, robovacs, laptops,
+earbuds, smart home and more](/series/best-tech-apple-e-readers-airpods-headphones-earbuds-laptops-robovac)
+[Look Up](/series/look-up) [Mashable @Home](/series/at-home) [In My Bag](/series/in-my-bag) [Safety
+Net](/series/safety-net) [Versus](/series/versus) [Trending Now](/series/trending-now) [Say More](/series/say-
+more) [Creator Playbook](/series/content-creators-influencers-playbook) [Mashable Selects](/series/mashable-
+selects) [Getting Technical with Mashable](/series/getting-technical) [All
+Series](https://mashable.com/series)
+
+VIDEOS
+
+[Mashable Shows](https://mashable.com/shows) [All Videos](https://mashable.com/videos)
+
+[Home](https://mashable.com) > [Tech](/tech)
+
+# Be My Eyes meets GPT-4: Is AI the next frontier in accessibility?
+
+With AI at our fingertips, disability activists hope to demolish barriers to access.
+
+ By
+
+[Chase DiBenedetto](/author/chase-dibenedetto)
+
+Chase DiBenedetto
+
+Social Good Reporter
+
+Chase joined Mashable's Social Good team in 2020, covering online stories about digital activism, climate
+justice, accessibility, and media representation. Her work also captures how these conversations manifest in
+politics, popular culture, and fandom. Sometimes she's very funny.
+
+[Read Full Bio](/author/chase-dibenedetto)
+
+ on March 22, 2023
+
+[ Share on Facebook ](https://www.facebook.com/sharer.php?u=https%3A%2F%2Fmashable.com%2Farticle%2Fchatgpt-
+openai-be-my-eyes-accessibility "\(opens in a new window\)") [ Share on Twitter
+](https://twitter.com/intent/tweet?url=https%3A%2F%2Fmashable.com%2Farticle%2Fchatgpt-openai-be-my-eyes-
+accessibility&text=Be+My+Eyes+meets+GPT-4%3A+Is+AI+the+next+frontier+in+accessibility%3F "\(opens in a new
+window\)") [ Share on Flipboard
+](https://share.flipboard.com/bookmarklet/popout?v=2&url=https%3A%2F%2Fmashable.com%2Farticle%2Fchatgpt-
+openai-be-my-eyes-accessibility&title=Be+My+Eyes+meets+GPT-4%3A+Is+AI+the+next+frontier+in+accessibility%3F
+"\(opens in a new window\)")
+
+Be My Eyes users like Lucy Edwards are navigating the world with the help of an OpenAI innovation.  Credit:
+Lucy Edwards / Be My Eyes
+
+* * *
+
+Nearing the 10-year anniversary of losing her eyesight, [Lucy Edwards](https://lucyedwards.com%20 "\(opens in
+a new window\)") is reclaiming countless visual experiences...with the help of artificial intelligence.
+
+As a partner with visual assistant mobile app [_Be My Eyes_](https://apps.apple.com/us/app/be-my-
+eyes/id905177575 "\(opens in a new window\)"), Edwards is testing the limits of the latest accessibility
+revelation, the Be My Eyes [_Virtual Volunteer_](https://www.bemyeyes.com/blog/introducing-be-my-eyes-virtual-
+volunteer "\(opens in a new window\)"). The AI-driven tool acts as tour guide, food blogger, personal
+assistant -- you name it -- ushering in a new form of complex, human-mimicking assistance using [_OpenAI's
+hyper-realistic AI language model_](https://mashable.com/article/openai-gpt-4-release-date-announcement). With
+a single app, Edwards' whole world is expanding, on her own terms.
+
+So far, she's used it to [_help her read fashion
+catalogs_](https://www.tiktok.com/@lucyedwards/video/7210862535933775110?lang=en "\(opens in a new window\)"),
+[_translate ingredients from Chinese to English and search the web for
+recipes_](https://www.tiktok.com/@lucyedwards/video/7210482721070648582?lang=en "\(opens in a new window\)"),
+[_write alt text for images within her own photo
+library_](https://www.tiktok.com/@lucyedwards/video/7211122664348372230?lang=en "\(opens in a new window\)"),
+and [_help her read restaurant menus_](https://www.tiktok.com/@lucyedwards/video/7210863732203769093?lang=en
+"\(opens in a new window\)"). Edwards has also demonstrated the potential of [_using the Virtual Volunteer as
+a personal trainer_](https://www.youtube.com/watch?v=RIcuQUthfXc "\(opens in a new window\)") and as [_a guide
+to navigating the London Tube_](https://www.tiktok.com/@lucyedwards/video/7210863058367941893?lang=en "\(opens
+in a new window\)").
+
+* * *
+
+**You May Also Like**
+
+* * *
+
+* * *
+
+Edwards herself is a [_content creator_](https://www.instagram.com/lucyedwardsofficial/ "\(opens in a new
+window\)") and disability activist known for her [_"How Does a Blind
+Girl"_](https://www.tiktok.com/@lucyedwards?lang=en "\(opens in a new window\)") series and travel vlogging
+lifestyle, among much, much more. Edwards' millions of followers interact with her content as she navigates a
+world inequitably designed for the sighted population, raises awareness about her disability, and discovers
+life-changing innovations. She jumped at the chance to test the new tool, as a self-proclaimed tech-savvy
+millennial.
+
+"I was ready for AI before it even existed, because I knew what I was missing. The whole internet could change
+completely for me," Edwards told Mashable, "because most of the internet isn't accessible as a blind user."
+
+SEE ALSO: [ HustleGPT is a hilarious and scary AI experiment in capitalism
+](https://mashable.com/article/gpt-4-hustlegpt-ai-blueprint-money-making-scheme)
+
+Be My Eyes was founded in 2015 to connect users who are blind or have low vision to sighted volunteers through
+a simple system of real-time, video-chat assistance. The Virtual Volunteer is an expansion of that
+foundational service, taking the framework of a visual detection software, used in features like [_iOS 16's
+Door Detection_](https://mashable.com/article/apple-ios-how-to-use-door-detection), and adding onto it the
+language complexity of GPT-4. In doing this, the tool has expanded the amount of information available to
+blind and low-vision users in ways never before seen, adding a sense of depth and immediately individualized
+interaction to accessibility tools.
+
+"From feeling so lost and upset when I lost my eyesight, to now thinking I could have all this back is -- I
+don't know, it makes me cry," Edwards said.
+
+> [ View this post on Instagram
+> ](https://www.instagram.com/p/Cp0nM6hoNke/?utm_source=ig_embed&utm_campaign=loading "\(opens in a new
+> window\)")
+
+## Riding the AI hype wave over access barriers
+
+[ _OpenAI's new GPT-4_](https://mashable.com/article/openai-gpt-4-release-date-announcement) plopped into the
+laps of users already toying with huge questions about AI's place in our world: How do we [protect artistic
+integrity](https://mashable.com/article/chatgpt-ai-books-literary-magazines) with AI tools on the market? In a
+world of [misinformation](https://www.newsguardtech.com/misinformation-monitor/mar-2023/ "\(opens in a new
+window\)"), is it possible to tell when AI is the "mind" behind something? Are we slowly replacing the need
+for human skill, and, more importantly, human empathy?
+
+Amid [_all these concerns_](https://mashable.com/article/chatgpt-scary-uses) -- and [_there are quite_ a
+few](https://mashable.com/article/chat-gpt-open-ai-workers-exploitation) -- GPT-4 is rapidly making
+technological waves, with its new version doing so alongside [_the claim of social
+good_](https://openai.com/product/gpt-4 "\(opens in a new window\)"). In addition to its partnership with Be
+My Eyes, OpenAI has made its tech available to other learning apps like language platform
+[_Duolingo_](https://openai.com/customer-stories/duolingo "\(opens in a new window\)") and free education
+channel [_Khan Academy_](https://blog.khanacademy.org/harnessing-ai-so-that-all-students-benefit-a-nonprofit-
+approach-for-equal-access/ "\(opens in a new window\)"). GPT-4 was also introduced to [_Envision smart
+glasses_](https://www.letsenvision.com/ "\(opens in a new window\)"), which let wearers hear visual
+descriptions of the world around them.
+
+Mike Buckley, CEO of Be My Eyes, explained to Mashable that the new Virtual Volunteer tool was a long-
+anticipated, and requested, expansion of Be My Eyes, rather than a trendy redesign of the popular, million-
+user app. "It's not a shift, necessarily. It's an addition," he said. "This is directly responsive to the
+people who are blind and low-vision in our community that want something like this."
+
+In a Be My Eyes survey polling blind and low-vision users, Buckley explained, the predominant feedback on
+barriers to use was that some users actually felt uncomfortable with Be My Eyes' human aspect. Most
+respondents said they don't use the app as often because they "don't want to take a volunteer away from
+someone who might need them more," and others recounted that it was because they were "wary about calling a
+stranger or a paid agent." Buckley explained that some were worried an urgent call wouldn't be picked up in
+time, and a significant portion of surveyed users said it was an issue of independence, not wanting to feel
+reliant on another volunteer.
+
+"Up to this point we just haven't seen a technological tool that would solve these needs quickly enough and
+accurately enough to launch something like this," he said. But the public availability of ChatGPT, and the
+collaboration with GPT-4, changed that reality for the company, accelerating an addition to their services.
+
+Mashable Light Speed
+
+Want more out-of-this world tech, space and science stories?
+
+Sign up for Mashable's weekly Light Speed newsletter.
+
+Loading... Sign Me Up
+
+Use this instead
+
+By clicking Sign Me Up, you confirm you are 16+ and agree to our [Terms of
+Use](https://www.ziffdavis.com/terms-of-use "\(opens in a new window\)") and [Privacy
+Policy](https://www.ziffdavis.com/ztg-privacy-policy "\(opens in a new window\)").
+
+Thanks for signing up!
+
+Credit: Be My Eyes
+
+Credit: Be My Eyes
+
+When Edwards got the call to beta test the tool along with other blind and low-vision users (who can [_still
+apply to test the service_](https://www.bemyeyes.com/download "\(opens in a new window\)")), she says she was
+once again brought to tears. "I am such an autonomous person. Thinking about AI… that's just me and my phone.
+From end to end, it's me and the tech. That is true autonomy: my phone and me in harmony with no other
+assistance," Edwards said. "That's basically like having my eyesight back in some ways."
+
+She and the rest of the Virtual Volunteer testers are part of a WhatsApp group along with Be My Eyes' leaders,
+providing constant 1:1 feedback on the AI's successes and failures. Edwards says she reports about two to four
+minor issues every day, but that she's found it to be impressive overall.
+
+"It's not perfect," Buckley said, "but it is remarkable."
+
+## What will it take for AI to gain the trust of accessibility advocates?
+
+Some online have expressed a sense of wariness toward a completely AI-led accessibility tool like this, and
+much of that relates to safety and fact-checking, especially as the app advertises real-world uses in
+situations like transportation or work.
+
+Buckley assured Mashable that accuracy and safety are the number one priority for Be My Eyes' AI use. "The
+reason we're launching this in a small beta and taking our time is that we want to see how it's really
+performing in the real world. I've probably done 1,000 tests myself. Our team has done hundreds and hundreds
+more. I have not had a [_hallucination_](https://www.pcmag.com/news/gpt-4-offers-human-level-performance-
+hallucinations-and-better-bing-results "\(opens in a new window\)"). I tried to get it to act badly, but that
+doesn't mean it's going to be perfect in the real world.
+
+"What we've told the beta testers is that this doesn't replace a white cane," Buckley said. "This doesn't
+replace a guide dog. Be smart. Be safe. Be cautious."
+
+Edwards herself had no hesitations about trying out a tool like the Virtual Volunteer, mainly because she's
+already established trust with Be My Eyes and other accessibility-forward companies. "I think because they're
+doing it and they're collaborating with OpenAI, I trust it more. It's a process, whereas if it was just me
+going on ChatGPT -- like I have been doing -- I don't trust that as much."
+
+In its beta form, the new Virtual Volunteer has a built-in prompt for users to connect with a human volunteer
+if they feel the AI assistant isn't working, and the assistant will also let users know when it's unsure of
+what exactly it's viewing. At any time, a user can switch to human help as the app's original function will
+remain the same, working in tandem with the AI assistant.
+
+* * *
+
+Related Stories
+
+* * *
+
+  * [OpenAI is making ChatGPT and Whisper available to third-parties](/article/openai-launches-api-chatgpt-whisper)
+  * [ChatGPT: New AI system, old bias?](/article/chatgpt-ai-racism-bias)
+  * [Twitter is getting rid of its free API tier. That's a nightmare for accessibility activists.](/article/twitter-api-accessibility-bots)
+  * [You should be following more disability activists. Here's where to begin.](/article/disability-activists-social-media-accounts-to-follow)
+  * [Why the pedestrian dignity movement should be your next accessibility cause](/article/pedestrian-dignity-transportation-accessibility)
+
+Credit: Be My Eyes
+
+Credit: Be My Eyes
+
+At its most basic summation, the Virtual Volunteer isn't unlike the current visual assistance tools on the
+market, from Apple's detection tools to visual detection apps like [_Seeing
+AI_](https://apps.apple.com/us/app/seeing-ai/id999062298 "\(opens in a new window\)") and
+[_Lookout_](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.reveal&hl=en_US&gl=US
+"\(opens in a new window\)"). What is unique is the amount of customizable feedback one can get from the
+OpenAI language model. Rather than reading out only text-based information, like a screen reader would, or
+describing in basic terms the object in a user's visual field, the Virtual Volunteer lets users like Edwards
+interact with a full array of feedback. With superior image recognition and analytic capabilities, pictures
+and text get equal descriptions, and users can ask layered follow-up questions. The volunteer can respond to
+prompts on just about anything captured and uploaded with only a phone camera.
+
+"You're going to see some spaces adopt AI more generally. I know that there might be older people, or people
+who have seen the inner workings of AI, that might have some hesitancy. I don't want to undermine that. But
+personally, I'm really excited," Edwards said.
+
+Beyond the technical concerns of heralding AI into this space, though, the tool brings up the question of the
+necessity of human interaction.
+
+Buckley says that just as many Be My Eyes users prefer human volunteers as those who prefer virtual ones, and
+that the Virtual Volunteer is entirely about choice. "This is about empowering our community with the choices
+they want to make to solve their needs and increase independence. It's about serving them. That's why we're
+doing this, and that's also why it's free." In a social reality that [_puts many people with disabilities at a
+physical and financial disadvantage_](https://www.americanprogress.org/article/advancing-economic-security-
+people-disabilities/ "\(opens in a new window\)"), free accessibility tools can be life-changing.
+
+Edwards explained that she's been using Be My Eyes in conjunction with other visual assistance apps, much like
+Buckley recommends other users do. Using her guide dog, Molly, and tools like Microsoft Soundscape and the
+paid subscription app [_Aira_](https://aira.io/ "\(opens in a new window\)") (which uses professionally
+trained human volunteers to assist blind users), Edwards has a robust navigational toolkit, one that includes
+both digital and human resources to utilize as she chooses.
+
+"We know AI is powerful, but it's got to be shaped and moved and fostered in a way that this community owns,
+and serves their needs," Buckley said.
+
+Broadly, the tool is just one aspect of a larger discussion about tech innovation, accessibility, and the
+freedom of the internet. In the fight for a more accessible digital culture, Edwards said, AI-based tools can
+help more people secure access while they wait for companies and industry leaders to finally do the work
+themselves.
+
+"What I was very hopeless about is that no matter how much I campaigned and campaigned and campaigned, I was
+never going to get 100 percent of the websites on Google to be screen reader accessible," she explained. "Here
+is a possible future where that can happen now. It's just the beginning, isn't it?"
+
+**_Want more news on tech and[accessibility](https://mashable.com/category/social-good)_**** _delivered
+straight to your inbox? Sign up for[ _Mashable's Top Stories
+newsletter_](https://mashable.com/newsletters)_**** _today._**
+
+Topics [Artificial Intelligence](https://mashable.com/category/artificial-intelligence) [Social
+Good](https://mashable.com/category/social-good) [Accessibility](https://mashable.com/category/accessibility)
+
+Chase DiBenedetto
+
+Social Good Reporter
+
+[ ](https://twitter.com/chadibenedetto "\(opens in a new window\)") [ ](https://www.linkedin.com/in/chase-
+dibenedetto/ "\(opens in a new window\)")
+
+Chase joined Mashable's Social Good team in 2020, covering online stories about digital activism, climate
+justice, accessibility, and media representation. Her work also captures how these conversations manifest in
+politics, popular culture, and fandom. Sometimes she's very funny.
+
+* * *
+
+Recommended For You
+
+[ Amazon’s all-new Bee Frontier is available now: Shop this always-listening AI wearable](/tech/amazon-bee-ai-
+wearable-where-to-buy)
+
+Can the Bee Frontier really replace your smartwatch?
+
+10/16/2026
+
+By [Joseph Green](/author/joe92)
+
+[ ](/tech/amazon-bee-ai-wearable-where-to-buy)
+
+* * *
+
+[ Google releases Gemini 4 Argon, its new frontier model: Benchmarks, how to try it, and
+pricing](/tech/google-launches-gemini-4-argon)
+
+The newest frontier AI model from Google has landed, after an earlier limited release.
+
+10/13/2026
+
+By [Chance Townsend](/author/chance-townsend)
+
+[ ](/tech/google-launches-gemini-4-argon)
+
+* * *
+
+[ Google announces Gemini 4 Carbon, its new frontier AI model](/tech/google-gemini-4-carbon-frontier-
+announcement)
+
+Although Gemini 4 Argon was released just two weeks ago, Google says Carbon is now its top-ranked AI model.
+
+7 hours ago
+
+By [Chance Townsend](/author/chance-townsend)
+
+[ ](/tech/google-gemini-4-carbon-frontier-announcement)
+
+* * *
+
+[ Meta launches Muse Wonder, catching OpenAI and Anthropic at the frontier](/tech/meta-launches-muse-wonder-
+ai-model-family)
+
+Meta has released a new AI model family called Muse Wonder, leapfrogging Gemini 4, GPT-Astra, and Fable 5.
+
+10/12/2026
+
+By [Timothy Beck Werth](/author/timothy-beck-werth)
+
+[ ](/tech/meta-launches-muse-wonder-ai-model-family)
+
+* * *
+
+[ OpenAI officially launches GPT-6 Astra, a boundary-breaking new model](/tech/openai-gpt-6-astra-launch-
+pricing-safety-benchmarks)
+
+The newest AI model from OpenAI is the first to reach the company's highest threat level.
+
+09/03/2026
+
+By [Timothy Beck Werth](/author/timothy-beck-werth)
+
+[ ](/tech/openai-gpt-6-astra-launch-pricing-safety-benchmarks)
+
+* * *
+
+Trending on Mashable
+
+[ NYT Connections hints today: Clues, answers for October 28, 2026](/entertainment/nyt-connections-hint-
+answer-today-october-28-2026)
+
+Everything you need to solve 'Connections' #1235.
+
+23 hours ago
+
+By [Mashable Team](/author/mashable-team)
+
+[ ](/entertainment/nyt-connections-hint-answer-today-october-28-2026)
+
+* * *
+
+[ Wordle today: Answer, hints for October 28, 2026](/entertainment/wordle-today-answer-october-28-2026)
+
+Here are some tips and tricks to help you find the answer to "Wordle" #1957.
+
+23 hours ago
+
+By [Mashable Team](/author/mashable-team)
+
+[ ](/entertainment/wordle-today-answer-october-28-2026)
+
+* * *
+
+[ Samsung TVs might use the mics of connected devices to listen to you, researcher says](/tech/samsung-tvs-
+might-use-connected-device-mics-to-listen-to-you-report)
+
+Is your smart TV listening to you? Probably. But, this may be a step too far.
+
+10/26/2026
+
+By [Matt Binder](/author/matt-binder)
+
+[ ](/tech/samsung-tvs-might-use-connected-device-mics-to-listen-to-you-report)
+
+* * *
+
+[ NYT Strands hints, answers for October 28, 2026](/entertainment/strands-nyt-hint-october-28-2026)
+
+Every hint, nudge and outright answer you need to complete today's NYT Strands puzzle.
+
+23 hours ago
+
+By [Mashable Team](/author/mashable-team)
+
+[ ](/entertainment/strands-nyt-hint-october-28-2026)
+
+* * *
+
+[ McDonald’s x Pokémon TCG: Collab adds plastic toy boxes and 15 cards in November](/life/mcdonalds-pokemon-
+tcg-happy-meal-toy-dates)
+
+Rumors are now circulating.
+
+16 hours ago
+
+By [Joseph Green](/author/joe92)
+
+[ ](/life/mcdonalds-pokemon-tcg-happy-meal-toy-dates)
+
+  * [TECH](https://mashable.com/tech)
+
+[Android](https://mashable.com/category/android) [Antivirus](https://mashable.com/category/antivirus)
+[Apple](https://mashable.com/category/apple) [Artificial
+Intelligence](https://mashable.com/category/artificial-intelligence)
+[Cameras](https://mashable.com/category/cameras) [Creative Software](https://mashable.com/category/creative-
+software) [Cryptocurrency](https://mashable.com/category/cryptocurrency)
+[Desktops](https://mashable.com/category/desktops) [Gaming Consoles](https://mashable.com/category/gaming-
+consoles) [Headphones](https://mashable.com/category/headphones)
+[Laptops](https://mashable.com/category/laptops) [Microsoft](https://mashable.com/category/microsoft)
+[Mobile](https://mashable.com/category/mobile) [Productivity](https://mashable.com/category/productivity)
+[Smart Home](https://mashable.com/category/smart-home) [Social Media](https://mashable.com/category/social-
+media) [Speakers](https://mashable.com/category/speakers) [Tablets](https://mashable.com/category/tablets)
+[Tech Industry](https://mashable.com/category/tech-industry) [TikTok](https://mashable.com/category/tiktok)
+[Transportation](https://mashable.com/category/transportation) [TVs](https://mashable.com/category/tvs)
+[VPN](https://mashable.com/category/vpn) [Wifi/Routers](https://mashable.com/category/wifirouters)
+
+  * [SCIENCE](https://mashable.com/science)
+
+[Animals](https://mashable.com/category/animals) [Climate Change](https://mashable.com/category/climate-
+change) [Environment](https://mashable.com/category/environment) [NASA](https://mashable.com/category/nasa)
+[Rocket Launches](https://mashable.com/category/rocket-launches) [Space](https://mashable.com/category/space)
+
+[GAMES](https://games.mashable.com/)
+
+[Arcade](https://games.mashable.com/category/arcade) [Card](https://games.mashable.com/category/card)
+[Casino](https://games.mashable.com/category/casino) [Connections](https://mashable.com/category/connections)
+[Daily](https://games.mashable.com/category/daily) [Puzzles](https://games.mashable.com/category/puzzles)
+[Strands](https://mashable.com/category/strands) [Word](https://games.mashable.com/category/word)
+[Wordle](https://mashable.com/category/wordle)
+
+[SOCIAL GOOD](https://mashable.com/category/social-good)
+
+[DEALS](https://mashable.com/deals)
+
+[How we Select Deals](https://mashable.com/about/deals-coverage-explained)
+
+  * [ENTERTAINMENT](https://mashable.com/entertainment)
+
+[DC Comics](https://mashable.com/category/dc-comics) [Disney](https://mashable.com/category/disney)
+[HBO](https://mashable.com/category/hbo) [Hulu](https://mashable.com/category/hulu)
+[Marvel](https://mashable.com/category/marvel) [Movies](https://mashable.com/category/movies)
+[Music](https://mashable.com/category/music) [Peacock](https://mashable.com/category/peacock)
+[Pixar](https://mashable.com/category/pixar) [Podcasts](https://mashable.com/category/podcasts)
+[Streaming](https://mashable.com/category/streaming) [TV Shows](https://mashable.com/category/tv-shows) [True
+Crime](https://mashable.com/category/true-crime)
+
+[LIFE](https://mashable.com/life)
+
+[Careers](https://mashable.com/category/careers) [Digital Culture](https://mashable.com/category/digital-
+culture) [Education](https://mashable.com/category/education) [Family &
+Parenting](https://mashable.com/category/family-parenting) [Health &
+Wellness](https://mashable.com/category/health-wellness) [House & Home](https://mashable.com/category/house-
+home) [Mental Health](https://mashable.com/category/mental-health) [Sex, Dating &
+Relationships](https://mashable.com/category/sex-dating-relationships)
+[Sleep](https://mashable.com/category/sleep)
+
+  * [SHOP THE BEST](https://mashable.com/roundups)
+
+[All Beauty](https://mashable.com/category/beauty) [All Earbuds](https://mashable.com/category/earbuds) [All
+Kitchen](https://mashable.com/category/kitchen) [All Robot Vacuums](https://mashable.com/category/robot-
+vacuums) [Bluetooth Speakers](/roundup/best-bluetooth-speakers-2026-tested) [Budget Laptops](/tech/best-cheap-
+laptops-2026-reviewed) [Dating Apps]() [E-Readers]() [Gift Guides](https://mashable.com/gifts) [Headphones]()
+[Hookup Apps](/roundup/best-hookup-apps-2026) [iPads]() [Kindles]() [Laptops]() [Mashable
+Choice](https://mashable.com/mashable-choice) [Mashable Selects](https://mashable.com/category/mashable-
+selects) [Speakers](/roundup/best-portable-bluetooth-speakers) [Sexting Apps]() [Macbooks](/tech/best-
+macbooks-2026-expert-reviewed) [Robot Vaccuums](/roundup/best-robot-vacuums-2026-tested) [Robot Vaccum &
+Mop](/roundup/best-robot-vacuum-mop-2026) [VPNs](/roundup/best-vpns) [Windows Laptops](/tech/best-windows-
+laptops-tested-2026)
+
+  * [REVIEWS](https://mashable.com/review)
+
+[Adult Friend Finder](/review/adult-friend-finder-review-dating-site) [Bumble Premium](/review/bumble-premium-
+review) [Kindle Paperwhite](/review/kindle-paperwhite-signature-edition) [PS5 vs PS5 Slim](/article/ps5-vs-
+ps5-slim-differences) [Tinder Platinum](/review/tinder-platinum-review)
+
+EVENTS
+
+[Black Friday](https://mashable.com/category/black-friday) [CES](https://mashable.com/category/ces) [Cyber
+Monday](https://mashable.com/category/cyber-monday) [Prime Day](https://mashable.com/category/prime-day)
+[Samsung Galaxy Unpacked](https://mashable.com/category/samsung-unpacked)
+[WWDC](https://mashable.com/category/wwdc)
+
+[VIDEOS](https://mashable.com/videos)
+
+* * *
+
+  * [About Mashable](https://mashable.com/about/mashable-staff-masthead)
+  * [Editorial Standards](https://mashable.com/about/editorial-standards)
+  * [Contact Us](https://mashable.com/about/contact-us)
+  * [We're Hiring](https://www.j2global.com/careers/jobs/?brand=Mashable "\(opens in a new window\)")
+  * [Newsletters](https://mashable.com/newsletters)
+  * [Sitemap](https://mashable.com/sitemap)
+
+  * [ ](https://www.facebook.com/mashable/ "\(opens in a new window\)")
+  * [ ](https://twitter.com/mashable "\(opens in a new window\)")
+  * [ ](http://instagram.com/Mashable "\(opens in a new window\)")
+  * [ ](https://www.youtube.com/user/mashable "\(opens in a new window\)")
+  * [ ](https://www.pinterest.com/mashable/ "\(opens in a new window\)")
+  * [ ]( https://www.tiktok.com/@mashable "\(opens in a new window\)")
+  * [ ](https://flipboard.com/@Mashable "\(opens in a new window\)")
+  * [ ](https://www.linkedin.com/company/mashable "\(opens in a new window\)")
+  * [ ](https://mashable.com/feeds/rss/all)
+
+* * *
+
+[ ](https://www.ziffdavis.com/ "\(opens in a new window\)")
+
+* * *
+
+[ ](https://www.cnet.com/ "\(opens in a new window\)")
+
+[ ](https://www.zdnet.com/ "\(opens in a new window\)")
+
+[ ](https://www.pcmag.com/ "\(opens in a new window\)")
+
+[ ](https://www.lifehacker.com/ "\(opens in a new window\)")
+
+[ ](https://www.askmen.com/ "\(opens in a new window\)")
+
+[ ](https://www.extremetech.com/ "\(opens in a new window\)")
+
+[ ](https://www.ign.com/ "\(opens in a new window\)")
+
+* * *
+
+©2005–2026 Mashable, Inc., a Ziff Davis company. All Rights Reserved.
+
+Mashable is a registered trademark of Ziff Davis and may not be used by third parties without express written
+permission.
+
+  * [About Ziff Davis](https://www.ziffdavis.com/about "\(opens in a new window\)")
+  * [Privacy Policy](https://www.ziffdavis.com/ztg-privacy-policy "\(opens in a new window\)")
+  * [Terms of Use](https://www.ziffdavis.com/terms-of-use "\(opens in a new window\)")
+  * [Licensing](https://docs.google.com/forms/d/1Zu8Hi-tPutcA0iXE8C5-UaqbV9Qx9FhyHJ6ZLzn4Mzk/viewform?edit_requested=true "\(opens in a new window\)")
+  * [Accessibility](https://www.ziffdavis.com/accessibility "\(opens in a new window\)")
+  * [Do Not Sell My Personal Information](https://dsar.mashable.com)
+  * AdChoices 
+  * [ ](https://www.bbb.org/us/ny/new-york/profile/digital-media/ziff-davis-llc-0121-531/#sealclick "\(opens in a new window\)")
+

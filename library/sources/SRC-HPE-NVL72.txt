@@ -1,0 +1,996 @@
+SOURCE COPY — SRC-HPE-NVL72
+Retrieved 2026-10-21 for Inside the Machine Mind (offline reference copy; excerpt of the original, formatting simplified).
+Original URL: https://web.archive.org/web/20261015163137id_/https://www.hpe.com/us/en/collaterals/collateral.a50009224enw.html
+Page/document title: NVIDIA GB200 NVL72 by HPE QuickSpecs | HPEHewlett Packard EnterpriseChange language - Currently UNITED STATES (English) is selectedHewlett Packard EnterpriseChange language - Currently UNITED STATES (
+
+------------------------------------------------------------------------
+
+Skip to main content
+
+[ Hewlett Packard Enterprise ](https://www.hpe.com/us/en/home.html "Hewlett Packard Enterprise")
+
+Search Close
+
+  * [ Demos and trials ](https://www.hpe.com/us/en/demos-trials.html)
+  * [ Change language - Currently UNITED STATES (English) is selected ](https://www.hpe.com/us/en/country-selector.html?navigateFrom=/us/en/collaterals/collateral.a50009224enw.html "Change language - Currently UNITED STATES \(English\) is selected")
+
+  *   * 
+
+[ Hewlett Packard Enterprise ](https://www.hpe.com/us/en/home.html "Hewlett Packard Enterprise")
+
+  * Networking
+  * Cloud
+  * AI
+
+* * *
+
+  * Solutions
+  * Products
+  * Services
+  * Support
+
+* * *
+
+  * Company
+  * Discover 2026
+
+  * [ HPE Partners ](https://www.hpe.com/us/en/partners.html)
+  * [ How to buy ](https://www.hpe.com/us/en/buy-parts-products.html)
+  * [ Contact HPE ](https://www.hpe.com/us/en/contact-hpe.html)
+  * [ Demos and trials ](https://www.hpe.com/us/en/demos-trials.html)
+  * [ Change language - Currently UNITED STATES (English) is selected United States (EN) ](https://www.hpe.com/us/en/country-selector.html?navigateFrom=/us/en/collaterals/collateral.a50009224enw.html "Change language - Currently UNITED STATES \(English\) is selected")
+
+  * [ HPE Partners ](https://www.hpe.com/us/en/partners.html)
+  * [ How to buy ](https://www.hpe.com/us/en/buy-parts-products.html)
+  * [ Contact HPE ](https://www.hpe.com/us/en/contact-hpe.html)
+
+Back to main menu
+
+Networking
+
+Delivering the industry's first secure, AI-native network.
+
+[ Explore solutions ](https://www.hpe.com/us/en/solutions/networking.html) [ Explore products
+](https://www.hpe.com/us/en/products/networking.html)
+
+[](https://www.hpe.com/us/en/products/networking/data-center.html)
+
+Networks for AI Data Centers
+
+Power AI data centers with max performance and scale.
+
+[](https://www.hpe.com/us/en/products/networking/network-security.html)
+
+Zero Trust Security for Networks
+
+Deliver the highest security with unified SASE and scalable, next-gen firewalls.
+
+[](https://www.hpe.com/us/en/products/networking/aiops.html)
+
+AIOps for Networks
+
+Ensure a more efficient, intelligent network.
+
+* * *
+
+  * [ Marvis AI ](https://www.hpe.com/us/en/products/networking/marvis.html)
+  * [ Mist AI ](https://www.hpe.com/us/en/products/networking/mist.html)
+  * [ HPE Aruba Networking Central ](https://www.hpe.com/us/en/products/networking/aruba-central.html)
+  * [ Apstra Data Center Director ](https://www.hpe.com/us/en/products/networking/data-center-director.html)
+  * [ Juniper PTX Series Routers ](https://www.hpe.com/us/en/products/networking/juniper-ptx-routers.html)
+  * [ Juniper QFX Series Routers ](https://www.hpe.com/us/en/products/networking/juniper-qfx-switches.html)
+  * [ HPE Aruba Networking Unified SASE ](https://www.hpe.com/us/en/products/networking/sase.html)
+  * [ Juniper SRX Series Firewalls ](https://www.hpe.com/us/en/products/networking/srx-firewall.html)
+
+* * *
+
+  * [ Networking services ](https://www.hpe.com/us/en/services/networking.html)
+  * [ Networking support ](https://www.hpe.com/us/en/support/networking.html)
+
+Back to main menu
+
+Cloud
+
+Gain flexible, modern cloud control.
+
+[ Explore hybrid cloud solutions ](https://www.hpe.com/us/en/solutions/cloud.html) [ Explore GreenLake by HPE
+](https://www.hpe.com/us/en/greenlake.html)
+
+[](https://www.hpe.com/us/en/greenlake.html)
+
+Hybrid Cloud Management
+
+Leverage a unified management platform to streamline IT operations.
+
+[](https://www.hpe.com/us/en/products/private-cloud.html)
+
+Turnkey Private Clouds
+
+Next-gen private clouds accelerate on-demand access to critical resources and tooling.
+
+[](https://www.hpe.com/us/en/products/software.html)
+
+Operational Intelligence Everywhere
+
+Provision, observe, and protect.
+
+[](https://www.hpe.com/us/en/products/storage/alletra.html)
+
+Cloud-Native Data Infrastructure
+
+Run every app without compromise.
+
+* * *
+
+  * [ GreenLake ](https://www.hpe.com/us/en/greenlake.html)
+  * [ HPE Private Cloud PC3000 ](https://www.hpe.com/us/en/products/private-cloud/pc3000.html)
+  * [ HPE Private Cloud PC7000 ](https://www.hpe.com/us/en/products/private-cloud/pc7000.html)
+  * [ HPE Private Cloud AI ](https://www.hpe.com/us/en/products/private-cloud/pcai.html)
+  * [ HPE Alletra Storage MP B10000 ](https://www.hpe.com/us/en/products/storage/alletra/mp-b10000.html)
+  * [ HPE Alletra Storage MP X10000 ](https://www.hpe.com/us/en/products/storage/alletra/mp-x10000.html)
+  * [ HPE Morpheus Software ](https://www.hpe.com/us/en/products/software/morpheus-software.html)
+
+* * *
+
+  * [ Greenlake Services ](https://www.hpe.com/us/en/greenlake/portfolio.html)
+  * [ GreenLake Marketplace ](https://marketplace.greenlake.hpe.com/en-US/home)
+
+* * *
+
+  * [ Get started for free ](https://common.cloud.hpe.com)
+  * [ GreenLake demo ](https://www.hpe.com/psnow/ebook/21eab35d-7bb6-40da-a7b0-028d4b045ead)
+  * [ GreenLake user guide ](https://support.hpe.com/hpesc/public/docDisplay?docId=a00120892en_us)
+  * [ GreenLake Developer Portal ](https://developer.greenlake.hpe.com/)
+  * [ GreenLake FAQ ](https://www.hpe.com/us/en/greenlake.html#faqs)
+  * [ Launch GreenLake ](https://common.cloud.hpe.com/)
+
+Back to main menu
+
+AI
+
+Turn AI ambition into reality with the right foundations.
+
+[ Explore solutions ](https://www.hpe.com/us/en/solutions/ai-artificial-intelligence.html) [ Explore products
+](https://www.hpe.com/us/en/solutions/ai-artificial-intelligence/ai-factory-nvidia.html)
+
+[](https://www.hpe.com/us/en/solutions/ai-artificial-intelligence/ai-factory-nvidia.html)
+
+Turnkey AI Factories
+
+Quickly turn raw data into insights at any scale.
+
+[](https://www.hpe.com/us/en/products/private-cloud/pcai.html)
+
+Enterprise-Grade Data Security
+
+Deliver a complete, secure AI workbench.
+
+[](https://www.hpe.com/us/en/products/networking.html)
+
+Self-Driving Networks
+
+Ensure a more efficient, intelligent network.
+
+[](https://www.hpe.com/us/en/greenlake/intelligence.html)
+
+Intelligent Hybrid Clouds
+
+Supercharge your IT operations with a mesh of intelligent agents.
+
+* * *
+
+  * [ HPE AI Factory with NVIDIA ](https://www.hpe.com/us/en/solutions/ai-artificial-intelligence/ai-factory-nvidia.html)
+  * [ HPE Private Cloud AI ](https://www.hpe.com/us/en/products/private-cloud/pcai.html)
+  * [ Sovereign AI Factory ](https://www.hpe.com/us/en/ai-factory/sovereign-ai.html)
+  * [ GreenLake Intelligence ](https://www.hpe.com/us/en/greenlake/intelligence.html)
+  * [ Mist AI ](https://www.hpe.com/us/en/products/networking/mist.html)
+  * [ Marvis AI ](https://www.hpe.com/us/en/products/networking/marvis.html)
+  * [ AI Mod POD ](https://www.hpe.com/us/en/services/advisory-and-professional/ai-services/ai-mod-pod.html)
+
+* * *
+
+  * [ AI consulting services ](https://www.hpe.com/us/en/services/advisory-and-professional/ai-services.html)
+  * [ What is agentic AI? ](https://www.hpe.com/us/en/what-is/agentic-ai.html)
+
+Back to main menu
+
+Solutions
+
+Complex challenges take partnership. HPE combines AI, data, and deep expertise to deliver transformation.
+
+[](https://www.hpe.com/us/en/solutions/ai-artificial-intelligence.html)
+
+Unlock AI potential
+
+Simplify AI and deliver impactful results.
+
+[](https://www.hpe.com/us/en/solutions/cloud.html)
+
+Modernize hybrid cloud
+
+Gain flexible, modern cloud control.  
+
+[](https://www.hpe.com/us/en/solutions/networking.html)
+
+Intelligent Networking
+
+Modernize your network for the AI era.
+
+[](https://www.hpe.com/us/en/solutions/security.html)
+
+Secure your IT estate
+
+Enhance security, reduce complexity.
+
+[](https://www.hpe.com/us/en/solutions/data.html)
+
+Transform data into insights
+
+Integrate, manage, and govern data efficiently.
+
+* * *
+
+  * [ HPE Glossary ](https://www.hpe.com/us/en/what-is.html)
+  * [ All solutions ](https://www.hpe.com/us/en/solutions.html)
+  * [ Industry solutions ](https://www.hpe.com/us/en/solutions/industry.html)
+
+Back to main menu
+
+Products
+
+Our enterprise-grade product portfolio powers some of the most ambitious organizations on the planet.
+
+  * [ AI ](https://www.hpe.com/us/en/solutions/ai-artificial-intelligence/ai-factory-nvidia.html)
+  * [ Private Cloud ](https://www.hpe.com/us/en/private-cloud-solutions.html)
+  * [ Supercomputing ](https://www.hpe.com/us/en/products/supercomputing.html)
+  * [ Compute ](https://www.hpe.com/us/en/products/compute.html)
+  * [ Storage ](https://www.hpe.com/us/en/products/storage.html)
+  * [ Networking ](https://www.hpe.com/us/en/products/networking.html)
+  * [ Services ](https://www.hpe.com/us/en/services.html)
+  * [ Software ](https://www.hpe.com/us/en/products/software.html)
+
+* * *
+
+  * [ HPE Cray Supercomputing ](https://www.hpe.com/us/en/products/supercomputing/cray.html)
+  * [ HPE ProLiant Compute ](https://www.hpe.com/us/en/products/compute/proliant.html)
+  * [ HPE Alletra Storage ](https://www.hpe.com/us/en/products/storage/alletra.html)
+  * [ HPE Juniper Networking ](https://www.hpe.com/us/en/products/networking.html)
+  * [ HPE Aruba Networking ](https://www.hpe.com/us/en/products/networking.html)
+  * [ HPE Networking Instant On ](https://www.hpe.com/us/en/instant-on.html)
+  * [ All products ](https://www.hpe.com/us/en/products.html)
+
+Back to main menu
+
+Services
+
+Streamline operations and boost efficiency with HPE tailored services.
+
+[ Explore HPE services ](https://www.hpe.com/us/en/services.html)
+
+  * [ Financial services ](https://www.hpe.com/us/en/hpe-financial-services/financing-it-lifecycle-services.html)
+  * [ AI services ](https://www.hpe.com/us/en/services/advisory-and-professional/ai-services.html)
+  * [ Data services ](https://www.hpe.com/us/en/services/advisory-and-professional/data-services.html)
+  * [ Networking services ](https://www.hpe.com/us/en/services/networking.html)
+  * [ Cloud services ](https://www.hpe.com/us/en/services/advisory-and-professional/hybrid-cloud-consulting-services.html)
+  * [ Compute services ](https://www.hpe.com/us/en/services/compute.html)
+  * [ Storage services ](https://www.hpe.com/us/en/services/data-migration-readiness-assessment.html)
+  * [ Support services ](https://www.hpe.com/us/en/services/operational.html)
+
+* * *
+
+  * [ Advisory and Professional services ](https://www.hpe.com/us/en/services/advisory-and-professional.html)
+  * [ Managed Services ](https://www.hpe.com/us/en/services/hpe-managed-services.html)
+  * [ Education services ](https://education.hpe.com/ww/en/training/index.html)
+
+Back to main menu
+
+Support
+
+Resolve issues, download updates, connect with experts, and stay ahead of what’s next across your HPE
+environment.
+
+[ Visit HPE support ](https://www.hpe.com/us/en/support.html)
+
+  * [ HPE Support Center ](https://support.hpe.com/connect/s/?language=en_US)
+  * [ HPE Networking support ](https://www.hpe.com/us/en/support/networking.html)
+  * [ GreenLake support ](https://console.greenlake.hpe.com/)
+  * [ Software support ](https://myenterpriselicense.hpe.com/)
+
+* * *
+
+  * [ Warranty check ](https://support.hpe.com/connect/s/warrantycheck)
+  * [ Validate equipment ](https://www.hpe.com/us/en/validate.html)
+  * [ QuickSpecs ](https://h41370.www4.hpe.com/quickspecs/overview.html)
+  * [ Parts lookup ](https://partsurfer.hpe.com/)
+  * [ Product alerts ](https://h41360.www4.hpe.com/?country=in&language-en)
+  * [ Community ](https://community.hpe.com/)
+
+Back to main menu
+
+Company
+
+A leader in essential enterprise technology, bringing together the power of AI, cloud, and networking to help
+organizations achieve more.
+
+[ Learn more about HPE ](https://www.hpe.com/us/en/about.html)
+
+  * [ Leadership ](https://www.hpe.com/us/en/leadership.html)
+  * [ Customer successes ](https://www.hpe.com/us/en/customer-case-studies.html)
+  * [ Corporate responsibility ](https://www.hpe.com/us/en/living-progress.html)
+  * [ Awards and recognition ](https://www.hpe.com/us/en/newsroom/awards-recognition.html)
+  * [ Newsroom ](https://www.hpe.com/us/en/newsroom.html)
+  * [ Events ](https://www.hpe.com/us/en/events.html)
+
+* * *
+
+  * [ Careers ](https://careers.hpe.com/us/en)
+  * [ Community ](https://community.hpe.com/)
+  * [ Education ](https://education.hpe.com/ww/en/training/index.html)
+  * [ Resource Library ](https://www.hpe.com/us/en/resource-library.html)
+
+* * *
+
+  * [ HPE Labs ](https://www.hpe.com/us/en/hpe-labs.html)
+  * [ Agentic AI ](https://www.hpe.com/us/en/about/technology-leadership-ai.html)
+  * [ Digital Sovereignty ](https://www.hpe.com/us/en/about/technology-leadership-sovereign-innovations.html)
+  * [ Quantum ](https://www.hpe.com/us/en/about/technology-leadership-quantum.html)
+  * [ Security ](https://www.hpe.com/us/en/about/technology-leadership-security.html)
+  * [ Spaceborne ](https://www.hpe.com/us/en/about/technology-leadership-spaceborne.html)
+
+Back to main menu
+
+Discover 2026
+
+Unlock new possibilities in networking, cloud, and AI to move your IT strategy forward with more clarity and
+confidence.
+
+[](https://www.hpe.com/us/en/discover/lasvegas.html)
+
+HPE Discover Las Vegas 2026
+
+June 15-18, 2026 at The Venetian Convention and Expo Center
+
+[](https://www.hpe.com/us/en/discover/barcelona.html)
+
+HPE Discover Barcelona 2026
+
+December 2-3, 2026 at Fira Barcelona Gran Via
+
+  * Contents
+
+  * [ Download ](https://www.hpe.com/psnow/doc/a50009224enw.pdf?jumpid=in_pdfviewer-psnow)
+  * Share
+
+  * Print
+
+HPE Logo
+
+##### QuickSpecs
+
+## NVIDIA GB200 NVL72 by HPE QuickSpecs
+
+[Have feedback on QuickSpecs? We’re
+listening](https://hpeexperience.questionpro.com/t/mLrbZLrb?Inform=TopQuickSpecsa50009224enw_html)
+
+#### Table of Contents
+
+#### Table of Contents
+
+**The NVIDIA GB200 NVL72 by HPE is a rack-scale system optimized to accelerate large AI model training, fine-
+tuning, and real-time inferencing for AI models over 1 trillion parameters.**
+
+This architecture is comprised of 36 NVIDIA Grace ARM processors and 72 NVIDIA Blackwell GPUs all
+interconnected with NVIDIA’s 5th-gen NVLink technology. The rack is powered by a set of power shelves through
+a bus bar and the compute trays are cooled with cold plates that are mounted on the CPUs and GPUs.
+
+###
+
+Overview
+
+**NVIDIA GB200 NVL72 by HPE**
+
+The HPE offering incorporates direct liquid cooling technologies from HPE. NVIDIA GB200 NVL72 by HPE offers a
+complete, scalable solution for AI & HPC customers everywhere. NVIDIA GB200 NVL72 by HPE provides maximum
+performance for Large Model AI Training and Deep Learning. Built with high-speed networking technologies,
+integrated storage, a robust software portfolio and management tools, NVIDIA GB200 NVL72 by HPE systems enable
+customers to innovate and prepare for tomorrow’s challenges.
+
+#### NVIDIA GB200 NVL72 by HPE SKUs  
+  
+---  
+Below is a list of SKUs to configure the NVL72 System.Additional Software and Support SKUs will be added soon.  
+  
+#### Models  
+  
+**Description** |  **SKU**  
+NVIDIA GB200 NVL72 by HPE Base System Code |  S5T77A  
+NVIDIA GB200 NVL72 by HPE Upgrade System Code |  S5T78A  
+NVIDIA GB200 NVL72 by HPE Rack Solution |  S4Q89A  
+**Required Rack Accessories**  
+**Rack Manifold (nest under rack solution)** |  **SKU**  
+HPE 44U Top Feed Manifold Kit for NVIDIA NVL72 |  S5R45A  
+HPE 44U Bottom Feed Manifold Kit for NVIDIA NVL72 |  S5R46A  
+**Optional Rack Accessories** |  **SKU**  
+HPE RACK EXTENSION KIT NVL72 300MM |  S5S33A  
+NVIDIA NVL72 Power Shelf Upgrade Kit |  S6D82A  
+**Cooling**  
+**RDHX options** |  **SKU**  
+HPE M12 48U 600mm G2 Rack 208-230V Top Feed Rear Door Heat Exchanger |  S4N09A  
+HPE M12 48U 600mm G2 Rack 208-230V Bottom Feed Rear Door Heat Exchanger |  S4N11A  
+**CDU options** |  **SKU**  
+Vertiv XDU1350 3-phase 380-480V Top Feed Primary Bottom Feed Secondary Coolant Distribution Unit |  S5R40A  
+Vertiv XDU1350 3-phase 380-480V Bottom Feed Primary Bottom Feed Secondary Coolant Distribution Unit |  S5R41A  
+Vertiv XDU1350 3-phase 380-480V Top Feed Primary Top Feed Secondary Coolant Distribution Unit |  S5S27A  
+Vertiv XDU1350 3-phase 380-480V Bottom Feed Primary Top Feed Secondary Coolant Distribution Unit |  S5S28A  
+**Sellable Service Kit** |  **SKU**  
+Vertiv XDU1350 Essential Spare Parts Kit |  S5R44A  
+Vertiv XDU1350 Recommended Spare Parts Kit |  S6D83A  
+**Service / Deployment** |  **SKU**  
+HPE Cray Fill and Drain Hand Pump Kit |  P59920-B21  
+**CDU Power Cord** |  **SKU**  
+HPE 560P6W 400V 3m CDU Power Cord for Vertiv XDU1350 |  S5Z51A  
+HPE 560P6W 400V 6m CDU Power Cord for Vertiv XDU1350 |  S5Z52A  
+HPE 560P7W 400V 6m CDU Power Cord for Vertiv XDU1350 |  S5Z53A  
+HPE 560P7W 400V 3m CDU Power Cord for Vertiv XDU1350 |  S5Z54A  
+**CDU Connection Kit**  
+HPE CDU Con Flex Hose Kit Universal |  S5S29A  
+HPE CDU Con Hard Pipe Kit for Vertiv XDU1350 |  S5S30A  
+**Secondary Fluid Network Manifold**  
+HPE In-Row CDU Top Feed Secondary Manifold Kit |  S5R42A  
+HPE In-Row CDU Bottom Feed Secondary Manifold Kit |  S5R43A  
+**Optional for secondary manifold**  
+HPE Secondary Manifold Single Rack Spacer for NVIDIA NVL72 |  S5T44A  
+HPE Secondary Manifold Double Rack Spacer for NVIDIA NVL72 |  S5T45A  
+  
+###
+
+Standard Features
+
+#### Platform Information
+
+  
+
+**Form Factor**
+
+  * – 48U Rack-scale System
+
+  
+
+**System**
+
+  * – 18x Compute Trays
+    * 2x Grace CPUs
+
+    * 4x Blackwell GPUs
+
+    * PCIe slots (non-configurable): 2x BlueField-3 DPUs and 2x ConnectX-7
+
+    * Storage: SEDs – Opal/TCP Capable
+
+    * o 8x E1.S
+
+    * o 1x M.2
+
+  * – 9x NVIDIA NVLink Switch Trays
+
+  * – 6 or 8 33 kW Power Shelves
+
+  * – 50 V DC Busbar
+
+  * – 2x SN2201 Top-of-Rack Switches
+
+  * – 44U Rack Liquid Manifold
+
+  * – FIO:
+
+  * – 1x USB 3.0
+
+  * – 1x USB 2.0 for UART
+
+  * – 1x Mini Display Port
+
+  * – 1x Management 1 GbE Port
+
+  * – 3x Status LEDs
+
+  
+
+#### Processors – Grace Arm processor
+
+  
+
+**NVL72 contains 18 compute trays. Each compute tray contains 2 GB200 boards. Each board has 1 Grace ARM
+processor.**
+
+**Grace CPU**  
+---  
+CPU core count |  72 Arm Neoverse V2 cores  
+L1 cache |  64KB i-cache & 64KB d-cache  
+L2 cache |  1 MB per core  
+L3 cache |  114 MB  
+Base frequency | all-core SIMD freq |  3.1 GHz | 3.0 GHZ  
+LPDDR5X Size |  512 GB (480 GB useable)  
+  
+#### On System Management Chipset
+
+Based on NVIDIA OpenBMC
+
+ASPEED 2600 management controller
+
+#### Memory
+
+Soldered on 512 GB LPDDR5x – 480 GB usable of LPDDR5x
+
+Memory ECC – Supported and enabled by default
+
+**Notes:** Memory is not configurable.
+
+  
+
+#### Front Panel Connections
+
+#### System Unit Specifications
+
+  
+
+**Dimensions**(Height x Width x Depth)
+
+  * –**Rack**
+
+  * 1068 mm (L) x 600 mm (W) x 2495 mm
+
+  
+
+**Weight** (approximate)
+
+  * – **Fully Loaded (with PGW):**
+
+  * 3245 lbs
+
+#### Internal Storage
+
+  
+
+Hot-pluggable and hot-swappable
+
+**Drive** |  **Capacity** |  **Configuration**  
+---|---|---  
+Front facing - E1.S SSD |  3.84 TB |  8 x 3.84 TB  
+Internal - M.2 SSD |  1.98 TB |  1 x 1.98 TB  
+  
+#### Power Delivery and Requirements
+
+The NVL72 rack is powered by a set of 6 (max: 8) power shelves and a DC bus bar. Each power shelf is fed by a
+power whip with input connector type IEC 60309 5-wire 560P6W. Each power shelf can provide up to 33 kW of
+power to the rack.
+
+  
+
+The rack’s TDP (thermal design power) is 132 kW nominal with a EDPp (electrical design power – peak) of 1.5x
+TDP or approximately 192 kW
+
+  
+
+HPE suggests that data centers should provision their bus ways to be able to support 192 kW EDPp.
+
+1 Power Shelf contains
+
+  * – 6x 5.5 kW PSU – Power Supply Units
+
+  * – 1x PMC – Power shelf management controller
+
+  * – 1x Power Shelf Chassis
+
+  
+
+#### CDU (Cooling Distribution Unit) for NVIDIA GB200 NVL72 by HPE
+
+  
+
+The cooling distribution unit (CDU) is a liquid-to-liquid heat exchanger that is used to remove heat from HPE
+GB200 NVL72 by HPE.
+
+  
+
+The CDU uses a secondary loop to circulate a heat transfer liquid to the cold plates. The heat captured in the
+secondary loop is transferred to the facilities primary loop via a liquid-to-liquid heat exchanger. The CDU is
+designed to circulate and control the heat transfer fluid to the manifolds that are in each rack.
+
+  
+
+The in-row CDU is rated for 1.3 MW of cooling. One CDU supports a maximum of 8 racks.
+
+HPE supports overhead (top feed) and underfloor (bottom feed) secondary loop configurations. A spacer manifold
+can be used for racks that do not need liquid cooling.
+
+#### Operating Systems and Virtualization Software Support for HPE Servers
+
+Currently, the only supported OS with NVIDIA GB200 NVL72 by HPE is:
+
+Ubuntu 24.04
+
+  
+
+#### HPE Server UEFI
+
+Unified Extensible Firmware Interface (UEFI) is an industry standard that provides better manageability and
+more secured configuration than the legacy ROM while interacting with your server at boot time.
+
+  
+
+**UEFI enables numerous new capabilities:**
+
+  * – Secure Boot enabled for enhanced security
+
+  * – Embedded UEFI Shell
+
+  * – USB 3.0 Stack
+
+  
+
+**Capabilities**
+
+  * – TPM 2.0 Support
+
+  * – iSCSI Software Initiator Support.
+
+  * – NVMe Boot Support.
+
+  * – HTTP/HTTPs Boot support as a PXE alternative.
+
+  * – Platform Trust Technology (PTT) can be enabled.
+
+  * – Boot support for option cards that only support a UEFI option ROM.
+
+  
+
+#### Industry Standard Compliance
+
+  * – ACPI 6.4 Compliant
+
+  * – IPMI 2.0
+
+  * – PCIe 5.0 Compliant
+
+  * – PXE Support
+
+  * – Redfish API
+
+  * – TPM 2.0 Support
+
+  * – Triple Data Encryption Standard (3DES)
+
+  * – UEFI (Unified Extensible Firmware Interface Forum) 2.6
+
+  * – USB 2.0 Compliant
+
+  * – USB 3.0 Compliant
+
+  
+
+#### Embedded Management
+
+  
+
+**Based on NVIDIA’s Reference Firmware with HPE Enhancements such as**
+
+  * – Security Features
+    * Ultimaco ESKM appliance support
+
+    * Remote Keys
+
+    * Self-encrypting devices (OPAL compliance)
+
+  * – Audit Logging
+
+  * – Restricted SSH Access
+
+  * – Serviceability Features
+    * CLI Interface
+
+  
+
+**Server Management**
+
+NVIDIA GB300 NVL72 by HPE Baseboard Management Controller
+
+Embedded, in-depth server-level monitoring and management technology offering system management, service
+alerting, reporting and remote management including remote console and virtual media mount.
+
+  
+
+**Industry Standard Redfish**
+
+The NVIDIA GB300 NVL72 by HPE supports industry standard DMTF Redfish that provides API conformance and offers
+simplified server management automation such as configuration and maintenance tasks based on modern industry
+standards. Learn more at: <https://dmtf.org/standards/redfish>.
+
+  
+
+#### Security
+
+  * – UEFI Secure Boot.
+
+  * – NIST SP800-147B Protect, Detect, Recover for BIOS Tamper-free updates – components digitally signed and verified using CNSA strength RSA4096 signing key.
+
+  * – Secure Recovery – recover critical firmware to known good state on detection of compromised firmware. Event recorded in the event log.
+
+  * – UEFI TPM 2.0 (Trusted Platform Module 2.0) - supports OpenSSL 3.0 provide for secure remote connectivity session to system.
+
+  * – Support for multiple Redfish role-based access control (RBAC) accounts ensuring that passwords need not be shared and can provide separation of duties.
+
+###
+
+Technical Specifications
+
+#### Product Warranty
+
+This product is covered by a global limited warranty and supported by HPE Services and a worldwide network of
+Hewlett Packard Enterprise Authorized Channel Partners resellers. Hardware diagnostic support and repair are
+available for three years from date of purchase. Support for software and initial setup is available for 90
+days from date of purchase. Enhancements to warranty services are available through HPE Services operational
+services or customized service agreements. Hard drives have either a one year or three-year warranty; refer to
+the specific hard drive QuickSpecs for details.
+
+  
+
+**Notes:** Server Warranty includes 3-Year Parts, 3-Year Labor, and 3-Year Onsite support. HPE acknowledges
+warranty requests on the next business day. Diagnostic completion and potential part shipments will be handled
+on a best-effort basis. Warranty repairs may be accomplished using Customer Self Repair (CSR) parts. These
+parts fall into two categories: 1) Mandatory CSR parts are designed for easy replacement. A travel and labor
+charge will result when customers decline to replace a Mandatory CSR part; 2) Optional CSR parts are also
+designed for easy replacement but may involve added complexity. Customers may choose to have Hewlett Packard
+Enterprise replace Optional CSR parts at no charge.
+
+  
+
+#### HPE Services
+
+You can count on HPE Services to deliver the expertise you need when, where and how you need it. From planning
+to deployment, ongoing operations and beyond, our experts can help you realize your digital ambitions.
+
+<https://www.hpe.com/services>
+
+  
+
+#### HPE HPC&AI Custom Support Service
+
+HPE HPC&AI Custom Support Serviceis a comprehensive support solution tailored to meet specific HPE Cray high-
+performance computing customer requirements. It comprises hardware and software services and may include HPE
+on-site technical resources, also called resident customer engineers (CEs). CEs provide on-site support and
+work with the customer’s IT team to meet agreed system availability and performance targets.
+
+Please refer to <https://www.hpe.com/psnow/doc/a50002850enw> and <https://www.hpe.com/psnow/doc/a50002922enw>
+
+  
+
+#### HPE Lifecycle Services
+
+HPE Lifecycle Services provide a variety of options to help maintain your HPE systems and solutions at all
+stages of the product lifecycle. A few popular examples include:
+
+  * − Lifecycle Install and Startup Services: Various levels for physical installation and power on, remote access setup, installation and startup, and enhanced installation services with the operating system.
+
+  * − HPE Firmware Update Analysis Service: Recommendations for firmware revision levels for selected HPE products, taking into account the relevant revision dependencies within your IT environment.
+
+  * − HPE Firmware Update Implementation Service: Implementation of firmware updates for selected HPE server, storage, and solution products, taking into account the relevant revision dependencies within your IT environment.
+
+  * − Implementation assistance services: Highly trained technical service specialists to assist you with a variety of activities, ranging from design, implementation, and platform deployment to consolidation, migration, project management, and onsite technical forums.
+
+  * − HPE Service Credits: Access to prepaid services for flexibility to choose from a variety of specialized service activities, including assessments, performance maintenance reviews, firmware management, professional services, and operational best practices.
+
+**Notes:** To review the list of Lifecycle Services available for your product go to:
+
+<https://www.hpe.com/services/lifecycle>
+
+  
+
+For a list of the most frequently purchased services using service credits, see the [HPE Service Credits
+Menu](https://www.hpe.com/psnow/doc/4aa4-3393enw)
+
+#### HPE Education Services
+
+Training and certification designed for IT and business professionals across all industries. Broad catalogue
+of course offerings to expand skills and proficiencies in topics ranging from cloud and cybersecurity to AI
+and DevOps. Create learning paths to expand proficiency in a specific subject. Schedule training in a way that
+works best for your business with flexible continuous learning options.
+
+<https://www.hpe.com/services/training>
+
+  
+
+#### HPE Consulting Services
+
+No matter where you are in your journey to hybrid cloud, experts can help you map out your next steps. From
+determining what workloads should live where, to handling governance and compliance, to managing costs, our
+experts can help you optimize your operations.
+
+<https://www.hpe.com/services/consulting>
+
+  
+
+#### HPE Managed Services
+
+HPE runs your IT operations, providing services that monitor, operate, and optimize your infrastructure and
+applications, delivered consistently and globally to give you unified control and let you focus on innovation.
+
+[HPE Managed Services | HPE](https://www.hpe.com/us/en/services/remote-infrastructure-monitoring.html)
+
+  
+
+#### Emissions Classification (EMC) – Regulatory Information
+
+To view the regulatory information for your product, view the Safety and Compliance Information for Server,
+Storage, Power, Networking, and Rack Products, available at the Hewlett Packard Enterprise Support Center:
+
+<http://www.hpe.com/support/Safety-Compliance-EnterpriseProducts>
+
+  
+
+#### Environmentally Friendly Products and Approach End-of-life Management and Recycling
+
+Hewlett Packard Enterprise offers [end-of-life product return, trade-in, and recycling
+programs](https://www.hpe.com/us/en/about/environment/product-recycling.html), in many geographic areas, for
+our products. Products returned to Hewlett Packard Enterprise will be recycled, recovered or disposed of in a
+responsible manner.
+
+  
+
+The European Union Waste Electrical and Electronic Equipment Directive [EU WEEE] (2002/95/EC) requires
+manufacturers to provide treatment information for each product type for use by treatment facilities. This
+information (product disassembly instructions) is posted on the Hewlett Packard Enterprise website. These
+instructions may be used by recyclers and other WEEE treatment facilities as well as Hewlett Packard
+Enterprise OEM customers who integrate and re-sell Hewlett Packard Enterprise equipment.
+
+#### Emissions Classification (EMC) – Regulatory Information
+
+To view the regulatory information for your product, view the Safety and Compliance Information for Server,
+Storage, Power, Networking, and Rack Products, available at the Hewlett Packard Enterprise Support Center:
+
+<http://www.hpe.com/support/Safety-Compliance-EnterpriseProducts>
+
+  
+
+#### Environmentally friendly Products and Approach End-of-life Management and Recycling
+
+Hewlett Packard Enterprise offers [end-of-life product return, trade-in, and recycling
+programs](https://www.hpe.com/us/en/about/environment/product-recycling.html), in many geographic areas, for
+our products. Products returned to Hewlett Packard Enterprise will be recycled, recovered or disposed of in a
+responsible manner.
+
+  
+
+The European Union Waste Electrical and Electronic Equipment Directive [EU WEEE] (2002/95/EC) requires
+manufacturers to provide treatment information for each product type for use by treatment facilities. This
+information (product disassembly instructions) is posted on the Hewlett Packard Enterprise web site. These
+instructions may be used by recyclers and other WEEE treatment facilities as well as Hewlett Packard
+Enterprise OEM customers who integrate and re-sell Hewlett Packard Enterprise equipment.
+
+###
+
+Summary of Changes
+
+**Date** |  **Version History** |  **Action** |  **Description of Change**  
+---|---|---|---  
+08-Sep-2026 |  [Version 6](https://www.hpe.com/psnow/doc/a50009224enw.pdf?ver=6) |  Changed |  Overview and Standard Feature sections were updated.  
+20-Jul-2026 |  [Version 5](https://www.hpe.com/psnow/doc/a50009224enw.pdf?ver=5) |  Changed |  Warranty and Services sections were restructured and standardized. Updated Product Warranty content for clarity and consistency, including revised support statements and terminology. Consolidated and refreshed HPE Services, HPE HPC&AI Custom Support Service, HPE Lifecycle Services, HPE Education Services, HPE Consulting Services, and HPE Managed Services sections with aligned messaging, updated descriptions, and current links. Removed legacy and redundant services content, including outdated operational services, regulatory, and environmental sections.  
+17-Nov-2025 |  [Version 4](https://www.hpe.com/psnow/doc/a50009224enw.pdf?ver=4) |  Changed |  Document was modified to comply with HPE Rebranding strategy.  
+28-Jul-2025 |  [Version 3](https://www.hpe.com/psnow/doc/a50009224enw.pdf?ver=3) |  Changed |  Models Section was updated.  
+27-May-2025 |  [Version 2](https://www.hpe.com/psnow/doc/a50009224enw.pdf?ver=2) |  Changed |  Overview section was updated.Added labeled photos and cleaned up content.  
+05-May-2025 |  [Version 1](https://www.hpe.com/psnow/doc/a50009224enw.pdf?ver=1) |  New |  New QuickSpecs  
+  
+[Have feedback on QuickSpecs? We’re
+listening](https://hpeexperience.questionpro.com/t/mLrbZLrb?Inform=BotQuickSpecsa50009224enw_html)
+
+HPE Logo
+
+© Copyright 2026 Hewlett Packard Enterprise Development LP. The information contained herein is subject to
+change without notice. The only warranties for Hewlett Packard Enterprise products and services are set forth
+in the express warranty statements accompanying such products and services. Nothing herein should be construed
+as constituting an additional warranty. Hewlett Packard Enterprise shall not be liable for technical or
+editorial errors or omissions contained herein.
+
+a50009224enw, - 17256 - Worldwide - V6 - 08-September-2026
+
+##  Recommended for you
+
+[ Hewlett Packard Enterprise ](https://www.hpe.com/us/en/home.html)
+
+[ How to buy ](https://www.hpe.com/us/en/buy-parts-products.html) [ Product support
+](https://support.hpe.com/connect/s/) [ Email sales ](javascript:void\(0\)) [ Contact us Chat with sales
+](javascript:void\(0\))
+
+Follow HPE on
+
+[ ](https://www.linkedin.com/company/hewlett-packard-enterprise "Linkedin") [ ](https://x.com/hpe "X") [
+](https://www.instagram.com/hpe "Instagram") [ ](https://www.threads.net/@hpe "Threads") [
+](https://www.facebook.com/HewlettPackardEnterprise/ "Facebook") [ ](https://www.youtube.com/@hpe "Youtube") [
+](https://www.hpe.com/us/en/newsroom/rss.xml "RSS")
+
+Animation & motion
+
+Off On
+
+Company
+
+Company
+
+  * [ About HPE ](https://www.hpe.com/us/en/about.html)
+  * [ Accessibility ](https://www.hpe.com/us/en/about/accessibility-aging.html)
+  * [ Careers ](https://careers.hpe.com/us/en)
+  * [ Corporate responsibility ](https://www.hpe.com/us/en/living-progress.html)
+  * [ HPE Labs ](https://www.hpe.com/us/en/hpe-labs.html)
+  * [ HPE Modern Slavery Transparency Statement (PDF) ](https://www.hpe.com/psnow/doc/a00005807enw?jumpid=in_pdfviewer-psnow)
+  * [ Investor relations ](https://investors.hpe.com/)
+  * [ Leadership ](https://www.hpe.com/us/en/leadership.html)
+  * [ Public policy ](https://www.hpe.com/us/en/living-progress/political-engagement-advocacy.html)
+
+Support
+
+Support
+
+  * [ OEM Solutions ](https://www.hpe.com/us/en/oem.html)
+  * [ Product return and recycling ](https://www.hpe.com/us/en/about/environment/product-recycling.html)
+  * [ Product support ](https://support.hpe.com/hpesc/public/home)
+  * [ Software and drivers ](https://myenterpriselicense.hpe.com/cwp-ui/auth/login)
+  * [ Warranty check ](https://support.hpe.com/connect/s/warrantycheck)
+
+Events and news
+
+Events and news
+
+  * [ Events ](https://www.hpe.com/us/en/events.html)
+  * [ HPE Discover ](https://www.hpe.com/us/en/events/discover-events.html)
+  * [ Local events ](https://www.hpe.com/h22166/Calendar_hpe.aspx?cc=us&lang=en)
+  * [ Newsroom ](https://www.hpe.com/us/en/newsroom.html)
+
+Customer resources
+
+Customer resources
+
+  * [ Contact Us ](https://www.hpe.com/us/en/contact-hpe.html)
+  * [ Digital Trust Center ](https://www.hpe.com/us/en/about/digital-trust-center.html)
+  * [ Education and training ](https://education.hpe.com/us/en/training/index.html)
+  * [ Email signup ](https://explore.hpe.com/email-preference-center.html?language=en)
+  * [ Enterprise glossary ](https://www.hpe.com/us/en/what-is.html)
+  * [ Financial services ](https://www.hpe.com/us/en/hpe-financial-services/financing-it-lifecycle-services.html)
+  * [ HPE communities ](https://community.hpe.com/)
+  * [ HPE customer centers ](https://www.hpe.com/us/en/about/customer-centers.html)
+  * [ HPE sign in ](https://auth.hpe.com/)
+  * [ Voice of the Customer signup ](https://www.hpe.com/h41268/live/index_e.aspx?qid=29244)
+
+Partners
+
+Partners
+
+  * [ Alliances ](https://www.hpe.com/us/en/alliance.html)
+  * [ Certifications ](https://certification-learning.hpe.com/tr/)
+  * [ Find a partner ](https://partnerconnect.hpe.com/home)
+  * [ Partner programs ](https://www.hpe.com/us/en/partners/partner-ready-vantage.html)
+
+Animation & motion
+
+Off On
+
+* * *
+
+© Copyright 2026 Hewlett Packard Enterprise Development LP
+
+  * [Privacy](https://www.hpe.com/us/en/legal/privacy.html)
+  * [Terms of Use](https://www.hpe.com/us/en/about/legal/terms-of-use.html)
+  * [Ad Choices & Cookies](https://www.hpe.com/us/en/legal/privacy.html#datacollection)
+  * [Do Not Sell or Share My Personal Information](https://www.hpe.com/us/en/legal/privacy/personal-information.html)
+  * [Sitemap](https://www.hpe.com/us/en/sitemap.html)
+
+[ United States (en) ](https://www.hpe.com/us/en/country-
+selector.html?navigateFrom=/us/en/collaterals/collateral.a50009224enw.html)
+
+##  Ask AI Beta
+
+[ Contact HPE ](https://www.hpe.com/us/en/contact-hpe.html)
+
+AI can make mistakes. View our [Privacy statement](https://www.hpe.com/us/en/legal/privacy.html). [Terms
+apply.](https://www.hpe.com/us/en/about/legal/terms-of-use.html)
+
+AI can make mistakes. View our [Privacy statement](https://www.hpe.com/us/en/legal/privacy.html). [Terms
+apply.](https://www.hpe.com/us/en/about/legal/terms-of-use.html)

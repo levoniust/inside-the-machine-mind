@@ -1,0 +1,454 @@
+SOURCE COPY — SRC-NV-IB
+Retrieved 2026-10-21 for Inside the Machine Mind (offline reference copy; excerpt of the original, formatting simplified).
+Original URL: https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/products/infiniband/quantum-x800/
+Page/document title: NVIDIA Quantum-X800 InfiniBand Platform | NVIDIANVIDIA HomeMenuMenuCloseCloseCloseCaret down iconCaret down iconCaret up iconCaret right iconCaret right iconCaret right iconCaret left iconCaret left i
+
+------------------------------------------------------------------------
+
+NVIDIA Home NVIDIA Home Menu Menu icon Menu Menu icon Close Close icon Close Close icon Close Close icon Caret
+down icon Accordion is closed, click to open. Caret down icon Accordion is closed, click to open. Caret up
+icon Accordion is open, click to close. Caret right icon Click to expand Caret right icon Click to expand
+Caret right icon Click to expand menu. Caret left icon Click to collapse menu. Caret left icon Click to
+collapse menu. Caret left icon Click to collapse menu. Shopping Cart Click to see cart items Search icon Click
+to search
+
+Visit your regional NVIDIA website for local content, pricing, and where to buy partners specific to your
+country.
+
+Argentina Australia België (Belgium) Belgique (Belgium) Brasil (Brazil) Canada Česká Republika (Czech
+Republic) Chile Colombia Danmark (Denmark) Deutschland (Germany) España (Spain) France India Italia (Italy)
+México (Mexico) Middle East Nederland (Netherlands) Norge (Norway) Österreich (Austria) Peru Polska (Poland)
+Rest of Europe România (Romania) Singapore Suomi (Finland) Sverige (Sweden) Türkiye (Turkey) United Kingdom
+United States 대한민국 (South Korea) 中国大陆 (Mainland China) 台灣 (Taiwan) 日本 (Japan)
+
+[ Continue ](https://web.archive.org/web/20261010195501/https://www.nvidia.com/)
+
+Skip to main content
+
+[ Artificial Intelligence Computing Leadership from NVIDIA
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/ "Artificial Intelligence Computing
+Leadership from NVIDIA")
+
+  * [Networking](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/)
+
+  * Platforms 
+
+Platforms
+
+[ BlueField DPU Advanced computing platform powering AI data centers
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/products/data-processing-
+unit/)
+
+[ Spectrum-X Ethernet Ethernet platform for hyperscale AI cloud networking
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/spectrumx/)
+
+[ Quantum-X800 InfiniBand High-bandwidth InfiniBand switching for giant AI clusters
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-
+us/networking/products/infiniband/quantum-x800/)
+
+[ Quantum-2 InfiniBand InfiniBand networking for cloud‑native supercomputing at scale
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/quantum2/)
+
+  * Products 
+
+Products
+
+[ Ethernet Product Overview High performance Spectrum Ethernet for accelerated AI networking
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/products/ethernet/)
+
+[ DPUs Infrastructure accelerators for AI‑optimized data centers
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/products/data-processing-
+unit/)
+
+[ InfiniBand Product Overview Quantum InfiniBand platform for high‑performance AI and HPC
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/products/infiniband/)
+
+[ Cables & Transceivers 800G and 400G Ethernet and InfiniBand cables and transceivers
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/interconnect/)
+
+[ Ethernet Switches Spectrum Ethernet switches for AI & HPC workloads
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/ethernet-switching/)
+
+[ Ethernet SuperNICs High performance Ethernet SuperNICs for advanced AI networking
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-
+us/networking/products/ethernet/supernic/)
+
+[ InfiniBand Switches & Appliances InfiniBand switches provide high performance and dense ports
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/infiniband-switching/)
+
+[ ConnectX InfiniBand Adapters ConnectX InfiniBand accelerates scalable AI and HPC workloads
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/infiniband-adapters/)
+
+[ Silicon Photonics Co-packaged silicon photonics for massive AI networking
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/products/silicon-
+photonics/)
+
+[ ConnectX Ethernet NICs High performance ConnectX Ethernet for AI and cloud workloads
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/ethernet-adapters/)
+
+  * Software 
+
+Software
+
+[ Networking Software Overview Software suites to optimize Ethernet and InfiniBand networking
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/products/software/)
+
+[ DOCA Scale agentic AI securely on BlueField and ConnectX
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/products/software/doca)
+
+[ DSX Air NVIDIA Air builds full-stack simulations for AI data center infrastructure
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/ethernet-switching/air/)
+
+[ Cumulus Linux-based data center network OS
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/ethernet-
+switching/cumulus-linux/)
+
+[ NetQ Real-time AI data center network observability
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/ethernet-switching/netq/)
+
+[ UFM InfiniBand data center fabric management platform
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/infiniband/ufm/)
+
+[ Pure SONiC Open-source Linux network OS for switches
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/ethernet-
+switching/sonic/)
+
+  * Support 
+
+Support
+
+[ Enterprise Support Portal NVIDIA Enterprise Application Hub login portal
+](https://web.archive.org/web/20261010195501/https://nvid.nvidia.com/dashboard/)
+
+[ Firmware Download NVIDIA Networking firmware download center
+](https://web.archive.org/web/20261010195501/https://network.nvidia.com/support/firmware/firmware-downloads/)
+
+[ End-of-life Products End-of-life and support status for products
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/support/enterprise/networking/)
+
+[ Product Documentation NVIDIA networking product and software documentation
+](https://web.archive.org/web/20261010195501/https://docs.nvidia.com/networking/)
+
+[ InfiniBand Drivers InfiniBand and VPI software downloads and drivers
+](https://web.archive.org/web/20261010195501/https://developer.nvidia.com/networking/infiniband-software)
+
+[ Ethernet Drivers Ethernet adapter drivers and acceleration software
+](https://web.archive.org/web/20261010195501/https://developer.nvidia.com/networking/ethernet-software)
+
+  * [Buy](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/buy/)
+
+  * 
+
+  *   *   * US
+
+  *     * __Sign In
+
+[ __ NVIDIA Account ](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/account/edit-
+profile/)
+
+[ __ Logout ](/web/20261010195501/https://www.nvidia.com/)
+
+  * Log In LogOut
+
+Skip to main content
+
+  *   *   *   * [ Artificial Intelligence Computing Leadership from NVIDIA ](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/ "Artificial Intelligence Computing Leadership from NVIDIA")
+  * 0 [ ](/web/20261010195501/https://www.nvidia.com/)
+  * US
+  *   * __ Sign In
+
+[ __ NVIDIA Account ](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/account/edit-
+profile/)
+
+[ __ Logout ](/web/20261010195501/https://www.nvidia.com/)
+
+  * Login LogOut
+
+NVIDIA NVIDIA logo
+
+[Networking](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/)
+
+Platforms
+
+[ BlueField DPU Advanced computing platform powering AI data centers
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/products/data-processing-
+unit/) [ Spectrum-X Ethernet Ethernet platform for hyperscale AI cloud networking
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/spectrumx/) [
+Quantum-X800 InfiniBand High-bandwidth InfiniBand switching for giant AI clusters
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-
+us/networking/products/infiniband/quantum-x800/) [ Quantum-2 InfiniBand InfiniBand networking for cloud‑native
+supercomputing at scale ](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-
+us/networking/quantum2/)
+
+Products
+
+[ Ethernet Product Overview High performance Spectrum Ethernet for accelerated AI networking
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/products/ethernet/) [
+DPUs Infrastructure accelerators for AI‑optimized data centers
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/products/data-processing-
+unit/) [ InfiniBand Product Overview Quantum InfiniBand platform for high‑performance AI and HPC
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/products/infiniband/) [
+Cables & Transceivers 800G and 400G Ethernet and InfiniBand cables and transceivers
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/interconnect/) [ Ethernet
+Switches Spectrum Ethernet switches for AI & HPC workloads
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/ethernet-switching/) [
+Ethernet SuperNICs High performance Ethernet SuperNICs for advanced AI networking
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-
+us/networking/products/ethernet/supernic/) [ InfiniBand Switches & Appliances InfiniBand switches provide high
+performance and dense ports ](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-
+us/networking/infiniband-switching/) [ ConnectX InfiniBand Adapters ConnectX InfiniBand accelerates scalable
+AI and HPC workloads ](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-
+us/networking/infiniband-adapters/) [ Silicon Photonics Co-packaged silicon photonics for massive AI
+networking ](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-
+us/networking/products/silicon-photonics/) [ ConnectX Ethernet NICs High performance ConnectX Ethernet for AI
+and cloud workloads ](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-
+us/networking/ethernet-adapters/)
+
+Software
+
+[ Networking Software Overview Software suites to optimize Ethernet and InfiniBand networking
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/products/software/) [
+DOCA Scale agentic AI securely on BlueField and ConnectX
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/products/software/doca) [
+DSX Air NVIDIA Air builds full-stack simulations for AI data center infrastructure
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/ethernet-switching/air/)
+[ Cumulus Linux-based data center network OS
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/ethernet-
+switching/cumulus-linux/) [ NetQ Real-time AI data center network observability
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/ethernet-switching/netq/)
+[ UFM InfiniBand data center fabric management platform
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/infiniband/ufm/) [ Pure
+SONiC Open-source Linux network OS for switches
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/ethernet-
+switching/sonic/)
+
+Support
+
+[ Enterprise Support Portal NVIDIA Enterprise Application Hub login portal
+](https://web.archive.org/web/20261010195501/https://nvid.nvidia.com/dashboard/) [ Firmware Download NVIDIA
+Networking firmware download center
+](https://web.archive.org/web/20261010195501/https://network.nvidia.com/support/firmware/firmware-downloads/)
+[ End-of-life Products End-of-life and support status for products
+](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/support/enterprise/networking/) [
+Product Documentation NVIDIA networking product and software documentation
+](https://web.archive.org/web/20261010195501/https://docs.nvidia.com/networking/) [ InfiniBand Drivers
+InfiniBand and VPI software downloads and drivers
+](https://web.archive.org/web/20261010195501/https://developer.nvidia.com/networking/infiniband-software) [
+Ethernet Drivers Ethernet adapter drivers and acceleration software
+](https://web.archive.org/web/20261010195501/https://developer.nvidia.com/networking/ethernet-software)
+
+[Buy](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/buy/)
+
+* 
+
+This site requires Javascript in order to view all its content. Please enable Javascript in order to access
+all the functionality of this web site. Here are the [instructions how to enable JavaScript in your web
+browser.](https://web.archive.org/web/20261010195501/http://www.enable-javascript.com/)
+
+#  NVIDIA Quantum-X800 InfiniBand Platform
+
+Highest-performance, end-to-end 800 Gb/s networking designed for massive-scale AI.
+
+[ Learn More ](https://web.archive.org/web/20261010195501/https://nvidianews.nvidia.com/news/networking-
+switches-gpu-computing-ai)
+
+  * Introduction
+  * Key Benefits
+  * Platform Components
+  * Resources
+  * Next Steps
+
+  * Introduction
+  * Key Benefits
+  * Platform Components
+  * Resources
+  * Next Steps
+
+  * Introduction
+  * Key Benefits
+  * Platform Components
+  * Resources
+  * Next Steps
+
+[ Read Datasheet ](https://web.archive.org/web/20261010195501/https://dam-
+cdn.nvd.orangelogic.com/AssetLink/r853d3ukf12174b184tyxmeh08new4a1.pdf)
+
+###  Introduction
+
+##  World’s First End-to-End 800 Gb/s Networking
+
+The NVIDIA Quantum-X800 platform is the next generation of NVIDIA Quantum InfiniBand, purpose-built for
+trillion-parameter-scale AI models. It includes the [NVIDIA Quantum-X800 InfiniBand
+switch](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/infiniband-
+switching/), [NVIDIA ConnectX®-8
+SuperNIC](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/infiniband-
+adapters/), [ConnectX-9 SuperNIC](https://web.archive.org/web/20261010195501/https://resources.nvidia.com/en-
+us-accelerated-networking-resource-library/connectx-9-supernic-datasheet?xs=1064784), and NVIDIA® LinkX®
+cables and transceivers.
+
+The new platform supports advanced hardware-based, In-Network Computing with Scalable Hierarchical Aggregate
+Reduction Protocol (SHARP)™ v4, adaptive routing, and telemetry-based congestion control, enabling a new
+frontier of AI innovation.
+
+##  New Co-Packaged Silicon Photonic Networking Switches to Scale to Millions of GPUs, Multi-Site AI Factories
+
+[ Learn More ](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-
+us/networking/products/silicon-photonics/)
+
+###  Key Benefits
+
+##  Built to Accelerate Massive-Scale AI
+
+2x Higher Bandwidth 800 Gb/s
+
+5x Data Throughput
+
+9x In-Network Computing
+
+##  Platform Components
+
+##  What’s Inside the Platform
+
+###  NVIDIA Quantum-X800 InfiniBand Switches
+
+The NVIDIA Quantum-X800 InfiniBand switch provides 144 ports of 800 Gb/s connectivity per port. It includes
+hardware-based In-Network Computing with SHARP v4, adaptive routing, telemetry-based congestion control,
+performance isolation capabilities, and a dedicated port supporting the Unified Fabric Manager (UFM). NVIDIA
+Quantum-X800 switches also add advanced power-efficiency features, including low-power link state and power
+profiling.
+
+The [NVIDIA Quantum-X800 switch](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-
+us/networking/infiniband-switching/) provides increased performance and power efficiency to significantly
+reduce scientific computing, AI workload completion time, and energy costs.
+
+Quantum-X silicon photonics switches further reduce total power consumption and latency by minimizing the
+distance and number of connections between optics and electronics.
+
+[ Read Datasheet ](https://web.archive.org/web/20261010195501/https://dam-
+cdn.nvd.orangelogic.com/AssetLink/35m40gksfm2l23257j071cjd655b37w0.pdf)
+
+[ Learn More About Silicon Photonics ](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-
+us/networking/products/silicon-photonics/)
+
+###  NVIDIA ConnectX SuperNICs
+
+NVIDIA ConnectX SuperNICs deliver up to 1.6 terabits per second (Tb/s) of connectivity per GPU with ultra-low
+latency and support the latest in advanced in-network computing. Based on the ConnectX architecture, they
+provide accelerated MPI hardware engines, quality of service, adaptive routing, congestion control, and more.
+
+[ Read ConnectX-8 Datasheet ](https://web.archive.org/web/20261010195501/https://dam-
+cdn.nvd.orangelogic.com/AssetLink/335j4q8w18mbs6q3b21kxph7nu74d1sr.pdf)
+
+[ Read ConnectX-9 Datasheet ](https://web.archive.org/web/20261010195501/https://resources.nvidia.com/en-us-
+accelerated-networking-resource-library/connectx-9-supernic-datasheet?xs=1064784)
+
+###  LinkX Cables and Transceivers
+
+The NVIDIA Quantum-X800 platform connectivity options with the NVIDIA LinkX interconnect portfolio provide the
+maximum flexibility for building a preferred network topology, using connectorized transceivers with passive
+fiber cables and linear active copper cables (LACCs).
+
+##  Resources
+
+##  Continue Exploring InfiniBand Networking
+
+###  NVIDIA Quantum-X800 Resources
+
+Read the technical walkthrough on how to get started with NVIDIA Quantum-X800.
+
+[Read Solution Brief  ](https://web.archive.org/web/20261010195501/https://dam-
+cdn.nvd.orangelogic.com/AssetLink/q3uj564tlhs43k732v5om6d05d54t4wd.pdf) [Read Press Release
+](https://web.archive.org/web/20261010195501/https://nvidianews.nvidia.com/news/networking-switches-gpu-
+computing-ai)
+
+####  NVIDIA Silicon Photonics Resources
+
+Read more about NVIDIA co-packaged optics (CPO) technology and news.
+
+[Learn More  ](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-
+us/networking/products/silicon-photonics/)
+
+Next Steps
+
+##  Ready to Get Started?
+
+###  Configure Your Cluster
+
+This online tool can help you configure clusters based on fat tree with two levels of switch systems and
+Dragonfly+ topologies.
+
+[Get Started ](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/infiniband-
+configurator/)
+
+###  Take Networking Courses
+
+Explore deep technical training topics on NVIDIA Quantum InfiniBand networking through the NVIDIA Academy.
+
+[Learn More  ](https://web.archive.org/web/20261010195501/https://academy.nvidia.com/en/)
+
+###  Ready to Purchase?
+
+Visit the NVIDIA marketplace to discover more information on how to purchase NVIDIA networking solutions.
+
+[How to Buy  ](https://web.archive.org/web/20261010195501/https://marketplace.nvidia.com/en-
+us/enterprise/networking/)
+
+Platforms
+
+  * [BlueField DPU](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/products/data-processing-unit/)
+  * [Spectrum-X Ethernet](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/spectrumx/)
+  * [Quantum-X800 InfiniBand](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/products/infiniband/quantum-x800/)
+  * [Quantum-2 InfiniBand](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/quantum2/)
+  * [DOCA](https://web.archive.org/web/20261010195501/https://developer.nvidia.com/networking/doca)
+
+Products
+
+  * [Ethernet Product](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/products/ethernet/)
+  * [InfiniBand Product ](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/products/infiniband/)
+  * [Networking Software](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/products/software/)
+
+Resources
+
+  * [How to Buy](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/networking/buy/)
+  * [Support](https://web.archive.org/web/20261010195501/https://nvid.nvidia.com/dashboard/)
+  * [Networking Blogs](https://web.archive.org/web/20261010195501/https://blogs.nvidia.com/blog/category/enterprise/intelligent-networking/)
+  * [Documentation](https://web.archive.org/web/20261010195501/https://docs.nvidia.com/networking/index.html)
+  * [Networking Community](https://web.archive.org/web/20261010195501/https://forums.developer.nvidia.com/c/infrastructure/369/)
+  * [NVIDIA Academy](https://web.archive.org/web/20261010195501/https://academy.nvidia.com/en/)
+  * [NVIDIA Deep Learning Institute](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/training/)
+  * [Ethernet Drivers](https://web.archive.org/web/20261010195501/https://developer.nvidia.com/networking/ethernet-software)
+  * [InfiniBand Drivers](https://web.archive.org/web/20261010195501/https://developer.nvidia.com/networking/infiniband-software)
+
+Company Info
+
+  * [About Us](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/about-nvidia/)
+  * [Company Overview](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/about-nvidia/)
+  * [Investors](https://web.archive.org/web/20261010195501/https://investor.nvidia.com/home/default.aspx)
+  * [Venture Capital (NVentures)](https://web.archive.org/web/20261010195501/https://www.nventures.ai/)
+  * [NVIDIA Foundation](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/foundation/)
+  * [Research](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/research/)
+  * [Social Responsibility](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/sustainability/)
+  * [Technologies](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/technologies/)
+  * [Careers](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/about-nvidia/careers/)
+
+Follow NVIDIA Networking
+
+[ __](https://web.archive.org/web/20261010195501/https://www.facebook.com/NVIDIANetworking "<util:I18n
+key="Follow GeForce on Facebook" />") [
+__](https://web.archive.org/web/20261010195501/https://www.linkedin.com/showcase/nvidianetworking/) [
+__](https://web.archive.org/web/20261010195501/https://twitter.com/NVIDIANetworkng "<util:I18n key="Follow
+GeForce on Twitter" />")
+
+NVIDIA
+
+[ United States  ](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/location-selector/)
+
+  * [Privacy Policy](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/about-nvidia/privacy-policy/)
+  * [Your Privacy Choices](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/about-nvidia/privacy-center/)
+  * [Terms of Service](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/about-nvidia/terms-of-service/)
+  * [Accessibility](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/about-nvidia/accessibility/)
+  * [Corporate Policies](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/about-nvidia/company-policies/)
+  * [Product Security](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/product-security/)
+  * [Contact](https://web.archive.org/web/20261010195501/https://www.nvidia.com/en-us/contact/)
+
+Copyright (C) 2026 NVIDIA Corporation

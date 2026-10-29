@@ -1,0 +1,514 @@
+SOURCE COPY — SRC-EXL2
+Retrieved 2026-10-21 for Inside the Machine Mind (offline reference copy; excerpt of the original, formatting simplified).
+Original URL: https://github.com/turboderp/exllamav2
+Page/document title: GitHub - turboderp-org/exllamav2: A fast inference library for running LLMs locally on modern consumer-class GPUs · GitHub
+
+------------------------------------------------------------------------
+
+Skip to content
+
+## Navigation Menu
+
+[](/)
+
+[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fturboderp-org%2Fexllamav2)
+
+Appearance settings
+
+  * Platform
+
+    * AI CODE CREATION
+      * [GitHub CopilotWrite better code with AI](https://github.com/features/copilot)
+      * [GitHub Copilot appDirect agents from issue to merge](https://github.com/features/ai/github-app)
+      * [MCP RegistryIntegrate external tools](https://github.com/mcp)
+
+    * DEVELOPER WORKFLOWS
+      * [ActionsAutomate any workflow](https://github.com/features/actions)
+      * [CodespacesInstant dev environments](https://github.com/features/codespaces)
+      * [IssuesPlan and track work](https://github.com/features/issues)
+      * [Code ReviewManage code changes](https://github.com/features/code-review)
+      * [Code QualityEnforce quality at merge](https://github.com/features/code-quality)
+
+    * APPLICATION SECURITY
+      * [GitHub Advanced SecurityFind and fix vulnerabilities](https://github.com/security/advanced-security)
+      * [Code securitySecure your code as you build](https://github.com/security/advanced-security/code-security)
+      * [Secret protectionStop leaks before they start](https://github.com/security/advanced-security/secret-protection)
+
+    * EXPLORE
+      * [Why GitHub](https://github.com/why-github)
+      * [Documentation](https://docs.github.com)
+      * [Blog](https://github.blog)
+      * [Changelog](https://github.blog/changelog)
+      * [Marketplace](https://github.com/marketplace)
+
+[View all features](https://github.com/features)
+
+  * Solutions
+
+    * BY COMPANY SIZE
+      * [Enterprises](https://github.com/enterprise)
+      * [Small and medium teams](https://github.com/team)
+      * [Startups](https://github.com/enterprise/startups)
+      * [Nonprofits](https://github.com/solutions/industry/nonprofits)
+
+    * BY USE CASE
+      * [App Modernization](https://github.com/solutions/use-case/app-modernization)
+      * [DevSecOps](https://github.com/solutions/use-case/devsecops)
+      * [DevOps](https://github.com/solutions/use-case/devops)
+      * [CI/CD](https://github.com/solutions/use-case/ci-cd)
+      * [View all use cases](https://github.com/solutions/use-case)
+
+    * BY INDUSTRY
+      * [Healthcare](https://github.com/solutions/industry/healthcare)
+      * [Financial services](https://github.com/solutions/industry/financial-services)
+      * [Manufacturing](https://github.com/solutions/industry/manufacturing)
+      * [Government](https://github.com/solutions/industry/government)
+      * [View all industries](https://github.com/solutions/industry)
+
+[View all solutions](https://github.com/solutions)
+
+  * Resources
+
+    * EXPLORE BY TOPIC
+      * [AI](https://github.com/resources/articles?topic=ai)
+      * [Software Development](https://github.com/resources/articles?topic=software-development)
+      * [DevOps](https://github.com/resources/articles?topic=devops)
+      * [Security](https://github.com/resources/articles?topic=security)
+      * [View all topics](https://github.com/resources/articles)
+
+    * EXPLORE BY TYPE
+      * [Customer stories](https://github.com/customer-stories)
+      * [Events & webinars](https://github.com/resources/events)
+      * [Ebooks & reports](https://github.com/resources/whitepapers)
+      * [Business insights](https://github.com/solutions/executive-insights)
+      * [GitHub Skills](https://skills.github.com)
+
+    * SUPPORT & SERVICES
+      * [Documentation](https://docs.github.com)
+      * [Customer support](https://support.github.com)
+      * [Community forum](https://github.com/orgs/community/discussions)
+      * [Trust center](https://github.com/trust-center)
+      * [Partners](https://github.com/partners)
+
+[View all resources](https://github.com/resources)
+
+  * Open Source
+
+    * COMMUNITY
+      * [GitHub SponsorsFund open source developers](https://github.com/open-source/sponsors)
+
+    * PROGRAMS
+      * [Security Lab](https://securitylab.github.com)
+      * [Maintainer Community](https://maintainers.github.com)
+      * [GitHub Stars](https://stars.github.com)
+      * [Archive Program](https://archiveprogram.github.com)
+
+    * REPOSITORIES
+      * [Topics](https://github.com/topics)
+      * [Trending](https://github.com/trending)
+      * [Collections](https://github.com/collections)
+
+  * Enterprise
+
+    * ENTERPRISE SOLUTIONS
+      * [Enterprise platformAI-powered developer platform](https://github.com/enterprise)
+
+    * AVAILABLE ADD-ONS
+      * [GitHub Advanced SecurityEnterprise-grade security features](https://github.com/security/advanced-security)
+      * [Copilot for BusinessEnterprise-grade AI features](https://github.com/features/copilot/copilot-business)
+      * [Premium SupportEnterprise-grade 24/7 support](https://github.com/enterprise/premium-support)
+
+  * [Pricing](https://github.com/pricing)
+
+Search`/`
+
+[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fturboderp-org%2Fexllamav2)
+
+[Sign up](/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E%2F%3Crepo-
+name%3E&source=header-repo&source_repo=turboderp-org%2Fexllamav2)
+
+Appearance settings
+
+You signed in with another tab or window. [Reload]() to refresh your session. You signed out in another tab or
+window. [Reload]() to refresh your session. You switched accounts on another tab or window. [Reload]() to
+refresh your session. Dismiss alert
+
+{{ message }}
+
+  1. [turboderp-org](/turboderp-org)
+  2. [exllamav2](/turboderp-org/exllamav2)
+
+## Repository navigation
+
+  *   * [Code](/turboderp-org/exllamav2)
+  * [Issues140 (140)](/turboderp-org/exllamav2/issues)
+  * [Pull requests22 (22)](/turboderp-org/exllamav2/pulls)
+  * [Discussions](/turboderp-org/exllamav2/discussions)
+  * [Actions](/turboderp-org/exllamav2/actions)
+  * [Projects](/turboderp-org/exllamav2/projects)
+  * [Security and quality](/turboderp-org/exllamav2/security)
+  * [Insights](/turboderp-org/exllamav2/pulse)
+
+More items
+
+[](/turboderp-org/exllamav2)
+
+**[exllamav2](/turboderp-org/exllamav2)**
+
+Public
+
+  * Sponsor
+  * [Notifications](/login?return_to=%2Fturboderp-org%2Fexllamav2)You must be signed in to change notification settings
+  * [Fork348 (348)](/login?return_to=%2Fturboderp-org%2Fexllamav2)
+  * [Star4.6k (4.6k)](/login?return_to=%2Fturboderp-org%2Fexllamav2)You must be signed in to star a repository
+
+## About
+
+A fast inference library for running LLMs locally on modern consumer-class GPUs
+
+### Resources
+
+Readme
+
+MIT license
+
+[Activity](/turboderp-org/exllamav2/activity)
+
+[Custom properties](/turboderp-org/exllamav2/custom-properties)
+
+### Stars
+
+**4.6k** stars
+
+### Watchers
+
+**35** watching
+
+### Forks
+
+[**348** forks](/turboderp-org/exllamav2/forks)
+
+[Report repository](/contact/report-content?content_url=https%3A%2F%2Fgithub.com%2Fturboderp-
+org%2Fexllamav2&report=turboderp-org+%28user%29)
+
+master
+
+[Branches](/turboderp-org/exllamav2/branches)[Tags](/turboderp-org/exllamav2/tags)
+
+[](/turboderp-org/exllamav2/branches)[](/turboderp-org/exllamav2/tags)
+
+Go to file
+
+Code
+
+Open more actions menu
+
+## Latest commit
+
+## History
+
+[1,459 Commits](/turboderp-org/exllamav2/commits/master/)
+
+[](/turboderp-org/exllamav2/commits/master/)1,459 Commits
+
+## Folders and files
+
+Name| Name| Last commit message| Last commit date  
+---|---|---|---  
+[.github](/turboderp-org/exllamav2/tree/master/.github ".github")| [.github](/turboderp-org/exllamav2/tree/master/.github ".github")|  |   
+[doc](/turboderp-org/exllamav2/tree/master/doc "doc")| [doc](/turboderp-org/exllamav2/tree/master/doc "doc")|  |   
+[eval](/turboderp-org/exllamav2/tree/master/eval "eval")| [eval](/turboderp-org/exllamav2/tree/master/eval "eval")|  |   
+[examples](/turboderp-org/exllamav2/tree/master/examples "examples")| [examples](/turboderp-org/exllamav2/tree/master/examples "examples")|  |   
+[exllamav2](/turboderp-org/exllamav2/tree/master/exllamav2 "exllamav2")| [exllamav2](/turboderp-org/exllamav2/tree/master/exllamav2 "exllamav2")|  |   
+[experimental](/turboderp-org/exllamav2/tree/master/experimental "experimental")| [experimental](/turboderp-org/exllamav2/tree/master/experimental "experimental")|  |   
+[tests](/turboderp-org/exllamav2/tree/master/tests "tests")| [tests](/turboderp-org/exllamav2/tree/master/tests "tests")|  |   
+[util](/turboderp-org/exllamav2/tree/master/util "util")| [util](/turboderp-org/exllamav2/tree/master/util "util")|  |   
+[.gitignore](/turboderp-org/exllamav2/blob/master/.gitignore ".gitignore")| [.gitignore](/turboderp-org/exllamav2/blob/master/.gitignore ".gitignore")|  |   
+[LICENSE](/turboderp-org/exllamav2/blob/master/LICENSE "LICENSE")| [LICENSE](/turboderp-org/exllamav2/blob/master/LICENSE "LICENSE")|  |   
+[MANIFEST.in](/turboderp-org/exllamav2/blob/master/MANIFEST.in "MANIFEST.in")| [MANIFEST.in](/turboderp-org/exllamav2/blob/master/MANIFEST.in "MANIFEST.in")|  |   
+[README.md](/turboderp-org/exllamav2/blob/master/README.md "README.md")| [README.md](/turboderp-org/exllamav2/blob/master/README.md "README.md")|  |   
+[convert.py](/turboderp-org/exllamav2/blob/master/convert.py "convert.py")| [convert.py](/turboderp-org/exllamav2/blob/master/convert.py "convert.py")|  |   
+[model_diff.py](/turboderp-org/exllamav2/blob/master/model_diff.py "model_diff.py")| [model_diff.py](/turboderp-org/exllamav2/blob/master/model_diff.py "model_diff.py")|  |   
+[requirements.txt](/turboderp-org/exllamav2/blob/master/requirements.txt "requirements.txt")| [requirements.txt](/turboderp-org/exllamav2/blob/master/requirements.txt "requirements.txt")|  |   
+[setup.py](/turboderp-org/exllamav2/blob/master/setup.py "setup.py")| [setup.py](/turboderp-org/exllamav2/blob/master/setup.py "setup.py")|  |   
+[test_inference.py](/turboderp-org/exllamav2/blob/master/test_inference.py "test_inference.py")| [test_inference.py](/turboderp-org/exllamav2/blob/master/test_inference.py "test_inference.py")|  |   
+View all files  
+  
+## Repository files navigation
+
+  *   * README
+  * MIT license
+
+More items
+
+# Note
+
+**This project is archived for now**. Development continues on [ExLlamaV3](https://github.com/turboderp-
+org/exllamav3).
+
+# ExLlamaV2
+
+ExLlamaV2 is an inference library for running local LLMs on modern consumer GPUs.
+
+The official and recommended backend server for ExLlamaV2 is
+[TabbyAPI](https://github.com/theroyallab/tabbyAPI/), which provides an OpenAI-compatible API for local or
+remote inference, with extended features like HF model downloading, embedding model support and support for HF
+Jinja2 chat templates.
+
+See the [wiki](https://github.com/theroyallab/tabbyAPI/wiki/1.-Getting-Started) for help getting started.
+
+## New in v0.1.0+:
+
+  * ExLlamaV2 now supports paged attention via [Flash Attention](https://github.com/Dao-AILab/flash-attention) 2.5.7+
+  * New generator with dynamic batching, smart prompt caching, K/V cache deduplication and simplified API
+
+[](/turboderp-org/exllamav2/blob/master/doc/dynamic_gen.gif)
+
+## Dynamic generator
+
+The dynamic generator supports all inference, sampling and speculative decoding features of the previous two
+generators, consolidated into one API (with the exception of FP8 cache, though the Q4 cache mode is supported
+and performs better anyway, see [here](/turboderp-org/exllamav2/blob/master/doc/qcache_eval.md).)
+
+The generator is explained in detail [here](/turboderp-org/exllamav2/blob/master/doc/dynamic.md).
+
+  * Single generation: 
+        
+        output = generator.generate(prompt = "Hello, my name is", max_new_tokens = 200)
+
+  * Batched generation: 
+        
+        outputs = generator.generate(
+            prompt = [
+                "Hello, my name is",
+                "Once upon a time,",
+                "Large language models are",
+            ], 
+            max_new_tokens = 200
+        )
+
+  * Streamed generation with `asyncio`: 
+        
+        job = ExLlamaV2DynamicJobAsync(
+            generator,
+            input_ids = tokenizer.encode("You can lead a horse to water"),
+            banned_strings = ["make it drink"],
+            gen_settings = ExLlamaV2Sampler.Settings.greedy(),
+            max_new_tokens = 200
+        )  
+        async for result in job:
+            text = result.get("text", "")
+            print(text, end = "")       
+
+See the full, updated examples [here](https://github.com/turboderp/exllamav2/tree/master/examples).
+
+## Performance
+
+Some quick tests to compare performance with ExLlama V1. There may be more performance optimizations in the
+future, and speeds will vary across GPUs, with slow CPUs still being a potential bottleneck:
+
+Model | Mode | Size | grpsz | act | 3090Ti | 4090  
+---|---|---|---|---|---|---  
+Llama | GPTQ | 7B | 128 | no | 181 t/s | **205** t/s  
+Llama | GPTQ | 13B | 128 | no | 110 t/s | **114** t/s  
+Llama | GPTQ | 33B | 128 | yes | 44 t/s | **48** t/s  
+OpenLlama | GPTQ | 3B | 128 | yes | 259 t/s | **296** t/s  
+CodeLlama | EXL2 4.0 bpw | 34B | - | - | 44 t/s | **50** t/s  
+Llama2 | EXL2 3.0 bpw | 7B | - | - | 217 t/s | **257** t/s  
+Llama2 | EXL2 4.0 bpw | 7B | - | - | 185 t/s | **211** t/s  
+Llama2 | EXL2 5.0 bpw | 7B | - | - | 164 t/s | **179** t/s  
+Llama2 | EXL2 2.5 bpw | 70B | - | - | 33 t/s | **38** t/s  
+TinyLlama | EXL2 3.0 bpw | 1.1B | - | - | 656 t/s | **770** t/s  
+TinyLlama | EXL2 4.0 bpw | 1.1B | - | - | 602 t/s | **700** t/s  
+  
+## How to
+
+To install from the repo you'll need the CUDA Toolkit and either gcc on Linux or (Build Tools for) Visual
+Studio on Windows). Also make sure you have an appropriate version of [PyTorch](https://pytorch.org/get-
+started/locally/), then run:
+
+    
+    
+    git clone https://github.com/turboderp/exllamav2
+    cd exllamav2
+    pip install -r requirements.txt
+    pip install .
+    
+    python test_inference.py -m <path_to_model> -p "Once upon a time,"
+    # Append the '--gpu_split auto' flag for multi-GPU inference
+
+A simple console chatbot is included. Run it with:
+
+    
+    
+    python examples/chat.py -m <path_to_model> -mode llama -gs auto
+
+The `-mode` argument chooses the prompt format to use. `raw` will produce a simple chatlog-style chat that
+works with base models and various other finetunes. Run with `-modes` for a list of all available prompt
+formats. You can also provide a custom system prompt with `-sp`.
+
+## Integration and APIs
+
+  * [TabbyAPI](https://github.com/theroyallab/tabbyAPI/) is a FastAPI-based server that provides an OpenAI-style web API compatible with [SillyTavern](https://sillytavernai.com/) and other frontends.
+
+  * [ExUI](https://github.com/turboderp/exui) is a simple, standalone single-user web UI that serves an ExLlamaV2 instance directly with chat and notebook modes.
+
+  * [text-generation-webui](https://github.com/oobabooga/text-generation-webui) supports ExLlamaV2 through the **exllamav2** and **exllamav2_HF** loaders.
+
+  * [lollms-webui](https://github.com/ParisNeo/lollms-webui) supports ExLlamaV2 through the exllamav2 binding.
+
+## Installation
+
+### Method 1: Install from source
+
+To install the current dev version, clone the repo and run the setup script:
+
+    
+    
+    git clone https://github.com/turboderp/exllamav2
+    cd exllamav2
+    pip install -r requirements.txt
+    pip install .
+
+By default this will also compile and install the Torch C++ extension (`exllamav2_ext`) that the library
+relies on. You can skip this step by setting the `EXLLAMA_NOCOMPILE` environment variable:
+
+    
+    
+    EXLLAMA_NOCOMPILE= pip install .
+
+This will install the "JIT version" of the package, i.e. it will install the Python components without
+building the C++ extension in the process. Instead, the extension will be built the first time the library is
+used, then cached in `~/.cache/torch_extensions` for subsequent use.
+
+### Method 2: Install from release (with prebuilt extension)
+
+Releases are available [here](https://github.com/turboderp/exllamav2/releases), with prebuilt wheels that
+contain the extension binaries. Make sure to grab the right version, matching your platform, Python version
+(`cp`) and CUDA version. Crucially, you must also match the prebuilt wheel with your PyTorch version, since
+the Torch C++ extension ABI breaks with every new version of PyTorch.
+
+Either download an appropriate wheel or install directly from the appropriate URL:
+
+    
+    
+    pip install https://github.com/turboderp/exllamav2/releases/download/v0.0.12/exllamav2-0.0.12+cu121-cp311-cp311-linux_x86_64.whl
+
+The `py3-none-any.whl` version is the JIT version which will build the extension on first launch. The
+`.tar.gz` file can also be installed this way, and it will build the extension while installing.
+
+### Method 3: Install from PyPI
+
+A PyPI package is available as well. This is the same as the JIT version (see above). It can be installed
+with:
+
+    
+    
+    pip install exllamav2
+
+## EXL2 quantization
+
+ExLlamaV2 supports the same 4-bit GPTQ models as V1, but also a new "EXL2" format. EXL2 is based on the same
+optimization method as GPTQ and supports 2, 3, 4, 5, 6 and 8-bit quantization. The format allows for mixing
+quantization levels within a model to achieve any average bitrate between 2 and 8 bits per weight.
+
+Moreover, it's possible to apply multiple quantization levels to each linear layer, producing something akin
+to sparse quantization wherein more important weights (columns) are quantized with more bits. The same
+remapping trick that lets ExLlama work efficiently with act-order models allows this mixing of formats to
+happen with little to no impact on performance.
+
+Parameter selection is done automatically by quantizing each matrix multiple times, measuring the quantization
+error (with respect to the chosen calibration data) for each of a number of possible settings, per layer.
+Finally, a combination is chosen that minimizes the maximum quantization error over the entire model while
+meeting a target average bitrate.
+
+In my tests, this scheme allows Llama2 70B to run on a single 24 GB GPU with a 2048-token context, producing
+coherent and mostly stable output with 2.55 bits per weight. 13B models run at 2.65 bits within 8 GB of VRAM,
+although currently none of them uses GQA which effectively limits the context size to 2048. In either case
+it's unlikely that the model will fit alongside a desktop environment. For now.
+
+[](/turboderp-org/exllamav2/blob/master/doc/llama2_70b_chat.png) [](/turboderp-
+org/exllamav2/blob/master/doc/codellama_13b_instruct.png)
+
+### Conversion
+
+A script is provided to quantize models. Converting large models can be somewhat slow, so be warned. The
+conversion script and its options are explained in [detail here](/turboderp-
+org/exllamav2/blob/master/doc/convert.md)
+
+### Evaluation
+
+A number of evaluaion scripts are provided. See [here](/turboderp-org/exllamav2/blob/master/doc/eval.md) for
+details.
+
+### Community
+
+A test community is provided at <https://discord.gg/NSFwVuCjRq> Quanting service free of charge is provided at
+#bot test. The computation is generiously provided by the Bloke powered by Lambda labs.
+
+### HuggingFace repos
+
+  * I've uploaded a few EXL2-quantized models to Hugging Face to play around with, [here](https://huggingface.co/turboderp).
+
+  * [LoneStriker](https://huggingface.co/LoneStriker) provides a large number of EXL2 models on Hugging Face.
+
+  * [bartowski](https://huggingface.co/bartowski) has some more EXL2 models on HF.
+
+## About
+
+A fast inference library for running LLMs locally on modern consumer-class GPUs
+
+### Resources
+
+Readme
+
+MIT license
+
+[Activity](/turboderp-org/exllamav2/activity)
+
+[Custom properties](/turboderp-org/exllamav2/custom-properties)
+
+### Stars
+
+**4.6k** stars
+
+### Watchers
+
+**35** watching
+
+### Forks
+
+[**348** forks](/turboderp-org/exllamav2/forks)
+
+[Report repository](/contact/report-content?content_url=https%3A%2F%2Fgithub.com%2Fturboderp-
+org%2Fexllamav2&report=turboderp-org+%28user%29)
+
+## Releases
+
+## Sponsor this project
+
+## Packages
+
+## Used by
+
+## Contributors
+
+## Languages
+
+## Footer
+
+[ ](https://github.com) (C) 2026 GitHub, Inc.
+
+### Footer navigation
+
+  * [Terms](https://docs.github.com/site-policy/github-terms/github-terms-of-service)
+  * [Privacy](https://docs.github.com/site-policy/privacy-policies/github-privacy-statement)
+  * [Security](https://github.com/security)
+  * [Status](https://www.githubstatus.com/)
+  * [Community](https://github.community/)
+  * [Docs](https://docs.github.com/)
+  * [Contact](https://support.github.com?tags=dotcom-footer)
+  * Manage cookies 
+  * Do not share my personal information 
+
+You can’t perform that action at this time.

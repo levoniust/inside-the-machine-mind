@@ -1,0 +1,688 @@
+SOURCE COPY — SRC-TAILSCALE
+Retrieved 2026-10-28 for Inside the Machine Mind (offline reference copy; excerpt of the original, formatting simplified).
+Original URL: https://tailscale.com/kb/1151/what-is-tailscale
+Page/document title: What is Tailscale? · Tailscale Docs
+
+------------------------------------------------------------------------
+
+[See everything you missed at TailscaleUp.Read the recap →](https://tailscale.com/tailscaleup-date-week-26)
+
+  * [Blog](/blog)
+  * [Docs](/docs)
+  * [Download](/download)
+  * [Contact Sales](/contact/sales)
+
+[](/)
+
+  * Platform
+
+Meet Tailscale
+
+    * [How Tailscale Works](/blog/how-tailscale-works)
+    * [WireGuard® for Enterprises](/wireguard-vpn)
+    * [Features](/features)
+    * [Integrations](/integrations)
+    * [Docs](/docs)
+    * [Download](/download)
+    * [Compare Tailscale](/compare)
+
+Products
+
+    * [Business VPN](/use-cases/business-vpn)
+    * [Tailscale PAM](/use-cases/pam)
+    * [CI/CD Connectivity](/use-cases/ci-cd)
+    * [Secure Access to AI](/use-cases/securing-ai)
+    * [Workload Connectivity](/use-cases/workload-connectivity)
+    * [Edge & IoT](/use-cases/edge-iot)
+    * [Homelab](/use-cases/homelab)
+
+[Aperture by TailscaleUnified AI governance for AI agents and users. ](https://tailscale.com/use-
+cases/securing-ai)
+
+Bring Tailscale to work
+
+See how Tailscale fits the systems your team already runs.
+
+[Make the case](https://tailscale.com/bring-tailscale-to-work)
+
+  * Solutions
+
+Solutions
+
+    * [Cloud Connectivity](/use-cases/cloud-connectivity)
+    * [Infrastructure Access](/use-cases/infrastructure-access)
+    * [Zero Trust Networking](/use-cases/zero-trust-networking)
+    * [Remote Access](/use-cases/remote-access)
+    * [Kubernetes Networking](/use-cases/kubernetes)
+    * [Secure SaaS](/use-cases/secure-saas)
+    * [Secure AI Agent Connectivity](/use-cases/secure-ai-agent-connectivity)
+
+  * Customers
+
+Customer Stories
+
+    * [Instacart](/customers/instacart)
+    * [Cribl](/customers/cribl)
+    * [Mercury](/customers/mercury)
+    * [All Customer Stories](/customers)
+
+  * Community
+
+Join the Community
+
+    * [About Community](/about-community)
+    * [Tailscale Insiders](/insiders-program)
+    * [Community Projects](/community/community-projects)
+    * [Bring Tailscale to Work](/bring-tailscale-to-work)
+
+Events
+
+    * [Events](/events)
+    * [Webinars](/webinars)
+    * [TailscaleUp](/tailscaleup)
+
+Learn more
+
+    * [Docs](/docs)
+    * [Blog](/blog)
+    * [Changelog](/changelog)
+    * [Press](/press)
+
+Bring Tailscale to work
+
+Start with your own devices. Bring the same simplicity to your team.
+
+[Make the case](https://tailscale.com/bring-tailscale-to-work)
+
+  * Partnerships
+
+Partner Opportunities
+
+    * [Become a Partner](/partnerships)
+    * [Our Partners](/partnerships/directory)
+    * [Integrations](/integrations)
+    * [Contact Partnerships Team](/contact/partnerships)
+
+  * [Pricing](/pricing)
+
+  * [Login](https://login.tailscale.com/welcome)
+  * [Get started - it’s free!](https://login.tailscale.com/start)
+
+  * [Blog](/blog)
+  * [Docs](/docs)
+  * [Download](/download)
+  * [Contact Sales](/contact/sales)
+
+Platform
+
+Meet Tailscale
+
+  * [How Tailscale Works](/blog/how-tailscale-works)
+  * [WireGuard® for Enterprises](/wireguard-vpn)
+  * [Features](/features)
+  * [Integrations](/integrations)
+  * [Docs](/docs)
+  * [Download](/download)
+  * [Compare Tailscale](/compare)
+
+Products
+
+  * [Business VPN](/use-cases/business-vpn)
+  * [Tailscale PAM](/use-cases/pam)
+  * [CI/CD Connectivity](/use-cases/ci-cd)
+  * [Secure Access to AI](/use-cases/securing-ai)
+  * [Workload Connectivity](/use-cases/workload-connectivity)
+  * [Edge & IoT](/use-cases/edge-iot)
+  * [Homelab](/use-cases/homelab)
+
+Solutions
+
+Solutions
+
+  * [Cloud Connectivity](/use-cases/cloud-connectivity)
+  * [Infrastructure Access](/use-cases/infrastructure-access)
+  * [Zero Trust Networking](/use-cases/zero-trust-networking)
+  * [Remote Access](/use-cases/remote-access)
+  * [Kubernetes Networking](/use-cases/kubernetes)
+  * [Secure SaaS](/use-cases/secure-saas)
+  * [Secure AI Agent Connectivity](/use-cases/secure-ai-agent-connectivity)
+
+Customers
+
+Customer Stories
+
+  * [Instacart](/customers/instacart)
+  * [Cribl](/customers/cribl)
+  * [Mercury](/customers/mercury)
+  * [All Customer Stories](/customers)
+
+Community
+
+Join the Community
+
+  * [About Community](/about-community)
+  * [Tailscale Insiders](/insiders-program)
+  * [Community Projects](/community/community-projects)
+  * [Bring Tailscale to Work](/bring-tailscale-to-work)
+
+Events
+
+  * [Events](/events)
+  * [Webinars](/webinars)
+  * [TailscaleUp](/tailscaleup)
+
+Learn more
+
+  * [Docs](/docs)
+  * [Blog](/blog)
+  * [Changelog](/changelog)
+  * [Press](/press)
+
+Partnerships
+
+Partner Opportunities
+
+  * [Become a Partner](/partnerships)
+  * [Our Partners](/partnerships/directory)
+  * [Integrations](/integrations)
+  * [Contact Partnerships Team](/contact/partnerships)
+
+[Pricing](/pricing)
+
+  * [Login](https://login.tailscale.com/welcome)
+  * [Get started - it’s free!](https://login.tailscale.com/start)
+
+  * Toggle[Start](/docs/install/start)
+[Quickstart](/docs/how-to/quickstart)
+
+    * Toggle[Install Tailscale](/docs/install)
+    * Toggle[Quick guides](/docs/quick-guides)
+[OpenVPN migration guide](/docs/solutions/migrate-openvpn-tailscale)[Legacy VPN migration
+guide](/docs/solutions/migrate-legacy-vpn-tailscale)
+
+    * Toggle[Set up an identity provider](/docs/integrations/identity)
+[What is Tailscale?](/docs/concepts/what-is-tailscale)
+
+  * Toggle[Manage Access](/docs/manage)
+    * Toggle[Manage access control](/docs/features/access-control)
+    * Toggle[Manage just-in-time access](/docs/features/access-control/just-in-time-access)
+    * Toggle[Manage devices](/docs/features/access-control/device-management)
+    * Toggle[Manage users](/docs/manage-users)
+[Tailnet Lock](/docs/features/tailnet-lock)
+
+  * Toggle[Tailscale PAM: Govern Privileged Access](/docs/privileged-access-management)
+[What is Tailscale PAM?](/docs/privileged-access-management/what-is-tailscale-pam)[Architecture and core
+concepts](/docs/privileged-access-management/architecture-and-concepts)[Get started with Tailscale
+PAM](/docs/privileged-access-management/get-started)
+
+    * Toggle[Tailscale PAM connectors](/docs/privileged-access-management/connectors)
+    * Toggle[Tailscale PAM services](/docs/privileged-access-management/services)
+[Use a custom DNS domain](/docs/privileged-access-management/how-to/custom-dns-domain)[Manage PAM resources
+using Terraform](/docs/privileged-access-management/how-to/manage-resources-terraform)[Store session
+recordings in Amazon S3](/docs/privileged-access-management/how-to/session-recordings-s3)[Service
+accounts](/docs/privileged-access-management/service-accounts)[Session logs](/docs/privileged-access-
+management/session-logs)[Control access to services](/docs/privileged-access-management/how-to/control-
+access)[Manage secrets and credentials](/docs/privileged-access-management/how-to/manage-secrets)
+
+    * Toggle[Reference](/docs/privileged-access-management/reference)
+  * Toggle[Aperture: Secure AI](/docs/aperture)
+[What is Aperture?](/docs/aperture/what-is-aperture)[Get started with Aperture](/docs/aperture/get-
+started)[Connect devices outside your tailnet](/docs/aperture/connect-outside-tailnet)
+
+    * Toggle[Set up LLM clients](/docs/aperture/use-your-tools)
+    * Toggle[Set up LLM providers](/docs/aperture/set-up-providers)
+    * Toggle[Connectors](/docs/aperture/connectors)
+    * Toggle[Chat](/docs/aperture/chat)
+[Admin dashboard](/docs/aperture/admin-dashboard)
+
+    * Toggle[Control AI access](/docs/aperture/control-access)
+    * Toggle[Manage AI spending](/docs/aperture/manage-spending)
+    * Toggle[Observe and export AI usage](/docs/aperture/observe-and-export)
+    * Toggle[Privacy and data retention](/docs/aperture/privacy-and-data-retention)
+    * Toggle[Integrate with external tools](/docs/aperture/integrate)
+    * Toggle[Reference](/docs/aperture/reference)
+[Troubleshooting](/docs/aperture/troubleshooting)
+
+  * Toggle[Route Traffic](/docs/route)
+    * Toggle[Set up a subnet router](/docs/features/subnet-routers)
+    * Toggle[Set up an exit node](/docs/features/exit-nodes)
+    * Toggle[Set up an app connector](/docs/features/app-connectors/how-to/setup)
+    * Toggle[Use DNS](/docs/reference/dns-in-tailscale)
+[Set up MagicDNS](/docs/features/magicdns)[Set up high availability](/docs/how-to/set-up-high-
+availability)[Route selection](/docs/features/route-selection)
+
+  * Toggle[Set Up Servers](/docs/servers)
+[Set up a server](/docs/how-to/set-up-servers)[Use tags](/docs/features/tags)[Install Tailscale with cloud-
+init](/docs/install/with-cloud-init)[Use auth keys](/docs/features/access-control/auth-keys)[Automate key
+expiry](/docs/features/access-control/key-expiry)
+
+    * Toggle[Use Tailscale SSH](/docs/features/tailscale-ssh)
+[Set up HTTPS certificates](/docs/how-to/set-up-https-certificates)[Run an ephemeral
+node](/docs/features/ephemeral-nodes)[Run unattended](/docs/how-to/run-unattended)
+
+  * Toggle[Access & Share Services](/docs/share)
+[Tailscale services](/docs/features/tailscale-services)[Endpoint collection](/docs/features/services)[Share
+nodes](/docs/features/sharing)
+
+    * Toggle[Use Taildrop](/docs/features/taildrop)
+  * Toggle[Share a web server](/docs/share-web-server)
+    * Toggle[Tailscale Funnel](/docs/features/tailscale-funnel)
+    * Toggle[Tailscale Serve](/docs/features/tailscale-serve)
+  * Toggle[Solutions](/docs/solutions)
+[Secure traffic with Apple TV](/docs/solutions/secure-traffic-public-wifi-appletv)[Secure GitHub Actions
+runners](/docs/solutions/connect-github-cicd-workflows-to-private-infrastructure-without-public-
+exposure)[Block ads with a Raspberry Pi](/docs/solutions/block-ads-all-devices-anywhere-using-raspberry-
+pi)[Access remote desktops with Windows RDP](/docs/solutions/access-remote-desktops-using-windows-rdp)[Access
+remote desktops with RustDesk](/docs/solutions/access-remote-desktops-with-rustdesk)[Connect to MongoDB
+Atlas](/docs/solutions/create-a-secure-connection-to-mongodb-atlas)[Code from your iPad](/docs/solutions/code-
+on-ipad-vscode-caddy-code-server)[Lock down a server](/docs/how-to/secure-ubuntu-server-with-ufw)[Protect
+production databases](/docs/solutions/protect-postgresql-unencrypted-macbooks)[Access a
+PiKVM](/docs/integrations/pikvm)[Secure external services](/docs/concepts/ip-blocklist-relays)
+
+    * Toggle[Just-in-time access](/docs/features/access-control/just-in-time-access)
+    * Toggle[Automation](/docs/automations)
+[Deploy across clusters with ArgoCD](/docs/solutions/manage-multi-cluster-kubernetes-deployments-argocd)
+
+  * Toggle[Integrations](/docs/integrations)
+    * Toggle[Kubernetes Operator](/docs/kubernetes-operator)
+    * Toggle[Cloud servers](/docs/cloud-server)
+    * Toggle[Containers and virtualization](/docs/containers-and-virtualization)
+    * Toggle[Serverless apps](/docs/integration-serverless-apps)
+    * Toggle[Databases](/docs/database)
+    * Toggle[Remote environments](/docs/remote-code)
+    * Toggle[Developer tools](/docs/integration-dev-tools)
+    * Toggle[Firewalls](/docs/firewall)
+    * Toggle[Web servers](/docs/integrations/web-servers)
+    * Toggle[NAS](/docs/integrations/nas)
+  * [FAQ](/docs/reference/faq)
+  * Toggle[Logging, Streaming, and Events](/docs/reference/logging-streaming-events)
+[Logging overview](/docs/features/logging)[Configuration audit logging](/docs/features/logging/audit-
+logging)[Network flow logs](/docs/features/logging/network-flow-logs)[Log
+streaming](/docs/features/logging/log-streaming)
+
+    * Toggle[SSH session recording](/docs/features/tailscale-ssh/tailscale-ssh-session-recording)
+[Client metrics](/docs/reference/tailscale-client-metrics)[Webhooks](/docs/features/webhooks)
+
+  * Toggle[Manage Your Organization](/docs/account)
+[Contact preferences](/docs/reference/contact-preferences)[Manage billing](/docs/account/billing)[Manage your
+plan](/docs/account/manage-plans)[Tailnet name](/docs/concepts/tailnet-name)
+
+    * Toggle[Domain ownership](/docs/concepts/domain-ownership)
+  * Toggle[Reference](/docs/reference)
+    * Toggle[Tailnet policy file syntax](/docs/reference/syntax/policy-file)
+[ACL examples](/docs/reference/examples/acls)[Grant examples](/docs/reference/examples/grants)
+
+    * Toggle[CLI](/docs/reference/tailscale-cli)
+    * Toggle[API](/docs/reference/tailscale-api)
+[Key prefixes](/docs/reference/key-prefixes)
+
+    * Toggle[Production best practices](/docs/reference/best-practices/production)
+[Shared responsibility](/docs/concepts/shared-responsibility)
+
+    * Toggle[Technical overviews](/docs/concepts)
+[Tailscale identity](/docs/concepts/tailscale-identity)[About WireGuard](/docs/concepts/wireguard)
+
+      * Toggle[Tailscale encryption](/docs/concepts/tailscale-encryption)
+[Control and data planes](/docs/concepts/control-data-planes)[Grants vs. ACLs](/docs/reference/grants-vs-
+acls)[Application capabilities](/docs/features/access-control/grants/grants-app-capabilities)[Direct vs
+relayed connections](/docs/reference/connection-types)[Device connectivity](/docs/reference/device-
+connectivity)[How Tailscale assigns IP addresses](/docs/concepts/ip-and-dns-addresses)[CGNAT
+interoperability](/docs/reference/cgnat-interoperability)[Tailscale and the OSI
+model](/docs/concepts/tailscale-osi)[Smaller binaries for embedded devices](/docs/how-to/set-up-small-
+tailscale)[Kernel vs. netstack subnet routing & exit nodes](/docs/reference/kernel-vs-userspace-
+routers)[Userspace networking mode](/docs/concepts/userspace-networking)[Node keys](/docs/concepts/node-
+keys)[Protect SSH Servers](/docs/reference/ssh-over-tailscale)[Tailnet Lock white
+paper](/docs/concepts/tailnet-lock-whitepaper)[DERP servers](/docs/reference/derp-servers)[Zero Trust
+Networking (ZTN)](/docs/concepts/zero-trust)[IPv4 vs. IPv6 FAQ](/docs/reference/faq/ipv6)[Tailscale ping
+types](/docs/reference/ping-types)
+
+    * Toggle[Terminology and concepts](/docs/reference/glossary)
+[Tailscale messages](/docs/reference/messages)[Debug menu and options](/docs/reference/debug-
+menu)[Interoperability with other software](/docs/reference/interoperability)[GitHub
+↗](https://github.com/tailscale/tailscale)
+
+  * Toggle[Get Support](/docs/support)
+    * Toggle[Troubleshooting](/docs/reference/troubleshooting)
+[Support options](/docs/reference/support-options)[Contact support ↗](/contact/support)[Generate a bug
+report](/docs/account/bug-report)
+
+  * Toggle[Resources](/docs/resources)
+[Changelog ↗](/changelog)[Comparisons ↗](/compare)[Release stages](/docs/reference/tailscale-release-
+stages)[Security ↗](/security)[Tailscale Community Projects](/docs/reference/tailscale-community-projects)
+
+    * Toggle[Versions](/docs/reference/tailscale-client-versions)
+[Use cases](/docs/use-cases)[Invite only features](/docs/reference/invite-only-feature)[Feedback ↗](/feedback)
+
+  1. [Docs](/docs)›
+  2. [Technical overviews](/docs/concepts)›
+  3. What is Tailscale?
+
+### Documentation
+
+Close navigation
+
+  * Toggle[Start](/docs/install/start)
+[Quickstart](/docs/how-to/quickstart)
+
+    * Toggle[Install Tailscale](/docs/install)
+    * Toggle[Quick guides](/docs/quick-guides)
+[OpenVPN migration guide](/docs/solutions/migrate-openvpn-tailscale)[Legacy VPN migration
+guide](/docs/solutions/migrate-legacy-vpn-tailscale)
+
+    * Toggle[Set up an identity provider](/docs/integrations/identity)
+[What is Tailscale?](/docs/concepts/what-is-tailscale)
+
+  * Toggle[Manage Access](/docs/manage)
+    * Toggle[Manage access control](/docs/features/access-control)
+    * Toggle[Manage just-in-time access](/docs/features/access-control/just-in-time-access)
+    * Toggle[Manage devices](/docs/features/access-control/device-management)
+    * Toggle[Manage users](/docs/manage-users)
+[Tailnet Lock](/docs/features/tailnet-lock)
+
+  * Toggle[Tailscale PAM: Govern Privileged Access](/docs/privileged-access-management)
+[What is Tailscale PAM?](/docs/privileged-access-management/what-is-tailscale-pam)[Architecture and core
+concepts](/docs/privileged-access-management/architecture-and-concepts)[Get started with Tailscale
+PAM](/docs/privileged-access-management/get-started)
+
+    * Toggle[Tailscale PAM connectors](/docs/privileged-access-management/connectors)
+    * Toggle[Tailscale PAM services](/docs/privileged-access-management/services)
+[Use a custom DNS domain](/docs/privileged-access-management/how-to/custom-dns-domain)[Manage PAM resources
+using Terraform](/docs/privileged-access-management/how-to/manage-resources-terraform)[Store session
+recordings in Amazon S3](/docs/privileged-access-management/how-to/session-recordings-s3)[Service
+accounts](/docs/privileged-access-management/service-accounts)[Session logs](/docs/privileged-access-
+management/session-logs)[Control access to services](/docs/privileged-access-management/how-to/control-
+access)[Manage secrets and credentials](/docs/privileged-access-management/how-to/manage-secrets)
+
+    * Toggle[Reference](/docs/privileged-access-management/reference)
+  * Toggle[Aperture: Secure AI](/docs/aperture)
+[What is Aperture?](/docs/aperture/what-is-aperture)[Get started with Aperture](/docs/aperture/get-
+started)[Connect devices outside your tailnet](/docs/aperture/connect-outside-tailnet)
+
+    * Toggle[Set up LLM clients](/docs/aperture/use-your-tools)
+    * Toggle[Set up LLM providers](/docs/aperture/set-up-providers)
+    * Toggle[Connectors](/docs/aperture/connectors)
+    * Toggle[Chat](/docs/aperture/chat)
+[Admin dashboard](/docs/aperture/admin-dashboard)
+
+    * Toggle[Control AI access](/docs/aperture/control-access)
+    * Toggle[Manage AI spending](/docs/aperture/manage-spending)
+    * Toggle[Observe and export AI usage](/docs/aperture/observe-and-export)
+    * Toggle[Privacy and data retention](/docs/aperture/privacy-and-data-retention)
+    * Toggle[Integrate with external tools](/docs/aperture/integrate)
+    * Toggle[Reference](/docs/aperture/reference)
+[Troubleshooting](/docs/aperture/troubleshooting)
+
+  * Toggle[Route Traffic](/docs/route)
+    * Toggle[Set up a subnet router](/docs/features/subnet-routers)
+    * Toggle[Set up an exit node](/docs/features/exit-nodes)
+    * Toggle[Set up an app connector](/docs/features/app-connectors/how-to/setup)
+    * Toggle[Use DNS](/docs/reference/dns-in-tailscale)
+[Set up MagicDNS](/docs/features/magicdns)[Set up high availability](/docs/how-to/set-up-high-
+availability)[Route selection](/docs/features/route-selection)
+
+  * Toggle[Set Up Servers](/docs/servers)
+[Set up a server](/docs/how-to/set-up-servers)[Use tags](/docs/features/tags)[Install Tailscale with cloud-
+init](/docs/install/with-cloud-init)[Use auth keys](/docs/features/access-control/auth-keys)[Automate key
+expiry](/docs/features/access-control/key-expiry)
+
+    * Toggle[Use Tailscale SSH](/docs/features/tailscale-ssh)
+[Set up HTTPS certificates](/docs/how-to/set-up-https-certificates)[Run an ephemeral
+node](/docs/features/ephemeral-nodes)[Run unattended](/docs/how-to/run-unattended)
+
+  * Toggle[Access & Share Services](/docs/share)
+[Tailscale services](/docs/features/tailscale-services)[Endpoint collection](/docs/features/services)[Share
+nodes](/docs/features/sharing)
+
+    * Toggle[Use Taildrop](/docs/features/taildrop)
+  * Toggle[Share a web server](/docs/share-web-server)
+    * Toggle[Tailscale Funnel](/docs/features/tailscale-funnel)
+    * Toggle[Tailscale Serve](/docs/features/tailscale-serve)
+  * Toggle[Solutions](/docs/solutions)
+[Secure traffic with Apple TV](/docs/solutions/secure-traffic-public-wifi-appletv)[Secure GitHub Actions
+runners](/docs/solutions/connect-github-cicd-workflows-to-private-infrastructure-without-public-
+exposure)[Block ads with a Raspberry Pi](/docs/solutions/block-ads-all-devices-anywhere-using-raspberry-
+pi)[Access remote desktops with Windows RDP](/docs/solutions/access-remote-desktops-using-windows-rdp)[Access
+remote desktops with RustDesk](/docs/solutions/access-remote-desktops-with-rustdesk)[Connect to MongoDB
+Atlas](/docs/solutions/create-a-secure-connection-to-mongodb-atlas)[Code from your iPad](/docs/solutions/code-
+on-ipad-vscode-caddy-code-server)[Lock down a server](/docs/how-to/secure-ubuntu-server-with-ufw)[Protect
+production databases](/docs/solutions/protect-postgresql-unencrypted-macbooks)[Access a
+PiKVM](/docs/integrations/pikvm)[Secure external services](/docs/concepts/ip-blocklist-relays)
+
+    * Toggle[Just-in-time access](/docs/features/access-control/just-in-time-access)
+    * Toggle[Automation](/docs/automations)
+[Deploy across clusters with ArgoCD](/docs/solutions/manage-multi-cluster-kubernetes-deployments-argocd)
+
+  * Toggle[Integrations](/docs/integrations)
+    * Toggle[Kubernetes Operator](/docs/kubernetes-operator)
+    * Toggle[Cloud servers](/docs/cloud-server)
+    * Toggle[Containers and virtualization](/docs/containers-and-virtualization)
+    * Toggle[Serverless apps](/docs/integration-serverless-apps)
+    * Toggle[Databases](/docs/database)
+    * Toggle[Remote environments](/docs/remote-code)
+    * Toggle[Developer tools](/docs/integration-dev-tools)
+    * Toggle[Firewalls](/docs/firewall)
+    * Toggle[Web servers](/docs/integrations/web-servers)
+    * Toggle[NAS](/docs/integrations/nas)
+  * [FAQ](/docs/reference/faq)
+  * Toggle[Logging, Streaming, and Events](/docs/reference/logging-streaming-events)
+[Logging overview](/docs/features/logging)[Configuration audit logging](/docs/features/logging/audit-
+logging)[Network flow logs](/docs/features/logging/network-flow-logs)[Log
+streaming](/docs/features/logging/log-streaming)
+
+    * Toggle[SSH session recording](/docs/features/tailscale-ssh/tailscale-ssh-session-recording)
+[Client metrics](/docs/reference/tailscale-client-metrics)[Webhooks](/docs/features/webhooks)
+
+  * Toggle[Manage Your Organization](/docs/account)
+[Contact preferences](/docs/reference/contact-preferences)[Manage billing](/docs/account/billing)[Manage your
+plan](/docs/account/manage-plans)[Tailnet name](/docs/concepts/tailnet-name)
+
+    * Toggle[Domain ownership](/docs/concepts/domain-ownership)
+  * Toggle[Reference](/docs/reference)
+    * Toggle[Tailnet policy file syntax](/docs/reference/syntax/policy-file)
+[ACL examples](/docs/reference/examples/acls)[Grant examples](/docs/reference/examples/grants)
+
+    * Toggle[CLI](/docs/reference/tailscale-cli)
+    * Toggle[API](/docs/reference/tailscale-api)
+[Key prefixes](/docs/reference/key-prefixes)
+
+    * Toggle[Production best practices](/docs/reference/best-practices/production)
+[Shared responsibility](/docs/concepts/shared-responsibility)
+
+    * Toggle[Technical overviews](/docs/concepts)
+[Tailscale identity](/docs/concepts/tailscale-identity)[About WireGuard](/docs/concepts/wireguard)
+
+      * Toggle[Tailscale encryption](/docs/concepts/tailscale-encryption)
+[Control and data planes](/docs/concepts/control-data-planes)[Grants vs. ACLs](/docs/reference/grants-vs-
+acls)[Application capabilities](/docs/features/access-control/grants/grants-app-capabilities)[Direct vs
+relayed connections](/docs/reference/connection-types)[Device connectivity](/docs/reference/device-
+connectivity)[How Tailscale assigns IP addresses](/docs/concepts/ip-and-dns-addresses)[CGNAT
+interoperability](/docs/reference/cgnat-interoperability)[Tailscale and the OSI
+model](/docs/concepts/tailscale-osi)[Smaller binaries for embedded devices](/docs/how-to/set-up-small-
+tailscale)[Kernel vs. netstack subnet routing & exit nodes](/docs/reference/kernel-vs-userspace-
+routers)[Userspace networking mode](/docs/concepts/userspace-networking)[Node keys](/docs/concepts/node-
+keys)[Protect SSH Servers](/docs/reference/ssh-over-tailscale)[Tailnet Lock white
+paper](/docs/concepts/tailnet-lock-whitepaper)[DERP servers](/docs/reference/derp-servers)[Zero Trust
+Networking (ZTN)](/docs/concepts/zero-trust)[IPv4 vs. IPv6 FAQ](/docs/reference/faq/ipv6)[Tailscale ping
+types](/docs/reference/ping-types)
+
+    * Toggle[Terminology and concepts](/docs/reference/glossary)
+[Tailscale messages](/docs/reference/messages)[Debug menu and options](/docs/reference/debug-
+menu)[Interoperability with other software](/docs/reference/interoperability)[GitHub
+↗](https://github.com/tailscale/tailscale)
+
+  * Toggle[Get Support](/docs/support)
+    * Toggle[Troubleshooting](/docs/reference/troubleshooting)
+[Support options](/docs/reference/support-options)[Contact support ↗](/contact/support)[Generate a bug
+report](/docs/account/bug-report)
+
+  * Toggle[Resources](/docs/resources)
+[Changelog ↗](/changelog)[Comparisons ↗](/compare)[Release stages](/docs/reference/tailscale-release-
+stages)[Security ↗](/security)[Tailscale Community Projects](/docs/reference/tailscale-community-projects)
+
+    * Toggle[Versions](/docs/reference/tailscale-client-versions)
+[Use cases](/docs/use-cases)[Invite only features](/docs/reference/invite-only-feature)[Feedback ↗](/feedback)
+
+# What is Tailscale?
+
+Last validated: Sep 30, 2025|Copy as Markdown|[View as Markdown](/docs/concepts/what-is-tailscale.md)
+
+Tailscale is a Zero Trust identity-based connectivity platform that replaces your legacy VPN, SASE, and PAM
+and connects remote teams, multi-cloud environments, CI/CD pipelines, Edge & IoT devices, and AI workloads.
+
+Out-of-the-box, Tailscale solves many networking headaches. It has a customizable configuration to meet the
+demands of managing a distributed workforce. Tailscale helps provision for internal self-hosted and external
+third-party applications. It scales for growth as your requirements change.
+
+Tailscale is an ideal solution for [DevOps](/solutions/devops), [IT](/solutions/it), and
+[Security](/solutions/security) teams.
+
+## Technical details
+
+Tailscale is a secure networking solution that streamlines connecting devices and services securely across
+different networks. It enables encrypted point-to-point connections using the open source
+[WireGuard](https://www.wireguard.com) protocol, which means only devices on your private network can
+communicate with each other.
+
+Tailscale creates a peer-to-peer mesh network (known as a tailnet). However, you can still use Tailscale like
+a traditional VPN by routing all traffic through an [exit node](/docs/features/exit-nodes).
+
+Figure 1(a). The central gateway may or may not be close to users, thus resulting in higher latency. Because
+traffic is centralized, it can also act as a bottleneck, slowing down connections further.
+
+Figure 1(b). With Tailscale, each device is connected to the other directly, resulting in lower latency.
+
+The Tailscale approach avoids centralization where possible, resulting in both [higher throughput](/blog/more-
+throughput) and lower latency as network traffic can flow directly between devices. Additionally,
+decentralization improves stability and reliability by reducing single points of failure.
+
+For more information, refer to [how Tailscale works](/blog/how-tailscale-works).
+
+## Benefits
+
+Some key advantages of Tailscale include secure and private connections between devices, a flexible network
+topology, and a streamlined setup. Tailscale is also cross-platform, infrastructure agnostic, and highly
+configurable. It supports the [features](/features) you need and the [integrations](/integrations) that you
+currently use.
+
+For more information, refer to [why Tailscale is right for you](/why-tailscale).
+
+### Streamlined setup
+
+You can deploy a tailnet in minutes without requiring extensive configuration, server setup, and networking
+expertise. After you create an account, authenticating two or more devices automatically creates a tailnet
+with a sensible set of [default access policies](/docs/reference/examples/acls#allow-all-default-acl).
+
+Connections between tailnet devices work seamlessly across firewalls and [Network Address Translation
+(NAT)](/blog/how-nat-traversal-works) without requiring port forwarding or complex firewall rules. This "zero-
+config" approach dramatically reduces the technical barriers to implementing secure networking, making it
+accessible to technical and non-technical users.
+
+### Security and privacy
+
+The [Tailscale security model](/security) is built on modern, proven technologies and best practices such as
+end-to-end [encryption](/docs/concepts/tailscale-encryption) and a [zero-trust
+architecture](/docs/concepts/zero-trust). At its core, Tailscale uses WireGuard, a state-of-the-art VPN
+protocol known for its security and performance. This foundation is enhanced by Tailscale's commitment to
+[compliance](/security#compliance-and-certifications), [security policies](/security-policies), and [security
+features](/security#security-features) such as [access control policies](/docs/features/access-control) and
+[Tailnet Lock](/docs/features/tailnet-lock).
+
+### Scalability and adaptability
+
+Tailscale's flexible architecture is designed to grow seamlessly with your organization's needs. Whether
+you're scaling from a small team to a large enterprise or expanding across multiple geographic locations,
+Tailscale maintains its performance and security characteristics at scale. The distributed nature of its
+architecture means that adding new devices or users doesn't create bottlenecks that typically plague
+traditional VPN solutions.
+
+## Use cases
+
+With its low barrier to getting started, versatility, and powerful capabilities, Tailscale seamlessly scales
+from personal use to enterprise deployments. Developers can use it to share work-in-progress features with
+their team, homelab enthusiasts can use it to [access their media servers remotely](/use-cases/homelab), and
+businesses can use it to [secure their distributed workforce](/use-cases/zero-trust-networking), all without
+the hassle and overhead of traditional infrastructure setup and maintenance.
+
+  * Business Virtual Private Network (VPN): Replace your legacy VPN and enable secure remote access to infrastructure.
+  * Privileged Access Management (PAM): Enable Zero Trust with just-in-time access and robust recording.
+  * Workload connectivity: Connect pipelines, apps, and Kubernetes workloads.
+  * Continuous Integration and Continuous Delivery (or Deployment) (CI/CD): Granular secure access to every runner and workload.
+  * Edge and Internet of Things (IoT): Access, manage, and monitor thousands of devices.
+  * Securing Artificial Intelligence (AI): Unified AI governance for AI agents and users.
+
+For more information, refer to [Tailscale Testimonials](/customers) and [Tailscale Use Cases](/docs/use-
+cases)!
+
+## Get started
+
+Getting started is as simple as creating an account, installing the Tailscale client, and logging into two or
+more devices. Visit the [quickstart guide](/docs/how-to/quickstart) to learn more.
+
+To stay in touch, [sign up for our newsletter](/blog#blog-newsletter).
+
+You can also follow us on [Twitter](https://twitter.com/tailscale),
+[Hachyderm](https://hachyderm.io/@tailscale), and [YouTube](https://www.youtube.com/@Tailscale).
+
+On this page
+
+  * Technical details
+  * Benefits
+    * Streamlined setup
+    * Security and privacy
+    * Scalability and adaptability
+  * Use cases
+  * Get started
+
+Scroll to top
+
+[](/ "Homepage")
+
+### Company
+
+* * *
+
+  * [About Tailscale](/company)
+  * [Careers](/careers)
+  * [Press](/press)
+  * [Open Source](/opensource)
+
+### Help & Support
+
+* * *
+
+  * [Support](/contact/support)
+  * [Sales](/contact/sales)
+  * [Partnerships](/partnerships)
+  * [Security](/security)
+  * [Changelog](/changelog)
+  * [Tailscale Status](https://status.tailscale.com)
+
+### Legal
+
+* * *
+
+  * [Terms of Service](/terms)
+  * [Privacy Policy](/privacy)
+  * [California Notice](/privacy-policy#california-notice)
+  * [Cookie Notice](/cookie-notice)
+  * Your privacy choices
+  * [All Legal](/legal)
+
+### Social
+
+* * *
+
+  * [Discord](https://discord.gg/tailscale)
+  * [GitHub](https://github.com/tailscale)
+  * [LinkedIn](https://www.linkedin.com/company/tailscale)
+  * [Instagram](https://www.instagram.com/tailscale/)
+  * [Reddit](https://www.reddit.com/r/Tailscale)
+  * [YouTube](https://www.youtube.com/@Tailscale)
+  * [X (Twitter)](https://twitter.com/tailscale)
+
+© 2026 Tailscale Inc.
+
+* * *
+
+Tailscale is a registered trademark of Tailscale Inc. | WireGuard is a registered trademark of Jason A. Donenfeld
+

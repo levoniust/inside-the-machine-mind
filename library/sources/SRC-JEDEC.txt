@@ -1,0 +1,218 @@
+SOURCE COPY — SRC-JEDEC
+Retrieved 2026-10-21 for Inside the Machine Mind (offline reference copy; excerpt of the original, formatting simplified).
+Original URL: https://www.jedec.org/news/pressreleases/jedec-publishes-high-bandwidth-memory-3-hbm3-standard
+Page/document title: News | JEDECLogin requiredLogin required
+
+------------------------------------------------------------------------
+
+[Forgot Password](/user/password) | [Site Login](/user/login)
+
+Go to main content Menu
+
+[ ®  ](/ "JEDEC")
+
+Global Standards for the Microelectronics Industry
+
+## Main menu
+
+  * [Standards & Documents  ](/standards-documents)
+    * [Search Standards & Documents](/standards-documents)
+    * [Recently Published Documents](/recently-published)
+    * [Technology Focus Areas  ](/standards-documents/technology-focus-areas)
+      * [Main Memory: DDR SDRAM, HBM](/category/technology-focus-area/main-memory-ddr-sdram)
+      * [Low Power Memory: LPDDR](/category/technology-focus-area/mobile-memory-lpddr-wide-io-memory-mcp)
+      * [Flash Memory: SSDs, UFS, e.MMC, XFMD](/category/technology-focus-area/flash-memory-ssds-ufs-emmc)
+      * [Memory Configurations: JESD21-C](/category/technology-focus-area/memory-configurations-jesd21-c)
+      * [Memory Module Design File Registrations](/category/technology-focus-area/memory-module-design-file-registrations)
+      * [Wide Bandgap Power Semiconductors: GaN, SiC](/category/technology-focus-area/wide-bandgap-power-semiconductors-gan-sic)
+      * [Registered Outlines: JEP95](/category/technology-focus-area/jc-10/registered-outlines-jep95)
+      * [JEP30: Part Model Guidelines](/category/technology-focus-area/jep30)
+      * [ESD: Electrostatic Discharge](/category/technology-focus-area/esd-electrostatic-discharge-0)
+      * [Lead-Free Manufacturing](/category/technology-focus-area/lead-free-manufacturing)
+    * [Type Registration, Data Sheets](/standards-documents/type-registration-data-sheets)
+    * [Order JEDEC Standard Manufacturer's ID Code](/standards-documents/id-codes-order-form)
+    * [Order ID Code for Low Power Memories](/id-codes-low-power-memories)
+    * [Copyright Information](/standards-documents/copyright-information)
+    * [Document Translation](/standards-documents/document-translation)
+    * [About JEDEC Standards](/standards-documents/about-jedec-standards)
+  * [Committees  ](/committees)
+    * [All Committees](/committees)
+    * [JC-11: Mechanical Standardization](/committees/jc-11)
+    * [JC-13: Government Liaison](/committees/jc-13)
+    * [JC-14: Quality and Reliability of Solid State Products](/committees/jc-14)
+    * [JC-15: Thermal Characterization Techniques for Semiconductor Packages](/committees/jc-15)
+    * [JC-16: Interface Technology](/committees/jc-16)
+    * [JC-40: Digital Logic](/committees/jc-40)
+    * [JC-42: Solid State Memories](/committees/jc-42)
+    * [JC-45: DRAM Modules](/committees/jc-45)
+    * [JC-63: Multiple Chip Packages](/committees/jc-63)
+    * [JC-64: Embedded Memory Storage & Removable Memory Cards](/committees/jc-64)
+    * [JC-70: Wide Bandgap Power Electronic Conversion Semiconductors](/committees/jc-70)
+  * [News  ](/news)
+    * [News](/news)
+    * [JEDEC Awards: 2026 Honorees](/news/jedec-awards-2026-honorees)
+    * [JEDEC Awards: Distinguished Members Recognition](/news/jedec-awards-distinguished-members-recognition)
+    * [In Memoriam](/news/memoriam)
+    * [Media Kit](/news/media-kit)
+  * [Events & Meetings  ](/events-meetings)
+    * [All Events & Meetings](/events-meetings)
+    * [JEDEC at SEDEX](/events-meetings/jedec-sedex)
+  * [Join  ](/join-jedec)
+    * [Membership Dues & Details](/join-jedec/membership-dues-details)
+    * [Apply for Membership](/join-jedec)
+    * [Membership Benefits](/join-jedec/membership-benefits)
+  * [About  ](/about-jedec)
+    * [Overview](/about-jedec)
+    * [Member List](/about-jedec/member-list)
+    * [Board of Directors](/about-jedec/board-directors)
+    * [JEDEC History  ](/about-jedec/jedec-history)
+      * [Pre-1960s](/about-jedec/jedec-history/pre-1960s)
+      * [1960s](/about-jedec/jedec-history/1960s)
+      * [1970s](/about-jedec/jedec-history/1970s)
+      * [1980s](/about-jedec/jedec-history/1980s)
+      * [1990s](/about-jedec/jedec-history/1990s)
+      * [2010s](/about-jedec/jedec-history/2010s)
+      * [2000s](/about-jedec/jedec-history/2000s)
+    * [Committee Chairs](/about-jedec/committee-chairs)
+    * [Industry Collaboration](/about/industry-collaboration)
+    * [Policies & Governance](/about-jedec/policies-governance)
+    * [Patent Policy](/about-jedec/patent-policy)
+    * [Contact](/contact)
+    * [Year in Review: 2025](/about/year-review-2025)
+    * [JEDEC Staff](/staff)
+    * [Website Help](/about/website-help)
+  * [ Login required Members Area](https://www.jedec.org/user?intended_url=aHR0cHM6Ly93d3cuamVkZWMub3JnL21lbWJlcnM=)
+
+## Main menu
+
+  * [Standards & Documents  ](/standards-documents)
+    * [Search Standards & Documents](/standards-documents)
+    * [Recently Published Documents](/recently-published)
+    * [Technology Focus Areas  ](/standards-documents/technology-focus-areas)
+      * [Main Memory: DDR SDRAM, HBM](/category/technology-focus-area/main-memory-ddr-sdram)
+      * [Low Power Memory: LPDDR](/category/technology-focus-area/mobile-memory-lpddr-wide-io-memory-mcp)
+      * [Flash Memory: SSDs, UFS, e.MMC, XFMD](/category/technology-focus-area/flash-memory-ssds-ufs-emmc)
+      * [Memory Configurations: JESD21-C](/category/technology-focus-area/memory-configurations-jesd21-c)
+      * [Memory Module Design File Registrations](/category/technology-focus-area/memory-module-design-file-registrations)
+      * [Wide Bandgap Power Semiconductors: GaN, SiC](/category/technology-focus-area/wide-bandgap-power-semiconductors-gan-sic)
+      * [Registered Outlines: JEP95](/category/technology-focus-area/jc-10/registered-outlines-jep95)
+      * [JEP30: Part Model Guidelines](/category/technology-focus-area/jep30)
+      * [ESD: Electrostatic Discharge](/category/technology-focus-area/esd-electrostatic-discharge-0)
+      * [Lead-Free Manufacturing](/category/technology-focus-area/lead-free-manufacturing)
+    * [Type Registration, Data Sheets](/standards-documents/type-registration-data-sheets)
+    * [Order JEDEC Standard Manufacturer's ID Code](/standards-documents/id-codes-order-form)
+    * [Order ID Code for Low Power Memories](/id-codes-low-power-memories)
+    * [Copyright Information](/standards-documents/copyright-information)
+    * [Document Translation](/standards-documents/document-translation)
+    * [About JEDEC Standards](/standards-documents/about-jedec-standards)
+  * [Committees  ](/committees)
+    * [All Committees](/committees)
+    * [JC-11: Mechanical Standardization](/committees/jc-11)
+    * [JC-13: Government Liaison](/committees/jc-13)
+    * [JC-14: Quality and Reliability of Solid State Products](/committees/jc-14)
+    * [JC-15: Thermal Characterization Techniques for Semiconductor Packages](/committees/jc-15)
+    * [JC-16: Interface Technology](/committees/jc-16)
+    * [JC-40: Digital Logic](/committees/jc-40)
+    * [JC-42: Solid State Memories](/committees/jc-42)
+    * [JC-45: DRAM Modules](/committees/jc-45)
+    * [JC-63: Multiple Chip Packages](/committees/jc-63)
+    * [JC-64: Embedded Memory Storage & Removable Memory Cards](/committees/jc-64)
+    * [JC-70: Wide Bandgap Power Electronic Conversion Semiconductors](/committees/jc-70)
+  * [News  ](/news)
+    * [News](/news)
+    * [JEDEC Awards: 2026 Honorees](/news/jedec-awards-2026-honorees)
+    * [JEDEC Awards: Distinguished Members Recognition](/news/jedec-awards-distinguished-members-recognition)
+    * [In Memoriam](/news/memoriam)
+    * [Media Kit](/news/media-kit)
+  * [Events & Meetings  ](/events-meetings)
+    * [All Events & Meetings](/events-meetings)
+    * [JEDEC at SEDEX](/events-meetings/jedec-sedex)
+  * [Join  ](/join-jedec)
+    * [Membership Dues & Details](/join-jedec/membership-dues-details)
+    * [Apply for Membership](/join-jedec)
+    * [Membership Benefits](/join-jedec/membership-benefits)
+  * [About  ](/about-jedec)
+    * [Overview](/about-jedec)
+    * [Member List](/about-jedec/member-list)
+    * [Board of Directors](/about-jedec/board-directors)
+    * [JEDEC History  ](/about-jedec/jedec-history)
+      * [Pre-1960s](/about-jedec/jedec-history/pre-1960s)
+      * [1960s](/about-jedec/jedec-history/1960s)
+      * [1970s](/about-jedec/jedec-history/1970s)
+      * [1980s](/about-jedec/jedec-history/1980s)
+      * [1990s](/about-jedec/jedec-history/1990s)
+      * [2010s](/about-jedec/jedec-history/2010s)
+      * [2000s](/about-jedec/jedec-history/2000s)
+    * [Committee Chairs](/about-jedec/committee-chairs)
+    * [Industry Collaboration](/about/industry-collaboration)
+    * [Policies & Governance](/about-jedec/policies-governance)
+    * [Patent Policy](/about-jedec/patent-policy)
+    * [Contact](/contact)
+    * [Year in Review: 2025](/about/year-review-2025)
+    * [JEDEC Staff](/staff)
+    * [Website Help](/about/website-help)
+  * [ Login required Members Area](https://www.jedec.org/user?intended_url=aHR0cHM6Ly93d3cuamVkZWMub3JnL21lbWJlcnM=)
+
+# News
+
+[JEDEC® Publishes First Industry-Wide Silicon Photonics Reliability Standard for AI, Datacenter and Telecom Infrastructure](/news/pressreleases/jedec%C2%AE-publishes-first-industry-wide-silicon-photonics-reliability-standard-ai) |  Oct 2026   
+---|---  
+[JEDEC® Announces Automotive Electronics Forum in September 2026](/news/pressreleases/jedec%C2%AE-announces-automotive-electronics-forum-september-2026) |  Aug 2026   
+[JEDEC® Chairman Mian Quddus to Receive 2026 FMS Lifetime Achievement Award](/news/pressreleases/jedec%C2%AE-chairman-mian-quddus-receive-2026-fms-lifetime-achievement-award) |  Jul 2026   
+[New JEDEC® SPHBM4 Standard Enables HBM4-Class Bandwidth on Organic Substrates](/news/pressreleases/new-jedec%C2%AE-sphbm4-standard-enables-hbm4-class-bandwidth-organic-substrates) |  Jul 2026   
+[JEDEC® Releases New SiC Guidelines to Improve Reliability and Evaluation in Power Electronics](/news/pressreleases/jedec%C2%AE-releases-new-sic-guidelines-improve-reliability-and-evaluation-power) |  Jun 2026   
+[JEDEC® Advances DDR5 MRDIMM Ecosystem with New Memory Interface Logic and Expanded MRDIMM Roadmap](/news/pressreleases/jedec%C2%AE-advances-ddr5-mrdimm-ecosystem-new-memory-interface-logic-and-expanded) |  Apr 2026   
+[JEDEC® Previews LPDDR6 Roadmap Expanding LPDDR into Data Centers and Processing-in-Memory](/news/pressreleases/jedec%C2%AE-previews-lpddr6-roadmap-expanding-lpddr-data-centers-and-processing-memory) |  Apr 2026   
+[JEDEC® Announces May 2026 Forums Focused on Next Generation Memory for AI, Server, Cloud, and Mobile Computing](/news/pressreleases/jedec%C2%AE-announces-may-2026-forums-focused-next-generation-memory-ai-server-cloud) |  Apr 2026   
+[JEDEC® Releases Updated LPDDR5/5X SPD Standard with Enhanced Mode Switching Support](/news/pressreleases/jedec%C2%AE-releases-updated-lpddr55x-spd-standard-enhanced-mode-switching-support) |  Mar 2026   
+[JEDEC® Announces Updates to Universal Flash Storage (UFS) and Memory Interface Standards ](/news/pressreleases/jedec%C2%AE-announces-updates-universal-flash-storage-ufs-and-memory-interface-0) |  Feb 2026   
+  
+## Pages
+
+  * 1
+  * [2](/news/pressreleases/jedec-publishes-gddr6-standard?page=1 "Go to page 2")
+  * [3](/news/pressreleases/jedec-publishes-gddr6-standard?page=2 "Go to page 3")
+  * …
+  * [next ›](/news/pressreleases/jedec-publishes-gddr6-standard?page=1 "Go to next page")
+  * [last »](/news/pressreleases/jedec-publishes-gddr6-standard?page=20 "Go to last page")
+
+[RSS Feed for JEDEC News »](/news/rss.xml)
+
+## [News](/news)
+
+  * [News](/news)
+  * [JEDEC Awards: 2026 Honorees](/news/jedec-awards-2026-honorees)
+  * [JEDEC Awards: Distinguished Members Recognition](/news/jedec-awards-distinguished-members-recognition)
+  * [In Memoriam](/news/memoriam)
+  * [Media Kit](/news/media-kit)
+
+## Media Inquiries
+
+Please direct all media inquiries to:
+
+**Emily Desjardins**  
+703-907-7560  
+[Email Emily](/contact?category=Emily%20Desjardins,%20Director)
+
+## News RSS Feed
+
+Subscribe to the [JEDEC News and Media Coverage RSS feed](/news/rss.xml) to be notified when new documents are
+uploaded.
+
+  * [News and Media Coverage RSS Feed](/news/rss.xml)
+  * [See all JEDEC RSS Feed Options](/about-jedec/rss-feeds)
+
+  * [Terms & Conditions](/termsofuse)
+  * [Privacy Policy](/privacy)
+  * [Contact Us](/contact)
+  * [Refund Policy](/refund)
+  * [Website Help](/about/website-help)
+  * [Login](/user/login)
+
+Copyright © 2026 JEDEC. All Rights Reserved.
+
+## User login
+
+Username *
+
+Password *

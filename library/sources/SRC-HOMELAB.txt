@@ -1,0 +1,64 @@
+SOURCE COPY — SRC-HOMELAB
+Retrieved 2026-10-25 for Inside the Machine Mind (offline reference copy; summary of the build machine's own measurement logs, anonymized).
+Original URL: (private build logs of the home lab this app was built on)
+Page/document title: Home lab measurements, Sep-Oct 2026
+
+------------------------------------------------------------------------
+
+This app was built on a home lab. Its measurement logs are private (they describe someone's home network), so this
+copy summarizes the numbers the "A real home rig" lesson uses. Names, addresses and hostnames are left out on purpose.
+
+Machines
+- Workstation: two NVIDIA RTX 3090 graphics cards (24 GB each), 256 GB of DDR5 RAM (4 x 64 GB), running a large
+  mixture-of-experts language model at 8-bit (Q8_0) with llama.cpp, most expert weights in system RAM.
+- Small server: one 16 GB graphics card running a 27B-class model at about 55 tokens per second with a 96K-token context.
+
+Tuning (workstation, generation speed in tokens per second, llama.cpp benchmark scripts)
+- Out of the box: 14
+- A few expert layers placed on the GPUs, multi-token-prediction (MTP) draft model for speculative decoding: 20.5
+- RAM speed raised from 4,400 to 5,200 MT/s: 21.7 (measured RAM bandwidth at 4,400 MT/s: about 62 GB/s)
+- Best stable GPU overclock: 21.8 -> 21.9-22.0
+- Undervolt (clock locked at 1,800 MHz with an offset): same speed, about 15 W less per GPU
+
+Incidents
+- 2026-10-14: a GPU stress test with a memory overclock of +3000 hung the card (driver error Xid 119). The stuck test kept
+  the GPU at about 397 W and 83 degrees C (core) for about 10 hours until the heat was noticed and the machine rebooted.
+- 2026-10-15: at stock settings, a stress test pushed one RTX 3090's memory to 104 degrees C within about 2.5 minutes while
+  the core read 75 degrees C. 12 of the card's 24 memory chips are on the back, cooled only by the backplate.
+- 2026-10-18: a tripped breaker reset the BIOS and re-enabled Secure Boot; the unsigned NVIDIA kernel module was refused
+  and the GPUs disappeared until the setting was changed and saved in a BIOS profile (with "restore on AC power loss").
+
+Splitting across two GPUs (small server, 2026-10-22/23; added 2026-10-28 for the "Splitting a model across GPUs" lesson)
+- The small server's 16 GB card plus a second, older 12 GB card were tried together with llama.cpp.
+- A 27B dense model at 4 bits, tensor split across both cards: 39-47 tokens/s writing, 658-807 tokens/s reading.
+  The cards are different generations, so it needed llama.cpp's own all-reduce (NCCL failed) and a smaller batch
+  (-ub 512, the 12 GB card ran out of memory otherwise).
+- A 27B model squeezed to about 2.4 bits on the 16 GB card alone: about 55 tokens/s.
+- A 74B mixture-of-experts model (9B active) with the default layer split, 14.0 GB + 10.4 GB: 52.6 tokens/s.
+
+A notes helper built with RAG (Oct 2026; added 2026-10-28 for the "Build your own notes helper" lesson)
+- Topic: a radio hobby (long-range mesh radios) for a beginner. Collected material: official docs, papers, guides,
+  hardware pages and forum Q&A, cleaned into 1,754 text files in 5 knowledge bases in Open WebUI.
+- Settings: chunks of 1,500 characters with 150 overlapping, split at Markdown headings; a small open embedding model
+  (bge-base-en-v1.5); hybrid search (keywords + meaning); top 10 passages reranked on the CPU to the best 6
+  (bge-reranker-base). The helper answers with numbered sources.
+- First try, a big model on the workstation searching all 5 knowledge bases: 573 seconds for one question.
+- Moved to a 27B model on the small server's 16 GB GPU: about 90 seconds per answer.
+- Test: 25 beginner questions, each with key facts checked by hand against five curated notes; another local model
+  grades how many key facts each answer contains (it is noisy by a few points).
+  - Starting point: score 0.80, median answer 74 s (69 s before the first word appeared).
+  - The five hand-checked notes (~27 KB) put in the helper's instructions: score 0.91, median 65 s. (The questions
+    came from those notes, so this test favours the change.)
+  - About 90% of each answer's time came before the first word: an extra model call to rewrite the question into
+    search queries, the search, reranking on the CPU, and reading ~20,000 tokens of passages. Writing took 5-10 s.
+  - Extra query-writing step turned off, top 5 passages reranked to the best 3: score 0.89 (within the grader's noise),
+    median 20 s, slowest 26 s (was 93 s). Every answer still cited sources.
+
+A phone bridge to the home AI box (Oct 2026; added 2026-10-28 for the "Keeping a home AI server safe" lesson)
+- A small bridge program lets a phone app watch and answer the AI coding agents running on the workstation.
+- It is reachable only on the home network and over a private VPN (Tailscale); no router port is forwarded to it.
+- Every request needs a long random token. The phone pins the bridge's own certificate, so a look-alike server is refused.
+- The phone is paired by scanning a pairing page. A review found the pairing page could be reused for 48 hours; it was
+  changed to work once and expire quickly. The same review found that an old "done" alert could press keys in a newer
+  question from the agent; that was fixed too.
+- The agents run with an allow-list of commands; actions such as publishing or deleting need a person to approve them.

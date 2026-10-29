@@ -1,0 +1,266 @@
+SOURCE COPY — SRC-PCISIG
+Retrieved 2026-10-21 for Inside the Machine Mind (offline reference copy; excerpt of the original, formatting simplified).
+Original URL: https://pcisig.com/blog/50-out-5-stars-pci-sig%C2%AE-member-companies-announce-support-pci-express%C2%AE-50-specification
+Page/document title: 5.0 Out of 5 Stars: PCI-SIG® Member Companies Announce Support for the PCI Express® 5.0 Specification | PCI-SIG
+
+------------------------------------------------------------------------
+
+Skip to main content
+
+[ ](/)
+
+[PCI-SIG](/ "Home")
+
+[](https://www.linkedin.com/company/15437558/)
+
+[](https://twitter.com/pci_sig)
+
+[](https://www.youtube.com/channel/UCPNgzqj-ouRy3r_ml23mscA)
+
+Menu
+
+Search
+
+Search
+
+## Main navigation
+
+  * [ Specifications ](/specifications) Specifications sub-navigation
+    * [ Specification Library ](/specifications)
+    * [ PCI Express® 8.0 Specification ](/specifications/pcier-80-specification-draft-05-now-available-members)
+    * [ PCI Express 7.0 Specification ](/specifications/pcie-70-specification-version-03-now-available-members)
+    * [ PCI Express 6.0 Specification ](/pci-express-6.0-specification)
+    * [ Review Zone ](/specifications/review-zone)
+    * [ Specification Ordering Information ](/specifications/order-form)
+    * [ Fixture Ordering Information ](/specifications/fixture-order-form)
+    * [ FAQ ](/faq)
+  * [ Events ](/events) Events sub-navigation
+    * [ PCI-SIG Developers Conference India® 2026 ](/events/pci-sig-developers-conference-india-2026)
+    * [ PCI-SIG Compliance Workshop #142 ](/events/pci-sig-compliance-workshop-142)
+    * [ PCI-SIG® Developers Conference Asia-Pacific 2026 ](https://pcisig.com/events/pci-sig-developers-conference-asia-pacific-2026)
+    * [ PCI-SIG Developers Conference 2026 ](https://pcisig.com/pci-sig-developers-conference-2026)
+    * [ PCI-SIG Developers Conference Taiwan 2026 ](/events/pci-sig-developers-conference-taiwan-2026)
+    * [ 2026 Sponsorship Opportunities ](/events/2026-sponsorship-opportunities)
+    * [ Training Events Resources ](/events/training-events-resources)
+    * [ Industry Events ](/events/industry-events)
+  * [ Developers ](/developers) Developers sub-navigation
+    * [ Compliance Program ](/developers/compliance-program)
+    * [ Technical Support ](/developers/technical-support)
+    * [ Integrators List ](/developers/integrators-list)
+    * [ Authorized Test Lab Program ](/developers/authorized-test-lab-program)
+  * [ Membership ](/membership) Membership sub-navigation
+    * [ Become a Member ](/membership/become-member)
+    * [ Bylaws & Organizational Documents ](/membership/bylaws-organizational-documents)
+    * [ Board of Directors ](/membership/about-us/board-directors)
+    * [ Member Companies ](/membership/member-companies)
+    * [ Members Log In ](https://members.pcisig.com/site/login)
+    * [ Contact Us ](/membership/contact-us)
+  * [ Resources ](https://pcisig.com/blog) Resources sub-navigation
+    * [ Blog ](/blog)
+    * [ Videos ](/videos)
+    * [ Webinars ](/videos/webinars)
+  * [ Newsroom ](/newsroom) Newsroom sub-navigation
+    * [ In the News ](/newsroom/in-the-news)
+    * [ News Releases ](/newsroom/news-releases)
+    * [ PCI-SIG Chairperson’s Award ](/newsroom/pci-sig-chairperson%E2%80%99s-award)
+    * [ Lifetime Contribution Award ](/newsroom/lifetime-contribution-award)
+
+Search
+
+Search
+
+## Breadcrumb
+
+  1. [Home](/)
+  2. [Lastest Posts](/blog)
+
+#  5.0 Out of 5 Stars: PCI-SIG® Member Companies Announce Support for the PCI Express® 5.0 Specification
+
+Posted on: May 18, 2019
+
+Blog Author
+
+By Al Yanes, PCI-SIG President and Chairman
+
+Systems & Applications
+
+PCI-SIG
+
+PCIe 5.0
+
+PCI Express 5.0
+
+PCI-SIG Membership
+
+I am pleased to announce that [PCI Express® 5.0 specification, Version
+1.0](https://www.businesswire.com/news/home/20190529005766/en/PCI-SIG%C2%AE-Achieves-32GTs-New-PCI-
+Express%C2%AE-5.0)— reaching 32GT/s transfer rates—has been released to our members in less than 2 years. As
+the PCIe® 5.0 specification is set to be another game-changing interconnect technology, now is the right time
+to join PCI-SIG® if you haven’t yet.
+
+PCI-SIG member companies receive exclusive access to PCI-SIG Compliance Workshops and Developers Conferences,
+participation in specification revisions and more. Visit the [PCI-SIG
+website](https://pcisig.com/membership/become-member) to learn more the membership benefits and how your
+company can be one of the first to access new specifications and help build the future of PCI Express
+architecture.
+
+In fact, some member companies are already developing their new PCIe solutions. Each PCI-SIG member company
+utilizes PCIe technology in an innovative way across a range of high performance markets such as artificial
+intelligence, machine learning, automotive, visual computing, storage, networking and more. I invite you to
+learn more about why our member companies are excited about the future of the new PCI Express 5.0
+specification:
+
+**AMD**
+
+“AMD congratulates PCI-SIG on the release of the PCI Express 5.0 specification to the industry and the future
+2x increase in performance it is expected to deliver. We expect to bring our first PCIe 4.0 specification CPUs
+to market this year and look forward to meeting the future bandwidth demands of end-users with PCIe 5.0
+technology.”
+
+_~Gerry Talbot, AMD Corporate Fellow, Technology & Engineering Group, _[_AMD_](https://www.amd.com/en)
+
+**Astera Labs**
+
+“PCI Express technology 5.0 unleashes new data-intensive workloads and heterogeneous compute topologies.
+Astera Labs supports the new PCIe 5.0 specification with purpose-built connectivity solutions that enable
+robust PCIe 4.0 and PCIe 5.0 interconnects between processors, workload accelerators, and storage nodes.”
+
+_~Sanjay Gajendra, Chief Business Officer,_  [_Astera Labs_](http://www.asteralabs.com/)
+
+**Cadence**
+
+“PCI-SIG’s announcement of the PCI Express 5.0 specification is a significant step that addresses the
+increasingly demanding requirements for compute and networking applications. The doubling of bandwidth to
+32GT/s can significantly reduce the I/O bottleneck and bolster overall application performance. As an ongoing
+contributor to the development of the PCI Express specification, Cadence supports this latest release with
+complete, high-quality PHY and controller IP, and verification IP including the TripleCheck verification
+technology. This comprehensive Cadence offering allows customers to get to market faster with a robust, high-
+performance solution while reducing development costs and risk.”
+
+_~Amjad Qureshi, Corporate VP,  R&D in the IP Group at _[_Cadence Design Systems_](https://www.cadence.com/)
+
+**Diodes Incorporated**
+
+“Diodes Incorporated is the leading supplier of PCI Express products including signal conditioning, timing,
+signal and packet switches for over a decade. Huge growth in cloud computing is demanding higher performance
+storage and networking infrastructure, hence driving the need for faster peripheral connectivity. We are
+pleased that the PCI-SIG is releasing PCIe 5.0 specification at 32GT/s to drive faster connectivity.”
+
+_~Kay Annamalai, Senior Director of Marketing,  _[_Diodes Incorporated_](https://www.diodes.com/)
+
+**Epson**
+
+As a world leader in timing products, Epson is proud of its involvement with PCI-SIG in the development of the
+PCI Express 5.0 specification. The evolution of PCIe 5.0 technology to 32GT/s, while maintaining backward
+compatibility, enables customers to drive innovation in 5G, cloud and enterprise datacenter, AI, and other
+data-driven applications.  With low noise products that ease jitter budgets and simplify the design challenge,
+Epson stands ready to help as our customers determine their timing needs in support of this new standard.
+
+_~Daisuke Yamaguchi, Director of Marketing & Sales, Microdevices, _[_Epson America,
+Inc._](https://epson.com/usa)
+
+**Genesis**
+
+“Genesis supports the PCI Express 5.0 specification release by already providing products that double the
+bandwidth to 32GT/s and focusing on the next evolution of products in the greater ECO system of solutions of
+PCIe.”
+
+~_Mick Felton, Director of Engineering,  _[_Genesis Connected Solutions_](http://genesis-connected.com/)
+
+**Intel**
+
+**“** Intel believes that open standards foster platform innovation, create healthy ecosystems, and accelerate
+market growth. As a founding promoter of PCI Express architecture, we fully support the newly-released PCIe
+5.0 specification, and look forward to continuing the PCI Express specification tradition of high-performance,
+multi-platform, open interconnect.”  
+
+_~Dr. Debendra Das Sharma, Intel Fellow and Director of I/O Technology & Standards, Member of PCI-SIG_ _®
+Board of Directors,_ [Intel Corporation](https://www.intel.com/content/www/us/en/homepage.html)
+
+**PLDA**
+
+"With the jump to 32Gbps signaling, the PCI Express 5.0 specification is bringing new levels of performance
+for demanding applications in the HPC, Cloud Computing, AI, and Networking and Storage spaces. PLDA brings 23
+years of expertise in IP design and an extensive catalog of products and services dedicated to PCIe technology
+to shorten and secure our customers' SoC, ASIC and FPGA development cycles. PLDA interface IP for the PCIe 5.0
+specification are available today and are already being integrated into SoCs due for tape-out in early 2020."
+
+~_Stephane Hauradou, CTO,  _[_PLDA_](https://www.plda.com/)
+
+**Mellanox Technologies**
+
+“The exponential growth of data and the ever-increasing demands for higher data center performance, require
+the fastest data speeds between the compute, the interconnect and the storage infrastructures. The combination
+of Mellanox high-speed InfiniBand and Ethernet solutions, and PCI Express 5.0 technology, will empower the
+next generation of high-performance computing, artificial intelligence, cloud, database, storage and other
+applications.”
+
+_~Gilad Shainer, vice president of marketing,  _[_Mellanox Technologies_](https://www.mellanox.com/)
+
+**NVIDIA**
+
+“PCI Express 5.0 technology will advance graphics and high-performance computing by doubling its bandwidth to
+approaching 64GB/s while maintaining socket compatibility with prior versions of the PCIe specification. We
+are proud to be part of the PCI-SIG team and look forward to the innovation that will be sparked by this next
+evolution.”
+
+_~Michael Diamond, senior director of strategic partnerships at NVIDIA and member of the PCI-SIG_ _®  board of
+directors, _[_NVIDIA_](https://www.nvidia.com/en-us/)
+
+**Silicon Labs**
+
+“One of the outstanding features of the PCI Express 5.0 specification that sets it apart from other
+communication standards is the inclusion of the Refclk performance in the specification. By fine tuning
+various system parameters to minimize the amount of reference clock noise that contributes to data
+transmission eye closure, PCI-SIG has been able to retain lower cost reference clock technology than competing
+standards at similar data rates.  In addition, because PCI-SIG specifies the reference clock performance as
+part of the standard, companies like Silicon Labs which supply PCI Express technology reference clocks for a
+variety of applications, can further reduce cost by consolidating volume across multiple customers even though
+they use PCIe transceivers from different vendors.”
+
+_~__Greg Richmond, Director of Engineering for Silicon Labs and contributing member of the PCI-SIG®
+Electrical Working Group, _[_Silicon Labs_](https://www.silabs.com/)
+
+**Synopsys**
+
+“As an active member of the PCI-SIG for more than a decade, Synopsys has been heavily involved with helping to
+define the PCI Express 5.0 specification. By providing a complete DesignWare Controller, PHY, and Verification
+IP solution for PCIe 5.0 to the market early, we have already enabled many customers to successfully tape out
+their advanced 32 GT/s SoCs, with many more expected this year.”
+
+_~John Koeter, vice president of marketing for IP,  _[_Synopsys_](https://www.synopsys.com/)
+
+**Tektronix**
+
+“Tektronix is excited about the role of PCI Express 5.0 technology in enabling the next generation of
+datacenters. The doubling of bandwidth to 32GT/s is core to solving datacenter performance and latency
+challenges enabling maximum throughput from the Ethernet links running at 400Gbps and beyond. As the industry
+migrates to PCIe 5.0 architecture, prior generations of PCIe architecture must be tested to maintaining
+backwards compatibility. It is critical that electrical physical layer testing is performed by a single test
+platform approved by the PCI-SIG for multiple generations. Tektronix is looking forward to partnering with
+customers to bring PCIe 5.0 solutions to market with a single approved hardware test platform that scales
+across all generations of PCIe technology.”
+
+_~Amy Taylor, General Manager, Wired Communications & Mil/Gov, _[_Tektronix_](https://www.tek.com/pci-express)
+
+**Teledyne LeCroy**
+
+“Teledyne LeCroy is fully supportive of the PCI Express 5.0 specification and is proud to supply tomorrow's
+tools today that will expedite product development utilizing the new speed of 32 GT/s. Teledyne LeCroy is
+driving new technologies with its test equipment and customer supportive solutions like our currently
+available PCIe 5.0 Summit M5x Protocol Analyzer.”
+
+_~Joe Mendolia, Vice President of Marketing, Protocol Solutions Group,  _[_Teledyne
+LeCroy_](https://teledynelecroy.com/)  
+
+
+For more information about PCI Express 5.0 specification, read the [full press
+release.](https://www.businesswire.com/news/home/20190529005766/en/PCI-SIG%C2%AE-Achieves-32GTs-New-PCI-
+Express%C2%AE-5.0)
+
+## Footer
+
+  * [Privacy Policy](/pci-sig-online-privacy-policy)
+  * [Contact Us](/membership/contact-us)
+
+Copyright (C) 2026 PCI-SIG. All rights reserved.

@@ -1,0 +1,125 @@
+SOURCE COPY — SRC-AWS-NOVA
+Retrieved 2026-10-26 for Inside the Machine Mind (offline reference copy; excerpt of the original, formatting simplified).
+Original URL: https://aws.amazon.com/nova/models/
+Page/document title: Amazon Nova foundation models - AWS
+
+------------------------------------------------------------------------
+
+ Generative foundation model – Amazon Nova foundation models – AWS Skip to main content Filter: All English Contact 
+us AWS Marketplace Support My account re:Invent Discover AWS Products Solutions Pricing Resources Search Filter: All 
+Sign in to console Create account Explore topics re:Invent 2026 The sessions are set and your seat is waiting. Register 
+now Build & Deploy AI Agents 88% of agent pilots stall. Learn what the rest do differently Get started Sign up free, 
+connect your coding agent, and start building Data for agentic AI The 7 essential data capabilities to scale agentic AI 
+Analyst Report AWS named a Leader in the 2026 Gartner Magic Quadrant for SCPS AI for Small Businesses Solutions 
+designed for your business. Delivered by AWS Partners News & announcements AWS blog About AWS AWS is the world's most 
+comprehensive cloud, enabling organizations to accelerate innovation, reduce costs, and scale more efficiently Why AWS 
+Getting Started Security Compliance Trust Center Sustainability Global Infrastructure Careers Featured Products 
+Analytics Application Integration Artificial Intelligence Business Applications Compute Customer Experience Databases 
+Developer Tools End User Computing Game Tech Management Tools Media Services Migration & Modernization Multicloud & 
+Hybrid Networking & Content Delivery Operations Security & Identity Storage Supply Chain Browse all products 
+Transformation Hubs Migrate to modernize → Modernize to unlock data → unlock data to run AI Migrate & Modernize 
+Clear technical debt, modernize infrastructure, and move to the cloud Data & Analytics Future proof your data 
+foundation for agentic AI Artificial Intelligence Get production-ready AI that automates, builds, creates, decides, and 
+engages at scale Featured Products Get started with one of these featured services or browse all Browse all products 
+Amazon Quick AI-powered assistant for work with research, business insights, automation, and no-code app building 
+Transform Eliminate tech debt with agentic AI to modernize legacy systems and code Aurora Serverless relational 
+database service for PostgreSQL, MySQL, and DSQL Amazon Bedrock The end-to-end platform for building generative AI 
+applications and agents Amazon Connect Customer AI-native solution for delivering exceptional experiences across 
+customer interactions EC2 Secure and resizable compute capacity for virtually any workload What’s new Explore new 
+capabilities and the latest technologies Customer success stories Learn how customers around the world accelerate their 
+cloud Featured By industry By organization type Solutions Library Solutions for any organization From startups to 
+enterprises, find AWS solutions scaled to your needs. Access tailored resources, pricing models, and support levels. 
+Analytics Solutions Discover curated Solutions that address varied analytics use cases AI Solutions Discover curated 
+Solutions that address varied artificial intelligence use cases Migration & Modernization Solutions Discover curated 
+Solutions that address varied migration and modernization use cases What's new Explore new capabilities and the latest 
+technologies Customer success stories Learn how customers around the world accelerate their cloud Pricing overview & 
+tools AWS Pricing Learn about pricing and plans in one place AWS Pricing Calculator Estimate the cost for your 
+architecture solution AWS Free Tier Get free, hands-on experience with AWS products and services AWS Offers Explore 
+different offer programs to gain hands-on experience AWS Savings Plans Flexible pricing model offering lower prices 
+Single-product pricing Amazon S3 Amazon Bedrock Amazon RDS Amazon EC2 Amazon SageMaker Browse all product pricing Learn 
+Documentation Get detailed technical guides and references for all AWS services and tools Training & Certification 
+Build and validate your AWS cloud skills and technical expertise Cloud term glossary Learn more about key cloud 
+computing concepts Whitepapers Expand your knowledge of the cloud with expert guides and diagrams Cloud fundamentals 
+Step-by-step instructions for common AWS tasks Tutorials Get started with step-by-step instructions Connect & Support 
+Builder Center Learn, build, and connect with builders in the AWS community Events and webinars Connect, collaborate, 
+and learn from AWS experts in the cloud computing community Partner Network Collaborate with AWS partners to grow your 
+business Marketplace Find, test, buy, and deploy third-party software Support Access proactive guidance, issue 
+resolution, and helpful tools Professional services Accelerate business transformation with expert guidance and 
+packaged solutions Amazon Nova Overview Nova Act Nova Forge Nova Models Pricing Customers Generative AI Amazon Nova 
+Nova Models Amazon Nova Foundation Models Cost-effective, customizable, and trusted models for enterprise AI User Guide 
+for Amazon Nova Build with Amazon Nova Latest news and updates on Amazon Nova About Amazon Nova Amazon Nova foundation 
+models help enterprises move AI from pilot to production at scale, with confidence, and at a fraction of the cost. 
+Whether you're automating document processing, analyzing multimodal media, building voice AI applications, or running 
+everyday AI workloads, Nova gives you the capabilities to make production AI viable, so you don't have to choose 
+between performance, cost, and trust. Play Build for Enterprise AI Cost-Effective Delivers strong performance across a 
+broad range of enterprise workloads while keeping costs low and token efficiency high, enabling scalable deployment. 
+Customizable Shape intelligence that understands your business with the most comprehensive suite of customization 
+capabilities for any proprietary model. Enterprise-Grade Trust Built with principles of Amazon's Frontier Model Safety 
+Framework, with uncapped indemnity and comprehensive content moderation controls. Meet Nova 2 models Models designed to 
+power your diverse AI use cases Nova accelerates AI innovation across modalities and capabilities, including text, 
+image, video, speech, and agentic AI Nova 2 Lite Nova 2.5 Sonic Nova Multimodal Embeddings Nova 2 Lite Amazon Nova 2 
+Lite is a fast, cost-effective reasoning model for most everyday tasks. It offers developer controls for thinking 
+effort, built-in tools such as code interpreter and web grounding, remote MCP tool support, and a 1M-token context 
+window. You can use the model for everyday AI workloads such as customer service chatbots, document processing, and 
+business automation. Nova 2 Lite is also the best model to use with Nova Forge to build your own frontier intelligence 
+for the most complex tasks. Play Nova 2.5 Sonic Amazon Nova 2.5 Sonic is our speech-to-speech model for building voice 
+agents that engage in natural, real-time conversations. With improved reasoning, instruction following, and 
+tool-calling accuracy, the model helps voice agents follow multi-step instructions and use connected tools to complete 
+customer tasks. Lower latency enables faster, more natural interactions. The model unifies speech understanding and 
+generation, offering best-in-class streaming speech understanding and efficient dialog handling. It supports seven 
+languages, polyglot voices, cross-modal interaction for seamless switching between voice and text within a session, 
+asynchronous tool use, and a context window of up to 1M tokens. You can use Nova 2.5 Sonic to build voice agents for 
+customer support, interactive learning, and voice-enabled personal assistants. Play Nova Multimodal Embeddings Amazon 
+Nova Multimodal Embeddings is a state-of-the-art embedding model designed to power agentic RAG and semantic search. It 
+is the first unified embedding model that maps diverse content types (text, documents, images, video, and audio) into a 
+unified space with leading accuracy. Organizations can unlock the value of their unstructured data by replacing 
+multiple specialized models with a single unified solution to power seamless search and retrieval across content types. 
+Play Benefits Enable fast, responsive experiences Nova 2 models offer low latency and high throughput, making them 
+ideal for applications requiring rapid responses, such as real-time text generation, web search, and interactive 
+conversational agents. Optimize inference with thinking controls and built-in tools Nova 2 provides flexible thinking 
+controls (on/off, low, medium, high), allowing developers to optimize for performance, cost, and speed tradeoffs. 
+Built-in tools (Web Grounding and Code Interpreter) enable grounded responses and executable workflows. Customize for 
+your business needs Nova 2 Lite offers the most comprehensive suite of customization capabilities for any proprietary 
+model. These capabilities are available through Amazon Bedrock and Amazon SageMaker AI across the model training 
+lifecycle, including pre-training, supervised fine-tuning (SFT), and reinforcement fine-tuning (RFT). Nova 2 Lite can 
+also be used to build your own frontier model through Amazon Nova Forge. Deploy custom Nova models on Amazon SageMaker 
+AI Custom Nova models built using Amazon SageMaker AI can be deployed to use SageMaker Inference for optimal inference 
+performance and cost. This offers flexibility over instance types, auto-scaling policies, and concurrency settings, 
+enabling control over inference price-performance for full-rank customized Nova models. Customize content moderation 
+settings Amazon Nova supports custom content moderation settings for customers with approved business use cases. You 
+can adjust safeguards relevant to your business requirements across safety, sensitive content, fairness, and security, 
+so your applications can process the content your use case requires, including cybersecurity, media analysis, and 
+evidence review. In all cases, Amazon Nova enforces essential, non-configurable controls, such as controls to prevent 
+harm to children and preserve privacy. Over 50,000 customers use Amazon Nova models Trellix automates threat 
+investigation with Nova 2 Play Sumo Logic uses Nova 2 to accelerate SecOps Play Siemens uses Nova 2 for enterprise 
+search Play Our Webex AI Agent platform helps customers build voice agents that deliver helpful, responsive service. 
+With the addition of Amazon Nova 2.5 Sonic, which combines strong reasoning and accurate tool calling with 
+natural-sounding, low-latency speech, our customers can have more options to build better voice agents. Chang Chang 
+Head of Product, Webex CX Cloud Nova 2 is a powerful and efficient model for building AI agents with advanced reasoning 
+and tool-use capabilities. Together with LangSmith’s observability, evaluation, and deployment workflows, developers 
+can build, test, and ship reliable agents quickly. We’re looking forward to seeing how developers use Nova in more 
+complex, real-world agentic systems. Harrison Chase Co-founder and CEO, LangChain Amazon Nova empowers us to rapidly 
+scale our content across multiple languages, significantly streamlining our editorial workflows. Alexander Krey Head of 
+Product, DFL Digital Sports With Amazon Nova 2 Lite on Amazon Bedrock, we can cover every shot, every player, every 
+hole, every week at a cost that makes it viable to run continuously and build on top of. Trey Pezzetti AI Product 
+Manager, PGA TOUR AWS Transform is a multi-agent, multi-user system that uses dozens of tools to modernize complex 
+infrastructure systems and codebases. We break down each user request into a number of agent and tool calls that are 
+routed to a mixture of models to balance cost, speed, and accuracy. Our evaluations show Nova 2 Lite improves tool 
+calling efficiency for code modernization in AWS Transform by up to 60%. We are excited that AWS Transform will use 
+Amazon Nova 2 Lite for code modernization workloads. Asa Kalavade VP of AWS Transform 1 / 5 High-impact use cases for 
+Amazon Nova Generate code for software development Watch the video Empower knowledge workers with deep research and 
+automated report synthesis Watch the video Build web apps in minutes with agentic coding Watch the demo Create an 
+intelligent and automated content moderation system Read the blog Transform customer service with real-time call center 
+interactions Watch the video Get started with Amazon Nova Resources Code examples to get started Learn more Resources 
+Customizing Amazon Nova models Learn more Resources Building AI agents with Amazon Nova Lean more Resources Using the 
+Amazon Nova Sonic speech-to-speech model Lean more Did you find what you were looking for today? Let us know so we can 
+improve the quality of the content on our pages Yes No Create an AWS account Learn What Is AWS? What Is Cloud 
+Computing? What Is Agentic AI? Cloud Computing Concepts Hub AWS Cloud Security What's New Blogs Press Releases Careers 
+Resources Getting Started Training AWS Trust Center AWS Solutions Library Architecture Center Product and Technical 
+FAQs Analyst Reports AWS Partners Developers Builder Center SDKs & Tools .NET on AWS Python on AWS Java on AWS PHP on 
+AWS JavaScript on AWS Help Contact Us File a Support Ticket AWS re:Post Knowledge Center AWS Support Overview AWS 
+Accessibility Legal Event Code of Conduct Event Terms & Conditions English Back to top Amazon is an equal opportunity 
+employer and does not discriminate on the basis of protected veteran status, disability or other legally protected 
+status. Veterans, military spouses, and people with disabilities are encouraged to apply. x facebook linkedin instagram 
+twitch youtube podcasts email Privacy Site terms Your Privacy Choices California Consumer Privacy Act (CCPA) Opt-Out 
+Icon Cookie Preferences © 2026, Amazon Web Services, Inc. or its affiliates. All rights reserved.

@@ -1,0 +1,51 @@
+SOURCE COPY — SRC-LMSTUDIO
+Retrieved 2026-10-25 for Inside the Machine Mind (offline reference copy; excerpt of the original, formatting simplified).
+Original URL: https://lmstudio.ai/
+Page/document title: LM Studio website and docs
+
+------------------------------------------------------------------------
+
+ LM Studio Bionic - Agent for Work and Code LM Studio Models Resources Docs Docs Careers Blog Changelog Developers Pricing Create account Download Download Login The agent for your computer Bionic is LM Studio's agent for open models. Natively local. Built for creativity, work, and code. Copy download link Download LM Studio Bionic ( x64 ) Agentic power. At your fingertips. An agent for work and code. Work with Bionic to create and edit documents. Every change is automatically saved, so you can work with your agent freely. Bionic also excels at coding tasks, automations, and computer control. Ask it for help with anything you need done. Real-time voice transcription. Talk to Bionic naturally, and your speech gets transcribed in real time. Your voice and audio data is processed locally and never leaves your device. Supports multiple languages. Natively local. Download the latest local LLMs directly within the app and use them for simple chats or advanced agentic tasks. Powered by the LM Studio runtime, with MLX and llama.cpp under the hood. Explore the open frontiers. For your most demanding tasks, run Bionic with the latest frontier open models such as GLM 5.2, Kimi K3, and DeepSeek V4 Pro. Privacy is key to the LM Studio ethos. Our cloud services are Zero Data Retention (ZDR) across the board. Get it done with Bionic. Download LM Studio Bionic ( x64 ) Create account Explore the Bionic docs LM Studio Product Download the app Models LM Link LM Studio Hub Beta Releases Changelog Developer Developer Docs lmstudio-js lmstudio-python LM Studio CLI (lms) llms.txt Company Careers We're Hiring! Blog RSS feed Enterprise Solutions Brand Guidelines Legal Terms Privacy Element Labs, Inc. © 2026 LinkedIn GitHub Discord Twitter / X 
+
+ Welcome to LM Studio Docs! | LM Studio LM Studio LM Studio Search ⌘ K LM Studio Welcome to LM Studio Docs! Offline Operation System Requirements Getting Started Get started with LM Studio Manage chats Download an LLM LM Studio, llmster, and lms Chat with Documents MCP Use MCP Servers Add to LM Studio Button model.yaml Introduction to model.yaml Publish a model.yaml Presets Config Presets Importing and Sharing Publish Your Presets Pull Updates Push New Revisions Advanced Import Models Parallel Requests Per-model Defaults Prompt Template Speculative Decoding User Interface LM Studio in your language User or Developer Color Themes Welcome to LM Studio Docs! Welcome to LM Studio Docs! Learn how to run Llama, DeepSeek, Qwen, Phi, and other LLMs locally with LM Studio. Copy Markdown Open Ask Bionic to read this page Copy this prompt, open Bionic, and paste it into a new chat. Read https://lmstudio.ai/docs/app, I want to ask questions about it. Copy prompt Explore the docs 
+ Bionic Learn how to use LM Studio Bionic. Developer Build with LM Studio's local REST API, OpenAI-compatible APIs, and developer tooling. Python SDK Use lmstudio-python to load models, generate text, embed content, and build agents. TypeScript SDK Use lmstudio-js in Node.js or TypeScript apps for local model workflows and plugins. CLI Use lms for chat, model downloads, daemon management, server control, and publishing. Integrations Connect LM Studio to Codex, Claude Code, OpenClaw, MCP tools, and remote workflows. LM Link Set up LM Link to route local AI workloads across devices and preferred machines. 
+ To get LM Studio, head over to the Downloads page and download an installer for your operating system. 
+ LM Studio is available for macOS, Windows, and Linux. 
+ What can I do with LM Studio? 
+ 
+ Download and run local LLMs like gpt-oss or Llama, Qwen 
+ Use a simple and flexible chat interface 
+ Connect MCP servers and use them with local models 
+ Search & download functionality (via Hugging Face 🤗) 
+ Serve local models on OpenAI-like endpoints, locally and on the network 
+ Manage your local models, prompts, and configurations 
+ 
+ System requirements 
+ LM Studio generally supports Apple Silicon Macs, x64/ARM64 Windows PCs, and x64 Linux PCs. 
+ Consult the System Requirements page for more detailed information. 
+ Run llama.cpp (GGUF) or MLX models 
+ LM Studio supports running LLMs on Mac, Windows, and Linux using llama.cpp . 
+ On Apple Silicon Macs, LM Studio also supports running LLMs using Apple's MLX . 
+ To install or manage LM Runtimes, press ⌘ Shift R on Mac or Ctrl Shift R on Windows/Linux. 
+ LM Studio as an MCP client 
+ You can install MCP servers in LM Studio and use them with your local models. 
+ See the docs for more: Use MCP server . 
+ If you're develping an MCP server, check out Add to LM Studio Button . 
+ Run an LLM like gpt-oss , Llama , Qwen , Mistral , or DeepSeek R1 on your computer 
+ To run an LLM on your computer you first need to download the model weights. 
+ You can do this right within LM Studio! See Download an LLM for guidance. 
+ Chat with documents entirely offline on your computer 
+ You can attach documents to your chat messages and interact with them entirely offline, also known as "RAG". 
+ Read more about how to use this feature in the Chat with Documents guide. 
+ Run LM Studio without the GUI (llmster) 
+ llmster is the headless version of LM Studio, no desktop app required. It's ideal for servers, CI environments, or any machine where you don't need a GUI. 
+ Learn more: Headless Mode . 
+ Use LM Studio's API from your own apps and scripts 
+ LM Studio provides a REST API that you can use to interact with your local models from your own apps and scripts. 
+ 
+ OpenAI Compatibility API 
+ LM Studio REST API (beta) 
+ 
+ 
+ Community 
+ Join the LM Studio community on Discord to ask questions, share knowledge, and get help from other users and the LM Studio team. Offline Operation LM Studio can operate entirely offline, just make sure to get some model files first. On this page Explore the docs What can I do with LM Studio? System requirements Run llama.cpp (GGUF) or MLX models LM Studio as an MCP client Run an LLM like gpt-oss, Llama, Qwen, Mistral, or DeepSeek R1 on your computer Chat with documents entirely offline on your computer Run LM Studio without the GUI (llmster) Use LM Studio's API from your own apps and scripts Community

@@ -1,0 +1,2085 @@
+SOURCE COPY — SRC-GRAPHCAST
+Retrieved 2026-10-21 for Inside the Machine Mind (offline reference copy; excerpt of the original, formatting simplified).
+Original URL: https://www.science.org/doi/10.1126/science.adi2336
+Retrieved via proxy: Wayback Machine snapshot https://web.archive.org/web/20231114151313id_/https://www.science.org/doi/10.1126/science.adi2336 (original host returns 403 to direct fetch); text-based copy
+Page/document title: Learning skillful medium-range global weather forecasting | Science
+
+------------------------------------------------------------------------
+
+Advertisement
+
+  * __
+  * [news](/news)
+  * [careers](/careers)
+  * [commentary](/commentary)
+  * [ Journals __](/journals)
+
+[ ](/)
+
+  *   * __
+  * [Log in ](/action/ssostart?redirectUri=%2Fdoi%2F10.1126%2Fscience.adi2336)
+
+  * [Become A Member](/action/clickThrough?id=501020&url=https%3A%2F%2Fpromo.aaas.org%2Fscience%2Fjoin%2F%3FCTC%3DSMHPJN&loc=%2Fdoi%2F10.1126%2Fscience.adi2336&pubId=42014839&placeholderId=501020&productId=501021)
+
+[science](/journal/science "Science")
+
+[science advances](/journal/sciadv "Science")
+
+[science immunology](/journal/sciimmunol "Science")
+
+[science robotics](/journal/scirobotics "Science")
+
+[science signaling](/journal/signaling "Science")
+
+[science translational medicine](/journal/stm "Science")
+
+[science partner journals](https://spj.science.org/ "Science Partner Journals")
+
+Quick Search anywhere
+
+Enter Search Term
+
+Quick Search in Journals
+
+Enter Search Term
+
+Quick Search in Journals
+
+Enter Search Term
+
+Quick Search in Journals
+
+Enter Search Term
+
+Quick Search in Journals
+
+Enter Search Term
+
+Quick Search in Journals
+
+Enter Search Term
+
+Quick Search in Journals
+
+Enter Search Term
+
+Searching:
+
+Anywhere
+
+AnywhereScienceScience AdvancesScience ImmunologyScience RoboticsScience SignalingScience Translational
+Medicine
+
+[_Advanced Search_](/search/advanced) Search __
+
+###### Trending Terms:
+
+  * [cancer](/action/doSearch?AllField=cancer)
+  * [climate](/action/doSearch?AllField=climate)
+  * [artificial intelligence](/action/doSearch?AllField=artificial intelligence)
+  * [postdoc](/action/doSearch?AllField=postdoc)
+  * [aging](/action/doSearch?AllField=aging)
+
+[Log In](/action/ssostart?redirectUri=/doi/10.1126/science.adi2336)
+
+[Become A
+Member](/action/clickThrough?id=501021&url=https%3A%2F%2Fpromo.aaas.org%2Fscience%2Fjoin%2F%3FCTC%3DSMLDJN&loc=%2Fdoi%2F10.1126%2Fscience.adi2336&pubId=42014839&placeholderId=501021&productId=501021)
+
+Quick Search anywhere
+
+Enter Search Term
+
+ __
+
+[science.org](/)
+
+  * [Custom publishing](/custom-publishing)
+  * [newsletters](/topic/article-type/scienceadviser?intcmp=menu-adviserfeed&utm_id=recI11u4srAIiGNLZ)
+  * [collections](/collections)
+  * [videos](/videos)
+  * [podcasts](/podcasts)
+  * [blogs](/blogs)
+  * [visualizations](/content/page/visualizations)
+  * [prizes and awards](/content/page/prizes-and-awards)
+
+  * [authors & reviewers](/content/page/contributing-science-family-journals)
+  * [librarians](/content/page/librarian-portal)
+  * [advertisers](https://advertising.sciencemag.org/)
+  * [about](/content/page/aboutus)
+  * [help](/content/page/help)
+
+  * [ __](https://www.facebook.com/ScienceMagazine "Facebook")
+  * [ __](https://twitter.com/sciencemagazine "Twitter")
+  * [ __](https://www.instagram.com/ScienceMagazine "Instagram")
+  * [ __](https://www.youtube.com/user/ScienceMag "YouTube")
+  * [ __](/content/page/email-alerts-and-rss-feeds "RSS feeds")
+  * [ __](https://mp.weixin.qq.com/s?__biz=MzI3NDY3NzQ2Mg==&mid=100002815&idx=1&sn=2949c025a553ac718b9612a0473b9f60&chksm=6b1120465c66a9508b01eaef1589b15d440e50b189106c8c594de8c6471f696a978de952fb15&mpshare=1&scene=1&srcid=0716JJQ5V4cKbgMMsya2MQ0n&sharer_sharetime= "WeChat")
+
+  * [Terms of Service](/content/page/terms-service)
+  * [Privacy Policy](/content/page/privacy-policy)
+  * [Accessibility](/content/page/accessibility)
+
+__
+
+[ ](/journal/science)
+
+  * [Current Issue](/toc/science/current)
+  * [First release papers](/toc/science/0/0)
+  * [Archive](/loi/science)
+  * About
+
+[About Science](/content/page/about-science-aaas) [Mission & Scope](/content/page/mission-and-scope) [Editors
+& Advisory Boards](/content/page/editors-and-advisory-boards) [Editorial Policies](/content/page/science-
+journals-editorial-policies) [Information for Authors](/content/page/science-information-authors) [Information
+for Reviewers](/content/page/peer-review-science-publications) [Journal Metrics](/content/page/journal-
+metrics-overview) [Staff](/content/page/team-members) [Contact Us](/content/page/contact-us) [TOC Alerts and
+RSS Feeds](/content/page/email-alerts-and-rss-feeds)
+
+  * [Submit manuscript](https://cts.sciencemag.org/)
+  * [More](About)
+
+[GET OUR E-ALERTS](/action/showPreferences?menuTab=Alerts)
+
+[Home](https://www.science.org/ "Home") __[Science](/journal/science "Science") __[First
+Release](/toc/science/0/0 "First Release") __Learning skillful medium-range global weather forecasting
+
+ __[Back To First Release](/toc/science/0/0 "Back To First Release")
+
+__Free access
+
+Research Article
+
+Share on
+
+  *  __
+  * __
+  * __
+  * __
+  * __
+  * __
+
+# Learning skillful medium-range global weather forecasting
+
+Remi Lam <https://orcid.org/0000-0003-4222-5358> [[email protected]](/cdn-cgi/l/email-
+protection#2d5f484044414c406d4a42424a4148034e4240124e4e104c415b4c5f425e4a6d4a42424a4148034e42400b4c405d164e4e10404c595945475a6d4a42424a4148034e42400b4c405d164e4e105e454c46445f6d4a42424a4148034e42400b4c405d164e4e105d4859485f4f4c59594c4a41444c6d4a42424a4148034e4240),
+Alvaro Sanchez-Gonzalez <https://orcid.org/0000-0001-5055-5790> [[email protected]](/cdn-cgi/l/email-
+protection#6a180f0703060b072a0d05050d060f44090507550909570b061c0b1805190d2a0d05050d060f440905074c0b071a51090957070b1e1e02001d2a0d05050d060f440905074c0b071a5109095719020b0103182a0d05050d060f440905074c0b071a510909571a0f1e0f18080b1e1e0b0d06030b2a0d05050d060f44090507),
+[...] , Matthew Willson <https://orcid.org/0000-0002-8730-1927> [[email protected]](/cdn-cgi/l/email-
+protection#a5d7c0c8ccc9c4c8e5c2cacac2c9c08bc6cac89ac6c698c4c9d3c4d7cad6c2e5c2cacac2c9c08bc6cac883c4c8d59ec6c698c8c4d1d1cdcfd2e5c2cacac2c9c08bc6cac883c4c8d59ec6c698d6cdc4ceccd7e5c2cacac2c9c08bc6cac883c4c8d59ec6c698d5c0d1c0d7c7c4d1d1c4c2c9ccc4e5c2cacac2c9c08bc6cac8),
+Peter Wirnsberger <https://orcid.org/0000-0001-5961-5817>, [...] , Meire Fortunato
+<https://orcid.org/0009-0002-7058-4657>, Ferran Alet <https://orcid.org/0009-0000-3059-0062>, Suman Ravuri
+<https://orcid.org/0000-0002-7481-7633>, Timo Ewalds <https://orcid.org/0000-0002-9693-7986>, Zach Eaton-Rosen
+<https://orcid.org/0009-0002-2102-6982>, [...] , Weihua Hu <https://orcid.org/0000-0003-2956-2616>, Alexander
+Merose <https://orcid.org/0000-0003-2944-5639>, Stephan Hoyer <https://orcid.org/0000-0002-5207-0380>, George
+Holland, Oriol Vinyals <https://orcid.org/0000-0001-7848-7283>, Jacklynn Stott
+<https://orcid.org/0009-0004-7859-3384>, Alexander Pritzel, Shakir Mohamed
+<https://orcid.org/0000-0002-1184-5776> [[email protected]](/cdn-cgi/l/email-
+protection#1a687f7773767b775a7d75757d767f34797577257979277b766c7b6875697d5a7d75757d767f347975773c7b776a21797927777b6e6e72706d5a7d75757d767f347975773c7b776a2179792769727b7173685a7d75757d767f347975773c7b776a217979276a7f6e7f68787b6e6e7b7d76737b5a7d75757d767f34797577),
+and Peter Battaglia <https://orcid.org/0000-0003-3622-7111> [[email protected]](/cdn-cgi/l/email-
+protection#bcced9d1d5d0ddd1fcdbd3d3dbd0d992dfd3d183dfdf81ddd0caddced3cfdbfcdbd3d3dbd0d992dfd3d19addd1cc87dfdf81d1ddc8c8d4d6cbfcdbd3d3dbd0d992dfd3d19addd1cc87dfdf81cfd4ddd7d5cefcdbd3d3dbd0d992dfd3d19addd1cc87dfdf81ccd9c8d9cededdc8c8dddbd0d5ddfcdbd3d3dbd0d992dfd3d1)+15
+authors +13 authors +8 authors fewerAuthors Info & Affiliations
+
+Science
+
+14 Nov 2023
+
+First Release
+
+###### [NEXT ARTICLECorrection is courageousNext __](/doi/10.1126/science.adm8205 "Correction is courageous")
+
+[__](/action/addCitationAlert?doi=10.1126%2Fscience.adi2336
+"Notifications")[__](/personalize/addFavoritePublication?doi=10.1126%2Fscience.adi2336 "Bookmark")
+
+__
+
+[__](/doi/reader/10.1126/science.adi2336 "PDF")
+
+  * __Contents
+    * Abstract
+    * GraphCast
+    * Verification methods
+    * Forecast verification results
+    * Severe event forecasting results
+    * Effect of training data recency
+    * Conclusions
+    * Acknowledgments
+    * Supplementary Materials
+    * References and Notes
+  *     *  __Information & Authors
+    *  __Metrics & Citations
+    *  __View Options
+    *  __References
+    *  __Media
+    *  __Tables
+    *  __Share
+
+## Abstract
+
+Global medium-range weather forecasting is critical to decision-making across many social and economic
+domains. Traditional numerical weather prediction uses increased compute resources to improve forecast
+accuracy, but does not directly use historical weather data to improve the underlying model. Here, we
+introduce “GraphCast,” a machine learning-based method trained directly from reanalysis data. It predicts
+hundreds of weather variables, over 10 days at 0.25° resolution globally, in under one minute. GraphCast
+significantly outperforms the most accurate operational deterministic systems on 90% of 1380 verification
+targets, and its forecasts support better severe event prediction, including tropical cyclones tracking,
+atmospheric rivers, and extreme temperatures. GraphCast is a key advance in accurate and efficient weather
+forecasting, and helps realize the promise of machine learning for modeling complex dynamical systems.
+
+#### SIGN UP FOR THE _SCIENCE_ ADVISER NEWSLETTER
+
+The latest news, commentary, and research, free to your inbox daily
+
+[Sign up __](/action/clickThrough?id=501059&url=%2Fcontent%2Fpage%2Fscienceadviser%3Fintcmp%3Dsciint-
+adviser%26utm_id%3DrecMvHKlQRN4dxsLj&loc=%2Fdoi%2F10.1126%2Fscience.adi2336&pubId=42014839&placeholderId=501023&productId=501023)
+
+It is 05:45 UTC in mid-October, 2022, in Bologna, Italy, at the European Centre for Medium-Range Weather
+Forecasts (ECMWF)’s new High-Performance Computing Facility, which recently opened for operation. For the past
+several hours the Integrated Forecasting System (IFS) has been running sophisticated calculations to forecast
+Earth’s weather over the next days and weeks, and its first predictions have just begun to be disseminated to
+users. This process repeats every six hours, every day, to supply the world with the most accurate weather
+forecasts available.
+
+The IFS, and modern weather forecasting more generally, are triumphs of science and engineering. The dynamics
+of weather systems are among the most complex physical phenomena on Earth, and each day, countless decisions
+made by individuals, industries, and policymakers depend on accurate weather forecasts, from deciding whether
+to wear a jacket or to flee a dangerous storm. The dominant approach for weather forecasting today is
+“numerical weather prediction” (NWP), which involves solving the governing equations of weather using
+supercomputers. The success of NWP lies in the rigorous and ongoing research practices that provide
+increasingly detailed descriptions of weather phenomena, and how well NWP scales to greater accuracy with
+greater computational resources (_1_, _2_). As a result, the accuracy of weather forecasts has increased year
+after year, to the point where the path of a hurricane can be predicted many days ahead—a possibility that was
+unthinkable even a few decades ago.
+
+But while traditional NWP scales well with compute, capitalizing on the vast amount of historical weather data
+to improve accuracy is not straightforward. Rather, NWP methods are improved by highly trained experts
+innovating better models, algorithms, and approximations, which can be a time-consuming and costly process.
+
+Machine learning-based weather prediction (MLWP) offers an alternative to traditional NWP, where forecast
+models can be trained from historical data, including observations and analysis data. This has potential to
+improve forecast accuracy by capturing patterns in the data which are not easily represented in explicit
+equations. MLWP also offers opportunities for greater efficiency by exploiting modern deep learning hardware,
+rather than supercomputers, and striking more favorable speed-accuracy trade-offs. Recently MLWP has helped
+improve on NWP-based forecasting in regimes where traditional NWP is relatively weak, for example sub-seasonal
+heat wave prediction (_3_) and precipitation nowcasting from radar images (_4_– _7_), where accurate equations
+and robust numerical methods are not as available.
+
+In medium-range weather forecasting, i.e., predicting atmospheric variables up to 10 days ahead, NWP-based
+systems like the IFS are still most accurate. The top deterministic operational system in the world is ECMWF’s
+High RESolution forecast (HRES), a configuration of IFS which produces global 10-day forecasts at 0.1°
+latitude/longitude resolution, in around an hour (_8_). However, over the past several years, MLWP methods for
+medium-range forecasting trained on reanalysis data have been steadily advancing, facilitated by benchmarks
+such as WeatherBench (_8_). Deep learning architectures based on convolutional neural networks (_9_– _11_) and
+Transformers (_12_) have shown promising results at latitude/longitude resolutions coarser than 1.0°, and
+recent works—which use graph neural networks (GNN), Fourier neural operators, and Transformers (_13_–
+_16_)—have reported performance that begins to rival IFS’s at 1.0° and 0.25° for a handful of variables, and
+lead times up to seven days.
+
+## GraphCast
+
+Here we introduce an MLWP approach for global medium-range weather forecasting called “GraphCast,” which
+produces an accurate 10-day forecast in under a minute on a single Google Cloud TPU v4 device, and supports
+applications including predicting tropical cyclone tracks, atmospheric rivers, and extreme temperatures.
+
+GraphCast takes as input the two most recent states of Earth’s weather—the current time and six hours
+earlier—and predicts the next state of the weather six hours ahead. A single weather state is represented by a
+0.25° latitude/longitude grid (721 × 1440), which corresponds to roughly 28 × 28 km resolution at the equator
+(Fig. 1A), where each grid point represents a set of surface and atmospheric variables (listed in Table 1).
+Like traditional NWP systems, GraphCast is autoregressive: it can be “rolled out” by feeding its own
+predictions back in as input, to generate an arbitrarily long trajectory of weather states (Fig. 1, B and C).
+
+Fig. 1. Model schematic.
+
+(**A**) The input weather state(s) are defined on a 0.25° latitude-longitude grid comprising a total of 721 ×
+1440 = 1,038,240 points. Yellow layers in the closeup pop-out window represent the 5 surface variables, and
+blue layers represent the 6 atmospheric variables that are repeated at 37 pressure levels (5 + 6 × 37 = 227
+variables per point in total), resulting in a state representation of 235,680,480 values. (**B**) GraphCast
+predicts the next state of the weather on the grid. (**C**) A forecast is made by iteratively applying
+GraphCast to each previous predicted state, to produce a sequence of states which represent the weather at
+successive lead times. (**D**) The Encoder component of the GraphCast architecture maps local regions of the
+input (green boxes) into nodes of the multi-mesh graph representation (green, upward arrows which terminate in
+the green-blue node). (**E**) The Processor component updates each multi-mesh node using learned message-
+passing (heavy blue arrows that terminate at a node). (**F**) The Decoder component maps the processed multi-
+mesh features (purple nodes) back onto the grid representation (red, downward arrows which terminate at a red
+box). (**G**) The multi-mesh is derived from icosahedral meshes of increasing resolution, from the base mesh
+(_M_ 0, 12 nodes) to the finest resolution (_M_ 6, 40,962 nodes), which has uniform resolution across the
+globe. It contains the set of nodes from _M_ 6 and all the edges from _M_ 0 to _M_ 6. The learned message-
+passing over the different meshes’ edges happens simultaneously, so that each node is updated by all of its
+incoming edges. The Earth texture in the figure is used under CC~BY~4.0 from
+<https://www.solarsystemscope.com/textures/>.
+
+**Surface variables (5)**| **Atmospheric variables (6)**| **Pressure levels (37)**  
+---|---|---  
+**2-m temperature** (2 _T_)  
+**10 m u wind component** (10 _U_)  
+**10 m v wind component** (10 _V_)  
+**Mean sea-level pressure** (_MSL_)  
+Total precipitation (_TP_)| **Temperature** (_T_)  
+**U component of wind** (_U_)  
+**V component of wind** (_V_)  
+**Geopotential** (_Z_)  
+**Specific humidity** (_Q_)  
+Vertical wind speed (_W_)| 1, 2, 3, 5, 7, 10, 20, 30, **50** , 70,  
+**100** , 125, **150** , 175, **200** , 225,  
+**250** , **300** , 350, **400** , 450, **500** ,  
+550, **600** , 650, **700** , 750, 775,  
+800, 825, **850** , 875, 900, **925** ,  
+950, 975, **1000**  
+  
+Table 1. Weather variables and levels modeled by GraphCast.
+
+The numbers in parentheses in the column headings are the number of entries in the column. Boldfaced variables
+and levels indicate those which were included in the scorecard evaluation. All atmospheric variables are
+represented at each of the pressure levels.
+
+GraphCast is implemented as a neural network architecture, based on GNNs in an “encode-process-decode”
+configuration (_13_, _17_), with a total of 36.7 million parameters (code, weights and demos can be found at
+<https://github.com/deepmind/graphcast>). Previous GNN-based learned simulators (_18_– _20_) have been very
+effective at learning the complex dynamics of fluid and other systems modeled by partial differential
+equations, which supports their suitability for modeling weather dynamics.
+
+The encoder (Fig. 1D) uses a single GNN layer to map variables (normalized to zero-mean unit-variance)
+represented as node attributes on the input grid to learned node attributes on an internal “multi-mesh”
+representation.
+
+The multi-mesh (Fig. 1G) is a graph which is spatially homogeneous, with high spatial resolution over the
+globe. It is defined by refining a regular icosahedron (12 nodes, 20 faces, 30 edges) iteratively six times,
+where each refinement divides each triangle into four smaller ones (leading to four times more faces and
+edges), and reprojecting the nodes onto the sphere. The multi-mesh contains the 40,962 nodes from the highest
+resolution mesh (which is roughly 1/25 the number of latitude/longitude grid points at 0.25°), and the union
+of all the edges created in the intermediate graphs, forming a flat hierarchy of edges with varying lengths.
+
+The processor (Fig. 1E) uses 16 unshared GNN layers to perform learned message-passing on the multi-mesh,
+enabling efficient local and long-range information propagation with few message-passing steps.
+
+The decoder (Fig. 1F) maps the final processor layers learned features from the multi-mesh representation back
+to the latitude-longitude grid. It uses a single GNN layer, and predicts the output as a residual update to
+the most recent input state (with output normalization to achieve unit-variance on the target residual). See
+supplementary materials section 3 for further architectural details.
+
+During model development, we used 39 years (1979–2017) of historical data from ECMWF’s ERA5 (_21_) reanalysis
+archive. As a training objective, we averaged the mean squared error (MSE) between GraphCast’s predicted
+states over _N_ autoregressive steps and the corresponding ERA5 states, with the error weighted by vertical
+level (see supplementary materials eq. 19). The value of _N_ was increased incrementally from 1 to 12 (i.e.,
+six hours to three days) over the course of training and the gradient of the loss was computed by
+backpropagation-through-time (_22_). GraphCast was trained to minimize the training objective using gradient
+descent which took roughly four weeks on 32 Cloud TPU v4 devices using batch parallelism. See supplementary
+materials section 4 for further training details.
+
+Consistent with real deployment scenarios, where future information is not available for model development, we
+evaluated GraphCast on the held out data from the years 2018 onward (see supplementary materials section 5.1).
+
+## Verification methods
+
+We verify GraphCast’s forecast skill comprehensively by comparing its accuracy to HRES’s on a large number of
+variables, levels, and lead times. We quantify the respective skills of GraphCast, HRES, and ML baselines with
+two skill metrics: the root mean square error (RMSE) and the anomaly correlation coefficient (ACC).
+
+Of the 227 variable and level combinations predicted by GraphCast at each grid point, we evaluated its skill
+versus HRES on 69 of them, corresponding to the 13 levels of WeatherBench (_8_) and variables (_23_) from the
+ECMWF Scorecard (_24_); see boldface variables and levels in Table 1 and supplementary materials section 1.2
+for which HRES cycle was operational during the evaluation period. In addition to the aggregate performance
+reported in the main text, supplementary materials section 7 provides further detailed evaluations, including
+other variables, precipitation, regional performance, latitude and pressure level effects, spectral
+properties, blurring, biases, comparisons to other ML-based forecasts, and effects of model design choices.
+
+In making these comparisons, two key choices underlie how skill is established: (i) the selection of the
+ground truth for comparison, and (ii) a careful accounting of the data assimilation windows used to infer this
+data from observations. We use ERA5 as the ground truth for evaluating GraphCast, since it was trained to take
+ERA5 data as input and predict ERA5 data as outputs. However, evaluating HRES forecasts against ERA5 would
+result in nonzero error on the initial forecast step. Instead, we constructed an “HRES forecast at step 0”
+(HRES-fc0) dataset to use as ground truth for HRES. HRES-fc0 contains the inputs to HRES forecasts at future
+initializations (see supplementary materials section 1.2), ensuring that each data point is grounded by recent
+observations and that the zeroth step of HRES forecasts will have zero error.
+
+For a fair comparison, we must ensure that the ERA5 initial conditions for GraphCast were derived from
+assimilation windows which look no further into the future than those used by HRES. HRES initializations
+(00z/06z/12z/18z, where 00z means 00:00 UTC in Zulu convention) always assimilate observations 3 hours into
+the future while ERA5 initializations assimilate observations 9 hours into the future at 00z/12z and 3 hours
+into the future at 06z/18z. This constrained the choice of initialization times for GraphCast to 06z/18z in
+all our results. We use the same initializations for HRES when comparing performance up to 3.75 days. Beyond
+that, HRES archived forecasts are only available from 00z/12z initializations. The transition from 06z/18z to
+00z/12z initializations for HRES induces a small discontinuity in our plots that is indicated by a vertically
+dashed line at the appropriate lead time. Supplementary materials section 5 contains further verification
+details, including details of the comparisons protocol between GraphCast and HRES (supplementary materials
+section 5.2), and the effect of initialization lookahead on both models’ performance (supplementary materials
+section 5.2.2).
+
+## Forecast verification results
+
+We find that GraphCast has greater weather forecasting skill than HRES when evaluated on 10-day forecasts at a
+horizontal resolution of 0.25° for latitude/longitude and at 13 vertical levels.
+
+Figure 2, A to C, shows how GraphCast (blue lines) outperforms HRES (black lines) on the _Z_ 500 (geopotential
+at 500 hPa) “headline” field in terms of RMSE skill, RMSE skill score (i.e., the normalized RMSE difference
+between model _A_ and baseline _B_ defined as (_RMSE A_ – _RMSE B_)/(_RMSE B_), and ACC skill. Using _Z_ 500,
+which encodes the synoptic-scale pressure distribution, is common in the literature, as it has strong
+meteorological importance (_8_). The plots show GraphCast has better skill scores across all lead times, with
+a skill score improvement around 7%–14%. Plots for additional headline variables are in supplementary
+materials section 7.1.
+
+Fig. 2. Global skill and skill scores for GraphCast and HRES in 2018.
+
+(**A**) RMSE skill (y-axis) for GraphCast (blue lines) and HRES (black lines), on _Z_ 500, as a function of
+lead time (x-axis). Error bars represent 95% confidence intervals. The vertical dashed line represents 3.5
+days, which is the last 12-hour increment of the HRES 06z/18z forecasts. The black line represents HRES, where
+lead times earlier and later than 3.5 days are from the 06z/18z and 00z/12z initializations, respectively.
+(**B**) RMSE skill score (y-axis) for GraphCast versus HRES, on _Z_ 500, as a function of lead time (x-axis).
+Error bars represent 95% confidence intervals for the skill score. We observe a discontinuity in GraphCast’s
+curve because skill scores up to 3.5 days are computed between GraphCast (initialized at 06z/18z) and HRES’s
+06z/18z initialization, while after 3.5 days skill scores are computed with respect to HRES’s 00z/12z
+initializations. (**C**) ACC skill (y-axis) for GraphCast (blue lines) and HRES (black lines), on _Z_ 500, as
+a function of lead time (x-axis). (**D**) Scorecard of RMSE skill scores for GraphCast, with respect to HRES.
+Each subplot corresponds to one variable: _U_ , _V_ , _Z_ , _T_ , _Q_ , 2 _T_ , 10 _U_ , 10 _V_ , _MSL_ ,
+respectively. The rows of each heatmap correspond to the 13 pressure levels (for the atmospheric variables),
+from 50 hPa at the top to 1000 hPa at the bottom. The columns of each heatmap correspond to the 20 lead times
+at 12-hour intervals, from 12 hours on the left to 10 days on the right. Each cell’s color represents the
+skill score, as shown in (B), where blue represents negative values (GraphCast has better skill) and red
+represents positive values (HRES has better skill).
+
+Figure 2D summarizes the RMSE skill scores for all 1380 evaluated variables and pressure levels, across the
+10-day forecasts, in a format analogous to the ECMWF Scorecard. The cell colors are proportional to the skill
+score, where blue indicates GraphCast had better skill and red indicates HRES had higher skill. GraphCast
+outperformed HRES on 90.3% of the 1380 targets, and significantly (_p_ ≤ 0.05, nominal sample size _n_ ∈{729,
+730}) outperformed HRES on 89.9% of targets. See supplementary materials section 5.4 for methodology and table
+S4 for _p_ -values, test statistics and effective sample sizes.
+
+The regions of the atmosphere in which HRES had better performance than GraphCast (top rows in red in the
+scorecards), were disproportionately localized in the stratosphere, and had the lowest training loss weight
+(see supplementary materials section 7.2.2). When excluding the 50 hPa level, GraphCast significantly
+outperforms HRES on 96.9% of the remaining 1280 targets. When excluding levels 50 and 100 hPa, GraphCast
+significantly outperforms HRES on 99.7% of the 1180 remaining targets. When conducting per region evaluations,
+we found the previous results to generally hold across the globe, as detailed in figs. S14 to S16.
+
+We found that increasing the number of autoregressive steps in the MSE loss improves GraphCast performance at
+longer lead time (see supplementary materials section 7.3.2). It also encourages GraphCast to blur to a degree
+at longer lead times (see fig. S38), which means its forecasts will lie somewhere in between a traditional
+deterministic forecast, and an ensemble mean. HRES’s underlying physical equations, however, do not lead to
+blurred predictions. To assess whether GraphCast’s relative advantage over HRES on RMSE skill is due to
+blurrier forecasts better optimizing RMSE, we artificially blurred HRES’s forecasts with blurring filters. We
+fit filters for GraphCast and HRES by minimizing the RMSE between filtered predictions and the models’
+respective ground truths. We found that RMSE-optimized blurring applied to GraphCast has greater skill than
+analogous blurring applied to HRES on 88.0% of our 1380 verification targets, which is generally consistent
+with our above conclusions (see supplementary materials section 7.4). Still, blurrier forecasts may not be
+desirable for some applications, which we discuss further in the Conclusions section.
+
+We also compared GraphCast’s performance to the top competing ML-based weather model, Pangu-Weather (_16_),
+and found GraphCast outperformed it on 99.2% of the 252 targets they presented (see supplementary materials
+section 6 for details).
+
+## Severe event forecasting results
+
+Beyond evaluating GraphCast’s forecast skill against HRES’s on a wide range of variables and lead times, we
+also evaluate how its forecasts support predicting severe events, including tropical cyclones tracks,
+atmospheric rivers, and extreme temperature. These are key downstream applications for which GraphCast is not
+specifically trained, but which are very important for human activity.
+
+### Tropical cyclone tracks
+
+Improving the accuracy of tropical cyclone tracking can help avoid injury and loss of life, as well as
+reducing economic harm (_25_). A cyclone’s existence and trajectory is predicted by applying a tracking
+algorithm to forecasts of geopotential (_Z_), horizontal wind (10 _U_ /10 _V_ , _U_ /_V_), and mean sea-level
+pressure (_MSL_). We implemented a tracking algorithm based on ECMWF’s published protocols (_26_) and applied
+it to GraphCast’s forecasts, to produce cyclone track predictions (see supplementary materials section 8.1).
+As a baseline for comparison, we used the operational tracks obtained from HRES’s 0.1° forecasts with ECMWF’s
+own tracker, stored in the TIGGE archive (_27_, _28_). Each model using the tracker leading to its best
+performance, we measured errors for both models against the tracks from IBTrACS (_29_, _30_), a separate
+reanalysis dataset of cyclone tracks aggregated from various analysis and observational sources. Consistent
+with established evaluation of tropical cyclone prediction (_26_), we evaluate all tracks when both GraphCast
+and HRES detect a cyclone, ensuring that both models are evaluated on the same events, and verify that each
+model’s true-positive rates are similar.
+
+Figure 3A shows GraphCast has lower median track error than HRES over 2018–2021 (median was chosen to resist
+outliers). As per-track errors for HRES and GraphCast are correlated, we also measured the per-track paired
+error difference between the two models and found that GraphCast is significantly better than HRES for lead
+time 18 hours to 4.75 days, as shown in Fig. 3B. The error bars show the bootstrapped 95% confidence intervals
+for the median (see supplementary materials section 8.1 for details).
+
+Fig. 3. Severe-event prediction.
+
+(**A**) Cyclone tracking performances for GraphCast and HRES. The x-axis represents lead times (in days), and
+the y-axis represents median track error (in km). Error bars represent bootstrapped 95% confidence intervals
+for the median. (**B**) Cyclone tracking paired error difference between GraphCast and HRES. The x-axis
+represents lead times (in days), and the y-axis represents median paired error difference (in km). Error bars
+represent bootstrapped 95% confidence intervals for the median difference (see supplementary materials section
+8.1). (**C**) Atmospheric river prediction (_IVT_) skills for GraphCast and HRES. The x-axis represents lead
+times (in days), and the y-axis represents RMSE. Error bars are 95% confidence intervals. (**D**) Extreme heat
+prediction precision-recall for GraphCast and HRES. The x-axis represents recall, and the y-axis represents
+precision. The curves represent different precision-recall trade-offs when sweeping over gain applied to
+forecast signals (see supplementary materials section 8.3).
+
+### Atmospheric rivers
+
+Atmospheric rivers are narrow regions of the atmosphere which are responsible for the majority of the poleward
+water vapor transport across the mid-latitudes and generate 30%-65% of annual precipitation on the U.S. West
+Coast (_31_). Their strength can be characterized by the vertically integrated water vapor transport _IVT_
+(_32_, _33_), indicating whether an event will provide beneficial precipitation or be associated with
+catastrophic damage (_34_). _IVT_ can be computed from the non-linear combination of the horizontal wind speed
+_U_ and _V_) and specific humidity (_Q_), which GraphCast predicts. We evaluate GraphCast forecasts over
+coastal North America and the Eastern Pacific during cold months (Oct–Apr), when atmospheric rivers are most
+frequent. Despite not being specifically trained to characterize atmospheric rivers, Fig. 3C shows that
+GraphCast improves the prediction of _IVT_ compared to HRES, from 25% at short lead time, to 10% at longer
+horizons (see supplementary materials section 8.2 for details).
+
+### Extreme heat and cold
+
+Extreme heat and cold are characterized by large anomalies with respect to typical climatology (_3_, _35_,
+_36_), which can be dangerous and disrupt human activities. We evaluate the skill of HRES and GraphCast in
+predicting events above the top 2% climatology across location, time of day, and month of the year, for 2 _T_
+at 12-hour, 5-day, and 10-day lead times, for land regions across northern and southern hemisphere over their
+respective summer months. We plot precision-recall curves (_37_) to reflect different possible trade-offs
+between reducing false positives (high precision) and reducing false negatives (high recall). For each
+forecast, we obtain the curve by varying a “gain” parameter that scales the 2 _T_ forecast’s deviations with
+respect to the median climatology.
+
+Figure 3D shows GraphCast’s precision-recall curves are above HRES’s for 5- and 10-day lead times, suggesting
+GraphCast’s forecasts are generally superior than HRES at extreme classification over longer horizons. By
+contrast, HRES has better precision-recall at the 12-hour lead time, which is consistent with the _2T_ skill
+score of GraphCast over HRES being near zero, as shown in Fig. 2D. We generally find these results to be
+consistent across other variables relevant to extreme heat, such as _T_ 850 and _Z_ 500 (_36_), other extreme
+thresholds (5%, 2% and 0.5%), and extreme cold forecasting in winter. See supplementary materials section 8.3
+for details.
+
+## Effect of training data recency
+
+GraphCast can be re-trained periodically with recent data, which in principle allows it to capture weather
+patterns that change over time, such as the effects of climate change, and long climate oscillations. We
+trained four variants of GraphCast, from scratch, with data that always began in 1979, but ended in 2017,
+2018, 2019, and 2020, respectively (we label the variant ending in 2017 as “GraphCast: <2018,” etc.). We
+compared their performances to HRES on 2021 test data.
+
+Figure 4 shows the skill scores (normalized by GraphCast:<2018) of the four variants and HRES, for _Z_ 500\.
+We found that while GraphCast’s performance when trained up to before 2018 is still competitive with HRES in
+2021, training it up to before 2021 further improves its skill scores (see supplementary materials section
+7.1.3). We speculate this recency effect allows recent weather trends to be captured to improve accuracy. This
+shows that GraphCast’s performance can be improved by re-training on more recent data.
+
+Fig. 4. Training GraphCast on more recent data.
+
+Each colored line represents GraphCast trained with data ending before a different year, from 2018 (blue) to
+2021 (purple). The y-axis represents RMSE skill scores on 2021 test data, for _Z_ 500, with respect to
+GraphCast trained up to before 2018, over lead times (x-axis). The vertical dashed line represents 3.5 days,
+where the HRES 06z/18z forecasts end. The black line represents HRES, where lead times earlier and later than
+3.5 days are from the 06z/18z and 00z/12z initializations, respectively.
+
+## Conclusions
+
+GraphCast’s forecast skill and efficiency compared to HRES shows MLWP methods are now competitive with
+traditional weather forecasting methods. Additionally, GraphCast’s performance on severe event forecasting,
+which it was not directly trained for, demonstrates its robustness and potential for downstream value. We
+believe this marks a turning point in weather forecasting, which helps open new avenues to strengthen the
+breadth of weather-dependent decision-making by individuals and industries, by making cheap prediction more
+accurate, more accessible, and suitable for specific applications.
+
+With 36.7 million parameters, GraphCast is a relatively small model by modern ML standards, chosen to keep the
+memory footprint tractable. And while HRES is released on 0.1° resolution, 137 levels, and up to 1 hour time
+steps, GraphCast operated on 0.25° latitude-longitude resolution, 37 vertical levels, and 6 hour time steps,
+because of the ERA5 training data's native 0.25° resolution, and engineering challenges in fitting higher
+resolution data on hardware. Generally GraphCast should be viewed as a family of models, with the current
+version being the largest we can practically fit under current engineering constraints, but which have
+potential to scale much further in the future with greater compute resources and higher resolution data.
+
+One key limitation of our approach is in how uncertainty is handled. We focused on deterministic forecasts and
+compared against HRES, but the other pillar of ECMWF’s IFS, the ensemble forecasting system, ENS, is
+especially important for quantifying the probability of extreme events and as the skill of the forecast
+decreases at longer lead times. The non-linearity of weather dynamics means there is increasing uncertainty at
+longer lead times, which is not well-captured by a single deterministic forecast. ENS addresses this by
+generating multiple, stochastic forecasts, which approximate a predictive distribution over future weather,
+however generating multiple forecasts is expensive. By contrast, GraphCast’s MSE training objective encourages
+it to spatially blur its predictions in the presence of uncertainty, which may not be desirable for some
+applications where knowing tail, or joint, probabilities of events is important. Building probabilistic
+forecasts that model uncertainty more explicitly, along the lines of ensemble forecasts, is a crucial next
+step.
+
+It is important to emphasize that data-driven MLWP relies critically on large quantities of data and their
+quality, which in the case of models trained on reanalysis, depends on the fidelity of NWPs. Therefore, rich
+high-quality data sources like ECMWF’s MARS archive (_38_) are invaluable. Our approach should not be regarded
+as a replacement for traditional weather forecasting methods, which have been developed for decades,
+rigorously tested in many real-world contexts, and offer many features we have not yet explored. Rather our
+work should be interpreted as evidence that MLWP is able to meet the challenges of real-world forecasting
+problems and has potential to complement and improve the current best methods.
+
+Beyond weather forecasting, GraphCast can open new directions for other important geo-spatiotemporal
+forecasting problems, including climate and ecology, energy, agriculture, and human and biological activity,
+as well as other complex dynamical systems. We believe that learned simulators, trained on rich, real-world
+data, will be crucial in advancing the role of machine learning in the physical sciences.
+
+## Acknowledgments
+
+In alphabetical order, we thank Kelsey Allen, Charles Blundell, Matt Botvinick, Zied Ben Bouallegue, Michael
+Brenner, Rob Carver, Matthew Chantry, Marc Deisenroth, Peter Deuben, Marta Garnelo, Ryan Keisler, Dmitrii
+Kochkov, Christopher Mattern, Piotr Mirowski, Peter Norgaard, Ilan Price, Chongli Qin, Sébastien Racanière,
+Stephan Rasp, Yulia Rubanova, Kunal Shah, Jamie Smith, Daniel Worrall, and countless others at Alphabet and
+ECMWF for advice and feedback on our work. We also thank ECMWF for providing invaluable datasets to the
+research community. The style of the opening paragraph was inspired by (_40_).
+
+**Funding:** All research in this study was funded by Google DeepMind and Alphabet. There was no external
+funding.
+
+**Author contributions:** Conceptualization: R.L., A.S., M.W., S.M., P.B. Data curation: RL, A.S., M.W., A.M.,
+P.B. Formal analysis: R.L., A.S., M.W., P.W., M.F., F.A., S.R., T.E., Z.E., W.H., A.P., S.M., P.B.
+Investigation: R.L., A.S., M.W., P.W., M.F., F.A., S.R., T.E., Z.E., W.H., A.P., S.M., P.B. Methodology: R.L.,
+A.S., M.W., P.W., M.F., F.A., S.R., T.E., Z.E., W.H., A.P., S.M., P.B. Project administration: R.L., A.S.,
+M.W., G.H., O.V., J.S., S.M., P.B. Software: R.L., A.S., M.W., P.W., M.F., F.A., S.R., T.E., Z.E., W.H., A.P.,
+P.B. Supervision: R.L., S.M., P.B. Validation: R.L., A.S., M.W., P.W., M.F., F.A., S.R., T.E., Z.E., W.H.,
+A.P., S.M., P.B. Visualization: R.L., A.S., M.W., F.A., P.B. Writing - original draft: R.L., A.S., M.W., P.W.,
+M.F., F.A., S.R., T.E., Z.E., S.H., A.P., S.M., P.B. Writing – review & editing: R.L., A.S., M.W., P.W., M.F.,
+F.A., S.R., T.E., Z.E., S.H., A.P., S.M., P.B.
+
+**Competing interests:** This work was done in the course of employment at Google DeepMind, with no other
+competing financial interests. A.S., R.L., P.B., M.W., P.W., M.F. and A.P. have filed a provisional patent
+application relating to machine learning for learned medium-range global weather forecasting (US Provisional
+App. no. US63/435,163).
+
+**Data and materials availability:** GraphCast’s code and trained weights are publicly available on GitHub
+<https://github.com/deepmind/graphcast> (_41_). This work used publicly available data from the European
+Centre for Medium Range Forecasting (ECMWF). We use the ECMWF archive (expired real-time) products for ERA5,
+HRES and TIGGE products, whose use is governed by the Creative Commons Attribution 4.0 International (CC BY
+4.0). We use IBTrACS Version 4 from <https://www.ncei.noaa.gov/products/international-best-track-archive> and
+reference (_29_, _30_) as required.
+
+**License information:** Copyright © 2023 the authors, some rights reserved; exclusive licensee American
+Association for the Advancement of Science. No claim to original US government works.
+<https://www.science.org/about/science-licenses-journal-article-reuse>
+
+## Supplementary Materials
+
+### This PDF file includes:
+
+Materials and Methods
+
+Supplementary Text
+
+Figs. S1 to S53
+
+Tables S1 to S4
+
+References (_42_– _75_)
+
+  * [Download](/doi/suppl/10.1126/science.adi2336/suppl_file/science.adi2336_sm.pdf)
+  * 35.84 MB
+
+## References and Notes
+
+1
+
+S. G. Benjamin, J. M. Brown, G. Brunet, P. Lynch, K. Saito, T. W. Schlatter, 100 years of progress in
+forecasting and NWP applications. _Meteorol. Monogr._**59** , 13.1–13.67 (2019).
+
+[Crossref](https://doi.org/10.1175/AMSMONOGRAPHS-D-18-0020.1)
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=100+years+of+progress+in+forecasting+and+NWP+applications&author=S.+G.+Benjamin&author=J.+M.+Brown&author=G.+Brunet&author=P.+Lynch&author=K.+Saito&author=T.+W.+Schlatter&publication_year=2019&journal=Meteorol.+Monogr.&pages=13.1-13.67&doi=10.1175%2FAMSMONOGRAPHS-D-18-0020.1)
+
+2
+
+P. Bauer, A. Thorpe, G. Brunet, The quiet revolution of numerical weather prediction. _Nature_**525** , 47–55
+(2015).
+
+[Crossref](https://doi.org/10.1038/nature14956)
+
+[PubMed](https://www.ncbi.nlm.nih.gov/pubmed/26333465)
+
+[ISI](https://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&DestApp=WOS_CPL&UsrCustomerID=5e3815c904498985e796fc91436abd9a&SrcAuth=atyponcel&SrcApp=literatum&DestLinkType=FullRecord&KeyUT=000360594100023)
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=The+quiet+revolution+of+numerical+weather+prediction&author=P.+Bauer&author=A.+Thorpe&author=G.+Brunet&publication_year=2015&journal=Nature&pages=47-55&doi=10.1038%2Fnature14956&pmid=26333465)
+
+3
+
+I. Lopez-Gomez, A. McGovern, S. Agrawal, J. Hickey, Global extreme heat forecasting using neural weather
+models. _Artif. Intell. Earth Syst._**2** , e220035 (2022).
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=Global+extreme+heat+forecasting+using+neural+weather+models&author=I.+Lopez-
+Gomez&author=A.+McGovern&author=S.+Agrawal&author=J.+Hickey&publication_year=2022&journal=Artif.+Intell.+Earth+Syst.)
+
+4
+
+X. Shi, Z. Gao, L. Lausen, H. Wang, D.-Y. Yeung, W.-k. Wong, W.-c. Woo, Deep learning for precipitation
+nowcasting: A benchmark and a new model. _Adv. Neural Inf. Process. Syst._**30** , 5617–5627 (2017).
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=Deep+learning+for+precipitation+nowcasting%3A+A+benchmark+and+a+new+model&author=X.+Shi&author=Z.+Gao&author=L.+Lausen&author=H.+Wang&author=D.-Y.+Yeung&author=W.-k.+Wong&author=W.-c.+Woo&publication_year=2017&journal=Adv.+Neural+Inf.+Process.+Syst.&pages=5617-5627)
+
+5
+
+C. K. Sønderby, L. Espeholt, J. Heek, M. Dehghani, A. Oliver, T. Salimans, S. Agrawal, J. Hickey, N.
+Kalchbrenner, Metnet: A neural weather model for precipitation forecasting.
+[arXiv:2003.12140](https://arxiv.org/abs/2003.12140v2) [cs.LG] (2020).
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=Metnet%3A+A+neural+weather+model+for+precipitation+forecasting&author=C.+K.+S%C3%B8nderby&author=L.+Espeholt&author=J.+Heek&author=M.+Dehghani&author=A.+Oliver&author=T.+Salimans&author=S.+Agrawal&author=J.+Hickey&author=N.+Kalchbrenner&publication_year=2020)
+
+6
+
+S. Ravuri, K. Lenc, M. Willson, D. Kangin, R. Lam, P. Mirowski, M. Fitzsimons, M. Athanassiadou, S. Kashem, S.
+Madge, R. Prudden, A. Mandhane, A. Clark, A. Brock, K. Simonyan, R. Hadsell, N. Robinson, E. Clancy, A.
+Arribas, S. Mohamed, Skilful precipitation nowcasting using deep generative models of radar. _Nature_**597** ,
+672–677 (2021).
+
+[Crossref](https://doi.org/10.1038/s41586-021-03854-z)
+
+[PubMed](https://www.ncbi.nlm.nih.gov/pubmed/34588668)
+
+[ISI](https://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&DestApp=WOS_CPL&UsrCustomerID=5e3815c904498985e796fc91436abd9a&SrcAuth=atyponcel&SrcApp=literatum&DestLinkType=FullRecord&KeyUT=000701996800025)
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=Skilful+precipitation+nowcasting+using+deep+generative+models+of+radar&author=S.+Ravuri&author=K.+Lenc&author=M.+Willson&author=D.+Kangin&author=R.+Lam&author=P.+Mirowski&author=M.+Fitzsimons&author=M.+Athanassiadou&author=S.+Kashem&author=S.+Madge&author=R.+Prudden&author=A.+Mandhane&publication_year=2021&journal=Nature&pages=672-677&doi=10.1038%2Fs41586-021-03854-z&pmid=34588668)
+
+7
+
+L. Espeholt, S. Agrawal, C. Sønderby, M. Kumar, J. Heek, C. Bromberg, C. Gazen, R. Carver, M. Andrychowicz, J.
+Hickey, A. Bell, N. Kalchbrenner, Deep learning for twelve hour precipitation forecasts. _Nat. Commun._**13**
+, 5145 (2022).
+
+[Crossref](https://doi.org/10.1038/s41467-022-32483-x)
+
+[PubMed](https://www.ncbi.nlm.nih.gov/pubmed/36050311)
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=Deep+learning+for+twelve+hour+precipitation+forecasts&author=L.+Espeholt&author=S.+Agrawal&author=C.+S%C3%B8nderby&author=M.+Kumar&author=J.+Heek&author=C.+Bromberg&author=C.+Gazen&author=R.+Carver&author=M.+Andrychowicz&author=J.+Hickey&author=A.+Bell&author=N.+Kalchbrenner&publication_year=2022&journal=Nat.+Commun.&pages=5145&doi=10.1038%2Fs41467-022-32483-x&pmid=36050311)
+
+8
+
+S. Rasp, P. D. Dueben, S. Scher, J. A. Weyn, S. Mouatadid, N. Thuerey, WeatherBench: A benchmark data set for
+data-driven weather forecasting. _J. Adv. Model. Earth Syst._**12** , e2020MS002203 (2020).
+
+[Crossref](https://doi.org/10.1029/2020MS002203)
+
+[ISI](https://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&DestApp=WOS_CPL&UsrCustomerID=5e3815c904498985e796fc91436abd9a&SrcAuth=atyponcel&SrcApp=literatum&DestLinkType=FullRecord&KeyUT=000595875100020)
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=WeatherBench%3A+A+benchmark+data+set+for+data-
+driven+weather+forecasting&author=S.+Rasp&author=P.+D.+Dueben&author=S.+Scher&author=J.+A.+Weyn&author=S.+Mouatadid&author=N.+Thuerey&publication_year=2020&journal=J.+Adv.+Model.+Earth+Syst.&doi=10.1029%2F2020MS002203)
+
+9
+
+J. A. Weyn, D. R. Durran, R. Caruana, Can machines learn to predict weather? Using deep learning to predict
+gridded 500-hPa geopotential height from historical weather data. _J. Adv. Model. Earth Syst._**11** ,
+2680–2693 (2019).
+
+[Crossref](https://doi.org/10.1029/2019MS001705)
+
+[ISI](https://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&DestApp=WOS_CPL&UsrCustomerID=5e3815c904498985e796fc91436abd9a&SrcAuth=atyponcel&SrcApp=literatum&DestLinkType=FullRecord&KeyUT=000490949100014)
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=Can+machines+learn+to+predict+weather%3F+Using+deep+learning+to+predict+gridded+500-hPa+geopotential+height+from+historical+weather+data&author=J.+A.+Weyn&author=D.+R.+Durran&author=R.+Caruana&publication_year=2019&journal=J.+Adv.+Model.+Earth+Syst.&pages=2680-2693&doi=10.1029%2F2019MS001705)
+
+10
+
+J. A. Weyn, D. R. Durran, R. Caruana, Improving data-driven global weather prediction using deep convolutional
+neural networks on a cubed sphere. _J. Adv. Model. Earth Syst._**12** , e2020MS002109 (2020).
+
+[Crossref](https://doi.org/10.1029/2020MS002109)
+
+[ISI](https://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&DestApp=WOS_CPL&UsrCustomerID=5e3815c904498985e796fc91436abd9a&SrcAuth=atyponcel&SrcApp=literatum&DestLinkType=FullRecord&KeyUT=000576640100020)
+
+[Google Scholar](https://scholar.google.com/scholar_lookup?title=Improving+data-
+driven+global+weather+prediction+using+deep+convolutional+neural+networks+on+a+cubed+sphere&author=J.+A.+Weyn&author=D.+R.+Durran&author=R.+Caruana&publication_year=2020&journal=J.+Adv.+Model.+Earth+Syst.&doi=10.1029%2F2020MS002109)
+
+11
+
+S. Rasp, N. Thuerey, Data-driven medium-range weather prediction with a resnet pretrained on climate
+simulations: A new model for WeatherBench. _J. Adv. Model. Earth Syst._**13** , e2020MS002405 (2021).
+
+[Crossref](https://doi.org/10.1029/2020MS002405)
+
+[ISI](https://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&DestApp=WOS_CPL&UsrCustomerID=5e3815c904498985e796fc91436abd9a&SrcAuth=atyponcel&SrcApp=literatum&DestLinkType=FullRecord&KeyUT=000623792200005)
+
+[Google Scholar](https://scholar.google.com/scholar_lookup?title=Data-driven+medium-
+range+weather+prediction+with+a+resnet+pretrained+on+climate+simulations%3A+A+new+model+for+WeatherBench&author=S.+Rasp&author=N.+Thuerey&publication_year=2021&journal=J.+Adv.+Model.+Earth+Syst.&doi=10.1029%2F2020MS002405)
+
+12
+
+T. Nguyen, J. Brandstetter, A. Kapoor, J. K. Gupta, A. Grover, ClimaX: A foundation model for weather and
+climate. [arXiv:2301.10343](https://arxiv.org/abs/2301.10343) [cs.LG] (2023).
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=ClimaX%3A+A+foundation+model+for+weather+and+climate&author=T.+Nguyen&author=J.+Brandstetter&author=A.+Kapoor&author=J.+K.+Gupta&author=A.+Grover&publication_year=2023)
+
+13
+
+R. Keisler, Forecasting global weather with graph neural networks.
+[arXiv:2202.07575](https://arxiv.org/abs/2202.07575) [physics.ao-ph] (2022).
+
+[Google
+Scholar](https://scholar.google.com/scholar?q=R.+Keisler%2C+Forecasting+global+weather+with+graph+neural+networks.+arXiv%3A2202.07575+%5Bphysics.ao-
+ph%5D+%282022%29.)
+
+14
+
+J. Pathak, S. Subramanian, P. Harrington, S. Raja, A. Chattopadhyay, M. Mardani, T. Kurth, D. Hall, Z. Li, K.
+Azizzadenesheli, P. Hassanzadeh, K. Kashinath, A. Anandkumar, FourCastNet: A global data-driven high-
+resolution weather model using adaptive fourier neural operators.
+[arXiv:2202.11214](https://arxiv.org/abs/2202.11214) [physics.ao-ph] (2022).
+
+[Google
+Scholar](https://scholar.google.com/scholar?q=J.+Pathak%2C+S.+Subramanian%2C+P.+Harrington%2C+S.+Raja%2C+A.+Chattopadhyay%2C+M.+Mardani%2C+T.+Kurth%2C+D.+Hall%2C+Z.+Li%2C+K.+Azizzadenesheli%2C+P.+Hassanzadeh%2C+K.+Kashinath%2C+A.+Anandkumar%2C+FourCastNet%3A+A+global+data-
+driven+high-
+resolution+weather+model+using+adaptive+fourier+neural+operators.+arXiv%3A2202.11214+%5Bphysics.ao-
+ph%5D+%282022%29.)
+
+15
+
+T. Kurth, S. Subramanian, P. Harrington, J. Pathak, M. Mardani, D. Hall, A. Miele, K. Kashinath, A.
+Anandkumar, FourCastNet: Accelerating global high-resolution weather forecasting using adaptive fourier neural
+operators. [arXiv:2208.05419](https://arxiv.org/abs/2208.05419) [physics.ao-ph] (2022).
+
+[Google
+Scholar](https://scholar.google.com/scholar?q=T.+Kurth%2C+S.+Subramanian%2C+P.+Harrington%2C+J.+Pathak%2C+M.+Mardani%2C+D.+Hall%2C+A.+Miele%2C+K.+Kashinath%2C+A.+Anandkumar%2C+FourCastNet%3A+Accelerating+global+high-
+resolution+weather+forecasting+using+adaptive+fourier+neural+operators.+arXiv%3A2208.05419+%5Bphysics.ao-
+ph%5D+%282022%29.)
+
+16
+
+K. Bi, L. Xie, H. Zhang, X. Chen, X. Gu, Q. Tian, Pangu-Weather: A 3D high-resolution model for fast and
+accurate global weather forecast. [arXiv:2211.02556](https://arxiv.org/abs/2211.02556) [physics.ao-ph] (2022).
+
+[Google
+Scholar](https://scholar.google.com/scholar?q=K.+Bi%2C+L.+Xie%2C+H.+Zhang%2C+X.+Chen%2C+X.+Gu%2C+Q.+Tian%2C+Pangu-
+Weather%3A+A+3D+high-
+resolution+model+for+fast+and+accurate+global+weather+forecast.+arXiv%3A2211.02556+%5Bphysics.ao-
+ph%5D+%282022%29.)
+
+17
+
+P. W. Battaglia, J. B. Hamrick, V. Bapst, A. Sanchez-Gonzalez, V. Zambaldi, M. Malinowski, A. Tacchetti, D.
+Raposo, A. Santoro, R. Faulkner, C. Gulcehre, F. Song, A. Ballard, J. Gilmer, G. Dahl, A. Vaswani, K. Allen,
+C. Nash, V. Langston, C. Dyer, N. Heess, D. Wierstra, P. Kohli, M. Botvinick, O. Vinyals, Y. Li, R. Pascanu,
+Relational inductive biases, deep learning, and graph networks.
+[arXiv:1806.01261](https://arxiv.org/abs/1806.01261) [cs.LG] (2018).
+
+[Google
+Scholar](https://scholar.google.com/scholar?q=P.+W.+Battaglia%2C+J.+B.+Hamrick%2C+V.+Bapst%2C+A.+Sanchez-
+Gonzalez%2C+V.+Zambaldi%2C+M.+Malinowski%2C+A.+Tacchetti%2C+D.+Raposo%2C+A.+Santoro%2C+R.+Faulkner%2C+C.+Gulcehre%2C+F.+Song%2C+A.+Ballard%2C+J.+Gilmer%2C+G.+Dahl%2C+A.+Vaswani%2C+K.+Allen%2C+C.+Nash%2C+V.+Langston%2C+C.+Dyer%2C+N.+Heess%2C+D.+Wierstra%2C+P.+Kohli%2C+M.+Botvinick%2C+O.+Vinyals%2C+Y.+Li%2C+R.+Pascanu%2C+Relational+inductive+biases%2C+deep+learning%2C+and+graph+networks.+arXiv%3A1806.01261+%5Bcs.LG%5D+%282018%29.)
+
+18
+
+A. Sanchez-Gonzalez, J. Godwin, T. Pfaff, R. Ying, J. Leskovec, P. Battaglia, Learning to simulate complex
+physics with graph networks. _Proc. Mach. Learn. Res._**119** , 8459–8468 (2020).
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=Learning+to+simulate+complex+physics+with+graph+networks&author=A.+Sanchez-
+Gonzalez&author=J.+Godwin&author=T.+Pfaff&author=R.+Ying&author=J.+Leskovec&author=P.+Battaglia&publication_year=2020&journal=Proc.+Mach.+Learn.+Res.&pages=8459-8468)
+
+19
+
+T. Pfaff, M. Fortunato, A. Sanchez-Gonzalez, P. Battaglia, “Learning mesh-based simulation with graph
+networks,” International Conference on Learning Representations (ICLR 2021), 3 to 7 May 2021.
+
+[Google Scholar](https://scholar.google.com/scholar?q=T.+Pfaff%2C+M.+Fortunato%2C+A.+Sanchez-
+Gonzalez%2C+P.+Battaglia%2C+%E2%80%9CLearning+mesh-
+based+simulation+with+graph+networks%2C%E2%80%9D+International+Conference+on+Learning+Representations+%28ICLR+2021%29%2C+3+to+7+May+2021.)
+
+20
+
+F. Alet, A. K. Jeewajee, M. B. Villalonga, A. Rodriguez, T. Lozano-Perez, L. Kaelbling, Graph element
+networks: adaptive, structured computation and memory. _Proc. Mach. Learn. Res._**97** , 212–222 (2019).
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=Graph+element+networks%3A+adaptive%2C+structured+computation+and+memory&author=F.+Alet&author=A.+K.+Jeewajee&author=M.+B.+Villalonga&author=A.+Rodriguez&author=T.+Lozano-
+Perez&author=L.+Kaelbling&publication_year=2019&journal=Proc.+Mach.+Learn.+Res.&pages=212-222)
+
+21
+
+H. Hersbach, B. Bell, P. Berrisford, S. Hirahara, A. Horányi, J. Muñoz-Sabater, J. Nicolas, C. Peubey, R.
+Radu, D. Schepers, A. Simmons, C. Soci, S. Abdalla, X. Abellan, G. Balsamo, P. Bechtold, G. Biavati, J.
+Bidlot, M. Bonavita, G. De Chiara, P. Dahlgren, D. Dee, M. Diamantakis, R. Dragani, J. Flemming, R. Forbes, M.
+Fuentes, A. Geer, L. Haimberger, S. Healy, R. J. Hogan, E. Hólm, M. Janisková, S. Keeley, P. Laloyaux, P.
+Lopez, C. Lupu, G. Radnoti, P. de Rosnay, I. Rozum, F. Vamborg, S. Villaume, J.-N. Thépaut, The ERA5 global
+reanalysis. _Q. J. R. Meteorol. Soc._**146** , 1999–2049 (2020).
+
+[Crossref](https://doi.org/10.1002/qj.3803)
+
+[ISI](https://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&DestApp=WOS_CPL&UsrCustomerID=5e3815c904498985e796fc91436abd9a&SrcAuth=atyponcel&SrcApp=literatum&DestLinkType=FullRecord&KeyUT=000540214600001)
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=The+ERA5+global+reanalysis&author=H.+Hersbach&author=B.+Bell&author=P.+Berrisford&author=S.+Hirahara&author=A.+Hor%C3%A1nyi&author=J.+Mu%C3%B1oz-
+Sabater&author=J.+Nicolas&author=C.+Peubey&author=R.+Radu&author=D.+Schepers&author=A.+Simmons&author=C.+Soci&publication_year=2020&journal=Q.+J.+R.+Meteorol.+Soc.&pages=1999-2049&doi=10.1002%2Fqj.3803)
+
+22
+
+P. Werbos, Backpropagation through time: What it does and how to do it. _Proc. IEEE_**78** , 1550–1560 (1990).
+
+[Crossref](https://doi.org/10.1109/5.58337)
+
+[ISI](https://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&DestApp=WOS_CPL&UsrCustomerID=5e3815c904498985e796fc91436abd9a&SrcAuth=atyponcel&SrcApp=literatum&DestLinkType=FullRecord&KeyUT=A1990ED76600002)
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=Backpropagation+through+time%3A+What+it+does+and+how+to+do+it&author=P.+Werbos&publication_year=1990&journal=Proc.+IEEE&pages=1550-1560&doi=10.1109%2F5.58337)
+
+23
+
+Because precipitation in ERA5 has known biases (_39_), no development decision for GraphCast was made to
+improve performance on precipitation and GraphCast simply uses precipitation as an auxiliary input/output.
+Note that precipitation is sparse and non-Gaussian and would have possibly required different modeling
+decisions than the other variables. Additionally, precipitation is not available in the HRES analysis products
+in a form amenable to our evaluation protocol (see next paragraphs). Thus, any claim about precipitation
+prediction is left out of the scope of this work, and we show precipitation evaluation using a different
+protocol in supplementary materials section 7.1.4 for completeness only.
+
+24
+
+T. Haiden, M. Janousek, J. Bidlot, R. Buizza, L. Ferranti, F. Prates, F. Vitart, “Evaluation of ECMWF
+forecasts, including the 2018 upgrade,” ECMWF Technical Memorandum No. 831 (European Centre for Medium-Range
+Weather Forecasts, 2018); <https://doi.org/10.21957/ldw15ckqi>.
+
+[Google Scholar](https://scholar.google.com/scholar_lookup?doi=10.21957%2Fldw15ckqi)
+
+25
+
+A. B. Martinez, Forecast accuracy matters for hurricane damage. _Econometrics_**8** , 18 (2020).
+
+[Crossref](https://doi.org/10.3390/econometrics8020018)
+
+[ISI](https://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&DestApp=WOS_CPL&UsrCustomerID=5e3815c904498985e796fc91436abd9a&SrcAuth=atyponcel&SrcApp=literatum&DestLinkType=FullRecord&KeyUT=000551255800013)
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=Forecast+accuracy+matters+for+hurricane+damage&author=A.+B.+Martinez&publication_year=2020&journal=Econometrics&pages=18&doi=10.3390%2Feconometrics8020018)
+
+26
+
+L. Magnusson, S. Majumdar, R. Emerton, D. Richardson, M. Alonso-Balmaseda, C. Baugh, P. Bechtold, J. Bidlot,
+A. Bonanni, M. Bonavita, N. Bormann, A. Brown, P. Browne, H. Carr, M. Dahoui, G. De Chiara, M. Diamantakis, D.
+Duncan, S. English, R. Forbes, A. Geer, T. Haiden, S. Healy, T. Hewson, B. Ingleby, M. Janousek, C. Kuehnlein,
+S. Lang, S.-J. Lock, T. McNally, K. Mogensen, F. Pappenberger, I. Polichtchouk, F. Prates, C. Prudhomme, F.
+Rabier, P. de Rosnay, T. Quintino, M. Rennie, H. Titley, F. Vana, F. Vitart, F. Warrick, N. Wedi, E. Zsoter,
+“Tropical cyclone activities at ECMWF,” ECMWF Technical Memorandum No. 888 (European Centre for Medium-Range
+Weather Forecasts, 2021); <https://doi.org/10.21957/zzxzzygwv>.
+
+[Google Scholar](https://scholar.google.com/scholar_lookup?doi=10.21957%2Fzzxzzygwv)
+
+27
+
+P. Bougeault, Z. Toth, C. Bishop, B. Brown, D. Burridge, D. H. Chen, B. Ebert, M. Fuentes, T. M. Hamill, K.
+Mylne, J. Nicolau, T. Paccagnella, Y.-Y. Park, D. Parsons, B. Raoult, D. Schuster, P. S. Dias, R. Swinbank, Y.
+Takeuchi, W. Tennant, L. Wilson, S. Worley, The THORPEX interactive grand global ensemble. _Bull. Am.
+Meteorol. Soc._**91** , 1059–1072 (2010).
+
+[Crossref](https://doi.org/10.1175/2010BAMS2853.1)
+
+[ISI](https://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&DestApp=WOS_CPL&UsrCustomerID=5e3815c904498985e796fc91436abd9a&SrcAuth=atyponcel&SrcApp=literatum&DestLinkType=FullRecord&KeyUT=000281704700005)
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=The+THORPEX+interactive+grand+global+ensemble&author=P.+Bougeault&author=Z.+Toth&author=C.+Bishop&author=B.+Brown&author=D.+Burridge&author=D.+H.+Chen&author=B.+Ebert&author=M.+Fuentes&author=T.+M.+Hamill&author=K.+Mylne&author=J.+Nicolau&author=T.+Paccagnella&publication_year=2010&journal=Bull.+Am.+Meteorol.+Soc.&pages=1059-1072&doi=10.1175%2F2010BAMS2853.1)
+
+28
+
+R. Swinbank, M. Kyouda, P. Buchanan, L. Froude, T. M. Hamill, T. D. Hewson, J. H. Keller, M. Matsueda, J.
+Methven, F. Pappenberger, M. Scheuerer, H. A. Titley, L. Wilson, M. Yamaguchi, The TIGGE project and its
+achievements. _Bull. Am. Meteorol. Soc._**97** , 49–67 (2016).
+
+[Crossref](https://doi.org/10.1175/BAMS-D-13-00191.1)
+
+[ISI](https://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&DestApp=WOS_CPL&UsrCustomerID=5e3815c904498985e796fc91436abd9a&SrcAuth=atyponcel&SrcApp=literatum&DestLinkType=FullRecord&KeyUT=000370066100004)
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=The+TIGGE+project+and+its+achievements&author=R.+Swinbank&author=M.+Kyouda&author=P.+Buchanan&author=L.+Froude&author=T.+M.+Hamill&author=T.+D.+Hewson&author=J.+H.+Keller&author=M.+Matsueda&author=J.+Methven&author=F.+Pappenberger&author=M.+Scheuerer&author=H.+A.+Titley&publication_year=2016&journal=Bull.+Am.+Meteorol.+Soc.&pages=49-67&doi=10.1175%2FBAMS-D-13-00191.1)
+
+29
+
+K. R. Knapp, M. C. Kruk, D. H. Levinson, H. J. Diamond, C. J. Neumann, The international best track archive
+for climate stewardship (IBTrACS) unifying tropical cyclone data. _Bull. Am. Meteorol. Soc._**91** , 363–376
+(2010).
+
+[Crossref](https://doi.org/10.1175/2009BAMS2755.1)
+
+[ISI](https://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&DestApp=WOS_CPL&UsrCustomerID=5e3815c904498985e796fc91436abd9a&SrcAuth=atyponcel&SrcApp=literatum&DestLinkType=FullRecord&KeyUT=000276843400006)
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=The+international+best+track+archive+for+climate+stewardship+%28IBTrACS%29+unifying+tropical+cyclone+data&author=K.+R.+Knapp&author=M.+C.+Kruk&author=D.+H.+Levinson&author=H.+J.+Diamond&author=C.+J.+Neumann&publication_year=2010&journal=Bull.+Am.+Meteorol.+Soc.&pages=363-376&doi=10.1175%2F2009BAMS2755.1)
+
+30
+
+K. R. Knapp, H. J. Diamond, J. P. Kossin, M. C. Kruk, C. J. Schreck III, International Best Track Archive for
+Climate Stewardship (IBTrACS) Project, version 4, NOAA National Centers for Environmental Information (2018);
+<https://doi.org/10.25921/82ty-9e16>.
+
+[Google Scholar](https://scholar.google.com/scholar_lookup?doi=10.25921%2F82ty-9e16)
+
+31
+
+W. Chapman, A. Subramanian, L. Delle Monache, S. Xie, F. Ralph, Improving atmospheric river forecasts with
+machine learning. _Geophys. Res. Lett._**46** , 10627–10635 (2019).
+
+[Crossref](https://doi.org/10.1029/2019GL083662)
+
+[ISI](https://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&DestApp=WOS_CPL&UsrCustomerID=5e3815c904498985e796fc91436abd9a&SrcAuth=atyponcel&SrcApp=literatum&DestLinkType=FullRecord&KeyUT=000485374700001)
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=Improving+atmospheric+river+forecasts+with+machine+learning&author=W.+Chapman&author=A.+Subramanian&author=L.+Delle+Monache&author=S.+Xie&author=F.+Ralph&publication_year=2019&journal=Geophys.+Res.+Lett.&pages=10627-10635&doi=10.1029%2F2019GL083662)
+
+32
+
+P. J. Neiman, F. M. Ralph, G. A. Wick, J. D. Lundquist, M. D. Dettinger, Meteorological characteristics and
+overland precipitation impacts of atmospheric rivers affecting the west coast of North America based on eight
+years of SSM/I satellite observations. _J. Hydrometeorol._**9** , 22–47 (2008).
+
+[Crossref](https://doi.org/10.1175/2007JHM855.1)
+
+[ISI](https://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&DestApp=WOS_CPL&UsrCustomerID=5e3815c904498985e796fc91436abd9a&SrcAuth=atyponcel&SrcApp=literatum&DestLinkType=FullRecord&KeyUT=000253317200002)
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=Meteorological+characteristics+and+overland+precipitation+impacts+of+atmospheric+rivers+affecting+the+west+coast+of+North+America+based+on+eight+years+of+SSM%2FI+satellite+observations&author=P.+J.+Neiman&author=F.+M.+Ralph&author=G.+A.+Wick&author=J.+D.+Lundquist&author=M.+D.+Dettinger&publication_year=2008&journal=J.+Hydrometeorol.&pages=22-47&doi=10.1175%2F2007JHM855.1)
+
+33
+
+B. J. Moore, P. J. Neiman, F. M. Ralph, F. E. Barthold, Physical processes associated with heavy flooding
+rainfall in Nashville, Tennessee, and vicinity during 1–2 May 2010: The role of an atmospheric river and
+mesoscale convective systems. _Mon. Weather Rev._**140** , 358–378 (2012).
+
+[Crossref](https://doi.org/10.1175/MWR-D-11-00126.1)
+
+[ISI](https://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&DestApp=WOS_CPL&UsrCustomerID=5e3815c904498985e796fc91436abd9a&SrcAuth=atyponcel&SrcApp=literatum&DestLinkType=FullRecord&KeyUT=000299850300003)
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=Physical+processes+associated+with+heavy+flooding+rainfall+in+Nashville%2C+Tennessee%2C+and+vicinity+during+1%E2%80%932+May+2010%3A+The+role+of+an+atmospheric+river+and+mesoscale+convective+systems&author=B.+J.+Moore&author=P.+J.+Neiman&author=F.+M.+Ralph&author=F.+E.+Barthold&publication_year=2012&journal=Mon.+Weather+Rev.&pages=358-378&doi=10.1175%2FMWR-D-11-00126.1)
+
+34
+
+T. W. Corringham, F. M. Ralph, A. Gershunov, D. R. Cayan, C. A. Talbot, Atmospheric rivers drive flood damages
+in the western United States. _Sci. Adv._**5** , eaax4631 (2019).
+
+[Crossref](https://doi.org/10.1126/sciadv.aax4631)
+
+[PubMed](https://www.ncbi.nlm.nih.gov/pubmed/31840064)
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=Atmospheric+rivers+drive+flood+damages+in+the+western+United+States&author=T.+W.+Corringham&author=F.+M.+Ralph&author=A.+Gershunov&author=D.+R.+Cayan&author=C.+A.+Talbot&publication_year=2019&journal=Sci.+Adv.&doi=10.1126%2Fsciadv.aax4631&pmid=31840064)
+
+35
+
+L. Magnusson, T. Haiden, D. Richardson, “Verification of extreme weather events: Discrete predictands,” ECMWF
+Technical Memorandum No. 731 (European Centre for Medium-Range Weather Forecasts, 2014);
+<https://doi.org/10.21957/1iql31n2c>.
+
+[Google Scholar](https://scholar.google.com/scholar_lookup?doi=10.21957%2F1iql31n2c)
+
+36
+
+L. Magnusson, ECMWF confluence wiki: 202208 - Heatwave - UK (2022);
+<https://confluence.ecmwf.int/display/FCST/202208+-+Heatwave+-+UK>.
+
+[Google
+Scholar](https://scholar.google.com/scholar?q=L.+Magnusson%2C+ECMWF+confluence+wiki%3A+202208+-+Heatwave+-+UK+%282022%29%3B+https%3A%2F%2Fconfluence.ecmwf.int%2Fdisplay%2FFCST%2F202208%2B-%2BHeatwave%2B-%2BUK.)
+
+37
+
+T. Saito, M. Rehmsmeier, The precision-recall plot is more informative than the ROC plot when evaluating
+binary classifiers on imbalanced datasets. _PLOS ONE_**10** , e0118432 (2015).
+
+[Crossref](https://doi.org/10.1371/journal.pone.0118432)
+
+[PubMed](https://www.ncbi.nlm.nih.gov/pubmed/25738806)
+
+[ISI](https://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&DestApp=WOS_CPL&UsrCustomerID=5e3815c904498985e796fc91436abd9a&SrcAuth=atyponcel&SrcApp=literatum&DestLinkType=FullRecord&KeyUT=000350685900033)
+
+[Google Scholar](https://scholar.google.com/scholar_lookup?title=The+precision-
+recall+plot+is+more+informative+than+the+ROC+plot+when+evaluating+binary+classifiers+on+imbalanced+datasets&author=T.+Saito&author=M.+Rehmsmeier&publication_year=2015&journal=PLOS+ONE&doi=10.1371%2Fjournal.pone.0118432&pmid=25738806)
+
+38
+
+C. Maass, E. Cuartero, MARS user documentation (2022);
+<https://confluence.ecmwf.int/display/UDOC/MARS+user+documentation>.
+
+[Google
+Scholar](https://scholar.google.com/scholar?q=C.+Maass%2C+E.+Cuartero%2C+MARS+user+documentation+%282022%29%3B+https%3A%2F%2Fconfluence.ecmwf.int%2Fdisplay%2FUDOC%2FMARS%2Buser%2Bdocumentation.)
+
+39
+
+D. A. Lavers, A. Simmons, F. Vamborg, M. J. Rodwell, An evaluation of ERA5 precipitation for climate
+monitoring. _Q. J. R. Meteorol. Soc._**148** , 3152–3165 (2022).
+
+[Crossref](https://doi.org/10.1002/qj.4351)
+
+[ISI](https://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&DestApp=WOS_CPL&UsrCustomerID=5e3815c904498985e796fc91436abd9a&SrcAuth=atyponcel&SrcApp=literatum&DestLinkType=FullRecord&KeyUT=000842479800001)
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=An+evaluation+of+ERA5+precipitation+for+climate+monitoring&author=D.+A.+Lavers&author=A.+Simmons&author=F.+Vamborg&author=M.+J.+Rodwell&publication_year=2022&journal=Q.+J.+R.+Meteorol.+Soc.&pages=3152-3165&doi=10.1002%2Fqj.4351)
+
+40
+
+D. Fan, G. Jodin, T. R. Consi, L. Bonfiglio, Y. Ma, L. R. Keyes, G. E. Karniadakis, M. S. Triantafyllou, A
+robotic Intelligent Towing Tank for learning complex fluid-structure dynamics. _Sci. Robot._**4** , eaay5063
+(2019).
+
+[Crossref](https://doi.org/10.1126/scirobotics.aay5063)
+
+[PubMed](https://www.ncbi.nlm.nih.gov/pubmed/33137735)
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=A+robotic+Intelligent+Towing+Tank+for+learning+complex+fluid-
+structure+dynamics&author=D.+Fan&author=G.+Jodin&author=T.+R.+Consi&author=L.+Bonfiglio&author=Y.+Ma&author=L.+R.+Keyes&author=G.+E.+Karniadakis&author=M.+S.+Triantafyllou&publication_year=2019&journal=Sci.+Robot.&doi=10.1126%2Fscirobotics.aay5063&pmid=33137735)
+
+41
+
+T. Ewalds, Source code for GraphCast, google-deepmind/graphcast: Version 0.1, Zenodo (2023);
+<https://doi.org/10.5281/zenodo.10058758>.
+
+[Google Scholar](https://scholar.google.com/scholar_lookup?doi=10.5281%2Fzenodo.10058758)
+
+42
+
+S. Malardel, N. Wedi, W. Deconinck, M. Diamantakis, C. Kuehnlein, G. Mozdzynski, M. Hamrud, P. Smolarkiewicz,
+“A new grid for the IFS,” _ECMWF Newsletter_ , No. 146, Winter 2015/16, pp. 23–28 (European Centre for Medium-
+Range Weather Forecasts, 2016); <https://doi.org/10.21957/zwdu9u5i>.
+
+[Google Scholar](https://scholar.google.com/scholar_lookup?doi=10.21957%2Fzwdu9u5i)
+
+43
+
+D. H. Levinson, H. J. Diamond, K. R. Knapp, M. C. Kruk, E. J. Gibney, Toward a homogenous global tropical
+cyclone best-track dataset. _Bull. Am. Meteorol. Soc._**91** , 377–380 (2010).
+
+[ISI](https://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&DestApp=WOS_CPL&UsrCustomerID=5e3815c904498985e796fc91436abd9a&SrcAuth=atyponcel&SrcApp=literatum&DestLinkType=FullRecord&KeyUT=000276843400007)
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=Toward+a+homogenous+global+tropical+cyclone+best-
+track+dataset&author=D.+H.+Levinson&author=H.+J.+Diamond&author=K.+R.+Knapp&author=M.+C.+Kruk&author=E.+J.+Gibney&publication_year=2010&journal=Bull.+Am.+Meteorol.+Soc.&pages=377-380)
+
+44
+
+M. C. Kruk, K. R. Knapp, D. H. Levinson, A technique for combining global tropical cyclone best track data.
+_J. Atmos. Ocean. Technol._**27** , 680–692 (2010).
+
+[Crossref](https://doi.org/10.1175/2009JTECHA1267.1)
+
+[ISI](https://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&DestApp=WOS_CPL&UsrCustomerID=5e3815c904498985e796fc91436abd9a&SrcAuth=atyponcel&SrcApp=literatum&DestLinkType=FullRecord&KeyUT=000276631700005)
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=A+technique+for+combining+global+tropical+cyclone+best+track+data&author=M.+C.+Kruk&author=K.+R.+Knapp&author=D.+H.+Levinson&publication_year=2010&journal=J.+Atmos.+Ocean.+Technol.&pages=680-692&doi=10.1175%2F2009JTECHA1267.1)
+
+45
+
+A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, Ł. Kaiser, I. Polosukhin, Attention is
+all you need. _Adv. Neural Inf. Process. Syst._**30** , 5998–6008 (2017).
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=Attention+is+all+you+need&author=A.+Vaswani&author=N.+Shazeer&author=N.+Parmar&author=J.+Uszkoreit&author=L.+Jones&author=A.+N.+Gomez&author=%C5%81.+Kaiser&author=I.+Polosukhin&publication_year=2017&journal=Adv.+Neural+Inf.+Process.+Syst.&pages=5998-6008)
+
+46
+
+P. Veličković, G. Cucurull, A. Casanova, A. Romero, P. Liò, Y. Bengio, Graph attention networks.
+[arXiv:1710.10903](https://arxiv.org/abs/1710.10903) [stat.ML] (2017).
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=Graph+attention+networks&author=P.+Veli%C4%8Dkovi%C4%87&author=G.+Cucurull&author=A.+Casanova&author=A.+Romero&author=P.+Li%C3%B2&author=Y.+Bengio&publication_year=2017)
+
+47
+
+M. Fortunato, T. Pfaff, P. Wirnsberger, A. Pritzel, P. Battaglia, Multiscale MeshGraphNets.
+[arXiv:2210.00612](https://arxiv.org/abs/2210.00612) [cs.LG] (2022).
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=Multiscale+MeshGraphNets&author=M.+Fortunato&author=T.+Pfaff&author=P.+Wirnsberger&author=A.+Pritzel&author=P.+Battaglia&publication_year=2022)
+
+48
+
+P. Battaglia, R. Pascanu, M. Lai, D. Jimenez Rezende, K. Kavukcuoglu, Interaction networks for learning about
+objects, relations and physics. _Adv. Neural Inf. Process. Syst._**29** , 4502–4510 (2016).
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=Interaction+networks+for+learning+about+objects%2C+relations+and+physics&author=P.+Battaglia&author=R.+Pascanu&author=M.+Lai&author=D.+Jimenez+Rezende&author=K.+Kavukcuoglu&publication_year=2016&journal=Adv.+Neural+Inf.+Process.+Syst.&pages=4502-4510)
+
+49
+
+K. R. Allen, Y. Rubanova, T. Lopez-Guevara, W. Whitney, A. Sanchez-Gonzalez, P. Battaglia, T. Pfaff, Learning
+rigid dynamics with face interaction graph networks. [arXiv:2212.03574](https://arxiv.org/abs/2212.03574)
+[cs.LG] (2022).
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=Learning+rigid+dynamics+with+face+interaction+graph+networks&author=K.+R.+Allen&author=Y.+Rubanova&author=T.+Lopez-
+Guevara&author=W.+Whitney&author=A.+Sanchez-
+Gonzalez&author=P.+Battaglia&author=T.+Pfaff&publication_year=2022)
+
+50
+
+P. Ramachandran, B. Zoph, Q. V. Le, Searching for activation functions.
+[arXiv:1710.05941](https://arxiv.org/abs/1710.05941) [cs.NE] (2017).
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=Searching+for+activation+functions&author=P.+Ramachandran&author=B.+Zoph&author=Q.+V.+Le&publication_year=2017)
+
+51
+
+J. L. Ba, J. R. Kiros, G. E. Hinton, Layer normalization. [arXiv:1607.06450](https://arxiv.org/abs/1607.06450)
+[stat.ML] (2016).
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=Layer+normalization&author=J.+L.+Ba&author=J.+R.+Kiros&author=G.+E.+Hinton&publication_year=2016)
+
+52
+
+B. Bell, H. Hersbach, A. Simmons, P. Berrisford, P. Dahlgren, A. Horányi, J. Muñoz-Sabater, J. Nicolas, R.
+Radu, D. Schepers, C. Soci, S. Villaume, J.-R. Bidlot, L. Haimberger, J. Woollen, C. Buontempo, J.-N. Thépaut,
+The ERA5 global reanalysis: Preliminary extension to 1950. _Q. J. R. Meteorol. Soc._**147** , 4186–4227
+(2021).
+
+[Crossref](https://doi.org/10.1002/qj.4174)
+
+[ISI](https://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&DestApp=WOS_CPL&UsrCustomerID=5e3815c904498985e796fc91436abd9a&SrcAuth=atyponcel&SrcApp=literatum&DestLinkType=FullRecord&KeyUT=000716200700001)
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=The+ERA5+global+reanalysis%3A+Preliminary+extension+to+1950&author=B.+Bell&author=H.+Hersbach&author=A.+Simmons&author=P.+Berrisford&author=P.+Dahlgren&author=A.+Hor%C3%A1nyi&author=J.+Mu%C3%B1oz-
+Sabater&author=J.+Nicolas&author=R.+Radu&author=D.+Schepers&author=C.+Soci&author=S.+Villaume&publication_year=2021&journal=Q.+J.+R.+Meteorol.+Soc.&pages=4186-4227&doi=10.1002%2Fqj.4174)
+
+53
+
+I. Loshchilov, F. Hutter, Decoupled weight decay regularization.
+[arXiv:1711.05101](https://arxiv.org/abs/1711.05101) [cs.LG] (2017).
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=Decoupled+weight+decay+regularization&author=I.+Loshchilov&author=F.+Hutter&publication_year=2017)
+
+54
+
+D. P. Kingma, J. Ba, Adam: A method for stochastic optimization.
+[arXiv:1412.6980](https://arxiv.org/abs/1412.6980) [cs.LG] (2014).
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=Adam%3A+A+method+for+stochastic+optimization&author=D.+P.+Kingma&author=J.+Ba&publication_year=2014)
+
+55
+
+I. Loshchilov, F. Hutter, SGDR: Stochastic Gradient Descent with Warm Restarts.
+[arXiv:1608.03983](https://arxiv.org/abs/1608.03983) [cs.LG] (2017).
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=SGDR%3A+Stochastic+Gradient+Descent+with+Warm+Restarts&author=I.+Loshchilov&author=F.+Hutter&publication_year=2017)
+
+56
+
+T. Chen, B. Xu, C. Zhang, C. Guestrin, Training deep nets with sublinear memory cost.
+[arXiv:1604.06174](https://arxiv.org/abs/1604.06174) [cs.LG] (2016).
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=Training+deep+nets+with+sublinear+memory+cost&author=T.+Chen&author=B.+Xu&author=C.+Zhang&author=C.+Guestrin&publication_year=2016)
+
+57
+
+J. Bradbury, R. Frostig, P. Hawkins, M. J. Johnson, C. Leary, D. Maclaurin, G. Necula, A. Paszke, J.
+VanderPlas, S. Wanderman-Milne, Q. Zhang, JAX: composable transformations of Python+NumPy programs (2018);
+<https://github.com/google/jax>.
+
+[Google
+Scholar](https://scholar.google.com/scholar?q=J.+Bradbury%2C+R.+Frostig%2C+P.+Hawkins%2C+M.+J.+Johnson%2C+C.+Leary%2C+D.+Maclaurin%2C+G.+Necula%2C+A.+Paszke%2C+J.+VanderPlas%2C+S.+Wanderman-
+Milne%2C+Q.+Zhang%2C+JAX%3A+composable+transformations+of+Python%2BNumPy+programs+%282018%29%3B+https%3A%2F%2Fgithub.com%2Fgoogle%2Fjax.)
+
+58
+
+T. Hennigan, T. Cai, T. Norman, I. Babuschkin, Haiku: Sonnet for JAX (2020); <http://github.com/deepmind/dm-
+haiku>.
+
+[Google
+Scholar](https://scholar.google.com/scholar?q=T.+Hennigan%2C+T.+Cai%2C+T.+Norman%2C+I.+Babuschkin%2C+Haiku%3A+Sonnet+for+JAX+%282020%29%3B+http%3A%2F%2Fgithub.com%2Fdeepmind%2Fdm-
+haiku.)
+
+59
+
+J. Godwin, T. Keck, P. Battaglia, V. Bapst, T. Kipf, Y. Li, K. Stachenfeld, P. Veličković, A. Sanchez-
+Gonzalez, Jraph: A library for graph neural networks in JAX (2020); <http://github.com/deepmind/jraph>.
+
+[Google
+Scholar](https://scholar.google.com/scholar?q=J.+Godwin%2C+T.+Keck%2C+P.+Battaglia%2C+V.+Bapst%2C+T.+Kipf%2C+Y.+Li%2C+K.+Stachenfeld%2C+P.+Veli%C4%8Dkovi%C4%87%2C+A.+Sanchez-
+Gonzalez%2C+Jraph%3A+A+library+for+graph+neural+networks+in+JAX+%282020%29%3B+http%3A%2F%2Fgithub.com%2Fdeepmind%2Fjraph.)
+
+60
+
+I. Babuschkin, K. Baumli, A. Bell, S. Bhupatiraju, J. Bruce, P. Buchlovsky, D. Budden, T. Cai, A. Clark, I.
+Danihelka, C. Fantacci, J. Godwin, C. Jones, R. Hemsley, T. Hennigan, M. Hessel, S. Hou, S. Kapturowski, T.
+Keck, I. Kemaev, M. King, M. Kunesch, L. Martens, H. Merzic, V. Mikulik, T. Norman, J. Quan, G. Papamakarios,
+R. Ring, F. Ruiz, A. Sanchez, R. Schneider, E. Sezener, S. Spencer, S. Srinivasan, L. Wang, W. Stokowiec, F.
+Viola, The DeepMind JAX Ecosystem (2020); <https://github.com/deepmind>.
+
+[Google
+Scholar](https://scholar.google.com/scholar?q=I.+Babuschkin%2C+K.+Baumli%2C+A.+Bell%2C+S.+Bhupatiraju%2C+J.+Bruce%2C+P.+Buchlovsky%2C+D.+Budden%2C+T.+Cai%2C+A.+Clark%2C+I.+Danihelka%2C+C.+Fantacci%2C+J.+Godwin%2C+C.+Jones%2C+R.+Hemsley%2C+T.+Hennigan%2C+M.+Hessel%2C+S.+Hou%2C+S.+Kapturowski%2C+T.+Keck%2C+I.+Kemaev%2C+M.+King%2C+M.+Kunesch%2C+L.+Martens%2C+H.+Merzic%2C+V.+Mikulik%2C+T.+Norman%2C+J.+Quan%2C+G.+Papamakarios%2C+R.+Ring%2C+F.+Ruiz%2C+A.+Sanchez%2C+R.+Schneider%2C+E.+Sezener%2C+S.+Spencer%2C+S.+Srinivasan%2C+L.+Wang%2C+W.+Stokowiec%2C+F.+Viola%2C+The+DeepMind+JAX+Ecosystem+%282020%29%3B+https%3A%2F%2Fgithub.com%2Fdeepmind.)
+
+61
+
+S. Hoyer, J. Hamman, xarray: N-D labeled arrays and datasets in Python. _J. Open Res. Softw._**5** , 10
+(2017).
+
+[Crossref](https://doi.org/10.5334/jors.148)
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=xarray%3A+N-D+labeled+arrays+and+datasets+in+Python&author=S.+Hoyer&author=J.+Hamman&publication_year=2017&journal=J.+Open+Res.+Softw.&pages=10&doi=10.5334%2Fjors.148)
+
+62
+
+ECMWF, IFS Documentation CY45R1 – Part II: Data assimilation (European Centre for Medium-Range Weather
+Forecasts, 2018); .
+
+[Crossref](https://doi.org/10.21957/a3ri44ig4)
+
+[Google Scholar](https://scholar.google.com/scholar_lookup?doi=10.21957%2Fa3ri44ig4)
+
+63
+
+J. R. Driscoll, D. M. Healy, Computing fourier transforms and convolutions on the 2-sphere. _Adv. Appl.
+Math._**15** , 202–250 (1994).
+
+[Crossref](https://doi.org/10.1006/aama.1994.1008)
+
+[ISI](https://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&DestApp=WOS_CPL&UsrCustomerID=5e3815c904498985e796fc91436abd9a&SrcAuth=atyponcel&SrcApp=literatum&DestLinkType=FullRecord&KeyUT=A1994NQ96700004)
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=Computing+fourier+transforms+and+convolutions+on+the+2-sphere&author=J.+R.+Driscoll&author=D.+M.+Healy&publication_year=1994&journal=Adv.+Appl.+Math.&pages=202-250&doi=10.1006%2Faama.1994.1008)
+
+64
+
+A. J. Geer, Significance of changes in medium-range forecast scores. _Tellus A Dyn. Meterol. Oceanogr._**68**
+, 30229 (2016).
+
+[Crossref](https://doi.org/10.3402/tellusa.v68.30229)
+
+[ISI](https://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&DestApp=WOS_CPL&UsrCustomerID=5e3815c904498985e796fc91436abd9a&SrcAuth=atyponcel&SrcApp=literatum&DestLinkType=FullRecord&KeyUT=000395906300001)
+
+[Google Scholar](https://scholar.google.com/scholar_lookup?title=Significance+of+changes+in+medium-
+range+forecast+scores&author=A.+J.+Geer&publication_year=2016&journal=Tellus+A+Dyn.+Meterol.+Oceanogr.&pages=30229&doi=10.3402%2Ftellusa.v68.30229)
+
+65
+
+T. Haiden, M. Janousek, F. Vitart, L. Ferranti, F. Prates, “Evaluation of ECMWF forecasts, including the 2019
+upgrade,” ECMWF Technical Memorandum No. 853 (European Centre for Medium-Range Weather Forecasts, 2019); .
+
+[Crossref](https://doi.org/10.21957/mlvapkke)
+
+[Google Scholar](https://scholar.google.com/scholar_lookup?doi=10.21957%2Fmlvapkke)
+
+66
+
+T. Haiden, M. Janousek, F. Vitart, Z. Ben-Bouallegue, L. Ferranti, C. Prates, D. Richardson, “Evaluation of
+ECMWF forecasts, including the 2020 upgrade,” ECMWF Technical Memorandum No. 880 (European Centre for Medium-
+Range Weather Forecasts, 2021); <https://doi.org/10.21957/6njp8byz4>.
+
+[Google Scholar](https://scholar.google.com/scholar_lookup?doi=10.21957%2F6njp8byz4)
+
+67
+
+T. Haiden, M. Janousek, F. Vitart, Z. Ben-Bouallegue, L. Ferranti, F. Prates, “Evaluation of ECMWF forecasts,
+including the 2021 upgrade,” ECMWF Technical Memorandum No. 884 (European Centre for Medium-Range Weather
+Forecasts, 2021); <https://doi.org/10.21957/90pgicjk4>.
+
+[Google Scholar](https://scholar.google.com/scholar_lookup?doi=10.21957%2F90pgicjk4)
+
+68
+
+T. Haiden, M. Janousek, F. Vitart, Z. Ben-Bouallegue, L. Ferranti, F. Prates, D. Richardson, “Evaluation of
+ECMWF forecasts, including the 2021 upgrade,” ECMWF Technical Memorandum No. 902 (European Centre for Medium-
+Range Weather Forecasts, 2022); <https://doi.org/10.21957/xqnu5o3p>.
+
+[Google Scholar](https://scholar.google.com/scholar_lookup?doi=10.21957%2Fxqnu5o3p)
+
+69
+
+M. J. Rodwell, D. S. Richardson, T. D. Hewson, T. Haiden, A new equitable score suitable for verifying
+precipitation in numerical weather prediction. _Q. J. R. Meteorol. Soc._**136** , 1344–1363 (2010).
+
+[Crossref](https://doi.org/10.1002/qj.656)
+
+[ISI](https://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&DestApp=WOS_CPL&UsrCustomerID=5e3815c904498985e796fc91436abd9a&SrcAuth=atyponcel&SrcApp=literatum&DestLinkType=FullRecord&KeyUT=000281403100018)
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=A+new+equitable+score+suitable+for+verifying+precipitation+in+numerical+weather+prediction&author=M.+J.+Rodwell&author=D.+S.+Richardson&author=T.+D.+Hewson&author=T.+Haiden&publication_year=2010&journal=Q.+J.+R.+Meteorol.+Soc.&pages=1344-1363&doi=10.1002%2Fqj.656)
+
+70
+
+T. Haiden, M. J. Rodwell, D. S. Richardson, A. Okagaki, T. Robinson, T. Hewson, Intercomparison of global
+model precipitation forecast skill in 2010/11 using the seeps score. _Mon. Weather Rev._**140** , 2720–2733
+(2012).
+
+[Crossref](https://doi.org/10.1175/MWR-D-11-00301.1)
+
+[ISI](https://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&DestApp=WOS_CPL&UsrCustomerID=5e3815c904498985e796fc91436abd9a&SrcAuth=atyponcel&SrcApp=literatum&DestLinkType=FullRecord&KeyUT=000307086800018)
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=Intercomparison+of+global+model+precipitation+forecast+skill+in+2010%2F11+using+the+seeps+score&author=T.+Haiden&author=M.+J.+Rodwell&author=D.+S.+Richardson&author=A.+Okagaki&author=T.+Robinson&author=T.+Hewson&publication_year=2012&journal=Mon.+Weather+Rev.&pages=2720-2733&doi=10.1175%2FMWR-D-11-00301.1)
+
+71
+
+R. North, M. Trueman, M. Mittermaier, M. J. Rodwell, An assessment of the SEEPS and SEDI metrics for the
+verification of 6 h forecast precipitation accumulations. _Meteorol. Appl._**20** , 164–175 (2013).
+
+[Crossref](https://doi.org/10.1002/met.1405)
+
+[ISI](https://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&DestApp=WOS_CPL&UsrCustomerID=5e3815c904498985e796fc91436abd9a&SrcAuth=atyponcel&SrcApp=literatum&DestLinkType=FullRecord&KeyUT=000320172000005)
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=An+assessment+of+the+SEEPS+and+SEDI+metrics+for+the+verification+of+6+h+forecast+precipitation+accumulations&author=R.+North&author=M.+Trueman&author=M.+Mittermaier&author=M.+J.+Rodwell&publication_year=2013&journal=Meteorol.+Appl.&pages=164-175&doi=10.1002%2Fmet.1405)
+
+72
+
+B. D. Santer, R. Sausen, T. M. L. Wigley, J. S. Boyle, K. AchutaRao, C. Doutriaux, J. E. Hansen, G. A. Meehl,
+E. Roeckner, R. Ruedy, G. Schmidt, K. E. Taylor, Behavior of tropopause height and atmospheric temperature in
+models, reanalyses, and observations: Decadal changes. _J. Geophys. Res._**108** , ACL 1-1–ACL 1-22 (2003).
+
+[Crossref](https://doi.org/10.1029/2002JD002258)
+
+[ISI](https://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&DestApp=WOS_CPL&UsrCustomerID=5e3815c904498985e796fc91436abd9a&SrcAuth=atyponcel&SrcApp=literatum&DestLinkType=FullRecord&KeyUT=000181498500002)
+
+[Google
+Scholar](https://scholar.google.com/scholar_lookup?title=Behavior+of+tropopause+height+and+atmospheric+temperature+in+models%2C+reanalyses%2C+and+observations%3A+Decadal+changes&author=B.+D.+Santer&author=R.+Sausen&author=T.+M.+L.+Wigley&author=J.+S.+Boyle&author=K.+AchutaRao&author=C.+Doutriaux&author=J.+E.+Hansen&author=G.+A.+Meehl&author=E.+Roeckner&author=R.+Ruedy&author=G.+Schmidt&author=K.+E.+Taylor&publication_year=2003&journal=J.+Geophys.+Res.&pages=ACL+1-1-ACL+1-22&doi=10.1029%2F2002JD002258)
+
+73
+
+ECMWF, IFS Documentation CY41R2 – Part III: Dynamics and numerical procedures (European Centre for Medium-
+Range Weather Forecasts, 2016); <https://doi.org/10.21957/83wouv80>.
+
+[Google Scholar](https://scholar.google.com/scholar_lookup?doi=10.21957%2F83wouv80)
+
+74
+
+B. Devaraju, “Understanding filtering on the sphere: Experiences from filtering GRACE data,” thesis,
+University of Stuttgart (2015).
+
+[Google
+Scholar](https://scholar.google.com/scholar?q=B.+Devaraju%2C+%E2%80%9CUnderstanding+filtering+on+the+sphere%3A+Experiences+from+filtering+GRACE+data%2C%E2%80%9D+thesis%2C+University+of+Stuttgart+%282015%29.)
+
+75
+
+H. T. Taylor, B. Ward, M. Willis, W. Zaleski, “The Saffir-Simpson hurricane wind scale” (Atmospheric
+Administration, Washington, DC, USA, 2010).
+
+[Google
+Scholar](https://scholar.google.com/scholar?q=H.+T.+Taylor%2C+B.+Ward%2C+M.+Willis%2C+W.+Zaleski%2C+%E2%80%9CThe+Saffir-
+Simpson+hurricane+wind+scale%E2%80%9D+%28Atmospheric+Administration%2C+Washington%2C+DC%2C+USA%2C+2010%29.)
+
+### Submit a Response to This Article
+
+×
+
+##### Compose eLetter
+
+Title:
+
+Title is required
+
+Contents:
+
+##### Contributors
+
+remove contributor __
+
+First name:
+
+Last name:
+
+Email:
+
+Role/occupation:
+
+affiliation:
+
+add another contributor
+
+##### Statement of Competing Interests
+
+Competing interests?
+
+YES
+
+NO
+
+Please describe the competing interests
+
+CANCELSUBMIT
+
+## (0)eLetters
+
+eLetters is a forum for ongoing peer review. eLetters are not edited, proofread, or indexed, but they are
+screened. eLetters should provide substantive and scholarly commentary on the article. Embedded figures cannot
+be submitted, and we discourage the use of figures within eLetters in general. If a figure is essential,
+please include a link to the figure within the text of the eLetter. Please read our [Terms of
+Service](/content/page/terms-service) before submitting an eLetter.
+
+[Log In to Submit a Response](/action/ssostart?redirectUri=/doi/full/10.1126/science.adi2336)
+
+No eLetters have been published for this article yet.
+
+## __Information & Authors
+
+### Information
+
+#### Published In
+
+Science
+
+First Release
+
+#### Copyright
+
+Copyright © 2023 The Authors, some rights reserved; exclusive licensee American Association for the
+Advancement of Science. No claim to original U.S. Government Works.
+
+#### Article versions
+
+#### Submission history
+
+**Received** : 18 April 2023
+
+**Accepted** : 1 November 2023
+
+#### Acknowledgments
+
+In alphabetical order, we thank Kelsey Allen, Charles Blundell, Matt Botvinick, Zied Ben Bouallegue, Michael
+Brenner, Rob Carver, Matthew Chantry, Marc Deisenroth, Peter Deuben, Marta Garnelo, Ryan Keisler, Dmitrii
+Kochkov, Christopher Mattern, Piotr Mirowski, Peter Norgaard, Ilan Price, Chongli Qin, Sébastien Racanière,
+Stephan Rasp, Yulia Rubanova, Kunal Shah, Jamie Smith, Daniel Worrall, and countless others at Alphabet and
+ECMWF for advice and feedback on our work. We also thank ECMWF for providing invaluable datasets to the
+research community. The style of the opening paragraph was inspired by (_40_).
+
+**Funding:** All research in this study was funded by Google DeepMind and Alphabet. There was no external
+funding.
+
+**Author contributions:** Conceptualization: R.L., A.S., M.W., S.M., P.B. Data curation: RL, A.S., M.W., A.M.,
+P.B. Formal analysis: R.L., A.S., M.W., P.W., M.F., F.A., S.R., T.E., Z.E., W.H., A.P., S.M., P.B.
+Investigation: R.L., A.S., M.W., P.W., M.F., F.A., S.R., T.E., Z.E., W.H., A.P., S.M., P.B. Methodology: R.L.,
+A.S., M.W., P.W., M.F., F.A., S.R., T.E., Z.E., W.H., A.P., S.M., P.B. Project administration: R.L., A.S.,
+M.W., G.H., O.V., J.S., S.M., P.B. Software: R.L., A.S., M.W., P.W., M.F., F.A., S.R., T.E., Z.E., W.H., A.P.,
+P.B. Supervision: R.L., S.M., P.B. Validation: R.L., A.S., M.W., P.W., M.F., F.A., S.R., T.E., Z.E., W.H.,
+A.P., S.M., P.B. Visualization: R.L., A.S., M.W., F.A., P.B. Writing - original draft: R.L., A.S., M.W., P.W.,
+M.F., F.A., S.R., T.E., Z.E., S.H., A.P., S.M., P.B. Writing – review & editing: R.L., A.S., M.W., P.W., M.F.,
+F.A., S.R., T.E., Z.E., S.H., A.P., S.M., P.B.
+
+**Competing interests:** This work was done in the course of employment at Google DeepMind, with no other
+competing financial interests. A.S., R.L., P.B., M.W., P.W., M.F. and A.P. have filed a provisional patent
+application relating to machine learning for learned medium-range global weather forecasting (US Provisional
+App. no. US63/435,163).
+
+**Data and materials availability:** GraphCast’s code and trained weights are publicly available on GitHub
+<https://github.com/deepmind/graphcast> (_41_). This work used publicly available data from the European
+Centre for Medium Range Forecasting (ECMWF). We use the ECMWF archive (expired real-time) products for ERA5,
+HRES and TIGGE products, whose use is governed by the Creative Commons Attribution 4.0 International (CC BY
+4.0). We use IBTrACS Version 4 from <https://www.ncei.noaa.gov/products/international-best-track-archive> and
+reference (_29_, _30_) as required.
+
+**License information:** Copyright © 2023 the authors, some rights reserved; exclusive licensee American
+Association for the Advancement of Science. No claim to original US government works.
+<https://www.science.org/about/science-licenses-journal-article-reuse>
+
+### Authors
+
+#### Affiliations
+
+Remi Lam*,† <https://orcid.org/0000-0003-4222-5358> [[email protected]](/cdn-cgi/l/email-
+protection#b4c6d1d9ddd8d5d9f4d3dbdbd3d8d19ad7dbd98bd7d789d5d8c2d5c6dbc7d3f4d3dbdbd3d8d19ad7dbd992d5d9c48fd7d789d9d5c0c0dcdec3f4d3dbdbd3d8d19ad7dbd992d5d9c48fd7d789c7dcd5dfddc6f4d3dbdbd3d8d19ad7dbd992d5d9c48fd7d789c4d1c0d1c6d6d5c0c0d5d3d8ddd5f4d3dbdbd3d8d19ad7dbd9)
+
+Google DeepMind, London, UK.
+
+Roles: Conceptualization, Formal analysis, Investigation, Methodology, Project administration, Resources,
+Software, Supervision, Validation, Visualization, Writing - original draft, and Writing - review &amp;
+editing.
+
+[View all articles by this author](/authored-by/Lam/Remi)
+
+Alvaro Sanchez-Gonzalez*,† <https://orcid.org/0000-0001-5055-5790> [[email protected]](/cdn-cgi/l/email-
+protection#2654434b4f4a474b66414949414a430845494b1945451b474a50475449554166414949414a430845494b00474b561d45451b4b4752524e4c5166414949414a430845494b00474b561d45451b554e474d4f5466414949414a430845494b00474b561d45451b56435243544447525247414a4f4766414949414a430845494b)
+
+Google DeepMind, London, UK.
+
+Roles: Conceptualization, Data curation, Formal analysis, Investigation, Methodology, Project administration,
+Resources, Software, Supervision, Validation, Visualization, Writing - original draft, and Writing - review
+&amp; editing.
+
+[View all articles by this author](/authored-by/Sanchez-Gonzalez/Alvaro)
+
+Matthew Willson*,† <https://orcid.org/0000-0002-8730-1927> [[email protected]](/cdn-cgi/l/email-
+protection#0674636b6f6a676b46616969616a632865696b3965653b676a70677469756146616969616a632865696b20676b763d65653b6b6772726e6c7146616969616a632865696b20676b763d65653b756e676d6f7446616969616a632865696b20676b763d65653b76637263746467727267616a6f6746616969616a632865696b)
+
+Google DeepMind, London, UK.
+
+Roles: Conceptualization, Data curation, Formal analysis, Investigation, Methodology, Software, Validation,
+Visualization, Writing - original draft, and Writing - review &amp; editing.
+
+[View all articles by this author](/authored-by/Willson/Matthew)
+
+Peter Wirnsberger† <https://orcid.org/0000-0001-5961-5817>
+
+Google DeepMind, London, UK.
+
+Roles: Conceptualization, Formal analysis, Investigation, Methodology, Software, Validation, Visualization,
+Writing - original draft, and Writing - review &amp; editing.
+
+[View all articles by this author](/authored-by/Wirnsberger/Peter)
+
+Meire Fortunato† <https://orcid.org/0009-0002-7058-4657>
+
+Google DeepMind, London, UK.
+
+Roles: Conceptualization, Formal analysis, Investigation, Methodology, Software, Validation, Visualization,
+Writing - original draft, and Writing - review &amp; editing.
+
+[View all articles by this author](/authored-by/Fortunato/Meire)
+
+Ferran Alet† <https://orcid.org/0009-0000-3059-0062>
+
+Google DeepMind, London, UK.
+
+Roles: Formal analysis, Investigation, Methodology, Software, Validation, Visualization, Writing - original
+draft, and Writing - review &amp; editing.
+
+[View all articles by this author](/authored-by/Alet/Ferran)
+
+Suman Ravuri† <https://orcid.org/0000-0002-7481-7633>
+
+Google DeepMind, London, UK.
+
+Roles: Conceptualization, Formal analysis, Investigation, Methodology, Software, Validation, Visualization,
+Writing - original draft, and Writing - review &amp; editing.
+
+[View all articles by this author](/authored-by/Ravuri/Suman)
+
+Timo Ewalds <https://orcid.org/0000-0002-9693-7986>
+
+Google DeepMind, London, UK.
+
+Roles: Conceptualization, Data curation, Formal analysis, Investigation, Methodology, Software, Validation,
+Writing - original draft, and Writing - review &amp; editing.
+
+[View all articles by this author](/authored-by/Ewalds/Timo)
+
+Zach Eaton-Rosen <https://orcid.org/0009-0002-2102-6982>
+
+Google DeepMind, London, UK.
+
+Roles: Conceptualization, Formal analysis, Investigation, Methodology, Software, Validation, Writing -
+original draft, and Writing - review &amp; editing.
+
+[View all articles by this author](/authored-by/Eaton-Rosen/Zach)
+
+Weihua Hu <https://orcid.org/0000-0003-2956-2616>
+
+Google DeepMind, London, UK.
+
+Roles: Investigation, Methodology, and Software.
+
+[View all articles by this author](/authored-by/Hu/Weihua)
+
+Alexander Merose <https://orcid.org/0000-0003-2944-5639>
+
+Google Research, Mountain View, CA, USA.
+
+Roles: Data curation and Software.
+
+[View all articles by this author](/authored-by/Merose/Alexander)
+
+Stephan Hoyer <https://orcid.org/0000-0002-5207-0380>
+
+Google Research, Mountain View, CA, USA.
+
+Roles: Writing - original draft and Writing - review &amp; editing.
+
+[View all articles by this author](/authored-by/Hoyer/Stephan)
+
+George Holland
+
+Google DeepMind, London, UK.
+
+Roles: Conceptualization, Funding acquisition, Project administration, Supervision, and Writing - review &amp;
+editing.
+
+[View all articles by this author](/authored-by/Holland/George)
+
+Oriol Vinyals <https://orcid.org/0000-0001-7848-7283>
+
+Google DeepMind, London, UK.
+
+Roles: Conceptualization, Project administration, Supervision, and Writing - review &amp; editing.
+
+[View all articles by this author](/authored-by/Vinyals/Oriol)
+
+Jacklynn Stott <https://orcid.org/0009-0004-7859-3384>
+
+Google DeepMind, London, UK.
+
+Roles: Funding acquisition and Project administration.
+
+[View all articles by this author](/authored-by/Stott/Jacklynn)
+
+Alexander Pritzel
+
+Google DeepMind, London, UK.
+
+Roles: Conceptualization, Formal analysis, Investigation, Methodology, Software, Validation, Writing -
+original draft, and Writing - review &amp; editing.
+
+[View all articles by this author](/authored-by/Pritzel/Alexander)
+
+Shakir Mohamed* <https://orcid.org/0000-0002-1184-5776> [[email protected]](/cdn-cgi/l/email-
+protection#5624333b3f3a373b16313939313a337835393b6935356b373a20372439253116313939313a337835393b70373b266d35356b3b3722223e3c2116313939313a337835393b70373b266d35356b253e373d3f2416313939313a337835393b70373b266d35356b26332233243437222237313a3f3716313939313a337835393b)
+
+Google DeepMind, London, UK.
+
+Roles: Conceptualization, Formal analysis, Funding acquisition, Investigation, Methodology, Project
+administration, Supervision, Validation, Writing - original draft, and Writing - review &amp; editing.
+
+[View all articles by this author](/authored-by/Mohamed/Shakir)
+
+Peter Battaglia* <https://orcid.org/0000-0003-3622-7111> [[email protected]](/cdn-cgi/l/email-
+protection#d7a5b2babebbb6ba97b0b8b8b0bbb2f9b4b8bae8b4b4eab6bba1b6a5b8a4b097b0b8b8b0bbb2f9b4b8baf1b6baa7ecb4b4eabab6a3a3bfbda097b0b8b8b0bbb2f9b4b8baf1b6baa7ecb4b4eaa4bfb6bcbea597b0b8b8b0bbb2f9b4b8baf1b6baa7ecb4b4eaa7b2a3b2a5b5b6a3a3b6b0bbbeb697b0b8b8b0bbb2f9b4b8ba)
+
+Google DeepMind, London, UK.
+
+Roles: Conceptualization, Data curation, Formal analysis, Investigation, Methodology, Project administration,
+Resources, Software, Supervision, Validation, Visualization, Writing - original draft, and Writing - review
+&amp; editing.
+
+[View all articles by this author](/authored-by/Battaglia/Peter)
+
+#### Notes
+
+*
+
+Corresponding author. Email: [[email protected]](/cdn-cgi/l/email-
+protection#96e4f3fbfffaf7fbd6f1f9f9f1faf3b8f5f9fb) (R.L.); [[email protected]](/cdn-cgi/l/email-
+protection#d0b1bca6b1a2bfa3b790b7bfbfb7bcb5feb3bfbd) (A.S.); [[email protected]](/cdn-cgi/l/email-
+protection#a2cfc3d6d6cac8d5e2c5cdcdc5cec78cc1cdcf) (M.W.); [[email protected]](/cdn-cgi/l/email-
+protection#f4879c959f9d86b4939b9b939891da979b99) (S.M.); [[email protected]](/cdn-cgi/l/email-
+protection#b4c4d1c0d1c6d6d5c0c0d5d3d8ddd5f4d3dbdbd3d8d19ad7dbd9) (P.B.)
+
+†
+
+These authors contributed equally to this work.
+
+## __Metrics & Citations
+
+### Metrics
+
+####  Article Usage
+
+**Note:** The article usage is presented with a three- to four-day delay and will update daily once available.
+Due to this delay, usage data will not appear immediately following publication.
+
+Citation information is sourced from [Crossref Cited-by](https://www.crossref.org/services/cited-by/ "Follow
+link") service.
+
+####  Altmetrics
+
+### Citations
+
+####  Cite as
+
+  * Remi Lam _et al._
+
+,
+
+Learning skillful medium-range global weather forecasting._Science_**0**
+,eadi2336DOI:[10.1126/science.adi2336](https://doi.org/10.1126/science.adi2336)
+
+#### Export citation
+
+Select the format you want to export the citation of this publication.
+
+Please select one from the list RIS (ProCite, Reference Manager) EndNote BibTex Medlars RefWorks
+
+Direct import
+
+Citation information is sourced from [Crossref Cited-by](https://www.crossref.org/services/cited-by/ "Follow
+link") service.
+
+## __View Options
+
+### View options
+
+####  PDF format
+
+Download this article as a PDF file
+
+[ __Download PDF](/doi/pdf/10.1126/science.adi2336?download=true)
+
+### Check Access
+
+#### Log in to view the full text
+
+[AAAS ID LOGIN](/action/ssostart?redirectUri=)
+
+AAAS login provides access to Science for AAAS Members, and access to other journals in the Science family to
+users who have purchased individual subscriptions.
+
+  * [Become a AAAS Member](http://www.aaas.org/join/?CTC=SMAAJN)
+  * [Activate your AAAS ID](https://account.aaas.org/Identity/Lookup)
+  * [Purchase Access to Other Journals in the Science Family](/content/page/purchase-journal-access)
+  * [Account Help](/content/page/access-and-subscriptions)
+
+**Log in via OpenAthens.**
+
+[via OpenAthens](/action/ssostart?idp=https%3A%2F%2Fidp.eduserv.org.uk%2Fopenathens&redirectUri=)
+
+**Log in via Shibboleth.**
+
+[via Shibboleth](/action/ssostart?redirectUri=)
+
+#### More options
+
+[Purchase digital access to this article
+__](/action/addToCart?offer=ppv&format=ONLINE&doi=10.1126/science.adi2336)
+
+Download and print this article for your personal scholarly, research, and educational use.
+
+[ Purchase this issue in print __](https://backissues.science.org/)
+
+Buy a single issue of Science for just**$15 USD**.
+
+## __Media
+
+### Figures
+
+### Multimedia
+
+##  __Tables
+
+##  __Share
+
+### Share
+
+#### Share article link
+
+ __Copy Link
+
+ __Copied!
+
+__Copying failed.
+
+#### Share on social media
+
+ __Facebook __Twitter __Linkedin __Reddit __WeChat __email
+
+####  Current Issue
+
+[](/toc/science/382/6671 "View Science current issue")
+
+### [Miniature battery-free bioelectronics](/doi/10.1126/science.abn4732 "Miniature battery-free
+bioelectronics")
+
+  * By
+    * Vishnu Nair
+    * Ashley N. Dalrymple
+    * _et al._
+
+### [Open science discovery of potent noncovalent SARS-CoV-2 main protease
+inhibitors](/doi/10.1126/science.abo7201 "Open science discovery of potent noncovalent SARS-CoV-2 main
+protease inhibitors")
+
+  * By
+    * Melissa L. Boby
+    * Daren Fearon
+    * _et al._
+
+### [Aster-dependent nonvesicular transport facilitates dietary cholesterol
+uptake](/doi/10.1126/science.adf0966 "Aster-dependent nonvesicular transport facilitates dietary cholesterol
+uptake")
+
+  * By
+    * Alessandra Ferrari
+    * Emily Whang
+    * _et al._
+
+[Table of Contents](/toc/science/current)
+
+#### Advertisement
+
+### Sign up for ScienceAdviser
+
+Subscribe to ScienceAdviser to get the latest news, commentary, and research, free to your inbox daily.
+
+[ Subscribe __](/content/page/scienceadviser?intcmp=rrail-adviser&utm_id=recFUzjFNRznSEEDd)
+
+#### LATEST NEWS
+
+[News](/news/all-news)13 Nov 2023
+
+[ Ancient sharks may have pioneered the ability to taste bitterness in food ](/content/article/ancient-sharks-
+may-have-pioneered-ability-taste-bitterness-food "Ancient sharks may have pioneered the ability to taste
+bitterness in food")
+
+[News Feature](/news/feature-article)13 Nov 2023
+
+[ Misconduct concerns, possible drug risks should stop major stroke trial, whistleblowers say
+](/content/article/misconduct-concerns-possible-drug-risks-should-stop-stroke-trial-whistleblowers-say
+"Misconduct concerns, possible drug risks should stop major stroke trial, whistleblowers say")
+
+[News](/news/all-news)13 Nov 2023
+
+[ Forests could suck up 226 gigatons of carbon if restored and protected, study argues
+](/content/article/forests-could-suck-226-gigatons-carbon-if-restored-and-protected-study-argues "Forests
+could suck up 226 gigatons of carbon if restored and protected, study argues")
+
+[News](/news/all-news)13 Nov 2023
+
+[ Huge variety of eye colors in today’s cats may trace back to distant ancestor’s unusual peepers
+](/content/article/huge-variety-eye-colors-today-s-cats-may-trace-back-distant-ancestor-s-unusual-peepers
+"Huge variety of eye colors in today’s cats may trace back to distant ancestor’s unusual peepers")
+
+[ScienceInsider](/news/scienceinsider)13 Nov 2023
+
+[ Despite sexual harassment shadow, biologist David Sabatini lands job at top Czech institute
+](/content/article/despite-sexual-harassment-shadow-biologist-david-sabatini-lands-job-top-czech-institute
+"Despite sexual harassment shadow, biologist David Sabatini lands job at top Czech institute")
+
+[News](/news/all-news)12 Nov 2023
+
+[ Base editing, a new form of gene therapy, sharply lowers bad cholesterol in clinical trial
+](/content/article/base-editing-a-new-form-of-gene-therapy-sharply-lowers-bad-cholesterol "Base editing, a new
+form of gene therapy, sharply lowers bad cholesterol in clinical trial")
+
+#### Advertisement
+
+#### Advertisement
+
+[View full text](/doi/full/10.1126/science.adi2336)|[Download PDF](/doi/pdf/10.1126/science.adi2336)
+
+Now Reading:
+
+SHARE __
+
+  * __
+  * __
+  * __
+  * __
+  * __
+  * __
+
+###### [NEXT ARTICLE Correction is courageousNext __](/doi/10.1126/science.adm8205)
+
+__Open in viewer
+
+ __
+
+__
+
+****
+
+__GO TO
+
+ __GO TO
+
+ __
+
+* __
+
+Show all references
+
+Request permissionsExpand All
+
+Collapse __
+
+Expand for more __
+
+Authors Info& Affiliations
+
+SHOW ALL BOOKS
+
+Skip slideshow
+
+[ ](/journal/science "Science Journal Logo")
+
+[ ](/journal/sciadv "Science Advances Journal Logo")
+
+[ ](/journal/sciimmunol "Science Immunology Journal Logo")
+
+[ ](/journal/scirobotics "Science Robotics Journal Logo")
+
+[ ](/journal/signaling "Science Signaling Journal Logo")
+
+[ ](/journal/stm "Science Translational Medicine Journal Logo")
+
+###### [Follow Us](https://www.science.org/content/page/science-family-journals-social-media)
+
+  * [ __](https://www.facebook.com/ScienceMagazine "Facebook")
+  * [ __](https://twitter.com/sciencemagazine "Twitter")
+  * [ __](https://www.instagram.com/ScienceMagazine "Instagram")
+  * [ __](https://www.youtube.com/user/ScienceMag "Youtube")
+  * [ __](/about/email-alerts-and-rss-feeds "RSS feeds")
+  * [ __](https://mp.weixin.qq.com/s?__biz=MzI3NDY3NzQ2Mg==&mid=100002815&idx=1&sn=2949c025a553ac718b9612a0473b9f60&chksm=6b1120465c66a9508b01eaef1589b15d440e50b189106c8c594de8c6471f696a978de952fb15&mpshare=1&scene=1&srcid=0716JJQ5V4cKbgMMsya2MQ0n&sharer_sharetime= "WeChat")
+  * [Get our newsletter](/content/page/scienceadviser?intcmp=ftr-adviser&utm_id=recdExfxt1yeSJxzi)
+
+  * [NEWS](/news)
+  * [All News](/news/all-news)
+  * [ScienceInsider](/news/scienceinsider)
+  * [News Features](/news/features)
+  * [Subscribe to News from Science](/content/page/news-science-subscriptions)
+  * [News from Science FAQ](/content/page/news-subscriber-faqs)
+  * [About News from Science](/content/page/about-news-science)
+
+  * [CAREERS](/careers)
+  * [Careers Articles](/topic/article-type/careers-editorial)
+  * [Find Jobs](https://jobs.sciencecareers.org/)
+  * [Employer Hubs](/careers/employers)
+
+  * [COMMENTARY](/commentary)
+  * [Opinion](/commentary/opinion)
+  * [Analysis](/commentary/analysis)
+  * [Blogs](/blogs)
+
+  * [JOURNALS](/journals)
+  * [Science](/journal/science)
+  * [Science Advances](/journal/sciadv)
+  * [Science Immunology](/journal/sciimmunol)
+  * [Science Robotics](/journal/scirobotics)
+  * [Science Signaling](/journal/signaling)
+  * [Science Translational Medicine](/journal/stm)
+  * [Science Partner Journals](https://spj.sciencemag.org/)
+
+  * [AUTHORS & REVIEWERS](/content/page/contributing-science-family-journals)
+  * [Information for Authors](/content/page/contributing-science-family-journals)
+  * [Information for Reviewers](/content/page/peer-review-science-publications)
+
+  * [LIBRARIANS](/content/page/librarian-portal)
+  * [Manage Your Institutional Subscription](/action/institutionAccessEntitlements)
+  * [Library Admin Portal](/content/page/librarian-portal)
+  * [Request a Quote](https://scienceaaas.org/request)
+  * [Librarian FAQs](/content/page/librarian-portal-frequently-asked-questions)
+
+  * [ADVERTISERS](https://advertising.sciencemag.org/)
+  * [Advertising Kits](https://advertising.sciencemag.org/)
+  * [Custom Publishing Info](/custom-publishing)
+  * [Post a Job](https://employers.sciencecareers.org/)
+
+  * [RELATED SITES](/content/page/related-sites)
+  * [AAAS.org](//www.aaas.org/)
+  * [AAAS Communities](//members.aaas.org/home)
+  * [EurekAlert!](//www.eurekalert.org/)
+  * [Science in the Classroom](//www.scienceintheclassroom.org/)
+
+  * [ABOUT US](/content/page/aboutus)
+  * [Leadership](/content/page/leadership-and-management)
+  * [Work at AAAS](//www.aaas.org/careers/workataaas)
+  * [Prizes and Awards](/content/page/prizes-and-awards)
+
+  * [HELP](/content/page/help)
+  * [FAQs](/content/page/faqs)
+  * [Access and Subscriptions](/content/page/access-and-subscriptions)
+  * [Order a Single Issue](//backissues.science.org/)
+  * [Reprints and Permissions](/content/page/reprints-and-permissions)
+  * [TOC Alerts and RSS Feeds](/content/page/email-alerts-and-rss-feeds)
+  * [Contact Us](/content/page/contact-us)
+
+###### [Follow Us](https://www.science.org/content/page/science-family-journals-social-media)
+
+  * [ __](https://www.facebook.com/ScienceMagazine "Facebook")
+  * [ __](https://twitter.com/sciencemagazine "Twitter")
+  * [ __](https://www.instagram.com/ScienceMagazine "Instagram")
+  * [ __](https://www.youtube.com/user/ScienceMag "YouTube")
+  * [ __](/content/page/email-alerts-and-rss-feeds "RSS feeds")
+  * [ __](https://mp.weixin.qq.com/s?__biz=MzI3NDY3NzQ2Mg==&mid=100002815&idx=1&sn=2949c025a553ac718b9612a0473b9f60&chksm=6b1120465c66a9508b01eaef1589b15d440e50b189106c8c594de8c6471f696a978de952fb15&mpshare=1&scene=1&srcid=0716JJQ5V4cKbgMMsya2MQ0n&sharer_sharetime= "WeChat")
+
+[Get our newsletter](/content/page/scienceadviser?intcmp=ftr-adviser&utm_id=recdExfxt1yeSJxzi)
+
+[ ](//www.aaas.org/ "Visit the AAAS homepage")
+
+© 2023 American Association for the Advancement of Science. All rights reserved. AAAS is a partner of HINARI,
+AGORA, OARE, CHORUS, CLOCKSS, CrossRef and COUNTER. _Science_ ISSN 0036-8075.
+
+__ back to top
+
+  * [Terms of Service](/content/page/terms-service "Terms of Service")
+  * [Privacy Policy](/content/page/privacy-policy "Privacy Policy")
+  * [Accessibility](/content/page/accessibility "Accessibility")
+
+###
+
+×
+
+Back to article __
+
+  *[PDF]: Portable Document Format
