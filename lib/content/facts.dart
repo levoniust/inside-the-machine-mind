@@ -158,6 +158,11 @@ const sources = <String, Source>{
   'SRC-OWASP-LLM06': Source('SRC-OWASP-LLM06', 'OWASP Gen AI Security Project, "LLM06:2025 Excessive Agency", genai.owasp.org (fetched 2026-10-28)', url: 'genai.owasp.org'),
   'SRC-OLLAMA-FAQ': Source('SRC-OLLAMA-FAQ', 'Ollama documentation, "FAQ", docs.ollama.com/faq (fetched 2026-10-28)', url: 'docs.ollama.com/faq'),
   'SRC-TAILSCALE': Source('SRC-TAILSCALE', 'Tailscale documentation, "What is Tailscale?", tailscale.com/kb/1151/what-is-tailscale (fetched 2026-10-28)', url: 'tailscale.com/kb/1151/what-is-tailscale'),
+  'SRC-MS-NARRATOR-VOICES': Source('SRC-MS-NARRATOR-VOICES', 'Microsoft Support, "Appendix A: Supported languages and voices" (Narrator), support.microsoft.com (fetched 2026-10-28)', url: 'support.microsoft.com'),
+  'SRC-MS-SAPI': Source('SRC-MS-SAPI', 'Microsoft Learn, "SpeechSynthesizer Class (System.Speech.Synthesis)", learn.microsoft.com (fetched 2026-10-28)', url: 'learn.microsoft.com'),
+  'SRC-WHISPER-REPO': Source('SRC-WHISPER-REPO', 'OpenAI Whisper README (model sizes, VRAM, relative speed), github.com/openai/whisper (fetched 2026-10-28)', url: 'github.com/openai/whisper'),
+  'SRC-FASTER-WHISPER': Source('SRC-FASTER-WHISPER', 'faster-whisper README with benchmarks, github.com/SYSTRAN/faster-whisper (fetched 2026-10-28)', url: 'github.com/SYSTRAN/faster-whisper'),
+  'SRC-PIPER': Source('SRC-PIPER', 'Piper README, "A fast and local neural text-to-speech engine", github.com/OHF-Voice/piper1-gpl (fetched 2026-10-28)', url: 'github.com/OHF-Voice/piper1-gpl'),
 };
 
 const facts = <String, Fact>{
@@ -382,4 +387,11 @@ const facts = <String, Fact>{
   'SAFE-INDIRECT': Fact('SAFE-INDIRECT', 'OWASP\'s #1 LLM risk is prompt injection, including indirect injection: instructions hidden in websites or files the model reads', sources: ['SRC-OWASP-LLM01'], value: 'LLM01'),
   'SAFE-AGENCY': Fact('SAFE-AGENCY', 'OWASP LLM06 "Excessive Agency": give agents only the tools and permissions they need, and have a human approve high-impact actions', sources: ['SRC-OWASP-LLM06'], value: 'LLM06'),
   'RIG-BRIDGE': Fact('RIG-BRIDGE', 'A home phone bridge to AI agents: home network and private VPN only, no forwarded port, a long random token, a pinned certificate; a review found its pairing page could be reused for 48 hours, so it was made one-time', sources: ['SRC-HOMELAB'], value: '48 h → once'),
+  'SPCH-WHISPER-SIZES': Fact('SPCH-WHISPER-SIZES', 'Whisper comes in six sizes: tiny 39M parameters (~1 GB VRAM, ~10× the large model\'s speed), base 74M (~1 GB, ~7×), small 244M (~2 GB, ~4×), medium 769M (~5 GB, ~2×), large 1,550M (~10 GB, 1×) and turbo 809M (~6 GB, ~8×), speeds measured on an A100', sources: ['SRC-WHISPER-REPO'], value: 'tiny → large'),
+  'SPCH-TURBO': Fact('SPCH-TURBO', 'Whisper turbo is an optimized large-v3 with faster transcription and minimal accuracy loss, but it is not trained to translate', sources: ['SRC-WHISPER-REPO'], value: '~8×'),
+  'SPCH-FW-GPU': Fact('SPCH-FW-GPU', 'faster-whisper (CTranslate2) transcribed 13 minutes of audio with large-v2 on an RTX 3070 Ti in 1m03s vs 2m23s for OpenAI\'s whisper; batched at 8-bit it took 16 s', sources: ['SRC-FASTER-WHISPER'], value: '2m23s → 16 s'),
+  'SPCH-FW-CPU': Fact('SPCH-FW-CPU', 'On an 8-thread Intel i7-12700K CPU, the small model took 6m58s with OpenAI\'s whisper and 51 s with batched 8-bit faster-whisper for the same 13 minutes of audio', sources: ['SRC-FASTER-WHISPER'], value: '6m58s → 51 s'),
+  'SPCH-WIN-CLASSIC': Fact('SPCH-WIN-CLASSIC', 'Windows\' built-in English (US) voices: David and Mark (male) and Zira (female); programs can speak with installed voices through System.Speech\'s SpeechSynthesizer', sources: ['SRC-MS-NARRATOR-VOICES', 'SRC-MS-SAPI'], value: 'David, Mark, Zira'),
+  'SPCH-WIN-NATURAL': Fact('SPCH-WIN-NATURAL', 'Windows Narrator also offers natural voices, e.g. Guy, Jenny and Aria for English (US), added under Narrator settings → Add natural voices and downloaded in a few minutes', sources: ['SRC-MS-NARRATOR-VOICES'], value: 'Guy, Jenny, Aria'),
+  'SPCH-PIPER': Fact('SPCH-PIPER', 'Piper is a fast, local neural text-to-speech engine, used by Home Assistant and the NVDA screen reader', sources: ['SRC-PIPER']),
 };

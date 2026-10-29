@@ -86,4 +86,16 @@ const quizS6 = <QuizQuestion>[
     2,
     'OWASP lists prompt injection as the top LLM risk; the indirect kind arrives through websites or files, so what an agent reads must be treated as data, not orders.',
   ),
+  QuizQuestion(
+    'You want to transcribe recordings on a laptop with no graphics card. What\'s a sensible choice?',
+    ['Whisper large, because accuracy is all that matters', 'Nothing will work without a GPU', 'Piper, the text-to-speech engine', 'A small Whisper model at 8 bits, run with faster-whisper on the CPU'],
+    3,
+    'faster-whisper ran the small model on a desktop CPU in 51 seconds for 13 minutes of audio; large is far too slow without a GPU, and Piper only speaks.',
+  ),
+  QuizQuestion(
+    'Which voices does Windows offer for reading text aloud with US English?',
+    ['Only paid cloud voices', 'None; you must install Piper first', 'Whisper voices', 'Classic voices (David, Mark, Zira) already installed, plus natural Narrator voices (such as Guy, Jenny and Aria) as a free download'],
+    3,
+    'Microsoft lists David, Mark and Zira as installed voices and Guy, Jenny and Aria as natural voices added from Narrator settings.',
+  ),
 ];

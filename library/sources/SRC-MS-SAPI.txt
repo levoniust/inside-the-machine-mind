@@ -1,0 +1,328 @@
+SOURCE COPY — SRC-MS-SAPI
+Retrieved 2026-10-28 for Inside the Machine Mind (offline reference copy; excerpt of the original, formatting simplified).
+Original URL: https://learn.microsoft.com/en-us/dotnet/api/system.speech.synthesis.speechsynthesizer
+Page/document title: SpeechSynthesizer Class (System.Speech.Synthesis) | Microsoft Learn
+
+------------------------------------------------------------------------
+
+Skip to main content  Skip to in-page navigation  Skip to Ask Learn chat experience
+
+This browser is no longer supported.
+
+Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.
+
+[ Download Microsoft Edge ](https://go.microsoft.com/fwlink/p/?LinkID=2092881 ) [ More info about Internet
+Explorer and Microsoft Edge ](https://learn.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-
+edge)
+
+Table of contents  Exit editor mode
+
+Ask Learn Ask Learn Language
+
+  * csharp 
+  * vb 
+  * fsharp 
+  * cpp 
+
+Reading mode Table of contents Read in English Add Add to Plans [ Edit ]()
+
+* * *
+
+Copy Markdown Print
+
+* * *
+
+Note
+
+Access to this page requires authorization. You can try signing in or changing directories.
+
+Access to this page requires authorization. You can try changing directories.
+
+# SpeechSynthesizer Class
+
+##
+
+## Definition
+
+Namespace:
+
+     [System.Speech.Synthesis](system.speech.synthesis?view=net-11.0-pp)
+
+Assembly:
+
+    System.Speech.dll
+
+Package:
+
+    System.Speech v11.0.0-rc.1.26425.128
+
+Source:
+
+    [SpeechSynthesizer.cs](https://github.com/dotnet/dotnet/blob/3551975be08744f0418857c5bed8ab1545c5dd47/src/runtime/src/libraries/System.Speech/src/Synthesis/SpeechSynthesizer.cs)
+
+Source:
+
+    [SpeechSynthesizer.cs](https://github.com/dotnet/runtime/blob/5535e31a712343a63f5d7d796cd874e563e5ac14/src/libraries/System.Speech/src/Synthesis/SpeechSynthesizer.cs)
+
+Source:
+
+    [SpeechSynthesizer.cs](https://github.com/dotnet/runtime/blob/990ebf52fc408ca45929fd176d2740675a67fab8/src/libraries/System.Speech/src/Synthesis/SpeechSynthesizer.cs)
+
+Source:
+
+    [SpeechSynthesizer.cs](https://github.com/dotnet/dotnet/blob/44525024595742ebe09023abe709df51de65009b/src/runtime/src/libraries/System.Speech/src/Synthesis/SpeechSynthesizer.cs)
+
+Important
+
+Some information relates to prerelease product that may be substantially modified before it’s released.
+Microsoft makes no warranties, express or implied, with respect to the information provided here.
+
+Provides access to the functionality of an installed speech synthesis engine.
+
+    
+    
+    public ref class SpeechSynthesizer sealed : IDisposable
+    
+    
+    public sealed class SpeechSynthesizer : IDisposable
+    
+    
+    type SpeechSynthesizer = class
+        interface IDisposable
+    
+    
+    Public NotInheritable Class SpeechSynthesizer
+    Implements IDisposable
+
+Inheritance
+
+    
+
+[Object](system.object?view=net-11.0-pp)
+
+SpeechSynthesizer
+
+Implements
+
+    
+
+[IDisposable](system.idisposable?view=net-11.0-pp)
+
+## Examples
+
+The following example is part of a console application that initializes a
+[SpeechSynthesizer](system.speech.synthesis.speechsynthesizer?view=net-11.0-pp) object and speaks a string.
+
+    
+    
+    using System;
+    using System.Speech.Synthesis;
+    
+    namespace SampleSynthesis
+    {
+      class Program
+      {
+        static void Main(string[] args)
+        {
+    
+          // Initialize a new instance of the SpeechSynthesizer.
+          SpeechSynthesizer synth = new SpeechSynthesizer();
+    
+          // Configure the audio output.
+          synth.SetOutputToDefaultAudioDevice();
+    
+          // Speak a string.
+          synth.Speak("This example demonstrates a basic use of Speech Synthesizer");
+    
+          Console.WriteLine();
+          Console.WriteLine("Press any key to exit...");
+          Console.ReadKey();
+        }
+      }
+    }
+    
+
+## Remarks
+
+When you create a new [SpeechSynthesizer](system.speech.synthesis.speechsynthesizer?view=net-11.0-pp) object,
+it uses the default system voice. To configure the
+[SpeechSynthesizer](system.speech.synthesis.speechsynthesizer?view=net-11.0-pp) to use one of the installed
+speech synthesis (text-to-speech) voices, use the
+[SelectVoice](system.speech.synthesis.speechsynthesizer.selectvoice?view=net-11.0-pp) or
+[SelectVoiceByHints](system.speech.synthesis.speechsynthesizer.selectvoicebyhints?view=net-11.0-pp) method. To
+get information about which voices are installed, use the
+[GetInstalledVoices](system.speech.synthesis.speechsynthesizer.getinstalledvoices?view=net-11.0-pp) method and
+the [VoiceInfo](system.speech.synthesis.voiceinfo?view=net-11.0-pp) class.
+
+This class also provides control over the following aspects of speech synthesis:
+
+  * To configure the output for the [SpeechSynthesizer](system.speech.synthesis.speechsynthesizer?view=net-11.0-pp) object, use the [SetOutputToAudioStream](system.speech.synthesis.speechsynthesizer.setoutputtoaudiostream?view=net-11.0-pp), [SetOutputToDefaultAudioDevice](system.speech.synthesis.speechsynthesizer.setoutputtodefaultaudiodevice?view=net-11.0-pp), [SetOutputToNull](system.speech.synthesis.speechsynthesizer.setoutputtonull?view=net-11.0-pp), and [SetOutputToWaveFile](system.speech.synthesis.speechsynthesizer.setoutputtowavefile?view=net-11.0-pp) methods.
+
+  * To generate speech, use the [Speak](system.speech.synthesis.speechsynthesizer.speak?view=net-11.0-pp), [SpeakAsync](system.speech.synthesis.speechsynthesizer.speakasync?view=net-11.0-pp), [SpeakSsml](system.speech.synthesis.speechsynthesizer.speakssml?view=net-11.0-pp), or [SpeakSsmlAsync](system.speech.synthesis.speechsynthesizer.speakssmlasync?view=net-11.0-pp) method. The [SpeechSynthesizer](system.speech.synthesis.speechsynthesizer?view=net-11.0-pp) can produce speech from text, a [Prompt](system.speech.synthesis.prompt?view=net-11.0-pp) or [PromptBuilder](system.speech.synthesis.promptbuilder?view=net-11.0-pp) object, or from [Speech Synthesis Markup Language (SSML) Version 1.0](https://go.microsoft.com/fwlink/?LinkId=201763).
+
+  * To pause and resume speech synthesis, use the [Pause](system.speech.synthesis.speechsynthesizer.pause?view=net-11.0-pp) and [Resume](system.speech.synthesis.speechsynthesizer.resume?view=net-11.0-pp) methods.
+
+  * To add or remove lexicons, use the [AddLexicon](system.speech.synthesis.speechsynthesizer.addlexicon?view=net-11.0-pp) and [RemoveLexicon](system.speech.synthesis.speechsynthesizer.removelexicon?view=net-11.0-pp) methods. The [SpeechSynthesizer](system.speech.synthesis.speechsynthesizer?view=net-11.0-pp) can use one or more lexicons to guide its pronunciation of words.
+
+  * To modify the delivery of speech output, use the [Rate](system.speech.synthesis.speechsynthesizer.rate?view=net-11.0-pp) and [Volume](system.speech.synthesis.speechsynthesizer.volume?view=net-11.0-pp) properties.
+
+The [SpeechSynthesizer](system.speech.synthesis.speechsynthesizer?view=net-11.0-pp) raises events when it
+encounters certain features in prompts:
+([BookmarkReached](system.speech.synthesis.speechsynthesizer.bookmarkreached?view=net-11.0-pp#system-speech-
+synthesis-speechsynthesizer-bookmarkreached),
+[PhonemeReached](system.speech.synthesis.speechsynthesizer.phonemereached?view=net-11.0-pp#system-speech-
+synthesis-speechsynthesizer-phonemereached),
+[VisemeReached](system.speech.synthesis.speechsynthesizer.visemereached?view=net-11.0-pp#system-speech-
+synthesis-speechsynthesizer-visemereached), and
+[SpeakProgress](system.speech.synthesis.speechsynthesizer.speakprogress?view=net-11.0-pp#system-speech-
+synthesis-speechsynthesizer-speakprogress)). It also raises events that report on the start
+([SpeakStarted](system.speech.synthesis.speechsynthesizer.speakstarted?view=net-11.0-pp#system-speech-
+synthesis-speechsynthesizer-speakstarted)) and end
+([SpeakCompleted](system.speech.synthesis.speechsynthesizer.speakcompleted?view=net-11.0-pp#system-speech-
+synthesis-speechsynthesizer-speakcompleted)) of speak operations and on the change of the speaking voice
+([VoiceChange](system.speech.synthesis.speechsynthesizer.voicechange?view=net-11.0-pp#system-speech-synthesis-
+speechsynthesizer-voicechange)).
+
+Note
+
+Always call [Dispose](system.speech.synthesis.speechsynthesizer.dispose?view=net-11.0-pp) before you release
+your last reference to the [SpeechSynthesizer](system.speech.synthesis.speechsynthesizer?view=net-11.0-pp).
+Otherwise, the resources it is using will not be freed until the garbage collector calls the
+[SpeechSynthesizer](system.speech.synthesis.speechsynthesizer?view=net-11.0-pp) object's
+[Finalize](system.object.finalize?view=net-11.0-pp) method.
+
+##  Constructors
+
+Name | Description  
+---|---  
+[SpeechSynthesizer()](system.speech.synthesis.speechsynthesizer.-ctor?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-ctor) |  Initializes a new instance of the [SpeechSynthesizer](system.speech.synthesis.speechsynthesizer?view=net-11.0-pp) class.  
+  
+##  Properties
+
+Name | Description  
+---|---  
+[Rate](system.speech.synthesis.speechsynthesizer.rate?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-rate) |  Gets or sets the speaking rate of the [SpeechSynthesizer](system.speech.synthesis.speechsynthesizer?view=net-11.0-pp) object.  
+[State](system.speech.synthesis.speechsynthesizer.state?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-state) |  Gets the current speaking state of the [SpeechSynthesizer](system.speech.synthesis.speechsynthesizer?view=net-11.0-pp) object.  
+[Voice](system.speech.synthesis.speechsynthesizer.voice?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-voice) |  Gets information about the current voice of the [SpeechSynthesizer](system.speech.synthesis.speechsynthesizer?view=net-11.0-pp) object.  
+[Volume](system.speech.synthesis.speechsynthesizer.volume?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-volume) |  Get or sets the output volume of the [SpeechSynthesizer](system.speech.synthesis.speechsynthesizer?view=net-11.0-pp) object.  
+  
+##  Methods
+
+Name | Description  
+---|---  
+[AddLexicon(Uri, String)](system.speech.synthesis.speechsynthesizer.addlexicon?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-addlexicon\(system-uri-system-string\)) |  Adds a lexicon to the [SpeechSynthesizer](system.speech.synthesis.speechsynthesizer?view=net-11.0-pp) object.  
+[Dispose()](system.speech.synthesis.speechsynthesizer.dispose?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-dispose) |  Disposes the [SpeechSynthesizer](system.speech.synthesis.speechsynthesizer?view=net-11.0-pp) object and releases resources used during the session.  
+[Equals(Object)](system.object.equals?view=net-11.0-pp#system-object-equals\(system-object\)) |  Determines whether the specified object is equal to the current object. (Inherited from [Object](system.object?view=net-11.0-pp))   
+[Finalize()](system.speech.synthesis.speechsynthesizer.finalize?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-finalize) |  Acts as a safeguard to clean up resources in the event that the [Dispose()](system.speech.synthesis.speechsynthesizer.dispose?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-dispose) method is not called.  
+[GetCurrentlySpokenPrompt()](system.speech.synthesis.speechsynthesizer.getcurrentlyspokenprompt?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-getcurrentlyspokenprompt) |  Gets the prompt that the [SpeechSynthesizer](system.speech.synthesis.speechsynthesizer?view=net-11.0-pp) is speaking.  
+[GetHashCode()](system.object.gethashcode?view=net-11.0-pp#system-object-gethashcode) |  Serves as the default hash function. (Inherited from [Object](system.object?view=net-11.0-pp))   
+[GetInstalledVoices()](system.speech.synthesis.speechsynthesizer.getinstalledvoices?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-getinstalledvoices) |  Returns all of the installed speech synthesis (text-to-speech) voices.  
+[GetInstalledVoices(CultureInfo)](system.speech.synthesis.speechsynthesizer.getinstalledvoices?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-getinstalledvoices\(system-globalization-cultureinfo\)) |  Returns all of the installed speech synthesis (text-to-speech) voices that support a specific locale.  
+[GetType()](system.object.gettype?view=net-11.0-pp#system-object-gettype) |  Gets the [Type](system.type?view=net-11.0-pp) of the current instance. (Inherited from [Object](system.object?view=net-11.0-pp))   
+[MemberwiseClone()](system.object.memberwiseclone?view=net-11.0-pp#system-object-memberwiseclone) |  Creates a shallow copy of the current [Object](system.object?view=net-11.0-pp). (Inherited from [Object](system.object?view=net-11.0-pp))   
+[Pause()](system.speech.synthesis.speechsynthesizer.pause?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-pause) |  Pauses the [SpeechSynthesizer](system.speech.synthesis.speechsynthesizer?view=net-11.0-pp) object.  
+[RemoveLexicon(Uri)](system.speech.synthesis.speechsynthesizer.removelexicon?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-removelexicon\(system-uri\)) |  Removes a lexicon from the [SpeechSynthesizer](system.speech.synthesis.speechsynthesizer?view=net-11.0-pp) object.  
+[Resume()](system.speech.synthesis.speechsynthesizer.resume?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-resume) |  Resumes the [SpeechSynthesizer](system.speech.synthesis.speechsynthesizer?view=net-11.0-pp) object after it has been paused.  
+[SelectVoice(String)](system.speech.synthesis.speechsynthesizer.selectvoice?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-selectvoice\(system-string\)) |  Selects a specific voice by name.  
+[SelectVoiceByHints(VoiceGender, VoiceAge, Int32, CultureInfo)](system.speech.synthesis.speechsynthesizer.selectvoicebyhints?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-selectvoicebyhints\(system-speech-synthesis-voicegender-system-speech-synthesis-voiceage-system-int32-system-globalization-cultureinfo\)) |  Selects a voice with a specific gender, age, and locale, based on the position in which the voices are ordered.  
+[SelectVoiceByHints(VoiceGender, VoiceAge, Int32)](system.speech.synthesis.speechsynthesizer.selectvoicebyhints?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-selectvoicebyhints\(system-speech-synthesis-voicegender-system-speech-synthesis-voiceage-system-int32\)) |  Selects a voice with a specific gender and age, based on the position in which the voices are ordered.  
+[SelectVoiceByHints(VoiceGender, VoiceAge)](system.speech.synthesis.speechsynthesizer.selectvoicebyhints?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-selectvoicebyhints\(system-speech-synthesis-voicegender-system-speech-synthesis-voiceage\)) |  Selects a voice with a specific gender and age.  
+[SelectVoiceByHints(VoiceGender)](system.speech.synthesis.speechsynthesizer.selectvoicebyhints?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-selectvoicebyhints\(system-speech-synthesis-voicegender\)) |  Selects a voice with a specific gender.  
+[SetOutputToAudioStream(Stream, SpeechAudioFormatInfo)](system.speech.synthesis.speechsynthesizer.setoutputtoaudiostream?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-setoutputtoaudiostream\(system-io-stream-system-speech-audioformat-speechaudioformatinfo\)) |  Configures the [SpeechSynthesizer](system.speech.synthesis.speechsynthesizer?view=net-11.0-pp) object to append output to an audio stream.  
+[SetOutputToDefaultAudioDevice()](system.speech.synthesis.speechsynthesizer.setoutputtodefaultaudiodevice?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-setoutputtodefaultaudiodevice) |  Configures the [SpeechSynthesizer](system.speech.synthesis.speechsynthesizer?view=net-11.0-pp) object to send output to the default audio device.  
+[SetOutputToNull()](system.speech.synthesis.speechsynthesizer.setoutputtonull?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-setoutputtonull) |  Configures the [SpeechSynthesizer](system.speech.synthesis.speechsynthesizer?view=net-11.0-pp) object to not send output from synthesis operations to a device, file, or stream.  
+[SetOutputToWaveFile(String, SpeechAudioFormatInfo)](system.speech.synthesis.speechsynthesizer.setoutputtowavefile?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-setoutputtowavefile\(system-string-system-speech-audioformat-speechaudioformatinfo\)) |  Configures the [SpeechSynthesizer](system.speech.synthesis.speechsynthesizer?view=net-11.0-pp) object to append output to a Waveform audio format file in a specified format.  
+[SetOutputToWaveFile(String)](system.speech.synthesis.speechsynthesizer.setoutputtowavefile?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-setoutputtowavefile\(system-string\)) |  Configures the [SpeechSynthesizer](system.speech.synthesis.speechsynthesizer?view=net-11.0-pp) object to append output to a file that contains Waveform format audio.  
+[SetOutputToWaveStream(Stream)](system.speech.synthesis.speechsynthesizer.setoutputtowavestream?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-setoutputtowavestream\(system-io-stream\)) |  Configures the [SpeechSynthesizer](system.speech.synthesis.speechsynthesizer?view=net-11.0-pp) object to append output to a stream that contains Waveform format audio.  
+[Speak(Prompt)](system.speech.synthesis.speechsynthesizer.speak?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-speak\(system-speech-synthesis-prompt\)) |  Synchronously speaks the contents of a [Prompt](system.speech.synthesis.prompt?view=net-11.0-pp) object.  
+[Speak(PromptBuilder)](system.speech.synthesis.speechsynthesizer.speak?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-speak\(system-speech-synthesis-promptbuilder\)) |  Synchronously speaks the contents of a [PromptBuilder](system.speech.synthesis.promptbuilder?view=net-11.0-pp) object.  
+[Speak(String)](system.speech.synthesis.speechsynthesizer.speak?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-speak\(system-string\)) |  Synchronously speaks the contents of a string.  
+[SpeakAsync(Prompt)](system.speech.synthesis.speechsynthesizer.speakasync?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-speakasync\(system-speech-synthesis-prompt\)) |  Asynchronously speaks the contents of a [Prompt](system.speech.synthesis.prompt?view=net-11.0-pp) object.  
+[SpeakAsync(PromptBuilder)](system.speech.synthesis.speechsynthesizer.speakasync?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-speakasync\(system-speech-synthesis-promptbuilder\)) |  Asynchronously speaks the contents of a [PromptBuilder](system.speech.synthesis.promptbuilder?view=net-11.0-pp) object.  
+[SpeakAsync(String)](system.speech.synthesis.speechsynthesizer.speakasync?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-speakasync\(system-string\)) |  Asynchronously speaks the contents of a string.  
+[SpeakAsyncCancel(Prompt)](system.speech.synthesis.speechsynthesizer.speakasynccancel?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-speakasynccancel\(system-speech-synthesis-prompt\)) |  Cancels the asynchronous synthesis operation for a queued prompt.  
+[SpeakAsyncCancelAll()](system.speech.synthesis.speechsynthesizer.speakasynccancelall?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-speakasynccancelall) |  Cancels all queued, asynchronous, speech synthesis operations.  
+[SpeakSsml(String)](system.speech.synthesis.speechsynthesizer.speakssml?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-speakssml\(system-string\)) |  Synchronously speaks a [String](system.string?view=net-11.0-pp) that contains SSML markup.  
+[SpeakSsmlAsync(String)](system.speech.synthesis.speechsynthesizer.speakssmlasync?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-speakssmlasync\(system-string\)) |  Asynchronously speaks a [String](system.string?view=net-11.0-pp) that contains SSML markup.  
+[ToString()](system.object.tostring?view=net-11.0-pp#system-object-tostring) |  Returns a string that represents the current object. (Inherited from [Object](system.object?view=net-11.0-pp))   
+  
+##  Events
+
+Name | Description  
+---|---  
+[BookmarkReached](system.speech.synthesis.speechsynthesizer.bookmarkreached?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-bookmarkreached) |  Raised when the [SpeechSynthesizer](system.speech.synthesis.speechsynthesizer?view=net-11.0-pp) encounters a bookmark in a prompt.  
+[PhonemeReached](system.speech.synthesis.speechsynthesizer.phonemereached?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-phonemereached) |  Raised when a phoneme is reached.  
+[SpeakCompleted](system.speech.synthesis.speechsynthesizer.speakcompleted?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-speakcompleted) |  Raised when the [SpeechSynthesizer](system.speech.synthesis.speechsynthesizer?view=net-11.0-pp) completes the speaking of a prompt.  
+[SpeakProgress](system.speech.synthesis.speechsynthesizer.speakprogress?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-speakprogress) |  Raised after the [SpeechSynthesizer](system.speech.synthesis.speechsynthesizer?view=net-11.0-pp) speaks each individual word of a prompt.  
+[SpeakStarted](system.speech.synthesis.speechsynthesizer.speakstarted?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-speakstarted) |  Raised when the [SpeechSynthesizer](system.speech.synthesis.speechsynthesizer?view=net-11.0-pp) begins the speaking of a prompt.  
+[StateChanged](system.speech.synthesis.speechsynthesizer.statechanged?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-statechanged) |  Raised when the state of the [SpeechSynthesizer](system.speech.synthesis.speechsynthesizer?view=net-11.0-pp) changes.  
+[VisemeReached](system.speech.synthesis.speechsynthesizer.visemereached?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-visemereached) |  Raised when a viseme is reached.  
+[VoiceChange](system.speech.synthesis.speechsynthesizer.voicechange?view=net-11.0-pp#system-speech-synthesis-speechsynthesizer-voicechange) |  Raised when the voice of the [SpeechSynthesizer](system.speech.synthesis.speechsynthesizer?view=net-11.0-pp) changes.  
+  
+## Applies to
+
+## See also
+
+  * [InstalledVoice](system.speech.synthesis.installedvoice?view=net-11.0-pp)
+  * [Prompt](system.speech.synthesis.prompt?view=net-11.0-pp)
+  * [PromptBuilder](system.speech.synthesis.promptbuilder?view=net-11.0-pp)
+  * [Speech Synthesis](/en-us/previous-versions/office/developer/speech-technologies/hh361644\(v%3doffice.14\))
+
+Collaborate with us on GitHub
+
+The source for this content can be found on GitHub, where you can also create and review issues and pull
+requests. For more information, see [our contributor
+guide](https://learn.microsoft.com/contribute/content/dotnet/api-documentation).
+
+.NET
+
+Open a documentation issue [ Provide product feedback ](https://aka.ms/feedback/report?space=61)
+
+* * *
+
+## Feedback
+
+Was this page helpful?
+
+Yes No No
+
+Need help with this topic?
+
+Want to try using Ask Learn to clarify or guide you through this topic?
+
+Ask Learn Ask Learn
+
+Suggest a fix?
+
+### In this article
+
+Was this page helpful?
+
+Need help with this topic?
+
+Want to try using Ask Learn to clarify or guide you through this topic?
+
+Ask Learn Ask Learn
+
+Suggest a fix?
+
+en-us
+
+[ Your Privacy Choices](https://aka.ms/yourcaliforniaprivacychoices)
+
+Theme
+
+  * Light 
+  * Dark 
+  * High contrast 
+
+  *   * [AI Disclaimer](https://learn.microsoft.com/en-us/principles-for-ai-generated-content)
+  * [Previous Versions](https://learn.microsoft.com/en-us/previous-versions/)
+  * [Blog](https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog)
+  * [Contribute](https://learn.microsoft.com/en-us/contribute)
+  * [Privacy](https://go.microsoft.com/fwlink/?LinkId=521839)
+  * [Consumer Health Privacy](https://go.microsoft.com/fwlink/?linkid=2259814)
+  * [Terms of Use](https://learn.microsoft.com/en-us/legal/termsofuse)
+  * [Trademarks](https://www.microsoft.com/legal/intellectualproperty/Trademarks/)
+  * (C) Microsoft 2026
+

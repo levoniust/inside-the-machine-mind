@@ -82,4 +82,12 @@ const narrationS6 = <String, LessonText>{
     ],
     keyIdea: 'Keep the server off the open internet, lock it with a key, give [[agents|agent]] only the power they need, and treat everything they read as data rather than orders.',
   ),
+  'l_speech_home': LessonText(
+    intro: [
+      'A voice assistant is two extra parts around the chat [[model]]: ears that turn speech into text, and a mouth that turns text back into speech. Both run fine at home.',
+      'First the ears. Tap through Whisper\'s six sizes and watch memory and speed trade places. Then the mouth: your Windows PC already has voices, and a free download makes them sound natural.',
+      'Last, pick a setup for four everyday jobs, from reading notes aloud to transcribing a meeting on a laptop with no graphics card.',
+    ],
+    keyIdea: 'Pick the smallest speech model that\'s accurate enough for the job, and remember that Windows and open tools like Whisper and Piper already cover most home uses for free, offline.',
+  ),
 };
