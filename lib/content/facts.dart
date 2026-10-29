@@ -170,6 +170,7 @@ const sources = <String, Source>{
   'SRC-SCALING-MONO': Source('SRC-SCALING-MONO', 'Templeton et al. (Anthropic), "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet", transformer-circuits.pub (2024)'),
   'SRC-GOLDEN-GATE': Source('SRC-GOLDEN-GATE', 'Anthropic, "Golden Gate Claude", anthropic.com/news/golden-gate-claude (May 23, 2024)', url: 'anthropic.com/news/golden-gate-claude'),
   'SRC-OPENAI-SAE': Source('SRC-OPENAI-SAE', 'Gao et al. (OpenAI), "Scaling and evaluating sparse autoencoders", arXiv 2406.04093 (2024)'),
+  'SRC-ANTHROPIC-COMPUTER': Source('SRC-ANTHROPIC-COMPUTER', 'Anthropic, "Computer use tool", platform.claude.com/docs (security precautions; fetched 2026-10-28)', url: 'platform.claude.com/docs'),
 };
 
 const facts = <String, Fact>{
@@ -415,4 +416,7 @@ const facts = <String, Fact>{
   'INS-GGB': Fact('INS-GGB', 'One feature fires on mentions of the Golden Gate Bridge (and on pictures of it); it fires most on direct references and weakly on other San Francisco landmarks', sources: ['SRC-SCALING-MONO', 'SRC-GOLDEN-GATE']),
   'INS-GGC': Fact('INS-GGC', 'Clamping that feature to 10× its maximum made "Golden Gate Claude": asked how to spend \$10, it suggested driving across the Golden Gate Bridge and paying the toll', sources: ['SRC-SCALING-MONO', 'SRC-GOLDEN-GATE'], value: '10×'),
   'INS-OPENAI': Fact('INS-OPENAI', 'OpenAI trained a sparse autoencoder with 16 million latents on GPT-4\'s activations, over 40 billion tokens', sources: ['SRC-OPENAI-SAE'], value: '16M'),
+  'AGT-INJECT': Fact('AGT-INJECT', 'Anthropic warns that instructions on web pages or inside images can override your instructions or make an agent err (prompt injection), so keep agents away from sensitive data and actions', sources: ['SRC-ANTHROPIC-COMPUTER', 'SRC-OWASP-LLM01']),
+  'AGT-CONFIRM': Fact('AGT-CONFIRM', 'Anthropic advises having a person confirm decisions with real-world consequences and anything needing consent, such as accepting cookies, completing payments or agreeing to terms of service', sources: ['SRC-ANTHROPIC-COMPUTER']),
+  'AGT-LEAST': Fact('AGT-LEAST', 'Recommended precautions for computer-using agents: a separate machine or container with minimal privileges, no access to logins and other sensitive data, and internet limited to an allow-list of sites', sources: ['SRC-ANTHROPIC-COMPUTER']),
 };

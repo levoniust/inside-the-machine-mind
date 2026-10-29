@@ -5,6 +5,7 @@ import 'quiz_s5.dart';
 import 'quiz_s6.dart';
 import 'quiz_s7.dart';
 import 'quiz_s9.dart';
+import 'quiz_s11.dart';
 
 /// Quiz questions per section. Answers must match research/facts.md.
 const quizS1 = <QuizQuestion>[
@@ -124,4 +125,5 @@ final quizzes = <String, List<QuizQuestion>>{
   'quiz_s6': quizS6,
   'quiz_s7': quizS7,
   'quiz_s9': quizS9,
+  'quiz_s11': quizS11,
 };

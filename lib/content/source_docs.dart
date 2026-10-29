@@ -150,6 +150,7 @@ const sourceDocs = <String, SourceDoc>{
   'SRC-SCALING-MONO': SourceDoc('sources/SRC-SCALING-MONO.txt', url: 'https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html'),
   'SRC-GOLDEN-GATE': SourceDoc('sources/SRC-GOLDEN-GATE.txt', url: 'https://www.anthropic.com/news/golden-gate-claude'),
   'SRC-OPENAI-SAE': SourceDoc('sources/SRC-OPENAI-SAE.txt', url: 'https://arxiv.org/abs/2406.04093'),
+  'SRC-ANTHROPIC-COMPUTER': SourceDoc('sources/SRC-ANTHROPIC-COMPUTER.txt', url: 'https://platform.claude.com/docs/en/agents-and-tools/tool-use/computer-use-tool'),
   'SRC-HOMELAB': SourceDoc('sources/SRC-HOMELAB.txt', url: 'https://(private'),
   'SRC-LLAMACPP-PPL': SourceDoc('sources/SRC-LLAMACPP-PPL.txt', url: 'https://github.com/ggml-org/llama.cpp/blob/master/tools/perplexity/README.md'),
   'SRC-OLLAMA': SourceDoc('sources/SRC-OLLAMA.txt', url: 'https://github.com/ollama/ollama'),

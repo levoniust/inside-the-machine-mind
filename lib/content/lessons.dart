@@ -139,7 +139,7 @@ final _newAi = SectionInfo(
   tag: 'How the new AI works',
   title: 'How the new AI works',
   tagline: 'Agents, thinking, memory, pictures, voice and the energy behind it',
-  quizId: '',
+  quizId: 'quiz_s11',
   lessons: [
     _l('e_agents', 11, 'When the assistant does things', 'Agents and permissions'),
     _l('e_thinking', 11, 'Thinking before answering', 'Reasoning models'),
