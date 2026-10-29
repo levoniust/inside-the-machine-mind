@@ -33,4 +33,12 @@ const narrationS11 = <String, LessonText>{
     ],
     keyIdea: 'A voice relay turns your speech into plain text, so tone and background are lost, while newer one-model voice modes hear sound directly and reply about as fast as a person.',
   ),
+  'e_energy': LessonText(
+    intro: [
+      'Does asking a chatbot burn a lot of power? The honest answer needs things you already know: a light bulb, an hour of TV, your home, and the whole country.',
+      'First, line up nine things from the least energy to the most. Then climb the zoom-out ladder: every step is a thousand times bigger, from one question all the way to all the energy the United States uses in a year.',
+      'Last, see where the tiny numbers add up, and read the small print on who measured what.',
+    ],
+    keyIdea: 'One question uses about as much electricity as a few seconds of TV, but billions of them plus training add up, and data centres have grown from about 2% to over 4% of U.S. electricity.',
+  ),
 };

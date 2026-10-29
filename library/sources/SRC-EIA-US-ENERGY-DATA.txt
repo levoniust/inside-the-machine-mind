@@ -1,0 +1,689 @@
+SOURCE COPY — SRC-EIA-US-ENERGY-DATA
+Retrieved 2026-10-28 for Inside the Machine Mind (offline reference copy; excerpt of the original, formatting simplified).
+Original URL: https://www.eia.gov/energyexplained/us-energy-facts/data-and-statistics.php
+Page/document title: U.S. energy facts - data and statistics - U.S. Energy Information Administration (EIA)
+
+------------------------------------------------------------------------
+
+  * [](http://x.com/eiagov/)
+  * [](https://www.facebook.com/eiagov)
+
+Skip to sub-navigation # [U.S. Energy Information Administration - EIA - Independent Statistics and Analysis
+](/)
+
+Menu
+
+  * Statistics
+
+  * Analysis
+
+  * Tools
+
+  * Education
+
+  * News
+
+  * 
+
+Search
+
+# U.S. energy facts explained  
+
+  * [Consumption & production](us-energy-facts/)
+  * [Imports & exports](us-energy-facts/imports-and-exports.php)
+  * [Data & statistics](us-energy-facts/data-and-statistics.php)
+  * +Menu
+
+What is energy?
+
+Units and calculators
+
+U.S. energy facts
+
+Use of energy
+
+Energy and the environment
+
+Close
+
+  * ## Also in _What is energy?_
+
+  * [What is energy?](what-is-energy/)
+  * [Forms of energy](what-is-energy/forms-of-energy.php)
+  * [Sources of energy](what-is-energy/sources-of-energy.php)
+  * [Laws of energy](what-is-energy/laws-of-energy.php)
+
+Close
+
+  * ## Also in _Units and calculators explained_
+
+  * [Units and calculators](units-and-calculators/)
+  * [Energy conversion calculators](units-and-calculators/energy-conversion-calculators.php)
+  * [British thermal units (Btu)](units-and-calculators/british-thermal-units.php)
+  * [Degree days](units-and-calculators/degree-days.php)
+
+Close
+
+  * ## Also in _U.S. energy facts explained_
+
+  * [Consumption and production](us-energy-facts/)
+  * [Imports and exports](us-energy-facts/imports-and-exports.php)
+  * [Data and statistics](us-energy-facts/data-and-statistics.php)
+  * [State and U.S. territory data](us-energy-facts/state-and-us-territory-data.php)
+
+Close
+
+  * ## Also in _Use of energy explained_
+
+  * [Use of energy](use-of-energy/)
+  * [Energy use in industry](use-of-energy/industry.php)
+  * [Energy use in manufacturing](use-of-energy/industry-in-depth.php)
+  * [Energy use for transportation](use-of-energy/transportation.php)
+  * [Electric vehicles](use-of-energy/transportation-in-depth.php)
+  * [Energy use in homes](use-of-energy/homes.php)
+  * [Electricity use in homes](use-of-energy/electricity-use-in-homes.php)
+  * [Energy use in commercial buildings](use-of-energy/commercial-buildings.php)
+  * [Energy intensity in commercial buildings](use-of-energy/commercial-buildings-in-depth.php)
+  * [Energy efficiency and conservation](use-of-energy/efficiency-and-conservation.php)
+  * [Energy indicators](use-of-energy/energy-indicators.php)
+
+Close
+
+  * ## Also in _Energy and the environment explained_
+
+  * [Energy and the environment](energy-and-the-environment/)
+  * [Greenhouse gases](energy-and-the-environment/greenhouse-gases.php)
+  * [Greenhouse gases and the climate](energy-and-the-environment/greenhouse-gases-and-the-climate.php)
+  * [Where greenhouse gases come from](energy-and-the-environment/where-greenhouse-gases-come-from.php)
+  * [Outlook for future emissions](energy-and-the-environment/outlook-for-future-emissions.php)
+  * [Recycling and energy](energy-and-the-environment/recycling-and-energy.php)
+
+Nonrenewable sources
+
+Oil and petroleum products
+
+Gasoline
+
+Diesel fuel
+
+Heating oil
+
+Close
+
+  * ## Also in _Oil and petroleum products explained_
+
+  * [Oil and petroleum products](oil-and-petroleum-products/)
+  * [Data and statistics](oil-and-petroleum-products/data-and-statistics.php)
+  * [Refining crude oil](oil-and-petroleum-products/refining-crude-oil.php)
+  * [The refining process](oil-and-petroleum-products/refining-crude-oil-the-refining-process.php)
+  * [Inputs and outputs](oil-and-petroleum-products/refining-crude-oil-inputs-and-outputs.php)
+  * [Refinery rankings](oil-and-petroleum-products/refining-crude-oil-refinery-rankings.php)
+  * [Where oil is produced](oil-and-petroleum-products/where-our-oil-comes-from.php)
+  * [Where oil comes from](oil-and-petroleum-products/where-our-oil-comes-from-in-depth.php)
+  * [Imports and exports](oil-and-petroleum-products/imports-and-exports.php)
+  * [Offshore oil and natural gas](oil-and-petroleum-products/offshore-oil-and-gas.php)
+  * [Offshore oil and natural gas production](oil-and-petroleum-products/offshore-oil-and-gas-in-depth.php)
+  * [Use of oil](oil-and-petroleum-products/use-of-oil.php)
+  * [Prices and outlook](oil-and-petroleum-products/prices-and-outlook.php)
+  * [Oil and the environment](oil-and-petroleum-products/oil-and-the-environment.php)
+
+Close
+
+  * ## Also in _Gasoline explained_
+
+  * [Gasoline](gasoline/)
+  * [Octane in depth](gasoline/octane-in-depth.php)
+  * [Where our gasoline comes from](gasoline/where-our-gasoline-comes-from.php)
+  * [Use of gasoline](gasoline/use-of-gasoline.php)
+  * [Prices and outlook](gasoline/prices-and-outlook.php)
+  * [Factors affecting gasoline prices](gasoline/factors-affecting-gasoline-prices.php)
+  * [Regional price differences](gasoline/regional-price-differences.php)
+  * [Price fluctuations](gasoline/price-fluctuations.php)
+  * [History of gasoline](gasoline/history-of-gasoline.php)
+  * [Gasoline and the environment](gasoline/gasoline-and-the-environment.php)
+  * [Leaded Gasoline](gasoline/gasoline-and-the-environment-leaded-gasoline.php)
+
+Close
+
+  * ## Also in _Diesel fuel explained_
+
+  * [Diesel fuel](diesel-fuel/)
+  * [Where our diesel comes from](diesel-fuel/where-our-diesel-comes-from.php)
+  * [Use of diesel](diesel-fuel/use-of-diesel.php)
+  * [Prices and outlook](diesel-fuel/prices-and-outlook.php)
+  * [Factors affecting diesel prices](diesel-fuel/factors-affecting-diesel-prices.php)
+  * [Diesel fuel surcharges](diesel-fuel/diesel-fuel-surcharges.php)
+  * [Diesel and the environment](diesel-fuel/diesel-and-the-environment.php)
+
+Close
+
+  * ## Also in _Heating oil explained_
+
+  * [Heating oil](heating-oil/)
+  * [Where our heating oil comes from](heating-oil/where-our-heating-oil-comes-from.php)
+  * [Use of heating oil](heating-oil/use-of-heating-oil.php)
+  * [Prices and outlook](heating-oil/prices-and-outlook.php)
+  * [Factors affecting heating oil prices](heating-oil/factors-affecting-heating-oil-prices.php)
+
+Hydrocarbon Gas Liquids
+
+Natural gas
+
+Coal
+
+Nuclear
+
+Close
+
+  * ## Also in _Hydrocarbon gas liquids explained_
+
+  * [Hydrocarbon gas liquids](hydrocarbon-gas-liquids/)
+  * [Where do hydrocarbon gas liquids come from?](hydrocarbon-gas-liquids/where-do-hydrocarbon-gas-liquids-come-from.php)
+  * [Propane production](hydrocarbon-gas-liquids/where-do-hydrocarbon-gas-liquids-come-from-in-depth.php)
+  * [Transporting and storing](hydrocarbon-gas-liquids/transporting-and-storing-hydrocarbon-gas-liquids.php)
+  * [Uses of hydrocarbon gas liquids](hydrocarbon-gas-liquids/uses-of-hydrocarbon-gas-liquids.php)
+  * [Propane consumption](hydrocarbon-gas-liquids/uses-of-hydrocarbon-gas-liquids-in-depth.php)
+  * [Imports and exports](hydrocarbon-gas-liquids/imports-and-exports-of-hydrocarbon-gas-liquids.php)
+  * [Prices](hydrocarbon-gas-liquids/prices-for-hydrocarbon-gas-liquids.php)
+  * [Propane prices](hydrocarbon-gas-liquids/prices-for-hydrocarbon-gas-liquids-propane.php)
+
+Close
+
+  * ## Also in _Natural gas explained_
+
+  * [Natural gas](natural-gas/)
+  * [Data and statistics](natural-gas/data-and-statistics.php)
+  * [Delivery and storage](natural-gas/delivery-and-storage.php)
+  * [Natural gas pipelines](natural-gas/natural-gas-pipelines.php)
+  * [Liquefied natural gas](natural-gas/liquefied-natural-gas.php)
+  * [Where our natural gas comes from](natural-gas/where-our-natural-gas-comes-from.php)
+  * [Imports and exports](natural-gas/imports-and-exports.php)
+  * [How much gas is left](natural-gas/how-much-gas-is-left.php)
+  * [Use of natural gas](natural-gas/use-of-natural-gas.php)
+  * [Prices](natural-gas/prices.php)
+  * [Factors affecting natural gas prices](natural-gas/factors-affecting-natural-gas-prices.php)
+  * [Natural gas and the environment](natural-gas/natural-gas-and-the-environment.php)
+  * [Customer choice programs](natural-gas/customer-choice-programs.php)
+
+Close
+
+  * ## Also in _Coal explained_
+
+  * [Coal](coal/)
+  * [Data and statistics](coal/data-and-statistics.php)
+  * [Mining and transportation](coal/mining-and-transportation.php)
+  * [Where our coal comes from](coal/where-our-coal-comes-from.php)
+  * [Imports and exports](coal/imports-and-exports.php)
+  * [How much coal is left](coal/how-much-coal-is-left.php)
+  * [Use of coal](coal/use-of-coal.php)
+  * [Prices and outlook](coal/prices-and-outlook.php)
+  * [Coal and the environment](coal/coal-and-the-environment.php)
+
+Close
+
+  * ## Also in _Nuclear explained_
+
+  * [Nuclear](nuclear/)
+  * [Data and statistics](nuclear/data-and-statistics.php)
+  * [Nuclear power plants](nuclear/nuclear-power-plants.php)
+  * [Types of reactors](nuclear/nuclear-power-plants-types-of-reactors.php)
+  * [The nuclear fuel cycle](nuclear/the-nuclear-fuel-cycle.php)
+  * [Where our uranium comes from](nuclear/where-our-uranium-comes-from.php)
+  * [U.S. nuclear industry](nuclear/us-nuclear-industry.php)
+  * [Nuclear power and the environment](nuclear/nuclear-power-and-the-environment.php)
+
+Renewable sources
+
+Renewable energy
+
+Hydropower
+
+Biomass
+
+Biofuels
+
+Close
+
+  * ## Also in _Renewable energy explained_
+
+  * [Renewable energy](renewable-sources/)
+  * [Types & usages](renewable-sources/types-and-usage.php)
+  * [Incentives](renewable-sources/incentives.php)
+  * [Portfolio standards](renewable-sources/portfolio-standards.php)
+
+Close
+
+  * ## Also in _Hydropower explained_
+
+  * [Hydropower](hydropower/)
+  * [Where hydropower is generated](hydropower/where-hydropower-is-generated.php)
+  * [Hydropower and the environment](hydropower/hydropower-and-the-environment.php)
+  * [Tidal power](hydropower/tidal-power.php)
+  * [Wave power](hydropower/wave-power.php)
+  * [Ocean thermal energy conversion](hydropower/ocean-thermal-energy-conversion.php)
+
+Close
+
+  * ## Also in _Biomass explained_
+
+  * [Biomass](biomass/)
+  * [Wood and wood waste](biomass/wood-and-wood-waste.php)
+  * [Waste-to-energy (MSW)](biomass/waste-to-energy.php)
+  * [In depth](biomass/waste-to-energy-in-depth.php)
+  * [Landfill gas and biogas](biomass/landfill-gas-and-biogas.php)
+  * [Biomass and the environment](biomass/biomass-and-the-environment.php)
+
+Close
+
+  * ## Also in _Biofuels explained_
+
+  * [Biofuels](biofuels/)
+  * [Data and statistics](biofuels/data-and-statistics.php)
+  * [Ethanol](biofuels/ethanol.php)
+  * [Ethanol Use](biofuels/ethanol-use.php)
+  * [Ethanol Supply](biofuels/ethanol-supply.php)
+  * [Biodiesel, renewable diesel, and other biofuels](biofuels/biodiesel-rd-other-basics.php)
+  * [Use and supply](biofuels/biodiesel-rd-other-use-supply.php)
+  * [Biofuels and the environment](biofuels/biofuels-and-the-environment.php)
+
+Wind
+
+Geothermal
+
+Solar
+
+Close
+
+  * ## Also in _Wind explained_
+
+  * [Wind](wind/)
+  * [Electricity generation from wind](wind/electricity-generation-from-wind.php)
+  * [Where wind power is harnessed](wind/where-wind-power-is-harnessed.php)
+  * [Types of wind turbines](wind/types-of-wind-turbines.php)
+  * [History of wind power](wind/history-of-wind-power.php)
+  * [Wind energy and the environment](wind/wind-energy-and-the-environment.php)
+
+Close
+
+  * ## Also in _Geothermal explained_
+
+  * [Geothermal](geothermal/)
+  * [Where geothermal energy is found](geothermal/where-geothermal-energy-is-found.php)
+  * [Use of geothermal energy](geothermal/use-of-geothermal-energy.php)
+  * [Geothermal power plants](geothermal/geothermal-power-plants.php)
+  * [Geothermal heat pumps](geothermal/geothermal-heat-pumps.php)
+  * [Geothermal energy and the environment](geothermal/geothermal-energy-and-the-environment.php)
+
+Close
+
+  * ## Also in _Solar explained_
+
+  * [Solar](solar/)
+  * [Photovoltaics and electricity](solar/photovoltaics-and-electricity.php)
+  * [Where solar is found and used](solar/where-solar-is-found.php)
+  * [Solar thermal power plants](solar/solar-thermal-power-plants.php)
+  * [Solar thermal collectors](solar/solar-thermal-collectors.php)
+  * [Solar energy and the environment](solar/solar-energy-and-the-environment.php)
+
+Secondary sources
+
+Electricity
+
+Hydrogen
+
+Close
+
+  * ## Also in _Electricity explained_
+
+  * [Electricity](electricity/)
+  * [Data and statistics](electricity/data-and-statistics.php)
+  * [The science of electricity](electricity/the-science-of-electricity.php)
+  * [Magnets and electricity](electricity/magnets-and-electricity.php)
+  * [Batteries, circuits, and transformers](electricity/batteries-circuits-and-transformers.php)
+  * [Measuring electricity](electricity/measuring-electricity.php)
+  * [How electricity is generated](electricity/how-electricity-is-generated.php)
+  * [Energy storage for electricity generation](electricity/energy-storage-for-electricity-generation.php)
+  * [Electricity in the United States](electricity/electricity-in-the-us.php)
+  * [Generation, capacity, and sales](electricity/electricity-in-the-us-generation-capacity-and-sales.php)
+  * [Top 10](electricity/electricity-in-the-us-top-10.php)
+  * [Delivery to consumers](electricity/delivery-to-consumers.php)
+  * [Use of electricity](electricity/use-of-electricity.php)
+  * [Prices and factors affecting prices](electricity/prices-and-factors-affecting-prices.php)
+  * [Electricity and the environment](electricity/electricity-and-the-environment.php)
+
+Close
+
+  * ## Also in _Hydrogen explained_
+
+  * [Hydrogen](hydrogen/)
+  * [Hydrogen production](hydrogen/production-of-hydrogen.php)
+  * [Use of hydrogen](hydrogen/use-of-hydrogen.php)
+
+## U.S. total energy statistics
+
+Data for 2024, except where noted.
+
+[Total primary energy production](/totalenergy/data/monthly/#summary) | 103.31 quadrillion British thermal units (quad)  
+---|---  
+[By fuel/energy source](/totalenergy/data/browser/index.php?tbl=T01.02#/?f=A&start=1949&end=2023&charted=1-2-3-4-6-13-14) | share of total  
+Natural gas | 38%  
+Petroleum (crude oil and natural gas plant liquids) | 35% | Coal | 10%  
+Renewable energy | 9%  
+Nuclear electric power | 8%  
+[Total primary energy consumption](/totalenergy/data/monthly/#consumption) | 94.21 quads  
+---|---  
+[By fuel/energy source](/totalenergy/data/browser/index.php?tbl=T01.03#/?f=A&start=1949&end=2023&charted=1-2-3-5-12-13) | share of total  
+Petroleum | 38%  
+Natural gas | 36%  
+Renewable energy | 9%  
+Coal | 8%  
+Nuclear electric power | 9%  
+[By sector and share of total U.S. primary energy consumption](https://www.eia.gov/totalenergy/data/monthly/#consumption) | share of total  
+Electric power | 35%  
+Transportation | 30%  
+Industrial | 24%  
+Residential | 7%  
+Commercial | 5%  
+[Energy trade](/totalenergy/data/monthly/#summary)  
+---  
+[Imports](/totalenergy/data/browser/index.php?tbl=T01.04A#/?f=A&start=1949&end=2023&charted=3-7-1-2-5-6-8-9-10) | 21.66 quads  
+[Exports](/totalenergy/data/browser/index.php?tbl=T01.04B#/?f=A&start=1949&end=2023&charted=12-1-2-3-5-6-7-8-9-10) | 30.92 quads  
+[Net imports](/totalenergy/data/browser/index.php?tbl=T01.04C#/?f=A&start=1949&end=2023&charted=0-10-1-2-3-5-6-7-8-9) | -9.26 quads  
+Net exports | 9.26 quads  
+[Electricity generation](/totalenergy/data/monthly/#electricity) | 4.30 trillion kilowatthours  
+---|---  
+[By major fuel/energy source](/totalenergy/data/browser/index.php?tbl=T07.02A#/?f=A&start=1949&end=2023&charted=5-15-10-11-12-13-14-8-1-2-3-4) | share of total  
+Natural gas | 43%  
+Renewables1 | 23%  
+Nuclear | 18%  
+Coal | 15%  
+Petroleum | 0.4%  
+Other gases and sources2 | 0.2%  
+[Energy-related carbon dioxide (CO2) emissions](/totalenergy/data/monthly/#environment) | 4,795 million metric tons CO2  
+---|---  
+[By energy source](/totalenergy/data/browser/index.php?tbl=T11.01#/?f=A&start=1973&end=2023&charted=0-1-13-14) | share of total  
+Petroleum | 47%  
+Natural gas | 37%  
+Coal | 16%  
+[Energy consumption and carbon dioxide emissions indicators](/totalenergy/data/browser/index.php?tbl=T01.07#/?f=A&start=1949&end=2023&charted=2-3-11) |   
+---|---  
+Primary energy consumption per capita | 277 million Btu per person  
+Primary energy consumption per [real dollar](/tools/glossary/index.php?id=Real%20dollars) of [GDP](/tools/glossary/index.php?id=Gross%20domestic%20product%20\(GDP\)) | 4.04 thousand Btu per chained (2017) dollar  
+Energy-related CO2 emissions per capita | 14.0 metric tons (30,865 pounds) per person  
+Energy-related CO2 emissions per real dollar of GDP | 205 metric tons (226 [short tons](/tools/glossary/index.php?id=Short%20ton%20\(st\))) per million chained (2017) dollars  
+  
+Data source: [_Monthly Energy Review_](/totalenergy/data/monthly/), April 24, 2025; preliminary data for 2024  
+Note: Sum of share of totals below may not equal 100% because of independent rounding.  
+1 Excludes [pumped-storage hydro electricity](/tools/glossary/index.php?id=Pumped-
+storage%20hydroelectric%20plant) generation.  
+2 Includes blast furnace gas and other manufactured and waste gases derived from fossil fuels, batteries,
+chemicals, hydrogen, pitch, purchased steam, sulfur, municipal solid waste from nonrenewable/non-biogenic
+sources, tire-derived fuels, and other miscellaneous sources.
+
+## More data and statistics for:
+
+  * [Crude oil and petroleum](oil-and-petroleum-products/data-and-statistics.php)
+  * [Natural gas ](natural-gas/data-and-statistics.php)
+  * [Coal](coal/data-and-statistics.php)
+  * [Nuclear](nuclear/data-and-statistics.php)
+  * [Electricity ](electricity/data-and-statistics.php)
+  * [Biofuels](biofuels/data-and-statistics.php)
+  * [Renewable energy](/totalenergy/data/monthly/index.php#renewable) 
+
+  * ## Also in _U.S. energy facts explained_
+
+  * [Consumption and production](us-energy-facts/)
+  * [Imports and exports](us-energy-facts/imports-and-exports.php)
+  * [Data and statistics](us-energy-facts/data-and-statistics.php)
+  * [State and U.S. territory data](us-energy-facts/state-and-us-territory-data.php)
+
+  * ## Also on Energy Explained
+
+  * [Crude oil and petroleum statistics](oil-and-petroleum-products/data-and-statistics.php)
+  * [Natural gas statistics](natural-gas/data-and-statistics.php)
+  * [Coal statistics](coal/data-and-statistics.php)
+  * [Nuclear statistics](nuclear/data-and-statistics.php)
+  * [Electricity statistics](electricity/data-and-statistics.php)
+
+  * ## Also on EIA.gov
+
+  * [Monthly Energy Review](/totalenergy/data/monthly/)
+  * [Annual Energy Outlook](/outlooks/aeo/)
+  * [International Energy Statistics](/international/data/world)
+  * [Energy Perspectives, 1949-2011](/totalenergy/data/annual/perspectives.php)
+
+  * [About EIA](/about/)
+  * [Open Data](/beta/api/)
+  * [Legacy](/reports/legacy/)
+  * [Contact Us](/about/contact/)
+
+U.S. Energy Information Administration
+
+1000 Independence Ave., SW
+
+Washington, DC 20585
+
+Policies
+
+[Privacy/Security](/about/privacy_security_policy.php)
+
+[Copyright & Reuse](/about/copyrights_reuse.php)
+
+[Accessibility](/about/accessibility.php)
+
+[Information Quality](/about/information_quality_guidelines.php)
+
+[Freedom of Information Act (FOIA)](/about/foia.php)
+
+Related Sites
+
+[usa.gov](https://www.usa.gov/)
+
+[U.S. Department of Energy](https://www.energy.gov/)
+
+Stay Connected
+
+[Facebook](http://facebook.com/eiagov/)
+
+[X](http://x.com/eiagov/)
+
+[Youtube](http://youtube.com/eiagov/)
+
+[LinkedIn](http://linkedin.com/company/u-s-energy-information-administration)
+
+[Email Updates](/tools/emailupdates/)
+
+[RSS Feeds](/tools/rssfeeds/)
+
+Statistics
+
+Analysis
+
+Tools
+
+Education
+
+News
+
+###  [Petroleum & Other Liquids](/petroleum/ "Petroleum & Other Liquids")
+
+Crude oil, gasoline, heating oil, diesel, propane, and other liquids including biofuels and natural gas
+liquids.
+
+###  [Natural Gas](/naturalgas/ "Natural Gas")
+
+Exploration and reserves, storage, imports and exports, production, prices, sales.
+
+###  [Electricity](/electricity/ "Electricity")
+
+Sales, revenue and prices, power plants, fuel use, stocks, generation, trade, demand & emissions.
+
+###  [Coal](/coal/ "Coal")
+
+Reserves, production, prices, employment and productivity, distribution, stocks, imports and exports.
+
+###  [Nuclear & Uranium](/nuclear/ "Nuclear & Uranium")
+
+Uranium fuel, nuclear reactors, generation, spent fuel.
+
+###  [Renewable & Alternative Fuels](/renewable/ "Renewable & Alternative Fuels")
+
+Includes hydropower, solar, wind, geothermal, biomass and ethanol.
+
+###  [EIA Survey Forms](/survey/ "EIA Survey Forms")
+
+Forms EIA uses to collect energy data including descriptions, links to survey instructions, and additional
+information.
+
+###  [Total Energy](/totalenergy/ "Total Energy")
+
+Comprehensive data summaries, comparisons, analysis, and projections integrated across all energy sources.
+
+  * [Monthly Energy Review](/totalenergy/data/monthly/ "Monthly Energy Review")
+
+###  [Consumption & Efficiency](/consumption/ "Consumption & Efficiency")
+
+Energy use in homes, commercial buildings, manufacturing, and transportation.
+
+  * [Residential Energy Consumption Survey (RECS)](/consumption/residential/ "Residential Energy Consumption Survey \(RECS\)")
+  * [Commercial Buildings Energy Consumption Survey (CBECS)](/consumption/commercial/ "Commercial Buildings Energy Consumption Survey \(CBECS\)")
+  * [Manufacturing Energy Consumption Survey (MECS)](/consumption/manufacturing/ "Manufacturing Energy Consumption Survey \(MECS\)")
+
+###  [U.S. States](/states/ "U.S. States")
+
+State energy information, including overviews, rankings, data, and analyses.
+
+###  [International](/international/ "International")
+
+International energy information, including overviews, rankings, data, and analyses.
+
+###  [Environment](/environment/ "Environment")
+
+Greenhouse gas data, voluntary reporting, electric power plant emissions.
+
+  * [U.S. Energy-Related Carbon Dioxide Emissions](/environment/emissions/carbon/ "U.S. Energy-Related Carbon Dioxide Emissions")
+  * [Energy-Related Carbon Dioxide Emissions at the State Level](/environment/emissions/state/ "Energy-Related Carbon Dioxide Emissions at the State Level")
+
+###  [Analysis and Projections](/analysis/ "Analysis")
+
+Monthly and yearly energy forecasts, analysis of energy topics, financial analysis, congressional reports.
+
+  * [Short-Term Energy Outlook](/outlooks/steo/ "Short-Term Energy Outlook")
+  * [Annual Energy Outlook](/outlooks/aeo/ "Annual Energy Outlook")
+
+###  [Special Reports](/reports/#T138 "Special Reports")
+
+Special market analysis and/or data requests.
+
+  * [EIA-112 Residential Utility Disconnections](/analysis/requests/residential/utility/ "Residential Utility Disconnections Report")
+  * [SHIP Act](/international/analysis/special-topics/SHIP_Act "SHIP Act")
+  * [Energy & Financial Markets: What Drives Crude Oil Prices?](/finance/markets/crudeoil/ "Energy & Financial Markets: What Drives Crude Oil Prices?")
+
+###  [International](/international/ "International")
+
+International energy analyses.
+
+  * [Regional Analysis Briefs](/international/analysis/world "Regional Analysis Briefs")
+  * [Country Analysis Briefs](/international/analysis/world "Country Analysis Briefs")
+  * [World Oil Transit Chokepoints](/international/analysis/special-topics/World_Oil_Transit_Chokepoints "World Oil Transit Chokepoints")
+  * [OPEC Revenue](/international/analysis/special-topics/OPEC_Revenues_Fact_Sheet "OPEC Revenue")
+  * [Global Energy Security Data](/outlooks/steo/report/energysecurity/article.php "Global Energy Security data")
+
+###  [Data Tools, Apps, & Maps](/tools/ "Data Tools, Apps, & Maps")
+
+Tools to customize searches, view specific data sets, study detailed documentation, and access time-series
+data.
+
+###  [Open Data](/opendata/ "Open Data")
+
+EIA's free and open data available as API, Excel add-in, bulk files, and widgets
+
+###  [EIA Beta](/beta "EIA Beta")
+
+Come test out some of the products still in development and let us know what you think!
+
+###  [Open Source Code](/tools/open-source-code/ "Open Source Code")
+
+EIA's open source code, available on GitHub.
+
+###  [All Reports & Products](/reports/ "All Reports & Products")
+
+###  [Email Updates](/tools/emailupdates/ "Email Updates")
+
+Sign up for email subscriptions to receive messages about specific EIA products
+
+###  [RSS Feeds](/tools/rssfeeds/ "RSS Feeds")
+
+Subscribe to feeds for updates on EIA products including Today in Energy and What's New.
+
+### Follow us. . .
+
+[ ](http://facebook.com/eiagov/ "facebook") [ ](http://x.com/eiagov/ "twitter") [ ](http://youtube.com/eiagov/
+"youtube") [ ](https://www.linkedin.com/company/u-s-energy-information-administration "linkedin")
+
+###  [A-Z Index](/tools/a-z/ "A-Z Index")
+
+[A](/tools/a-z/index.php?id=a "A") | [B](/tools/a-z/index.php?id=b "B") | [C](/tools/a-z/index.php?id=c "C") | [D](/tools/a-z/index.php?id=d "D") | [E](/tools/a-z/index.php?id=e "E") | [F](/tools/a-z/index.php?id=f "F") | [G](/tools/a-z/index.php?id=g "G") | [H](/tools/a-z/index.php?id=h "H") | [I](/tools/a-z/index.php?id=i "I") | [J](/tools/a-z/index.php?id=j "J") | [K](/tools/a-z/index.php?id=k "K") | [L](/tools/a-z/index.php?id=l "L") | [M](/tools/a-z/index.php?id=m "M") | [N](/tools/a-z/index.php?id=n "N") | [O](/tools/a-z/index.php?id=o "O") | [P](/tools/a-z/index.php?id=p "P") | [Q](/tools/a-z/index.php?id=q "Q") | [R](/tools/a-z/index.php?id=r "R") | [S](/tools/a-z/index.php?id=s "S") | [T](/tools/a-z/index.php?id=t "T") | [U](/tools/a-z/index.php?id=u "U") | [V](/tools/a-z/index.php?id=v "V") | [W](/tools/a-z/index.php?id=w "W") | [XYZ](/tools/a-z/index.php?id=xyz "XYZ")
+
+###  [Energy Explained](/energyexplained/ "Energy Explained")
+
+  * [What is Energy?](/energyexplained/what-is-energy/ "What is Energy?")
+  * [Units & Calculators](/energyexplained/units-and-calculators/ "Units & Calculators")
+  * [U.S. Energy Facts](/energyexplained/us-energy-facts/ "U.S. Energy Facts")
+  * [Use of Energy](/energyexplained/use-of-energy/ "Use of Energy")
+  * [Energy & Environment](/energyexplained/energy-and-the-environment/ "Energy & Environment")
+  * [Petroleum](/energyexplained/oil-and-petroleum-products/ "Petroleum")
+  * [Hydrocarbon Gas Liquids](/energyexplained/hydrocarbon-gas-liquids/ "Hydrocarbon Gas Liquids")
+  * [Natural Gas](/energyexplained/natural-gas/ "Natural Gas")
+
+  * [Coal](/energyexplained/coal/ "Coal")
+  * [Nuclear](/energyexplained/nuclear/ "Nuclear")
+  * [Electricity](/energyexplained/electricity/ "Electricity")
+  * [Hydrogen](/energyexplained/hydrogen/ "Hydrogen")
+  * [Hydropower](/energyexplained/hydropower/ "Hydropower")
+  * [Biofuels](/energyexplained/biofuels/ "Biofuels")
+  * [Biomass](/energyexplained/biomass/ "Biomass")
+  * [Wind](/energyexplained/wind/ "Wind")
+  * [Geothermal](/energyexplained/geothermal/ "Geothermal")
+  * [Solar](/energyexplained/solar/ "Solar")
+
+###  [For Teachers](/kids/energy.php?page=6 "For Teachers")
+
+Lesson plans, science fair experiments, field trips, teacher guide, and career corner.
+
+###  [Glossary](/tools/glossary/ "Glossary")
+
+###  [FAQs](/tools/faqs/ "FAQs")
+
+  * [Coal](/tools/faqs/#coal "Coal")
+  * [Conversion & Equivalents](/tools/faqs/#conversion equivalents "Conversion & Equivalents")
+  * [Oil/Petroleum](/tools/faqs/index.php#oil/petroleum "Oil/Petroleum")
+  * [Diesel](/tools/faqs/#diesel "Diesel")
+  * [Electricity](/tools/faqs/#electricity "Electricity")
+  * [Environment](/tools/faqs/#environment "Environment")
+
+  * [Gasoline](/tools/faqs/index.php#gasoline "Gasoline")
+  * [General Energy](/tools/faqs/index.php#generalenergy "General Energy")
+  * [Natural Gas](/tools/faqs/index.php#naturalgas "Natural Gas")
+  * [Nuclear](/tools/faqs/index.php#nuclear "Nuclear")
+  * [Prices](/tools/faqs/index.php#prices "Prices")
+  * [Renewables](/tools/faqs/index.php#renewables "Renewables")
+
+[ ](/kids/ "energy kids")
+
+### [What's New?](/about/new/)
+
+  * [Electric Power Annual 2025](/electricity/annual/)
+  * Oct 21, 2026
+  * [Wholesale Electricity Market Data](/electricity/wholesale/)
+  * Oct 15, 2026
+  * [Monthly Densified Biomass Fuel Report](/biofuels/biomass/)
+  * Oct 08, 2026
+
+###  [Press Room](/pressroom/ "Press Room")
+
+  * [Press Releases](/pressroom/releases.php "Press Releases")
+  * [Congressional Testimony](/pressroom/testimony.php "Congressional Testimony")
+  * [Presentations](/pressroom/presentations.php "Presentations")
+  * [Events](/pressroom/events/ "Events")
+

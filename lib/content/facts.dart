@@ -186,6 +186,11 @@ const sources = <String, Source>{
   'SRC-GOOGLE-TIMSHAW': Source('SRC-GOOGLE-TIMSHAW', 'Google, "How Tim Shaw regained his voice" (December 18, 2019), blog.google'),
   'SRC-BBC-AIMIRRORS': Source('SRC-BBC-AIMIRRORS', 'BBC Future, "\'AI mirrors\' are changing the way blind people see themselves" (January 27, 2026), bbc.com', url: 'bbc.com'),
   'SRC-MASHABLE-BEMYEYES': Source('SRC-MASHABLE-BEMYEYES', 'Mashable, "Be My Eyes meets GPT-4: Is AI the next frontier in accessibility?" (March 22, 2023), mashable.com', url: 'mashable.com'),
+  'SRC-GOOGLE-PROMPT-ENERGY': Source('SRC-GOOGLE-PROMPT-ENERGY', 'Elsworth et al. (Google), "Measuring the environmental impact of delivering AI at Google Scale", arXiv 2508.15734 (August 2025)'),
+  'SRC-ALTMAN-QUERY': Source('SRC-ALTMAN-QUERY', 'Sam Altman, "The Gentle Singularity", blog.samaltman.com (June 10, 2025)', url: 'blog.samaltman.com'),
+  'SRC-LBNL-DC2024': Source('SRC-LBNL-DC2024', 'Shehabi et al., "2024 United States Data Center Energy Usage Report", Lawrence Berkeley National Laboratory (December 2024)'),
+  'SRC-EIA-ELEC-USE': Source('SRC-EIA-ELEC-USE', 'U.S. EIA, "Use of electricity" (Energy Explained), eia.gov (fetched 2026-10-28)', url: 'eia.gov'),
+  'SRC-EIA-US-ENERGY-DATA': Source('SRC-EIA-US-ENERGY-DATA', 'U.S. EIA, "U.S. energy facts - data and statistics" (data for 2024), eia.gov (fetched 2026-10-28)', url: 'eia.gov'),
 };
 
 const facts = <String, Fact>{
@@ -463,4 +468,12 @@ const facts = <String, Fact>{
   'ACC-SHAW': Fact('ACC-SHAW', 'Former NFL linebacker Tim Shaw lost his voice to ALS; Google\'s Project Euphonia and DeepMind rebuilt it from the many interviews he gave as a player. Making a good synthetic voice normally needs 30-40 minutes of recordings, which people with ALS don\'t always have', sources: ['SRC-GOOGLE-TIMSHAW'], value: '30-40 min'),
   'ACC-EDWARDS': Fact('ACC-EDWARDS', 'Lucy Edwards, a blind content creator, tested Be My Eyes\' GPT-4 "Virtual Volunteer" in 2023 and now uses AI to describe her own photos: "I haven\'t had an opinion about my face for 12 years. Suddenly I\'m taking a photo and I can ask AI"', sources: ['SRC-BBC-AIMIRRORS', 'SRC-MASHABLE-BEMYEYES']),
   'ACC-MIRROR-RISK': Fact('ACC-MIRROR-RISK', 'The same BBC report notes that some of these apps, on request, rate a person against what the AI treats as traditional beauty standards and say what they "should" change', sources: ['SRC-BBC-AIMIRRORS']),
+  'NRG-GEMINI': Fact('NRG-GEMINI', 'Google measured that the median Gemini Apps text prompt uses 0.24 Wh, less than watching nine seconds of TV, counting chips, idle capacity and data-centre overhead; efficiency work cut it 33× in one year', sources: ['SRC-GOOGLE-PROMPT-ENERGY'], value: '0.24 Wh'),
+  'NRG-CHATGPT': Fact('NRG-CHATGPT', 'Sam Altman wrote that the average ChatGPT query uses about 0.34 Wh: about what an oven uses in a little over one second, or a high-efficiency light bulb in a couple of minutes', sources: ['SRC-ALTMAN-QUERY'], value: '0.34 Wh'),
+  'NRG-TV-HOUR': Fact('NRG-TV-HOUR', 'Arithmetic from Google\'s comparison: if 9 seconds of TV ≈ 0.24 Wh, an hour of TV ≈ 96 Wh, about 400 median prompts', sources: ['SRC-GOOGLE-PROMPT-ENERGY'], value: '~96 Wh'),
+  'NRG-HOME-DAY': Fact('NRG-HOME-DAY', 'The average U.S. household uses about 10,500 kWh of electricity a year, about 29 kWh a day', sources: ['SRC-EIA'], value: '10.5 MWh/yr'),
+  'NRG-DC-US': Fact('NRG-DC-US', 'U.S. data centres used about 176 TWh in 2023, 4.4% of all U.S. electricity (1.9% in 2018), and could reach 6.7-12% by 2028', sources: ['SRC-LBNL-DC2024'], value: '176 TWh, 4.4%'),
+  'NRG-US-ELEC': Fact('NRG-US-ELEC', 'Total U.S. electricity use in 2025 was about 4.20 trillion kWh (4,200 TWh), the highest on record', sources: ['SRC-EIA-ELEC-USE'], value: '4,200 TWh'),
+  'NRG-US-ENERGY': Fact('NRG-US-ENERGY', 'All U.S. energy use (electricity plus fuel for cars, heating and industry) in 2024 was 94.21 quadrillion Btu, about 27,600 TWh (1 quad ≈ 293 TWh)', sources: ['SRC-EIA-US-ENERGY-DATA'], value: '~27,600 TWh'),
+  'NRG-WHATIF': Fact('NRG-WHATIF', 'What-if arithmetic: 1 billion questions a day at 0.34 Wh is 340 MWh a day, the daily electricity of about 11,800 average U.S. homes', sources: ['SRC-ALTMAN-QUERY', 'SRC-EIA'], value: '340 MWh/day'),
 };

@@ -50,4 +50,16 @@ const quizS11 = <QuizQuestion>[
     3,
     'The GPT-4o system card describes limiting output to preset voices and a classifier that blocks audio in any other voice.',
   ),
+  QuizQuestion(
+    'Google measured the energy of a typical Gemini text prompt. Roughly what is it like?',
+    ['A home\'s electricity for a day', 'Running a dishwasher', 'Less than watching nine seconds of TV (0.24 Wh)', 'Charging an electric car'],
+    2,
+    'Google\'s 2025 paper puts the median Gemini Apps text prompt at 0.24 Wh, less than nine seconds of television.',
+  ),
+  QuizQuestion(
+    'About what share of all U.S. electricity did data centres use in 2023?',
+    ['25%', '4.4%', '0.1%', '50%'],
+    1,
+    'The 2024 Lawrence Berkeley National Laboratory report found 176 TWh in 2023, 4.4% of U.S. electricity, up from 1.9% in 2018, with 6.7-12% possible by 2028.',
+  ),
 ];
