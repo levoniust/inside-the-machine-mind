@@ -38,4 +38,16 @@ const quizS11 = <QuizQuestion>[
     1,
     'Each maker describes memory as saved details or a summary used in later chats, with controls to view, edit, delete or switch it off.',
   ),
+  QuizQuestion(
+    'In a classic voice assistant (speech-to-text, then a chat model, then text-to-speech), what does the chat model receive?',
+    ['A recording of your voice', 'A list of your past voice messages', 'Your face from the camera', 'Only the text the speech-to-text step wrote down'],
+    3,
+    'The middle of the relay only sees text, so tone of voice, breathing and background sounds don\'t reach it.',
+  ),
+  QuizQuestion(
+    'What did OpenAI do after GPT-4o sometimes imitated the user\'s own voice in testing?',
+    ['It removed voice mode entirely', 'Nothing; it was considered a feature', 'It asked users to record their voice first', 'It allowed only preset voices made with voice actors and blocks output that drifts from them'],
+    3,
+    'The GPT-4o system card describes limiting output to preset voices and a classifier that blocks audio in any other voice.',
+  ),
 ];

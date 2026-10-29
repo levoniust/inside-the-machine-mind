@@ -173,6 +173,7 @@ const sources = <String, Source>{
   'SRC-ANTHROPIC-COMPUTER': Source('SRC-ANTHROPIC-COMPUTER', 'Anthropic, "Computer use tool", platform.claude.com/docs (security precautions; fetched 2026-10-28)', url: 'platform.claude.com/docs'),
   'SRC-CLAUDE-MEMORY': Source('SRC-CLAUDE-MEMORY', 'Anthropic, "Use Claude\'s chat search and memory to build on previous context", support.claude.com (fetched 2026-10-28)', url: 'support.claude.com'),
   'SRC-MS-COPILOT-MEMORY': Source('SRC-MS-COPILOT-MEMORY', 'Microsoft, "Privacy FAQ for Microsoft Copilot", support.microsoft.com (fetched 2026-10-28)', url: 'support.microsoft.com'),
+  'SRC-GPT4O-CARD': Source('SRC-GPT4O-CARD', 'OpenAI, "GPT-4o System Card", arXiv 2410.21276 (August 2024)'),
 };
 
 const facts = <String, Fact>{
@@ -428,4 +429,8 @@ const facts = <String, Fact>{
   'MEM-COPILOT': Fact('MEM-COPILOT', 'With personalization on, Microsoft Copilot remembers key details you share, such as your name, interests and goals (not demographic or other sensitive data); you can edit or delete them, and turning personalization off makes it forget', sources: ['SRC-MS-COPILOT-MEMORY']),
   'MEM-GEMINI': Fact('MEM-GEMINI', 'Gemini\'s "memory summary" lets you view, edit and delete what Gemini understands about you, and add or fix details', sources: ['SRC-GOOGLE-GEMINI-PRIVACY']),
   'MEM-CHATGPT-TEMP': Fact('MEM-CHATGPT-TEMP', 'ChatGPT\'s temporary chats don\'t create or update memories (an "Unpersonalized" one doesn\'t use them either) and stay out of your chat history', sources: ['SRC-OPENAI-PRIVACY']),
+  'VOX-FAST': Fact('VOX-FAST', 'GPT-4o handles text, audio and images in one network trained end to end, and can answer spoken input in as little as 232 milliseconds (320 ms on average), similar to a person\'s response time in conversation', sources: ['SRC-GPT4O-CARD'], value: '232 ms / 320 ms'),
+  'VOX-INTERRUPT': Fact('VOX-INTERRUPT', 'Voice assistants let you interrupt and "take the mic" at any time, something OpenAI notes would be rude between people', sources: ['SRC-GPT4O-CARD']),
+  'VOX-PRESETS': Fact('VOX-PRESETS', 'In testing, GPT-4o sometimes imitated the user\'s own voice, so OpenAI allows only preset voices made with voice actors and blocks output that drifts from them', sources: ['SRC-GPT4O-CARD'], value: 'preset voices only'),
+  'VOX-WHISPER-TRANSLATE': Fact('VOX-WHISPER-TRANSLATE', 'Whisper is one model trained for several speech jobs at once: speech recognition in many languages, translating speech into English, and identifying the language', sources: ['SRC-WHISPER-REPO']),
 };

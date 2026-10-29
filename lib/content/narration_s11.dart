@@ -25,4 +25,12 @@ const narrationS11 = <String, LessonText>{
     ],
     keyIdea: 'A chatbot sees only what fits in its context window, while the memory feature keeps a small file of notes about you across chats, which you can view, edit and switch off.',
   ),
+  'e_voice': LessonText(
+    intro: [
+      'Talking to an assistant feels like one thing, but there are two very different machines behind it.',
+      'The classic one is a relay of interpreters: ears turn your speech into text, the chat [[model]] answers in text, and a mouth reads it out. The newer one is a single model that hears and speaks. Flip between them.',
+      'Then test the relay: which parts of what you say actually reach the brain, and which are lost on the way?',
+    ],
+    keyIdea: 'A voice relay turns your speech into plain text, so tone and background are lost, while newer one-model voice modes hear sound directly and reply about as fast as a person.',
+  ),
 };
