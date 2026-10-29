@@ -181,6 +181,11 @@ const sources = <String, Source>{
   'SRC-DETECTOR-BIAS': Source('SRC-DETECTOR-BIAS', 'Liang et al., "GPT detectors are biased against non-native English writers", arXiv 2304.02819 (2023)'),
   'SRC-DETECT-RELIABLE': Source('SRC-DETECT-RELIABLE', 'Sadasivan et al., "Can AI-Generated Text be Reliably Detected?", arXiv 2303.11156 (2023)'),
   'SRC-WATERMARK': Source('SRC-WATERMARK', 'Kirchenbauer et al., "A Watermark for Large Language Models", arXiv 2301.10226 (2023)'),
+  'SRC-AP-WEXTON': Source('SRC-AP-WEXTON', 'Associated Press, "A neurological disorder stole her voice. Jennifer Wexton takes it back on the House floor" (July 25, 2024), ap.org', url: 'ap.org'),
+  'SRC-GOOGLE-LIVETRANSCRIBE': Source('SRC-GOOGLE-LIVETRANSCRIBE', 'Google, "Making audio more accessible with two new apps" (Live Transcribe and Sound Amplifier, 2019), blog.google'),
+  'SRC-GOOGLE-TIMSHAW': Source('SRC-GOOGLE-TIMSHAW', 'Google, "How Tim Shaw regained his voice" (December 18, 2019), blog.google'),
+  'SRC-BBC-AIMIRRORS': Source('SRC-BBC-AIMIRRORS', 'BBC Future, "\'AI mirrors\' are changing the way blind people see themselves" (January 27, 2026), bbc.com', url: 'bbc.com'),
+  'SRC-MASHABLE-BEMYEYES': Source('SRC-MASHABLE-BEMYEYES', 'Mashable, "Be My Eyes meets GPT-4: Is AI the next frontier in accessibility?" (March 22, 2023), mashable.com', url: 'mashable.com'),
 };
 
 const facts = <String, Fact>{
@@ -453,4 +458,9 @@ const facts = <String, Fact>{
   'DET-PROMPT': Fact('DET-PROMPT', 'The same study found that simple prompting (asking for richer wording) could slip AI text past the detectors', sources: ['SRC-DETECTOR-BIAS']),
   'DET-PARAPHRASE': Fact('DET-PARAPHRASE', 'Paraphrasing AI text, even with another AI, can sharply cut detection rates for many kinds of detector, including watermarks, while only slightly lowering the text\'s quality', sources: ['SRC-DETECT-RELIABLE']),
   'DET-WATERMARK': Fact('DET-WATERMARK', 'A text watermark can nudge a model toward a secret, random set of "green" words as it writes; a statistical test spots the pattern in a short passage, with negligible effect on quality', sources: ['SRC-WATERMARK']),
+  'ACC-WEXTON': Fact('ACC-WEXTON', 'US Representative Jennifer Wexton, who lost her clear speech to progressive supranuclear palsy (diagnosed 2023), spoke on the House floor in July 2024 with an AI clone of her own voice built from recordings of her old speeches, believed to be the first such House speech. "I cried happy tears when I first heard it," she told the AP', sources: ['SRC-AP-WEXTON'], value: 'July 2024'),
+  'ACC-KANEVSKY': Fact('ACC-KANEVSKY', 'Dimitri Kanevsky, a Google research scientist deaf since early childhood, helped create Live Transcribe, a free Android app that captions conversations in over 70 languages and dialects, with a type-back keyboard for people who can\'t or don\'t want to speak', sources: ['SRC-GOOGLE-LIVETRANSCRIBE'], value: '70+ languages'),
+  'ACC-SHAW': Fact('ACC-SHAW', 'Former NFL linebacker Tim Shaw lost his voice to ALS; Google\'s Project Euphonia and DeepMind rebuilt it from the many interviews he gave as a player. Making a good synthetic voice normally needs 30-40 minutes of recordings, which people with ALS don\'t always have', sources: ['SRC-GOOGLE-TIMSHAW'], value: '30-40 min'),
+  'ACC-EDWARDS': Fact('ACC-EDWARDS', 'Lucy Edwards, a blind content creator, tested Be My Eyes\' GPT-4 "Virtual Volunteer" in 2023 and now uses AI to describe her own photos: "I haven\'t had an opinion about my face for 12 years. Suddenly I\'m taking a photo and I can ask AI"', sources: ['SRC-BBC-AIMIRRORS', 'SRC-MASHABLE-BEMYEYES']),
+  'ACC-MIRROR-RISK': Fact('ACC-MIRROR-RISK', 'The same BBC report notes that some of these apps, on request, rate a person against what the AI treats as traditional beauty standards and say what they "should" change', sources: ['SRC-BBC-AIMIRRORS']),
 };

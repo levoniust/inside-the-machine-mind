@@ -1,0 +1,667 @@
+SOURCE COPY — SRC-BBC-AIMIRRORS
+Retrieved 2026-10-28 for Inside the Machine Mind (offline reference copy; excerpt of the original, formatting simplified).
+Original URL: https://www.bbc.com/future/article/20260126-ai-mirrors-are-changing-the-way-blind-people-see-themselves
+Page/document title: 'AI mirrors' are changing the way blind people see themselvesBritish Broadcasting Corporation
+
+------------------------------------------------------------------------
+
+Skip to content
+
+[Watch Live](/watch-live-news/)
+
+[British Broadcasting Corporation](/)
+
+  * [Home](/)
+
+  * [News](/news)
+
+  * [Sport](/sport)
+
+  * [Business](/business)
+
+  * [Technology](/technology)
+
+  * [Health](/health)
+
+  * [Culture](/culture)
+
+  * [Arts](/arts)
+
+  * [Travel](/travel)
+
+  * [Earth](/future-planet)
+
+  * [Audio](/audio)
+
+  * [Video](/video)
+
+  * [Live](/live)
+
+  * [Documentaries](/video/docs)
+
+  * [Home](/home)
+  * [News](/news)
+    * [US & Canada](/news/us-canada)
+    * [UK](/news/uk)
+      * [UK Politics](/news/politics)
+      * [England](/news/england)
+      * [N. Ireland](/news/northern_ireland)
+        * [N. Ireland Politics](/news/northern_ireland/northern_ireland_politics)
+      * [Scotland](/news/scotland)
+        * [Scotland Politics](/news/scotland/scotland_politics)
+      * [Wales](/news/wales)
+        * [Wales Politics](/news/wales/wales_politics)
+    * [Africa](/news/world/africa)
+    * [Asia](/news/world/asia)
+      * [China](/news/world/asia/china)
+      * [India](/news/world/asia/india)
+    * [Australia](/news/world/australia)
+    * [Europe](/news/world/europe)
+    * [Latin America](/news/world/latin_america)
+    * [Middle East](/news/world/middle_east)
+    * [In Pictures](/news/in_pictures)
+    * [BBC InDepth](/news/bbcindepth)
+    * [BBC Verify](/news/bbcverify)
+  * [Sport](/sport)
+  * [Business](/business)
+    * [World of Business](/business/world-of-business)
+    * [Technology of Business](/business/technology-of-business)
+    * [NYSE Opening Bell](/business/opening-bell)
+  * [Technology](/technology)
+    * [Watch Documentaries](/video/docs/category/technology)
+    * [Artificial Intelligence](/technology/artificial-intelligence)
+    * [Intelligence Revolution](/technology/intelligence-revolution)
+    * [AI v the Mind](/technology/ai-v-the-mind)
+    * [Tech Now](/technology/tech-now)
+  * [Health](/health)
+    * [Watch Documentaries](/video/docs/category/health)
+  * [Culture](/culture)
+    * [Watch Documentaries](/video/docs/category/culture)
+    * [Film & TV](/culture/film-tv)
+    * [Music](/culture/music)
+    * [Art & Design](/culture/art)
+    * [Style](/culture/style)
+    * [Books](/culture/books)
+    * [Entertainment News](/culture/entertainment-news)
+  * [Arts](/arts)
+    * [Watch Documentaries](/video/docs/category/arts)
+    * [Arts in Motion](/arts/arts-in-motion)
+  * [Travel](/travel)
+    * [Watch Documentaries](/video/docs/category/travel)
+    * [Destinations](/travel/destinations)
+      * [Africa](/travel/destinations/africa)
+      * [Antarctica](/travel/destinations/antarctica)
+      * [Asia](/travel/destinations/asia)
+      * [Australia and Pacific](/travel/destinations/australia-and-pacific)
+      * [Caribbean & Bermuda](/travel/destinations/caribbean)
+      * [Central America](/travel/destinations/central-america)
+      * [Europe](/travel/destinations/europe)
+      * [Middle East](/travel/destinations/middle-east)
+      * [North America](/travel/destinations/north-america)
+      * [South America](/travel/destinations/south-america)
+    * [World’s Table](/travel/worlds-table)
+    * [Culture & Experiences](/travel/cultural-experiences)
+    * [Adventures](/travel/adventures)
+    * [The SpeciaList](/travel/specialist)
+    * [To the Ends of the Earth ](/travel/to-the-ends-of-the-earth)
+  * [Earth](/future-planet)
+    * [Watch Documentaries](/video/docs/category/earth)
+    * [Science](/innovation/science)
+    * [Natural Wonders](/future-planet/natural-wonders)
+    * [Climate Solutions](/future-planet/solutions)
+    * [Sustainable Business](/future-planet/sustainable-business)
+    * [Green Living](/future-planet/green-living)
+  * [Audio](/audio)
+    * [Podcast Categories](/audio/categories)
+    * [Radio](/audio/stations)
+    * [Audio FAQs](/undefined)
+  * [Video](/video)
+    * [Watch Documentaries](/video/docs)
+    * [BBC Maestro](/video/bbc-maestro)
+    * [Discover the World](/video/discover-the-world)
+  * [Live](/live)
+    * [Live News](/live/news)
+    * [Live Sport](/live/sport)
+  * [Documentaries](/video/docs)
+
+Site search
+
+[Home](/)
+
+News
+
+[Sport](/sport)
+
+Business
+
+Technology
+
+[Health](/health)
+
+Culture
+
+Arts
+
+Travel
+
+Earth
+
+Audio
+
+Video
+
+Live
+
+Documentaries
+
+[Weather](https://www.bbc.com/weather)
+
+[Newsletters](https://www.bbc.com/newsletters)
+
+[Watch Live](/watch-live-news/)
+
+# 'AI mirrors' are changing the way blind people see themselves
+
+27 January 2026
+
+ShareSave
+
+[Add as preferred on Google](https://www.google.com/preferences/source?q=bbc.com)
+
+Milagros Costabel
+
+Serenity Strull/ BBC
+
+(Credit: Serenity Strull/ BBC)
+
+**Artificial intelligence is helping blind people access visual feedback about their bodies, sometimes for the
+first time – but the emotional and psychological consequences are only just starting to emerge.**
+
+I am completely blind and always have been.
+
+For the past year, my mornings begin with a skincare ritual that takes 20 minutes to apply five different
+products. I follow it with a photo session that I share with artificial intelligence within an app called Be
+My Eyes, as if it were a mirror.
+
+The app – with its virtual eyes – helps tell me if my skin is looking the way I want it to, or if there is
+anything about my appearance that I should change.
+
+"All our lives, blind people have had to grapple with the idea that seeing ourselves is impossible, that we
+are beautiful on the inside, and the first thing we judge about a person is their voice, but we know we'll
+never be able to see them," says Lucy Edwards, a blind content creator who rose to fame, in part, by showing
+her passion for beauty and styling and teaching blind people how to do their makeup. "Suddenly we have access
+to all this information about ourselves, about the world, it changes our lives."
+
+Artificial intelligence is allowing blind people to access a world of information that was previously denied
+to us. Through image recognition and intelligent processing, apps like the one I use provide detailed
+information not only about the world we inhabit, but also about ourselves and our place in it. The technology
+does more than simply describe the scene in an image – they offer critical feedback, comparisons and even
+advice. And it is changing how the blind people who use these apps see themselves.
+
+## **A new kind of mirror**
+
+"Your skin is hydrated, but it definitely doesn't look like the almost perfect example of reflective skin,
+with non-existent pores as if it were glass, in beauty ads," the AI told me this morning after I shared a
+photo I thought would show beautiful skin. For the first time in a long time, my dissatisfaction with how I
+look felt crushingly real.
+
+"We have seen that people who seek more feedback about their bodies, in all areas, have lower body image
+satisfaction," says Helena Lewis-Smith, an applied health psychology researcher focused on body image at the
+University of Bristol. "AI is opening up this possibility for blind people."
+
+This change is recent – less than two years ago, the idea of an AI offering live, critical feedback seemed
+like science fiction.
+
+Milagros Costabel
+
+Milagros Costabel uses an AI-powered app each morning as a kind of audible mirror (Credit: Milagros Costabel)
+
+"When we started in 2017, we were able to offer basic descriptions, just a short sentence of two or three
+words," says Karthik Mahadevan, the chief executive of Envision, one of the first companies to use artificial
+intelligence for blind people in this way. Envision started out as a mobile app that allowed blind people to
+access information in printed text through character recognition. In recent years, it has introduced advanced
+artificial intelligence models into smart glasses and created an assistant – available on the web, mobile
+phones and the glasses themselves – that help blind people interact with the visual world around them.
+
+"Some use it for obvious things, like reading letters or shopping, but we were surprised by the number of
+customers who use it to do their makeup or coordinate their outfits," Mahadevan adds. "Often the first
+question they ask is how they look."
+
+These apps, of which there are now at least four specialising in this area, can, at the user's request, rate a
+person based on what artificial intelligence considers to be traditional beauty standards. They compare them
+to other people and tell them exactly what they would do well to change about their bodies.
+
+The truth is that I haven't had an opinion about my face for 12 years. Suddenly I'm taking a photo and I can
+ask AI – Lucy Edwards
+
+For many, this possibility is empowering: "It feels like AI is pretending to be my mirror," 30-year-old
+Edwards tells the BBC. "I had sight for 17 years of my life, and while I could always ask people to describe
+things to me, the truth is that I haven't had an opinion about my face for 12 years. Suddenly I'm taking a
+photo and I can ask AI to give me all the details, to give me a score out of 10, and although it's not the
+same as seeing, it's the closest I'm going to get for now."
+
+There is not yet enough research on the effect that using such AI tools might have on the blind people who
+turn to them. But experts in body image psychology warn that the results AI tools can come up with may not
+always be positive. AI image generators, for example, have been found to [perpetuate idealised Western body
+shape standards](https://psycnet.apa.org/record/2026-78175-001) – largely because of the data they are trained
+on.
+
+"We know that today a young person can upload a photo to AI that they think looks great and ask it to change
+one small thing," says Lewis-Smith. "The AI's processing can return a photo with a lot of changes that make
+the person look totally different, implying that all of this is what they should change, and therefore that
+the way they look now is not good enough."
+
+For blind people, this situation is reflected in the descriptions they receive. Such a discrepancy can be
+unsettling enough for a sighted person. But it could be even more dangerous to a blind person. Those I
+interviewed for this piece agreed.
+
+This is because it's harder for blind people to see the textual results with an objective view of reality. The
+user would also have to balance their own image of their body with beauty standards set by an algorithm that
+does not take into account the importance of subjectivity and individuality.
+
+"One of the main reasons for the pressure people feel about their own bodies is constant comparison with other
+people," says Lewis-Smith. "What is scary now is that AI not only allows blind people to do this by comparing
+themselves to descriptions of photos of other human beings, but also to what AI might consider the perfect
+version of them.
+
+Milagros Costabel
+
+The AI apps use machine vision to analyse a photograph of a person's face before responding to questions for
+feedback (Credit: Milagros Costabel)
+
+"We have seen that the more pressure people have about their bodies, the more cases of mental health
+conditions such as depression and anxiety increase, and the more likely people are to consider things like
+cosmetic adjustments to conform to these unrealistic ideas," Lewis-Smith adds.
+
+For many blind people like me, this is something very new.
+
+"Maybe if your jaw was less elongated (...) your face would look a little more like what is objectively
+considered beautiful in your culture." It's 03:00, and I find myself talking to a machine – after uploading
+more than five different photos of my body to the latest version of Open AI's ChatGPT. I am trying to
+understand where I stand in terms of beauty standards.
+
+My questions to the AI – such as, "Do you think there is a traditionally beautiful person who looks like me?"
+or "Do you think my face is jarring if you saw it for the first time?" – are rooted in my insecurities and the
+information I would like to obtain.
+
+Suddenly, even without much context, I was receiving messages of beauty reflected by the media and the
+internet
+
+But they are also an attempt to make sense of a visual idea of a body that had been denied to me until now.
+
+AI was at a loss when it came to helping me define what could be considered beautiful by a large number of
+people, or when I asked it to explain exactly why my jaw was long – a concept that was difficult for me to
+grasp as well.
+
+Suddenly, even without much context, I was receiving messages about beauty reflected by the media and the
+internet. In the past, blind people were not so exposed to these, but AI now offers them detail-rich
+descriptions.
+
+"We could see AI as a textual mirror, in this case, but in psychological literature, rather than how a person
+looks, we understand that body image is not one-dimensional and is made up of several factors, such as
+context, the type of people we want to compare ourselves to, and the things we are capable of doing with our
+bodies," says Meryl Alper, a researcher on media, body image, and people with disabilities at Northeastern
+University in Boston in the US. "All of this is something that AI does not understand and will not take into
+account when making its descriptions."
+
+AI models have [historically been
+trained](https://journals.lww.com/prsgo/fulltext/2023/07000/human_beauty_according_to_artificial_intelligence.50.aspx)
+to favour thin, overly sexualised bodies with Eurocentric features. When it comes to defining beauty, they
+have [failed](https://www.brookings.edu/articles/rendering-misrepresentation-diversity-failures-in-ai-image-
+generation/) to consider people from [diverse
+backgrounds](https://jamanetwork.com/journals/jamasurgery/fullarticle/2811920) when it comes to generating
+images.
+
+Due to the very way it processes information, AI tends to describe everything in strictly visual terms, which
+could lead to dissatisfaction if the description lacks a logical context. Control and contextualisation, says
+Alper, could be a way to address this problem. "AI today can tell you that you have a sideways smile," Alper
+says. "But for now it can't analyse all your photos and tell you that, for example, you have the same
+expression as when you were enjoying the Sun on the beach, and this kind of thing could be useful for a blind
+person to understand and contextualise themselves better."
+
+## **Power and trust**
+
+This type of control, although not in such an advanced form, already exists. As with artificial intelligence
+in all its forms, the prompt that we give – the written or spoken instruction – has the ability to completely
+change the information a blind person gets when posting a picture of themselves.
+
+"People being able to control the information they receive is one of the main features of our products,
+because AI can learn their preferences and desires and give people the information they need to hear," says
+Mahadevan.
+
+That idea of control could turn out to be a double-edged sword, however. "I can ask the app to describe me in
+two sentences, or in a romantic way, or even in a poem," says Edwards. "These descriptions have the potential
+to change the way we feel about ourselves.
+
+Getty Images
+
+A growing number of blind people are turning to AI to help them navigate the world around them (Credit: Getty
+Images)
+
+"But this can also be used in a negative way, because maybe you don't like something about yourself, and you
+tell the AI that you're not sure about a feature of your body. Maybe your hair is a little messy and you
+mention it in your request. While it may tell you, 'Oh, it's beautiful,' it may also tell you, 'You're right,
+here's how you can change it,'" Edwards adds.
+
+But when technology acts as our eyes, there is a risk of it describing something that doesn't exist at all.
+Hallucinations – where AI models pass off inaccurate or false information as true – are one of the biggest
+problems with the technology. "At first, the descriptions were very good, but we noticed that many of them
+were inaccurate and changed important details, or invented information when what was in the image didn't seem
+to be enough," explains Mahadevan. "But the technology is improving by leaps and bounds, and these errors are
+becoming less and less common."
+
+But it is important to note that AI isn't right all the time, despite Envision's optimism. When Joaquín
+Valentinuzzi, a 20-year-old blind man, decided to use artificial intelligence to evaluate himself by choosing
+the perfect photos for a dating app profile, he found that the information returned by the AI sometimes bore
+little resemblance to reality. "Sometimes it changed my hair colour or described my expressions incorrectly,
+telling me I had a neutral expression when I was actually smiling," he says. "This kind of thing can make you
+feel insecure, especially if, as we are encouraged to do, we trust these tools and use them as a way to gain
+self-knowledge and try and keep up with the way our bodies look."
+
+**More like this:**
+
+• [The complicated truth about social media and body image](http://bbc.com/future/article/20190311-how-social-
+media-affects-body-image)
+
+[]()• [The myth of universal beauty](https://www.bbc.com/future/article/20150622-the-myth-of-universal-beauty)
+
+[]()• [The school that created a city for the blind](http://bbc.com/future/article/20210916-the-school-that-
+change-a-city-into-a-place-for-the-blind)
+
+To counteract this and the negative effects it can have, some of these apps – such as [Aira
+Explorer](https://explorer.aira.io/) – use trained human agents who can verify the accuracy of the
+descriptions if requested by the user. But in most cases, the textual mirror continues to be created by AI
+without any human input.
+
+"All of this is in its infancy, and there really isn't any kind of massive research on the effect of these
+technologies, with their biases, errors, and imperfections, on the lives of blind people," says Alper.
+
+Lewis-Smith agrees, noting that the emotional complexity surrounding AI and body image is still largely
+unexplored territory. For many blind people interviewed for this article, the experience feels both empowering
+and disorienting at once.
+
+But the consensus is clear: "Suddenly AI can describe every photo on the internet and it can even tell me what
+I looked like next to my husband on my wedding day," says Edwards. "We're going to take it as a positive thing
+because even though we don't see visual beauty in the same way that sighted people do, the more robots that
+describe photos to us, guide us, help us with shopping, the happier we'll be. These are things we thought we'd
+lost and now technology allows us to have."
+
+For better or worse, the mirror is here and we have to learn how to live with what it shows us.
+
+\--
+
+_For timely, trusted tech news from global correspondents to your inbox, sign up to the_[ _Tech Decoded
+newsletter_](https://cloud.email.bbc.com/techdecoded-newsletter-
+signup?&at_bbc_team=studios&at_medium=Onsite&at_objective=acquisition&at_ptr_type=&at_ptr_name=bbc.com&at_format=&at_link_origin=&at_campaign=techdecoded&at_campaign_id=&at_adset_name=&at_adset_id=&at_creation=&at_creative_id=&at_campaign_type=owned)
+_, while_[ _The Essential
+List_](https://cloud.email.bbc.com/SignUp10_08?&at_bbc_team=studios&at_medium=Onsite&at_objective=acquisition&at_ptr_name=bbc.com&at_link_origin=featuresarticle&at_campaign=essentiallist&at_campaign_type=owned)
+_delivers a handpicked selection of features and insights twice a week._
+
+_For more science, technology, environment and health stories from the BBC, follow us on_[
+_Facebook_](https://www.facebook.com/BBCFuture/) _and_[
+_Instagram_](https://www.instagram.com/bbcfuture_official/) _._
+
+[Artificial intelligence](/future/tags/artificialintelligence)
+
+[Technology](/future/tags/technology)
+
+[Psychology](/future/tags/psychology)
+
+[Features](/future/tags/features)
+
+* * *
+
+Watch
+
+## [The million-dollar global spectacle of Esports World CupTech Now goes behind-the-scenes to explore the
+tournament bringing together the world's top gamers in Paris.Tech Now](/reel/video/p0p2dcq8/watch)
+
+## [How AI-powered drones are transforming warfareBBC Tech Now finds out how the battlefield is evolving as
+autonomous drones take on a growing role.Tech Now](/reel/video/p0n7sbpd/watch)
+
+## [Training the immune system to fight cancerTech Now meets a firm developing treatments to target cancer
+cells and stop them returning.Tech Now](/reel/video/p0nw64mz/watch)
+
+## [Is tech ruining the World Cup?Is World Cup tech taking the human magic out of
+football?Technology](/reel/video/p0nwjthm/watch)
+
+## [Am I an AI deepfake?AI fakery has been used to scam people out of large sums of money and even attempt to
+sway elections.Technology](/reel/video/p0nwjtft/watch)
+
+## [The game-changing tech transforming the World CupTech Now visits FIFA HQ in Zurich to find out how AI-
+powered balls and smart tracking are transforming football.Tech Now](/reel/video/p0nq37t3/watch)
+
+## [The Finnish shipyard making the world's toughest icebreakersTech Now heads to Finland to meet the
+engineers designing icebreaker ships navigating through Arctic sea ice.Tech Now](/reel/video/p0mp3rhm/watch)
+
+## [Lego’s new smart brickTech Now experiences Lego's new Smart Brick, designed to bring physical play to next
+level.Tech Now](/reel/video/p0n2bs8d/watch)
+
+## [Fixing fashion's erratic sizing problemTech Now meets a startup trying to fix one of the fashion
+industry's biggest blind spots, inconsistent sizing.Tech Now](/reel/video/p0mmx2mk/watch)
+
+## [The tactile tech giving deaf runners a fair startA gold‑medalist has developed a vibrating starting block
+to give deaf athletes clearer, fairer race starts.TechXplore](/reel/video/p0n1dx2t/watch)
+
+## [These futuristic screens help you navigate TokyoIn Tokyo, BBC TechXplore tests live translation and AI-
+powered displays that makes the city more navigable.TechXplore](/reel/video/p0n05yj8/watch)
+
+## [The wearable tech that lets spectators feel the matchAt Tokyo's Deaflympics, deaf Judo fans aren't just
+watching the matches, they're feeling them, thanks to Hapbeat.TechXplore](/reel/video/p0n01xws/watch)
+
+## [Meet MOFO: will.i.am's rapping AI toyBBC Tech Now takes us inside CES 2026 to meet musician will.i.am and
+his AI toy, MOFO.Tech Now](/reel/video/p0mw0smw/watch)
+
+## [The gadgets set to change your daily health and wellnessTech Now test out new gadgets disrupting the
+health industry at CES 2026 in Las Vegas.Tech Now](/reel/video/p0mw0qvd/watch)
+
+## [What's it like to meet your own avatar?Musician KT Tunstall meets her avatar as Tech Now explores music’s
+virtual future.Tech Now](/reel/video/p0mpcd1l/watch)
+
+## [How early filmmakers invented the internet’s funniest trendDiscover how quirky clips paved the way for
+viral humour, proving randomness never goes out of style.Technology](/reel/video/p0m8l7vq/watch)
+
+## [Is this how AI might eliminate humanity?A new research paper predicts AI autonomy by 2027 could lead to
+human extinction within a decade.Tech Now](/reel/video/p0lwdg8y/watch)
+
+## [The best-case scenario for AI in schoolsAmid fears about the use of AI in classrooms, American educator
+Sal Khan lays out an optimistic future.Artificial Intelligence](/reel/video/p0ljv0fy/watch)
+
+## [Explaining how a touchscreen works with a sausageBritish mathematician Hannah Fry digs into the science of
+touchscreens.Science](/reel/video/p0lv0hqk/watch)
+
+## [What it takes to write like Agatha ChristieWe explore how technology is reviving the renowned fiction
+writer's legacy.Tech Now](/reel/video/p0lk6302/watch)
+
+* * *
+
+More from the BBC
+
+[14 hrs agoThe Parisian women who lived and dressed as menIn Paris, women were banned from wearing trousers in
+1800 – many flouted the law and bravely fought for their sartorial freedom. Here are 10 images capturing their
+distinctive style.14 hrs ago](/culture/article/20261027-10-images-of-19th-century-parisian-women-who-rebelled-
+against-the-trouser-ban)
+
+[15 hrs agoHow AI is helping fight art theftArt theft is a global problem and police forces are struggling to
+keep on top of it. Now they are turning to AI software that snoop out the most cleverly hidden artworks.15 hrs
+ago](/future/article/20261027-this-painting-went-missing-20-years-ago-police-tracked-it-down-with-the-help-of-
+ai)
+
+[2 days ago12 of the best TV shows to watch this NovemberFrom a drama about Muhammad Ali's early years to Amy
+Poehler's latest sitcom and a Blade Runner small-screen spin-off – these are the best series to watch and
+stream.2 days ago](/culture/article/20261026-12-of-the-best-tv-shows-to-watch-this-november)
+
+[2 days agoHow we can exercise more without even tryingIncidental activity can reduce our risk of
+cardiovascular disease and even death. You can try some simple forms of it in a meeting, on a flight or while
+reading this article.2 days ago](/future/article/20261023-how-we-can-exercise-more-without-trying)
+
+[3 days agoWhen is premium economy worth the extra cost?Skytrax named these the world's five best premium
+economy airlines. We examine what sets their cabins apart and whether it's worth paying extra for them.3 days
+ago](/travel/article/20261022-when-is-premium-economy-worth-the-extra-cost-we-compare-five-of-the-worlds-best-
+rated-airlines)
+
+* * *
+
+[British Broadcasting Corporation](/)
+
+  * [Home](https://www.bbc.com/)
+
+  * [News](/news)
+
+  * [Sport](/sport)
+
+  * [Business](/business)
+
+  * [Technology](/technology)
+
+  * [Health](/health)
+
+  * [Culture](/culture)
+
+  * [Arts](/arts)
+
+  * [Travel](/travel)
+
+  * [Earth](/future-planet)
+
+  * [Audio](/audio)
+
+  * [Video](/video)
+
+  * [Live](/live)
+
+  * [Documentaries](/video/docs)
+
+  * [Weather](https://www.bbc.com/weather)
+
+  * [BBC Shop](https://shop.bbc.com/)
+
+  * [BritBox](https://www.britbox.com/?utm_source=bbc.com&utm_medium=referral&utm_campaign=footer)
+
+BBC in other languages
+
+### The BBC is in multiple languages
+
+#### Read the BBC In your own language
+
+[BBC News Brasil](https://www.bbc.com/portuguese)
+
+[BBC News Mundo (Spanish)](https://www.bbc.com/mundo)
+
+[BBC News မြန်မာ (Burmese)](https://www.bbc.com/burmese)
+
+[BBC News 中文 (Chinese)](https://www.bbc.com/zhongwen/simp)
+
+[BBC News Indonesia](https://www.bbc.com/indonesia)
+
+[BBC News 코리아 (Korean)](https://www.bbc.com/korean)
+
+[BBC News ไทย (Thai)](https://www.bbc.com/thai)
+
+[BBC News Tiếng Việt (Vietnamese)](https://www.bbc.com/vietnamese)
+
+[BBC News Azərbaycanca (Azeri)](https://www.bbc.com/azeri)
+
+[BBC News Magyarul (Hungarian)](https://www.bbc.com/magyarul)
+
+[BBC News Кыргыз Кызматы (Kyrgyz)](https://www.bbc.com/kyrgyz)
+
+[BBC News Polska (Polish)](https://www.bbc.com/polska)
+
+[BBC News România (Romanian)](https://www.bbc.com/romania)
+
+[BBC News Русская служба (Russian)](https://www.bbc.com/russian)
+
+[BBC News na srpskom (Serbian)](https://www.bbc.com/serbian/lat)
+
+[BBC News Україна (Ukrainian)](https://www.bbc.com/ukrainian)
+
+[BBC News O'zbek (Uzbek)](https://www.bbc.com/uzbek)
+
+[BBC News عربي (Arabic)](https://www.bbc.com/arabic)
+
+[BBC News فارسی (Persian)](https://www.bbc.com/persian)
+
+[BBC News Türkçe (Turkish)](https://www.bbc.com/turkce)
+
+[BBC News বাংলা (Bengali)](https://www.bbc.com/bengali)
+
+[BBC News دری (Dari)](https://www.bbc.com/dari)
+
+[BBC News ગુજરાતી (Gujarati)](https://www.bbc.com/gujarati)
+
+[BBC News हिन्दी (Hindi)](https://www.bbc.com/hindi)
+
+[BBC News मराठी (Marathi)](https://www.bbc.com/marathi)
+
+[BBC News नेपाली (Nepali)](https://www.bbc.com/nepali)
+
+[BBC News සිංහල (Sinhala)](https://www.bbc.com/sinhala)
+
+[BBC News پښتو (Pashto)](https://www.bbc.com/pashto)
+
+[BBC News ਪੰਜਾਬੀ (Punjabi)](https://www.bbc.com/punjabi)
+
+[BBC News Afaan Oromoo](https://www.bbc.com/afaanoromoo)
+
+[BBC News አማርኛ (Amharic)](https://www.bbc.com/amharic)
+
+[BBC News Afrique (French)](https://www.bbc.com/afrique)
+
+[BBC News Hausa](https://www.bbc.com/hausa)
+
+[BBC News Gaelic NAIDHEACHDAN](https://www.bbc.com/naidheachdan)
+
+[BBC News Ìgbò](https://www.bbc.com/igbo)
+
+[BBC News Japanese 日本語](https://www.bbc.com/japanese)
+
+[BBC News Gahuza](https://www.bbc.com/gahuza)
+
+[BBC News Pidgin](https://www.bbc.com/pidgin)
+
+[BBC News Somali](https://www.bbc.com/somali)
+
+[BBC News Swahili](https://www.bbc.com/swahili)
+
+[BBC News தமிழ் (Tamil)](https://www.bbc.com/tamil)
+
+[BBC News తెలుగు (Telugu)](https://www.bbc.com/telugu)
+
+[BBC News ትግርኛ (Tigrinya)](https://www.bbc.com/tigrinya)
+
+[BBC News اردو (Urdu)](https://www.bbc.com/urdu)
+
+[BBC News Yorùbá](https://www.bbc.com/yoruba)
+
+[BBC News World Service](https://www.bbc.com/ws/languages)
+
+Follow BBC on:
+
+  * [Terms of Use](https://www.bbc.com/pages/terms-of-use)
+
+  * [Subscription Terms](https://www.bbc.com/pages/subscription-terms)
+
+  * [About the BBC](https://www.bbc.co.uk/aboutthebbc)
+
+  * [Privacy Policy](https://www.bbc.com/pages/privacy-policy)
+
+  * [Cookies](https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/)
+
+  * [Do not share or sell my info](https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/)
+
+  * [Accessibility Help](https://www.bbc.co.uk/accessibility/)
+
+  * [Contact the BBC](https://www.bbc.co.uk/contact)
+
+  * [Advertise with us](https://advertising.bbcstudios.com/)
+
+  * [BBC.com Help & FAQs](https://help.bbc.com/hc/)
+
+  * [Content Index](https://www.bbc.com/pages/content-index)
+
+  * [Set Preferred Source](https://www.bbc.com/future/article/20260128-how-to-make-google-put-trusted-sources-up-top-when-you-search)
+
+Copyright 2026 BBC. All rights reserved. The BBC is not responsible for the content of external sites. [**Read
+about our approach to external linking.**](https://www.bbc.com/editorialguidelines/guidance/links-and-feeds)
+

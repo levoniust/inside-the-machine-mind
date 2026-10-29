@@ -87,4 +87,11 @@ const narrationS5 = <String, LessonText>{
     ],
     keyIdea: 'AI-text detectors guess from how predictable the wording is, so they wrongly flag plain human writing and miss reworded AI text, and a score should never be treated as proof.',
   ),
+  'e_access': LessonText(
+    intro: [
+      'For some people, the AI in this app isn\'t a toy or a shortcut. It reads their letters, captions their conversations, or speaks for them.',
+      'Meet four real people who told their own stories in public: a blind creator, a deaf scientist, a congresswoman and a football player. Then walk through a day and pick the tool that helps at each moment.',
+    ],
+    keyIdea: 'The same AI that chats can describe the world, caption speech and give people their own voice back, which is why making it accurate and fair matters so much.',
+  ),
 };

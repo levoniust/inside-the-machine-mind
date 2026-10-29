@@ -92,4 +92,16 @@ const quizS5 = <QuizQuestion>[
     0,
     'Detectors fail both ways: paraphrasing hides AI text and plain human writing gets flagged. Talking about the work and its history is far more reliable.',
   ),
+  QuizQuestion(
+    'How did Representative Jennifer Wexton speak on the House floor in July 2024 after losing her clear speech?',
+    ['A robot voice with no connection to hers', 'An AI clone of her own voice, built from recordings of her old speeches', 'Sign language with an interpreter', 'A staff member read her speech'],
+    1,
+    'The AP reported it as believed to be the first House floor speech in an AI-cloned voice; it was built from her past speeches.',
+  ),
+  QuizQuestion(
+    'What does Live Transcribe, co-created by deaf Google scientist Dimitri Kanevsky, do?',
+    ['Reads books aloud', 'Shows live captions of the people talking around you, with a keyboard to type back', 'Records phone calls for later', 'Translates sign language into speech'],
+    1,
+    'Google describes it as a free Android app that captions conversations in over 70 languages and dialects.',
+  ),
 ];
