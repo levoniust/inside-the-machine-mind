@@ -154,6 +154,10 @@ const sources = <String, Source>{
   'SRC-MEGATRON': Source('SRC-MEGATRON', 'Shoeybi et al., "Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism", arXiv 1909.08053 (2019)'),
   'SRC-OWUI-RAG': Source('SRC-OWUI-RAG', 'Open WebUI documentation, "Retrieval Augmented Generation (RAG)", docs.openwebui.com/features/chat-conversations/rag (fetched 2026-10-28)', url: 'docs.openwebui.com/features/chat-conversations/rag'),
   'SRC-OWUI-RAGTS': Source('SRC-OWUI-RAGTS', 'Open WebUI documentation, "Troubleshoot Document Retrieval (RAG)", docs.openwebui.com/troubleshooting/rag (fetched 2026-10-28)', url: 'docs.openwebui.com/troubleshooting/rag'),
+  'SRC-OWASP-LLM01': Source('SRC-OWASP-LLM01', 'OWASP Gen AI Security Project, "LLM01:2025 Prompt Injection", genai.owasp.org (fetched 2026-10-28)', url: 'genai.owasp.org'),
+  'SRC-OWASP-LLM06': Source('SRC-OWASP-LLM06', 'OWASP Gen AI Security Project, "LLM06:2025 Excessive Agency", genai.owasp.org (fetched 2026-10-28)', url: 'genai.owasp.org'),
+  'SRC-OLLAMA-FAQ': Source('SRC-OLLAMA-FAQ', 'Ollama documentation, "FAQ", docs.ollama.com/faq (fetched 2026-10-28)', url: 'docs.ollama.com/faq'),
+  'SRC-TAILSCALE': Source('SRC-TAILSCALE', 'Tailscale documentation, "What is Tailscale?", tailscale.com/kb/1151/what-is-tailscale (fetched 2026-10-28)', url: 'tailscale.com/kb/1151/what-is-tailscale'),
 };
 
 const facts = <String, Fact>{
@@ -371,4 +375,11 @@ const facts = <String, Fact>{
   'NH-SPLIT': Fact('NH-SPLIT', 'Open WebUI measures chunk size in characters by default (a token splitter is optional)', sources: ['SRC-OWUI-RAG'], value: 'characters'),
   'NH-HYBRID': Fact('NH-HYBRID', 'Open WebUI\'s hybrid search adds BM25 keyword matching to meaning-based (embedding) search, then a reranker re-scores the hits', sources: ['SRC-OWUI-RAG']),
   'NH-TOPK': Fact('NH-TOPK', 'With hybrid search on, Top K Reranker sets how many chunks reach the model: 1,000-token chunks × 5 ≈ 5,000 tokens of retrieved text', sources: ['SRC-OWUI-RAGTS'], value: '5 × 1,000 ≈ 5,000'),
+  'SAFE-BIND': Fact('SAFE-BIND', 'Ollama and llama.cpp\'s server both listen only on 127.0.0.1 (this computer) by default; opening them to the network is a deliberate setting (OLLAMA_HOST, --host)', sources: ['SRC-OLLAMA-FAQ', 'SRC-LLAMACPP-SERVER'], value: '127.0.0.1'),
+  'SAFE-APIKEY': Fact('SAFE-APIKEY', 'llama.cpp\'s server has no API key unless you set one (--api-key, default none) and can serve HTTPS with its own certificate (--ssl-cert-file)', sources: ['SRC-LLAMACPP-SERVER'], value: 'default: none'),
+  'SAFE-TOOLS': Fact('SAFE-TOOLS', 'llama.cpp\'s built-in agent tools include running shell commands and writing files; its docs say not to enable them in untrusted environments', sources: ['SRC-LLAMACPP-SERVER']),
+  'SAFE-TAILSCALE': Fact('SAFE-TAILSCALE', 'Tailscale builds encrypted point-to-point connections with the open-source WireGuard protocol, so only devices on your private network can reach each other', sources: ['SRC-TAILSCALE'], value: 'WireGuard'),
+  'SAFE-INDIRECT': Fact('SAFE-INDIRECT', 'OWASP\'s #1 LLM risk is prompt injection, including indirect injection: instructions hidden in websites or files the model reads', sources: ['SRC-OWASP-LLM01'], value: 'LLM01'),
+  'SAFE-AGENCY': Fact('SAFE-AGENCY', 'OWASP LLM06 "Excessive Agency": give agents only the tools and permissions they need, and have a human approve high-impact actions', sources: ['SRC-OWASP-LLM06'], value: 'LLM06'),
+  'RIG-BRIDGE': Fact('RIG-BRIDGE', 'A home phone bridge to AI agents: home network and private VPN only, no forwarded port, a long random token, a pinned certificate; a review found its pairing page could be reused for 48 hours, so it was made one-time', sources: ['SRC-HOMELAB'], value: '48 h → once'),
 };

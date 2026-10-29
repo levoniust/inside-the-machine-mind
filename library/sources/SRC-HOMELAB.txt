@@ -53,3 +53,12 @@ A notes helper built with RAG (Oct 2026; added 2026-10-28 for the "Build your ow
     search queries, the search, reranking on the CPU, and reading ~20,000 tokens of passages. Writing took 5-10 s.
   - Extra query-writing step turned off, top 5 passages reranked to the best 3: score 0.89 (within the grader's noise),
     median 20 s, slowest 26 s (was 93 s). Every answer still cited sources.
+
+A phone bridge to the home AI box (Oct 2026; added 2026-10-28 for the "Keeping a home AI server safe" lesson)
+- A small bridge program lets a phone app watch and answer the AI coding agents running on the workstation.
+- It is reachable only on the home network and over a private VPN (Tailscale); no router port is forwarded to it.
+- Every request needs a long random token. The phone pins the bridge's own certificate, so a look-alike server is refused.
+- The phone is paired by scanning a pairing page. A review found the pairing page could be reused for 48 hours; it was
+  changed to work once and expire quickly. The same review found that an old "done" alert could press keys in a newer
+  question from the agent; that was fixed too.
+- The agents run with an allow-list of commands; actions such as publishing or deleting need a person to approve them.

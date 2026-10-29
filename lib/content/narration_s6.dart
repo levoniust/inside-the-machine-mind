@@ -74,4 +74,12 @@ const narrationS6 = <String, LessonText>{
     ],
     keyIdea: 'Splitting by layers mainly lets a bigger model fit; splitting each layer can be faster, but only when the cards can talk quickly, and a model that fits on one card usually beats both.',
   ),
+  'l_safe_server': LessonText(
+    intro: [
+      'A model server at home is a computer that does what it\'s told. The job is making sure only *you* get to tell it, and that what it reads can\'t give it orders.',
+      'Play "Find the hole": tap the nine numbered spots in this home and call each one risky or fine. Several come straight from a real phone bridge built for a home AI box, bugs included.',
+      'Then keep the six rules. None of them costs money; most are the defaults you just shouldn\'t undo.',
+    ],
+    keyIdea: 'Keep the server off the open internet, lock it with a key, give [[agents|agent]] only the power they need, and treat everything they read as data rather than orders.',
+  ),
 };
