@@ -118,13 +118,13 @@ class _TwoWaysState extends State<_TwoWays> with SingleTickerProviderStateMixin 
           TermText(
             key: ValueKey(_tensor ? 'split-explain-tensor' : 'split-explain-layer'),
             _tensor
-                ? '**Two people carrying one sofa.** Each GPU holds half of *every* [[layer]] and both work at the same '
+                ? '**Two people carrying one sofa.** Each GPU holds half of **every** [[layer]] and both work at the same '
                       'time, so in theory each token is up to twice as fast. The catch: after each layer they must swap '
                       'results ([[all-reduce]], the orange flashes): twice per layer, 160 times per token for an 80-layer '
                       'model. Over a home [[PCIe]] slot that chatter eats much of the gain.'
                 : '**An assembly line.** GPU 1 runs the top layers, then hands the token to GPU 2 for the rest. Only one '
                       'card works at a time and they talk once per token, so two cards don\'t make one chat faster: they '
-                      'make a bigger model *fit*. This is llama.cpp\'s default (--split-mode layer).',
+                      'make a bigger model **fit**. This is llama.cpp\'s default (--split-mode layer).',
           ),
         ],
       ),
@@ -175,7 +175,7 @@ class _SplitPainter extends CustomPainter {
       label('GPU 1', Offset(left + w * 0.25, 0), gpu1);
       label('GPU 2', Offset(left + w * 0.75, 0), gpu2);
     } else {
-      label('GPU 1: layers 1-4', Offset(left + w * 0.5, 0), gpu1);
+      label('GPU 1: layers 1-4  ·  GPU 2: layers 5-8', Offset(left + w * 0.5, 0), text);
     }
     for (var i = 0; i < layers; i++) {
       final y = top + i * h;
@@ -219,7 +219,6 @@ class _SplitPainter extends CustomPainter {
         canvas.drawCircle(Offset(left + w * (tensor ? 0.5 : 0.08), y + h * within.clamp(0.15, 0.85)), 4, dot);
       }
     }
-    if (!tensor) label('GPU 2: layers 5-8', Offset(left + w * 0.5, top + layers / 2 * h + 2), gpu2);
   }
 
   @override
@@ -458,8 +457,8 @@ class _HomeNumbers extends StatelessWidget {
           const FactCard(value: '52.6', label: 'tok/s, 74B MoE layer split', factId: 'RIG-SPLIT-MOE'),
           const SizedBox(height: Gap.s),
           const FactCard(
-            value: '--split-mode',
-            label: 'layer (default), row or tensor; -ts sets each card\'s share',
+            value: 'layer',
+            label: 'llama.cpp\'s default split mode; row and tensor are the others, and -ts sets each card\'s share',
             factId: 'SPL-MODES',
           ),
         ],

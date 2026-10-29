@@ -14,7 +14,7 @@ const narrationS5 = <String, LessonText>{
     intro: [
       'I started with the laziest request you can think of — "write an email." Watch the preview answer: it\'s fine, but it\'s also a guess. Now tap the chips around it — who it\'s for, the goal, the tone, the length — and see the answer reshape itself.',
       'Each chip you toggle nudges the mock answer into a different flavour. You don\'t need to be perfect; you just need to be a little more specific than "write an email."',
-      'On the second card, I\'ve left a small checklist: ask the model to ask *you* questions first, and ask for sources, then check them. Tap through it when you\'re ready.',
+      'On the second card, I\'ve left a small checklist: ask the model to ask **you** questions first, and ask for sources, then check them. Tap through it when you\'re ready.',
     ],
     keyIdea: 'The more specific your [[prompt]] is, the less the model has to guess, and the less it will invent to fill the gaps.',
   ),

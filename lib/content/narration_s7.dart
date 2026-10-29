@@ -44,7 +44,7 @@ const narrationS7 = <String, LessonText>{
   ),
   'l_notes_helper': LessonText(
     intro: [
-      'Want a chatbot that answers from *your* notes? That\'s [[RAG]]: search your documents first, then let the [[model]] answer from what it found, with sources.',
+      'Want a chatbot that answers from **your** notes? That\'s [[RAG]]: search your documents first, then let the [[model]] answer from what it found, with sources.',
       'Step through the six parts with the real settings of a helper built at home for a radio hobby, from 1,754 files. Then look at where one answer\'s 65 seconds actually went.',
       'Last, tune it yourself. Each round shows the helper as it was; pick the change you\'d make, and see what was measured when it was really tried.',
     ],
