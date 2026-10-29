@@ -202,7 +202,7 @@ class _Voices extends StatelessWidget {
           row(
             Icons.home_outlined,
             'Piper (open source, any computer)',
-            'A fast neural voice engine that runs locally, even on small boards. Home Assistant uses it for its '
+            'A fast neural voice engine that runs entirely on your own machine. Home Assistant uses it for its '
                 'voice, and so does the NVDA screen reader.',
             'SPCH-PIPER',
           ),
@@ -275,8 +275,8 @@ const _needs = [
   ]),
   _Need('Transcribe on an old laptop with no graphics card.', [
     _Choice(
-      'Whisper small, 8-bit, with faster-whisper on the CPU',
-      'Right: 13 minutes in 51 s on a desktop CPU; an older laptop is slower but fine.',
+      'Small Whisper, 8-bit, on the CPU',
+      'Right: with faster-whisper, 13 minutes took 51 s on a desktop CPU; an older laptop is slower but fine.',
       best: true,
     ),
     _Choice('Whisper large', 'Without a GPU, large is painfully slow.'),
