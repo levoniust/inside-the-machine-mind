@@ -133,6 +133,23 @@ final _journey = SectionInfo(
   ],
 );
 
+final _newAi = SectionInfo(
+  number: 11,
+  area: Area.everyday,
+  tag: 'How the new AI works',
+  title: 'How the new AI works',
+  tagline: 'Agents, thinking, memory, pictures, voice and the energy behind it',
+  quizId: '',
+  lessons: [
+    _l('e_agents', 11, 'When the assistant does things', 'Agents and permissions'),
+    _l('e_thinking', 11, 'Thinking before answering', 'Reasoning models'),
+    _l('e_energy', 11, 'How much energy is one question?', 'From one prompt to the whole USA'),
+    _l('e_memory', 11, 'How the app remembers you', 'Context window and memory'),
+    _l('e_pictures', 11, 'How a picture appears from noise', 'Image generators'),
+    _l('e_voice', 11, 'Talking to AI', 'Speech in, speech out'),
+  ],
+);
+
 final _life = SectionInfo(
   number: 5,
   area: Area.everyday,
@@ -148,6 +165,10 @@ final _life = SectionInfo(
     _l('e_school_work', 5, 'AI at school and work', 'Honest use'),
     _l('e_which', 5, 'Which assistant for what?', 'Chat, images, voice, code'),
     _l('e_model_size', 5, 'Big or small model?', 'Pick the right size for the job'),
+    _l('e_bias', 5, 'Why answers can lean one way', 'Bias'),
+    _l('e_advice', 5, 'Health, money and legal questions', 'Ask it or ask a person?'),
+    _l('e_ai_text', 5, 'Was this written by AI?', 'Why detectors fail'),
+    _l('e_access', 5, 'AI that helps people see, hear and speak', 'Real stories'),
     _l('e_at_home', 5, 'Can I run one at home?', 'A peek into the Lab'),
   ],
 );
@@ -169,6 +190,9 @@ final _run = SectionInfo(
     _l('l_speed_tricks', 6, 'Guess ahead, check fast', 'Speculative decoding & MTP'),
     _l('l_frontends', 6, 'Beyond the chat box', 'Front-ends, RAG, tools, agents'),
     _l('l_home_rig', 6, 'A real home rig', 'Two GPUs, power and heat'),
+    _l('l_split_gpus', 6, 'Splitting a model across GPUs', 'Layer split vs tensor split'),
+    _l('l_speech_home', 6, 'Speech at home', 'Whisper, Piper and Windows voices'),
+    _l('l_safe_server', 6, 'Keeping a home AI server safe', 'Ports, tokens and agents'),
   ],
 );
 
@@ -180,10 +204,13 @@ final _custom = SectionInfo(
   quizId: 'quiz_s7',
   lessons: [
     _l('l_which_custom', 7, 'Prompt, retrieve or train?', 'Choosing the right tool'),
+    _l('l_notes_helper', 7, 'Build your own notes helper', 'RAG start to finish'),
+    _l('l_tools_mcp', 7, 'Tools and MCP under the hood', 'The JSON the model sees'),
     _l('l_lora', 7, 'Small patches for big models', 'LoRA & QLoRA'),
     _l('l_datasets', 7, 'Teaching by example', 'Fine-tuning data & chat templates'),
     _l('l_merging', 7, 'Mixing models', 'Model merging'),
     _l('l_steering', 7, 'Steering a model', 'Control vectors & abliteration'),
+    _l('l_inside', 7, 'Looking inside the model', 'Interpretability'),
   ],
 );
 
@@ -239,13 +266,14 @@ final List<SectionInfo> sections = [
   _papers,
   _sota,
   _industry,
+  _newAi,
 ];
 
 /// The original three sections (the Lab's "Foundations").
 List<SectionInfo> get foundations => _foundations;
 
 /// Front-door tracks and Lab tracks (Lab = Foundations first), in display order.
-List<SectionInfo> get everydayTracks => [_journey, _life];
+List<SectionInfo> get everydayTracks => [_journey, _newAi, _life];
 List<SectionInfo> get labTracks => [_run, _custom, _papers, _sota, _industry];
 
 /// All lessons in journey order, each once.
@@ -283,9 +311,12 @@ LessonInfo? prevInSection(String id, [int? track]) {
   return i > 0 ? list[i - 1] : null;
 }
 
-/// The track after [number] in its own area (Foundations 1 → 2 → 3, Everyday 4 → 5, Lab 6 → … → 10), or null.
+/// The track after [number] in its own area (Foundations 1 → 2 → 3, Everyday 4 → 11 → 5, Lab 6 → … → 10), or null.
+/// Track 11 was added in v2.1; it sits between 4 and 5 on screen but keeps its own number so saved progress stays valid.
 SectionInfo? nextTrack(int number) => switch (number) {
-  1 || 2 || 4 => sections[number],
+  4 => _newAi,
+  11 => _life,
+  1 || 2 => sections[number],
   >= 6 && < 10 => sections[number],
   _ => null,
 };

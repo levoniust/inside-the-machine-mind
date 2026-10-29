@@ -71,7 +71,11 @@ class _HomeScreenState extends State<HomeScreen> {
         _SectionCard(
           key: ValueKey('section-card-${s.number}'),
           number: s.number,
-          icon: s.number == 4 ? Icons.route : Icons.emoji_people,
+          icon: switch (s.number) {
+            4 => Icons.route,
+            11 => Icons.auto_awesome,
+            _ => Icons.emoji_people,
+          },
           title: s.title,
           tagline: s.tagline,
           progress: p.fraction(s.lessons.map((l) => l.id)),

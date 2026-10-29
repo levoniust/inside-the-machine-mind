@@ -67,10 +67,10 @@ class AppColors extends ThemeExtension<AppColors> {
 
   static AppColors of(BuildContext context) => Theme.of(context).extension<AppColors>() ?? dark;
 
-  /// Accent color for a track number (1 hardware, 2 training, 3 inference; 4-5 Everyday; 6-10 Lab; 0 extras).
+  /// Accent color for a track number (1 hardware, 2 training, 3 inference; 4, 5, 11 Everyday; 6-10 Lab; 0 extras).
   Color section(int n) => switch (n) {
     1 || 4 || 10 => cyan,
-    2 || 7 => violet,
+    2 || 7 || 11 => violet,
     3 || 9 => magenta,
     6 => lime,
     _ => amber,
