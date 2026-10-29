@@ -10,4 +10,11 @@ const narrationS11 = <String, LessonText>{
     ],
     keyIdea: 'An agent is only as safe as the permissions you give it, so allow what matches your task and personally check anything with money, consent, your name or orders that came from a page instead of you.',
   ),
+  'e_thinking': LessonText(
+    intro: [
+      'Newer assistants can "think" before they answer. It sounds like magic, but it\'s a very human trick: working it out on paper instead of in your head.',
+      'See what happened when researchers let models write their steps first. Then play "Think or blurt?": for eight everyday questions, decide whether thinking is worth the wait.',
+    ],
+    keyIdea: 'Thinking first helps on puzzles, plans and anything with several steps, but it costs time, so a quick answer is better for simple facts and short writing.',
+  ),
 };

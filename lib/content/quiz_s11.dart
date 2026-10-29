@@ -14,4 +14,16 @@ const quizS11 = <QuizQuestion>[
     1,
     'Anthropic\'s guidance is to have a person confirm actions with real-world consequences and anything needing consent, such as payments and terms of service.',
   ),
+  QuizQuestion(
+    'Why does "thinking first" help a model with a multi-step problem?',
+    ['It turns off the model\'s creativity', 'It makes the model bigger while it thinks', 'Writing the steps out gives it its own working to read before the next step, like doing math on paper', 'It downloads extra facts from the internet'],
+    2,
+    'A model writes one token at a time; written-out steps become text it can build on, which is why chain-of-thought lifted PaLM 540B from 17.9% to 56.9% on math word problems.',
+  ),
+  QuizQuestion(
+    'When is a quick answer the better choice?',
+    ['Asking for a synonym or a simple fact', 'Planning a budget trip with connecting trains', 'Finding a bug in a spreadsheet', 'A trick question like the bat and ball'],
+    0,
+    'Simple lookups gain nothing from extra steps; thinking only adds a wait.',
+  ),
 ];
