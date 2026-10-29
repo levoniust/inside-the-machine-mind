@@ -17,4 +17,12 @@ const narrationS11 = <String, LessonText>{
     ],
     keyIdea: 'Thinking first helps on puzzles, plans and anything with several steps, but it costs time, so a quick answer is better for simple facts and short writing.',
   ),
+  'e_memory': LessonText(
+    intro: [
+      'Ever had a chatbot forget something you said an hour ago, then "remember" your name in a brand-new chat? Those are two different kinds of memory.',
+      'First the notepad it can see, the [[context window]]. Send the messages one by one and watch the oldest slide off, then guess which details it can still use.',
+      'Then switch the memory feature on and off and start a new chat. Last, see where each big app lets you read, edit or wipe what it keeps.',
+    ],
+    keyIdea: 'A chatbot sees only what fits in its context window, while the memory feature keeps a small file of notes about you across chats, which you can view, edit and switch off.',
+  ),
 };

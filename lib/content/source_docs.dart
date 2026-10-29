@@ -151,6 +151,8 @@ const sourceDocs = <String, SourceDoc>{
   'SRC-GOLDEN-GATE': SourceDoc('sources/SRC-GOLDEN-GATE.txt', url: 'https://www.anthropic.com/news/golden-gate-claude'),
   'SRC-OPENAI-SAE': SourceDoc('sources/SRC-OPENAI-SAE.txt', url: 'https://arxiv.org/abs/2406.04093'),
   'SRC-ANTHROPIC-COMPUTER': SourceDoc('sources/SRC-ANTHROPIC-COMPUTER.txt', url: 'https://platform.claude.com/docs/en/agents-and-tools/tool-use/computer-use-tool'),
+  'SRC-CLAUDE-MEMORY': SourceDoc('sources/SRC-CLAUDE-MEMORY.txt', url: 'https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context'),
+  'SRC-MS-COPILOT-MEMORY': SourceDoc('sources/SRC-MS-COPILOT-MEMORY.txt', url: 'https://support.microsoft.com/en-us/microsoft-copilot/privacy-faq-for-microsoft-copilot'),
   'SRC-HOMELAB': SourceDoc('sources/SRC-HOMELAB.txt', url: 'https://(private'),
   'SRC-LLAMACPP-PPL': SourceDoc('sources/SRC-LLAMACPP-PPL.txt', url: 'https://github.com/ggml-org/llama.cpp/blob/master/tools/perplexity/README.md'),
   'SRC-OLLAMA': SourceDoc('sources/SRC-OLLAMA.txt', url: 'https://github.com/ollama/ollama'),

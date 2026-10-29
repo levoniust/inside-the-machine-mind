@@ -171,6 +171,8 @@ const sources = <String, Source>{
   'SRC-GOLDEN-GATE': Source('SRC-GOLDEN-GATE', 'Anthropic, "Golden Gate Claude", anthropic.com/news/golden-gate-claude (May 23, 2024)', url: 'anthropic.com/news/golden-gate-claude'),
   'SRC-OPENAI-SAE': Source('SRC-OPENAI-SAE', 'Gao et al. (OpenAI), "Scaling and evaluating sparse autoencoders", arXiv 2406.04093 (2024)'),
   'SRC-ANTHROPIC-COMPUTER': Source('SRC-ANTHROPIC-COMPUTER', 'Anthropic, "Computer use tool", platform.claude.com/docs (security precautions; fetched 2026-10-28)', url: 'platform.claude.com/docs'),
+  'SRC-CLAUDE-MEMORY': Source('SRC-CLAUDE-MEMORY', 'Anthropic, "Use Claude\'s chat search and memory to build on previous context", support.claude.com (fetched 2026-10-28)', url: 'support.claude.com'),
+  'SRC-MS-COPILOT-MEMORY': Source('SRC-MS-COPILOT-MEMORY', 'Microsoft, "Privacy FAQ for Microsoft Copilot", support.microsoft.com (fetched 2026-10-28)', url: 'support.microsoft.com'),
 };
 
 const facts = <String, Fact>{
@@ -422,4 +424,8 @@ const facts = <String, Fact>{
   'THK-COT': Fact('THK-COT', 'Showing a model eight worked examples with the steps written out ("chain of thought") raised PaLM 540B on grade-school math word problems (GSM8K) from 17.9% to 56.9%', sources: ['SRC-COT'], value: '17.9% → 56.9%'),
   'THK-R1': Fact('THK-R1', 'Trained with reinforcement learning to reason, DeepSeek-R1-Zero went from 15.6% to 77.9% on the AIME 2024 math contest, and on its own it learned to spend more thinking time (longer answers) on problems', sources: ['SRC-DEEPSEEKR1'], value: '15.6% → 77.9%'),
   'THK-TTC': Fact('THK-TTC', 'Spending more compute while answering, used wisely, can beat a model 14× larger on problems the smaller model can partly solve, but on the hardest problems a bigger model still wins', sources: ['SRC-TTC'], value: '14×'),
+  'MEM-CLAUDE': Fact('MEM-CLAUDE', 'Claude\'s memory writes a summary of your chats that is updated every 24 hours and used in new chats; each project has its own memory, incognito chats are left out, and "Reset memory" deletes it all permanently', sources: ['SRC-CLAUDE-MEMORY'], value: 'every 24 h'),
+  'MEM-COPILOT': Fact('MEM-COPILOT', 'With personalization on, Microsoft Copilot remembers key details you share, such as your name, interests and goals (not demographic or other sensitive data); you can edit or delete them, and turning personalization off makes it forget', sources: ['SRC-MS-COPILOT-MEMORY']),
+  'MEM-GEMINI': Fact('MEM-GEMINI', 'Gemini\'s "memory summary" lets you view, edit and delete what Gemini understands about you, and add or fix details', sources: ['SRC-GOOGLE-GEMINI-PRIVACY']),
+  'MEM-CHATGPT-TEMP': Fact('MEM-CHATGPT-TEMP', 'ChatGPT\'s temporary chats don\'t create or update memories (an "Unpersonalized" one doesn\'t use them either) and stay out of your chat history', sources: ['SRC-OPENAI-PRIVACY']),
 };

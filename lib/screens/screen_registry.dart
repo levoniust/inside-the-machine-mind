@@ -97,6 +97,7 @@ import 's9/l_sota_techniques.dart';
 import 's9/l_this_year.dart';
 import 's11/e_agents.dart';
 import 's11/e_thinking.dart';
+import 's11/e_memory.dart';
 
 /// Lesson id → screen. Add one line per finished lesson screen (keep the list in journey order).
 final Map<String, WidgetBuilder> screenBuilders = {
@@ -192,4 +193,5 @@ final Map<String, WidgetBuilder> screenBuilders = {
   'l_keep_up': (_) => const LKeepUpScreen(),
   'e_agents': (_) => const EAgentsScreen(),
   'e_thinking': (_) => const EThinkingScreen(),
+  'e_memory': (_) => const EMemoryScreen(),
 };

@@ -26,4 +26,16 @@ const quizS11 = <QuizQuestion>[
     0,
     'Simple lookups gain nothing from extra steps; thinking only adds a wait.',
   ),
+  QuizQuestion(
+    'In a very long chat, the assistant forgets a detail you gave near the start. Why?',
+    ['The oldest messages slid out of its context window, the part of the chat it can still see', 'The memory feature erased it on purpose', 'It only remembers numbers', 'It was deleted from your phone'],
+    0,
+    'A model only sees what fits in its context window; in a long enough chat the earliest messages no longer fit, so repeat what matters or start fresh with a summary.',
+  ),
+  QuizQuestion(
+    'What does the memory feature in apps like Claude, Gemini or Copilot do?',
+    ['It only works offline', 'It keeps a small set of notes about you and uses them in new chats; you can view, edit or turn it off', 'It records every word you ever typed and can never be deleted', 'It makes the context window infinite'],
+    1,
+    'Each maker describes memory as saved details or a summary used in later chats, with controls to view, edit, delete or switch it off.',
+  ),
 ];
