@@ -66,6 +66,7 @@ import 's5/e_privacy.dart';
 import 's5/e_fakes.dart';
 import 's5/e_model_size.dart';
 import 's5/e_bias.dart';
+import 's5/e_advice.dart';
 import 's5/e_which.dart';
 import 's6/l_frontends.dart';
 import 's6/l_home_rig.dart';
@@ -165,6 +166,7 @@ final Map<String, WidgetBuilder> screenBuilders = {
   'e_which': (_) => const EWhichScreen(),
   'e_model_size': (_) => const EModelSizeScreen(),
   'e_bias': (_) => const EBiasScreen(),
+  'e_advice': (_) => const EAdviceScreen(),
   'l_will_it_fit': (_) => const LWillItFitScreen(),
   'l_kv_cache': (_) => const LKvCacheScreen(),
   'l_frontends': (_) => const LFrontendsScreen(),

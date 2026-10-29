@@ -68,4 +68,16 @@ const quizS5 = <QuizQuestion>[
     3,
     'Language models learn social biases present in their training text; makers measure them with benchmarks and reduce them with feedback training, but don\'t remove them entirely.',
   ),
+  QuizQuestion(
+    'Which is a good use of a chatbot for a health question?',
+    ['Explaining what a term on your blood test means and listing questions for your doctor', 'Deciding whether to stop a prescribed medicine', 'Checking chest pain that started a minute ago', 'Choosing a dose for a child'],
+    0,
+    'Explaining terms and preparing questions is low risk; diagnosis, changing medicines and emergencies need a qualified person, and the WHO warns AI health answers can be false or incomplete.',
+  ),
+  QuizQuestion(
+    'What is "automation bias"?',
+    ['When an app updates itself automatically', 'A bias in how GPUs are built', 'When an AI refuses to answer health questions', 'Trusting an AI so much that you overlook its mistakes or hand it hard decisions'],
+    3,
+    'The WHO\'s 2024 guidance warns that people may miss errors they would otherwise catch, or improperly delegate difficult choices to the AI.',
+  ),
 ];

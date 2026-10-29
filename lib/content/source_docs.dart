@@ -156,6 +156,8 @@ const sourceDocs = <String, SourceDoc>{
   'SRC-GPT4O-CARD': SourceDoc('sources/SRC-GPT4O-CARD.txt', url: 'https://arxiv.org/abs/2410.21276'),
   'SRC-BBQ': SourceDoc('sources/SRC-BBQ.txt', url: 'https://arxiv.org/abs/2110.08193'),
   'SRC-WINOGENDER': SourceDoc('sources/SRC-WINOGENDER.txt', url: 'https://arxiv.org/abs/1804.09301'),
+  'SRC-WHO-LMM': SourceDoc('sources/SRC-WHO-LMM.txt', url: 'https://www.who.int/news/item/18-01-2024-who-releases-ai-ethics-and-governance-guidance-for-large-multi-modal-models'),
+  'SRC-ANTHROPIC-AUP': SourceDoc('sources/SRC-ANTHROPIC-AUP.txt', url: 'https://www.anthropic.com/legal/aup'),
   'SRC-HOMELAB': SourceDoc('sources/SRC-HOMELAB.txt', url: 'https://(private'),
   'SRC-LLAMACPP-PPL': SourceDoc('sources/SRC-LLAMACPP-PPL.txt', url: 'https://github.com/ggml-org/llama.cpp/blob/master/tools/perplexity/README.md'),
   'SRC-OLLAMA': SourceDoc('sources/SRC-OLLAMA.txt', url: 'https://github.com/ollama/ollama'),

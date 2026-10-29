@@ -176,6 +176,8 @@ const sources = <String, Source>{
   'SRC-GPT4O-CARD': Source('SRC-GPT4O-CARD', 'OpenAI, "GPT-4o System Card", arXiv 2410.21276 (August 2024)'),
   'SRC-BBQ': Source('SRC-BBQ', 'Parrish et al., "BBQ: A Hand-Built Bias Benchmark for Question Answering", arXiv 2110.08193 (2022)'),
   'SRC-WINOGENDER': Source('SRC-WINOGENDER', 'Rudinger et al., "Gender Bias in Coreference Resolution", arXiv 1804.09301 (2018)'),
+  'SRC-WHO-LMM': Source('SRC-WHO-LMM', 'World Health Organization, "WHO releases AI ethics and governance guidance for large multi-modal models", who.int (January 18, 2024)', url: 'who.int'),
+  'SRC-ANTHROPIC-AUP': Source('SRC-ANTHROPIC-AUP', 'Anthropic, Usage Policy (PDF, effective November 12, 2026), anthropic.com (fetched 2026-10-28)', url: 'anthropic.com'),
 };
 
 const facts = <String, Fact>{
@@ -440,4 +442,8 @@ const facts = <String, Fact>{
   'BIAS-BBQ-77': Fact('BIAS-BBQ-77', 'In BBQ\'s unclear questions, about 77% of one model\'s (UnifiedQA\'s) mistakes matched the stereotype being tested', sources: ['SRC-BBQ'], value: '~77%'),
   'BIAS-WINOGENDER': Fact('BIAS-WINOGENDER', 'Winogender: 720 sentences over 60 jobs that differ only in a pronoun\'s gender showed systematic gender bias in three language systems, matching real job statistics; it starts from the riddle in which the surgeon is the boy\'s mother', sources: ['SRC-WINOGENDER'], value: '720 sentences'),
   'BIAS-MAKERS': Fact('BIAS-MAKERS', 'Model makers report bias benchmarks such as BBQ: Mistral reported 56.0% BBQ accuracy for Mixtral vs 51.5% for Llama 2 70B, and DeepSeek\'s R1 paper lists BBQ safety scores for models from Anthropic, OpenAI and others', sources: ['SRC-MIXTRAL', 'SRC-DEEPSEEKR1']),
+  'ADV-WHO-RISK': Fact('ADV-WHO-RISK', 'The WHO warns that AI models used for health have documented risks of false, inaccurate, biased or incomplete statements that could harm people making health decisions', sources: ['SRC-WHO-LMM']),
+  'ADV-WHO-AUTOMATION': Fact('ADV-WHO-AUTOMATION', 'The WHO also warns of "automation bias": people overlooking errors they would otherwise catch, or handing difficult choices to the AI', sources: ['SRC-WHO-LMM']),
+  'ADV-WHO-USES': Fact('ADV-WHO-USES', 'Among five uses the WHO lists is patient-guided use, such as looking into symptoms and treatment', sources: ['SRC-WHO-LMM'], value: '5 uses'),
+  'ADV-AUP': Fact('ADV-AUP', 'Anthropic\'s usage policy treats recommendations in legal, medical and financial matters (such as diagnosing, changing a medication, picking investments or advising on your own taxes) as high-risk: a business offering them on Claude needs a qualified person to review them before anyone relies on them', sources: ['SRC-ANTHROPIC-AUP'], value: 'legal · medical · finance'),
 };

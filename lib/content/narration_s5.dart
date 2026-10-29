@@ -73,4 +73,11 @@ const narrationS5 = <String, LessonText>{
     ],
     keyIdea: 'A model can fill gaps with stereotypes it absorbed from human writing, so watch for answers that add a gender, age or origin you never gave, and keep decisions about people with people.',
   ),
+  'e_advice': LessonText(
+    intro: [
+      'People ask chatbots about symptoms, taxes and landlords every day. It can really help, as long as you know which job it\'s good for.',
+      'Think of it as a well-read friend: brilliant at explaining and preparing, but it hasn\'t examined you or read your contract. Then sort eight real-life situations: ask the AI, use it to prepare, or go straight to a person?',
+    ],
+    keyIdea: 'Use a chatbot to understand words and prepare questions, but let a qualified person decide anything about your health, your legal case or your money, and never wait on a chatbot in an emergency.',
+  ),
 };
