@@ -62,4 +62,16 @@ const quizS6 = <QuizQuestion>[
     2,
     'The RAG pipeline takes a question, searches document chunks, and highlights the closest ones, shaping the context the model receives before it generates an answer.',
   ),
+  QuizQuestion(
+    'In llama.cpp\'s default layer split across two GPUs, why doesn\'t a single chat get twice as fast?',
+    ['Each GPU has to re-read the whole model for every token', 'The cards take turns: a token goes through GPU 1\'s layers, then GPU 2\'s, so only one works at a time', 'llama.cpp can only use one GPU for generation', 'The second GPU only stores the KV cache'],
+    1,
+    'A layer split is an assembly line. Each token passes through the first card\'s layers and then the second card\'s, so their times add up; the win is that a bigger model fits.',
+  ),
+  QuizQuestion(
+    'What slows down a tensor split on a home PC?',
+    ['Tensor split only works with mixture-of-experts models', 'It turns off the KV cache', 'Each GPU has to hold a full copy of the model', 'The GPUs must swap partial results twice per layer, and a PCIe slot is far slower than datacenter GPU links'],
+    3,
+    'Megatron-LM\'s tensor parallelism needs two all-reduces per layer, so it was kept on 300 GB/s links inside one server; a home PCIe 4.0 x16 slot moves about 32 GB/s.',
+  ),
 ];

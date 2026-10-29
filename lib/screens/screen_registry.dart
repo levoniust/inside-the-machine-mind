@@ -68,6 +68,7 @@ import 's5/e_model_size.dart';
 import 's5/e_which.dart';
 import 's6/l_frontends.dart';
 import 's6/l_home_rig.dart';
+import 's6/l_split_gpus.dart';
 import 's6/l_kv_cache.dart';
 import 's6/l_moe_home.dart';
 import 's6/l_quant_pick.dart';
@@ -158,6 +159,7 @@ final Map<String, WidgetBuilder> screenBuilders = {
   'l_frontends': (_) => const LFrontendsScreen(),
   'l_datasets': (_) => const LDatasetsScreen(),
   'l_home_rig': (_) => const LHomeRigScreen(),
+  'l_split_gpus': (_) => const LSplitGpusScreen(),
   'l_moe_home': (_) => const LMoeHomeScreen(),
   'l_quant_pick': (_) => const LQuantPickScreen(),
   'l_runtimes': (_) => const LRuntimesScreen(),

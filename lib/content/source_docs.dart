@@ -131,6 +131,7 @@ const sourceDocs = <String, SourceDoc>{
   'SRC-HF-GPTOSS': SourceDoc('sources/SRC-HF-GPTOSS.txt', url: 'https://huggingface.co/openai/gpt-oss-120b'),
   'SRC-HF-DSV3': SourceDoc('sources/SRC-HF-DSV3.txt', url: 'https://huggingface.co/deepseek-ai/DeepSeek-V3'),
   'SRC-LLAMACPP-SERVER': SourceDoc('sources/SRC-LLAMACPP-SERVER.txt', url: 'https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md'),
+  'SRC-MEGATRON': SourceDoc('sources/SRC-MEGATRON.txt', url: 'https://arxiv.org/abs/1909.08053'),
   'SRC-HOMELAB': SourceDoc('sources/SRC-HOMELAB.txt', url: 'https://(private'),
   'SRC-LLAMACPP-PPL': SourceDoc('sources/SRC-LLAMACPP-PPL.txt', url: 'https://github.com/ggml-org/llama.cpp/blob/master/tools/perplexity/README.md'),
   'SRC-OLLAMA': SourceDoc('sources/SRC-OLLAMA.txt', url: 'https://github.com/ollama/ollama'),

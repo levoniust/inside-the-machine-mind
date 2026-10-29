@@ -151,6 +151,7 @@ const sources = <String, Source>{
   'SRC-WIKI-MATA': Source('SRC-WIKI-MATA', 'Wikipedia, "Mata v. Avianca, Inc." (S.D.N.Y. 2023), en.wikipedia.org/wiki/Mata_v._Avianca,_Inc. (encyclopedia summary of the court case)', url: 'en.wikipedia.org/wiki/Mata_v._Avianca'),
   'SRC-UNESCO-GENAI': Source('SRC-UNESCO-GENAI', 'UNESCO, "Guidance for generative AI in education and research" (Sep 2023), unesco.org', url: 'unesco.org'),
   'SRC-HF-LLAMA': Source('SRC-HF-LLAMA', 'Llama 3.1 8B / Llama 3.3 70B Instruct config.json (mirrors of Meta\'s repos), huggingface.co/unsloth'),
+  'SRC-MEGATRON': Source('SRC-MEGATRON', 'Shoeybi et al., "Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism", arXiv 1909.08053 (2019)'),
 };
 
 const facts = <String, Fact>{
@@ -351,4 +352,12 @@ const facts = <String, Fact>{
   'TIER-META': Fact('TIER-META', 'Meta Muse Wonder (Meta Model API and Muse Code) and Muse Wonder Full (Muse Code subscribers), October 2026, built on Muse Spark (April 2026); no public price list per tier', sources: ['SRC-META-MUSE']),
   'TIER-XAI': Fact('TIER-XAI', 'xAI offers one text model, Grok 4.7: "Our flagship model for code and everything else", with configurable reasoning; \$2 / \$6', sources: ['SRC-XAI-MODELS'], value: '\$2 / \$6'),
   'TIER-AMAZON': Fact('TIER-AMAZON', 'Amazon Nova 2 Lite: "a fast, cost-effective reasoning model for most everyday tasks", with thinking effort controls (off, low, medium, high)', sources: ['SRC-AWS-NOVA']),
+  'SPL-MODES': Fact('SPL-MODES', 'llama.cpp\'s --split-mode: layer (the default) splits the layers and their KV cache across GPUs, pipelined; row and tensor split each layer\'s weights across GPUs, in parallel (tensor marked experimental)', sources: ['SRC-LLAMACPP-SERVER'], value: 'layer = default'),
+  'SPL-TS': Fact('SPL-TS', 'llama.cpp\'s --tensor-split (-ts) sets the fraction of the model each GPU gets, e.g. "3,1"; despite the name it also sets the layer share in layer mode', sources: ['SRC-LLAMACPP-SERVER'], value: 'e.g. 3,1'),
+  'SPL-SYNC': Fact('SPL-SYNC', 'Megatron-LM\'s tensor parallelism needs only two all-reduce operations per transformer layer in the forward pass (and two in the backward pass): the GPUs swap partial results twice per layer', sources: ['SRC-MEGATRON'], value: '2 per layer'),
+  'SPL-NVSWITCH': Fact('SPL-NVSWITCH', 'Megatron-LM kept tensor parallelism inside one server, where GPUs talked at 300 GB/s over NVSwitch, versus 100 GB/s between servers', sources: ['SRC-MEGATRON'], value: '300 vs 100 GB/s'),
+  'SPL-L70B-FIT': Fact('SPL-L70B-FIT', 'Arithmetic: Llama 3.3 70B at Q4_K_M (~4.89 bits per weight) is ~43 GB of weights, ~0.54 GB per layer for 80 layers; at 8K context its 16-bit KV cache adds ~0.03 GB per layer', sources: ['SRC-LLAMACPP-MODELS', 'SRC-HF-LLAMA'], value: '~43 GB, 80 layers'),
+  'RIG-SPLIT-TENSOR': Fact('RIG-SPLIT-TENSOR', 'On the small server, a 27B dense model at 4 bits split across a 16 GB and a 12 GB GPU (tensor split) wrote 39-47 tokens/s; the two cards were different generations, so it needed a smaller batch and llama.cpp\'s own all-reduce instead of NCCL', sources: ['SRC-HOMELAB'], value: '39-47 tok/s'),
+  'RIG-SPLIT-SQUEEZE': Fact('RIG-SPLIT-SQUEEZE', 'The same server\'s 16 GB GPU alone runs a 27B model squeezed to about 2.4 bits at ~55 tokens/s: fitting on one card beat splitting across two', sources: ['SRC-HOMELAB'], value: '~55 tok/s'),
+  'RIG-SPLIT-MOE': Fact('RIG-SPLIT-MOE', 'A 74B mixture-of-experts model (9B active) layer-split across the same two GPUs (14.0 + 10.4 GB) wrote 52.6 tokens/s', sources: ['SRC-HOMELAB'], value: '52.6 tok/s'),
 };

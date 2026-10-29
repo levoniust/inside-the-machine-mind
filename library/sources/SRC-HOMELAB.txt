@@ -27,3 +27,11 @@ Incidents
   the core read 75 degrees C. 12 of the card's 24 memory chips are on the back, cooled only by the backplate.
 - 2026-10-18: a tripped breaker reset the BIOS and re-enabled Secure Boot; the unsigned NVIDIA kernel module was refused
   and the GPUs disappeared until the setting was changed and saved in a BIOS profile (with "restore on AC power loss").
+
+Splitting across two GPUs (small server, 2026-10-22/23; added 2026-10-28 for the "Splitting a model across GPUs" lesson)
+- The small server's 16 GB card plus a second, older 12 GB card were tried together with llama.cpp.
+- A 27B dense model at 4 bits, tensor split across both cards: 39-47 tokens/s writing, 658-807 tokens/s reading.
+  The cards are different generations, so it needed llama.cpp's own all-reduce (NCCL failed) and a smaller batch
+  (-ub 512, the 12 GB card ran out of memory otherwise).
+- A 27B model squeezed to about 2.4 bits on the 16 GB card alone: about 55 tokens/s.
+- A 74B mixture-of-experts model (9B active) with the default layer split, 14.0 GB + 10.4 GB: 52.6 tokens/s.

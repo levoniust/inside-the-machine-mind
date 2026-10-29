@@ -66,4 +66,12 @@ const narrationS6 = <String, LessonText>{
     ],
     keyIdea: 'On a home rig the bottleneck is usually memory, and the risks are heat and power, so measure before you tune and never leave a stress test unwatched.',
   ),
+  'l_split_gpus': LessonText(
+    intro: [
+      'One [[GPU]] too small? Use two. But there are two very different ways to share a model, and only one of them makes it faster.',
+      'Flip between them. A [[layer split]] is an assembly line: each card runs some floors of the building in turn. A [[tensor split]] is two people carrying one sofa: both work on every layer, but they must keep talking.',
+      'Then play "Split it": put a 70B model\'s 80 layers on two 24 GB cards. Overfill a card and it won\'t load; leave layers in RAM and the speed drops hard.',
+    ],
+    keyIdea: 'Splitting by layers mainly lets a bigger model fit; splitting each layer can be faster, but only when the cards can talk quickly, and a model that fits on one card usually beats both.',
+  ),
 };
