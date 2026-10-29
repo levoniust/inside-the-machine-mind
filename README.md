@@ -24,24 +24,25 @@ Your guide is **Bit**, a small robot, and you follow one question all the way th
 | Track | What you'll do |
 |---|---|
 | **The short journey** | "Why is the sky blue?" through the machine in 17 lessons: chips, datacenters, training, tokens, the answer. |
-| **AI in your life** | Spot the made-up fact, ask better, see where your words go (privacy settings of the big apps, from their own help pages), catch voice-clone and deepfake scams, use AI honestly at school and work, pick the right kind of assistant, pick the right size of model (every US maker's line-up, from GPT-6 Astra down to Luna and Claude Fable down to Haiku), and find out what runs on your own computer. |
+| **How the new AI works** | New in v2.1. Be the gatekeeper for an agent booking a trip, decide when "thinking" is worth the wait, watch a chat slide off the context window and what the memory feature keeps, run an image denoiser from static to a picture, follow a voice assistant's relay, and climb a ×1000 energy ladder from one question (0.24 Wh) to all the energy the USA uses in a year. |
+| **AI in your life** | Spot the made-up fact, ask better, see where your words go (privacy settings of the big apps, from their own help pages), catch voice-clone and deepfake scams, use AI honestly at school and work, pick the right kind of assistant, pick the right size of model (every US maker's line-up, from GPT-6 Astra down to Luna and Claude Fable down to Haiku), spot answers that lean on a stereotype, sort health, money and legal questions into "ask it" or "ask a person", see why AI-text detectors fail, meet four real people who see, hear and speak with AI's help, and find out what runs on your own computer. |
 
 ## The Enthusiast Lab
 
 | Track | What's inside |
 |---|---|
 | **Foundations** | The original journey with the real terms. **Where the Mind Lives** (hardware) covers drives, memory, CPU vs GPU and a datacenter you build yourself. **How the Mind Grew** (training) covers tokenizers, training a tiny network on your phone, loss landscapes and scaling. **The Mind Answers** (inference) covers a toy transformer with real numbers, sampling and decoding model filenames. |
-| **Run it yourself** | The **Will it fit?** calculator (model × quant × context × your machine, using real model shapes) and the engines (llama.cpp, Ollama, LM Studio, vLLM, ExLlamaV3, MLX). Also picking a quant from measured KL divergence, the KV cache, MoE offloading with real llama.cpp flags, speculative decoding, RAG, tools and agents, and an honest home-rig case study. |
-| **Customize it** | Prompt vs RAG vs fine-tune, LoRA and QLoRA, chat templates and datasets, model merging (task arithmetic, SLERP, TIES, DARE), and steering (control vectors and abliteration, explained factually). |
+| **Run it yourself** | The **Will it fit?** calculator (model × quant × context × your machine, using real model shapes) and the engines (llama.cpp, Ollama, LM Studio, vLLM, ExLlamaV3, MLX). Also picking a quant from measured KL divergence, the KV cache, MoE offloading with real llama.cpp flags, speculative decoding, RAG, tools and agents, an honest home-rig case study, splitting a model across two GPUs, speech at home (Whisper, Piper and Windows' own voices) and keeping a home AI server safe. |
+| **Customize it** | Prompt vs RAG vs fine-tune, LoRA and QLoRA, chat templates and datasets, model merging (task arithmetic, SLERP, TIES, DARE), steering (control vectors and abliteration, explained factually), building your own notes helper with RAG (with real measurements), tools and MCP in real JSON, and looking inside a model (Golden Gate Claude). |
 | **Read the papers** | How to read a paper, and **33 annotated papers** from word2vec to DeepSeek-R1. Each comes with its one idea, why it mattered, where you meet it today and a 3-question check. |
 | **State of the art** | The models, the hardware and the tricks that are current, dated October 2026 and sourced from the makers' own announcements and model cards. Also how to read leaderboards, and the year in a timeline. |
 | **Industry map** | Who makes what, jobs around AI, and how to keep up. |
 
-Every engineering term comes with an everyday translation. There are 108 terms in the built-in glossary, with "In your life" and "Lab" filters.
+Every engineering term comes with an everyday translation. There are 114 terms in the built-in glossary, with "In your life" and "Lab" filters.
 
-**Facts you can check.** Every number in the app comes from a cited source (spec sheets, papers, official announcements, help pages), checked in October 2026: 175 facts from 142 sources. Tap ⓘ on any fact card, or open *Sources*.
+**Facts you can check.** Every number in the app comes from a cited source (spec sheets, papers, official announcements, help pages), checked in October 2026: 287 facts from 193 sources. Tap ⓘ on any fact card, or open *Sources*.
 
-**The source library is a plug-in.** A readable copy of every source, plus the original PDFs (61 MB), is a separate download. That keeps the app small. Tap *Get the library* (in Settings or on any source) once, and it works offline from then on. You can also download `machine-mind-library-2026.10.zip` from the [library release](https://github.com/levoniust/inside-the-machine-mind/releases/tag/library-2026.10) and import it.
+**The source library is a plug-in.** A readable copy of every source, plus the original PDFs (66 MB), is a separate download. That keeps the app small. Tap *Get the library* (in Settings or on any source) once, and it works offline from then on. You can also download `machine-mind-library-2026.12.zip` from the [library release](https://github.com/levoniust/inside-the-machine-mind/releases/tag/library-2026.12) and import it.
 
 **Also inside:** quizzes, progress tracking, light and dark themes, reduce-motion support, "Bit reads aloud" (your phone's own voice), phone and tablet layouts, and five hidden Easter eggs. Settings counts how many you've found. 🥚
 

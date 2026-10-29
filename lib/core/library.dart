@@ -15,7 +15,7 @@ class Library extends ChangeNotifier {
 
   /// Pack version this app expects (manifest.json "version"). An older pack still works for the sources it has;
   /// sources added later ask for an update.
-  static const version = '2026.11';
+  static const version = '2026.12';
   static const packName = 'machine-mind-library-$version.zip';
   static const downloadUrl =
       'https://github.com/levoniust/inside-the-machine-mind/releases/download/library-$version/$packName';
