@@ -80,4 +80,16 @@ const quizS5 = <QuizQuestion>[
     3,
     'The WHO\'s 2024 guidance warns that people may miss errors they would otherwise catch, or improperly delegate difficult choices to the AI.',
   ),
+  QuizQuestion(
+    'In a 2023 study, what happened when seven AI detectors checked essays written by non-native English speakers?',
+    ['They correctly marked all of them as human', 'On average they wrongly flagged 61% of them as AI-written', 'They only flagged essays with spelling mistakes', 'They refused to score them'],
+    1,
+    'The detectors were near-perfect on US 8th-graders\' essays but flagged over half the TOEFL essays as AI, because plain wording looks "predictable".',
+  ),
+  QuizQuestion(
+    'Which is the fairest way to check whether someone wrote their own essay?',
+    ['Ask them to talk through their choices and look at their drafts or version history', 'Ask a chatbot whether it wrote it', 'Count the spelling mistakes', 'Trust the detector\'s percentage score'],
+    0,
+    'Detectors fail both ways: paraphrasing hides AI text and plain human writing gets flagged. Talking about the work and its history is far more reliable.',
+  ),
 ];

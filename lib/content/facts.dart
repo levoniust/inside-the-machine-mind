@@ -178,6 +178,9 @@ const sources = <String, Source>{
   'SRC-WINOGENDER': Source('SRC-WINOGENDER', 'Rudinger et al., "Gender Bias in Coreference Resolution", arXiv 1804.09301 (2018)'),
   'SRC-WHO-LMM': Source('SRC-WHO-LMM', 'World Health Organization, "WHO releases AI ethics and governance guidance for large multi-modal models", who.int (January 18, 2024)', url: 'who.int'),
   'SRC-ANTHROPIC-AUP': Source('SRC-ANTHROPIC-AUP', 'Anthropic, Usage Policy (PDF, effective November 12, 2026), anthropic.com (fetched 2026-10-28)', url: 'anthropic.com'),
+  'SRC-DETECTOR-BIAS': Source('SRC-DETECTOR-BIAS', 'Liang et al., "GPT detectors are biased against non-native English writers", arXiv 2304.02819 (2023)'),
+  'SRC-DETECT-RELIABLE': Source('SRC-DETECT-RELIABLE', 'Sadasivan et al., "Can AI-Generated Text be Reliably Detected?", arXiv 2303.11156 (2023)'),
+  'SRC-WATERMARK': Source('SRC-WATERMARK', 'Kirchenbauer et al., "A Watermark for Large Language Models", arXiv 2301.10226 (2023)'),
 };
 
 const facts = <String, Fact>{
@@ -446,4 +449,8 @@ const facts = <String, Fact>{
   'ADV-WHO-AUTOMATION': Fact('ADV-WHO-AUTOMATION', 'The WHO also warns of "automation bias": people overlooking errors they would otherwise catch, or handing difficult choices to the AI', sources: ['SRC-WHO-LMM']),
   'ADV-WHO-USES': Fact('ADV-WHO-USES', 'Among five uses the WHO lists is patient-guided use, such as looking into symptoms and treatment', sources: ['SRC-WHO-LMM'], value: '5 uses'),
   'ADV-AUP': Fact('ADV-AUP', 'Anthropic\'s usage policy treats recommendations in legal, medical and financial matters (such as diagnosing, changing a medication, picking investments or advising on your own taxes) as high-risk: a business offering them on Claude needs a qualified person to review them before anyone relies on them', sources: ['SRC-ANTHROPIC-AUP'], value: 'legal · medical · finance'),
+  'DET-TOEFL': Fact('DET-TOEFL', 'Seven popular AI-text detectors were near-perfect on US 8th-graders\' essays but flagged over half of 91 human-written TOEFL essays (by non-native English writers) as AI: an average false-alarm rate of 61%; 89 of the 91 were flagged by at least one detector', sources: ['SRC-DETECTOR-BIAS'], value: '61% false alarms'),
+  'DET-PROMPT': Fact('DET-PROMPT', 'The same study found that simple prompting (asking for richer wording) could slip AI text past the detectors', sources: ['SRC-DETECTOR-BIAS']),
+  'DET-PARAPHRASE': Fact('DET-PARAPHRASE', 'Paraphrasing AI text, even with another AI, can sharply cut detection rates for many kinds of detector, including watermarks, while only slightly lowering the text\'s quality', sources: ['SRC-DETECT-RELIABLE']),
+  'DET-WATERMARK': Fact('DET-WATERMARK', 'A text watermark can nudge a model toward a secret, random set of "green" words as it writes; a statistical test spots the pattern in a short passage, with negligible effect on quality', sources: ['SRC-WATERMARK']),
 };

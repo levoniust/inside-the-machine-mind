@@ -80,4 +80,11 @@ const narrationS5 = <String, LessonText>{
     ],
     keyIdea: 'Use a chatbot to understand words and prepare questions, but let a qualified person decide anything about your health, your legal case or your money, and never wait on a chatbot in an emergency.',
   ),
+  'e_ai_text': LessonText(
+    intro: [
+      'Teachers, editors and bosses all want to know: did a person write this, or an AI? Tools that promise to tell you are everywhere. Can they?',
+      'First, how detectors guess. Then play "Detector roulette": six short texts, you and a detector both guess, and the truth is revealed. Last, what actually works.',
+    ],
+    keyIdea: 'AI-text detectors guess from how predictable the wording is, so they wrongly flag plain human writing and miss reworded AI text, and a score should never be treated as proof.',
+  ),
 };
