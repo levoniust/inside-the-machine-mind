@@ -163,6 +163,9 @@ const sources = <String, Source>{
   'SRC-WHISPER-REPO': Source('SRC-WHISPER-REPO', 'OpenAI Whisper README (model sizes, VRAM, relative speed), github.com/openai/whisper (fetched 2026-10-28)', url: 'github.com/openai/whisper'),
   'SRC-FASTER-WHISPER': Source('SRC-FASTER-WHISPER', 'faster-whisper README with benchmarks, github.com/SYSTRAN/faster-whisper (fetched 2026-10-28)', url: 'github.com/SYSTRAN/faster-whisper'),
   'SRC-PIPER': Source('SRC-PIPER', 'Piper README, "A fast and local neural text-to-speech engine", github.com/OHF-Voice/piper1-gpl (fetched 2026-10-28)', url: 'github.com/OHF-Voice/piper1-gpl'),
+  'SRC-MCP-ARCH': Source('SRC-MCP-ARCH', 'Model Context Protocol, "Architecture overview", modelcontextprotocol.io/docs/learn/architecture (fetched 2026-10-28)', url: 'modelcontextprotocol.io/docs/learn/architecture'),
+  'SRC-MCP-TOOLS': Source('SRC-MCP-TOOLS', 'Model Context Protocol specification (2025-06-18), "Tools", modelcontextprotocol.io/specification/2025-06-18/server/tools (fetched 2026-10-28)', url: 'modelcontextprotocol.io/specification/2025-06-18/server/tools'),
+  'SRC-ANTHROPIC-TOOLS': Source('SRC-ANTHROPIC-TOOLS', 'Anthropic, "Tool use with Claude", platform.claude.com/docs (fetched 2026-10-28)', url: 'platform.claude.com/docs'),
 };
 
 const facts = <String, Fact>{
@@ -394,4 +397,12 @@ const facts = <String, Fact>{
   'SPCH-WIN-CLASSIC': Fact('SPCH-WIN-CLASSIC', 'Windows\' built-in English (US) voices: David and Mark (male) and Zira (female); programs can speak with installed voices through System.Speech\'s SpeechSynthesizer', sources: ['SRC-MS-NARRATOR-VOICES', 'SRC-MS-SAPI'], value: 'David, Mark, Zira'),
   'SPCH-WIN-NATURAL': Fact('SPCH-WIN-NATURAL', 'Windows Narrator also offers natural voices, e.g. Guy, Jenny and Aria for English (US), added under Narrator settings → Add natural voices and downloaded in a few minutes', sources: ['SRC-MS-NARRATOR-VOICES'], value: 'Guy, Jenny, Aria'),
   'SPCH-PIPER': Fact('SPCH-PIPER', 'Piper is a fast, local neural text-to-speech engine, used by Home Assistant and the NVDA screen reader', sources: ['SRC-PIPER']),
+  'MCP-PARTS': Fact('MCP-PARTS', 'In MCP, the AI app (the host) creates one MCP client for each MCP server it uses; each client keeps its own connection to its server', sources: ['SRC-MCP-ARCH'], value: '1 client per server'),
+  'MCP-PRIMS': Fact('MCP-PRIMS', 'MCP messages use JSON-RPC; servers offer three core primitives: tools (functions to run), resources (data such as file contents) and prompts (reusable templates)', sources: ['SRC-MCP-ARCH'], value: 'tools · resources · prompts'),
+  'MCP-LISTCALL': Fact('MCP-LISTCALL', 'An app finds a server\'s tools with a tools/list request (each tool has a name, a description and an inputSchema in JSON Schema) and runs one with tools/call', sources: ['SRC-MCP-TOOLS'], value: 'tools/list → tools/call'),
+  'MCP-ERRORS': Fact('MCP-ERRORS', 'MCP reports two kinds of tool errors: protocol errors such as an unknown tool or invalid arguments, and execution errors returned as a result with isError: true', sources: ['SRC-MCP-TOOLS'], value: '2 kinds'),
+  'MCP-HUMAN': Fact('MCP-HUMAN', 'The MCP spec says there SHOULD always be a human in the loop with the ability to deny tool invocations', sources: ['SRC-MCP-TOOLS']),
+  'TOOL-ROUNDTRIP': Fact('TOOL-ROUNDTRIP', 'With Claude\'s client tools, the model stops with stop_reason "tool_use" and a tool_use block; your code runs the tool and sends back a tool_result so the model can answer', sources: ['SRC-ANTHROPIC-TOOLS'], value: 'tool_use → tool_result'),
+  'TOOL-REACT': Fact('TOOL-REACT', 'ReAct (2022) has a model interleave reasoning traces with actions such as searches, so each result shapes its next step', sources: ['SRC-REACT']),
+  'TOOL-TOOLFORMER': Fact('TOOL-TOOLFORMER', 'Toolformer (2023) taught a model, self-supervised, to call tools such as a calculator, a Q&A system, a search engine, a translator and a calendar', sources: ['SRC-TOOLFORMER']),
 };

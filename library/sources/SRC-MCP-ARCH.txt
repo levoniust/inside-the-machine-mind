@@ -1,0 +1,2237 @@
+SOURCE COPY — SRC-MCP-ARCH
+Retrieved 2026-10-28 for Inside the Machine Mind (offline reference copy; excerpt of the original, formatting simplified).
+Original URL: https://modelcontextprotocol.io/docs/learn/architecture
+Page/document title: Architecture overview - Model Context Protocol
+
+------------------------------------------------------------------------
+
+> ## Documentation Index
+>
+> Fetch the complete documentation index at: [/llms.txt](/llms.txt)
+>
+> Use this file to discover all available pages before exploring further.
+
+Skip to main content
+
+Assistant
+
+Responses are generated using AI and may contain mistakes.
+
+[Model Context Protocol home page](/)
+
+Version 2026-07-28 (latest)
+
+Search...
+
+⌘KAsk Assistant⌘I
+
+  * [Blog](https://blog.modelcontextprotocol.io)
+  * [GitHub](https://github.com/modelcontextprotocol)
+  * [Discord](https://discord.gg/6CSzBmMkjX)
+
+Search...
+
+Navigation
+
+About MCP
+
+Architecture overview
+
+[Documentation](/docs/2026-07-28/getting-
+started/intro)[Specification](/specification/2026-07-28)[Extensions](/extensions/overview)[Registry](/registry/about)[SEPs](/seps)[Community](/community/contributing)
+
+### Get started
+
+  * [What is MCP?](/docs/2026-07-28/getting-started/intro)
+
+### About MCP
+
+  * [Architecture](/docs/2026-07-28/learn/architecture)
+  * [Servers](/docs/2026-07-28/learn/server-concepts)
+  * [Clients](/docs/2026-07-28/learn/client-concepts)
+  * [Versioning](/docs/2026-07-28/learn/versioning)
+
+### Develop with MCP
+
+  * [Connect to local MCP servers](/docs/2026-07-28/develop/connect-local-servers)
+  * [Connect to remote MCP Servers](/docs/2026-07-28/develop/connect-remote-servers)
+  * [Build with Agent Skills](/docs/2026-07-28/develop/build-with-agent-skills)
+  * [Build an MCP server](/docs/2026-07-28/develop/build-server)
+  * Clients
+
+  * [SDKs](/docs/2026-07-28/sdk)
+  * Security
+
+### Developer tools
+
+  * Inspector
+
+  * [Debugging](/docs/2026-07-28/tools/debugging)
+
+### Examples
+
+  * [Example Servers](/examples)
+
+## On this page
+
+Back to top
+
+  * Scope
+  * Concepts of MCP
+    * Participants
+    * Layers
+    * Data layer
+    * Transport layer
+    * Data Layer Protocol
+    * Statelessness and discovery
+    * Primitives
+    * Notifications
+  * Example
+    * Data Layer
+    * Understanding the Discovery Exchange
+    * How This Works in AI Applications
+    * Understanding the Tool Discovery Request
+    * Understanding the Tool Discovery Response
+    * How This Works in AI Applications
+    * Understanding the Tool Execution Request
+    * Key Elements of Tool Execution
+    * Understanding the Tool Execution Response
+    * How This Works in AI Applications
+    * Subscribing to Changes
+    * Understanding Tool List Change Notifications
+    * Key Features of MCP Notifications
+    * Client Response to Notifications
+    * Why Notifications Matter
+    * How This Works in AI Applications
+
+About MCP
+
+# Architecture overview
+
+Copy pageCopy page
+
+Copy pageCopy page
+
+This overview of the Model Context Protocol (MCP) discusses its scope and core concepts, and provides an
+example demonstrating each core concept. Because MCP SDKs abstract away many concerns, most developers will
+likely find the data layer protocol section to be the most useful. It discusses how MCP servers can provide
+context to an AI application. For specific implementation details, please refer to the documentation for your
+[language-specific SDK](/docs/2026-07-28/sdk).
+
+##
+
+​
+
+Scope
+
+The Model Context Protocol includes the following projects:
+
+  * [MCP Specification](https://modelcontextprotocol.io/specification/latest): A specification of MCP that outlines the implementation requirements for clients and servers.
+  * [MCP SDKs](/docs/2026-07-28/sdk): SDKs for different programming languages that implement MCP.
+  * **MCP Development Tools** : Tools for developing MCP servers and clients, including the [MCP Inspector](https://github.com/modelcontextprotocol/inspector)
+  * [MCP Reference Server Implementations](https://github.com/modelcontextprotocol/servers): Reference implementations of MCP servers.
+
+MCP focuses solely on the protocol for context exchange—it does not dictate how AI applications use LLMs or
+manage the provided context.
+
+##
+
+​
+
+Concepts of MCP
+
+###
+
+​
+
+Participants
+
+MCP follows a client-server architecture where an MCP host — an AI application like [Claude
+Code](https://www.anthropic.com/claude-code) or [Claude Desktop](https://www.claude.ai/download) — establishes
+connections to one or more MCP servers. The MCP host accomplishes this by creating one MCP client for each MCP
+server. Each MCP client maintains a dedicated connection with its corresponding MCP server. Local MCP servers
+that use the STDIO transport typically serve a single MCP client, whereas remote MCP servers that use the
+Streamable HTTP transport will typically serve many MCP clients. The key participants in the MCP architecture
+are:
+
+  * **MCP Host** : The AI application that coordinates and manages one or multiple MCP clients
+  * **MCP Client** : A component that maintains a connection to an MCP server and obtains context from an MCP server for the MCP host to use
+  * **MCP Server** : A program that provides context to MCP clients
+
+**For example** : Visual Studio Code acts as an MCP host. When Visual Studio Code establishes a connection to
+an MCP server, such as the [Sentry MCP server](https://docs.sentry.io/product/sentry-mcp/), the Visual Studio
+Code runtime instantiates an MCP client object that maintains the connection to the Sentry MCP server. When
+Visual Studio Code subsequently connects to another MCP server, such as the [local filesystem
+server](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem), the Visual Studio Code
+runtime instantiates an additional MCP client object to maintain this connection. Note that **MCP server**
+refers to the program that serves context data, regardless of where it runs. MCP servers can execute locally
+or remotely. For example, when Claude Desktop launches the [filesystem
+server](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem), the server runs locally on
+the same machine because it uses the STDIO transport. This is commonly referred to as a “local” MCP server.
+The official [Sentry MCP server](https://docs.sentry.io/product/sentry-mcp/) runs on the Sentry platform, and
+uses the Streamable HTTP transport. This is commonly referred to as a “remote” MCP server.
+
+###
+
+​
+
+Layers
+
+MCP consists of two layers:
+
+  * **Data layer** : Defines the JSON-RPC based protocol for client-server communication, including capability and version discovery, and core primitives, such as tools, resources, prompts and notifications.
+  * **Transport layer** : Defines the communication mechanisms and channels that enable data exchange between clients and servers, including transport-specific connection establishment, message framing, and authorization.
+
+Conceptually the data layer is the inner layer, while the transport layer is the outer layer.
+
+####
+
+​
+
+Data layer
+
+The data layer implements a [JSON-RPC 2.0](https://www.jsonrpc.org/) based exchange protocol that defines the
+message structure and semantics. This layer includes:
+
+  * **Discovery** : Lets clients query a server’s supported protocol versions, capabilities, and identity through the `server/discover` request
+  * **Server features** : Enables servers to provide core functionality including tools for AI actions, resources for context data, and prompts for interaction templates from and to the client
+  * **Client features** : Enables servers to elicit input from the user. Sampling is [deprecated](/specification/2026-07-28/deprecated) as of protocol version `2026-07-28`.
+  * **Utility features** : Supports additional capabilities like notifications for real-time updates and progress tracking for long-running operations
+
+####
+
+​
+
+Transport layer
+
+The transport layer manages communication channels and authentication between clients and servers. It handles
+connection establishment, message framing, and secure communication between MCP participants. MCP supports two
+transport mechanisms:
+
+  * **Stdio transport** : Uses standard input/output streams for direct process communication between local processes on the same machine, providing optimal performance with no network overhead.
+  * **Streamable HTTP transport** : Uses HTTP POST for client-to-server messages with optional Server-Sent Events for streaming capabilities. This transport enables remote server communication and supports standard HTTP authentication methods including bearer tokens, API keys, and custom headers. MCP recommends using OAuth to obtain authentication tokens.
+
+The transport layer abstracts communication details from the protocol layer, enabling the same JSON-RPC 2.0
+message format across all transport mechanisms.
+
+###
+
+​
+
+Data Layer Protocol
+
+A core part of MCP is defining the schema and semantics between MCP clients and MCP servers. Developers will
+likely find the data layer — in particular, the set of primitives — to be the most interesting part of MCP. It
+is the part of MCP that defines the ways developers can share context from MCP servers to MCP clients. MCP
+uses [JSON-RPC 2.0](https://www.jsonrpc.org/) as its underlying RPC protocol. Client and servers send requests
+to each other and respond accordingly. Notifications can be used when no response is required.
+
+####
+
+​
+
+Statelessness and discovery
+
+MCP is a stateless protocol. Every request carries the protocol version and the capabilities relevant to that
+request in its `_meta` field, so the server can process each request on its own. Clients should also identify
+themselves in the same field unless configured not to. Servers advertise their supported versions and
+capabilities through the mandatory [`server/discover`](/specification/2026-07-28/server/discover) request,
+which clients may send before any other request. Detailed information can be found in the
+[specification](/specification/2026-07-28/basic/index#statelessness), and the example showcases the per-
+request metadata and the discovery sequence.
+
+####
+
+​
+
+Primitives
+
+MCP primitives are the most important concept within MCP. They define what clients and servers can offer each
+other. These primitives specify the types of contextual information that can be shared with AI applications
+and the range of actions that can be performed. MCP defines three core primitives that _servers_ can expose:
+
+  * **Tools** : Executable functions that AI applications can invoke to perform actions (e.g., file operations, API calls, database queries)
+  * **Resources** : Data sources that provide contextual information to AI applications (e.g., file contents, database records, API responses)
+  * **Prompts** : Reusable templates that help structure interactions with language models (e.g., system prompts, few-shot examples)
+
+Each primitive type has associated methods for discovery (`*/list`), retrieval (`*/get`), and in some cases,
+execution (`tools/call`). MCP clients will use the `*/list` methods to discover available primitives. For
+example, a client can first list all available tools (`tools/list`) and then execute them. This design allows
+listings to be dynamic. As a concrete example, consider an MCP server that provides context about a database.
+It can expose tools for querying the database, a resource that contains the schema of the database, and a
+prompt that includes few-shot examples for interacting with the tools. For more details about server
+primitives see [server concepts](/docs/2026-07-28/learn/server-concepts). MCP also defines primitives that
+_clients_ can expose. These primitives allow MCP server authors to build richer interactions.
+
+  * **Elicitation** : Allows servers to request additional information from users. This is useful when server authors want to get more information from the user, or ask for confirmation of an action. Servers request user input with the `elicitation/create` method.
+
+Elicitation requests are delivered through the [Multi Round-Trip
+Requests](/specification/2026-07-28/basic/patterns/mrtr) pattern, explained in the [elicitation
+overview](/docs/2026-07-28/learn/client-concepts#elicitation). **Deprecated** : The following client
+primitives are deprecated as of protocol version `2026-07-28`.
+
+  * **Sampling** : Allows servers to request language model completions from the client’s AI application. This is useful when server authors want access to a language model, but want to stay model-independent and not include a language model SDK in their MCP server. Servers request completions with the `sampling/createMessage` method, also delivered through the Multi Round-Trip Requests pattern. New implementations should integrate directly with LLM provider APIs.
+  * **Logging** : Enables servers to send log messages to clients for debugging and monitoring purposes. New implementations should log to `stderr` (stdio transport) or use OpenTelemetry.
+
+For more details about client primitives see [client concepts](/docs/2026-07-28/learn/client-concepts).
+Besides server and client primitives, the protocol supports optional [extensions](/extensions/overview) that
+build on the core protocol. For example, the [Tasks extension](/extensions/tasks/overview) lets servers return
+a durable handle for long-running requests, so clients can poll for status and retrieve the result later.
+
+####
+
+​
+
+Notifications
+
+The protocol supports real-time notifications to enable dynamic updates between servers and clients. For
+example, when a server’s available tools change (such as when new functionality becomes available or existing
+tools are modified), the server can send tool update notifications to inform connected clients about these
+changes. Notifications are sent as JSON-RPC 2.0 notification messages (without expecting a response). Change
+notifications are opt-in: the client opens a long-lived
+[`subscriptions/listen`](/specification/2026-07-28/basic/patterns/subscriptions) stream naming the
+notification types it wants to receive, and the server delivers matching notifications on that stream.
+
+##
+
+​
+
+Example
+
+###
+
+​
+
+Data Layer
+
+This section provides a step-by-step walkthrough of an MCP client-server interaction, focusing on the data
+layer protocol. We’ll demonstrate discovery, tool operations, and notifications using JSON-RPC 2.0 messages.
+
+1
+
+Discovery
+
+As described in the statelessness and discovery section, every MCP request carries the protocol version and
+client capabilities in its `_meta` field, and clients should also include their identity there. A client that
+wants to learn what a server supports before issuing other requests sends a `server/discover` request, which
+every server must implement. The discovery response is typically cacheable, meaning it can be re-used so the
+discovery flow does not need to be performed for every request.
+
+Discover Request
+
+Discover Response
+
+    
+    
+    {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "server/discover",
+      "params": {
+        "_meta": {
+          "io.modelcontextprotocol/protocolVersion": "2026-07-28",
+          "io.modelcontextprotocol/clientInfo": {
+            "name": "example-client",
+            "version": "1.0.0"
+          },
+          "io.modelcontextprotocol/clientCapabilities": {
+            "elicitation": {}
+          }
+        }
+      }
+    }
+    
+    
+    
+    {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "result": {
+        "resultType": "complete",
+        "supportedVersions": ["2026-07-28"],
+        "capabilities": {
+          "tools": {
+            "listChanged": true
+          },
+          "resources": {}
+        },
+        "_meta": {
+          "io.modelcontextprotocol/serverInfo": {
+            "name": "example-server",
+            "version": "1.0.0"
+          }
+        },
+        "ttlMs": 3600000,
+        "cacheScope": "public"
+      }
+    }
+    
+
+####
+
+​
+
+Understanding the Discovery Exchange
+
+The `_meta` fields and the discovery response together serve several purposes:
+
+  1. **Protocol Version Selection** : The `io.modelcontextprotocol/protocolVersion` field declares the version the client is speaking on this request, and `supportedVersions` in the response lists the versions the server accepts. If a server does not support the requested version, it rejects the request with an `UnsupportedProtocolVersionError` listing the versions it does support, and the client retries with a mutually supported version.
+  2. **Capability Discovery** : The client declares its capabilities in `io.modelcontextprotocol/clientCapabilities` on every request, and the server returns its own `capabilities` object from `server/discover`. This tells each party which primitives the other can handle (tools, resources, prompts) and whether change notifications are available, so unsupported operations are never attempted.
+  3. **Identity Exchange** : The `io.modelcontextprotocol/clientInfo` field in the request’s `_meta` and the `io.modelcontextprotocol/serverInfo` field in the result’s `_meta` provide identification and versioning information for debugging and compatibility purposes.
+
+In this example, the exchange demonstrates how MCP capabilities are declared:**Client Capabilities** :
+
+  * `"elicitation": {}` \- The client declares it can gather additional input from the user when the server requests it
+
+**Server Capabilities** :
+
+  * `"tools": {"listChanged": true}` \- The server supports the tools primitive and can honor a `toolsListChanged` filter in [`subscriptions/listen`](/specification/2026-07-28/basic/patterns/subscriptions). Clients that request this filter receive `notifications/tools/list_changed` when the tool list changes.
+  * `"resources": {}` \- The server also supports the resources primitive (can handle `resources/list` and `resources/read` methods)
+
+Calling `server/discover` is optional. Because every request carries the same `_meta` fields, a client is free
+to send any request directly and handle a version error if one comes back. Discovery is a convenient way to
+fetch the server’s identity, capabilities, and supported versions in a single request.
+
+####
+
+​
+
+How This Works in AI Applications
+
+The AI application’s MCP client manager connects to configured servers and stores their discovered
+capabilities for later use. The application uses this information to determine which servers can provide
+specific types of functionality (tools, resources, prompts) and whether they support real-time updates. In the
+Python SDK, discovery happens while the client connects. The results are then available on the client object.
+
+Pseudo-code for AI application discovery
+
+    
+    
+    # Pseudo Code
+    async with Client(stdio_client(server_config)) as client:
+        if client.server_capabilities.tools:
+            app.register_mcp_server(client, supports_tools=True)
+        app.set_server_ready(client)
+    
+
+2
+
+Tool Discovery (Primitives)
+
+The client can discover available tools by sending a `tools/list` request. This request is fundamental to
+MCP’s tool discovery mechanism: it allows clients to understand what tools are available on the server before
+attempting to use them.
+
+Tools List Request
+
+Tools List Response
+
+    
+    
+    {
+      "jsonrpc": "2.0",
+      "id": 2,
+      "method": "tools/list",
+      "params": {
+        "_meta": {
+          "io.modelcontextprotocol/protocolVersion": "2026-07-28",
+          "io.modelcontextprotocol/clientInfo": {
+            "name": "example-client",
+            "version": "1.0.0"
+          },
+          "io.modelcontextprotocol/clientCapabilities": {
+            "elicitation": {}
+          }
+        }
+      }
+    }
+    
+    
+    
+    {
+      "jsonrpc": "2.0",
+      "id": 2,
+      "result": {
+        "resultType": "complete",
+        "tools": [
+          {
+            "name": "calculator_arithmetic",
+            "title": "Calculator",
+            "description": "Perform mathematical calculations including basic arithmetic, trigonometric functions, and algebraic operations",
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "expression": {
+                  "type": "string",
+                  "description": "Mathematical expression to evaluate (e.g., '2 + 3 * 4', 'sin(30)', 'sqrt(16)')"
+                }
+              },
+              "required": ["expression"]
+            }
+          },
+          {
+            "name": "weather_current",
+            "title": "Weather Information",
+            "description": "Get current weather information for any location worldwide",
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "location": {
+                  "type": "string",
+                  "description": "City name, address, or coordinates (latitude,longitude)"
+                },
+                "units": {
+                  "type": "string",
+                  "enum": ["metric", "imperial", "kelvin"],
+                  "description": "Temperature units to use in response",
+                  "default": "metric"
+                }
+              },
+              "required": ["location"]
+            }
+          }
+        ],
+        "ttlMs": 300000,
+        "cacheScope": "public"
+      }
+    }
+    
+
+####
+
+​
+
+Understanding the Tool Discovery Request
+
+The `tools/list` request requires no parameters beyond the standard `_meta` fields that accompany every MCP
+request. It also accepts an optional `cursor` parameter for
+[pagination](/specification/2026-07-28/server/utilities/pagination), which the example above omits.
+
+####
+
+​
+
+Understanding the Tool Discovery Response
+
+The response contains a `tools` array that provides comprehensive metadata about each available tool. This
+array-based structure allows servers to expose multiple tools simultaneously while maintaining clear
+boundaries between different functionalities.Each tool object in the response includes several key fields:
+
+  * **`name`** : A unique identifier for the tool within the server’s namespace. This serves as the primary key for tool execution and should follow a clear naming pattern (e.g., `calculator_arithmetic` rather than just `calculate`)
+  * **`title`** : A human-readable display name for the tool that clients can show to users
+  * **`description`** : Detailed explanation of what the tool does and when to use it
+  * **`inputSchema`** : A JSON Schema that defines the expected input parameters, enabling type validation and providing clear documentation about required and optional parameters
+
+The result is marked `"resultType": "complete"` and carries two caching fields. `ttlMs` is a freshness hint in
+milliseconds, so this tool list can be cached for five minutes. `cacheScope` indicates who may reuse the
+response. The specification’s [caching utility](/specification/2026-07-28/server/utilities/caching) defines
+the full rules.
+
+####
+
+​
+
+How This Works in AI Applications
+
+The AI application fetches available tools from all connected MCP servers and combines them into a unified
+tool registry that the language model can access. This allows the LLM to understand what actions it can
+perform and automatically generates the appropriate tool calls during conversations.
+
+Pseudo-code for AI application tool discovery
+
+    
+    
+    # Pseudo-code using MCP Python SDK patterns
+    available_tools = []
+    for client in app.mcp_clients():
+        tools_response = await client.list_tools()
+        available_tools.extend(tools_response.tools)
+    conversation.register_available_tools(available_tools)
+    
+
+Clients that federate many servers can use [progressive tool
+discovery](/docs/2026-07-28/develop/clients/client-best-practices#progressive-tool-discovery) rather than
+loading every tool upfront.
+
+3
+
+Tool Execution (Primitives)
+
+The client can now execute a tool using the `tools/call` method. This demonstrates how MCP primitives are used
+in practice: after discovering available tools, the client can invoke them with appropriate arguments.
+
+####
+
+​
+
+Understanding the Tool Execution Request
+
+The `tools/call` request follows a structured format that ensures type safety and clear communication between
+client and server. Note that we’re using the proper tool name from the discovery response (`weather_current`)
+rather than a simplified name:
+
+Tool Call Request
+
+Tool Call Response
+
+    
+    
+    {
+      "jsonrpc": "2.0",
+      "id": 3,
+      "method": "tools/call",
+      "params": {
+        "name": "weather_current",
+        "arguments": {
+          "location": "San Francisco",
+          "units": "imperial"
+        },
+        "_meta": {
+          "io.modelcontextprotocol/protocolVersion": "2026-07-28",
+          "io.modelcontextprotocol/clientInfo": {
+            "name": "example-client",
+            "version": "1.0.0"
+          },
+          "io.modelcontextprotocol/clientCapabilities": {
+            "elicitation": {}
+          }
+        }
+      }
+    }
+    
+    
+    
+    {
+      "jsonrpc": "2.0",
+      "id": 3,
+      "result": {
+        "resultType": "complete",
+        "content": [
+          {
+            "type": "text",
+            "text": "Current weather in San Francisco: 68°F, partly cloudy with light winds from the west at 8 mph. Humidity: 65%"
+          }
+        ]
+      }
+    }
+    
+
+####
+
+​
+
+Key Elements of Tool Execution
+
+The request structure includes several important components:
+
+  1. **`name`** : Must match exactly the tool name from the discovery response (`weather_current`). This ensures the server can correctly identify which tool to execute.
+  2. **`arguments`** : Contains the input parameters as defined by the tool’s `inputSchema`. In this example:
+     * `location`: “San Francisco” (required parameter)
+     * `units`: “imperial” (optional parameter, defaults to “metric” if not specified)
+  3. **`_meta`** : Carries the standard per-request fields: the protocol version and client capabilities that every MCP request must include, plus the client’s identity, which clients should include unless configured not to.
+  4. **JSON-RPC Structure** : Uses standard JSON-RPC 2.0 format with unique `id` for request-response correlation.
+
+####
+
+​
+
+Understanding the Tool Execution Response
+
+The response demonstrates MCP’s flexible content system:
+
+  1. **`content` Array**: Tool responses return an array of content objects, allowing for rich, multi-format responses (text, images, resources, etc.)
+  2. **Content Types** : Each content object has a `type` field. In this example, `"type": "text"` indicates plain text content, but MCP supports various content types for different use cases.
+  3. **Structured Output** : The response provides actionable information that the AI application can use as context for language model interactions.
+
+This execution pattern allows AI applications to dynamically invoke server functionality and receive
+structured responses that can be integrated into conversations with language models.
+
+####
+
+​
+
+How This Works in AI Applications
+
+When the language model decides to use a tool during a conversation, the AI application intercepts the tool
+call, routes it to the appropriate MCP server, executes it, and returns the results back to the LLM as part of
+the conversation flow. This enables the LLM to access real-time data and perform actions in the external
+world.
+
+    
+    
+    # Pseudo-code for AI application tool execution
+    async def handle_tool_call(conversation, tool_name, arguments):
+        client = app.find_mcp_client_for_tool(tool_name)
+        result = await client.call_tool(tool_name, arguments)
+        conversation.add_tool_result(result.content)
+    
+
+4
+
+Real-time Updates (Notifications)
+
+MCP supports real-time notifications that enable servers to inform clients about changes without being polled
+for them. This demonstrates the notification system, a key feature that keeps clients synchronized and
+responsive.
+
+####
+
+​
+
+Subscribing to Changes
+
+Change notifications are opt-in. To receive them, the client opens a long-lived notification stream by sending
+a [`subscriptions/listen`](/specification/2026-07-28/basic/patterns/subscriptions) request with a
+`notifications` filter naming the event types it wants. Here the client asks for tool list changes:
+
+Listen Request
+
+    
+    
+    {
+      "jsonrpc": "2.0",
+      "id": 4,
+      "method": "subscriptions/listen",
+      "params": {
+        "_meta": {
+          "io.modelcontextprotocol/protocolVersion": "2026-07-28",
+          "io.modelcontextprotocol/clientInfo": {
+            "name": "example-client",
+            "version": "1.0.0"
+          },
+          "io.modelcontextprotocol/clientCapabilities": {
+            "elicitation": {}
+          }
+        },
+        "notifications": {
+          "toolsListChanged": true
+        }
+      }
+    }
+    
+
+Every client request carries the `io.modelcontextprotocol/protocolVersion` and
+`io.modelcontextprotocol/clientCapabilities` fields in `_meta`, and normally
+`io.modelcontextprotocol/clientInfo` as well, so the server can identify the client without relying on
+connection state.The server acknowledges the subscription with `notifications/subscriptions/acknowledged`,
+which is the first message carrying that subscription’s ID in `_meta` (the server sends no other notification
+for that subscription before it). Its `notifications` field reflects the subset of the requested filter the
+server agreed to honor, with unsupported notification types omitted:
+
+Acknowledgment
+
+    
+    
+    {
+      "jsonrpc": "2.0",
+      "method": "notifications/subscriptions/acknowledged",
+      "params": {
+        "_meta": {
+          "io.modelcontextprotocol/subscriptionId": 4
+        },
+        "notifications": {
+          "toolsListChanged": true
+        }
+      }
+    }
+    
+
+####
+
+​
+
+Understanding Tool List Change Notifications
+
+After the acknowledgment, when the server’s available tools change (for example, when new functionality
+becomes available, existing tools are modified, or tools become temporarily unavailable), the server delivers
+a notification on that stream:
+
+Notification
+
+    
+    
+    {
+      "jsonrpc": "2.0",
+      "method": "notifications/tools/list_changed",
+      "params": {
+        "_meta": {
+          "io.modelcontextprotocol/subscriptionId": 4
+        }
+      }
+    }
+    
+
+####
+
+​
+
+Key Features of MCP Notifications
+
+  1. **No Response Required** : Notice there’s no `id` field in the notification. This follows JSON-RPC 2.0 notification semantics where no response is expected or sent.
+  2. **Opt-In Based** : This notification is only sent to clients that requested `"toolsListChanged": true` in their `subscriptions/listen` filter, and it is only available from servers that declared `"listChanged": true` in their tools capability (as shown in Step 1).
+  3. **Subscription-ID Tagging** : Every notification on the stream carries `io.modelcontextprotocol/subscriptionId` in `_meta`. The value is the JSON-RPC ID of the `subscriptions/listen` request that opened the stream (`4` in this example), so clients can correlate each notification with the subscription that produced it.
+  4. **Event-Driven** : The server decides when to send notifications based on internal state changes, making MCP connections dynamic and responsive.
+  5. **Best Effort** : There are no guarantees that every notification will be sent or received, particularly across transport reconnects. Clients should also rely on polling to preserve freshness of results.
+
+####
+
+​
+
+Client Response to Notifications
+
+Upon receiving this notification, the client typically reacts by requesting the updated tool list. This
+creates a refresh cycle that keeps the client’s understanding of available tools current:
+
+Request
+
+    
+    
+    {
+      "jsonrpc": "2.0",
+      "id": 5,
+      "method": "tools/list",
+      "params": {
+        "_meta": {
+          "io.modelcontextprotocol/protocolVersion": "2026-07-28",
+          "io.modelcontextprotocol/clientInfo": {
+            "name": "example-client",
+            "version": "1.0.0"
+          },
+          "io.modelcontextprotocol/clientCapabilities": {
+            "elicitation": {}
+          }
+        }
+      }
+    }
+    
+
+####
+
+​
+
+Why Notifications Matter
+
+This notification system is crucial for several reasons:
+
+  1. **Dynamic Environments** : Tools may come and go based on server state, external dependencies, or user permissions
+  2. **Efficiency** : Clients don’t need to poll for changes; they’re notified when updates occur
+  3. **Consistency** : Ensures clients always have accurate information about available server capabilities
+  4. **Real-time Collaboration** : Enables responsive AI applications that can adapt to changing contexts
+
+This notification pattern extends beyond tools to other MCP primitives, enabling comprehensive real-time
+synchronization between clients and servers.
+
+####
+
+​
+
+How This Works in AI Applications
+
+The AI application keeps a notification stream open for the changes it cares about. When one arrives, it
+immediately refreshes its tool registry and updates the LLM’s available capabilities. This ensures that
+ongoing conversations always have access to the most current set of tools, and the LLM can dynamically adapt
+to new functionality as it becomes available.
+
+    
+    
+    # Pseudo-code for AI application notification handling
+    async def follow_tool_changes(client):
+        async with client.listen(tools_list_changed=True) as sub:
+            async for _event in sub:
+                tools_response = await client.list_tools()
+                app.update_available_tools(client, tools_response.tools)
+                if app.conversation.is_active():
+                    app.conversation.notify_llm_of_new_capabilities()
+    
+
+Was this page helpful?
+
+YesNo
+
+[What is MCP?](/docs/2026-07-28/getting-started/intro)[Servers](/docs/2026-07-28/learn/server-concepts)
+
+[github](https://github.com/modelcontextprotocol)[discord](https://discord.gg/6CSzBmMkjX)
+
+{"docsConfig":{"theme":"mint","$schema":"https://mintlify.com/docs.json","name":"Model Context
+Protocol","colors":{"primary":"#09090b","light":"#FAFAFA","dark":"#09090b"},"logo":{"light":"https://mintcdn.com/mcp/2BMHnlNW5OqOohXZ/logo/light.svg?fit=max\u0026auto=format\u0026n=2BMHnlNW5OqOohXZ\u0026q=85\u0026s=a5ac61ce77858fb1ddaf6de761c39499","dark":"https://mintcdn.com/mcp/2BMHnlNW5OqOohXZ/logo/dark.svg?fit=max\u0026auto=format\u0026n=2BMHnlNW5OqOohXZ\u0026q=85\u0026s=1227cb7feb8344f9f6288c6b5b0a6d80"},"favicon":"https://mintcdn.com/mcp/2BMHnlNW5OqOohXZ/favicon.svg?fit=max\u0026auto=format\u0026n=2BMHnlNW5OqOohXZ\u0026q=85\u0026s=e419be76252c1cb0a6924602b9de428f","navbar":{"links":[{"href":"https://blog.modelcontextprotocol.io","label":"Blog"},{"href":"https://github.com/modelcontextprotocol","label":"GitHub"},{"href":"https://discord.gg/6CSzBmMkjX","label":"Discord"}]},"footer":{"socials":{"github":"https://github.com/modelcontextprotocol","discord":"https://discord.gg/6CSzBmMkjX"}},"seo":{"metatags":{"og:image":"https://raw.githubusercontent.com/modelcontextprotocol/docs/2eb6171ddbfeefde349dc3b8d5e2b87414c26250/images/og-
+image.png"},"indexing":"navigable"},"contextual":{"options":["copy","view"],"display":"header"},"styling":{"latex":false},"navigation":{"pages":[]}},"deployment":{"deploymentMetadataValue":{"subdomain":"mcp","hasAudioNarration":false,"actualSubdomain":"mcp","customDomains":["modelcontextprotocol.io","modelcontextprotocol.net","modelcontextprotocol.org"],"gitSource":{"type":"github","owner":"modelcontextprotocol","repo":"modelcontextprotocol","deployBranch":"main","contentDirectory":"docs","isPrivate":true,"mountPath":"","label":""},"chroma":{"liveDeploymentHistoryId":"6ae23540e693a4fe45ee11eb","collectionId":"f088e6f8-52b4-4b24-8776-6302b3008565","schemaVersion":"v3","latestBuiltDeploymentHistoryId":"6ae23540e693a4fe45ee11eb"},"feedback":{"thumbs":true},"entitlements":{"AI_CHAT":{"status":"ENABLED"},"REMOVE_BRANDING":{"status":"ENABLED"},"CONTEXTUAL_FEEDBACK":{"status":"ENABLED"},"CODE_SNIPPET_FEEDBACK":{"status":"ENABLED"},"WEB_MCP":{"status":"ENABLED"},"NARRATION":{"status":"ENABLED"}},"buildId":"6ae23540e693a4fe45ee11eb","clientVersion":"0.0.4006","searchFilterCounts":[{"language":"default","tag":"Specification","count":142},{"language":"default","tag":"Documentation","count":117},{"language":"default","tag":"Base
+Protocol","count":57},{"language":"default","tag":"Develop with
+MCP","count":56},{"language":"default","tag":"Server
+Features","count":46},{"language":"default","tag":"SEPs","count":45},{"language":"default","tag":"Final","count":43},{"language":"default","tag":"Community","count":34},{"language":"default","tag":"Utilities","count":33},{"language":"default","tag":"Developer
+tools","count":30}]},"assistantConfig":{},"basePath":"","hasChatPermissions":true,"hasWebMcpPermissions":true,"toggles":[{"name":"kill-
+isr","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"agent-
+mintlify-
+slack","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"editor-v7-file-
+tree","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"agent-
+integrations-
+settings","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"automations-
+pr-
+grouping","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"custom-
+prefix","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"analytics-v7","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"user-
+flows-
+analytics","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"no-
+publish-
+flow","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"workos-
+onboarding","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"llms-
+txt-v2","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"pause-
+universal-search-
+reconcile","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"snapshot-
+serving-
+live","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"stripTemperatureMiddleware","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"per-
+site-search-
+delta","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"support-
+platform-pylon-
+zendesk","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"snapshot-
+serving","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"instant-
+rollback","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"granular-
+notifications-
+server","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"granular-
+notifications","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"editor-
+private-page-
+search","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"automations-
+fable","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"fixed-
+ai-action-
+pricing","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"automation-
+resolve-merge-
+conflict","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"scoped-
+publishing","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"mintql","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"page-
+level-
+analytics","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"editor-
+version-
+history-v2","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"editor-
+nav-
+generations","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"billing-
+page-v2","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"workspace-
+projects","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"assistant-v5","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"byok-
+sep-25","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"fork-
+pr-
+previews","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"revalidation-
+jwt","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"vite-
+origin","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"editor-
+agent-model-
+picker","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"billing-
+updated-9-15","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"workos-
+sso-
+scim","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"hobby-
+abuse-
+scan","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"dashboard-
+inbox","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"workos-
+signup","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false},{"name":"workos-
+enabled","enabled":true,"variant":{"name":"disabled","enabled":false,"feature_enabled":true},"impressionData":false}],"googleFontsInlined":false},"customCss":[{"filePath":"style.css","content":"#content-
+area{--font-mono:var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+\"Liberation Mono\", \"Courier New\", monospace}#enable-section-numbers,#schema-
+reference{display:none}body:has(#schema-reference){--mt-md:0.5rem;--mt-lg:1rem;--mt-xl:1.5rem}#footer{flex-
+wrap:wrap;row-gap:1.5rem}#lf-copyright{flex:1 1 32rem;min-width:0;text-align:center;font-
+size:.875rem;color:rgb(var(--gray-500));line-
+height:1.5}"}],"page":{"pagePath":"docs/2026-07-28/learn/architecture","slug":"/docs/2026-07-28/learn/architecture","pageMetadata":{"title":"Architecture
+overview","sidebarTitle":"Architecture","type":"docs","description":null,"href":"/docs/2026-07-28/learn/architecture"},"pageType":"default","mdx":{"mdxSource":{"compiledSource":"\"use
+strict\";const{Fragment:_Fragment,jsx:_jsx,jsxs:_jsxs}=arguments[0];const{useMDXComponents:_provideComponents}=arguments[0];function
+_createMdxContent(props){const
+_components={a:`a`,code:`code`,em:`em`,li:`li`,ol:`ol`,p:`p`,pre:`pre`,span:`span`,strong:`strong`,ul:`ul`,..._provideComponents(),...props.components},{CodeBlock,CodeGroup,Heading,Mermaid,Note,Step,Steps,Tooltip}=_components;if(!CodeBlock)_missingMdxReference(`CodeBlock`,true);if(!CodeGroup)_missingMdxReference(`CodeGroup`,true);if(!Heading)_missingMdxReference(`Heading`,true);if(!Mermaid)_missingMdxReference(`Mermaid`,true);if(!Note)_missingMdxReference(`Note`,true);if(!Step)_missingMdxReference(`Step`,true);if(!Steps)_missingMdxReference(`Steps`,true);if(!Tooltip)_missingMdxReference(`Tooltip`,true);return
+_jsxs(_Fragment,{children:[_jsxs(_components.p,{children:[`This overview of the Model Context Protocol (MCP)
+discusses its `,_jsx(_components.a,{href:`#scope`,children:`scope`}),` and
+`,_jsx(_components.a,{href:`#concepts-of-mcp`,children:`core concepts`}),`, and provides an
+`,_jsx(_components.a,{href:`#example`,children:`example`}),` demonstrating each core
+concept.`]}),`\n`,_jsxs(_components.p,{children:[`Because MCP SDKs abstract away many concerns, most
+developers will likely find the `,_jsx(_components.a,{href:`#data-layer-protocol`,children:`data layer
+protocol`}),` section to be the most useful. It discusses how MCP servers can provide context to an AI
+application.`]}),`\n`,_jsxs(_components.p,{children:[`For specific implementation details, please refer to the
+documentation for your `,_jsx(_components.a,{href:`/docs/2026-07-28/sdk`,children:`language-specific
+SDK`}),`.`]}),`\n`,_jsx(Heading,{level:`2`,id:`scope`,children:`Scope`}),`\n`,_jsx(_components.p,{children:`The
+Model Context Protocol includes the following
+projects:`}),`\n`,_jsxs(_components.ul,{children:[`\n`,_jsxs(_components.li,{children:[_jsx(_components.a,{href:`https://modelcontextprotocol.io/specification/latest`,children:`MCP
+Specification`}),`: A specification of MCP that outlines the implementation requirements for clients and
+servers.`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.a,{href:`/docs/2026-07-28/sdk`,children:`MCP
+SDKs`}),`: SDKs for different programming languages that implement
+MCP.`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`MCP Development Tools`}),`:
+Tools for developing MCP servers and clients, including the
+`,_jsx(_components.a,{href:`https://github.com/modelcontextprotocol/inspector`,children:`MCP
+Inspector`})]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.a,{href:`https://github.com/modelcontextprotocol/servers`,children:`MCP
+Reference Server Implementations`}),`: Reference implementations of MCP
+servers.`]}),`\n`]}),`\n`,_jsx(Note,{children:_jsx(_components.p,{children:`MCP focuses solely on the protocol
+for context exchange—it does not dictate\nhow AI applications use LLMs or manage the provided
+context.`})}),`\n`,_jsx(Heading,{level:`2`,id:`concepts-of-mcp`,children:`Concepts of
+MCP`}),`\n`,_jsx(Heading,{level:`3`,id:`participants`,children:`Participants`}),`\n`,_jsxs(_components.p,{children:[`MCP
+follows a client-server architecture where an MCP host — an AI application like
+`,_jsx(_components.a,{href:`https://www.anthropic.com/claude-code`,children:`Claude Code`}),` or
+`,_jsx(_components.a,{href:`https://www.claude.ai/download`,children:`Claude Desktop`}),` — establishes
+connections to one or more MCP servers. The MCP host accomplishes this by creating one MCP client for each MCP
+server. Each MCP client maintains a dedicated connection with its corresponding MCP
+server.`]}),`\n`,_jsx(_components.p,{children:`Local MCP servers that use the STDIO transport typically serve
+a single MCP client, whereas remote MCP servers that use the Streamable HTTP transport will typically serve
+many MCP clients.`}),`\n`,_jsx(_components.p,{children:`The key participants in the MCP architecture
+are:`}),`\n`,_jsxs(_components.ul,{children:[`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`MCP
+Host`}),`: The AI application that coordinates and manages one or multiple MCP
+clients`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`MCP Client`}),`: A
+component that maintains a connection to an MCP server and obtains context from an MCP server for the MCP host
+to use`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`MCP Server`}),`: A program
+that provides context to MCP
+clients`]}),`\n`]}),`\n`,_jsxs(_components.p,{children:[_jsx(_components.strong,{children:`For example`}),`:
+Visual Studio Code acts as an MCP host. When Visual Studio Code establishes a connection to an MCP server,
+such as the `,_jsx(_components.a,{href:`https://docs.sentry.io/product/sentry-mcp/`,children:`Sentry MCP
+server`}),`, the Visual Studio Code runtime instantiates an MCP client object that maintains the connection to
+the Sentry MCP server.\nWhen Visual Studio Code subsequently connects to another MCP server, such as the
+`,_jsx(_components.a,{href:`https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem`,children:`local
+filesystem server`}),`, the Visual Studio Code runtime instantiates an additional MCP client object to
+maintain this connection.`]}),`\n`,_jsx(Mermaid,{chart:`graph TB\n subgraph \"MCP Host (AI Application)\"\n
+Client1[\"MCP Client 1\"]\n Client2[\"MCP Client 2\"]\n Client3[\"MCP Client 3\"]\n Client4[\"MCP Client
+4\"]\n end\n\n ServerA[\"MCP Server A - Local\u003cbr/>(e.g. Filesystem)\"]\n ServerB[\"MCP Server B -
+Local\u003cbr/>(e.g. Database)\"]\n ServerC[\"MCP Server C - Remote\u003cbr/>(e.g. Sentry)\"]\n\n Client1
+---|\"Dedicated\u003cbr/>connection\"| ServerA\n Client2 ---|\"Dedicated\u003cbr/>connection\"| ServerB\n
+Client3 ---|\"Dedicated\u003cbr/>connection\"| ServerC\n Client4 ---|\"Dedicated\u003cbr/>connection\"|
+ServerC`}),`\n`,_jsxs(_components.p,{children:[`Note that `,_jsx(_components.strong,{children:`MCP server`}),`
+refers to the program that serves context data, regardless of\nwhere it runs. MCP servers can execute locally
+or remotely. For example, when\nClaude Desktop launches the
+`,_jsx(_components.a,{href:`https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem`,children:`filesystem\nserver`}),`,\nthe
+server runs locally on the same machine because it uses the STDIO\ntransport. This is commonly referred to as
+a “local” MCP server. The official\n`,_jsx(_components.a,{href:`https://docs.sentry.io/product/sentry-
+mcp/`,children:`Sentry MCP server`}),` runs on the\nSentry platform, and uses the Streamable HTTP transport.
+This is commonly\nreferred to as a “remote” MCP
+server.`]}),`\n`,_jsx(Heading,{level:`3`,id:`layers`,children:`Layers`}),`\n`,_jsx(_components.p,{children:`MCP
+consists of two
+layers:`}),`\n`,_jsxs(_components.ul,{children:[`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Data
+layer`}),`: Defines the JSON-RPC based protocol for client-server communication, including capability and
+version discovery, and core primitives, such as tools, resources, prompts and
+notifications.`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Transport
+layer`}),`: Defines the communication mechanisms and channels that enable data exchange between clients and
+servers, including transport-specific connection establishment, message framing, and
+authorization.`]}),`\n`]}),`\n`,_jsx(_components.p,{children:`Conceptually the data layer is the inner layer,
+while the transport layer is the outer layer.`}),`\n`,_jsx(Heading,{level:`4`,id:`data-layer`,children:`Data
+layer`}),`\n`,_jsxs(_components.p,{children:[`The data layer implements a
+`,_jsx(_components.a,{href:`https://www.jsonrpc.org/`,children:`JSON-RPC 2.0`}),` based exchange protocol that
+defines the message structure and semantics.\nThis layer
+includes:`]}),`\n`,_jsxs(_components.ul,{children:[`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Discovery`}),`:
+Lets clients query a server’s supported protocol versions, capabilities, and identity through the
+`,_jsx(_components.code,{children:`server/discover`}),`
+request`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Server features`}),`:
+Enables servers to provide core functionality including tools for AI actions, resources for context data, and
+prompts for interaction templates from and to the
+client`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Client features`}),`:
+Enables servers to elicit input from the user. Sampling is
+`,_jsx(_components.a,{href:`/specification/2026-07-28/deprecated`,children:`deprecated`}),` as of protocol
+version
+`,_jsx(_components.code,{children:`2026-07-28`}),`.`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Utility
+features`}),`: Supports additional capabilities like notifications for real-time updates and progress tracking
+for long-running operations`]}),`\n`]}),`\n`,_jsx(Heading,{level:`4`,id:`transport-layer`,children:`Transport
+layer`}),`\n`,_jsx(_components.p,{children:`The transport layer manages communication channels and
+authentication between clients and servers. It handles connection establishment, message framing, and secure
+communication between MCP participants.`}),`\n`,_jsx(_components.p,{children:`MCP supports two transport
+mechanisms:`}),`\n`,_jsxs(_components.ul,{children:[`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Stdio
+transport`}),`: Uses standard input/output streams for direct process communication between local processes on
+the same machine, providing optimal performance with no network
+overhead.`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Streamable HTTP
+transport`}),`: Uses HTTP POST for client-to-server messages with optional Server-Sent Events for streaming
+capabilities. This transport enables remote server communication and supports standard HTTP authentication
+methods including bearer tokens, API keys, and custom headers. MCP recommends using OAuth to obtain
+authentication tokens.`]}),`\n`]}),`\n`,_jsx(_components.p,{children:`The transport layer abstracts
+communication details from the protocol layer, enabling the same JSON-RPC 2.0 message format across all
+transport mechanisms.`}),`\n`,_jsx(Heading,{level:`3`,id:`data-layer-protocol`,children:`Data Layer
+Protocol`}),`\n`,_jsxs(_components.p,{children:[`A core part of MCP is defining the schema and semantics
+between MCP clients and MCP servers. Developers will likely find the data layer — in particular, the set of
+`,_jsx(_components.a,{href:`#primitives`,children:`primitives`}),` — to be the most interesting part of MCP.
+It is the part of MCP that defines the ways developers can share context from MCP servers to MCP
+clients.`]}),`\n`,_jsxs(_components.p,{children:[`MCP uses
+`,_jsx(_components.a,{href:`https://www.jsonrpc.org/`,children:`JSON-RPC 2.0`}),` as its underlying RPC
+protocol. Client and servers send requests to each other and respond accordingly. Notifications can be used
+when no response is required.`]}),`\n`,_jsx(Heading,{level:`4`,id:`statelessness-and-
+discovery`,children:`Statelessness and discovery`}),`\n`,_jsxs(_components.p,{children:[`MCP is a
+`,_jsx(Tooltip,{tip:`Every request contains all the information needed to process it, so servers infer nothing
+from previous requests`,children:`stateless protocol`}),`. Every request carries the protocol version and the
+`,_jsx(Tooltip,{tip:`Features and operations that a client or server supports, such as tools, resources, or
+prompts`,children:`capabilities`}),` relevant to that request in its
+`,_jsx(_components.code,{children:`_meta`}),` field, so the server can process each request on its own.
+Clients should also identify themselves in the same field unless configured not to. Servers advertise their
+supported versions and capabilities through the mandatory
+`,_jsx(_components.a,{href:`/specification/2026-07-28/server/discover`,children:_jsx(_components.code,{children:`server/discover`})}),`
+request, which clients may send before any other request. Detailed information can be found in the
+`,_jsx(_components.a,{href:`/specification/2026-07-28/basic/index#statelessness`,children:`specification`}),`,
+and the `,_jsx(_components.a,{href:`#example`,children:`example`}),` showcases the per-request metadata and
+the discovery
+sequence.`]}),`\n`,_jsx(Heading,{level:`4`,id:`primitives`,children:`Primitives`}),`\n`,_jsx(_components.p,{children:`MCP
+primitives are the most important concept within MCP. They define what clients and servers can offer each
+other. These primitives specify the types of contextual information that can be shared with AI applications
+and the range of actions that can be performed.`}),`\n`,_jsxs(_components.p,{children:[`MCP defines three core
+primitives that `,_jsx(_components.em,{children:`servers`}),` can
+expose:`]}),`\n`,_jsxs(_components.ul,{children:[`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Tools`}),`:
+Executable functions that AI applications can invoke to perform actions (e.g., file operations, API calls,
+database queries)`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Resources`}),`:
+Data sources that provide contextual information to AI applications (e.g., file contents, database records,
+API responses)`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Prompts`}),`:
+Reusable templates that help structure interactions with language models (e.g., system prompts, few-shot
+examples)`]}),`\n`]}),`\n`,_jsxs(_components.p,{children:[`Each primitive type has associated methods for
+discovery (`,_jsx(_components.code,{children:`*/list`}),`), retrieval
+(`,_jsx(_components.code,{children:`*/get`}),`), and in some cases, execution
+(`,_jsx(_components.code,{children:`tools/call`}),`).\nMCP clients will use the
+`,_jsx(_components.code,{children:`*/list`}),` methods to discover available primitives. For example, a client
+can first list all available tools (`,_jsx(_components.code,{children:`tools/list`}),`) and then execute them.
+This design allows listings to be dynamic.`]}),`\n`,_jsx(_components.p,{children:`As a concrete example,
+consider an MCP server that provides context about a database. It can expose tools for querying the database,
+a resource that contains the schema of the database, and a prompt that includes few-shot examples for
+interacting with the tools.`}),`\n`,_jsxs(_components.p,{children:[`For more details about server primitives
+see `,_jsx(_components.a,{href:`/docs/2026-07-28/learn/server-concepts`,children:`server
+concepts`}),`.`]}),`\n`,_jsxs(_components.p,{children:[`MCP also defines primitives that
+`,_jsx(_components.em,{children:`clients`}),` can expose. These primitives allow MCP server authors to build
+richer
+interactions.`]}),`\n`,_jsxs(_components.ul,{children:[`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Elicitation`}),`:
+Allows servers to request additional information from users. This is useful when server authors want to get
+more information from the user, or ask for confirmation of an action. Servers request user input with the
+`,_jsx(_components.code,{children:`elicitation/create`}),`
+method.`]}),`\n`]}),`\n`,_jsxs(_components.p,{children:[`Elicitation requests are delivered through the
+`,_jsx(_components.a,{href:`/specification/2026-07-28/basic/patterns/mrtr`,children:`Multi Round-Trip
+Requests`}),` pattern, explained in the `,_jsx(_components.a,{href:`/docs/2026-07-28/learn/client-
+concepts#elicitation`,children:`elicitation
+overview`}),`.`]}),`\n`,_jsxs(_components.p,{children:[_jsx(_components.strong,{children:`Deprecated`}),`: The
+following client primitives are deprecated as of protocol version
+`,_jsx(_components.code,{children:`2026-07-28`}),`.`]}),`\n`,_jsxs(_components.ul,{children:[`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Sampling`}),`:
+Allows servers to request language model completions from the client’s AI application. This is useful when
+server authors want access to a language model, but want to stay model-independent and not include a language
+model SDK in their MCP server. Servers request completions with the
+`,_jsx(_components.code,{children:`sampling/createMessage`}),` method, also delivered through the Multi Round-
+Trip Requests pattern. New implementations should integrate directly with LLM provider
+APIs.`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Logging`}),`: Enables
+servers to send log messages to clients for debugging and monitoring purposes. New implementations should log
+to `,_jsx(_components.code,{children:`stderr`}),` (stdio transport) or use
+OpenTelemetry.`]}),`\n`]}),`\n`,_jsxs(_components.p,{children:[`For more details about client primitives see
+`,_jsx(_components.a,{href:`/docs/2026-07-28/learn/client-concepts`,children:`client
+concepts`}),`.`]}),`\n`,_jsxs(_components.p,{children:[`Besides server and client primitives, the protocol
+supports optional `,_jsx(_components.a,{href:`/extensions/overview`,children:`extensions`}),` that build on
+the core protocol. For example, the `,_jsx(_components.a,{href:`/extensions/tasks/overview`,children:`Tasks
+extension`}),` lets servers return a durable handle for long-running requests, so clients can poll for status
+and retrieve the result
+later.`]}),`\n`,_jsx(Heading,{level:`4`,id:`notifications`,children:`Notifications`}),`\n`,_jsxs(_components.p,{children:[`The
+protocol supports real-time notifications to enable dynamic updates between servers and clients. For example,
+when a server’s available tools change (such as when new functionality becomes available or existing tools are
+modified), the server can send tool update notifications to inform connected clients about these changes.
+Notifications are sent as JSON-RPC 2.0 notification messages (without expecting a response). Change
+notifications are opt-in: the client opens a long-lived
+`,_jsx(_components.a,{href:`/specification/2026-07-28/basic/patterns/subscriptions`,children:_jsx(_components.code,{children:`subscriptions/listen`})}),`
+stream naming the notification types it wants to receive, and the server delivers matching notifications on
+that
+stream.`]}),`\n`,_jsx(Heading,{level:`2`,id:`example`,children:`Example`}),`\n`,_jsx(Heading,{level:`3`,id:`data-
+layer-2`,children:`Data Layer`}),`\n`,_jsx(_components.p,{children:`This section provides a step-by-step
+walkthrough of an MCP client-server interaction, focusing on the data layer protocol. We’ll demonstrate
+discovery, tool operations, and notifications using JSON-RPC 2.0
+messages.`}),`\n`,_jsxs(Steps,{children:[_jsxs(Step,{title:`Discovery`,children:[_jsxs(_components.p,{children:[`As
+described in the `,_jsx(_components.a,{href:`#statelessness-and-discovery`,children:`statelessness and
+discovery`}),` section, every MCP request carries the protocol version and client capabilities in its
+`,_jsx(_components.code,{children:`_meta`}),` field, and clients should also include their identity there. A
+client that wants to learn what a server supports before issuing other requests sends a
+`,_jsx(_components.code,{children:`server/discover`}),` request, which every server must implement. The
+discovery response is typically cacheable, meaning it can be re-used so the discovery flow does not need to be
+performed for every request.`]}),_jsxs(CodeGroup,{children:[_jsx(CodeBlock,{filename:`Discover
+Request`,numberOfLines:`17`,language:`json`,children:_jsx(_components.pre,{className:`shiki shiki-themes
+github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`json`,children:_jsxs(_components.code,{language:`json`,numberOfLines:`17`,children:[_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-
+dark\":`#D4D4D4`},children:`{`})}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"jsonrpc\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"2.0\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"id\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0550AE`,\"--shiki-
+dark\":`#B5CEA8`},children:`1`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"method\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"server/discover\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"params\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"_meta\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:`
+\"io.modelcontextprotocol/protocolVersion\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"2026-07-28\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:`
+\"io.modelcontextprotocol/clientInfo\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"name\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"example-client\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"version\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"1.0.0\"`})]}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+},`})}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:`
+\"io.modelcontextprotocol/clientCapabilities\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"elicitation\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--
+shiki-dark\":`#D4D4D4`},children:`:
+{}`})]}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+}`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+}`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+}`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`}`})}),`\n`]})})}),_jsx(CodeBlock,{filename:`Discover
+Response`,numberOfLines:`22`,language:`json`,children:_jsx(_components.pre,{className:`shiki shiki-themes
+github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`json`,children:_jsxs(_components.code,{language:`json`,numberOfLines:`22`,children:[_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-
+dark\":`#D4D4D4`},children:`{`})}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"jsonrpc\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"2.0\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"id\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0550AE`,\"--shiki-
+dark\":`#B5CEA8`},children:`1`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"result\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"resultType\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--
+shiki-dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"complete\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"supportedVersions\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`: [`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"2026-07-28\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`],`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"capabilities\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--
+shiki-dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"tools\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"listChanged\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--
+shiki-dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0550AE`,\"--shiki-
+dark\":`#569CD6`},children:`true`})]}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+},`})}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"resources\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`:
+{}`})]}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+},`})}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"_meta\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:`
+\"io.modelcontextprotocol/serverInfo\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"name\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"example-server\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"version\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"1.0.0\"`})]}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+}`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+},`})}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"ttlMs\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0550AE`,\"--shiki-
+dark\":`#B5CEA8`},children:`3600000`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"cacheScope\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--
+shiki-dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"public\"`})]}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+}`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`}`})}),`\n`]})})})]}),_jsx(Heading,{level:`4`,id:`understanding-the-
+discovery-exchange`,children:`Understanding the Discovery Exchange`}),_jsxs(_components.p,{children:[`The
+`,_jsx(_components.code,{children:`_meta`}),` fields and the discovery response together serve several
+purposes:`]}),_jsxs(_components.ol,{children:[`\n`,_jsxs(_components.li,{children:[`\n`,_jsxs(_components.p,{children:[_jsx(_components.strong,{children:`Protocol
+Version Selection`}),`: The `,_jsx(_components.code,{children:`io.modelcontextprotocol/protocolVersion`}),`
+field declares the version the client is speaking on this request, and
+`,_jsx(_components.code,{children:`supportedVersions`}),` in the response lists the versions the server
+accepts. If a server does not support the requested version, it rejects the request with an
+`,_jsx(_components.code,{children:`UnsupportedProtocolVersionError`}),` listing the versions it does support,
+and the client retries with a mutually supported
+version.`]}),`\n`]}),`\n`,_jsxs(_components.li,{children:[`\n`,_jsxs(_components.p,{children:[_jsx(_components.strong,{children:`Capability
+Discovery`}),`: The client declares its capabilities in
+`,_jsx(_components.code,{children:`io.modelcontextprotocol/clientCapabilities`}),` on every request, and the
+server returns its own `,_jsx(_components.code,{children:`capabilities`}),` object from
+`,_jsx(_components.code,{children:`server/discover`}),`. This tells each party which
+`,_jsx(_components.a,{href:`#primitives`,children:`primitives`}),` the other can handle (tools, resources,
+prompts) and whether change `,_jsx(_components.a,{href:`#notifications`,children:`notifications`}),` are
+available, so unsupported operations are never
+attempted.`]}),`\n`]}),`\n`,_jsxs(_components.li,{children:[`\n`,_jsxs(_components.p,{children:[_jsx(_components.strong,{children:`Identity
+Exchange`}),`: The `,_jsx(_components.code,{children:`io.modelcontextprotocol/clientInfo`}),` field in the
+request’s `,_jsx(_components.code,{children:`_meta`}),` and the
+`,_jsx(_components.code,{children:`io.modelcontextprotocol/serverInfo`}),` field in the result’s
+`,_jsx(_components.code,{children:`_meta`}),` provide identification and versioning information for debugging
+and compatibility purposes.`]}),`\n`]}),`\n`]}),_jsx(_components.p,{children:`In this example, the exchange
+demonstrates how MCP capabilities are
+declared:`}),_jsxs(_components.p,{children:[_jsx(_components.strong,{children:`Client
+Capabilities`}),`:`]}),_jsxs(_components.ul,{children:[`\n`,_jsxs(_components.li,{children:[_jsx(_components.code,{children:`\"elicitation\":
+{}`}),` - The client declares it can gather additional input from the user when the server requests
+it`]}),`\n`]}),_jsxs(_components.p,{children:[_jsx(_components.strong,{children:`Server
+Capabilities`}),`:`]}),_jsxs(_components.ul,{children:[`\n`,_jsxs(_components.li,{children:[_jsx(_components.code,{children:`\"tools\":
+{\"listChanged\": true}`}),` - The server supports the tools primitive and can honor a
+`,_jsx(_components.code,{children:`toolsListChanged`}),` filter in
+`,_jsx(_components.a,{href:`/specification/2026-07-28/basic/patterns/subscriptions`,children:_jsx(_components.code,{children:`subscriptions/listen`})}),`.
+Clients that request this filter receive
+`,_jsx(_components.code,{children:`notifications/tools/list_changed`}),` when the tool list
+changes.`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.code,{children:`\"resources\": {}`}),` -
+The server also supports the resources primitive (can handle
+`,_jsx(_components.code,{children:`resources/list`}),` and
+`,_jsx(_components.code,{children:`resources/read`}),`
+methods)`]}),`\n`]}),_jsxs(_components.p,{children:[`Calling
+`,_jsx(_components.code,{children:`server/discover`}),` is optional. Because every request carries the same
+`,_jsx(_components.code,{children:`_meta`}),` fields, a client is free to send any request directly and handle
+a version error if one comes back. Discovery is a convenient way to fetch the server’s identity, capabilities,
+and supported versions in a single request.`]}),_jsx(Heading,{level:`4`,id:`how-this-works-in-ai-
+applications`,children:`How This Works in AI Applications`}),_jsx(_components.p,{children:`The AI
+application’s MCP client manager connects to configured servers and stores their discovered capabilities for
+later use. The application uses this information to determine which servers can provide specific types of
+functionality (tools, resources, prompts) and whether they support real-time updates. In the Python SDK,
+discovery happens while the client connects. The results are then available on the client
+object.`}),_jsx(CodeBlock,{filename:`Pseudo-code for AI application
+discovery`,numberOfLines:`5`,language:`python`,children:_jsx(_components.pre,{className:`shiki shiki-themes
+github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`python`,children:_jsxs(_components.code,{language:`python`,numberOfLines:`5`,children:[_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#6E7781`,\"
+--shiki-dark\":`#6A9955`},children:`# Pseudo
+Code`})}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#CF222E`,\"
+--shiki-dark\":`#C586C0`},children:`async`}),_jsx(_components.span,{style:{color:`#CF222E`,\"--shiki-
+dark\":`#C586C0`},children:` with`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:` Client(stdio_client(server_config))
+`}),_jsx(_components.span,{style:{color:`#CF222E`,\"--shiki-
+dark\":`#C586C0`},children:`as`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`
+client:`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#CF222E`,\"
+--shiki-dark\":`#C586C0`},children:` if`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`
+client.server_capabilities.tools:`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:` app.register_mcp_server(client,
+`}),_jsx(_components.span,{style:{color:`#953800`,\"--shiki-
+dark\":`#9CDCFE`},children:`supports_tools`}),_jsx(_components.span,{style:{color:`#CF222E`,\"--shiki-
+dark\":`#D4D4D4`},children:`=`}),_jsx(_components.span,{style:{color:`#0550AE`,\"--shiki-
+dark\":`#569CD6`},children:`True`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`)`})]}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:` app.set_server_ready(client)`})}),`\n`]})})})]}),_jsxs(Step,{title:`Tool
+Discovery (Primitives)`,children:[_jsxs(_components.p,{children:[`The client can discover available tools by
+sending a `,_jsx(_components.code,{children:`tools/list`}),` request. This request is fundamental to MCP’s
+tool discovery mechanism: it allows clients to understand what tools are available on the server before
+attempting to use them.`]}),_jsxs(CodeGroup,{children:[_jsx(CodeBlock,{filename:`Tools List
+Request`,numberOfLines:`17`,language:`json`,children:_jsx(_components.pre,{className:`shiki shiki-themes
+github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`json`,children:_jsxs(_components.code,{language:`json`,numberOfLines:`17`,children:[_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-
+dark\":`#D4D4D4`},children:`{`})}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"jsonrpc\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"2.0\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"id\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0550AE`,\"--shiki-
+dark\":`#B5CEA8`},children:`2`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"method\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"tools/list\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"params\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"_meta\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:`
+\"io.modelcontextprotocol/protocolVersion\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"2026-07-28\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:`
+\"io.modelcontextprotocol/clientInfo\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"name\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"example-client\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"version\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"1.0.0\"`})]}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+},`})}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:`
+\"io.modelcontextprotocol/clientCapabilities\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"elicitation\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--
+shiki-dark\":`#D4D4D4`},children:`:
+{}`})]}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+}`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+}`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+}`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`}`})}),`\n`]})})}),_jsx(CodeBlock,{filename:`Tools List
+Response`,numberOfLines:`47`,language:`json`,children:_jsx(_components.pre,{className:`shiki shiki-themes
+github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`json`,children:_jsxs(_components.code,{language:`json`,numberOfLines:`47`,children:[_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-
+dark\":`#D4D4D4`},children:`{`})}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"jsonrpc\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"2.0\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"id\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0550AE`,\"--shiki-
+dark\":`#B5CEA8`},children:`2`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"result\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"resultType\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--
+shiki-dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"complete\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"tools\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`:
+[`})]}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+{`})}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"name\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"calculator_arithmetic\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--
+shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"title\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"Calculator\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"description\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--
+shiki-dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"Perform mathematical calculations including basic arithmetic, trigonometric
+functions, and algebraic operations\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"inputSchema\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--
+shiki-dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"type\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"object\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"properties\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--
+shiki-dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"expression\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--
+shiki-dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"type\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"string\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"description\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--
+shiki-dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"Mathematical expression to evaluate (e.g., '2 + 3 * 4', 'sin(30)',
+'sqrt(16)')\"`})]}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+}`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+},`})}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"required\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: [`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"expression\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`]`})]}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+}`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+},`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+{`})}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"name\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"weather_current\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"title\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"Weather Information\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--
+shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"description\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--
+shiki-dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"Get current weather information for any location
+worldwide\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"inputSchema\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--
+shiki-dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"type\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"object\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"properties\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--
+shiki-dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"location\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"type\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"string\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"description\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--
+shiki-dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"City name, address, or coordinates
+(latitude,longitude)\"`})]}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+},`})}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"units\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"type\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"string\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"enum\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: [`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"metric\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`, `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"imperial\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`, `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"kelvin\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`],`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"description\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--
+shiki-dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"Temperature units to use in
+response\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"default\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"metric\"`})]}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+}`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+},`})}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"required\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: [`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"location\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`]`})]}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+}`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+}`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+],`})}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"ttlMs\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0550AE`,\"--shiki-
+dark\":`#B5CEA8`},children:`300000`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"cacheScope\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--
+shiki-dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"public\"`})]}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+}`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`}`})}),`\n`]})})})]}),_jsx(Heading,{level:`4`,id:`understanding-the-tool-
+discovery-request`,children:`Understanding the Tool Discovery Request`}),_jsxs(_components.p,{children:[`The
+`,_jsx(_components.code,{children:`tools/list`}),` request requires no parameters beyond the standard
+`,_jsx(_components.code,{children:`_meta`}),` fields that accompany every MCP request. It also accepts an
+optional `,_jsx(_components.code,{children:`cursor`}),` parameter for
+`,_jsx(_components.a,{href:`/specification/2026-07-28/server/utilities/pagination`,children:`pagination`}),`,
+which the example above omits.`]}),_jsx(Heading,{level:`4`,id:`understanding-the-tool-discovery-
+response`,children:`Understanding the Tool Discovery Response`}),_jsxs(_components.p,{children:[`The response
+contains a `,_jsx(_components.code,{children:`tools`}),` array that provides comprehensive metadata about each
+available tool. This array-based structure allows servers to expose multiple tools simultaneously while
+maintaining clear boundaries between different functionalities.`]}),_jsx(_components.p,{children:`Each tool
+object in the response includes several key
+fields:`}),_jsxs(_components.ul,{children:[`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:_jsx(_components.code,{children:`name`})}),`:
+A unique identifier for the tool within the server’s namespace. This serves as the primary key for tool
+execution and should follow a clear naming pattern (e.g.,
+`,_jsx(_components.code,{children:`calculator_arithmetic`}),` rather than just
+`,_jsx(_components.code,{children:`calculate`}),`)`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:_jsx(_components.code,{children:`title`})}),`:
+A human-readable display name for the tool that clients can show to
+users`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:_jsx(_components.code,{children:`description`})}),`:
+Detailed explanation of what the tool does and when to use
+it`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:_jsx(_components.code,{children:`inputSchema`})}),`:
+A JSON Schema that defines the expected input parameters, enabling type validation and providing clear
+documentation about required and optional parameters`]}),`\n`]}),_jsxs(_components.p,{children:[`The result is
+marked `,_jsx(_components.code,{children:`\"resultType\": \"complete\"`}),` and carries two caching fields.
+`,_jsx(_components.code,{children:`ttlMs`}),` is a freshness hint in milliseconds, so this tool list can be
+cached for five minutes. `,_jsx(_components.code,{children:`cacheScope`}),` indicates who may reuse the
+response. The specification’s
+`,_jsx(_components.a,{href:`/specification/2026-07-28/server/utilities/caching`,children:`caching utility`}),`
+defines the full rules.`]}),_jsx(Heading,{level:`4`,id:`how-this-works-in-ai-applications-2`,children:`How
+This Works in AI Applications`}),_jsx(_components.p,{children:`The AI application fetches available tools from
+all connected MCP servers and combines them into a unified tool registry that the language model can access.
+This allows the LLM to understand what actions it can perform and automatically generates the appropriate tool
+calls during conversations.`}),_jsx(CodeBlock,{filename:`Pseudo-code for AI application tool
+discovery`,numberOfLines:`6`,language:`python`,children:_jsx(_components.pre,{className:`shiki shiki-themes
+github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`python`,children:_jsxs(_components.code,{language:`python`,numberOfLines:`6`,children:[_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#6E7781`,\"
+--shiki-dark\":`#6A9955`},children:`# Pseudo-code using MCP Python SDK
+patterns`})}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`available_tools `}),_jsx(_components.span,{style:{color:`#CF222E`,\"--
+shiki-dark\":`#D4D4D4`},children:`=`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`
+[]`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#CF222E`,\"
+--shiki-dark\":`#C586C0`},children:`for`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:` client `}),_jsx(_components.span,{style:{color:`#CF222E`,\"--shiki-
+dark\":`#C586C0`},children:`in`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`
+app.mcp_clients():`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:` tools_response `}),_jsx(_components.span,{style:{color:`#CF222E`,\"--
+shiki-dark\":`#D4D4D4`},children:`=`}),_jsx(_components.span,{style:{color:`#CF222E`,\"--shiki-
+dark\":`#C586C0`},children:` await`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`
+client.list_tools()`})]}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+available_tools.extend(tools_response.tools)`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-
+dark\":`#D4D4D4`},children:`conversation.register_available_tools(available_tools)`})}),`\n`]})})}),_jsxs(_components.p,{children:[`Clients
+that federate many servers can use `,_jsx(_components.a,{href:`/docs/2026-07-28/develop/clients/client-best-
+practices#progressive-tool-discovery`,children:`progressive tool discovery`}),` rather than loading every tool
+upfront.`]})]}),_jsxs(Step,{title:`Tool Execution (Primitives)`,children:[_jsxs(_components.p,{children:[`The
+client can now execute a tool using the `,_jsx(_components.code,{children:`tools/call`}),` method. This
+demonstrates how MCP primitives are used in practice: after discovering available tools, the client can invoke
+them with appropriate arguments.`]}),_jsx(Heading,{level:`4`,id:`understanding-the-tool-execution-
+request`,children:`Understanding the Tool Execution Request`}),_jsxs(_components.p,{children:[`The
+`,_jsx(_components.code,{children:`tools/call`}),` request follows a structured format that ensures type
+safety and clear communication between client and server. Note that we’re using the proper tool name from the
+discovery response (`,_jsx(_components.code,{children:`weather_current`}),`) rather than a simplified
+name:`]}),_jsxs(CodeGroup,{children:[_jsx(CodeBlock,{filename:`Tool Call
+Request`,numberOfLines:`22`,language:`json`,children:_jsx(_components.pre,{className:`shiki shiki-themes
+github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`json`,children:_jsxs(_components.code,{language:`json`,numberOfLines:`22`,children:[_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-
+dark\":`#D4D4D4`},children:`{`})}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"jsonrpc\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"2.0\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"id\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0550AE`,\"--shiki-
+dark\":`#B5CEA8`},children:`3`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"method\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"tools/call\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"params\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"name\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"weather_current\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"arguments\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"location\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"San Francisco\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"units\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"imperial\"`})]}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+},`})}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"_meta\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:`
+\"io.modelcontextprotocol/protocolVersion\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"2026-07-28\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:`
+\"io.modelcontextprotocol/clientInfo\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"name\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"example-client\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"version\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"1.0.0\"`})]}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+},`})}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:`
+\"io.modelcontextprotocol/clientCapabilities\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"elicitation\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--
+shiki-dark\":`#D4D4D4`},children:`:
+{}`})]}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+}`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+}`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+}`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`}`})}),`\n`]})})}),_jsx(CodeBlock,{filename:`Tool Call
+Response`,numberOfLines:`13`,language:`json`,children:_jsx(_components.pre,{className:`shiki shiki-themes
+github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`json`,children:_jsxs(_components.code,{language:`json`,numberOfLines:`13`,children:[_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-
+dark\":`#D4D4D4`},children:`{`})}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"jsonrpc\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"2.0\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"id\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0550AE`,\"--shiki-
+dark\":`#B5CEA8`},children:`3`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"result\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"resultType\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--
+shiki-dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"complete\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"content\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`:
+[`})]}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+{`})}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"type\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"text\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"text\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"Current weather in San Francisco: 68°F, partly cloudy with light winds from the
+west at 8 mph. Humidity:
+65%\"`})]}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+}`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+]`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+}`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`}`})}),`\n`]})})})]}),_jsx(Heading,{level:`4`,id:`key-elements-of-tool-
+execution`,children:`Key Elements of Tool Execution`}),_jsx(_components.p,{children:`The request structure
+includes several important
+components:`}),_jsxs(_components.ol,{children:[`\n`,_jsxs(_components.li,{children:[`\n`,_jsxs(_components.p,{children:[_jsx(_components.strong,{children:_jsx(_components.code,{children:`name`})}),`:
+Must match exactly the tool name from the discovery response
+(`,_jsx(_components.code,{children:`weather_current`}),`). This ensures the server can correctly identify
+which tool to
+execute.`]}),`\n`]}),`\n`,_jsxs(_components.li,{children:[`\n`,_jsxs(_components.p,{children:[_jsx(_components.strong,{children:_jsx(_components.code,{children:`arguments`})}),`:
+Contains the input parameters as defined by the tool’s `,_jsx(_components.code,{children:`inputSchema`}),`. In
+this
+example:`]}),`\n`,_jsxs(_components.ul,{children:[`\n`,_jsxs(_components.li,{children:[_jsx(_components.code,{children:`location`}),`:
+“San Francisco” (required
+parameter)`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.code,{children:`units`}),`: “imperial”
+(optional parameter, defaults to “metric” if not
+specified)`]}),`\n`]}),`\n`]}),`\n`,_jsxs(_components.li,{children:[`\n`,_jsxs(_components.p,{children:[_jsx(_components.strong,{children:_jsx(_components.code,{children:`_meta`})}),`:
+Carries the standard per-request fields: the protocol version and client capabilities that every MCP request
+must include, plus the client’s identity, which clients should include unless configured not
+to.`]}),`\n`]}),`\n`,_jsxs(_components.li,{children:[`\n`,_jsxs(_components.p,{children:[_jsx(_components.strong,{children:`JSON-
+RPC Structure`}),`: Uses standard JSON-RPC 2.0 format with unique `,_jsx(_components.code,{children:`id`}),`
+for request-response correlation.`]}),`\n`]}),`\n`]}),_jsx(Heading,{level:`4`,id:`understanding-the-tool-
+execution-response`,children:`Understanding the Tool Execution Response`}),_jsx(_components.p,{children:`The
+response demonstrates MCP’s flexible content
+system:`}),_jsxs(_components.ol,{children:[`\n`,_jsxs(_components.li,{children:[`\n`,_jsxs(_components.p,{children:[_jsxs(_components.strong,{children:[_jsx(_components.code,{children:`content`}),`
+Array`]}),`: Tool responses return an array of content objects, allowing for rich, multi-format responses
+(text, images, resources,
+etc.)`]}),`\n`]}),`\n`,_jsxs(_components.li,{children:[`\n`,_jsxs(_components.p,{children:[_jsx(_components.strong,{children:`Content
+Types`}),`: Each content object has a `,_jsx(_components.code,{children:`type`}),` field. In this example,
+`,_jsx(_components.code,{children:`\"type\": \"text\"`}),` indicates plain text content, but MCP supports
+various content types for different use
+cases.`]}),`\n`]}),`\n`,_jsxs(_components.li,{children:[`\n`,_jsxs(_components.p,{children:[_jsx(_components.strong,{children:`Structured
+Output`}),`: The response provides actionable information that the AI application can use as context for
+language model interactions.`]}),`\n`]}),`\n`]}),_jsx(_components.p,{children:`This execution pattern allows
+AI applications to dynamically invoke server functionality and receive structured responses that can be
+integrated into conversations with language models.`}),_jsx(Heading,{level:`4`,id:`how-this-works-in-ai-
+applications-3`,children:`How This Works in AI Applications`}),_jsx(_components.p,{children:`When the language
+model decides to use a tool during a conversation, the AI application intercepts the tool call, routes it to
+the appropriate MCP server, executes it, and returns the results back to the LLM as part of the conversation
+flow. This enables the LLM to access real-time data and perform actions in the external
+world.`}),_jsx(CodeBlock,{filename:``,numberOfLines:`5`,language:`python`,children:_jsx(_components.pre,{className:`shiki
+shiki-themes github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`python`,children:_jsxs(_components.code,{language:`python`,numberOfLines:`5`,children:[_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#6E7781`,\"
+--shiki-dark\":`#6A9955`},children:`# Pseudo-code for AI application tool
+execution`})}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#CF222E`,\"
+--shiki-dark\":`#569CD6`},children:`async`}),_jsx(_components.span,{style:{color:`#CF222E`,\"--shiki-
+dark\":`#569CD6`},children:` def`}),_jsx(_components.span,{style:{color:`#8250DF`,\"--shiki-
+dark\":`#DCDCAA`},children:` handle_tool_call`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`(`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#9CDCFE`},children:`conversation`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`, `}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#9CDCFE`},children:`tool_name`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`, `}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#9CDCFE`},children:`arguments`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`):`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:` client `}),_jsx(_components.span,{style:{color:`#CF222E`,\"--shiki-
+dark\":`#D4D4D4`},children:`=`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`
+app.find_mcp_client_for_tool(tool_name)`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:` result `}),_jsx(_components.span,{style:{color:`#CF222E`,\"--shiki-
+dark\":`#D4D4D4`},children:`=`}),_jsx(_components.span,{style:{color:`#CF222E`,\"--shiki-
+dark\":`#C586C0`},children:` await`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:` client.call_tool(tool_name,
+arguments)`})]}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+conversation.add_tool_result(result.content)`})}),`\n`]})})})]}),_jsxs(Step,{title:`Real-time Updates
+(Notifications)`,children:[_jsx(_components.p,{children:`MCP supports real-time notifications that enable
+servers to inform clients about changes without being polled for them. This demonstrates the notification
+system, a key feature that keeps clients synchronized and
+responsive.`}),_jsx(Heading,{level:`4`,id:`subscribing-to-changes`,children:`Subscribing to
+Changes`}),_jsxs(_components.p,{children:[`Change notifications are opt-in. To receive them, the client opens
+a long-lived notification stream by sending a
+`,_jsx(_components.a,{href:`/specification/2026-07-28/basic/patterns/subscriptions`,children:_jsx(_components.code,{children:`subscriptions/listen`})}),`
+request with a `,_jsx(_components.code,{children:`notifications`}),` filter naming the event types it wants.
+Here the client asks for tool list changes:`]}),_jsx(CodeBlock,{filename:`Listen
+Request`,numberOfLines:`20`,language:`json`,children:_jsx(_components.pre,{className:`shiki shiki-themes
+github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`json`,children:_jsxs(_components.code,{language:`json`,numberOfLines:`20`,children:[_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-
+dark\":`#D4D4D4`},children:`{`})}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"jsonrpc\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"2.0\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"id\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0550AE`,\"--shiki-
+dark\":`#B5CEA8`},children:`4`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"method\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"subscriptions/listen\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--
+shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"params\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"_meta\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:`
+\"io.modelcontextprotocol/protocolVersion\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"2026-07-28\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:`
+\"io.modelcontextprotocol/clientInfo\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"name\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"example-client\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"version\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"1.0.0\"`})]}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+},`})}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:`
+\"io.modelcontextprotocol/clientCapabilities\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"elicitation\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--
+shiki-dark\":`#D4D4D4`},children:`:
+{}`})]}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+}`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+},`})}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"notifications\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--
+shiki-dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"toolsListChanged\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0550AE`,\"--shiki-
+dark\":`#569CD6`},children:`true`})]}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+}`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+}`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`}`})}),`\n`]})})}),_jsxs(_components.p,{children:[`Every client request
+carries the `,_jsx(_components.code,{children:`io.modelcontextprotocol/protocolVersion`}),` and
+`,_jsx(_components.code,{children:`io.modelcontextprotocol/clientCapabilities`}),` fields in
+`,_jsx(_components.code,{children:`_meta`}),`, and normally
+`,_jsx(_components.code,{children:`io.modelcontextprotocol/clientInfo`}),` as well, so the server can identify
+the client without relying on connection state.`]}),_jsxs(_components.p,{children:[`The server acknowledges
+the subscription with `,_jsx(_components.code,{children:`notifications/subscriptions/acknowledged`}),`, which
+is the first message carrying that subscription’s ID in `,_jsx(_components.code,{children:`_meta`}),` (the
+server sends no other notification for that subscription before it). Its
+`,_jsx(_components.code,{children:`notifications`}),` field reflects the subset of the requested filter the
+server agreed to honor, with unsupported notification types
+omitted:`]}),_jsx(CodeBlock,{filename:`Acknowledgment`,numberOfLines:`12`,language:`json`,children:_jsx(_components.pre,{className:`shiki
+shiki-themes github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`json`,children:_jsxs(_components.code,{language:`json`,numberOfLines:`12`,children:[_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-
+dark\":`#D4D4D4`},children:`{`})}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"jsonrpc\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"2.0\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"method\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"notifications/subscriptions/acknowledged\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"params\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"_meta\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:`
+\"io.modelcontextprotocol/subscriptionId\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0550AE`,\"--shiki-
+dark\":`#B5CEA8`},children:`4`})]}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+},`})}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"notifications\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--
+shiki-dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"toolsListChanged\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0550AE`,\"--shiki-
+dark\":`#569CD6`},children:`true`})]}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+}`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+}`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`}`})}),`\n`]})})}),_jsx(Heading,{level:`4`,id:`understanding-tool-list-
+change-notifications`,children:`Understanding Tool List Change
+Notifications`}),_jsx(_components.p,{children:`After the acknowledgment, when the server’s available tools
+change (for example, when new functionality becomes available, existing tools are modified, or tools become
+temporarily unavailable), the server delivers a notification on that
+stream:`}),_jsx(CodeBlock,{filename:`Notification`,numberOfLines:`9`,language:`json`,children:_jsx(_components.pre,{className:`shiki
+shiki-themes github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`json`,children:_jsxs(_components.code,{language:`json`,numberOfLines:`9`,children:[_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-
+dark\":`#D4D4D4`},children:`{`})}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"jsonrpc\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"2.0\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"method\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"notifications/tools/list_changed\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"params\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"_meta\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:`
+\"io.modelcontextprotocol/subscriptionId\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0550AE`,\"--shiki-
+dark\":`#B5CEA8`},children:`4`})]}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+}`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+}`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`}`})}),`\n`]})})}),_jsx(Heading,{level:`4`,id:`key-features-of-mcp-
+notifications`,children:`Key Features of MCP
+Notifications`}),_jsxs(_components.ol,{children:[`\n`,_jsxs(_components.li,{children:[`\n`,_jsxs(_components.p,{children:[_jsx(_components.strong,{children:`No
+Response Required`}),`: Notice there’s no `,_jsx(_components.code,{children:`id`}),` field in the
+notification. This follows JSON-RPC 2.0 notification semantics where no response is expected or
+sent.`]}),`\n`]}),`\n`,_jsxs(_components.li,{children:[`\n`,_jsxs(_components.p,{children:[_jsx(_components.strong,{children:`Opt-
+In Based`}),`: This notification is only sent to clients that requested
+`,_jsx(_components.code,{children:`\"toolsListChanged\": true`}),` in their
+`,_jsx(_components.code,{children:`subscriptions/listen`}),` filter, and it is only available from servers
+that declared `,_jsx(_components.code,{children:`\"listChanged\": true`}),` in their tools capability (as
+shown in Step
+1).`]}),`\n`]}),`\n`,_jsxs(_components.li,{children:[`\n`,_jsxs(_components.p,{children:[_jsx(_components.strong,{children:`Subscription-
+ID Tagging`}),`: Every notification on the stream carries
+`,_jsx(_components.code,{children:`io.modelcontextprotocol/subscriptionId`}),` in
+`,_jsx(_components.code,{children:`_meta`}),`. The value is the JSON-RPC ID of the
+`,_jsx(_components.code,{children:`subscriptions/listen`}),` request that opened the stream
+(`,_jsx(_components.code,{children:`4`}),` in this example), so clients can correlate each notification with
+the subscription that produced
+it.`]}),`\n`]}),`\n`,_jsxs(_components.li,{children:[`\n`,_jsxs(_components.p,{children:[_jsx(_components.strong,{children:`Event-
+Driven`}),`: The server decides when to send notifications based on internal state changes, making MCP
+connections dynamic and
+responsive.`]}),`\n`]}),`\n`,_jsxs(_components.li,{children:[`\n`,_jsxs(_components.p,{children:[_jsx(_components.strong,{children:`Best
+Effort`}),`: There are no guarantees that every notification will be sent or received, particularly across
+transport reconnects. Clients should also rely on polling to preserve freshness of
+results.`]}),`\n`]}),`\n`]}),_jsx(Heading,{level:`4`,id:`client-response-to-notifications`,children:`Client
+Response to Notifications`}),_jsx(_components.p,{children:`Upon receiving this notification, the client
+typically reacts by requesting the updated tool list. This creates a refresh cycle that keeps the client’s
+understanding of available tools
+current:`}),_jsx(CodeBlock,{filename:`Request`,numberOfLines:`17`,language:`json`,children:_jsx(_components.pre,{className:`shiki
+shiki-themes github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`json`,children:_jsxs(_components.code,{language:`json`,numberOfLines:`17`,children:[_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-
+dark\":`#D4D4D4`},children:`{`})}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"jsonrpc\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"2.0\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"id\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0550AE`,\"--shiki-
+dark\":`#B5CEA8`},children:`5`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"method\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"tools/list\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"params\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"_meta\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:`
+\"io.modelcontextprotocol/protocolVersion\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"2026-07-28\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:`
+\"io.modelcontextprotocol/clientInfo\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"name\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"example-client\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`,`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"version\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`: `}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-
+dark\":`#CE9178`},children:`\"1.0.0\"`})]}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+},`})}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:`
+\"io.modelcontextprotocol/clientCapabilities\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`:
+{`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#116329`,\"
+--shiki-dark\":`#9CDCFE`},children:` \"elicitation\"`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--
+shiki-dark\":`#D4D4D4`},children:`:
+{}`})]}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+}`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+}`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+}`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`}`})}),`\n`]})})}),_jsx(Heading,{level:`4`,id:`why-notifications-
+matter`,children:`Why Notifications Matter`}),_jsx(_components.p,{children:`This notification system is
+crucial for several
+reasons:`}),_jsxs(_components.ol,{children:[`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Dynamic
+Environments`}),`: Tools may come and go based on server state, external dependencies, or user
+permissions`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Efficiency`}),`:
+Clients don’t need to poll for changes; they’re notified when updates
+occur`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Consistency`}),`: Ensures
+clients always have accurate information about available server
+capabilities`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Real-time
+Collaboration`}),`: Enables responsive AI applications that can adapt to changing
+contexts`]}),`\n`]}),_jsx(_components.p,{children:`This notification pattern extends beyond tools to other MCP
+primitives, enabling comprehensive real-time synchronization between clients and
+servers.`}),_jsx(Heading,{level:`4`,id:`how-this-works-in-ai-applications-4`,children:`How This Works in AI
+Applications`}),_jsx(_components.p,{children:`The AI application keeps a notification stream open for the
+changes it cares about. When one arrives, it immediately refreshes its tool registry and updates the LLM’s
+available capabilities. This ensures that ongoing conversations always have access to the most current set of
+tools, and the LLM can dynamically adapt to new functionality as it becomes
+available.`}),_jsx(CodeBlock,{filename:``,numberOfLines:`8`,language:`python`,children:_jsx(_components.pre,{className:`shiki
+shiki-themes github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-
+bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-
+dark\":`#D4D4D4`},language:`python`,children:_jsxs(_components.code,{language:`python`,numberOfLines:`8`,children:[_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#6E7781`,\"
+--shiki-dark\":`#6A9955`},children:`# Pseudo-code for AI application notification
+handling`})}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#CF222E`,\"
+--shiki-dark\":`#569CD6`},children:`async`}),_jsx(_components.span,{style:{color:`#CF222E`,\"--shiki-
+dark\":`#569CD6`},children:` def`}),_jsx(_components.span,{style:{color:`#8250DF`,\"--shiki-
+dark\":`#DCDCAA`},children:` follow_tool_changes`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`(`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#9CDCFE`},children:`client`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`):`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#CF222E`,\"
+--shiki-dark\":`#C586C0`},children:` async`}),_jsx(_components.span,{style:{color:`#CF222E`,\"--shiki-
+dark\":`#C586C0`},children:` with`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:` client.listen(`}),_jsx(_components.span,{style:{color:`#953800`,\"--shiki-
+dark\":`#9CDCFE`},children:`tools_list_changed`}),_jsx(_components.span,{style:{color:`#CF222E`,\"--shiki-
+dark\":`#D4D4D4`},children:`=`}),_jsx(_components.span,{style:{color:`#0550AE`,\"--shiki-
+dark\":`#569CD6`},children:`True`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`) `}),_jsx(_components.span,{style:{color:`#CF222E`,\"--shiki-
+dark\":`#C586C0`},children:`as`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`
+sub:`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#CF222E`,\"
+--shiki-dark\":`#C586C0`},children:` async`}),_jsx(_components.span,{style:{color:`#CF222E`,\"--shiki-
+dark\":`#C586C0`},children:` for`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:` _event `}),_jsx(_components.span,{style:{color:`#CF222E`,\"--shiki-
+dark\":`#C586C0`},children:`in`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`
+sub:`})]}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:` tools_response `}),_jsx(_components.span,{style:{color:`#CF222E`,\"--
+shiki-dark\":`#D4D4D4`},children:`=`}),_jsx(_components.span,{style:{color:`#CF222E`,\"--shiki-
+dark\":`#C586C0`},children:` await`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`
+client.list_tools()`})]}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:` app.update_available_tools(client,
+tools_response.tools)`})}),`\n`,_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#CF222E`,\"
+--shiki-dark\":`#C586C0`},children:` if`}),_jsx(_components.span,{style:{color:`#1F2328`,\"--shiki-
+dark\":`#D4D4D4`},children:`
+app.conversation.is_active():`})]}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{style:{color:`#1F2328`,\"
+--shiki-dark\":`#D4D4D4`},children:`
+app.conversation.notify_llm_of_new_capabilities()`})}),`\n`]})})})]})]})]})}function
+MDXContent(props={}){const{wrapper:MDXLayout}={..._provideComponents(),...props.components};return
+MDXLayout?_jsx(MDXLayout,{...props,children:_jsx(_createMdxContent,{...props})}):_createMdxContent(props)}return{default:MDXContent};function
+_missingMdxReference(id,component){throw new Error(`Expected `+(component?`component`:`object`)+\" `\"+id+\"`
+to be defined: you likely forgot to import, pass, or provide
+it.\")}","frontmatter":{},"scope":{"config":{},"pageMetadata":{"title":"Architecture
+overview","sidebarTitle":"Architecture","type":"docs","description":null,"href":"/docs/2026-07-28/learn/architecture"}}},"mdxSourceWithNoJs":null},"mdxExtracts":{"tableOfContents":[{"title":"Scope","slug":"scope","depth":2,"children":[]},{"title":"Concepts
+of MCP","slug":"concepts-of-
+mcp","depth":2,"children":[{"title":"Participants","slug":"participants","depth":3,"children":[]},{"title":"Layers","slug":"layers","depth":3,"children":[]},{"title":"Data
+layer","slug":"data-layer","depth":4,"children":[]},{"title":"Transport layer","slug":"transport-
+layer","depth":4,"children":[]},{"title":"Data Layer Protocol","slug":"data-layer-
+protocol","depth":3,"children":[]},{"title":"Statelessness and discovery","slug":"statelessness-and-
+discovery","depth":4,"children":[]},{"title":"Primitives","slug":"primitives","depth":4,"children":[]},{"title":"Notifications","slug":"notifications","depth":4,"children":[]}]},{"title":"Example","slug":"example","depth":2,"children":[{"title":"Data
+Layer","slug":"data-layer-2","depth":3,"children":[]},{"title":"Understanding the Discovery
+Exchange","slug":"understanding-the-discovery-exchange","depth":4,"children":[]},{"title":"How This Works in
+AI Applications","slug":"how-this-works-in-ai-applications","depth":4,"children":[]},{"title":"Understanding
+the Tool Discovery Request","slug":"understanding-the-tool-discovery-
+request","depth":4,"children":[]},{"title":"Understanding the Tool Discovery Response","slug":"understanding-
+the-tool-discovery-response","depth":4,"children":[]},{"title":"How This Works in AI
+Applications","slug":"how-this-works-in-ai-applications-2","depth":4,"children":[]},{"title":"Understanding
+the Tool Execution Request","slug":"understanding-the-tool-execution-
+request","depth":4,"children":[]},{"title":"Key Elements of Tool Execution","slug":"key-elements-of-tool-
+execution","depth":4,"children":[]},{"title":"Understanding the Tool Execution
+Response","slug":"understanding-the-tool-execution-response","depth":4,"children":[]},{"title":"How This Works
+in AI Applications","slug":"how-this-works-in-ai-
+applications-3","depth":4,"children":[]},{"title":"Subscribing to Changes","slug":"subscribing-to-
+changes","depth":4,"children":[]},{"title":"Understanding Tool List Change
+Notifications","slug":"understanding-tool-list-change-notifications","depth":4,"children":[]},{"title":"Key
+Features of MCP Notifications","slug":"key-features-of-mcp-
+notifications","depth":4,"children":[]},{"title":"Client Response to Notifications","slug":"client-response-
+to-notifications","depth":4,"children":[]},{"title":"Why Notifications Matter","slug":"why-notifications-
+matter","depth":4,"children":[]},{"title":"How This Works in AI Applications","slug":"how-this-works-in-ai-
+applications-4","depth":4,"children":[]}]}],"codeExamples":{}},"jsLinks":["/_mintlify/custom/mcp/e091f6927e8ff316/footer.js","/_mintlify/custom/mcp/539ab9218716af9b/version-
+warning.js"],"subdomain":"mcp","siteName":"Model Context Protocol","title":"Architecture overview - Model
+Context Protocol","navMaps":{"firstHrefInVersion":{"Version 2026-07-28
+(latest)":{"href":"/docs/2026-07-28/learn/architecture","matchLevel":0},"Version
+2025-11-25":{"href":"/docs/2025-11-25/learn/architecture","matchLevel":1},"Version
+2025-06-18":{"href":"/docs/2025-06-18/learn/architecture","matchLevel":1},"Version
+2025-03-26":{"href":"/docs/2025-03-26/learn/architecture","matchLevel":1},"Version
+2024-11-05":{"href":"/docs/2024-11-05/learn/architecture","matchLevel":1},"Draft":{"href":"/docs/draft/learn/architecture","matchLevel":1}},"firstHrefInLanguage":{}},"lastModified":"2026-10-28T15:57:22.318Z","originalFileLocation":"docs/2026-07-28/learn/architecture.mdx"},"headHtml":"\u003cscript
+data-mint-head>(function(){var
+d=document.documentElement,p=null;if(!p){try{p=localStorage.getItem(\"isDarkMode\")}catch(e){}if(p==='true')p='dark';else
+if(p==='false')p='light';if(p!=='light'\u0026\u0026p!=='dark'\u0026\u0026p!=='system')p=\"system\"}var
+r=p==='system'?(matchMedia(\"(prefers-color-scheme:
+dark)\").matches?'dark':'light'):p;d.classList.remove(r==='dark'?'light':'dark');d.classList.add(r);d.setAttribute(\"data-
+theme-preference\",p)})();\u003c/script>\u003cmeta data-mint-head name=\"application-name\" content=\"Model
+Context Protocol\">\u003cmeta data-mint-head name=\"generator\" content=\"Mintlify\">\u003clink data-mint-head
+rel=\"icon\" type=\"image/png\" sizes=\"192x192\" href=\"/mintlify-assets/_mintlify/favicons/mcp/ebiVJzri-
+bsiCfVZ/_generated/favicon/android-chrome-192x192.png\" media=\"(prefers-color-scheme: light)\">\u003clink
+data-mint-head rel=\"apple-touch-icon\" type=\"image/png\" sizes=\"180x180\" href=\"/mintlify-
+assets/_mintlify/favicons/mcp/ebiVJzri-bsiCfVZ/_generated/favicon/apple-touch-icon.png\">\u003clink data-mint-
+head rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/mintlify-assets/_mintlify/favicons/mcp/ebiVJzri-
+bsiCfVZ/_generated/favicon/favicon-16x16.png\" media=\"(prefers-color-scheme: light)\">\u003clink data-mint-
+head rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/mintlify-assets/_mintlify/favicons/mcp/ebiVJzri-
+bsiCfVZ/_generated/favicon/favicon-32x32.png\" media=\"(prefers-color-scheme: light)\">\u003clink data-mint-
+head rel=\"shortcut icon\" type=\"image/x-icon\" href=\"/mintlify-assets/_mintlify/favicons/mcp/ebiVJzri-
+bsiCfVZ/_generated/favicon/favicon.ico\" media=\"(prefers-color-scheme: light)\">\u003clink data-mint-head
+rel=\"icon\" type=\"image/png\" sizes=\"192x192\" href=\"/mintlify-assets/_mintlify/favicons/mcp/ebiVJzri-
+bsiCfVZ/_generated/favicon-dark/android-chrome-192x192.png\" media=\"(prefers-color-scheme: dark)\">\u003clink
+data-mint-head rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/mintlify-
+assets/_mintlify/favicons/mcp/ebiVJzri-bsiCfVZ/_generated/favicon-dark/favicon-16x16.png\" media=\"(prefers-
+color-scheme: dark)\">\u003clink data-mint-head rel=\"icon\" type=\"image/png\" sizes=\"32x32\"
+href=\"/mintlify-assets/_mintlify/favicons/mcp/ebiVJzri-bsiCfVZ/_generated/favicon-dark/favicon-32x32.png\"
+media=\"(prefers-color-scheme: dark)\">\u003clink data-mint-head rel=\"shortcut icon\" type=\"image/x-icon\"
+href=\"/mintlify-assets/_mintlify/favicons/mcp/ebiVJzri-bsiCfVZ/_generated/favicon-dark/favicon.ico\"
+media=\"(prefers-color-scheme: dark)\">\u003cmeta data-mint-head property=\"og:title\" content=\"Architecture
+overview - Model Context Protocol\">\u003cmeta data-mint-head property=\"og:site_name\" content=\"Model
+Context Protocol\">\u003cmeta data-mint-head property=\"og:url\"
+content=\"https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture\">\u003cmeta data-mint-head
+property=\"og:type\" content=\"website\">\u003cmeta data-mint-head property=\"og:image\"
+content=\"https://raw.githubusercontent.com/modelcontextprotocol/docs/2eb6171ddbfeefde349dc3b8d5e2b87414c26250/images/og-
+image.png\">\u003cmeta data-mint-head property=\"og:image:width\" content=\"1200\">\u003cmeta data-mint-head
+property=\"og:image:height\" content=\"630\">\u003cmeta data-mint-head name=\"twitter:card\"
+content=\"summary_large_image\">\u003cmeta data-mint-head name=\"twitter:title\" content=\"Architecture
+overview - Model Context Protocol\">\u003cmeta data-mint-head name=\"twitter:image\"
+content=\"https://raw.githubusercontent.com/modelcontextprotocol/docs/2eb6171ddbfeefde349dc3b8d5e2b87414c26250/images/og-
+image.png\">\u003cmeta data-mint-head name=\"twitter:image:width\" content=\"1200\">\u003cmeta data-mint-head
+name=\"twitter:image:height\" content=\"630\">\u003cmeta data-mint-head name=\"msapplication-config\"
+content=\"/mintlify-assets/_mintlify/favicons/mcp/ebiVJzri-
+bsiCfVZ/_generated/favicon/browserconfig.xml\">\u003cmeta data-mint-head name=\"apple-mobile-web-app-title\"
+content=\"Model Context Protocol\">\u003cmeta data-mint-head name=\"msapplication-TileColor\"
+content=\"#09090b\">\u003clink data-mint-head rel=\"canonical\"
+href=\"https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture\">\u003clink data-mint-head
+rel=\"alternate\" type=\"application/xml\" href=\"/sitemap.xml\">\u003clink data-mint-head rel=\"alternate\"
+type=\"text/markdown\" href=\"/docs/2026-07-28/learn/architecture.md\">\u003cscript data-mint-head
+type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Organization\",\"@id\":\"https://modelcontextprotocol.io/#organization\",\"name\":\"Model
+Context
+Protocol\",\"url\":\"https://modelcontextprotocol.io\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://mintcdn.com/mcp/2BMHnlNW5OqOohXZ/logo/light.svg?fit=max\u0026auto=format\u0026n=2BMHnlNW5OqOohXZ\u0026q=85\u0026s=a5ac61ce77858fb1ddaf6de761c39499\"}},{\"@type\":\"WebSite\",\"@id\":\"https://modelcontextprotocol.io#website\",\"name\":\"Model
+Context
+Protocol\",\"url\":\"https://modelcontextprotocol.io\",\"publisher\":{\"@id\":\"https://modelcontextprotocol.io/#organization\"}},{\"@type\":\"WebPage\",\"@id\":\"https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture#webpage\",\"url\":\"https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture\",\"name\":\"Architecture
+overview\",\"dateModified\":\"2026-10-28T15:57:22.318Z\",\"isPartOf\":{\"@id\":\"https://modelcontextprotocol.io#website\"},\"breadcrumb\":{\"@id\":\"https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture#breadcrumb\"}},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Model
+Context
+Protocol\",\"item\":\"https://modelcontextprotocol.io\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Architecture
+overview\",\"item\":\"https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture\"}]},{\"@type\":[\"Article\",\"TechArticle\"],\"@id\":\"https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture#article\",\"headline\":\"Architecture
+overview\",\"name\":\"Architecture
+overview\",\"url\":\"https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture\",\"mainEntityOfPage\":{\"@id\":\"https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture#webpage\"},\"image\":\"https://raw.githubusercontent.com/modelcontextprotocol/docs/2eb6171ddbfeefde349dc3b8d5e2b87414c26250/images/og-
+image.png\",\"dateModified\":\"2026-10-28T15:57:22.318Z\",\"publisher\":{\"@id\":\"https://modelcontextprotocol.io/#organization\"},\"isPartOf\":{\"@id\":\"https://modelcontextprotocol.io#website\"}}]}\u003c/script>","siteName":"Model
+Context Protocol","nav":{"global":null,"tabs":[{"tab":"Documentation","versions":[{"version":"Version
+2026-07-28 (latest)","default":true,"pages":[{"group":"Get started","pages":[{"title":"What is the Model
+Context Protocol (MCP)?","sidebarTitle":"What is MCP?","description":null,"href":"/docs/2026-07-28/getting-
+started/intro"}]},{"group":"About MCP","pages":[{"title":"Architecture
+overview","sidebarTitle":"Architecture","href":"/docs/2026-07-28/learn/architecture"},{"title":"Understanding
+MCP servers","sidebarTitle":"Servers","description":null,"href":"/docs/2026-07-28/learn/server-
+concepts"},{"title":"Understanding MCP
+clients","sidebarTitle":"Clients","href":"/docs/2026-07-28/learn/client-
+concepts"},{"title":"Versioning","href":"/docs/2026-07-28/learn/versioning"}]},{"group":"Develop with
+MCP","pages":[{"title":"Connect to local MCP servers","href":"/docs/2026-07-28/develop/connect-local-
+servers"},{"title":"Connect to remote MCP Servers","href":"/docs/2026-07-28/develop/connect-remote-
+servers"},{"title":"Build with Agent Skills","href":"/docs/2026-07-28/develop/build-with-agent-
+skills"},{"title":"Build an MCP server","href":"/docs/2026-07-28/develop/build-
+server"},{"group":"Clients","pages":[{"title":"Build an MCP client","href":"/docs/2026-07-28/develop/build-
+client"},{"title":"Client Best Practices","href":"/docs/2026-07-28/develop/clients/client-best-
+practices"}]},{"title":"SDKs","href":"/docs/2026-07-28/sdk"},{"group":"Security","pages":[{"title":"Understanding
+Authorization in MCP","href":"/docs/2026-07-28/tutorials/security/authorization"},{"title":"Security Best
+Practices","href":"/docs/2026-07-28/tutorials/security/security_best_practices"},{"title":"Local Server
+Security","href":"/docs/2026-07-28/tutorials/security/local-server-security"}]}]},{"group":"Developer
+tools","pages":[{"group":"Inspector","pages":[{"title":"MCP
+Inspector","href":"/docs/2026-07-28/tools/inspector"},{"title":"Web
+client","href":"/docs/2026-07-28/tools/inspector/web"},{"title":"CLI
+client","href":"/docs/2026-07-28/tools/inspector/cli"},{"title":"TUI
+client","href":"/docs/2026-07-28/tools/inspector/tui"},{"title":"mcpdo connection
+client","href":"/docs/2026-07-28/tools/inspector/mcpdo"},{"title":"Configuration and
+flags","href":"/docs/2026-07-28/tools/inspector/configuration"},{"title":"Authorization","href":"/docs/2026-07-28/tools/inspector/authorization"},{"title":"Protocol
+eras","href":"/docs/2026-07-28/tools/inspector/protocol-
+eras"},{"title":"Recipes","href":"/docs/2026-07-28/tools/inspector/recipes"},{"title":"Security","href":"/docs/2026-07-28/tools/inspector/security"}]},{"title":"Debugging","href":"/docs/2026-07-28/tools/debugging"}]},{"group":"Examples","pages":[{"title":"Example
+Servers","href":"/examples"}]}]},{"version":"Version 2025-11-25","pages":[{"title":"Version
+2025-11-25","href":"/docs/2025-11-25/learn/architecture"}]},{"version":"Version
+2025-06-18","pages":[{"title":"Version
+2025-06-18","href":"/docs/2025-06-18/learn/architecture"}]},{"version":"Version
+2025-03-26","pages":[{"title":"Version
+2025-03-26","href":"/docs/2025-03-26/learn/architecture"}]},{"version":"Version
+2024-11-05","pages":[{"title":"Version
+2024-11-05","href":"/docs/2024-11-05/learn/architecture"}]},{"version":"Draft","pages":[{"title":"Draft","href":"/docs/draft/learn/architecture"}]}]},{"tab":"Specification","versions":[{"version":"Version
+2026-07-28
+(latest)","default":true,"pages":[{"title":"Specification","href":"/specification/2026-07-28"},{"title":"Key
+Changes","href":"/specification/2026-07-28/changelog"},{"title":"Deprecated
+Features","href":"/specification/2026-07-28/deprecated"},{"title":"Architecture","href":"/specification/2026-07-28/architecture/index"},{"group":"Base
+Protocol","pages":[{"title":"Overview","href":"/specification/2026-07-28/basic/index"},{"title":"Versioning
+and Compatibility","href":"/specification/2026-07-28/basic/versioning"},{"group":"Message
+Patterns","pages":[{"title":"Overview","href":"/specification/2026-07-28/basic/patterns/index"},{"title":"Multi
+Round-Trip
+Requests","href":"/specification/2026-07-28/basic/patterns/mrtr"},{"title":"Subscriptions","href":"/specification/2026-07-28/basic/patterns/subscriptions"},{"title":"Cancellation","href":"/specification/2026-07-28/basic/patterns/cancellation"},{"title":"Progress","href":"/specification/2026-07-28/basic/patterns/progress"}]},{"group":"Transports","pages":[{"title":"Overview","href":"/specification/2026-07-28/basic/transports/index"},{"title":"stdio","href":"/specification/2026-07-28/basic/transports/stdio"},{"title":"Streamable
+HTTP","href":"/specification/2026-07-28/basic/transports/streamable-
+http"}]},{"group":"Authorization","pages":[{"title":"Authorization","sidebarTitle":"Overview","href":"/specification/2026-07-28/basic/authorization/index"},{"title":"Authorization
+Server Discovery","href":"/specification/2026-07-28/basic/authorization/authorization-server-
+discovery"},{"title":"Client Registration","href":"/specification/2026-07-28/basic/authorization/client-
+registration"},{"title":"Authorization Security Considerations","sidebarTitle":"Security
+Considerations","href":"/specification/2026-07-28/basic/authorization/security-
+considerations"}]}]},{"group":"Client
+Features","pages":[{"title":"Roots","href":"/specification/2026-07-28/client/roots"},{"title":"Sampling","href":"/specification/2026-07-28/client/sampling"},{"title":"Elicitation","href":"/specification/2026-07-28/client/elicitation"}]},{"group":"Server
+Features","pages":[{"title":"Overview","href":"/specification/2026-07-28/server/index"},{"title":"Discovery","href":"/specification/2026-07-28/server/discover"},{"title":"Prompts","href":"/specification/2026-07-28/server/prompts"},{"title":"Resources","href":"/specification/2026-07-28/server/resources"},{"title":"Tools","href":"/specification/2026-07-28/server/tools"},{"group":"Utilities","pages":[{"title":"Caching","href":"/specification/2026-07-28/server/utilities/caching"},{"title":"Completion","href":"/specification/2026-07-28/server/utilities/completion"},{"title":"Logging","href":"/specification/2026-07-28/server/utilities/logging"},{"title":"Pagination","href":"/specification/2026-07-28/server/utilities/pagination"}]}]},{"title":"Schema
+Reference","href":"/specification/2026-07-28/schema"}]},{"version":"Version
+2025-11-25","pages":[{"title":"Version 2025-11-25","href":"/specification/2025-11-25"}]},{"version":"Version
+2025-06-18","pages":[{"title":"Version 2025-06-18","href":"/specification/2025-06-18"}]},{"version":"Version
+2025-03-26","pages":[{"title":"Version 2025-03-26","href":"/specification/2025-03-26"}]},{"version":"Version
+2024-11-05","pages":[{"title":"Version
+2024-11-05","href":"/specification/2024-11-05"}]},{"version":"Draft","pages":[{"title":"Draft","href":"/specification/draft"}]}]},{"tab":"Extensions","pages":[{"title":"Extensions","href":"/extensions/overview"}]},{"tab":"Registry","pages":[{"title":"Registry","href":"/registry/about"}]},{"tab":"SEPs","pages":[{"title":"SEPs","href":"/seps"}]},{"tab":"Community","pages":[{"title":"Community","href":"/community/contributing"}]}]},"title":"Architecture
+overview - Model Context
+Protocol","buildId":"dpl_2xiSHD9XEvLsPGPcfoMtkLTB3dy9","deploymentId":"dpl_2xiSHD9XEvLsPGPcfoMtkLTB3dy9","dynamics":[],"chunks":[]}
+

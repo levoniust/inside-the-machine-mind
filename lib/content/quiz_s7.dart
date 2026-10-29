@@ -74,4 +74,16 @@ const quizS7 = <QuizQuestion>[
     0,
     'The same 25 checked questions showed which changes really helped (0.80 → 0.91 with curated notes) and which cost nothing (0.89 at a third of the time).',
   ),
+  QuizQuestion(
+    'When a chatbot uses a weather tool, who actually fetches the weather?',
+    ['The weather is stored inside the model\'s weights', 'The user\'s phone guesses it', 'The model connects to the internet by itself', 'The model writes a structured call; the app runs the tool and sends the result back as text'],
+    3,
+    'The model stops with a tool call (Claude\'s API calls it tool_use); the app runs the code and returns a tool_result, which the model reads before answering.',
+  ),
+  QuizQuestion(
+    'What does MCP standardize?',
+    ['How AI apps connect to tool servers: one plug shape for tools, resources and prompts', 'How GPUs talk to each other', 'The size of a context window', 'How models are trained'],
+    0,
+    'MCP is a JSON-RPC protocol: the host app keeps one client per server and uses tools/list and tools/call, so a tool server written once works in any MCP app.',
+  ),
 ];

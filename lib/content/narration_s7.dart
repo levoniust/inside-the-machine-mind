@@ -50,4 +50,12 @@ const narrationS7 = <String, LessonText>{
     ],
     keyIdea: 'A notes helper is search plus a model, and the slow or wrong parts are usually in the search, so measure with a fixed set of test questions before and after every change.',
   ),
+  'l_tools_mcp': LessonText(
+    intro: [
+      'When a chatbot "checks the weather", it never touches the internet itself. It writes a small block of JSON, stops, and lets the app do the work. Let\'s open that up.',
+      'Step through one real round trip: the tool menu the [[model]] sees, the call it writes, the result that comes back. Then meet [[MCP]], the shared plug that lets any app use any tool server.',
+      'Then write the calls yourself. Pick the right tool and arguments for five requests; a wrong one shows you exactly the error the model would get back.',
+    ],
+    keyIdea: 'Tools work because the model writes a structured request and the app runs it, so clear tool descriptions, strict argument schemas and a human check on risky actions matter more than the model\'s size.',
+  ),
 };
