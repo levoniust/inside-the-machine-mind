@@ -104,6 +104,7 @@ import 's11/e_thinking.dart';
 import 's11/e_memory.dart';
 import 's11/e_voice.dart';
 import 's11/e_energy.dart';
+import 's11/e_pictures.dart';
 
 /// Lesson id → screen. Add one line per finished lesson screen (keep the list in journey order).
 final Map<String, WidgetBuilder> screenBuilders = {
@@ -206,4 +207,5 @@ final Map<String, WidgetBuilder> screenBuilders = {
   'e_memory': (_) => const EMemoryScreen(),
   'e_voice': (_) => const EVoiceScreen(),
   'e_energy': (_) => const EEnergyScreen(),
+  'e_pictures': (_) => const EPicturesScreen(),
 };

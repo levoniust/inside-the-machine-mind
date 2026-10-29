@@ -1,0 +1,441 @@
+SOURCE COPY — SRC-SYNTHID-IMG
+Retrieved 2026-10-28 for Inside the Machine Mind (offline reference copy; excerpt of the original, formatting simplified).
+Original URL: https://deepmind.google/blog/identifying-ai-generated-images-with-synthid/
+Page/document title: Identifying AI-generated images with SynthID — Google DeepMind
+
+------------------------------------------------------------------------
+
+Skip to main content
+
+## Explore our next generation AI systems
+
+[ Explore models ](/models/)
+
+Gemini
+
+[ GeminiBuild intelligent agents ](https://deepmind.google/models/gemini/)[ Gemini OmniCreate anything from
+anything ](https://deepmind.google/models/gemini-omni/)[ Nano BananaCreate and edit detailed images
+](https://deepmind.google/models/gemini-image/)[ Gemini AudioTalk, create and control audio
+](https://deepmind.google/models/gemini-audio/)
+
+Specialized models
+
+[ VeoGenerate cinematic video with audio ](https://deepmind.google/models/veo/)[ LyriaGenerate high fidelity
+music and audio ](https://deepmind.google/models/lyria/)[ Genie 4Generate and explore interactive worlds
+](https://deepmind.google/models/genie/)[ Gemini RoboticsPerceive, reason, use tools and interact
+](https://deepmind.google/models/gemini-robotics/)
+
+Open models
+
+[ GemmaBuild responsible AI applications at scale ](https://deepmind.google/models/gemma/)
+
+## Our latest AI breakthroughs and updates from the lab
+
+[ Explore research ](/research/)
+
+Breakthroughs
+
+[ SIMA 2An agent that plays, reasons, and learns with you ](https://deepmind.google/blog/sima-2-an-agent-that-
+plays-reasons-and-learns-with-you-in-virtual-3d-worlds/)[ Genie 4Generate and explore interactive worlds
+](https://deepmind.google/models/genie/)[ AlphaGoMastering the game of Go
+](https://deepmind.google/research/alphago/)[ Gemini RoboticsPerceive, reason, use tools and interact
+](https://deepmind.google/models/gemini-robotics/)
+
+Learn more
+
+[ Evals ](https://deepmind.google/research/evals/)[ Publications
+](https://deepmind.google/research/publications/)[ Responsibility ](https://deepmind.google/responsibility-
+and-safety/)[ Frontier safety ](https://deepmind.google/frontier-safety/)
+
+## Unlocking a new era of discovery with AI
+
+[ Explore science ](/science/)
+
+Breakthroughs
+
+[ AlphaFoldPredict protein structures with high accuracy ](https://deepmind.google/science/alphafold/)[
+AlphaGenomeUsing AI to understand the human genome ](https://deepmind.google/science/alphagenome/)[
+WeatherNextFast and accurate AI weather forecasting ](https://deepmind.google/science/weathernext/)[
+AlphaEarthMap our planet in unprecedented detail ](https://deepmind.google/blog/alphaearth-foundations-helps-
+map-our-planet-in-unprecedented-detail/)[ AlphaEvolveDesign advanced algorithms for math and applications in
+computing ](https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-
+algorithms/)
+
+Learn more
+
+[ Gemini for Science ](https://ai.google/gemini-for-
+science?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=)[ Experimental Tools
+](https://labs.google/science?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=)[
+Science on Antigravity ](https://antigravity.google/use-
+cases/science?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=)
+
+## Our mission is to build AI responsibly to benefit humanity
+
+[ About Google DeepMind ](/about/)
+
+[ ResponsibilityEnsuring AI safety through proactive security, even against evolving threats
+](https://deepmind.google/responsibility-and-safety/)[ NewsDiscover our latest AI breakthroughs, projects, and
+updates ](https://deepmind.google/blog/)[ CareersWe’re looking for people who want to make a real, positive
+impact on the world ](https://deepmind.google/careers/)
+
+Learn more
+
+[ Education ](https://deepmind.google/education/)[ Our National Partnerships for AI
+](https://deepmind.google/national-partnerships-for-ai/)[ Accelerator programs
+](https://deepmind.google/accelerators/)[ The Podcast ](https://deepmind.google/the-podcast/)[ DeepMind
+Institute ](https://institute.deepmind.com/)
+
+Models
+
+## Explore our next generation AI systems
+
+[ Explore models ](/models/)
+
+Gemini
+
+[ GeminiBuild intelligent agents ](https://deepmind.google/models/gemini/)[ Gemini OmniCreate anything from
+anything ](https://deepmind.google/models/gemini-omni/)[ Nano BananaCreate and edit detailed images
+](https://deepmind.google/models/gemini-image/)[ Gemini AudioTalk, create and control audio
+](https://deepmind.google/models/gemini-audio/)
+
+Specialized models
+
+[ VeoGenerate cinematic video with audio ](https://deepmind.google/models/veo/)[ LyriaGenerate high fidelity
+music and audio ](https://deepmind.google/models/lyria/)[ Genie 4Generate and explore interactive worlds
+](https://deepmind.google/models/genie/)[ Gemini RoboticsPerceive, reason, use tools and interact
+](https://deepmind.google/models/gemini-robotics/)
+
+Open models
+
+[ GemmaBuild responsible AI applications at scale ](https://deepmind.google/models/gemma/)
+
+Research
+
+## Our latest AI breakthroughs and updates from the lab
+
+[ Explore research ](/research/)
+
+Breakthroughs
+
+[ SIMA 2An agent that plays, reasons, and learns with you ](https://deepmind.google/blog/sima-2-an-agent-that-
+plays-reasons-and-learns-with-you-in-virtual-3d-worlds/)[ Genie 4Generate and explore interactive worlds
+](https://deepmind.google/models/genie/)[ AlphaGoMastering the game of Go
+](https://deepmind.google/research/alphago/)[ Gemini RoboticsPerceive, reason, use tools and interact
+](https://deepmind.google/models/gemini-robotics/)
+
+Learn more
+
+[ Evals ](https://deepmind.google/research/evals/)[ Publications
+](https://deepmind.google/research/publications/)[ Responsibility ](https://deepmind.google/responsibility-
+and-safety/)[ Frontier safety ](https://deepmind.google/frontier-safety/)
+
+Science
+
+## Unlocking a new era of discovery with AI
+
+[ Explore science ](/science/)
+
+Breakthroughs
+
+[ AlphaFoldPredict protein structures with high accuracy ](https://deepmind.google/science/alphafold/)[
+AlphaGenomeUsing AI to understand the human genome ](https://deepmind.google/science/alphagenome/)[
+WeatherNextFast and accurate AI weather forecasting ](https://deepmind.google/science/weathernext/)[
+AlphaEarthMap our planet in unprecedented detail ](https://deepmind.google/blog/alphaearth-foundations-helps-
+map-our-planet-in-unprecedented-detail/)[ AlphaEvolveDesign advanced algorithms for math and applications in
+computing ](https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-
+algorithms/)
+
+Learn more
+
+[ Gemini for Science ](https://ai.google/gemini-for-
+science?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=)[ Experimental Tools
+](https://labs.google/science?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=)[
+Science on Antigravity ](https://antigravity.google/use-
+cases/science?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=)
+
+About
+
+## Our mission is to build AI responsibly to benefit humanity
+
+[ About Google DeepMind ](/about/)
+
+Learn more
+
+[ Education ](https://deepmind.google/education/)[ Our National Partnerships for AI
+](https://deepmind.google/national-partnerships-for-ai/)[ Accelerator programs
+](https://deepmind.google/accelerators/)[ The Podcast ](https://deepmind.google/the-podcast/)[ DeepMind
+Institute ](https://institute.deepmind.com/)
+
+[ ResponsibilityEnsuring AI safety through proactive security, even against evolving threats
+](https://deepmind.google/responsibility-and-safety/)[ NewsDiscover our latest AI breakthroughs, projects, and
+updates ](https://deepmind.google/blog/)[ CareersWe’re looking for people who want to make a real, positive
+impact on the world ](https://deepmind.google/careers/)
+
+[ Build with Gemini
+](https://aistudio.google.com/prompts/new_chat?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=)[
+Try Gemini
+](https://gemini.google.com/?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=)
+
+[ Google DeepMind ](/)
+
+[ Google AI Learn about all our AI
+](https://ai.google/?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=)[ Google
+DeepMind Explore the frontier of AI
+](https://deepmind.google?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=)[
+Google Labs Try our AI experiments
+](https://labs.google/?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=)[ Google
+Research Explore our research
+](https://research.google?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=)
+
+Products and apps
+
+[ Gemini app Chat with Gemini
+](https://gemini.google.com/?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=)[
+Google AI Studio Build with our next-gen models
+](https://aistudio.google.com/prompts/new_chat?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=)[
+Google Antigravity Our agentic development platform
+](https://antigravity.google/?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=)
+
+[ Models ](https://deepmind.google/models/)
+
+[ Research ](https://deepmind.google/research/)
+
+[ Science ](https://deepmind.google/science/)
+
+[ About ](https://deepmind.google/about/)
+
+[ Build with Gemini
+](https://aistudio.google.com/prompts/new_chat?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=)[
+Try Gemini
+](https://gemini.google.com/?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=)
+
+August 29, 2023 Science
+
+# Identifying AI-generated images with SynthID
+
+Sven Gowal, Pushmeet Kohli
+
+Share
+
+[ ](https://twitter.com/intent/tweet?url=https://deepmind.google/blog/identifying-ai-generated-images-with-
+synthid/&text=Identifying%20AI-generated%20images%20with%20SynthID)[
+](https://www.facebook.com/sharer/sharer.php?u=https://deepmind.google/blog/identifying-ai-generated-images-
+with-synthid/)[ ](https://www.linkedin.com/sharing/share-
+offsite/?url=https://deepmind.google/blog/identifying-ai-generated-images-with-synthid/)[
+](mailto:?subject=Identifying%20AI-
+generated%20images%20with%20SynthID&body=https://deepmind.google/blog/identifying-ai-generated-images-with-
+synthid/) Copied
+
+New tool helps watermark and identify synthetic images created by Imagen
+
+AI-generated images are becoming more popular every day. But how can we better identify them, especially when
+they look so realistic?
+
+Today, in partnership with [Google Cloud](https://cloud.google.com/blog/products/ai-machine-learning/vertex-
+ai-next-2023-announcements), we’re launching a beta version of [SynthID](https://deepmind.google/blog/in-
+conversation-with-ai-building-better-language-models/), a tool for watermarking and identifying AI-generated
+images. This technology embeds a digital watermark directly into the pixels of an image, making it
+imperceptible to the human eye, but detectable for identification.
+
+SynthID is being released to a limited number of [Vertex AI](https://cloud.google.com/vertex-ai) customers
+using [Imagen](https://cloud.google.com/vertex-ai/docs/generative-ai/image/overview), one of our latest text-
+to-image models that uses input text to create photorealistic images.
+
+Generative AI technologies are rapidly evolving, and computer generated imagery, also known as ‘synthetic
+imagery’, is becoming harder to distinguish from those that have not been created by an AI system.
+
+While generative AI can unlock huge creative potential, it also presents new risks, like enabling creators to
+spread false information — both intentionally or unintentionally. Being able to identify AI-generated content
+is critical to empowering people with knowledge of when they’re interacting with generated media, and for
+helping prevent the spread of misinformation.
+
+We’re committed to connecting people with high-quality information, and upholding trust between creators and
+users across society. Part of this responsibility is giving users more advanced tools for identifying AI-
+generated images so their images — and even some edited versions — can be identified at a later date.
+
+SynthID generates an imperceptible digital watermark for AI-generated images.
+
+Google Cloud is the first cloud provider to offer a tool for creating AI-generated images responsibly and
+identifying them with confidence. This technology is grounded in our approach to developing and deploying
+responsible AI, and was developed by Google DeepMind and refined in partnership with Google Research.
+
+SynthID isn’t foolproof against extreme image manipulations, but it does provide a promising technical
+approach for empowering people and organisations to work with AI-generated content responsibly. This tool
+could also evolve alongside other AI models and modalities beyond imagery such as audio, video, and text.
+
+## New type of watermark for AI images
+
+Watermarks are designs that can be layered on images to identify them. From physical imprints on paper to
+translucent text and symbols seen on digital photos today, they’ve evolved throughout history.
+
+Traditional watermarks aren’t sufficient for identifying AI-generated images because they’re often applied
+like a stamp on an image and can easily be edited out. For example, discrete watermarks found in the corner of
+an image can be cropped out with basic editing techniques.
+
+Finding the right balance between imperceptibility and robustness to image manipulations is difficult. Highly
+visible watermarks, often added as a layer with a name or logo across the top of an image, also present
+aesthetic challenges for creative or commercial purposes. Likewise, some previously developed imperceptible
+watermarks can be lost through simple editing techniques like resizing.
+
+The watermark is detectable even after modifications like adding filters, changing colours and brightness.
+
+We designed SynthID so it doesn't compromise image quality, and allows the watermark to remain detectable,
+even after modifications like adding filters, changing colours, and saving with various lossy compression
+schemes — most commonly used for JPEGs.
+
+SynthID uses two deep learning models — for watermarking and identifying — that have been trained together on
+a diverse set of images. The combined model is optimised on a range of objectives, including correctly
+identifying watermarked content and improving imperceptibility by visually aligning the watermark to the
+original content.
+
+## Robust and scalable approach
+
+SynthID allows Vertex AI customers to create AI-generated images responsibly and to identify them with
+confidence. While this technology isn’t perfect, our internal testing shows that it’s accurate against many
+common image manipulations.
+
+SynthID's combined approach:
+
+  * **Watermarking** : SynthID can add an imperceptible watermark to synthetic images produced by Imagen.
+  * **Identification** : By scanning an image for its digital watermark, SynthID can assess the likelihood of an image being created by Imagen.
+
+SynthID can help assess how likely it is that an image was created by Imagen.
+
+This tool provides three confidence levels for interpreting the results of watermark identification. If a
+digital watermark is detected, part of the image is likely generated by Imagen.
+
+SynthID contributes to the broad suite of approaches for identifying digital content. One of the most widely
+used methods of identifying content is through metadata, which provides information such as who created it and
+when. This information is stored with the image file. Digital signatures added to metadata can then show if an
+image has been changed.
+
+When the metadata information is intact, users can easily identify an image. However, metadata can be manually
+removed or even lost when files are edited. Since SynthID’s watermark is embedded in the pixels of an image,
+it’s compatible with other image identification approaches that are based on metadata, and remains detectable
+even when metadata is lost.
+
+## What’s next?
+
+To build AI-generated content responsibly, [we’re committed to developing safe, secure, and trustworthy
+approaches](https://www.whitehouse.gov/wp-content/uploads/2023/07/Ensuring-Safe-Secure-and-Trustworthy-AI.pdf)
+at every step of the way — from image generation and identification to media literacy and information
+security.
+
+These approaches need to be robust and adaptable as generative models advance and expand to other mediums. We
+hope our SynthID technology can work together with a broad range of solutions for creators and users across
+society, and we’re continuing to evolve SynthID by gathering feedback from users, enhancing its capabilities,
+and exploring new features.
+
+SynthID could be expanded for use across other AI models and we’re excited about the potential of integrating
+it into more Google products and making it available to third parties in the near future — empowering people
+and organisations to responsibly work with AI-generated content.
+
+Note: The model used for producing synthetic images in this blog may be different from the model used on
+Imagen and Vertex AI.
+
+[ Read the Google Cloud announcement ](https://cloud.google.com/blog/products/ai-machine-learning/vertex-ai-
+next-2023-announcements)
+
+**Acknowledgements**
+
+This project was led by Sven Gowal and Pushmeet Kohli, with key research and engineering contributions from
+(listed alphabetically): Rudy Bunel, Jamie Hayes, Sylvestre-Alvise Rebuffi, Florian Stimberg, David Stutz, and
+Meghana Thotakuri.
+
+Thanks to Nidhi Vyas and Zahra Ahmed for driving product delivery; Chris Gamble for helping initiate the
+project; Ian Goodfellow, Chris Bregler and Oriol Vinyals for their advice. Other contributors include Paul
+Bernard, Miklos Horvath, Simon Rosen, Olivia Wiles, and Jessica Yung. Thanks also to many others who
+contributed across Google DeepMind and Google, including our partners at Google Research and Google Cloud.
+
+Watermarked image of a metallic butterfly with prismatic patterns on its wings  
+
+## Related posts
+
+[](/models/synthid/)
+
+### Google SynthID
+
+[ Learn more ](/models/synthid/)
+
+[](/blog/tackling-multiple-tasks-with-a-single-visual-language-model/)
+
+### Tackling multiple tasks with a single visual language model
+
+April 2022Research
+
+[ Learn more ](/blog/tackling-multiple-tasks-with-a-single-visual-language-model/)
+
+[](/blog/building-a-culture-of-pioneering-responsibly/)
+
+### Building a culture of pioneering responsibly
+
+May 2022Company
+
+[ Learn more ](/blog/building-a-culture-of-pioneering-responsibly/)
+
+Follow us
+
+[ ](https://x.com/googledeepmind)
+
+[ ](https://www.instagram.com/googledeepmind)
+
+[ ](https://www.youtube.com/@googledeepmind)
+
+[ ](https://www.linkedin.com/company/googledeepmind/)
+
+[ ](https://github.com/google-deepmind)
+
+Sign up for updates on our latest innovations
+
+I accept Google's Terms and Conditions and acknowledge that my information will be used in accordance with
+[Google's Privacy Policy](https://policies.google.com/privacy).
+
+Sign up
+
+Build AI responsibly to benefit humanity
+
+Models
+
+[ Gemini ](/models/gemini/)[ Gemini Omni ](/models/gemini-omni/)[ Nano Banana ](/models/gemini-image/)[ Gemini
+Audio ](/models/gemini-audio/)[ Gemma ](/models/gemma/)[ Genie ](/models/genie/)[ Lyria ](/models/lyria/)[ Veo
+](/models/veo/)
+
+Research
+
+[ Gemini Robotics ](/models/gemini-robotics/)[ Breakthroughs ](/research/projects/)[ Evals
+](/research/evals/)[ Publications ](/research/publications/)[ Frontier safety ](/frontier-safety/)[
+Responsibility ](/responsibility-and-safety/)
+
+Science
+
+[ AlphaFold ](/science/alphafold/)[ AlphaGenome ](/science/alphagenome/)[ WeatherNext
+](/science/weathernext/)[ AlphaEarth ](/blog/alphaearth-foundations-helps-map-our-planet-in-unprecedented-
+detail/)[ AlphaEvolve ](/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/)
+
+Products
+
+[ Gemini app
+](https://gemini.google.com/?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=)[
+Google AI Studio
+](https://aistudio.google.com/?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=)[
+Google Antigravity
+](https://antigravity.google/?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=)
+
+Learn more
+
+[ About ](/about/)[ News ](/blog/)[ Careers ](/careers/)[ National Partnerships for AI ](/national-
+partnerships-for-ai/)[ Accelerator programs ](/accelerators/)[ The Podcast ](/the-podcast/)[ DeepMind
+Institute ](https://institute.deepmind.com/)
+
+[ ](https://www.google.com/?utm_source=ai.google&utm_medium=referral "Google")
+
+[ About Google ](https://about.google/)
+
+[ Google products ](https://about.google/products/)
+
+[ Privacy ](https://policies.google.com/privacy)
+
+[ Terms ](https://policies.google.com/terms)
+
+Cookies management controls
+

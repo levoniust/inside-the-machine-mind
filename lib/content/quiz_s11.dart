@@ -62,4 +62,16 @@ const quizS11 = <QuizQuestion>[
     1,
     'The 2024 Lawrence Berkeley National Laboratory report found 176 TWh in 2023, 4.4% of U.S. electricity, up from 1.9% in 2018, with 6.7-12% possible by 2028.',
   ),
+  QuizQuestion(
+    'How does a diffusion image generator make a picture?',
+    ['It draws lines one by one like a pen plotter', 'It starts from random static and removes a little noise at a time, guided by your prompt', 'It searches the web and pastes photos together', 'It picks the closest picture from its training data'],
+    1,
+    'Diffusion models learn to undo small steps of added noise; generating runs that backwards from pure static, with the text steering each step.',
+  ),
+  QuizQuestion(
+    'You use the same prompt twice but get two different pictures. Why?',
+    ['The model forgot your prompt', 'The internet changed', 'A different seed gave a different starting static', 'Pictures are random and prompts don\'t matter'],
+    2,
+    'Every picture starts from random noise chosen by the seed; same words with a new seed lead to a different result, while the same seed repeats it.',
+  ),
 ];

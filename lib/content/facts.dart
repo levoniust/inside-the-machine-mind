@@ -191,6 +191,10 @@ const sources = <String, Source>{
   'SRC-LBNL-DC2024': Source('SRC-LBNL-DC2024', 'Shehabi et al., "2024 United States Data Center Energy Usage Report", Lawrence Berkeley National Laboratory (December 2024)'),
   'SRC-EIA-ELEC-USE': Source('SRC-EIA-ELEC-USE', 'U.S. EIA, "Use of electricity" (Energy Explained), eia.gov (fetched 2026-10-28)', url: 'eia.gov'),
   'SRC-EIA-US-ENERGY-DATA': Source('SRC-EIA-US-ENERGY-DATA', 'U.S. EIA, "U.S. energy facts - data and statistics" (data for 2024), eia.gov (fetched 2026-10-28)', url: 'eia.gov'),
+  'SRC-DDPM': Source('SRC-DDPM', 'Ho, Jain & Abbeel, "Denoising Diffusion Probabilistic Models", arXiv 2006.11239 (2020)'),
+  'SRC-LDM': Source('SRC-LDM', 'Rombach et al., "High-Resolution Image Synthesis with Latent Diffusion Models", arXiv 2112.10752 (2021)'),
+  'SRC-SYNTHID-IMG': Source('SRC-SYNTHID-IMG', 'Google DeepMind, "Identifying AI-generated images with SynthID" (August 29, 2023), deepmind.google'),
+  'SRC-C2PA': Source('SRC-C2PA', 'C2PA, "C2PA and Content Credentials Explainer" (specification 2.4), spec.c2pa.org (fetched 2026-10-28)', url: 'spec.c2pa.org'),
 };
 
 const facts = <String, Fact>{
@@ -476,4 +480,9 @@ const facts = <String, Fact>{
   'NRG-US-ELEC': Fact('NRG-US-ELEC', 'Total U.S. electricity use in 2025 was about 4.20 trillion kWh (4,200 TWh), the highest on record', sources: ['SRC-EIA-ELEC-USE'], value: '4,200 TWh'),
   'NRG-US-ENERGY': Fact('NRG-US-ENERGY', 'All U.S. energy use (electricity plus fuel for cars, heating and industry) in 2024 was 94.21 quadrillion Btu, about 27,600 TWh (1 quad ≈ 293 TWh)', sources: ['SRC-EIA-US-ENERGY-DATA'], value: '~27,600 TWh'),
   'NRG-WHATIF': Fact('NRG-WHATIF', 'What-if arithmetic: 1 billion questions a day at 0.34 Wh is 340 MWh a day, the daily electricity of about 11,800 average U.S. homes', sources: ['SRC-ALTMAN-QUERY', 'SRC-EIA'], value: '340 MWh/day'),
+  'PIC-NOISE': Fact('PIC-NOISE', 'A diffusion model is trained on pictures that have had noise added step by step until nothing is left, and learns to undo one small step; the 2020 DDPM paper used 1,000 steps', sources: ['SRC-DDPM'], value: '1,000 steps'),
+  'PIC-START': Fact('PIC-START', 'Generating starts from pure random noise; as the noise is removed, large shapes appear first and details last', sources: ['SRC-DDPM']),
+  'PIC-LATENT': Fact('PIC-LATENT', 'Latent diffusion (2021) runs the denoising on a compressed version of the picture instead of every pixel, cutting the huge compute cost (pixel models took hundreds of GPU-days to train), and adds cross-attention so text can steer each step', sources: ['SRC-LDM']),
+  'PIC-SYNTHID': Fact('PIC-SYNTHID', 'Google DeepMind\'s SynthID (2023) hides a watermark in an image\'s pixels that people can\'t see but a detector can, even after filters, colour changes or JPEG compression', sources: ['SRC-SYNTHID-IMG']),
+  'PIC-C2PA': Fact('PIC-C2PA', 'C2PA "Content Credentials" are a tamper-evident, cryptographically signed record attached to a file, saying where it came from, how it was edited and whether AI was used; they show the record is intact, not that the content is true', sources: ['SRC-C2PA']),
 };

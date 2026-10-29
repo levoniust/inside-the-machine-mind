@@ -41,4 +41,12 @@ const narrationS11 = <String, LessonText>{
     ],
     keyIdea: 'One question uses about as much electricity as a few seconds of TV, but billions of them plus training add up, and data centres have grown from about 2% to over 4% of U.S. electricity.',
   ),
+  'e_pictures': LessonText(
+    intro: [
+      'Image generators don\'t paint and they don\'t paste photos together. They start with pure static and clean it up, one small step at a time.',
+      'Walk through it in five short panels: how pictures are turned into static for training, how the model learns to undo one step, how your words steer it, then run the denoiser yourself.',
+      'Last, the tags makers add so you can tell AI pictures apart, and why they\'re not a lie detector.',
+    ],
+    keyIdea: 'An image generator turns random static into a picture by removing a little noise at a time, steered by your words at every step, and the seed decides which picture you get.',
+  ),
 };

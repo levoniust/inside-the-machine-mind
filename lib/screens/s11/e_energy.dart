@@ -64,12 +64,7 @@ const _whatIf = _Thing('1 billion questions (one day, what-if)', 340e6, '340 MWh
 const _gpt3 = _Thing('Training GPT-3 (2020)', 1.287e9, '~1.3 GWh', 'TR-GPT3-ENERGY');
 const _dc = _Thing('All U.S. data centres for a year (2023)', 176e12, '176 TWh', 'NRG-DC-US');
 const _usElec = _Thing('All U.S. electricity for a year (2025)', 4.2e15, '4,200 TWh', 'NRG-US-ELEC');
-const _usAll = _Thing(
-  'All U.S. energy for a year (2024): power, cars, heating, industry',
-  27.6e15,
-  '~27,600 TWh',
-  'NRG-US-ENERGY',
-);
+const _usAll = _Thing('All U.S. energy for a year (2024)', 27.6e15, '~27,600 TWh', 'NRG-US-ENERGY');
 
 // ---------------------------------------------------------------------------------------------------------------
 
@@ -192,7 +187,7 @@ String _fmt(double v) {
     final s = v.round().toString();
     return s.replaceAllMapped(RegExp(r'(\d)(?=(\d{3})+$)'), (m) => '${m[1]},');
   }
-  return v >= 10 ? v.toStringAsFixed(1) : v.toStringAsFixed(v >= 1 ? 1 : 2);
+  return v >= 10 ? v.toStringAsFixed(v == v.roundToDouble() ? 0 : 1) : v.toStringAsFixed(v >= 1 ? 1 : 2);
 }
 
 class _Ladder extends StatefulWidget {
@@ -282,7 +277,7 @@ class _LadderState extends State<_Ladder> {
           Text(
             _r == _rungs.length - 1
                 ? 'Top of the ladder. Data centres (orange, all of them, not only AI) are a slice of U.S. electricity, which '
-                      'is itself a slice of all the energy the country uses.'
+                      'is itself a slice of all the energy the country uses (power plus fuel for cars, heating and industry).'
                 : 'Bars on each rung share one scale, so the small things really are that small.',
             key: ValueKey('nrg-caption-$_r'),
             style: TextStyle(color: c.textDim, fontSize: 12),
