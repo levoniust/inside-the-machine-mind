@@ -62,4 +62,16 @@ const quizS7 = <QuizQuestion>[
     3,
     'Merging combines what each fine-tune changed relative to a shared starting point, so both must come from the same base model; different bases have unrelated weights.',
   ),
+  QuizQuestion(
+    'A home notes helper took 65 seconds per answer, but only 5-10 seconds of that was the model writing. What does that tell you?',
+    ['Most of the time goes into the steps before writing (query rewriting, search, reranking, reading passages), so fix those first', 'A bigger chat model would fix it', 'The notes need more documents', 'The answers are too long'],
+    0,
+    'About 90% of each answer came before the first word, so turning off the extra query-writing call and reading fewer passages cut the median from 65 s to 20 s.',
+  ),
+  QuizQuestion(
+    'Why test a RAG helper with a fixed set of questions with checked answers?',
+    ['So every change can be compared fairly: score and speed before vs after', 'To make the embedding model smaller', 'Because Open WebUI requires a test set', 'Because the model needs the questions to learn'],
+    0,
+    'The same 25 checked questions showed which changes really helped (0.80 → 0.91 with curated notes) and which cost nothing (0.89 at a third of the time).',
+  ),
 ];

@@ -152,6 +152,8 @@ const sources = <String, Source>{
   'SRC-UNESCO-GENAI': Source('SRC-UNESCO-GENAI', 'UNESCO, "Guidance for generative AI in education and research" (Sep 2023), unesco.org', url: 'unesco.org'),
   'SRC-HF-LLAMA': Source('SRC-HF-LLAMA', 'Llama 3.1 8B / Llama 3.3 70B Instruct config.json (mirrors of Meta\'s repos), huggingface.co/unsloth'),
   'SRC-MEGATRON': Source('SRC-MEGATRON', 'Shoeybi et al., "Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism", arXiv 1909.08053 (2019)'),
+  'SRC-OWUI-RAG': Source('SRC-OWUI-RAG', 'Open WebUI documentation, "Retrieval Augmented Generation (RAG)", docs.openwebui.com/features/chat-conversations/rag (fetched 2026-10-28)', url: 'docs.openwebui.com/features/chat-conversations/rag'),
+  'SRC-OWUI-RAGTS': Source('SRC-OWUI-RAGTS', 'Open WebUI documentation, "Troubleshoot Document Retrieval (RAG)", docs.openwebui.com/troubleshooting/rag (fetched 2026-10-28)', url: 'docs.openwebui.com/troubleshooting/rag'),
 };
 
 const facts = <String, Fact>{
@@ -360,4 +362,13 @@ const facts = <String, Fact>{
   'RIG-SPLIT-TENSOR': Fact('RIG-SPLIT-TENSOR', 'On the small server, a 27B dense model at 4 bits split across a 16 GB and a 12 GB GPU (tensor split) wrote 39-47 tokens/s; the two cards were different generations, so it needed a smaller batch and llama.cpp\'s own all-reduce instead of NCCL', sources: ['SRC-HOMELAB'], value: '39-47 tok/s'),
   'RIG-SPLIT-SQUEEZE': Fact('RIG-SPLIT-SQUEEZE', 'The same server\'s 16 GB GPU alone runs a 27B model squeezed to about 2.4 bits at ~55 tokens/s: fitting on one card beat splitting across two', sources: ['SRC-HOMELAB'], value: '~55 tok/s'),
   'RIG-SPLIT-MOE': Fact('RIG-SPLIT-MOE', 'A 74B mixture-of-experts model (9B active) layer-split across the same two GPUs (14.0 + 10.4 GB) wrote 52.6 tokens/s', sources: ['SRC-HOMELAB'], value: '52.6 tok/s'),
+  'NH-CORPUS': Fact('NH-CORPUS', 'Case study: a beginner\'s helper for a radio hobby, built from 1,754 cleaned text files in 5 knowledge bases; chunks of 1,500 characters (150 overlap), a small open embedding model, hybrid keyword + meaning search, top 10 reranked to the best 6', sources: ['SRC-HOMELAB'], value: '1,754 files'),
+  'NH-FIRST': Fact('NH-FIRST', 'The first try (a big model searching all 5 knowledge bases, reranking on the CPU) took 573 seconds for one question; a 27B model on its own 16 GB GPU cut that to about 90 seconds', sources: ['SRC-HOMELAB'], value: '573 s → ~90 s'),
+  'NH-BASE': Fact('NH-BASE', 'A 25-question test with hand-checked key facts: starting score 0.80, median answer 74 s', sources: ['SRC-HOMELAB'], value: '0.80, 74 s'),
+  'NH-NOTES': Fact('NH-NOTES', 'Putting five hand-checked notes (~27 KB) into the helper\'s instructions raised the score to 0.91 (median 65 s); the questions came from those notes, so the test favours this change', sources: ['SRC-HOMELAB'], value: '0.80 → 0.91'),
+  'NH-WAIT': Fact('NH-WAIT', 'About 90% of each answer\'s time came before the first word (query rewriting, search, CPU reranking, reading ~20,000 tokens of passages); writing took only 5-10 s', sources: ['SRC-HOMELAB'], value: '~90% before word one'),
+  'NH-FAST': Fact('NH-FAST', 'Turning off the extra query-writing step and reranking the top 5 passages to the best 3 kept the score at 0.89 (within the grader\'s noise) and cut the median answer from 65 s to 20 s (slowest 93 s → 26 s)', sources: ['SRC-HOMELAB'], value: '65 s → 20 s'),
+  'NH-SPLIT': Fact('NH-SPLIT', 'Open WebUI measures chunk size in characters by default (a token splitter is optional)', sources: ['SRC-OWUI-RAG'], value: 'characters'),
+  'NH-HYBRID': Fact('NH-HYBRID', 'Open WebUI\'s hybrid search adds BM25 keyword matching to meaning-based (embedding) search, then a reranker re-scores the hits', sources: ['SRC-OWUI-RAG']),
+  'NH-TOPK': Fact('NH-TOPK', 'With hybrid search on, Top K Reranker sets how many chunks reach the model: 1,000-token chunks × 5 ≈ 5,000 tokens of retrieved text', sources: ['SRC-OWUI-RAGTS'], value: '5 × 1,000 ≈ 5,000'),
 };

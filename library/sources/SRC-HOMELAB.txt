@@ -35,3 +35,21 @@ Splitting across two GPUs (small server, 2026-10-22/23; added 2026-10-28 for the
   (-ub 512, the 12 GB card ran out of memory otherwise).
 - A 27B model squeezed to about 2.4 bits on the 16 GB card alone: about 55 tokens/s.
 - A 74B mixture-of-experts model (9B active) with the default layer split, 14.0 GB + 10.4 GB: 52.6 tokens/s.
+
+A notes helper built with RAG (Oct 2026; added 2026-10-28 for the "Build your own notes helper" lesson)
+- Topic: a radio hobby (long-range mesh radios) for a beginner. Collected material: official docs, papers, guides,
+  hardware pages and forum Q&A, cleaned into 1,754 text files in 5 knowledge bases in Open WebUI.
+- Settings: chunks of 1,500 characters with 150 overlapping, split at Markdown headings; a small open embedding model
+  (bge-base-en-v1.5); hybrid search (keywords + meaning); top 10 passages reranked on the CPU to the best 6
+  (bge-reranker-base). The helper answers with numbered sources.
+- First try, a big model on the workstation searching all 5 knowledge bases: 573 seconds for one question.
+- Moved to a 27B model on the small server's 16 GB GPU: about 90 seconds per answer.
+- Test: 25 beginner questions, each with key facts checked by hand against five curated notes; another local model
+  grades how many key facts each answer contains (it is noisy by a few points).
+  - Starting point: score 0.80, median answer 74 s (69 s before the first word appeared).
+  - The five hand-checked notes (~27 KB) put in the helper's instructions: score 0.91, median 65 s. (The questions
+    came from those notes, so this test favours the change.)
+  - About 90% of each answer's time came before the first word: an extra model call to rewrite the question into
+    search queries, the search, reranking on the CPU, and reading ~20,000 tokens of passages. Writing took 5-10 s.
+  - Extra query-writing step turned off, top 5 passages reranked to the best 3: score 0.89 (within the grader's noise),
+    median 20 s, slowest 26 s (was 93 s). Every answer still cited sources.

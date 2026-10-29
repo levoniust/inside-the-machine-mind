@@ -42,4 +42,12 @@ const narrationS7 = <String, LessonText>{
     ],
     keyIdea: 'Behaviours can show up as directions inside a model, so they can be turned up, down or removed, and every such change has costs in quality and safety.',
   ),
+  'l_notes_helper': LessonText(
+    intro: [
+      'Want a chatbot that answers from *your* notes? That\'s [[RAG]]: search your documents first, then let the [[model]] answer from what it found, with sources.',
+      'Step through the six parts with the real settings of a helper built at home for a radio hobby, from 1,754 files. Then look at where one answer\'s 65 seconds actually went.',
+      'Last, tune it yourself. Each round shows the helper as it was; pick the change you\'d make, and see what was measured when it was really tried.',
+    ],
+    keyIdea: 'A notes helper is search plus a model, and the slow or wrong parts are usually in the search, so measure with a fixed set of test questions before and after every change.',
+  ),
 };

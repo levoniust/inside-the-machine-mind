@@ -132,6 +132,8 @@ const sourceDocs = <String, SourceDoc>{
   'SRC-HF-DSV3': SourceDoc('sources/SRC-HF-DSV3.txt', url: 'https://huggingface.co/deepseek-ai/DeepSeek-V3'),
   'SRC-LLAMACPP-SERVER': SourceDoc('sources/SRC-LLAMACPP-SERVER.txt', url: 'https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md'),
   'SRC-MEGATRON': SourceDoc('sources/SRC-MEGATRON.txt', url: 'https://arxiv.org/abs/1909.08053'),
+  'SRC-OWUI-RAG': SourceDoc('sources/SRC-OWUI-RAG.txt', url: 'https://docs.openwebui.com/features/chat-conversations/rag/'),
+  'SRC-OWUI-RAGTS': SourceDoc('sources/SRC-OWUI-RAGTS.txt', url: 'https://docs.openwebui.com/troubleshooting/rag/'),
   'SRC-HOMELAB': SourceDoc('sources/SRC-HOMELAB.txt', url: 'https://(private'),
   'SRC-LLAMACPP-PPL': SourceDoc('sources/SRC-LLAMACPP-PPL.txt', url: 'https://github.com/ggml-org/llama.cpp/blob/master/tools/perplexity/README.md'),
   'SRC-OLLAMA': SourceDoc('sources/SRC-OLLAMA.txt', url: 'https://github.com/ollama/ollama'),
